@@ -110,7 +110,7 @@ Settings → Secrets and variables → Actions:
 |---|---|---|
 | Variable | `REPORTS_REPO` | public reports repo, e.g. `nmcder/works-in-korea-reports` |
 | Secret | `ANTHROPIC_API_KEY` | enables `support_en` classification (optional) |
-| Secret | `REPORTS_TOKEN` | lets the bot reply to reporters (optional) |
+| Secret | `REPORTS_TOKEN` | lets the site open issues for reporters — set it in **Vercel** too |
 | Variable | `WIK_PROJECT_URL` / `WIK_CONTACT` | override the User-Agent defaults (optional) |
 
 Usage: one pass is ~8 minutes, about 250 minutes a month, 12% of the free tier.
@@ -128,33 +128,32 @@ Without the cache it would exceed ₩150,000/month. Force a full re-run with `WI
 
 ## Community reports
 
-Two signals cannot be automated, and 31 services refuse automated checks, so those come from
-people who tried. Forms live in a separate public repo because outsiders cannot open issues on
-a private one.
+Two signals cannot be automated, and 40 services refuse automated checks, so those come from
+people who tried. The form lives on the site so nobody needs a GitHub account; the issues it
+opens live in a separate public repo.
 
 ```
-public repo issue form
-  → report-poll workflow (daily, after the measurement cron)
-  → npm run ingest         screens for personal data, structures, aggregates
-  → pull request           a human approves before anything ships
+form on the site      no GitHub account, no email address
+  → /api/report       screens for personal data, then opens the issue for them
+  → report-poll       daily, after the measurement cron
+  → npm run ingest    screens again, structures, aggregates
+  → pull request      a human approves before anything ships
 ```
 
-Personal data is blocked three ways: the forms have no field for it, free text is pattern-checked
-and discarded before anything is written to disk, and blank issues are disabled. Conflicting
+Personal data is blocked three ways: the form has no field for it, free text is pattern-checked
+before the report leaves the page and again before anything is written to disk, and blank issues
+are disabled. Conflicting
 reports are recorded as `conflicting` rather than resolved, because a foreign card genuinely can
 work with one issuer and fail with another.
 
 ## Deployment
 
-[`vercel.json`](vercel.json) holds the whole configuration. Change nothing in the Vercel UI.
+The Vercel project's **Root Directory must be `site`**. Everything else is zero-config.
+The report endpoint (`/api/report`) is a serverless function, so Vercel has to see the Next
+app root; the old root-level `vercel.json` workaround cannot do that.
 
-```json
-{
-  "installCommand": "cd site && npm ci",
-  "buildCommand":   "cd site && npm run build",
-  "outputDirectory": "site/out"
-}
-```
+Pages are still prerendered at build time and served from the CDN. A function runs once per
+submitted report, and the public JSON API stays a folder of static files.
 
 The daily cron commits to `data/`, which triggers a Vercel rebuild. No manual step.
 
