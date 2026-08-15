@@ -111,9 +111,14 @@ Settings → Secrets and variables → Actions:
 | Variable | `REPORTS_REPO` | public reports repo, e.g. `nmcder/works-in-korea-reports` |
 | Secret | `ANTHROPIC_API_KEY` | enables `support_en` classification (optional) |
 | Secret | `REPORTS_TOKEN` | lets the site open issues for reporters — set it in **Vercel** too |
-| Variable | `WIK_PROJECT_URL` / `WIK_CONTACT` | override the User-Agent defaults (optional) |
+| Variable | `WIK_PROJECT_URL` / `WIK_CONTACT` | override the User-Agent defaults. **Leave unset unless you mean it** |
 
 Usage: one pass is ~8 minutes, about 250 minutes a month, 12% of the free tier.
+
+An unset Actions variable arrives as an **empty string**, not undefined, so `??` will not fall
+back to the default. `src/config.ts` treats empty as unset and refuses to start if the resulting
+User-Agent has no URL or no contact address — a crawler without identification is the one thing
+this project promises never to be.
 
 ### LLM cost control
 

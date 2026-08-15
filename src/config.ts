@@ -23,10 +23,46 @@ export const PATHS = {
  *
  * 자체 도메인이 생기면 WIK_PROJECT_URL / WIK_CONTACT 를 Actions 변수로 덮어쓴다.
  */
-export const PROJECT_URL = process.env.WIK_PROJECT_URL ?? 'https://www.worksinkorea.com';
-export const CONTACT = process.env.WIK_CONTACT ?? 'nmcder117@gmail.com';
+
+/**
+ * 환경변수를 읽되 **빈 문자열은 미설정으로 본다.**
+ *
+ * ⚠️ 이 함수가 없으면 조용히 망가진다. 워크플로가 `WIK_PROJECT_URL: ${{ vars.WIK_PROJECT_URL }}`
+ * 로 넘기는데, GitHub Actions 는 변수가 없으면 undefined 가 아니라 **빈 문자열**을 넣는다.
+ * `??` 는 null/undefined 만 잡고 빈 문자열은 통과시키므로 기본값이 무시되고,
+ * User-Agent 가 이렇게 나간다:
+ *
+ *     WorksInKoreaBot/0.1 (+; contact: )
+ *
+ * 주소도 연락처도 없는 봇이다. 절대규칙 4 를 어기는 것이고, /method 에 적어 둔
+ * "발견한 운영자가 우리에게 연락할 수 있다"는 약속이 형식만 남는다.
+ * 2026-08-16 에 발견했다. 실행은 정상으로 보이고 아무도 알려주지 않는 종류의 사고다.
+ */
+function env(name: string, fallback: string): string {
+  const raw = process.env[name]?.trim();
+  return raw ? raw : fallback;
+}
+
+export const PROJECT_URL = env('WIK_PROJECT_URL', 'https://www.worksinkorea.com');
+export const CONTACT = env('WIK_CONTACT', 'nmcder117@gmail.com');
 export const BOT_TOKEN = 'WorksInKoreaBot';
 export const USER_AGENT = `${BOT_TOKEN}/0.1 (+${PROJECT_URL}; contact: ${CONTACT})`;
+
+/**
+ * 신원 없는 UA 로는 한 번도 요청하지 않는다.
+ *
+ * 위 사고를 겪고 나서 넣었다. 기본값을 고쳐 두는 것만으로는 부족하다 — 누군가
+ * WIK_PROJECT_URL 에 오타를 넣거나 빈 값을 넣으면 같은 일이 조용히 반복된다.
+ * 크롤링을 시작하기도 전에 여기서 멈추는 편이 낫다.
+ */
+if (!/^https?:\/\/[^\s/]+\.[^\s/]+/.test(PROJECT_URL) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONTACT)) {
+  throw new Error(
+    `User-Agent 에 신원을 담지 못했다 — 이 상태로는 크롤링하지 않는다.\n` +
+      `  WIK_PROJECT_URL = ${JSON.stringify(process.env.WIK_PROJECT_URL ?? null)} → ${PROJECT_URL}\n` +
+      `  WIK_CONTACT     = ${JSON.stringify(process.env.WIK_CONTACT ?? null)} → ${CONTACT}\n` +
+      `  Actions 변수를 지우거나(기본값 사용) 올바른 값을 넣을 것.`,
+  );
+}
 
 /**
  * 브라우저 프로브가 쓰는 UA. 실제 방문자와 같은 렌더링을 받아야 하므로 Chrome UA를 쓰되,
