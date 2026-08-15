@@ -168,7 +168,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:47:28.669Z",
+      "measured_at": "2026-08-15T22:58:13.388Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -196,12 +196,12 @@
             "chars": 1787
           }
         ],
-        "content_sha256": "45becf926efb7e5105fa5163a59f00029c6aab41ac87a018d58f7fe2ee190d2c",
+        "content_sha256": "b929d5504479b1432cf8e72de790632eaf3f3a6916be00858de637cc01826a29",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
-          "quoted_evidence": "콜센터(1668-1352) 화-금 09:00~19:00 ... 1:1문의하기",
-          "reason": "ENG 메뉴와 영문 페이지 링크는 존재하지만, 고객센터(콜센터, 서비스플라자, 1:1문의)가 영어 문의를 지원한다는 명시적 언급이 없어 판단 근거가 부족함."
+          "quoted_evidence": "ENG",
+          "reason": "ENG(영문 페이지) 링크는 존재하지만, 콜센터·1:1문의 등 실제 고객지원 채널이 영어를 지원하는지에 대한 명시적 언급이 없어 판단 근거가 부족함."
         },
         "heuristic": {
           "value": "unknown",

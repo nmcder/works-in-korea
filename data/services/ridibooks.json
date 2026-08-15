@@ -175,12 +175,12 @@
       }
     },
     "support_en": {
-      "value": "no",
-      "measured_at": "2026-08-15T22:47:28.669Z",
-      "first_seen_at": "2026-08-15T22:47:28.669Z",
-      "last_changed_at": "2026-08-15T22:47:28.669Z",
+      "value": "unknown",
+      "measured_at": "2026-08-15T22:58:13.388Z",
+      "first_seen_at": "2026-08-15T22:58:13.388Z",
+      "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "pages": [
           {
@@ -204,12 +204,12 @@
             "chars": 3210
           }
         ],
-        "content_sha256": "7bf22109bfc0d9952dfb33a28bb06c0e27df8aae03879ff6c42e854fd4021be8",
+        "content_sha256": "cd2fb02b1583f217bbc0ce2a8232e157ac318ee4c2faa6759a565b7f7d1c52cf",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "no",
+          "value": "unknown",
           "quoted_evidence": "이메일 : help@ridi.com / 대표전화 : 1644-0331",
-          "reason": "고객센터에서 제공하는 연락처는 일반 이메일과 국내 전화번호뿐이며, 영어 전용 문의 채널에 대한 언급이 없어 한국어 전용으로 판단됨."
+          "reason": "고객센터 이메일과 전화번호는 명시되어 있으나 이것이 영문 문의를 지원하는지 여부는 텍스트에 나타나 있지 않아 판단 근거가 부족함."
         },
         "heuristic": {
           "value": "unknown",

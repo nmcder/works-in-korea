@@ -165,7 +165,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:47:28.669Z",
+      "measured_at": "2026-08-15T22:58:13.388Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -173,22 +173,27 @@
       "evidence": {
         "pages": [
           {
+            "url": "http://www.samsunghospital.com/home/info/ICUfaq.do",
+            "status": 200,
+            "chars": 4968
+          },
+          {
             "url": "http://www.samsunghospital.com",
             "status": 200,
             "chars": 8
           }
         ],
-        "content_sha256": "ef0f9ce7919dc28b2674bfa560c7adf8ce054324956ab8532f4dc1e014a474f4",
+        "content_sha256": "c3c7b09df39363411b5308c546df673ecaf4dccb2e3ae5a236dc23374da289e7",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "페이지 텍스트가 인코딩 깨짐으로 인해 내용을 확인할 수 없어 지원 채널 정보를 판단할 근거가 없음."
+          "quoted_evidence": "ENG 中國語 RUSSIAN",
+          "reason": "영문 페이지(ENG) 링크는 존재하지만, 영어로 문의 가능한 별도의 상담 채널(이메일/전화/채팅)이 명시되어 있지 않아 판단 근거가 부족함."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.61,
+          "latin_ratio": 0.082,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T22:47:28.669Z",
+  "generated_at": "2026-08-15T22:58:13.388Z",
   "changes": [
     {
       "service_id": "gmarket",
@@ -2987,6 +2987,66 @@
         "country": "united kingdom",
         "region": null,
         "ip_asn": null
+      }
+    },
+    {
+      "service_id": "payco",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:58:13.388Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ridibooks",
+      "signal": "support_en",
+      "from": "no",
+      "to": "unknown",
+      "changed_at": "2026-08-15T22:58:13.388Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sentbe",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:58:13.388Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sk7mobile",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:58:13.388Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "starbucks-kr",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:58:13.388Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
       }
     }
   ]

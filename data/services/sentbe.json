@@ -155,31 +155,36 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:47:28.669Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:58:13.388Z",
+      "first_seen_at": "2026-08-15T22:58:13.388Z",
+      "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
+          {
+            "url": "https://help.sentbe.com/ko/support/home",
+            "status": 200,
+            "chars": 729
+          },
           {
             "url": "https://www.sentbe.com",
             "status": 200,
             "chars": 11
           }
         ],
-        "content_sha256": "3f1794d69925a4f5de07067c8a3814c0fcb18da6dd947e39817468507c2bf435",
+        "content_sha256": "172fb8f040dce9bcd4b329a11d70550701e22c4b7058293d49556e07462520d9",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에는 고객지원 채널에 대한 정보가 전혀 없어 영어 지원 여부를 판단할 근거가 부족함."
+          "value": "yes",
+          "quoted_evidence": "English › Find help in English",
+          "reason": "고객지원 페이지에 영어로 도움을 받을 수 있는 전용 섹션이 명시되어 있음"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.639,
+          "latin_ratio": 0.524,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -181,7 +181,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:47:28.669Z",
+      "measured_at": "2026-08-15T22:58:13.388Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -208,7 +208,8 @@
           ],
           "latin_ratio": 0.805,
           "reason": "영문 지원을 명시하는 문구를 찾음"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

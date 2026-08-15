@@ -163,31 +163,36 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:47:28.669Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:58:13.388Z",
+      "first_seen_at": "2026-08-15T22:58:13.388Z",
+      "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
+          {
+            "url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
+            "status": 200,
+            "chars": 4391
+          },
           {
             "url": "https://www.sk7mobile.com",
             "status": 200,
             "chars": 10
           }
         ],
-        "content_sha256": "13268ed3aa49aa141a3c1a48080cf453e8ca2ba95f3fc48117ca216389df14be",
+        "content_sha256": "91193b47099ffddc1c5b669219b95a39d73868d7cec0124f1f224572844897b3",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에 고객지원 채널이나 영어 지원 여부에 대한 정보가 전혀 없음."
+          "value": "yes",
+          "quoted_evidence": "Customer service for foreigner : 1599-0563(charged number), Weekdays 9:00 ~ 18:00 (not available 12:00 ~ 13:00)",
+          "reason": "외국인 전용 고객센터 전화번호가 영문으로 명시되어 있어 영어 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.711,
+          "latin_ratio": 0.118,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }
