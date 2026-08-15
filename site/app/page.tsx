@@ -141,8 +141,8 @@ export default async function HomePage() {
 
           <TBlock
             className="standfirst"
-            en={`${services.length} services, re-measured by machine every day from outside Korea. Every value carries the moment it was taken, the method behind it, and how far it should be trusted. Where we could not measure something, it says so — and why.`}
-            ko={`${services.length}개 서비스를 매일 한국 밖에서 자동으로 다시 측정합니다. 모든 값에 측정 시각·측정 방법·신뢰도가 붙습니다. 재지 못한 것은 재지 못했다고, 왜 그런지까지 적습니다.`}
+            en={`${services.length} services, re-measured from outside Korea every day. Every value is stamped with when it was taken and how. Where we could not measure, it says so.`}
+            ko={`${services.length}개 서비스를 매일 한국 밖에서 다시 측정합니다. 모든 값에 측정 시각과 방법이 붙고, 재지 못한 것은 재지 못했다고 적습니다.`}
           />
 
           <div className="figures">
@@ -194,12 +194,12 @@ export default async function HomePage() {
       <section className="band">
         <div className="wrap">
           <h2 className="band-title">
-            <T en="What we do not know" ko="우리가 모르는 것" />
+            <T en="What is missing, and why" ko="무엇이 비어 있고, 왜인가" />
           </h2>
           <TBlock
             className="band-lede"
-            en={`How many of the ${services.length} services have a recorded value for each question. The empty part of each bar is not an oversight — it is the honest state of the measurement.`}
-            ko={`각 질문에 대해 ${services.length}개 중 몇 개에 값이 기록됐는지입니다. 막대의 빈 부분은 누락이 아니라 측정 현황 그 자체입니다.`}
+            en="Blank is not an oversight. It is either something a machine cannot establish, or something a site will not let us read."
+            ko="빈칸은 누락이 아닙니다. 기계가 확인할 수 없는 것이거나, 사이트가 읽지 못하게 막은 것입니다."
           />
 
           <div className="coverage">
@@ -217,44 +217,13 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="band">
-        <div className="wrap">
-          <h2 className="band-title">
-            <T
-              en="Two questions a robot will never answer"
-              ko="로봇이 영원히 답할 수 없는 두 가지"
-            />
-          </h2>
-          <TBlock
-            className="band-lede"
-            en="Whether a foreign card goes through, and whether a verification text reaches a number outside Korea, can only be settled by actually paying and actually receiving the message. We automate neither. Those two rows stay empty until someone who tried it says what happened."
-            ko="해외 발급 카드가 실제로 결제되는지, 인증 문자가 해외 번호에 실제로 도착하는지는 진짜로 결제하고 진짜로 문자를 받아 봐야만 알 수 있습니다. 둘 다 자동화하지 않습니다. 해 본 사람이 알려줄 때까지 그 두 줄은 비어 있습니다."
-          />
-          <p>
-            <Link className="button" href="/report/">
-              <T en="Tell us what happened →" ko="겪은 일 알려주기 →" />
-            </Link>
-          </p>
-        </div>
-      </section>
-
-      <section className="band">
-        <div className="wrap">
-          <h2 className="band-title">
+          <h3 style={{ margin: '38px 0 12px', fontSize: '1.05rem' }}>
             <T
               en={`${blocked.length} services a machine cannot measure`}
-              ko={`자동으로 잴 수 없는 ${blocked.length}개 서비스`}
+              ko={`기계로 잴 수 없는 ${blocked.length}개 서비스`}
             />
-          </h2>
-          <TBlock
-            className="band-lede"
-            en="These are five different situations and we keep them apart. Saying a company forbade something it did not forbid would be its own kind of false statement."
-            ko="다섯 가지 서로 다른 상황이며 뭉뚱그리지 않습니다. 회사가 하지 않은 금지를 했다고 쓰는 것 역시 거짓 서술입니다."
-          />
-
+          </h3>
           <table className="datatable" style={{ maxWidth: 620 }}>
             <tbody>
               {BLOCK_EXPLAIN.filter((b) => counts[b.kind] > 0).map((b) => (
@@ -265,22 +234,39 @@ export default async function HomePage() {
                   </td>
                 </tr>
               ))}
+              <tr>
+                <td className="mono">2</td>
+                <td>
+                  <T
+                    en="questions no robot can answer — whether a foreign card clears, and whether a code reaches a foreign number"
+                    ko="로봇이 답할 수 없는 질문 — 해외 카드가 실제로 결제되는지, 인증번호가 해외 번호에 도착하는지"
+                  />
+                </td>
+              </tr>
             </tbody>
           </table>
 
-          {named.length > 0 && (
-            <div className="aside mark">
-              <T
-                en={`${named.join(', ')} are among them. For these, a first-hand report is not a supplement — it is the only source there is.`}
-                ko={`${named.join(', ')} 등이 여기 해당합니다. 이들에게 직접 겪은 사람의 제보는 보완이 아니라 유일한 데이터원입니다.`}
-              />
-              <p style={{ marginTop: 10 }}>
-                <Link href="/method/">
-                  <T en="How measurement works →" ko="측정 방법 보기 →" />
-                </Link>
-              </p>
-            </div>
-          )}
+          <p style={{ fontSize: 14.5, color: 'var(--ink-3)', maxWidth: '56ch' }}>
+            {named.length > 0 && (
+              <>
+                <T
+                  en={`${named.join(', ')} are among them. `}
+                  ko={`${named.join(', ')} 등이 여기 해당합니다. `}
+                />
+              </>
+            )}
+            <T
+              en="For these, a first-hand report is the only source there is."
+              ko="이들에게는 직접 겪은 사람의 제보가 유일한 데이터원입니다."
+            />{' '}
+            <Link href="/report/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+              <T en="Report something" ko="제보하기" />
+            </Link>
+            {' · '}
+            <Link href="/method/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+              <T en="How this is measured" ko="측정 방법" />
+            </Link>
+          </p>
         </div>
       </section>
     </>

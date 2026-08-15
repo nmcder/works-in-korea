@@ -254,15 +254,15 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
   if (key === 'foreign_card') {
     return {
       kind: 'community-only',
-      en: 'Nobody has reported trying yet. The only way to establish this is to put a real card through a real checkout, which we do not automate — so this stays blank until someone who paid tells us how it went.',
-      ko: '아직 시도했다는 제보가 없다. 확인하려면 실제 카드로 실제 결제를 해야 하는데 그것은 자동화하지 않는다. 결제해 본 사람이 알려줄 때까지 비워 둔다.',
+      en: 'Nobody has reported trying yet. Confirming this means putting a real card through a real checkout, which we do not automate.',
+      ko: '아직 시도했다는 제보가 없습니다. 확인하려면 실제 카드로 실제 결제를 해야 하는데, 그것은 자동화하지 않습니다.',
     };
   }
   if (key === 'foreign_phone_sms') {
     return {
       kind: 'community-only',
-      en: 'Nobody has reported trying yet. The only way to establish this is to request a real verification text to a real foreign number, which we do not automate — so this stays blank until someone who tried tells us whether it arrived.',
-      ko: '아직 시도했다는 제보가 없다. 확인하려면 실제 해외 번호로 실제 인증 문자를 요청해야 하는데 그것은 자동화하지 않는다. 해 본 사람이 알려줄 때까지 비워 둔다.',
+      en: 'Nobody has reported trying yet. Confirming this means requesting a real verification text to a real foreign number, which we do not automate.',
+      ko: '아직 시도했다는 제보가 없습니다. 확인하려면 실제 해외 번호로 인증 문자를 요청해야 하는데, 그것은 자동화하지 않습니다.',
     };
   }
 
@@ -289,32 +289,32 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
     case 'robots-disallow':
       return {
         kind: 'robots',
-        en: 'This site’s robots.txt tells automated clients to stay away from this path, so our crawler does not fetch it. That is our choice, not a failure — and it means only a person can answer this one.',
-        ko: '이 사이트의 robots.txt가 해당 경로에 자동 접근을 금지하고 있어 크롤러가 요청하지 않는다. 실패가 아니라 지키기로 한 규칙이며, 그래서 이 항목은 사람만 답할 수 있다.',
+        en: 'The site’s robots.txt tells crawlers to stay away from this path, and we obey it. Only a person can answer this one.',
+        ko: '이 사이트의 robots.txt가 이 경로에 크롤러 접근을 막고 있고, 우리는 그것을 지킵니다. 사람만 답할 수 있는 항목입니다.',
       };
     case 'bot-block':
       return {
         kind: 'bot-block',
-        en: 'The site answered our crawler with a refusal (HTTP 403/429) rather than the page. Bot filtering and country blocking look identical from outside, so we do not claim either.',
-        ko: '사이트가 페이지 대신 거부 응답(HTTP 403/429)을 돌려줬다. 바깥에서는 봇 차단과 지역 차단이 똑같아 보이므로 어느 쪽이라고도 단정하지 않는다.',
+        en: 'The site refused our crawler (HTTP 403/429) instead of serving the page. Bot filtering and country blocking look identical from outside, so we claim neither.',
+        ko: '사이트가 페이지 대신 거부 응답(HTTP 403·429)을 돌려줬습니다. 바깥에서는 봇 차단과 지역 차단이 같아 보여 어느 쪽도 단정하지 않습니다.',
       };
     case 'unreachable':
       return {
         kind: 'unreachable',
-        en: 'The server did not answer at all from our vantage point outside Korea — the connection timed out before any page was served. We cannot tell from here whether foreign or datacentre addresses are being dropped deliberately, or whether this was a transient fault, so we record no value. This is worth a first-hand check.',
-        ko: '한국 밖 측정 지점에서 서버가 아예 응답하지 않았다. 페이지를 받기 전에 연결이 시간 초과됐다. 해외·데이터센터 주소를 의도적으로 버리는 것인지 일시적 장애인지 여기서는 구분할 수 없어 값을 남기지 않는다. 실제로 확인해 볼 가치가 있는 항목이다.',
+        en: 'The server never answered from outside Korea — the connection timed out. Deliberate blocking and a transient fault look the same from here.',
+        ko: '한국 밖에서 보낸 요청에 서버가 끝내 응답하지 않았습니다(연결 시간 초과). 의도적 차단인지 일시적 장애인지는 여기서 구분되지 않습니다.',
       };
     case 'tls':
       return {
         kind: 'tls',
-        en: 'The site’s TLS certificate chain could not be verified from our vantage point, so the connection was dropped before any page arrived. Browsers can sometimes repair an incomplete chain on their own; our client does not, and we will not switch certificate checking off just to obtain a reading.',
-        ko: 'TLS 인증서 체인을 검증하지 못해 페이지가 오기 전에 연결이 끊겼다. 브라우저는 끊긴 체인을 스스로 보완하기도 하지만 우리 클라이언트는 그러지 않으며, 값을 얻자고 인증서 검사를 끄지는 않는다.',
+        en: 'The certificate chain could not be verified from here, so the connection was dropped before any page arrived. We do not switch certificate checking off to get a reading.',
+        ko: '인증서 체인을 검증하지 못해 페이지가 오기 전에 연결이 끊겼습니다. 값을 얻자고 인증서 검사를 끄지는 않습니다.',
       };
     case 'robots-unreadable':
       return {
         kind: 'robots-unreadable',
-        en: 'We could not read this site’s robots.txt, and we do not crawl a site whose rules we have not managed to read. That is a conservative default on our side, not a statement about the site.',
-        ko: '이 사이트의 robots.txt를 읽지 못했다. 규칙을 확인하지 못한 사이트는 크롤링하지 않는다. 사이트에 대한 판단이 아니라 우리 쪽의 보수적 기본값이다.',
+        en: 'We could not read the site’s robots.txt, and we do not crawl a site whose rules we have not read.',
+        ko: 'robots.txt를 읽지 못했습니다. 규칙을 확인하지 못한 사이트는 크롤링하지 않습니다.',
       };
     case null:
       break;
@@ -322,50 +322,50 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
   if (key === 'app_availability' && blob.includes('앱 ID')) {
     return {
       kind: 'no-app-id',
-      en: 'We do not yet know this service’s App Store / Google Play identifier, so there is nothing to look up.',
-      ko: '이 서비스의 App Store·Google Play 식별자를 아직 모른다. 조회할 대상이 없다.',
+      en: 'We do not know this service’s App Store / Google Play identifier yet.',
+      ko: '이 서비스의 App Store·Google Play 식별자를 아직 모릅니다.',
     };
   }
   if (blob.includes('가입 페이지를 찾지 못함')) {
     return {
       kind: 'no-url',
-      en: 'We have not found the URL of this service’s sign-up page yet. Common paths were tried and none of them was one.',
-      ko: '이 서비스의 가입 페이지 주소를 아직 찾지 못했다. 흔한 경로를 눌러봤지만 해당하는 것이 없었다.',
+      en: 'We have not found this service’s sign-up page yet. Common paths were tried; none was one.',
+      ko: '이 서비스의 가입 페이지 주소를 아직 찾지 못했습니다. 흔한 경로를 눌러봤지만 없었습니다.',
     };
   }
   if (blob.includes('고객지원 페이지를 찾지 못함')) {
     return {
       kind: 'no-url',
-      en: 'We have not found the URL of this service’s support or help centre page yet.',
-      ko: '이 서비스의 고객센터·도움말 페이지 주소를 아직 찾지 못했다.',
+      en: 'We have not found this service’s help centre page yet.',
+      ko: '이 서비스의 고객센터 주소를 아직 찾지 못했습니다.',
     };
   }
   if (blob.includes('로그인 화면으로 보임')) {
     return {
       kind: 'inconclusive',
-      en: 'The page we reached is a log-in screen, not a sign-up flow. Judging sign-up requirements from it would mean reporting something we did not actually look at.',
-      ko: '도달한 페이지가 가입 절차가 아니라 로그인 화면이다. 그것을 근거로 가입 요건을 발표하면 재지 않은 것을 발표하는 셈이다.',
+      en: 'The page we reached is a log-in screen, not a sign-up flow.',
+      ko: '도달한 페이지가 가입 절차가 아니라 로그인 화면입니다.',
     };
   }
   if (blob.includes('가입 양식을 확인하지 못함')) {
     return {
       kind: 'inconclusive',
-      en: 'The page we reached reads as an information page rather than a real sign-up form — no fields to fill in. A form with no verification widget only means something if it is an actual form.',
-      ko: '도달한 페이지가 실제 가입 양식이 아니라 안내 문서로 보인다 — 채울 입력란이 없다. "본인인증 위젯이 없다"는 진짜 양식을 봤을 때만 의미가 있다.',
+      en: 'The page we reached reads as an information page, not a form with fields to fill in.',
+      ko: '도달한 페이지가 채울 입력란이 있는 양식이 아니라 안내 문서로 보입니다.',
     };
   }
   if (blob.includes('정상 응답을 받은 페이지가 없어')) {
     return {
       kind: 'bot-block',
       en: 'No page returned a usable response, so there was nothing to scan.',
-      ko: '정상 응답을 받은 페이지가 없어 스캔할 대상이 없었다.',
+      ko: '정상 응답을 받은 페이지가 없어 스캔할 대상이 없었습니다.',
     };
   }
   if (key === 'support_en') {
     return {
       kind: 'inconclusive',
-      en: 'Nothing on the pages we could read states this either way. We do not record a value on weak evidence.',
-      ko: '읽을 수 있었던 페이지에 이에 대한 명시적 진술이 없다. 약한 근거로는 값을 남기지 않는다.',
+      en: 'Nothing on the pages we could read states this either way.',
+      ko: '읽을 수 있었던 페이지에 이에 대한 명시가 없습니다.',
     };
   }
   return {
@@ -479,15 +479,15 @@ function caveatFor(key: SignalKey, sig: Signal): Bi | null {
     const p = sig.value as PaymentGateValue;
     if (p && p.gateways.length === 0) {
       return {
-        en: 'This means nothing was detected on the pages we can open without logging in — most checkouts sit behind a login. It is not a claim that the service has no payment gateway.',
-        ko: '로그인 없이 열 수 있는 페이지에서 탐지되지 않았다는 뜻이다. 결제 페이지는 대개 로그인 뒤에 있다. "결제사가 없다"는 뜻이 아니다.',
+        en: 'Public pages only — most checkouts sit behind a login. Not a claim that the service has no gateway.',
+        ko: '로그인 없이 열리는 페이지 기준입니다. 결제 화면은 대개 로그인 뒤에 있어, 결제사가 없다는 뜻이 아닙니다.',
       };
     }
   }
   if (key === 'signup_phone_auth' && sig.value === 'not_required') {
     return {
-      en: 'We read the sign-up form; we never fill it in. A verification step that only appears after you submit would not be visible to us.',
-      ko: '가입 양식을 읽기만 하고 제출하지 않는다. 제출한 뒤에야 나타나는 인증 단계는 여기서 보이지 않는다.',
+      en: 'We read the form but never submit it. A check that appears only after submitting would not be visible.',
+      ko: '양식을 읽기만 하고 제출하지 않습니다. 제출 뒤에 나타나는 인증은 보이지 않습니다.',
     };
   }
   return null;

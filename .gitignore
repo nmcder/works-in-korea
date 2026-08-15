@@ -25,3 +25,6 @@ site/CLAUDE.md
 # 제보 처리 중 생기는 임시 파일 (커밋 대상 아님)
 .report-comments/
 issues.json
+
+# 운영자 개인 메모 — 레포가 공개이므로 커밋하지 않는다
+CLAUDE.local.md

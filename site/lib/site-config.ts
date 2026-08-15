@@ -39,5 +39,5 @@ export const SITE = {
 
   license: { name: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
 
-  contact: 'kkw5863@gmail.com',
+  contact: 'nmcder117@gmail.com',
 } as const;

@@ -1,0 +1,18 @@
+The measurement data in this repository — everything under data/ — is licensed
+under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt it, including commercially, provided you give
+appropriate credit to "Works in Korea?" and indicate if changes were made.
+
+Two things to get right if you use it:
+
+  1. confidence: "unknown" is NOT a negative result. It means the value was not
+     measured. The evidence object says why. Rendering it as "no" turns our
+     honesty into your misinformation.
+
+  2. Show measured_at wherever you show a value. A fact about a Korean sign-up
+     flow has a shelf life; the timestamp is what makes it usable.
+
+The source code is licensed separately under the MIT License. See LICENSE.

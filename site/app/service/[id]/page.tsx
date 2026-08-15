@@ -49,6 +49,18 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     .filter((t): t is string => Boolean(t))
     .sort()
     .at(-1);
+
+  /**
+   * 크롤러가 사이트 자체에 닿지 못하면 시그널 대여섯 개가 **같은 이유로** 전부 빈다.
+   * 그걸 항목마다 반복해서 쓰면 같은 문장이 한 페이지에 여섯 번 나오고, 읽는 사람은
+   * 그게 여섯 개의 다른 사실인 줄 알게 된다. 사실은 하나다 — 한 번만 쓴다.
+   */
+  const CRAWL_KINDS = ['robots', 'bot-block', 'unreachable', 'tls', 'robots-unreadable'];
+  const blockedViews = views.filter((v) => v.why && CRAWL_KINDS.includes(v.why.kind));
+  const sharedKind =
+    blockedViews.length >= 3 && blockedViews.every((v) => v.why!.kind === blockedViews[0]!.why!.kind)
+      ? blockedViews[0]!.why!
+      : null;
   const cat = CATEGORY_LABELS[service.category] ?? {
     en: service.category,
     ko: service.category,
@@ -101,32 +113,39 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
       </section>
 
       <div className="wrap">
+        {sharedKind && (
+          <div className="aside warn" style={{ margin: '26px 0 0' }}>
+            <h3>
+              <T
+                en={`${blockedViews.length} values are blank for the same reason`}
+                ko={`${blockedViews.length}개 값이 같은 이유로 비어 있습니다`}
+              />
+            </h3>
+            <T {...sharedKind} />
+          </div>
+        )}
+
         <div className="signals">
           {views.map((v) => (
-            <Record key={v.key} v={v} />
+            <Record key={v.key} v={v} hideWhy={sharedKind !== null && blockedViews.includes(v)} />
           ))}
         </div>
 
-        <div className="aside" style={{ margin: '30px 0 64px' }}>
-          <h3>
-            <T en="Is something here wrong?" ko="여기 틀린 내용이 있나요?" />
-          </h3>
+        <p style={{ margin: '26px 0 64px', fontSize: 14.5, color: 'var(--ink-3)' }}>
           <T
-            en="Every value on this page is meant to be falsifiable — that is why the raw evidence sits underneath each one. If a value does not match what you experienced, say so and it will be corrected with its source recorded."
-            ko="이 페이지의 모든 값은 반증 가능하도록 만들어져 있습니다. 각 값 아래에 원본 근거가 그대로 공개돼 있는 이유입니다. 겪은 것과 다르면 알려주세요. 근거와 함께 정정합니다."
-          />
-          <p style={{ marginTop: 14 }}>
-            <Link className="button ghost" href="/report/">
-              <T en="Send a correction" ko="정정 요청 보내기" />
-            </Link>
-          </p>
-        </div>
+            en="Does a value here not match what you saw?"
+            ko="여기 값이 직접 보신 것과 다른가요?"
+          />{' '}
+          <Link href="/report/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+            <T en="Send a correction" ko="정정 요청 보내기" />
+          </Link>
+        </p>
       </div>
     </>
   );
 }
 
-function Record({ v }: { v: SignalView }) {
+function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
   const conf = CONFIDENCE[v.confidence] ?? CONFIDENCE.unknown!;
 
   return (
@@ -140,7 +159,7 @@ function Record({ v }: { v: SignalView }) {
       </p>
 
       <div className="signal-body">
-        {v.why && (
+        {v.why && !hideWhy && (
           <p className="signal-note">
             <T {...v.why} />
           </p>
