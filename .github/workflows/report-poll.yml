@@ -1,0 +1,124 @@
+name: report-poll
+
+# 공개 레포(제보 창구)의 이슈를 읽어 와 데이터에 반영하고 PR을 연다.
+#
+# 왜 폴링인가: 제보 폼은 공개 레포에 있고 측정 데이터는 이 프라이빗 레포에 있다.
+# 다른 레포의 이벤트로는 이 레포의 워크플로가 켜지지 않으므로 주기적으로 읽어 온다.
+# 공개 레포의 이슈는 인증 없이 읽을 수 있어서 토큰이 없어도 동작한다.
+on:
+  schedule:
+    # 측정 크론(18:00 UTC) 직후. 하루치 제보를 한 번에 처리한다.
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '이미 처리한 이슈도 다시 처리'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: report-poll
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # 공개 제보 레포. Settings → Variables 에 REPORTS_REPO 를 넣으면 그것을 쓴다.
+      REPORTS_REPO: ${{ vars.REPORTS_REPO }}
+      # 답글용 토큰(선택). secrets 컨텍스트는 스텝의 if 에서 읽을 수 없으므로
+      # 여기서 env 로 옮겨 둔다. 없으면 답글 단계만 건너뛴다.
+      REPORTS_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+    steps:
+      - name: 제보 레포가 설정됐는지 확인
+        run: |
+          if [ -z "$REPORTS_REPO" ]; then
+            echo "::notice::REPORTS_REPO 변수가 없다. 공개 제보 레포를 만들고 Settings → Variables 에 '소유자/이름' 을 넣을 것."
+            exit 0
+          fi
+
+      - uses: actions/checkout@v7
+        if: env.REPORTS_REPO != ''
+
+      - uses: actions/setup-node@v7
+        if: env.REPORTS_REPO != ''
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+        if: env.REPORTS_REPO != ''
+
+      - name: 공개 레포에서 제보 이슈 받아오기
+        if: env.REPORTS_REPO != ''
+        run: |
+          # 공개 레포의 이슈는 인증 없이 읽힌다. 하루 1회라 rate limit 여유가 크다.
+          curl -sS --fail-with-body \
+            -H 'Accept: application/vnd.github+json' \
+            "https://api.github.com/repos/${REPORTS_REPO}/issues?labels=report&state=all&per_page=100" \
+            -o issues.json
+          node -e 'const a=require("./issues.json");console.log("받은 이슈",Array.isArray(a)?a.length:0,"건")'
+
+      - name: 제보 처리
+        if: env.REPORTS_REPO != ''
+        run: |
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            npm run ingest -- --issues=issues.json --force
+          else
+            npm run ingest -- --issues=issues.json
+          fi
+
+      - name: 스키마 검증 (깨진 데이터가 PR로 나가지 않게)
+        if: env.REPORTS_REPO != ''
+        run: npm run validate
+
+      - name: 제보자에게 답글 (선택 — REPORTS_TOKEN 이 있을 때만)
+        if: env.REPORTS_REPO != '' && env.REPORTS_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+        run: |
+          shopt -s nullglob
+          for f in .report-comments/*.md; do
+            n=$(basename "$f" .md)
+            gh issue comment "$n" --repo "$REPORTS_REPO" --body-file "$f" || \
+              echo "::warning::#$n 댓글 실패 (토큰 권한 확인)"
+          done
+
+      - name: 변경이 있으면 PR
+        if: env.REPORTS_REPO != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -f issues.json
+          rm -rf .report-comments
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "새 제보로 인한 데이터 변경 없음 — PR 생략"
+            exit 0
+          fi
+
+          BRANCH="reports/$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name  "works-in-korea-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/
+          git commit -m "report: 커뮤니티 제보 반영 ($(date -u +%Y-%m-%d))"
+          git push -u origin "$BRANCH"
+
+          gh pr create \
+            --title "커뮤니티 제보 반영 ($(date -u +%Y-%m-%d))" \
+            --body "$(printf '%s\n' \
+              "공개 레포(\`${REPORTS_REPO}\`)의 제보를 데이터에 반영하는 PR입니다." \
+              "" \
+              "**승인 전에 확인할 것**" \
+              "- [ ] \`data/reports/\` 에 개인정보가 들어 있지 않은가" \
+              "- [ ] status 가 \`rejected\` 인 제보가 있으면, 공개 레포의 해당 이슈를 **삭제**했는가" \
+              "      (우리가 저장하지 않았을 뿐 이슈 본문은 여전히 공개 상태다)" \
+              "- [ ] 제보 내용과 기록된 값이 일치하는가" \
+              "- [ ] 자동 측정값과 모순되면 \`conflicting\` 으로 남았는가")" \
+            --base main \
+            --head "$BRANCH"

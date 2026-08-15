@@ -1,9 +1,13 @@
 /**
- * GitHub 이슈 하나를 구조화된 제보로 바꿔 data/reports/ 에 저장하고,
+ * 공개 레포의 제보 이슈를 구조화해 data/reports/ 에 저장하고,
  * 모인 제보를 집계해 커뮤니티 시그널에 반영한다.
  *
- *   npm run ingest -- --file=issue.json     Actions가 넘겨준 이슈 JSON
- *   npm run ingest -- --reapply             저장된 제보만 다시 집계 (이슈 없이)
+ *   npm run ingest -- --issues=issues.json   공개 레포에서 받아온 이슈 배열
+ *   npm run ingest -- --file=issue.json      이슈 1건 (시험용)
+ *   npm run ingest -- --reapply              저장된 제보만 다시 집계
+ *
+ * 제보 폼은 **공개 레포**에 있다 (프라이빗 레포에는 외부인이 이슈를 열 수 없다).
+ * 이 레포의 워크플로가 공개 레포의 이슈를 주기적으로 읽어 와 여기에 넘긴다.
  *
  * 이 스크립트는 데이터를 고치기만 하고 PR은 워크플로가 만든다.
  * 사람이 승인하기 전에는 main 에 들어가지 않는다.
@@ -25,6 +29,12 @@ import {
 import { listServiceIds, loadService, saveService, writeJson } from './lib/store.js';
 
 const REPORTS_DIR = path.join(PATHS.root, 'data', 'reports');
+
+/**
+ * 이슈에 남길 댓글 문안. 워크플로가 공개 레포에 올린다.
+ * 커밋 대상이 아니다 (.gitignore).
+ */
+const COMMENTS_DIR = path.join(PATHS.root, '.report-comments');
 
 /** 제보가 채우는 시그널 */
 const SIGNAL_OF: Record<Exclude<ReportKind, 'correction'>, 'foreign_card' | 'foreign_phone_sms'> = {
@@ -166,34 +176,59 @@ async function applyAll(reports: Report[]): Promise<number> {
   return touched;
 }
 
+/** 이미 처리한 이슈인가 (같은 것을 매일 다시 PR로 올리지 않기 위해) */
+async function alreadyIngested(id: number): Promise<boolean> {
+  try {
+    await readFile(path.join(REPORTS_DIR, `${id}.json`), 'utf8');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function main(): Promise<void> {
   const argv = process.argv.slice(2);
   const fileArg = argv.find((a) => a.startsWith('--file='))?.slice(7);
+  const issuesArg = argv.find((a) => a.startsWith('--issues='))?.slice(9);
   const reapply = argv.includes('--reapply');
+  const force = argv.includes('--force');
 
   await mkdir(REPORTS_DIR, { recursive: true });
+  await mkdir(COMMENTS_DIR, { recursive: true });
   const known = await listServiceIds();
 
-  if (fileArg) {
-    const issue = JSON.parse(await readFile(fileArg, 'utf8')) as IssuePayload;
-    const report = await toReport(issue, known);
-    await writeJson(path.join(REPORTS_DIR, `${report.id}.json`), report);
-    log.info(`제보 #${report.id} → ${report.status}${report.note ? ` (${report.note})` : ''}`);
-
-    // Actions가 이슈에 남길 댓글 문안
-    await writeFile(
-      path.join(PATHS.root, '.report-comment.md'),
-      commentFor(report),
-      'utf8',
-    );
+  const incoming: IssuePayload[] = [];
+  if (fileArg) incoming.push(JSON.parse(await readFile(fileArg, 'utf8')) as IssuePayload);
+  if (issuesArg) {
+    const parsed = JSON.parse(await readFile(issuesArg, 'utf8')) as unknown;
+    if (Array.isArray(parsed)) incoming.push(...(parsed as IssuePayload[]));
   }
 
-  if (fileArg || reapply) {
+  let fresh = 0;
+  for (const issue of incoming) {
+    // 풀 리퀘스트도 issues 엔드포인트에 섞여 나온다. 제보가 아니다.
+    if ((issue as { pull_request?: unknown }).pull_request) continue;
+    if (!force && (await alreadyIngested(issue.number))) continue;
+
+    const report = await toReport(issue, known);
+    await writeJson(path.join(REPORTS_DIR, `${report.id}.json`), report);
+    await writeFile(path.join(COMMENTS_DIR, `${report.id}.md`), commentFor(report), 'utf8');
+    fresh += 1;
+    log.info(`제보 #${report.id} → ${report.status}${report.note ? ` (${report.note})` : ''}`);
+  }
+
+  if (incoming.length > 0) {
+    log.info(`받은 이슈 ${incoming.length}건 · 새로 처리 ${fresh}건`);
+  }
+
+  if (fresh > 0 || reapply) {
     const all = await loadReports();
     const accepted = all.filter((r) => r.status === 'accepted');
     log.info(`저장된 제보 ${all.length}건 (채택 ${accepted.length}건) → 집계`);
     const touched = await applyAll(accepted);
     log.info(`시그널 ${touched}건 갱신`);
+  } else if (incoming.length > 0) {
+    log.info('새 제보가 없어 집계를 건너뛴다');
   }
 }
 
