@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,7 +32,7 @@
             "http_status": 200,
             "final_url": "https://www.museum.go.kr/MUSEUM/main/index.do",
             "redirected": true,
-            "elapsed_ms": 6738,
+            "elapsed_ms": 4184,
             "body_sha256": "1a88cc9982417043ee8e77d8e3b18a85f838e1d5f2913be00a791a6844f9369c",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -90,7 +90,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -123,15 +123,25 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": null,
+        "android": {
+          "package": "or.kr.nationalmuseum",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=or.kr.nationalmuseum&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
@@ -140,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -164,7 +174,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -178,7 +188,8 @@
           }
         ],
         "content_sha256": "79e7e3d92709f3e5ad77959ad6392b3e9135807c38f4080f2ae3de37eee68245",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51VtwbG5TaLKT6718XX\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

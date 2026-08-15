@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,7 +32,7 @@
             "http_status": 200,
             "final_url": "https://www.yogiyo.co.kr/mobile/",
             "redirected": true,
-            "elapsed_ms": 3254,
+            "elapsed_ms": 3619,
             "body_sha256": "8ff8c26f280cc75e669bcbe057629c23f8e487ad9b3b3cba01d5d5118ad7f36b",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -46,7 +46,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -75,7 +75,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -112,7 +112,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -174,7 +174,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -193,7 +193,8 @@
           }
         ],
         "content_sha256": "e0ab3f90f429d9f3b185476dba3a7588d04ce7f547874eff49423f20ac608e36",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51rqHAdJyR4t9YubWh6\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

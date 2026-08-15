@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 200,
             "final_url": "https://nol.yanolja.com/",
             "redirected": true,
-            "elapsed_ms": 4180,
-            "body_sha256": "00b7c5ddac65bdffc1dba4b82982310030eebf6f04862c67c0e2c0f092c14225",
+            "elapsed_ms": 3709,
+            "body_sha256": "3c511c8b3daaa6362ac0424bab664553a29e718d2a23f7ecf2e1d1ad8b3394f3",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,7 +46,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -69,13 +69,13 @@
         ],
         "accept_language_responsive": true,
         "latin_char_ratio": 0.031,
-        "hangul_char_ratio": 0.532,
+        "hangul_char_ratio": 0.514,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
@@ -99,7 +99,7 @@
         "android_listed": false,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -128,7 +128,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -152,7 +152,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -167,7 +167,7 @@
           {
             "url": "https://www.yanolja.com",
             "status": 200,
-            "chars": 3837
+            "chars": 3898
           },
           {
             "url": "https://ad.yanolja.com/",
@@ -175,8 +175,9 @@
             "chars": 786
           }
         ],
-        "content_sha256": "dba1d57e1b88813794c995e9825bd1e9f6442c8962fe3b01198589afdb600dcb",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "content_sha256": "669ca2a73da6e7820e67a766accf33ed03eedf7e2af29ae89755348694b0db7c",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51qbxCg4J2Sq6dvkb7e\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

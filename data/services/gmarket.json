@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,7 +32,7 @@
             "http_status": 403,
             "final_url": "https://www.gmarket.co.kr/",
             "redirected": false,
-            "elapsed_ms": 2318,
+            "elapsed_ms": 2218,
             "body_sha256": "868edfe51ec8aca022e6e08f5c505d5ad5fb419deb61c04c8c3607081e7db3d6",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -57,7 +57,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -90,17 +90,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "340330132",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=340330132&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "com.ebay.kr.gmarket",
           "listed": true,
@@ -113,7 +120,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -133,7 +140,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

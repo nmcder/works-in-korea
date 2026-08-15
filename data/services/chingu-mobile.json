@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 200,
             "final_url": "https://chingumobile.com/",
             "redirected": true,
-            "elapsed_ms": 5090,
-            "body_sha256": "ee8730dd6784aa39d4e0041fe9091263c4b46e48a77319b9b9a7a4ef553082ec",
+            "elapsed_ms": 3879,
+            "body_sha256": "953c7afb882b1c0d08c7c1a017d2fff7f3c34e82d63e7911f1172e69c102baee",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -47,7 +47,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -76,7 +76,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -118,7 +118,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -134,7 +134,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -158,7 +158,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -182,7 +182,8 @@
           }
         ],
         "content_sha256": "d30e3dba279e1352ed677ec0a7a65644cca2a54e294297ab236291bf807bbf96",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce5196Kd3H6aiMJLyAwNM\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

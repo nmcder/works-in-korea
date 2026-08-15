@@ -1,17 +1,24 @@
 {
-  "started_at": "2026-08-15T08:07:45.107Z",
-  "finished_at": "2026-08-15T08:18:38.200Z",
-  "duration_ms": 653093,
+  "started_at": "2026-08-15T18:24:37.122Z",
+  "finished_at": "2026-08-15T18:35:01.768Z",
+  "duration_ms": 624646,
   "vantage_point": {
     "id": "github-actions",
     "country": "us",
-    "region": "Illinois",
+    "region": "California",
     "ip_asn": "AS8075"
   },
   "services_total": 106,
   "services_probed": 106,
-  "signals_measured": 258,
-  "signals_unknown": 378,
-  "changes": 66,
-  "errors": []
+  "signals_measured": 329,
+  "signals_unknown": 307,
+  "changes": 80,
+  "errors": [],
+  "llm": {
+    "calls": 0,
+    "cached": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "model": null
+  }
 }

@@ -18,69 +18,75 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": "ok",
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://cdn-botmanager.stclab.com/yes24/deny/index.html?serverUrl=https%3A%2F%2Fbotmanager.stclab.com%2Fapi%2Fv1%2Fmacro&tenantId=TN250314-8E8F6C3B&domainName=ticket.yes24.com&detectionType=72&sessionId=msu3scld-12wbvgrhyzpbmwi12ahe&agentTag=BM-DotNet-agent-1.2.1&loginId=&redirectUrl=http%3A%2F%2Fticket.yes24.com%2FNew%2FMain.aspx",
+            "final_url": "http://tkfile.yes24.com/images/notice/Notice_ticket.html?2026021602",
             "redirected": true,
-            "elapsed_ms": 3085,
-            "body_sha256": "6db151be2b56a0738fe0217b92b0d994529ce51ca271030d0c0cb102dd93a39c",
+            "elapsed_ms": 3587,
+            "body_sha256": "2881a651b2c109dd0b2acb210817c297c9b4568a7f6ebb2ea80f23eacff34c80",
             "content_type": "text/html",
             "geo_block_markers": [],
-            "ambiguous_deny_markers": [
-              "비정상적인 접근"
-            ]
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+        "note": null
       }
     },
     "i18n_ui": {
       "value": [
-        "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
-        "declared_html_lang": null,
+        "declared_html_lang": "ko",
         "hreflang": [],
         "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "http://ticket.yes24.com/en",
             "status": 200,
-            "ok": true
+            "ok": false
+          },
+          {
+            "url": "http://ticket.yes24.com/en/",
+            "status": 200,
+            "ok": false
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.494,
-        "hangul_char_ratio": 0.305,
+        "latin_char_ratio": 0.149,
+        "hangul_char_ratio": 0.463,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "robots: Disallow: /Member/",
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
         "signup_url": "https://www.yes24.com/Member/Join/Accept.aspx",
+        "final_url": "https://www.yes24.com/notice.html?aspxerrorpath=/Member/Join/Accept.aspx",
+        "http_status": 200,
+        "page_kind": "unknown",
+        "login_markers": [],
         "attempts": [
           {
             "url": "https://www.yes24.com/Member/Join/Accept.aspx",
@@ -88,7 +94,8 @@
             "used": true,
             "reason": "hints.signup_url"
           }
-        ]
+        ],
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
@@ -97,7 +104,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -119,7 +126,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -143,7 +150,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -153,20 +160,21 @@
           {
             "url": "https://ticket.yes24.com/UserGuide/FAQ",
             "status": 200,
-            "chars": 2000
+            "chars": 255
           },
           {
             "url": "http://ticket.yes24.com",
             "status": 200,
-            "chars": 154
+            "chars": 255
           }
         ],
-        "content_sha256": "81ad0a782ed3c4c50aef455ff91a90a8d1351b29e6e5fba39905104a5be05525",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "content_sha256": "1c6ffb7a435ed905891cf27ec3e1604411423365ba01a1449bda0ac9e24a96b9",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51rjTfy1F3DfuxRefGD\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.14,
+          "latin_ratio": 0.209,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

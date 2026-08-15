@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T08:07:45.107Z",
+  "generated_at": "2026-08-15T18:24:37.122Z",
   "changes": [
     {
       "service_id": "gmarket",
@@ -1541,6 +1541,1283 @@
       "vantage_point": {
         "country": "us",
         "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "11st",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ably",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "auction",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "baemin",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "catchtable",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "cgv",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "amc",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "coupang-eats",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "coupang",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "cjonstyle",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "daum",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "e-gen",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": null,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "genie",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gmarket",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "epost",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gsshop",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hanatour",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hanpass",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gov-kr",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hikorea",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hira",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ibk",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-ticket",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-tour",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kakao-gift",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-global",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kakaobank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kakaopay",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kbank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hometax",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kbstar",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kobus",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "i18n_ui",
+      "from": null,
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lguplus",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lotteon",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "megabox",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "musinsa",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "musinsa-global",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "melon-ticket",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lotte-cinema",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "naver-booking",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "national-museum",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "modetour",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "naver-shopping",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "naverpay",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "i18n_ui",
+      "from": null,
+      "to": [
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nhis",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ntok",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "oliveyoung",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sac",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "safedriving",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "samsung-hospital",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sentbe",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "i18n_ui",
+      "from": null,
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-global",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "i18n_ui",
+      "from": null,
+      "to": [
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "required",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": null,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sk7mobile",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "skt",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ssg",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "snuh",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "themoin",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "tmoney",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "txbus",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "visitkorea",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24-ticket",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24-ticket",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "ko"
+      ],
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "paypal"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-15T18:24:37.122Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
         "ip_asn": "AS8075"
       }
     }

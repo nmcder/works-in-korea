@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2504,
-            "body_sha256": "a41b8f7a41b742de72807b3d7f22573e77d8c7efcb695241fd7694ac1f9ddb9e",
+            "elapsed_ms": 2780,
+            "body_sha256": "6a6a175c464d6e993cec8f1b4f8e4f76433197fc98f95e8ac70fb5e1a35f951d",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -47,7 +47,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -81,7 +81,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -119,7 +119,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -181,7 +181,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -195,7 +195,8 @@
           }
         ],
         "content_sha256": "2f35d1dca4a8697b229fcce3014e37d091cafbb4895976857843af60b94a3ee2",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51Zo21bYqNDvDjpQn7X\"}",
         "heuristic": {
           "value": "yes",
           "strong_markers": [

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -30,11 +30,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.yes24.com/Main/default.aspx",
-            "redirected": true,
-            "elapsed_ms": 5659,
-            "body_sha256": "0b4c7338b8564d6495b812c843675e27f86659b6cd8808ac5653997ae2df9ecf",
-            "content_type": "text/html; charset=ks_c_5601-1987",
+            "final_url": "http://www.yes24.com/",
+            "redirected": false,
+            "elapsed_ms": 2959,
+            "body_sha256": "565200ebcadb3d911aee8379cbc0f80f65808e68b09cc889479fbd0c9b8304d1",
+            "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -44,47 +44,46 @@
     },
     "i18n_ui": {
       "value": [
-        "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
         "declared_html_lang": "ko",
         "hreflang": [],
-        "language_switcher_links": {
-          "en": [
-            "https://global.yes24.com/",
-            "http://ticket.yes24.com/English?Gcode=009_205"
-          ]
-        },
+        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "http://www.yes24.com/en",
             "status": 200,
-            "ok": true
+            "ok": false
+          },
+          {
+            "url": "http://www.yes24.com/en/",
+            "status": 200,
+            "ok": false
           }
         ],
-        "accept_language_responsive": true,
-        "latin_char_ratio": 0.088,
-        "hangul_char_ratio": 0.002,
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0.098,
+        "hangul_char_ratio": 0.447,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
         "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://image.yes24.com/sysimage/contents/Error/error_404.html",
-        "final_url": "https://image.yes24.com/sysimage/contents/Error/error_404.html",
+        "signup_url": "http://www.yes24.com/notice.html",
+        "final_url": "http://www.yes24.com/notice.html",
         "http_status": 200,
         "page_kind": "unknown",
         "login_markers": [],
@@ -104,7 +103,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -130,14 +129,12 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [
-          "paypal"
-        ],
+        "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -148,14 +145,7 @@
             "scanned": true
           }
         ],
-        "detected": [
-          {
-            "id": "paypal",
-            "name": "PayPal",
-            "matched": "PayPal",
-            "via": "text"
-          }
-        ],
+        "detected": [],
         "three_ds_matches": {
           "url": [],
           "text": []
@@ -166,7 +156,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -176,15 +166,16 @@
           {
             "url": "http://www.yes24.com",
             "status": 200,
-            "chars": 8000
+            "chars": 295
           }
         ],
-        "content_sha256": "677398715ee26b53c11f56f519679a051456c324365b9c877005466a5be296fd",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "content_sha256": "fee844cfaccf66705acd07d28d3219f9833e7eddafba7386dc5fb96ed6dd13c2",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51rBejpYQjRrCHQ7ZzC\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.09,
+          "latin_ratio": 0.132,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,7 +32,7 @@
             "http_status": 200,
             "final_url": "https://www.lottecinema.co.kr/",
             "redirected": false,
-            "elapsed_ms": 3569,
+            "elapsed_ms": 3757,
             "body_sha256": "32edf19485b20db115cd4a35160c044c996fee785d9f8af3a989dcbb7987c6e7",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -47,7 +47,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -71,7 +71,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -95,15 +95,32 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": {
+          "app_id": "601280722",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=601280722&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
+        "android": {
+          "package": "kr.co.lottecinema.lcm",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=kr.co.lottecinema.lcm&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
@@ -112,7 +129,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -136,7 +153,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -150,7 +167,8 @@
           }
         ],
         "content_sha256": "7560b48559a4f40131fbb35c163bdfa94cc54237f3f25bbebe17673a8ee2b1a1",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51Us8BCmiPX4iTd4duf\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,7 +32,7 @@
             "http_status": 200,
             "final_url": "https://www.amc.seoul.kr/asan/main.do",
             "redirected": true,
-            "elapsed_ms": 5141,
+            "elapsed_ms": 4538,
             "body_sha256": "9d9c7be235863d11ad0a5cc2fe7ed42adec8ac8ac5e9b2f63e7ac6e02e949ecb",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -83,7 +83,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -116,21 +116,31 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": null,
+        "android": {
+          "package": "com.amc.mphr1.mphrui",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.amc.mphr1.mphrui&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",
@@ -150,7 +160,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -179,7 +189,8 @@
           }
         ],
         "content_sha256": "9ac0772dd13b2bece26de32174437a1ce567cb92b3c923c780aa92333c4ab276",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51AfJHBhRb69PgZkZ97\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

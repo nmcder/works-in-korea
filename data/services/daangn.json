@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 200,
             "final_url": "https://www.daangn.com/kr/",
             "redirected": true,
-            "elapsed_ms": 3189,
-            "body_sha256": "12637052110c3b916518f164b15c4f986aaf30d03d1c760ff9796fc6a5d68a7d",
+            "elapsed_ms": 3158,
+            "body_sha256": "fa582d1bb7aa911a40397cc5e4e88b4f329b158c1cd9ec6943ddadb12d893bf0",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -48,7 +48,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -82,7 +82,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -125,7 +125,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -154,7 +154,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -178,7 +178,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -207,7 +207,8 @@
           }
         ],
         "content_sha256": "009165c6e1195effac1961489ad897e83483765d85b43a47ad169a562b888985",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51CbZr4eDM7AXhTEhsm\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

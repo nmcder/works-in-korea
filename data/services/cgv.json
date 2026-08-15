@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 403,
             "final_url": "https://cgv.co.kr/",
             "redirected": true,
-            "elapsed_ms": 3588,
-            "body_sha256": "7cd4ae1ea02652580bce82d1e046a587e9c6ecae2372ad3d69d64cc1bf8906f1",
+            "elapsed_ms": 3638,
+            "body_sha256": "5ab502dc31b7c3a3353d48b512b64bd6801a173ddc863e5432f7e6656ab7fe7e",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -57,7 +57,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -76,21 +76,38 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": {
+          "app_id": "6738896323",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=6738896323&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
+        "android": {
+          "package": "co.kr.cgv.cjcgv",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=co.kr.cgv.cjcgv&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -110,7 +127,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

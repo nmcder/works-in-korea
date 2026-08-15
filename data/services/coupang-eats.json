@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 403,
             "final_url": "https://www.coupangeats.com/",
             "redirected": false,
-            "elapsed_ms": 2177,
-            "body_sha256": "84deedf684dffc1bfabe4ef3156d5875e4ace2fa31a08652bab16bce9922c705",
+            "elapsed_ms": 2136,
+            "body_sha256": "6f05f7a0101bea8ea7d2094df224038285c16fa2dca09ecfbe3d6a5e814e9e10",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": [
@@ -46,7 +46,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:i18n_ui",
@@ -59,7 +59,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -84,17 +84,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "1445504255",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1445504255&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "com.coupang.mobile.eats",
           "listed": true,
@@ -107,7 +114,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",
@@ -127,7 +134,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

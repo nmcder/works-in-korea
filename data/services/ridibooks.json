@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 200,
             "final_url": "https://ridibooks.com/comics/ebook",
             "redirected": true,
-            "elapsed_ms": 3221,
-            "body_sha256": "40dc0fc417f471f81f31acfba7152cb295f91377960732632755fa489a4f7a6a",
+            "elapsed_ms": 3314,
+            "body_sha256": "542c9021b2b9e11ebaed6d116b377d5f10911eacbc35fd80afb4f2645a279da4",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -47,7 +47,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -73,14 +73,14 @@
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.167,
-        "hangul_char_ratio": 0.523,
+        "latin_char_ratio": 0.169,
+        "hangul_char_ratio": 0.521,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -123,7 +123,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -152,7 +152,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -176,7 +176,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -204,12 +204,13 @@
             "chars": 3269
           }
         ],
-        "content_sha256": "3892da7087da8763b9a4f47181666f7e051ab2eb91fc1e1f8dbe79e66e9452e6",
-        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "content_sha256": "4339cd11cfa4387f759f50b2a80ee7a85b53bd3e9365c64c73c4ee46330cf1b6",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51bB9JjxNctcxCmAj8C\"}",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.175,
+          "latin_ratio": 0.179,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

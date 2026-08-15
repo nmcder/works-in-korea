@@ -18,45 +18,60 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": "ok",
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": null,
-            "final_url": null,
+            "http_status": 200,
+            "final_url": "https://www.seoulmetro.co.kr/",
             "redirected": false,
-            "elapsed_ms": 3412,
-            "body_sha256": null,
-            "content_type": null,
-            "not_measured": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+            "elapsed_ms": 5650,
+            "body_sha256": "0d0c4d7db78653e4624e06cb1176efeda58029b280299d1d5cb7ed9b6cc35262",
+            "content_type": "text/html;charset=UTF-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+        "note": null
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": [
+        "en",
+        "ko"
+      ],
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "declared_html_lang": null,
+        "hreflang": [],
+        "language_switcher_links": {},
+        "english_url_checks": [
+          {
+            "url": "https://www.seoulmetro.co.kr/en",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0,
+        "hangul_char_ratio": 1,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -66,36 +81,63 @@
         "attempts": [
           {
             "url": "https://www.seoulmetro.co.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+            "status": 404,
+            "used": false
           },
           {
-            "url": "https://www.seoulmetro.co.kr (이하 후보)",
+            "url": "https://www.seoulmetro.co.kr/signup",
+            "status": 404,
+            "used": false
+          },
+          {
+            "url": "https://www.seoulmetro.co.kr/member/join",
             "status": null,
             "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "reason": "TypeError: fetch failed"
+          },
+          {
+            "url": "https://www.seoulmetro.co.kr/register",
+            "status": null,
+            "used": false,
+            "reason": "TypeError: fetch failed"
+          },
+          {
+            "url": "https://www.seoulmetro.co.kr/user/join",
+            "status": null,
+            "used": false,
+            "reason": "TypeError: fetch failed"
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": true,
+        "android_listed": null,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": {
+          "app_id": "1174757125",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1174757125&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
+        "android": null,
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",
@@ -107,7 +149,7 @@
             "url": "https://www.seoulmetro.co.kr",
             "status": null,
             "scanned": false,
-            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+            "reason": "TypeError: fetch failed"
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
@@ -115,14 +157,28 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "pages": [
+          {
+            "url": "https://www.seoulmetro.co.kr",
+            "status": 200,
+            "chars": 6
+          }
+        ],
+        "content_sha256": "fd70d1f8c36d20ea0ae4c09d14dacf004392374dccc316a25be239cc3ee73e15",
+        "method_detail": "heuristic-fallback (LLM 호출 실패)",
+        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51fHX9moUUQAgbMRMXa\"}",
+        "heuristic": {
+          "value": "unknown",
+          "strong_markers": [],
+          "latin_ratio": 0.595,
+          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
+        }
       }
     },
     "foreign_card": {

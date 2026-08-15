@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 403,
             "final_url": "https://www.coupang.com/",
             "redirected": false,
-            "elapsed_ms": 2091,
-            "body_sha256": "7c0538de9eb1815357132938e39bddad8876f27910fd768120cfc83f939d70c7",
+            "elapsed_ms": 2587,
+            "body_sha256": "a5ab48bea55c9a562cc4a02146b0e7c00c6ec6ba65be8928419e4f5f2e546937",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": [
@@ -46,7 +46,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -59,7 +59,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -86,17 +86,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T08:07:45.107Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T18:24:37.122Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "454434967",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=454434967&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "com.coupang.mobile",
           "listed": true,
@@ -109,7 +116,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -129,7 +136,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-15T18:24:37.122Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:support_en",
