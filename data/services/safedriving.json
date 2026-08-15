@@ -13,7 +13,7 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "com.dreamsecurity.MobileRelay.SampleCrypto",
     "no_app": null
   },
   "signals": {
@@ -197,7 +197,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "The app is published as “교통민원24(이파인)”.",
+    "ko": "앱 이름은 ‘교통민원24(이파인)’입니다."
   }
 }

@@ -13,7 +13,7 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "com.interparktriple.kint5",
     "no_app": null
   },
   "signals": {
@@ -206,7 +206,7 @@
     }
   },
   "notes": {
-    "en": "Formerly global.interpark.com; that domain no longer resolves and www.globalinterpark.com redirects here.",
-    "ko": "옛 global.interpark.com 은 접속 불가. www.globalinterpark.com 이 이 주소로 리디렉션된다 (2026-08-15 확인)."
+    "en": "Formerly global.interpark.com; that domain no longer resolves and www.globalinterpark.com redirects here. The app is published as “NOL World”.",
+    "ko": "옛 global.interpark.com 은 접속 불가. www.globalinterpark.com 이 이 주소로 리디렉션된다 (2026-08-15 확인). 앱 이름은 ‘NOL World’입니다."
   }
 }

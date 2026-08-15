@@ -13,7 +13,7 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "com.musinsa.global",
     "no_app": null
   },
   "signals": {

@@ -13,7 +13,7 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "kr.go.nts.android",
     "no_app": null
   },
   "signals": {
@@ -139,7 +139,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "The app is published as “손택스”.",
+    "ko": "앱 이름은 ‘손택스’입니다."
   }
 }

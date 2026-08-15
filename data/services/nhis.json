@@ -13,7 +13,7 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "kr.or.nhic",
     "no_app": null
   },
   "signals": {
@@ -197,7 +197,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "The app is published as “건강보험25시”.",
+    "ko": "앱 이름은 ‘건강보험25시’입니다."
   }
 }

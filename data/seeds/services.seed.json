@@ -46,8 +46,8 @@
         "no_app": true
       },
       "notes": {
-        "en": "No standalone app found on either store.",
-        "ko": "두 스토어 모두에서 별도 앱을 찾지 못했습니다."
+        "en": "No standalone app found on either store. This site has no app of its own. Express-bus booking is also possible in T-money’s “티머니GO” app, which is run by a different operator.",
+        "ko": "두 스토어 모두에서 별도 앱을 찾지 못했습니다. 이 사이트의 앱은 없습니다. 고속버스 예매 자체는 티머니가 만든 ‘티머니GO’ 앱에서도 됩니다. 운영 주체가 다릅니다."
       }
     },
     {
@@ -58,7 +58,14 @@
       },
       "url": "https://txbus.t-money.co.kr",
       "category": "transport",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "kr.co.tmoney.tia"
+      },
+      "notes": {
+        "en": "Booking runs through the “티머니GO” app, which merged the separate express-bus and intercity-bus apps into one.",
+        "ko": "예매는 ‘티머니GO’ 앱에서 합니다. 고속버스 앱과 시외버스 앱을 하나로 합친 앱입니다."
+      }
     },
     {
       "id": "kakao-t",
@@ -188,11 +195,12 @@
       "category": "ticketing",
       "importance": 1,
       "notes": {
-        "en": "Formerly global.interpark.com; that domain no longer resolves and www.globalinterpark.com redirects here.",
-        "ko": "옛 global.interpark.com 은 접속 불가. www.globalinterpark.com 이 이 주소로 리디렉션된다 (2026-08-15 확인)."
+        "en": "Formerly global.interpark.com; that domain no longer resolves and www.globalinterpark.com redirects here. The app is published as “NOL World”.",
+        "ko": "옛 global.interpark.com 은 접속 불가. www.globalinterpark.com 이 이 주소로 리디렉션된다 (2026-08-15 확인). 앱 이름은 ‘NOL World’입니다."
       },
       "hints": {
-        "signup_url": "https://world.nol.com/en/auth-web/email-join"
+        "signup_url": "https://world.nol.com/en/auth-web/email-join",
+        "android_package": "com.interparktriple.kint5"
       }
     },
     {
@@ -280,7 +288,8 @@
       "importance": 2,
       "hints": {
         "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
-        "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership"
+        "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
+        "android_package": "kr.or.sac.sacapp"
       }
     },
     {
@@ -291,7 +300,14 @@
       },
       "url": "https://www.ntok.go.kr",
       "category": "ticketing",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "no_app": true
+      },
+      "notes": {
+        "en": "No app on either store.",
+        "ko": "두 스토어 모두에 앱이 없습니다."
+      }
     },
     {
       "id": "coupang",
@@ -451,7 +467,10 @@
       },
       "url": "https://global.musinsa.com",
       "category": "shopping",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "com.musinsa.global"
+      }
     },
     {
       "id": "kakao-gift",
@@ -548,7 +567,10 @@
       },
       "url": "https://www.gsshop.com",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "android_package": "gsshop.mobile.v2"
+      }
     },
     {
       "id": "cjonstyle",
@@ -558,7 +580,10 @@
       },
       "url": "https://www.cjonstyle.com",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "android_package": "com.cjoshppingphone"
+      }
     },
     {
       "id": "kyobo",
@@ -570,7 +595,8 @@
       "category": "shopping",
       "importance": 3,
       "hints": {
-        "support_url": "https://www.kyobobook.co.kr/cscenter"
+        "support_url": "https://www.kyobobook.co.kr/cscenter",
+        "android_package": "mok.android"
       }
     },
     {
@@ -789,7 +815,8 @@
       "category": "finance",
       "importance": 3,
       "hints": {
-        "support_url": "https://www.kbanknow.com/web/customer/faq/list"
+        "support_url": "https://www.kbanknow.com/web/customer/faq/list",
+        "android_package": "com.kbankwith.smartbank"
       }
     },
     {
@@ -942,7 +969,10 @@
       },
       "url": "https://themoin.com",
       "category": "finance",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "android_package": "com.themoin.remit"
+      }
     },
     {
       "id": "travel-wallet",
@@ -969,7 +999,12 @@
       "category": "telecom",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.tworld.co.kr/web/login/tid-join"
+        "signup_url": "https://www.tworld.co.kr/web/login/tid-join",
+        "android_package": "com.sktelecom.minit"
+      },
+      "notes": {
+        "en": "The app is published as “T world”.",
+        "ko": "앱 이름은 ‘T world’입니다."
       }
     },
     {
@@ -1030,7 +1065,10 @@
       },
       "url": "https://www.sk7mobile.com",
       "category": "telecom",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "com.sktelinkapp"
+      }
     },
     {
       "id": "chingu-mobile",
@@ -1044,6 +1082,10 @@
       "hints": {
         "support_url": "https://chingumobile.com/faq",
         "signup_url": "https://chingumobile.com/index/signup"
+      },
+      "notes": {
+        "en": "No app found under this name. A KT eSIM app appears in searches but belongs to a different service.",
+        "ko": "이 이름으로 된 앱을 찾지 못했습니다. 검색하면 KT의 eSIM 앱이 나오지만 다른 서비스의 앱입니다."
       }
     },
     {
@@ -1099,7 +1141,10 @@
       },
       "url": "https://www.hanatour.com",
       "category": "accommodation",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "android_package": "com.hanatour.dotcom"
+      }
     },
     {
       "id": "modetour",
@@ -1111,7 +1156,8 @@
       "category": "accommodation",
       "importance": 3,
       "hints": {
-        "support_url": "https://www.modetour.com/customer-center"
+        "support_url": "https://www.modetour.com/customer-center",
+        "android_package": "com.modetour.m"
       }
     },
     {
@@ -1124,7 +1170,12 @@
       "category": "government",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt"
+        "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
+        "no_app": true
+      },
+      "notes": {
+        "en": "No app on either store. An unrelated Korean-learning app shares the HiKorea name.",
+        "ko": "두 스토어 모두에 앱이 없습니다. 이름이 같은 한국어 학습 앱이 있지만 무관합니다."
       }
     },
     {
@@ -1152,7 +1203,12 @@
       "category": "government",
       "importance": 1,
       "hints": {
-        "signup_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80"
+        "signup_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
+        "android_package": "kr.go.nts.android"
+      },
+      "notes": {
+        "en": "The app is published as “손택스”.",
+        "ko": "앱 이름은 ‘손택스’입니다."
       }
     },
     {
@@ -1166,6 +1222,10 @@
       "importance": 2,
       "hints": {
         "support_url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?mi=40254&bbsId=50692"
+      },
+      "notes": {
+        "en": "The tax filing app “손택스” belongs to Hometax, a separate site. Whether this homepage has an app of its own has not been checked.",
+        "ko": "세금 신고 앱 ‘손택스’는 별도 사이트인 홈택스의 앱입니다. 이 홈페이지 자체에 앱이 있는지는 확인하지 않았습니다."
       }
     },
     {
@@ -1176,7 +1236,14 @@
       },
       "url": "https://www.nhis.or.kr",
       "category": "government",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "android_package": "kr.or.nhic"
+      },
+      "notes": {
+        "en": "The app is published as “건강보험25시”.",
+        "ko": "앱 이름은 ‘건강보험25시’입니다."
+      }
     },
     {
       "id": "epost",
@@ -1200,7 +1267,14 @@
       },
       "url": "https://www.safedriving.or.kr",
       "category": "government",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "android_package": "com.dreamsecurity.MobileRelay.SampleCrypto"
+      },
+      "notes": {
+        "en": "The app is published as “교통민원24(이파인)”.",
+        "ko": "앱 이름은 ‘교통민원24(이파인)’입니다."
+      }
     },
     {
       "id": "visitkorea",
@@ -1224,7 +1298,14 @@
       },
       "url": "https://global.seoul.go.kr",
       "category": "government",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "no_app": true
+      },
+      "notes": {
+        "en": "No app on either store.",
+        "ko": "두 스토어 모두에 앱이 없습니다."
+      }
     },
     {
       "id": "e-gen",
@@ -1251,7 +1332,14 @@
       },
       "url": "https://www.hira.or.kr",
       "category": "healthcare",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "com.yagins.hiraportal"
+      },
+      "notes": {
+        "en": "The app is published as “건강e음”.",
+        "ko": "앱 이름은 ‘건강e음’입니다."
+      }
     },
     {
       "id": "snuh",
@@ -1261,7 +1349,10 @@
       },
       "url": "https://www.snuh.org",
       "category": "healthcare",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "com.lemonhc.mcare.snuh"
+      }
     },
     {
       "id": "amc",
@@ -1274,7 +1365,8 @@
       "importance": 2,
       "hints": {
         "support_url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
-        "signup_url": "https://www.amc.seoul.kr/asan/member/join/intro.do"
+        "signup_url": "https://www.amc.seoul.kr/asan/member/join/intro.do",
+        "android_package": "com.amc.mphr1.mphrui"
       }
     },
     {
@@ -1285,7 +1377,10 @@
       },
       "url": "http://www.samsunghospital.com",
       "category": "healthcare",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "android_package": "com.smc.mobile.pguidea"
+      }
     },
     {
       "id": "severance",
@@ -1482,7 +1577,8 @@
       "category": "culture",
       "importance": 2,
       "hints": {
-        "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do"
+        "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
+        "android_package": "or.kr.nationalmuseum"
       }
     }
   ]

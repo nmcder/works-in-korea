@@ -14,7 +14,7 @@
     "english_url": null,
     "ios_app_id": null,
     "android_package": null,
-    "no_app": null
+    "no_app": true
   },
   "signals": {
     "overseas_access": {
@@ -145,7 +145,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "No app on either store.",
+    "ko": "두 스토어 모두에 앱이 없습니다."
   }
 }

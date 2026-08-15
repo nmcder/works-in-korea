@@ -139,7 +139,7 @@
     }
   },
   "notes": {
-    "en": "No standalone app found on either store.",
-    "ko": "두 스토어 모두에서 별도 앱을 찾지 못했습니다."
+    "en": "No standalone app found on either store. This site has no app of its own. Express-bus booking is also possible in T-money’s “티머니GO” app, which is run by a different operator.",
+    "ko": "두 스토어 모두에서 별도 앱을 찾지 못했습니다. 이 사이트의 앱은 없습니다. 고속버스 예매 자체는 티머니가 만든 ‘티머니GO’ 앱에서도 됩니다. 운영 주체가 다릅니다."
   }
 }

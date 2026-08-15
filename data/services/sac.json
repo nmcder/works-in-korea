@@ -13,7 +13,7 @@
     "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "kr.or.sac.sacapp",
     "no_app": null
   },
   "signals": {

@@ -13,7 +13,7 @@
     "support_url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null,
+    "android_package": "com.amc.mphr1.mphrui",
     "no_app": null
   },
   "signals": {

@@ -73,17 +73,37 @@ async function checkIos(appId: string): Promise<{ ok: boolean; name: string; sel
   }
 }
 
-async function checkAndroid(pkg: string): Promise<{ ok: boolean; note: string }> {
+/**
+ * Play 는 앱 이름을 돌려주는 조회 API 가 없어서 상점 페이지의 <title> 을 읽는다.
+ * robots.txt 는 /store/apps/details 를 막지 않는다 (막는 것은 datasafety·editorial·collection).
+ *
+ * 이름을 보는 이유: 존재 여부만 확인하면 오타 난 패키지가 우연히 다른 앱과 맞아도 통과한다.
+ * 실제로 CGV 에 롯데시네마가 붙을 뻔했고, 하이코리아에 개인 개발자의 한국어 학습 앱이
+ * 붙을 뻔했다. 사람이 이름을 보고 아니라고 말할 수 있어야 한다.
+ */
+async function checkAndroid(pkg: string): Promise<{ ok: boolean; name: string; note: string }> {
   const res = await politeFetch(
-    `https://play.google.com/store/apps/details?id=${encodeURIComponent(pkg)}&hl=en`,
-    { discardBody: true, timeoutMs: 12000 },
+    `https://play.google.com/store/apps/details?id=${encodeURIComponent(pkg)}&hl=ko`,
+    { timeoutMs: 15000 },
   );
   if (res.blockedReason !== null || res.error !== null || res.status === null) {
-    return { ok: false, note: res.blockedReason ?? res.error ?? '응답 없음' };
+    return { ok: false, name: '', note: res.blockedReason ?? res.error ?? '응답 없음' };
   }
-  if (res.status >= 200 && res.status < 300) return { ok: true, note: '' };
-  if (res.status === 404) return { ok: false, note: 'Google Play 에 없음' };
-  return { ok: false, note: `예상 밖 상태코드 ${res.status}` };
+  if (res.status === 404) return { ok: false, name: '', note: 'Google Play 에 없음' };
+  if (res.status < 200 || res.status >= 300) {
+    return { ok: false, name: '', note: `예상 밖 상태코드 ${res.status}` };
+  }
+
+  const raw = /<title[^>]*>([\s\S]{0,200}?)<\/title>/i.exec(res.body ?? '')?.[1] ?? '';
+  const name = raw
+    .replace(/&amp;/g, '&')
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s*[-–]\s*(Google Play 앱|Apps on Google Play).*$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  return { ok: true, name, note: name ? '' : '이름을 읽지 못함 (존재는 확인됨)' };
 }
 
 async function main(): Promise<void> {
@@ -147,7 +167,7 @@ async function main(): Promise<void> {
     if (r.ok) {
       hints.android_package = found.android;
       wrote += 1;
-      log.info(`Play ${found.android} → 확인됨`);
+      log.info(`Play ${found.android} → "${r.name || '?'}" 확인됨${r.note ? ` (${r.note})` : ''}`);
     } else {
       log.error(`Play ${found.android} → ${r.note}. 쓰지 않는다.`);
     }
