@@ -7,8 +7,11 @@ export const SITE = {
     en: 'Do Korean online services actually work for foreigners?',
     ko: '한국 온라인 서비스는 외국인에게 실제로 작동하는가?',
   },
-  /** 배포 도메인이 정해지면 교체 (sitemap·OG에 쓰인다) */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://works-in-korea.example',
+  /**
+   * 공개 주소. sitemap·robots·OG 카드에 쓰인다.
+   * 자체 도메인이 생기면 Vercel 환경변수 NEXT_PUBLIC_SITE_URL 로 덮어쓴다.
+   */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://works-in-korea.vercel.app',
 
   /**
    * 제보 창구. 3주차에 공개 레포의 Issue Form 주소로 교체한다.

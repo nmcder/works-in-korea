@@ -100,7 +100,18 @@ LLM API(제보 정규화용)만 월 3~5만원 예상. 어느 쪽이든 월 예�
 - [x] 주요 의사결정 기록 (`docs/03-decisions.md`)
 - [x] **1주차 완료 (2026-08-15)** — 데이터 스키마 + 자동 프로브 6종 + Actions 크론
 - [x] **2주차 완료 (2026-08-15)** — 공개 사이트 `site/` (홈·상세·`/changes`·`/method`·공개 API)
+- [x] **배포 완료 (2026-08-15)** — **https://works-in-korea.vercel.app** (Vercel Hobby, 무료)
 - [ ] **← 여기부터 시작.** 3주차: 제보 레이어 (GitHub Issue Form → 정규화 → PR)
+
+**공개 주소**
+
+| | |
+|---|---|
+| 사이트 | https://works-in-korea.vercel.app |
+| 공개 API | `/api/v1/services.json` · `/api/v1/services/<id>.json` · `/api/v1/changes.json` · `/api/v1/meta.json` |
+| 갱신 | 크론이 `data/` 커밋 → 푸시 → Vercel 자동 재배포. **사람 개입 없음** |
+
+배포 설정은 레포 최상위 `vercel.json` 에 있다. Vercel UI에서는 아무것도 설정하지 않는다 (D-13).
 
 로드맵은 `docs/04-roadmap.md`. 엔진 사용법과 사이트 실행법은 `README.md`.
 

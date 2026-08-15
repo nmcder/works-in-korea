@@ -16,10 +16,15 @@ export const PATHS = {
 
 /**
  * 크롤링 예의(CLAUDE.md 절대규칙 4). 공개 URL과 연락처를 User-Agent에 반드시 남긴다.
- * 도메인이 정해지면 WIK_PROJECT_URL / WIK_CONTACT 를 Actions 변수로 설정할 것.
+ *
+ * 기본값이 공개 사이트를 가리켜야 한다. 이전 기본값은 레포 주소였는데, 레포가 프라이빗이라
+ * 우리 봇을 발견한 사이트 운영자가 눌러도 404 를 보게 된다 — 그러면 "연락처를 남긴다"는
+ * 약속이 형식만 남고 실제로는 지켜지지 않는다. (/method 페이지에도 같은 약속이 적혀 있다)
+ *
+ * 자체 도메인이 생기면 WIK_PROJECT_URL / WIK_CONTACT 를 Actions 변수로 덮어쓴다.
  */
-export const PROJECT_URL = process.env.WIK_PROJECT_URL ?? 'https://github.com/nmcder/works-in-korea';
-export const CONTACT = process.env.WIK_CONTACT ?? 'https://github.com/nmcder/works-in-korea/issues';
+export const PROJECT_URL = process.env.WIK_PROJECT_URL ?? 'https://works-in-korea.vercel.app';
+export const CONTACT = process.env.WIK_CONTACT ?? 'kkw5863@gmail.com';
 export const BOT_TOKEN = 'WorksInKoreaBot';
 export const USER_AGENT = `${BOT_TOKEN}/0.1 (+${PROJECT_URL}; contact: ${CONTACT})`;
 
