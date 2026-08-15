@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://world.nol.com/en/auth-web/email-join",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://world.nol.com/en/my-info/inquiries/new",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.interparktriple.kint5",

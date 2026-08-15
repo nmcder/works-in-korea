@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.goodoc.co.kr",
     "english_url": null,
     "ios_app_id": "517637141",
     "android_package": "com.ksncho.hospitalinfo",

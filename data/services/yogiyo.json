@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.yogiyo.co.kr/mobile/#/login/",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.yogiyo.co.kr",
     "english_url": null,
     "ios_app_id": "543831532",
     "android_package": "com.fineapp.yogiyo",

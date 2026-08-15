@@ -20,7 +20,8 @@
     "inspect": "tsx src/inspect-page.ts",
     "ingest": "tsx src/ingest-report.ts",
     "find-hints": "tsx src/discover-hints.ts",
-    "add-app": "tsx src/add-app.ts"
+    "add-app": "tsx src/add-app.ts",
+    "check-support": "tsx src/check-support.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

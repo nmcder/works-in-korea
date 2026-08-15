@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.museum.go.kr/MUSEUM/contents/M0706000000.do",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "or.kr.nationalmuseum",

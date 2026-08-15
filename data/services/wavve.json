@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.wavve.com/customer/notice_list",
     "english_url": null,
     "ios_app_id": "987782077",
     "android_package": "kr.co.captv.pooqV2",

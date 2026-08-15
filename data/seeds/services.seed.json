@@ -107,7 +107,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.nhn.android.nmap",
-        "signup_url": "https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fmap.naver.com%2F"
+        "signup_url": "https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fmap.naver.com%2F",
+        "support_url": "https://help.naver.com/service/5637/category/bookmark"
       }
     },
     {
@@ -200,7 +201,8 @@
       },
       "hints": {
         "signup_url": "https://world.nol.com/en/auth-web/email-join",
-        "android_package": "com.interparktriple.kint5"
+        "android_package": "com.interparktriple.kint5",
+        "support_url": "https://world.nol.com/en/my-info/inquiries/new"
       }
     },
     {
@@ -545,7 +547,8 @@
       "importance": 3,
       "hints": {
         "ios_app_id": "976131101",
-        "android_package": "com.croquis.zigzag"
+        "android_package": "com.croquis.zigzag",
+        "support_url": "https://zigzag.kr"
       }
     },
     {
@@ -559,7 +562,8 @@
       "importance": 3,
       "hints": {
         "ios_app_id": "429151787",
-        "android_package": "com.socialapps.homeplus"
+        "android_package": "com.socialapps.homeplus",
+        "support_url": "https://mfront.homeplus.co.kr/cs?homeType=MART"
       }
     },
     {
@@ -657,7 +661,8 @@
       "hints": {
         "android_package": "com.fineapp.yogiyo",
         "signup_url": "https://www.yogiyo.co.kr/mobile/#/login/",
-        "ios_app_id": "543831532"
+        "ios_app_id": "543831532",
+        "support_url": "https://www.yogiyo.co.kr"
       }
     },
     {
@@ -851,7 +856,8 @@
       "hints": {
         "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
         "ios_app_id": "357484932",
-        "android_package": "com.shinhan.sbanking"
+        "android_package": "com.shinhan.sbanking",
+        "support_url": "https://www.shinhan.com/hpe/index.jsp"
       }
     },
     {
@@ -893,7 +899,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1444712671",
-        "android_package": "nh.smart.banking"
+        "android_package": "nh.smart.banking",
+        "support_url": "https://banking.nonghyup.com/servlet/content/ip/ec/IPEC0001M.thtml"
       }
     },
     {
@@ -978,7 +985,8 @@
       "category": "finance",
       "importance": 3,
       "hints": {
-        "android_package": "com.themoin.remit"
+        "android_package": "com.themoin.remit",
+        "support_url": "https://www.themoin.com"
       }
     },
     {
@@ -1280,7 +1288,8 @@
       "category": "government",
       "importance": 3,
       "hints": {
-        "android_package": "com.dreamsecurity.MobileRelay.SampleCrypto"
+        "android_package": "com.dreamsecurity.MobileRelay.SampleCrypto",
+        "support_url": "https://www.safedriving.or.kr/main.do"
       },
       "notes": {
         "en": "The app is published as “교통민원24(이파인)”.",
@@ -1298,7 +1307,8 @@
       "importance": 1,
       "hints": {
         "ios_app_id": "417340885",
-        "android_package": "com.visitkorea.eng"
+        "android_package": "com.visitkorea.eng",
+        "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454"
       }
     },
     {
@@ -1311,7 +1321,8 @@
       "category": "government",
       "importance": 2,
       "hints": {
-        "no_app": true
+        "no_app": true,
+        "support_url": "https://global.seoul.go.kr/web/prmg/prco/prcoListPage.do"
       },
       "notes": {
         "en": "No app on either store.",
@@ -1421,7 +1432,8 @@
       "importance": 3,
       "hints": {
         "ios_app_id": "517637141",
-        "android_package": "com.ksncho.hospitalinfo"
+        "android_package": "com.ksncho.hospitalinfo",
+        "support_url": "https://www.goodoc.co.kr"
       }
     },
     {
@@ -1550,7 +1562,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "987782077",
-        "android_package": "kr.co.captv.pooqV2"
+        "android_package": "kr.co.captv.pooqV2",
+        "support_url": "https://www.wavve.com/customer/notice_list"
       }
     },
     {
@@ -1593,7 +1606,8 @@
       "importance": 2,
       "hints": {
         "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
-        "android_package": "or.kr.nationalmuseum"
+        "android_package": "or.kr.nationalmuseum",
+        "support_url": "https://www.museum.go.kr/MUSEUM/contents/M0706000000.do"
       }
     }
   ]

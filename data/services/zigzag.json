@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://zigzag.kr",
     "english_url": null,
     "ios_app_id": "976131101",
     "android_package": "com.croquis.zigzag",

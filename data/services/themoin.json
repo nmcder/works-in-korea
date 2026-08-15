@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.themoin.com",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.themoin.remit",

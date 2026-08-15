@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fmap.naver.com%2F",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.naver.com/service/5637/category/bookmark",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.nhn.android.nmap",

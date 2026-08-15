@@ -10,6 +10,7 @@
  */
 import Anthropic from '@anthropic-ai/sdk';
 import { LLM } from '../config.js';
+import { snapshotPage } from '../lib/browser.js';
 import { extractLinks, politeFetch, sha256, visibleText } from '../lib/http.js';
 import { errMessage, log } from '../lib/log.js';
 import type { ProbeResult, Service, Signal, SupportEnValue } from '../types.js';
@@ -40,6 +41,9 @@ const STRONG_EN_MARKERS = [
   'foreign language support',
   'english help center',
 ];
+
+/** 이 글자 수보다 적으면 자바스크립트로 그리는 화면으로 보고 브라우저로 다시 읽는다 */
+const RENDER_THRESHOLD = 400;
 
 let client: Anthropic | null = null;
 
@@ -174,7 +178,29 @@ async function collectSupportPages(
   const hinted = service.hints?.support_url;
   if (hinted) {
     const res = await politeFetch(hinted, { headers: { 'accept-language': 'en-US,en;q=0.9' } });
-    if (res.ok && res.body) out.push({ url: hinted, status: res.status, text: visibleText(res.body) });
+    let text = res.ok && res.body ? visibleText(res.body) : '';
+
+    /*
+     * 고객센터 화면을 자바스크립트로 그리는 곳이 많다. 원본 HTML 을 받아 보면
+     * 글자가 열 자도 안 되고, 그걸 LLM 에 주면 "상담 창구 정보가 전혀 없다"는
+     * unknown 이 나온다. 사람이 눈으로 보고 넣어 준 주소인데도 그렇다.
+     *
+     * 2026-08-16 에 운영자가 24곳을 직접 찾아 줬는데 그중 7곳(신한은행·웨이브·
+     * 홈플러스·모인·예스24·똑닥·인터파크 글로벌)이 정확히 이 상태였다.
+     * 주소가 있는데도 못 읽으면 찾아 준 사람만 헛수고한 것이 된다.
+     *
+     * 그래서 글자가 너무 적으면 브라우저로 한 번 더 그려서 읽는다.
+     * 힌트가 있는 주소에만 적용한다 — 사람이 확인해 준 주소이므로 브라우저를
+     * 띄울 값어치가 있고, 그렇지 않은 곳까지 하면 실행 시간이 크게 늘어난다.
+     */
+    if (text.length < RENDER_THRESHOLD) {
+      const page = await snapshotPage(hinted);
+      if (page.ok && (page.visibleText ?? '').length > text.length) {
+        text = (page.visibleText ?? '').slice(0, 20000);
+      }
+    }
+
+    if (text) out.push({ url: hinted, status: res.status, text });
   }
 
   const home = await politeFetch(service.url, {

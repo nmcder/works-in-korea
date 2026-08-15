@@ -1,7 +1,7 @@
 # 운영자 작업 목록 — 힌트 채우기
 
 > 이 파일은 `npm run hints` 로 자동 생성됩니다. 직접 고치지 마세요.
-> 생성 시각: 2026-08-15T22:56:14.317Z
+> 생성 시각: 2026-08-15T23:19:26.340Z
 
 ## 하는 법 (한 항목당 1~2분)
 
@@ -29,7 +29,7 @@
 
 ---
 
-## 지금 채우면 바로 측정이 살아나는 서비스 (51건)
+## 지금 채우면 바로 측정이 살아나는 서비스 (46건)
 
 우선순위 1등급부터 정렬했습니다. **위에서부터 30개만 해도 충분합니다.**
 
@@ -38,17 +38,13 @@
 
 | 서비스 | 필요한 힌트 | 봇이 이미 시도해 본 주소 (전부 실패) |
 |---|---|---|
-| **[놀 인터파크 글로벌](https://world.nol.com)**<br><sub>`interpark-global`</sub> | support_url | `/en/auth-web/email-join` → hints.signup_url |
 | **[카카오 T](https://www.kakaomobility.com)**<br><sub>`kakao-t`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[카카오페이](https://www.kakaopay.com)**<br><sub>`kakaopay`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[카카오톡](https://www.kakaocorp.com)**<br><sub>`kakaotalk`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[네이버 지도](https://map.naver.com)**<br><sub>`naver-map`</sub> | support_url | `/nidlogin.login` → hints.signup_url |
 | **[네이버페이](https://pay.naver.com)**<br><sub>`naverpay`</sub> | signup_url | `/join` → 200 |
 | **[국민건강보험공단](https://www.nhis.or.kr)**<br><sub>`nhis`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[신한은행](https://bank.shinhan.com)**<br><sub>`shinhan-bank`</sub> | support_url | `/hpe/index.jsp` → hints.signup_url |
 | **[토스](https://toss.im)**<br><sub>`toss`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[한국관광공사 비지트코리아](https://english.visitkorea.or.kr)**<br><sub>`visitkorea`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[요기요](https://www.yogiyo.co.kr)**<br><sub>`yogiyo`</sub> | support_url | `/mobile/` → hints.signup_url |
 
 ### 우선순위 2등급
 
@@ -62,11 +58,10 @@
 | **[한패스](https://www.hanpass.com)**<br><sub>`hanpass`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[건강보험심사평가원](https://www.hira.or.kr)**<br><sub>`hira`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[마켓컬리](https://www.kurly.com)**<br><sub>`kurly`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[국립중앙박물관](https://www.museum.go.kr)**<br><sub>`national-museum`</sub> | support_url | `/MUSEUM/contents/membership.do` → hints.signup_url |
-| **[NH농협은행](https://banking.nonghyup.com)**<br><sub>`nonghyup`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[NH농협은행](https://banking.nonghyup.com)**<br><sub>`nonghyup`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[삼성서울병원](http://www.samsunghospital.com)**<br><sub>`samsung-hospital`</sub> | signup_url | `/join` → 400<br>`/signup` → 400<br>`/member/join` → 400<br>`/register` → 400<br>`/user/join` → 400 |
 | **[센트비](https://www.sentbe.com)**<br><sub>`sentbe`</sub> | signup_url | `/join` → 200 |
-| **[서울글로벌센터](https://global.seoul.go.kr)**<br><sub>`seoul-global`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[서울글로벌센터](https://global.seoul.go.kr)**<br><sub>`seoul-global`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[세브란스병원](https://sev.severance.healthcare)**<br><sub>`severance`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → robots: Disallow: /member/ |
 | **[SK세븐모바일](https://www.sk7mobile.com)**<br><sub>`sk7mobile`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[서울대학교병원](https://www.snuh.org)**<br><sub>`snuh`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
@@ -74,7 +69,7 @@
 | **[토스뱅크](https://www.tossbank.com)**<br><sub>`tossbank`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[트래블월렛](https://www.travel-wallet.com)**<br><sub>`travel-wallet`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[티빙](https://www.tving.com)**<br><sub>`tving`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[웨이브](https://www.wavve.com)**<br><sub>`wavve`</sub> | signup_url, support_url | `/join` → robots: Disallow: / |
+| **[웨이브](https://www.wavve.com)**<br><sub>`wavve`</sub> | signup_url | `/join` → robots: Disallow: / |
 | **[와이어바알리](https://www.wirebarley.com)**<br><sub>`wirebarley`</sub> | signup_url | `/join` → 200 |
 
 ### 우선순위 3등급
@@ -84,10 +79,10 @@
 | **[CJ온스타일](https://www.cjonstyle.com)**<br><sub>`cjonstyle`</sub> | signup_url, support_url | `/join` → 200 |
 | **[다나와](https://www.danawa.com)**<br><sub>`danawa`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → robots: Disallow: /member/ |
 | **[똑닥](https://www.ddocdoc.com)**<br><sub>`ddocdoc`</sub> | support_url | `/register` → hints.signup_url |
-| **[굿닥](https://www.goodoc.co.kr)**<br><sub>`goodoc`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[굿닥](https://www.goodoc.co.kr)**<br><sub>`goodoc`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[GS샵](https://www.gsshop.com)**<br><sub>`gsshop`</sub> | signup_url, support_url | `/join` → 200 |
 | **[하나투어](https://www.hanatour.com)**<br><sub>`hanatour`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[홈플러스](https://front.homeplus.co.kr)**<br><sub>`homeplus`</sub> | signup_url, support_url | `/join` → 200 |
+| **[홈플러스](https://front.homeplus.co.kr)**<br><sub>`homeplus`</sub> | signup_url | `/join` → 200 |
 | **[케이뱅크](https://www.kbanknow.com)**<br><sub>`kbank`</sub> | signup_url | `/join` → 200 |
 | **[교보문고](https://www.kyobobook.co.kr)**<br><sub>`kyobo`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[모두투어](https://www.modetour.com)**<br><sub>`modetour`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
@@ -95,10 +90,10 @@
 | **[도로교통공단 안전운전 통합민원](https://www.safedriving.or.kr)**<br><sub>`safedriving`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[서울교통공사](https://www.seoulmetro.co.kr)**<br><sub>`seoul-metro`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → TypeError: fetch failed<br>`/register` → TypeError: fetch failed<br>`/user/join` → TypeError: fetch failed |
 | **[타다](https://tadatada.com)**<br><sub>`tada`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[모인](https://themoin.com)**<br><sub>`themoin`</sub> | signup_url, support_url | `/join` → 200 |
+| **[모인](https://themoin.com)**<br><sub>`themoin`</sub> | signup_url | `/join` → 200 |
 | **[왓챠](https://watcha.com)**<br><sub>`watcha`</sub> | signup_url | `/join` → 200 |
 | **[예스24](http://www.yes24.com)**<br><sub>`yes24`</sub> | signup_url, support_url | `/join` → 200 |
-| **[지그재그](https://zigzag.kr)**<br><sub>`zigzag`</sub> | signup_url, support_url | `/join` → 200 |
+| **[지그재그](https://zigzag.kr)**<br><sub>`zigzag`</sub> | signup_url | `/join` → 200 |
 
 ---
 

@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.shinhan.com/hpe/index.jsp",
     "english_url": null,
     "ios_app_id": "357484932",
     "android_package": "com.shinhan.sbanking",

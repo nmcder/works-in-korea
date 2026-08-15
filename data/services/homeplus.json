@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://mfront.homeplus.co.kr/cs?homeType=MART",
     "english_url": null,
     "ios_app_id": "429151787",
     "android_package": "com.socialapps.homeplus",
