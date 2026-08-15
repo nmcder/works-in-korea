@@ -22,7 +22,7 @@ data/seeds/       the service list (the only file you edit by hand)
 data/services/    results, committed daily by the bot
 data/signatures/  detection patterns for identity verification and payment providers
 schema/           the data contract; CI rejects anything that breaks it
-site/             the public site (Next.js static export)
+site/             the public site (Next.js, prerendered + one API route)
 .github/workflows daily-probe (cron), validate (PR checks), report-poll (community reports)
 ```
 
@@ -175,5 +175,5 @@ Read [D-12 and D-15](docs/03-decisions.md) before changing the UI.
 | [CLAUDE.md](CLAUDE.md) | project rules and current state |
 | [docs/01-market-research.md](docs/01-market-research.md) | why this problem, with sources |
 | [docs/02-product-spec.md](docs/02-product-spec.md) | data model and probe specifications |
-| [docs/03-decisions.md](docs/03-decisions.md) | decision log, D-1 to D-18 |
+| [docs/03-decisions.md](docs/03-decisions.md) | decision log, D-1 to D-21 |
 | [docs/04-roadmap.md](docs/04-roadmap.md) | 4-week plan and division of work |
