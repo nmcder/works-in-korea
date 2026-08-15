@@ -87,7 +87,11 @@ async function checkAndroid(pkg: string): Promise<{ ok: boolean; note: string }>
 }
 
 async function main(): Promise<void> {
+  const flags = process.argv.slice(2).filter((a) => a.startsWith('--'));
   const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  // --check 는 스토어에 뭐가 있는지 보여만 주고 시드를 건드리지 않는다.
+  // 맞는 앱인지 확신이 없을 때 먼저 확인하라고 있는 것이다.
+  const checkOnly = flags.includes('--check');
   const [serviceId, ...tokens] = args;
 
   if (!serviceId || tokens.length === 0) {
@@ -147,6 +151,11 @@ async function main(): Promise<void> {
     } else {
       log.error(`Play ${found.android} → ${r.note}. 쓰지 않는다.`);
     }
+  }
+
+  if (checkOnly) {
+    log.info('--check 이므로 시드를 건드리지 않았다.');
+    return;
   }
 
   if (wrote === 0) {

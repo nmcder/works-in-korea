@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "1084960428",
+    "android_package": "com.banhala.android",
     "no_app": null
   },
   "signals": {

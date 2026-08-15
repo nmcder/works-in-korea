@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "435940000",
+    "android_package": "kr.go.epost.app.findZip",
     "no_app": null
   },
   "signals": {

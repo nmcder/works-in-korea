@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "858266085",
+    "android_package": "com.ktmusic.geniemusic",
     "no_app": null
   },
   "signals": {

@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "376622474",
+    "android_package": "com.lotte",
     "no_app": null
   },
   "signals": {

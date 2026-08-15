@@ -141,7 +141,10 @@
       },
       "url": "https://www.seoulmetro.co.kr",
       "category": "transport",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "1174757125"
+      }
     },
     {
       "id": "tmoney",
@@ -151,7 +154,11 @@
       },
       "url": "https://www.t-money.co.kr",
       "category": "transport",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1470361790",
+        "android_package": "com.lgt.tmoney"
+      }
     },
     {
       "id": "interpark-ticket",
@@ -353,7 +360,11 @@
       },
       "url": "https://www.auction.co.kr",
       "category": "shopping",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "380239756",
+        "android_package": "com.ebay.kr.auction"
+      }
     },
     {
       "id": "ssg",
@@ -363,7 +374,11 @@
       },
       "url": "https://www.ssg.com",
       "category": "shopping",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "786135420",
+        "android_package": "kr.co.ssg"
+      }
     },
     {
       "id": "lotteon",
@@ -373,7 +388,11 @@
       },
       "url": "https://www.lotteon.com",
       "category": "shopping",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "376622474",
+        "android_package": "com.lotte"
+      }
     },
     {
       "id": "oliveyoung",
@@ -483,7 +502,11 @@
       },
       "url": "https://a-bly.com",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "1084960428",
+        "android_package": "com.banhala.android"
+      }
     },
     {
       "id": "zigzag",
@@ -833,7 +856,11 @@
       },
       "url": "https://www.ibk.co.kr",
       "category": "finance",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "1460543865",
+        "android_package": "com.ibk.android.ionebank"
+      }
     },
     {
       "id": "hanpass",
@@ -1034,7 +1061,11 @@
       },
       "url": "https://tour.interpark.com",
       "category": "accommodation",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "775349206",
+        "android_package": "com.interpark.tour.mobile.main"
+      }
     },
     {
       "id": "hanatour",
@@ -1129,7 +1160,11 @@
       },
       "url": "https://www.epost.go.kr",
       "category": "government",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "435940000",
+        "android_package": "kr.go.epost.app.findZip"
+      }
     },
     {
       "id": "safedriving",
@@ -1340,7 +1375,11 @@
       },
       "url": "https://www.genie.co.kr",
       "category": "culture",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "858266085",
+        "android_package": "com.ktmusic.geniemusic"
+      }
     },
     {
       "id": "tving",

@@ -1,7 +1,7 @@
 # 운영자 작업 목록 — 힌트 채우기
 
 > 이 파일은 `npm run hints` 로 자동 생성됩니다. 직접 고치지 마세요.
-> 생성 시각: 2026-08-15T08:39:47.856Z
+> 생성 시각: 2026-08-15T08:52:14.874Z
 
 ## 하는 법 (한 항목당 1~2분)
 
@@ -156,20 +156,20 @@ npm run add-app -- coupang "https://play.google.com/store/apps/details?id=com.co
 | **네이버쇼핑**<br><sub>`naver-shopping`</sub> | iOS `6738063154`<br>Play `com.navercorp.navershopping` |  |
 | **올리브영**<br><sub>`oliveyoung`</sub> | iOS `873779010`<br>Play `com.oliveyoung` |  |
 | **신한은행**<br><sub>`shinhan-bank`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89?src=serp) |
-| **옥션**<br><sub>`auction`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%98%A5%EC%85%98&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%98%A5%EC%85%98?src=serp) |
-| **우체국**<br><sub>`epost`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%9A%B0%EC%B2%B4%EA%B5%AD&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%9A%B0%EC%B2%B4%EA%B5%AD?src=serp) |
-| **인터파크 투어**<br><sub>`interpark-tour`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%9D%B8%ED%84%B0%ED%8C%8C%ED%81%AC%20%ED%88%AC%EC%96%B4&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%9D%B8%ED%84%B0%ED%8C%8C%ED%81%AC%20%ED%88%AC%EC%96%B4?src=serp) |
-| **롯데온**<br><sub>`lotteon`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EB%A1%AF%EB%8D%B0%EC%98%A8&c=apps) · [App Store](https://www.apple.com/kr/search/%EB%A1%AF%EB%8D%B0%EC%98%A8?src=serp) |
+| **옥션**<br><sub>`auction`</sub> | iOS `380239756`<br>Play `com.ebay.kr.auction` |  |
+| **우체국**<br><sub>`epost`</sub> | iOS `435940000`<br>Play `kr.go.epost.app.findZip` |  |
+| **인터파크 투어**<br><sub>`interpark-tour`</sub> | iOS `775349206`<br>Play `com.interpark.tour.mobile.main` |  |
+| **롯데온**<br><sub>`lotteon`</sub> | iOS `376622474`<br>Play `com.lotte` |  |
 | **멜론**<br><sub>`melon`</sub> | Play `com.iloen.melon` | [App Store](https://www.apple.com/kr/search/%EB%A9%9C%EB%A1%A0?src=serp) |
 | **무신사 글로벌**<br><sub>`musinsa-global`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EA%B8%80%EB%A1%9C%EB%B2%8C&c=apps) · [App Store](https://www.apple.com/kr/search/%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EA%B8%80%EB%A1%9C%EB%B2%8C?src=serp) |
 | **NH농협은행**<br><sub>`nonghyup`</sub> | 없음 | [Play](https://play.google.com/store/search?q=NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89&c=apps) · [App Store](https://www.apple.com/kr/search/NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89?src=serp) |
 | **국세청**<br><sub>`nts`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EA%B5%AD%EC%84%B8%EC%B2%AD&c=apps) · [App Store](https://www.apple.com/kr/search/%EA%B5%AD%EC%84%B8%EC%B2%AD?src=serp) |
-| **SSG닷컴**<br><sub>`ssg`</sub> | 없음 | [Play](https://play.google.com/store/search?q=SSG%EB%8B%B7%EC%BB%B4&c=apps) · [App Store](https://www.apple.com/kr/search/SSG%EB%8B%B7%EC%BB%B4?src=serp) |
-| **티머니**<br><sub>`tmoney`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%ED%8B%B0%EB%A8%B8%EB%8B%88&c=apps) · [App Store](https://www.apple.com/kr/search/%ED%8B%B0%EB%A8%B8%EB%8B%88?src=serp) |
+| **SSG닷컴**<br><sub>`ssg`</sub> | iOS `786135420`<br>Play `kr.co.ssg` |  |
+| **티머니**<br><sub>`tmoney`</sub> | iOS `1470361790`<br>Play `com.lgt.tmoney` |  |
 | **시외버스 통합예매**<br><sub>`txbus`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4%20%ED%86%B5%ED%95%A9%EC%98%88%EB%A7%A4&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%8B%9C%EC%99%B8%EB%B2%84%EC%8A%A4%20%ED%86%B5%ED%95%A9%EC%98%88%EB%A7%A4?src=serp) |
 | **우리은행**<br><sub>`woori-bank`</sub> | iOS `1470181651`<br>Play `com.wooribank.smart.npib` |  |
-| **에이블리**<br><sub>`ably`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%97%90%EC%9D%B4%EB%B8%94%EB%A6%AC&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%97%90%EC%9D%B4%EB%B8%94%EB%A6%AC?src=serp) |
-| **지니뮤직**<br><sub>`genie`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%A7%80%EB%8B%88%EB%AE%A4%EC%A7%81&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%A7%80%EB%8B%88%EB%AE%A4%EC%A7%81?src=serp) |
-| **IBK기업은행**<br><sub>`ibk`</sub> | 없음 | [Play](https://play.google.com/store/search?q=IBK%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89&c=apps) · [App Store](https://www.apple.com/kr/search/IBK%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89?src=serp) |
+| **에이블리**<br><sub>`ably`</sub> | iOS `1084960428`<br>Play `com.banhala.android` |  |
+| **지니뮤직**<br><sub>`genie`</sub> | iOS `858266085`<br>Play `com.ktmusic.geniemusic` |  |
+| **IBK기업은행**<br><sub>`ibk`</sub> | iOS `1460543865`<br>Play `com.ibk.android.ionebank` |  |
 | **국립극장**<br><sub>`ntok`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EA%B5%AD%EB%A6%BD%EA%B7%B9%EC%9E%A5&c=apps) · [App Store](https://www.apple.com/kr/search/%EA%B5%AD%EB%A6%BD%EA%B7%B9%EC%9E%A5?src=serp) |
-| **서울교통공사**<br><sub>`seoul-metro`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%84%9C%EC%9A%B8%EA%B5%90%ED%86%B5%EA%B3%B5%EC%82%AC&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%84%9C%EC%9A%B8%EA%B5%90%ED%86%B5%EA%B3%B5%EC%82%AC?src=serp) |
+| **서울교통공사**<br><sub>`seoul-metro`</sub> | iOS `1174757125` | [Play](https://play.google.com/store/search?q=%EC%84%9C%EC%9A%B8%EA%B5%90%ED%86%B5%EA%B3%B5%EC%82%AC&c=apps) |
