@@ -25,7 +25,39 @@ async function readJson(file) {
   return JSON.parse(await readFile(file, 'utf8'));
 }
 
+/**
+ * data/ 가 안 보이면 여기서 이유를 분명히 밝히고 멈춘다.
+ *
+ * 이 실수는 Vercel에서 거의 반드시 한 번은 난다: Root Directory 를 `site` 로 잡으면
+ * 기본 설정이 상위 폴더를 빌드에 포함하지 않아 `../data` 가 통째로 사라진다.
+ * 그때 나오는 기본 오류 메시지로는 원인을 알 수 없으므로 직접 적어 준다.
+ */
+async function assertDataDir() {
+  try {
+    await readdir(path.join(DATA, 'services'));
+  } catch {
+    console.error(
+      [
+        '',
+        '  [api] 측정 데이터를 찾을 수 없습니다.',
+        `        찾은 위치: ${path.join(DATA, 'services')}`,
+        '',
+        '  Vercel에 배포 중이라면 십중팔구 이것입니다:',
+        '    Settings → Build and Deployment → Root Directory 에서',
+        '    "Include files outside of the Root Directory in the Build Step" 를 켜세요.',
+        '    (Root Directory 를 site 로 지정하면 기본값이 꺼져 있어 ../data 가 사라집니다)',
+        '',
+        '  If deploying on Vercel: enable "Include files outside of the Root Directory',
+        '  in the Build Step" — the site reads ../data at build time.',
+        '',
+      ].join('\n'),
+    );
+    process.exit(1);
+  }
+}
+
 async function main() {
+  await assertDataDir();
   await rm(OUT, { recursive: true, force: true });
   await mkdir(path.join(OUT, 'services'), { recursive: true });
 
