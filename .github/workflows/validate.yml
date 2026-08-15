@@ -33,3 +33,23 @@ jobs:
           fi
       - name: 스키마 검증
         run: npm run validate
+
+  # 사이트는 data/ 를 빌드 시점에 읽는다. 데이터 모양이 바뀌면 여기서 먼저 깨진다.
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+        working-directory: site
+      - name: 타입 검사
+        run: npm run typecheck
+        working-directory: site
+      - name: 정적 사이트 빌드
+        run: npm run build
+        working-directory: site

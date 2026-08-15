@@ -10,3 +10,14 @@ Thumbs.db
 tmp/
 playwright-report/
 test-results/
+
+# 공개 사이트 빌드 산출물.
+# site/public/api/ 는 data/ 에서 매 빌드마다 다시 생성되므로 커밋하지 않는다.
+# (커밋하면 같은 사실이 두 곳에 저장되어 git 히스토리가 오염된다)
+site/.next/
+site/out/
+site/public/api/
+site/next-env.d.ts
+site/tsconfig.tsbuildinfo
+site/AGENTS.md
+site/CLAUDE.md
