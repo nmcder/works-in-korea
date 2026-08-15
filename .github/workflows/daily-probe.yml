@@ -105,7 +105,22 @@ jobs:
                 '- 값 변경: ' + s.changes + '건',
                 '- 오류: ' + s.errors.length + '건',
                 '- 소요: ' + (s.duration_ms/1000).toFixed(0) + '초',
-              ].join('\n');
-              console.log(out);
+              ];
+              // 돈이 나가는 유일한 곳. 자동 충전을 꺼 두려면 새는 것을 알아챌 수 있어야 한다.
+              // cached 가 calls 보다 크게 유지되는 것이 정상이고, 뒤집히면 캐시가 깨진 것이다.
+              const l = s.llm;
+              if (l && (l.calls > 0 || l.cached > 0)) {
+                const price = { 'claude-sonnet-5': [3, 15], 'claude-haiku-4-5': [1, 5] }[l.model] ?? [3, 15];
+                const usd = (l.input_tokens / 1e6) * price[0] + (l.output_tokens / 1e6) * price[1];
+                out.push(
+                  '- LLM: 호출 ' + l.calls + '건 · 캐시로 생략 ' + l.cached + '건',
+                  '- LLM 토큰: 입력 ' + l.input_tokens.toLocaleString() + ' · 출력 ' + l.output_tokens.toLocaleString(),
+                  '- 이번 실행 비용: 약 $' + usd.toFixed(3) + (l.model ? ' (' + l.model + ')' : ''),
+                );
+                if (l.calls > l.cached && l.cached > 0) {
+                  out.push('- ⚠️ 캐시보다 호출이 많다. 재분류가 계속 일어나는지 확인할 것.');
+                }
+              }
+              console.log(out.join('\n'));
             " >> $GITHUB_STEP_SUMMARY
           fi

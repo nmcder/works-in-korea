@@ -157,4 +157,18 @@ export interface RunSummary {
   signals_unknown: number;
   changes: number;
   errors: { service_id: string; signal: string; message: string }[];
+  /**
+   * LLM 사용량. 이 프로젝트에서 돈이 나가는 유일한 곳이라 매 실행마다 보고한다.
+   *
+   * 자동 충전을 꺼 두는 것이 안전한 이유는 잔액이 0이 되면 프로브가 알아서
+   * 휴리스틱으로 떨어지기 때문인데, 그러려면 새는 것을 알아챌 수 있어야 한다.
+   * cached 가 calls 보다 훨씬 크게 유지되는 것이 정상이다.
+   */
+  llm?: {
+    calls: number;
+    cached: number;
+    input_tokens: number;
+    output_tokens: number;
+    model: string | null;
+  };
 }

@@ -14,7 +14,7 @@
  */
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { PATHS } from './config.js';
+import { LLM, PATHS } from './config.js';
 import { closeBrowser } from './lib/browser.js';
 import { mapWithConcurrency } from './lib/limiter.js';
 import { errMessage, log } from './lib/log.js';
@@ -25,7 +25,7 @@ import { probeI18nUi } from './probes/i18n-ui.js';
 import { probeOverseasAccess, resolveVantagePoint, type VantagePoint } from './probes/overseas-access.js';
 import { probePaymentGate } from './probes/payment-gate.js';
 import { probeSignupPhoneAuth } from './probes/signup-phone-auth.js';
-import { probeSupportEn } from './probes/support-en.js';
+import { llmUsage, probeSupportEn } from './probes/support-en.js';
 import { AUTO_SIGNAL_KEYS, type AutoSignalKey, type ChangeEntry, type RunSummary, type Service } from './types.js';
 
 interface Options {
@@ -174,6 +174,13 @@ async function main(): Promise<void> {
     signals_unknown: signalsUnknown,
     changes: changes.length,
     errors,
+    llm: {
+      calls: llmUsage.calls,
+      cached: llmUsage.cached,
+      input_tokens: llmUsage.inputTokens,
+      output_tokens: llmUsage.outputTokens,
+      model: llmUsage.calls > 0 ? LLM.model : null,
+    },
   };
 
   if (!options.dryRun) {

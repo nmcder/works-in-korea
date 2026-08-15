@@ -48,6 +48,27 @@ function llm(): Anthropic {
   return client;
 }
 
+/**
+ * 이번 실행에서 실제로 쓴 LLM 사용량.
+ *
+ * 돈이 나가는 유일한 곳이라 추정하지 않고 API가 돌려준 실제 토큰 수를 센다.
+ * cached 는 페이지 내용이 그대로여서 호출을 건너뛴 횟수다 — 이게 calls 보다
+ * 훨씬 커야 정상이고, 뒤집히면 캐시가 깨진 것이다.
+ */
+export const llmUsage = {
+  calls: 0,
+  cached: 0,
+  inputTokens: 0,
+  outputTokens: 0,
+};
+
+export function resetLlmUsage(): void {
+  llmUsage.calls = 0;
+  llmUsage.cached = 0;
+  llmUsage.inputTokens = 0;
+  llmUsage.outputTokens = 0;
+}
+
 export async function probeSupportEn(
   service: Service,
   previous?: Signal<SupportEnValue>,
@@ -77,6 +98,7 @@ export async function probeSupportEn(
   const prevHash = (previous?.evidence as { content_sha256?: string } | null | undefined)?.content_sha256;
   const prevUsedLlm = typeof (previous?.evidence as { llm?: unknown } | null | undefined)?.llm === 'object';
   if (!LLM.force && prevUsedLlm && prevHash === contentHash && previous?.value !== undefined) {
+    llmUsage.cached += 1;
     return {
       value: previous.value,
       confidence: previous.confidence === 'unknown' ? 'unknown' : 'auto',
@@ -262,6 +284,10 @@ async function classifyWithLlm(service: Service, text: string): Promise<LlmVerdi
       },
     ],
   });
+
+  llmUsage.calls += 1;
+  llmUsage.inputTokens += response.usage?.input_tokens ?? 0;
+  llmUsage.outputTokens += response.usage?.output_tokens ?? 0;
 
   if (response.stop_reason === 'refusal') {
     throw new Error(`모델이 요청을 거부함 (category=${response.stop_details?.category ?? 'null'})`);
