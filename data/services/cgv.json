@@ -8,7 +8,7 @@
   "category": "ticketing",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
@@ -56,27 +56,22 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T04:28:31.541Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
+        "not_measured": "robots: Disallow: /",
+        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
         "attempts": [
           {
-            "url": "http://www.cgv.co.kr/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "http://www.cgv.co.kr (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        ]
       }
     },
     "app_availability": {

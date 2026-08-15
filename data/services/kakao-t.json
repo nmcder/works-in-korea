@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.kakaomobility.com/customer-support",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.kakao.taxi"

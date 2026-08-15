@@ -8,7 +8,7 @@
   "category": "finance",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
@@ -87,41 +87,22 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T04:28:31.541Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
+        "not_measured": "robots: Disallow: /",
+        "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
         "attempts": [
           {
-            "url": "https://www.kbstar.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kbstar.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kbstar.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kbstar.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kbstar.com/user/join",
-            "status": 404,
-            "used": false
+            "url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        ]
       }
     },
     "app_availability": {

@@ -14,7 +14,10 @@
     "validate": "tsx src/validate.ts",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run validate",
-    "hints": "tsx src/hints-todo.ts"
+    "hints": "tsx src/hints-todo.ts",
+    "check-urls": "tsx src/check-urls.ts",
+    "discover": "tsx src/discover-support.ts",
+    "inspect": "tsx src/inspect-page.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

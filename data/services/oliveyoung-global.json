@@ -8,7 +8,7 @@
   "category": "shopping",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://global.oliveyoung.com/member/join?prePage=/",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
@@ -79,28 +79,37 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "not_required",
+      "measured_at": "2026-08-15T04:28:31.541Z",
+      "first_seen_at": "2026-08-15T04:28:31.541Z",
+      "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
+        "signup_url": "https://global.oliveyoung.com/member/join?prePage=/",
+        "final_url": "https://global.oliveyoung.com/member/join?prePage=/",
+        "http_status": 200,
+        "page_kind": "combined",
+        "signup_markers": [
+          "sign up",
+          "register"
+        ],
+        "form_input_count": 21,
+        "matched_vendors": [],
+        "strong_url_matches": 0,
+        "alternative_signup_markers": {
+          "text": [],
+          "url": []
+        },
         "attempts": [
           {
-            "url": "https://global.oliveyoung.com/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "https://global.oliveyoung.com (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "url": "https://global.oliveyoung.com/member/join?prePage=/",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {

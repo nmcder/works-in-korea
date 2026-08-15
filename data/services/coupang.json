@@ -8,9 +8,9 @@
   "category": "shopping",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://login.coupang.com/login/login.pang",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.coupang.mobile"
@@ -58,27 +58,29 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T04:28:31.541Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
+        "signup_url": "https://login.coupang.com/login/login.pang",
+        "final_url": "https://login.coupang.com/login/login.pang",
+        "http_status": 403,
+        "page_kind": "login",
+        "login_markers": [
+          "login"
+        ],
         "attempts": [
           {
-            "url": "https://www.coupang.com/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "https://www.coupang.com (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "url": "https://login.coupang.com/login/login.pang",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {

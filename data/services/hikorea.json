@@ -8,7 +8,7 @@
   "category": "government",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
@@ -69,17 +69,34 @@
       }
     },
     "signup_phone_auth": {
-      "value": "not_required",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "required",
+      "measured_at": "2026-08-15T04:28:31.541Z",
+      "first_seen_at": "2026-08-15T04:15:30.926Z",
+      "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
       "confidence": "auto",
       "evidence": {
-        "signup_url": "https://www.hikorea.go.kr/error.html",
-        "final_url": "https://www.hikorea.go.kr/error.html",
+        "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
+        "final_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
         "http_status": 200,
-        "matched_vendors": [],
+        "page_kind": "combined",
+        "signup_markers": [
+          "회원가입",
+          "회원 가입",
+          "가입하기",
+          "가입신청",
+          "약관에 동의",
+          "이용약관 동의"
+        ],
+        "form_input_count": 12,
+        "matched_vendors": [
+          {
+            "id": "rrn",
+            "name": "주민등록번호 입력 요구",
+            "matched": "주민등록번호",
+            "via": "text"
+          }
+        ],
         "strong_url_matches": 0,
         "alternative_signup_markers": {
           "text": [],
@@ -87,9 +104,10 @@
         },
         "attempts": [
           {
-            "url": "https://www.hikorea.go.kr/join",
-            "status": 200,
-            "used": true
+            "url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
         ],
         "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."

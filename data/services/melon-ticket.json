@@ -8,7 +8,7 @@
   "category": "ticketing",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
@@ -74,41 +74,27 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T04:28:31.541Z",
+      "first_seen_at": "2026-08-15T04:15:30.926Z",
+      "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
+        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
+        "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
+        "final_url": "https://accounts.melon.com/join/choice?cpId=WP15",
+        "http_status": 200,
+        "page_kind": "combined",
+        "form_input_count": 0,
         "attempts": [
           {
-            "url": "https://ticket.melon.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ticket.melon.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ticket.melon.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ticket.melon.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ticket.melon.com/user/join",
-            "status": 404,
-            "used": false
+            "url": "https://accounts.melon.com/join/choice?cpId=WP15",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
