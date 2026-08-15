@@ -181,8 +181,25 @@ npm run typecheck
 
 ### 배포
 
-`out/` 을 그대로 올리면 된다. Vercel에 연결할 경우 **Root Directory 를 `site` 로** 지정한다.
-(Vercel Hobby는 비상업 프로젝트 전용 티어이며 현재 조건에 부합한다 — D-4)
+레포 최상위의 **`vercel.json`** 이 모든 설정을 담고 있다. Vercel UI에서는 **아무것도 바꾸지 않고
+Deploy 만 누르면 된다** — Root Directory 도, Framework Preset 도 건드리지 않는다.
+
+```json
+{
+  "framework": null,
+  "installCommand": "cd site && npm ci",
+  "buildCommand":   "cd site && npm run build",
+  "outputDirectory": "site/out"
+}
+```
+
+**왜 Root Directory 를 쓰지 않는가** (D-13)
+Vercel의 Root Directory 폴더 목록은 서버에 캐시되어, 폴더를 새로 푸시해도 목록에 나타나지 않는 일이
+실제로 있었다. 게다가 Root Directory 를 `site` 로 잡으면 기본 설정이 상위 폴더를 빌드에서 제외해
+`../data` 가 사라지고, 별도 체크박스를 켜야 한다. `vercel.json` 은 두 문제를 모두 없앤다.
+
+Vercel Hobby는 비상업 프로젝트 전용 티어이며 현재 조건에 부합한다 (D-4).
+`out/` 은 순수 정적 파일이므로 GitHub Pages·S3 등 어디에 올려도 동일하게 동작한다.
 
 ### 사이트가 지키는 표시 규칙 (D-12)
 

@@ -261,3 +261,40 @@ Vercel Hobby는 프라이빗 레포와 연결 가능, Cloudflare Workers는 레�
 - `payment_gate` 가 비었을 때 → "공개 페이지에서 탐지되지 않음"이지 "결제사가 없음"이 아니다
 - `signup_phone_auth` 가 `not_required` 일 때 → 양식을 읽었을 뿐 제출하지 않았으므로,
   제출 후에 나타나는 인증 단계는 보이지 않는다
+
+---
+
+## D-13. Vercel 배포는 `vercel.json` 으로 고정한다 (Root Directory 를 쓰지 않는다)
+
+**결정일** 2026-08-15 (2주차 배포 시도 중, 실제로 막혀서)
+
+`site/` 를 푸시하고 Vercel에서 Import 했는데 **Root Directory 폴더 목록에 `site` 가 나타나지 않았다.**
+페이지 새로고침·프로젝트 재생성 모두 소용없었다. GitHub 서버에는 확실히 있었다:
+
+```
+$ git ls-remote origin refs/heads/main
+aadd005a...  refs/heads/main
+$ git ls-tree --name-only origin/main
+.github  data  docs  schema  site  src  ...
+```
+
+즉 Vercel이 GitHub App 권한을 부여받던 시점의 레포 트리를 캐시하고 있고, 그 캐시가
+UI 조작으로는 갱신되지 않는다.
+
+**결정** Root Directory 를 아예 쓰지 않는다. 레포 최상위에 `vercel.json` 을 두고
+빌드 명령과 산출 경로를 직접 지정한다. Vercel UI 는 기본값 그대로 두고 Deploy 만 누른다.
+
+**이 방식이 없앤 문제 2가지**
+1. **캐시된 폴더 목록** — 고를 필요가 없으니 목록이 낡았든 말든 상관없다.
+2. **"Include files outside of the Root Directory" 체크박스** — Root Directory 를 `site` 로 잡으면
+   기본값이 꺼져 있어 상위 폴더가 빌드에서 제외되고, 사이트가 읽는 `../data` 가 통째로 사라진다.
+   Root 가 레포 최상위면 애초에 생기지 않는 문제다.
+
+**부수 효과** `installCommand` 를 명시했으므로 Vercel이 최상위 `package.json`(측정 엔진 —
+Playwright 포함)을 설치하려 드는 것도 막힌다. 사이트 빌드에 불필요하고 느리다.
+
+**검증** Vercel이 실행할 명령을 그대로 로컬에서 돌려 확인했다.
+`cd site && npm ci` → `cd site && npm run build` → `site/out/` 에 정적 파일 생성 →
+정적 서버로 띄워 `/`, `/service/kt/`, `/changes/`, `/method/`, `/api/v1/meta.json` 전부 200.
+
+**운영자용 결론** Vercel 화면에서 **아무것도 설정하지 않는다.** Import 후 Deploy 만 누른다.
