@@ -4,18 +4,29 @@ name: daily-probe
 on:
   schedule:
     - cron: '0 18 * * *'
+  # 손으로 돌릴 때 쓰는 칸. 운영자가 코드를 읽지 않고도 고를 수 있어야 하므로
+  # 개발 용어("시그널") 대신 사이트에 보이는 질문으로 적는다.
   workflow_dispatch:
     inputs:
+      signals:
+        description: '어떤 항목을 잴지. 비우면 6종 전부'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - support_en
+          - overseas_access
+          - i18n_ui
+          - signup_phone_auth
+          - app_availability
+          - payment_gate
       only:
-        description: '특정 서비스만 (쉼표 구분, 예: coupang,toss). 비우면 전체'
+        description: '특정 서비스만. 쉼표로 구분 (예: coupang,toss). 비우면 106개 전부'
         required: false
         default: ''
       limit:
-        description: '앞에서 N개만 측정 (테스트용). 비우면 전체'
-        required: false
-        default: ''
-      signals:
-        description: '특정 시그널만 (쉼표 구분). 비우면 6종 전부'
+        description: '앞에서 N개만 (시험용). 비우면 전부'
         required: false
         default: ''
 
