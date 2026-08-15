@@ -270,16 +270,31 @@ async function findSignup(service: Service, home: Home): Promise<Candidate[]> {
 
 // ── 고객지원 주소 ────────────────────────────────────────────────────────────
 
+function supportLinksIn(html: string, baseUrl: string): { href: string; text: string }[] {
+  return extractLinks(html, baseUrl).filter((l) => {
+    const hay = `${l.href} ${l.text}`.toLowerCase();
+    if (SUPPORT_EXCLUDE.some((x) => hay.includes(x))) return false;
+    return SUPPORT_HINTS.some((h) => hay.includes(h.toLowerCase()));
+  });
+}
+
 async function findSupport(service: Service, home: Home): Promise<Candidate[]> {
-  const links = extractLinks(home.html, home.finalUrl);
+  let links = supportLinksIn(home.html, home.finalUrl);
+
+  // 가입 주소 때와 같은 이유다. 메뉴를 자바스크립트로 그리는 사이트는 원본 HTML 에
+  // 고객센터 링크가 없다. 그러면 프로브가 홈페이지 본문만 읽게 되고, 홈페이지에
+  // 영어 상담 얘기가 있을 리 없어서 판정이 통째로 unknown 이 된다.
+  // 2026-08-16 첫 분류에서 62/75 가 "고객지원 채널 정보가 전혀 없다"로 나온 원인이다.
+  if (links.length === 0) {
+    const rendered = await snapshotPage(service.url);
+    if (rendered.ok && rendered.html) {
+      links = supportLinksIn(rendered.html, rendered.finalUrl ?? service.url);
+    }
+  }
+
   const urls = [
     ...new Set(
       links
-        .filter((l) => {
-          const hay = `${l.href} ${l.text}`.toLowerCase();
-          if (SUPPORT_EXCLUDE.some((x) => hay.includes(x))) return false;
-          return SUPPORT_HINTS.some((h) => hay.includes(h.toLowerCase()));
-        })
         .map((l) => l.href),
     ),
   ]

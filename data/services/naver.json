@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://nid.naver.com/account/signup/term",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.naver.com/service/5627/contents/9148?lang=ko",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.nhn.android.search",

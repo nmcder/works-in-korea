@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.lottecinema.co.kr/NLCHS/Customer",
     "english_url": null,
     "ios_app_id": "601280722",
     "android_package": "kr.co.lottecinema.lcm",

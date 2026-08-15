@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-15T09:23:31.982Z",
-  "actionable": 56,
-  "site_blocked": 40,
+  "generated_at": "2026-08-15T22:56:14.319Z",
+  "actionable": 51,
+  "site_blocked": 36,
   "app_id_missing": 6,
   "by_importance": {
-    "1": 16,
+    "1": 11,
     "2": 22,
     "3": 18
   }

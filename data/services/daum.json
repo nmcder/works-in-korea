@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://cs.daum.net/",
     "english_url": null,
     "ios_app_id": "365494029",
     "android_package": "net.daum.android.daum",

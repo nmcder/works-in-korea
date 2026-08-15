@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://membership.payco.com/",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.payco.com/cs/faq.nhn",
     "english_url": null,
     "ios_app_id": "924292102",
     "android_package": "com.nhnent.payapp",

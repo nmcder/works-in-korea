@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://accounts.kt.com/identify/personal",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://shop.kt.com/smart/supportAmtList.do",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.ktshow.cs",

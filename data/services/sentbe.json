@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.sentbe.com/ko/support/home",
     "english_url": null,
     "ios_app_id": "1115554824",
     "android_package": "com.sentbe",

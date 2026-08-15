@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.tworld.co.kr/web/login/tid-join",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.tworld.co.kr/web/support/faq/keyword",
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.sktelecom.minit",

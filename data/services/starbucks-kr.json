@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://www.starbucks.co.kr/mem/join1.do",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F17",
     "english_url": null,
     "ios_app_id": "466682252",
     "android_package": "com.starbucks.co",

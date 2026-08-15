@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.yeogi.com/faq",
     "english_url": null,
     "ios_app_id": "884043462",
     "android_package": "kr.goodchoice.abouthere",

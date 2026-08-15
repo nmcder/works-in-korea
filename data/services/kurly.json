@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
     "english_url": null,
     "ios_app_id": "1080244833",
     "android_package": "com.dbs.kurly.m2",

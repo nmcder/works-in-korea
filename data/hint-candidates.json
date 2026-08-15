@@ -1,6 +1,16 @@
 {
-  "generated_at": "2026-08-15T08:03:28.997Z",
+  "generated_at": "2026-08-15T22:55:36.404Z",
   "services": [
+    {
+      "id": "11st",
+      "name": "11번가",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "ably",
+      "name": "에이블리",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
     {
       "id": "aladin",
       "name": "알라딘",
@@ -24,6 +34,21 @@
       ]
     },
     {
+      "id": "auction",
+      "name": "옥션",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
+      "id": "baemin",
+      "name": "배달의민족",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "catchtable",
+      "name": "캐치테이블",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
       "id": "cgv",
       "name": "CGV",
       "blocked": "사이트가 크롤러를 거부 (403/429)"
@@ -40,6 +65,32 @@
       ]
     },
     {
+      "id": "cjonstyle",
+      "name": "CJ온스타일",
+      "support_url": [
+        {
+          "value": "https://base.cjonstyle.com/p/customercenter/noticeList?bbsNo=85277",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        },
+        {
+          "value": "https://base.cjonstyle.com/p/customercenter/main",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "coupang",
+      "name": "쿠팡",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
+      "id": "coupang-eats",
+      "name": "쿠팡이츠",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
       "id": "danawa",
       "name": "다나와",
       "signup_url": [
@@ -53,6 +104,13 @@
     {
       "id": "daum",
       "name": "다음",
+      "support_url": [
+        {
+          "value": "https://cs.daum.net/",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 도움말"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://logins.daum.net/accounts/oauth/join",
@@ -78,8 +136,140 @@
       ]
     },
     {
+      "id": "e-gen",
+      "name": "응급의료포털 E-Gen",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "epost",
+      "name": "우체국",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "genie",
+      "name": "지니뮤직",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "gmarket",
+      "name": "G마켓",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
+      "id": "goodchoice",
+      "name": "여기어때",
+      "support_url": [
+        {
+          "value": "https://www.yeogi.com/faq",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 자주 묻는"
+        },
+        {
+          "value": "https://business.yeogi.com/",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의, 자주 묻는"
+        }
+      ]
+    },
+    {
+      "id": "goodoc",
+      "name": "굿닥",
+      "support_url": [
+        {
+          "value": "https://goodoc.io/service",
+          "verdict": "rejected",
+          "why": "status=403"
+        },
+        {
+          "value": "https://goodoc.io/partners",
+          "verdict": "rejected",
+          "why": "status=403"
+        }
+      ]
+    },
+    {
+      "id": "gov-kr",
+      "name": "정부24",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "gsshop",
+      "name": "GS샵",
+      "blocked": "Error: robots: Disallow: /"
+    },
+    {
+      "id": "hana-bank",
+      "name": "하나은행",
+      "support_url": [
+        {
+          "value": "https://www.kebhana.com/cont/customer/customer07/customer0701/index.jsp?_menuNo=98830",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /*?"
+        },
+        {
+          "value": "https://www.kebhana.com/cont/customer/customer04/index.jsp?_menuNo=98833",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /*?"
+        },
+        {
+          "value": "https://www.kebhana.com/cont/customer/customer03/index.jsp?_menuNo=98831",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /*?"
+        }
+      ]
+    },
+    {
+      "id": "hanatour",
+      "name": "하나투어",
+      "support_url": [
+        {
+          "value": "https://www.hanatour.com/com/cuc/CHPC0CUC0100M200",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /com/cuc/"
+        }
+      ]
+    },
+    {
+      "id": "hanpass",
+      "name": "한패스",
+      "support_url": [
+        {
+          "value": "https://www.hanpass.com/en/cs",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터"
+        },
+        {
+          "value": "https://www.hanpass.com/en/faq",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — faq"
+        }
+      ]
+    },
+    {
+      "id": "hikorea",
+      "name": "하이코리아",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
       "id": "hira",
       "name": "건강보험심사평가원",
+      "support_url": [
+        {
+          "value": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객지원, 문의"
+        },
+        {
+          "value": "https://www.hira.or.kr/rd/customer/listNew.do?pgmid=HIRAA010006030000&amp;WT.gnb=%EC%8B%AC%ED%8F%89%EC%9B%90+%EC%A7%81%EC%9B%90+%EC%B9%9C%EC%A0%88%2F%EB%B6%88%EC%B9%9C%EC%A0%88",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객지원, 문의, customer"
+        },
+        {
+          "value": "https://www.hira.or.kr/rd/customer/listNew.do?pgmid=HIRAA010006050000&amp;WT.gnb=%EA%B5%AD%EB%AF%BC%EC%A0%9C%EC%95%88",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객지원, 문의, customer"
+        }
+      ],
       "signup_url": [
         {
           "value": "about:blank",
@@ -94,6 +284,36 @@
       ]
     },
     {
+      "id": "hometax",
+      "name": "국세청 홈택스",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "ibk",
+      "name": "IBK기업은행",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "interpark-ticket",
+      "name": "인터파크 티켓",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "interpark-tour",
+      "name": "인터파크 투어",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "kakao-gift",
+      "name": "카카오톡 선물하기",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "kakaobank",
+      "name": "카카오뱅크",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
       "id": "kakaopay",
       "name": "카카오페이",
       "signup_url": [
@@ -101,6 +321,48 @@
           "value": "https://www.kakaopay.com/services/life/membership",
           "verdict": "rejected",
           "why": "가입 표시 없음 — page_kind=unknown"
+        }
+      ]
+    },
+    {
+      "id": "kbstar",
+      "name": "KB국민은행",
+      "support_url": [
+        {
+          "value": "https://obank.kbstar.com/quics?page=osupp&amp;QSL=F",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        },
+        {
+          "value": "https://cert.kbstar.com//quics?page=C112164",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "kobus",
+      "name": "고속버스통합예매",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "kt",
+      "name": "KT",
+      "support_url": [
+        {
+          "value": "https://shop.kt.com/smart/supportAmtList.do",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터"
+        },
+        {
+          "value": "https://globalroaming.kt.com/center/internal",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, customer"
+        },
+        {
+          "value": "https://membership.kt.com/guide/faq/FAQList.do",
+          "verdict": "rejected",
+          "why": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
         }
       ]
     },
@@ -118,6 +380,13 @@
     {
       "id": "kurly",
       "name": "마켓컬리",
+      "support_url": [
+        {
+          "value": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1",
@@ -143,8 +412,75 @@
       ]
     },
     {
+      "id": "lguplus",
+      "name": "LG유플러스",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
+      "id": "lotte-cinema",
+      "name": "롯데시네마",
+      "support_url": [
+        {
+          "value": "https://www.lottecinema.co.kr/NLCHS/Customer",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — faq"
+        },
+        {
+          "value": "https://www.lottecinema.co.kr/NLCHS/Customer/GroupViewingRegistration",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의"
+        },
+        {
+          "value": "https://www.lottecultureworks.com/Contents/ad/advertinquiry.aspx",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "lotteon",
+      "name": "롯데온",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
       "id": "megabox",
       "name": "메가박스",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "melon",
+      "name": "멜론",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "melon-ticket",
+      "name": "멜론티켓",
+      "support_url": [
+        {
+          "value": "https://ticket.melon.com/customerservice/notice.htm",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, faq"
+        },
+        {
+          "value": "https://ticket.melon.com/customerservice/howto.htm",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, faq"
+        },
+        {
+          "value": "https://ticket.melon.com/customerservice/noticeInform.htm?noticeNo=696",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, faq"
+        }
+      ]
+    },
+    {
+      "id": "musinsa",
+      "name": "무신사",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "musinsa-global",
+      "name": "무신사 글로벌",
       "blocked": "robots.txt 가 크롤러를 금지"
     },
     {
@@ -164,6 +500,53 @@
       ]
     },
     {
+      "id": "naver",
+      "name": "네이버",
+      "support_url": [
+        {
+          "value": "https://help.naver.com/service/5627/contents/9148?lang=ko",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 도움말"
+        },
+        {
+          "value": "https://help.naver.com/service/5627/contents/9145?lang=ko&amp;osType=COMMONOS",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 도움말"
+        },
+        {
+          "value": "https://help.naver.com/service/5627/contents/9148?lang=ko",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 도움말"
+        }
+      ]
+    },
+    {
+      "id": "naver-booking",
+      "name": "네이버 예약",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "naver-map",
+      "name": "네이버 지도",
+      "support_url": [
+        {
+          "value": "https://nid.naver.com/user2/help/myInfo?menu=home",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        },
+        {
+          "value": "https://nid.naver.com/user2/help/myInfo?m=viewSecurity&amp;menu=security",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "naver-shopping",
+      "name": "네이버쇼핑",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
       "id": "naverpay",
       "name": "네이버페이",
       "signup_url": [
@@ -175,8 +558,30 @@
       ]
     },
     {
+      "id": "nhis",
+      "name": "국민건강보험공단",
+      "support_url": [
+        {
+          "value": "https://www.nhis.or.kr/nhis/healthin/retrieveMedicalVisitStatus.do",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /nhis/"
+        },
+        {
+          "value": "https://www.nhis.or.kr/nhis/minwon/wbhabd05500m01.do",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /nhis/"
+        },
+        {
+          "value": "https://www.nhis.or.kr/nhis/minwon/wbhaba03600m01.do",
+          "verdict": "rejected",
+          "why": "robots: Disallow: /nhis/"
+        }
+      ]
+    },
+    {
       "id": "ntok",
       "name": "국립극장",
+      "blocked": "해외에서 robots.txt 를 읽지 못함",
       "signup_url": [
         {
           "value": "https://www.ntok.go.kr/ntok/sb/sbscrb/insertSbscrbInfo01.do?sbscrbCtx=ntok",
@@ -186,8 +591,25 @@
       ]
     },
     {
+      "id": "nts",
+      "name": "국세청",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "oliveyoung",
+      "name": "올리브영",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
       "id": "payco",
       "name": "페이코",
+      "support_url": [
+        {
+          "value": "https://www.payco.com/cs/faq.nhn",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 문의, 자주 묻는"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://membership.payco.com/",
@@ -231,6 +653,23 @@
     {
       "id": "samsung-hospital",
       "name": "삼성서울병원",
+      "support_url": [
+        {
+          "value": "http://www.samsunghospital.com/home/info/ICUfaq.do",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의"
+        },
+        {
+          "value": "http://www.samsunghospital.com/home/info/eolFAQ.do",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의"
+        },
+        {
+          "value": "http://www.samsunghospital.com/home/info/faq.do",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의, faq, help"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://www.samsunghospital.com/home/create/createAccount.do",
@@ -238,6 +677,32 @@
           "why": "가입 표시는 있으나 입력란 0개 — 안내 페이지로 보임"
         }
       ]
+    },
+    {
+      "id": "sentbe",
+      "name": "센트비",
+      "support_url": [
+        {
+          "value": "https://sentbe.com/ko/help/notice?source_country=KR",
+          "verdict": "weak",
+          "why": "열리지만 지원 문구가 안 보임"
+        },
+        {
+          "value": "https://sentbe.com/ko/help/event?source_country=KR",
+          "verdict": "weak",
+          "why": "열리지만 지원 문구가 안 보임"
+        },
+        {
+          "value": "https://help.sentbe.com/ko/support/home",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — help, support, customer"
+        }
+      ]
+    },
+    {
+      "id": "seoul-metro",
+      "name": "서울교통공사",
+      "blocked": "Error: robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
     },
     {
       "id": "severance",
@@ -253,6 +718,23 @@
     {
       "id": "sk7mobile",
       "name": "SK세븐모바일",
+      "support_url": [
+        {
+          "value": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 고객지원, 문의"
+        },
+        {
+          "value": "https://www.sk7mobile.com/ccsc/board/faqList.do?refer=mognb",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 고객지원, 문의"
+        },
+        {
+          "value": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=pcutil",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객센터, 고객지원, 문의"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://www.sk7mobile.com/mmbr/join/memberJoinAgree.do?refer=pcutil",
@@ -267,8 +749,51 @@
       ]
     },
     {
+      "id": "skt",
+      "name": "SKT 티월드",
+      "support_url": [
+        {
+          "value": "https://www.tworld.co.kr/web/@%7Bsupport/faq/category?faqGrpCd1Depth=2100000}",
+          "verdict": "rejected",
+          "why": "status=400"
+        },
+        {
+          "value": "https://www.tworld.co.kr/web/support/faq/keyword",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객지원, 문의, faq"
+        },
+        {
+          "value": "https://www.tworld.co.kr/web/support/store/map",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 고객지원, 문의"
+        }
+      ]
+    },
+    {
+      "id": "ssg",
+      "name": "SSG닷컴",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
       "id": "starbucks-kr",
       "name": "스타벅스 코리아",
+      "support_url": [
+        {
+          "value": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F17",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의, customer"
+        },
+        {
+          "value": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F05",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의, customer"
+        },
+        {
+          "value": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F22",
+          "verdict": "verified",
+          "why": "지원 문구 확인 — 문의, customer"
+        }
+      ],
       "signup_url": [
         {
           "value": "https://www.starbucks.co.kr/mem/join1.do",
@@ -294,8 +819,29 @@
       ]
     },
     {
+      "id": "themoin",
+      "name": "모인",
+      "support_url": [
+        {
+          "value": "https://www.themoin.com/faq",
+          "verdict": "weak",
+          "why": "열리지만 지원 문구가 안 보임"
+        }
+      ]
+    },
+    {
       "id": "tmoney",
       "name": "티머니",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "txbus",
+      "name": "시외버스 통합예매",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "woori-bank",
+      "name": "우리은행",
       "blocked": "해외에서 robots.txt 를 읽지 못함"
     },
     {
@@ -306,6 +852,17 @@
           "value": "https://www.yes24.com/Member/Join/Accept.aspx",
           "verdict": "rejected",
           "why": "차단 — robots: Disallow: /Member/"
+        }
+      ]
+    },
+    {
+      "id": "yogiyo",
+      "name": "요기요",
+      "support_url": [
+        {
+          "value": "https://ceo.yogiyo.co.kr/join-request",
+          "verdict": "weak",
+          "why": "열리지만 지원 문구가 안 보임"
         }
       ]
     }

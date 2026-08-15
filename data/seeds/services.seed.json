@@ -230,7 +230,8 @@
       "hints": {
         "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
         "ios_app_id": "1103635576",
-        "android_package": "com.iloen.melonticket"
+        "android_package": "com.iloen.melonticket",
+        "support_url": "https://ticket.melon.com/customerservice/notice.htm"
       }
     },
     {
@@ -274,7 +275,8 @@
       "hints": {
         "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
         "ios_app_id": "601280722",
-        "android_package": "kr.co.lottecinema.lcm"
+        "android_package": "kr.co.lottecinema.lcm",
+        "support_url": "https://www.lottecinema.co.kr/NLCHS/Customer"
       }
     },
     {
@@ -500,7 +502,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1080244833",
-        "android_package": "com.dbs.kurly.m2"
+        "android_package": "com.dbs.kurly.m2",
+        "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform"
       }
     },
     {
@@ -714,7 +717,8 @@
       "hints": {
         "ios_app_id": "466682252",
         "android_package": "com.starbucks.co",
-        "signup_url": "https://www.starbucks.co.kr/mem/join1.do"
+        "signup_url": "https://www.starbucks.co.kr/mem/join1.do",
+        "support_url": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F17"
       }
     },
     {
@@ -773,7 +777,8 @@
       "hints": {
         "ios_app_id": "924292102",
         "android_package": "com.nhnent.payapp",
-        "signup_url": "https://membership.payco.com/"
+        "signup_url": "https://membership.payco.com/",
+        "support_url": "https://www.payco.com/cs/faq.nhn"
       }
     },
     {
@@ -916,7 +921,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1344407760",
-        "android_package": "com.hanpass.remittance"
+        "android_package": "com.hanpass.remittance",
+        "support_url": "https://www.hanpass.com/en/cs"
       }
     },
     {
@@ -944,7 +950,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1115554824",
-        "android_package": "com.sentbe"
+        "android_package": "com.sentbe",
+        "support_url": "https://help.sentbe.com/ko/support/home"
       }
     },
     {
@@ -1000,7 +1007,8 @@
       "importance": 1,
       "hints": {
         "signup_url": "https://www.tworld.co.kr/web/login/tid-join",
-        "android_package": "com.sktelecom.minit"
+        "android_package": "com.sktelecom.minit",
+        "support_url": "https://www.tworld.co.kr/web/support/faq/keyword"
       },
       "notes": {
         "en": "The app is published as “T world”.",
@@ -1018,7 +1026,8 @@
       "importance": 1,
       "hints": {
         "signup_url": "https://accounts.kt.com/identify/personal",
-        "android_package": "com.ktshow.cs"
+        "android_package": "com.ktshow.cs",
+        "support_url": "https://shop.kt.com/smart/supportAmtList.do"
       }
     },
     {
@@ -1067,7 +1076,8 @@
       "category": "telecom",
       "importance": 2,
       "hints": {
-        "android_package": "com.sktelinkapp"
+        "android_package": "com.sktelinkapp",
+        "support_url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb"
       }
     },
     {
@@ -1116,7 +1126,8 @@
       "hints": {
         "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
         "ios_app_id": "884043462",
-        "android_package": "kr.goodchoice.abouthere"
+        "android_package": "kr.goodchoice.abouthere",
+        "support_url": "https://www.yeogi.com/faq"
       }
     },
     {
@@ -1334,7 +1345,8 @@
       "category": "healthcare",
       "importance": 2,
       "hints": {
-        "android_package": "com.yagins.hiraportal"
+        "android_package": "com.yagins.hiraportal",
+        "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98"
       },
       "notes": {
         "en": "The app is published as “건강e음”.",
@@ -1379,7 +1391,8 @@
       "category": "healthcare",
       "importance": 2,
       "hints": {
-        "android_package": "com.smc.mobile.pguidea"
+        "android_package": "com.smc.mobile.pguidea",
+        "support_url": "http://www.samsunghospital.com/home/info/ICUfaq.do"
       }
     },
     {
@@ -1437,7 +1450,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.nhn.android.search",
-        "signup_url": "https://nid.naver.com/account/signup/term"
+        "signup_url": "https://nid.naver.com/account/signup/term",
+        "support_url": "https://help.naver.com/service/5627/contents/9148?lang=ko"
       }
     },
     {
@@ -1451,7 +1465,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "365494029",
-        "android_package": "net.daum.android.daum"
+        "android_package": "net.daum.android.daum",
+        "support_url": "https://cs.daum.net/"
       }
     },
     {

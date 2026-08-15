@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://ticket.melon.com/customerservice/notice.htm",
     "english_url": null,
     "ios_app_id": "1103635576",
     "android_package": "com.iloen.melonticket",
