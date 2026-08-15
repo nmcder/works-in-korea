@@ -22,7 +22,13 @@ import { applyProbeResult, markUnmeasured } from './lib/signal.js';
 import { listServiceIds, loadSeeds, loadService, mergeSeed, saveService, writeJson } from './lib/store.js';
 import { probeAppAvailability } from './probes/app-availability.js';
 import { probeI18nUi } from './probes/i18n-ui.js';
-import { probeOverseasAccess, resolveVantagePoint, type VantagePoint } from './probes/overseas-access.js';
+import {
+  probeOverseasAccess,
+  readByVantage,
+  resolveVantagePoint,
+  vantageKey,
+  type VantagePoint,
+} from './probes/overseas-access.js';
 import { probePaymentGate } from './probes/payment-gate.js';
 import { probeSignupPhoneAuth } from './probes/signup-phone-auth.js';
 import { llmUsage, probeSupportEn } from './probes/support-en.js';
@@ -106,7 +112,8 @@ async function main(): Promise<void> {
     log.group(`${id}`);
     for (const key of options.signals) {
       try {
-        const result = await runProbe(key, service, vantage);
+        const previousSignal = service.signals[key];
+        const result = await runProbe(key, service, vantage, now);
         if (result === null) {
           service.signals[key] = markUnmeasured(
             service.signals[key] as never,
@@ -120,7 +127,25 @@ async function main(): Promise<void> {
         }
         const applied = applyProbeResult(service.signals[key] as never, result as never, key, now);
         service.signals[key] = applied.signal as never;
-        if (applied.changed) {
+
+        /*
+         * 측정 지점이 옮겨가서 생긴 차이는 "바뀌었다"가 아니다.
+         *
+         * 러너가 매번 다른 지역에 뜬다. 2026-08-15 하루에만 KR·Washington·Illinois·
+         * California·UK 다섯 곳에서 쟀고, 그때마다 은행·정부 사이트 몇 곳이 뒤집혔다.
+         * 그걸 그대로 기록하면 변경 이력이 노이즈로 차고, 읽는 사람은 그 회사들이
+         * 뭔가 바꾼 줄 알게 된다. 이 프로젝트의 해자가 변경 이력인데 그게 망가진다.
+         *
+         * 그래서 **같은 지점끼리만** 비교한다. 이 지점에서 재 본 적이 없으면
+         * 비교할 대상이 없으므로 변경으로 세지 않는다.
+         */
+        let vantageExplained = false;
+        if (key === 'overseas_access' && applied.changed) {
+          const prevHere = readByVantage(previousSignal as never)[vantageKey(vantage)];
+          vantageExplained = prevHere === undefined || prevHere.value === result.value;
+        }
+
+        if (applied.changed && !vantageExplained) {
           changes.push({
             service_id: id,
             signal: key,
@@ -222,10 +247,12 @@ async function runProbe(
   key: AutoSignalKey,
   service: Service,
   vantage: VantagePoint,
+  now: string,
 ): Promise<{ value: unknown; confidence: 'auto' | 'unknown' | 'community' | 'conflicting'; evidence: Record<string, unknown> | null } | null> {
   switch (key) {
     case 'overseas_access':
-      return probeOverseasAccess(service, vantage);
+      // 이전 지점별 기록을 넘겨서 누적시킨다
+      return probeOverseasAccess(service, vantage, now, service.signals.overseas_access);
     case 'i18n_ui':
       return probeI18nUi(service);
     case 'signup_phone_auth':

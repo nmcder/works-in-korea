@@ -474,7 +474,39 @@ const EMPTY_SIGNAL: Signal = {
  * 값이 있어도 그대로 읽으면 오해가 되는 경우에 붙이는 단서.
  * 값을 흐리려는 게 아니라, 측정 범위를 값과 같은 자리에서 밝히는 것이다.
  */
+/**
+ * 측정 지점별 결과. 없으면 null.
+ *
+ * 이 값은 서비스만의 속성이 아니라 (서비스 × 어디서 재는가)의 속성이다.
+ * 실제로 2026-08-15 에 정부·은행 아홉 곳이 Washington 에서는 열리고
+ * Illinois 에서는 응답하지 않았다. 그걸 값 하나로 뭉개면 그날 관측한 가장 중요한
+ * 사실이 사라진다. 갈리는 경우에만 보여준다 — 다 같으면 굳이 늘어놓을 이유가 없다.
+ */
+export function vantageSplit(sig: Signal): { place: string; value: string }[] | null {
+  const raw = (sig.evidence as { by_vantage?: Record<string, { value?: string }> } | null)
+    ?.by_vantage;
+  if (!raw || typeof raw !== 'object') return null;
+  const rows = Object.entries(raw)
+    .map(([place, v]) => ({ place, value: String(v?.value ?? 'unknown') }))
+    .sort((a, b) => a.place.localeCompare(b.place));
+  if (rows.length < 2) return null;
+  return new Set(rows.map((r) => r.value)).size > 1 ? rows : null;
+}
+
 function caveatFor(key: SignalKey, sig: Signal): Bi | null {
+  if (key === 'overseas_access') {
+    const split = vantageSplit(sig);
+    if (split) {
+      const en = split.map((r) => `${r.place}: ${r.value === 'ok' ? 'opened' : r.value}`).join(' · ');
+      const ko = split
+        .map((r) => `${r.place}: ${r.value === 'ok' ? '됨' : r.value === 'blocked' ? '막힘' : '응답 없음'}`)
+        .join(' · ');
+      return {
+        en: `The answer depends on where the check ran from — ${en}. The value above is the most recent one.`,
+        ko: `어디서 확인했느냐에 따라 답이 갈립니다 — ${ko}. 위 값은 가장 최근 것입니다.`,
+      };
+    }
+  }
   if (key === 'payment_gate') {
     const p = sig.value as PaymentGateValue;
     if (p && p.gateways.length === 0) {

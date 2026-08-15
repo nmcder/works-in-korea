@@ -6,7 +6,7 @@
  * 다지역(미·일·유럽) 확장은 vantage_points 배열에 항목을 추가하는 형태로 열려 있다.
  */
 import { politeFetch } from '../lib/http.js';
-import type { OverseasAccessValue, ProbeResult, Service } from '../types.js';
+import type { OverseasAccessValue, ProbeResult, Service, Signal } from '../types.js';
 
 /**
  * 지역(국가) 차단임을 명시하는 문구. 이게 잡혀야만 blocked로 단정한다.
@@ -79,11 +79,43 @@ export async function resolveVantagePoint(): Promise<VantagePoint> {
   return { id: 'github-actions', country: null, region: null, ip_asn: null };
 }
 
+/**
+ * 측정 지점을 사람이 읽는 한 낱말로. by_vantage 의 열쇠가 된다.
+ * 지역까지 포함하는 이유는 미국 안에서만 옮겨 다녀도 결과가 갈리기 때문이다 —
+ * 2026-08-15 에 정부·은행 9곳이 Washington 에서는 열리고 Illinois 에서는 안 열렸다.
+ */
+export function vantageKey(v: VantagePoint): string {
+  return [v.country, v.region].filter(Boolean).join('·') || v.id;
+}
+
+type ByVantage = Record<string, { value: OverseasAccessValue; at: string; note: string | null }>;
+
+/** 이전 측정에 쌓인 지점별 기록을 꺼낸다 */
+export function readByVantage(previous: Signal<OverseasAccessValue> | undefined): ByVantage {
+  const raw = (previous?.evidence as { by_vantage?: unknown } | null | undefined)?.by_vantage;
+  return raw && typeof raw === 'object' ? ({ ...raw } as ByVantage) : {};
+}
+
 export async function probeOverseasAccess(
   service: Service,
   vantage: VantagePoint,
+  now: string,
+  previous?: Signal<OverseasAccessValue>,
 ): Promise<ProbeResult<OverseasAccessValue>> {
   const res = await politeFetch(service.url);
+  const key = vantageKey(vantage);
+  const byVantage = readByVantage(previous);
+
+  /**
+   * 이 시그널은 서비스만의 속성이 아니라 (서비스 × 측정 지점)의 속성이다.
+   * 값 하나만 저장하고 그것을 "정답"이라고 부르면, 러너가 다른 지역에 뜬 날마다
+   * 서비스가 바뀐 것처럼 보인다. 지점별로 마지막 결과를 남겨 두면
+   * "캘리포니아에서는 열리고 일리노이에서는 안 열린다"가 그 자체로 사실이 된다.
+   */
+  const record = (
+    value: OverseasAccessValue,
+    note: string | null,
+  ): ByVantage => ({ ...byVantage, [key]: { value, at: now, note } });
 
   const point: Record<string, unknown> = {
     id: vantage.id,
@@ -101,7 +133,11 @@ export async function probeOverseasAccess(
     return {
       value: 'unknown',
       confidence: 'unknown',
-      evidence: { vantage_points: [point], note: res.blockedReason },
+      evidence: {
+        vantage_points: [point],
+        note: res.blockedReason,
+        by_vantage: record('unknown', res.blockedReason),
+      },
     };
   }
 
@@ -111,7 +147,11 @@ export async function probeOverseasAccess(
     return {
       value: 'unknown',
       confidence: 'unknown',
-      evidence: { vantage_points: [point], note: '요청 실패 — 차단 여부 판정 불가' },
+      evidence: {
+        vantage_points: [point],
+        note: '요청 실패 — 차단 여부 판정 불가',
+        by_vantage: record('unknown', '요청 실패'),
+      },
     };
   }
 
@@ -151,7 +191,7 @@ export async function probeOverseasAccess(
   return {
     value,
     confidence: value === 'unknown' ? 'unknown' : 'auto',
-    evidence: { vantage_points: [point], note },
+    evidence: { vantage_points: [point], note, by_vantage: record(value, note) },
   };
 }
 
