@@ -38,14 +38,19 @@ export default async function ChangesPage() {
   const nameOf = new Map(services.map((s) => [s.id, s.name.en]));
   const total = days.reduce((n, d) => n + d.changes.length, 0);
 
-  // 시간순(최신 먼저)으로 펼쳐 두고 바로 다음(더 이른) 묶음과 측정 국가를 비교한다.
+  // 시간순(최신 먼저)으로 펼쳐 두고 바로 다음(더 이른) 묶음과 측정 지점을 비교한다.
   // 다르면 그 묶음의 변경은 서비스가 아니라 우리가 움직인 결과일 수 있다. (D-14)
+  //
+  // 나라만 보면 안 된다. 2026-08-15 두 실행은 둘 다 미국이었지만 Washington → Illinois 로
+  // 옮겨갔고, 그것만으로 정부·은행 사이트 9곳이 응답을 멈췄다. 지역이 바뀌어도 경고한다.
   const groups = days.flatMap((d) => groupByRun(d.changes));
-  const moved = new Set<string>();
+  const place = (v: ChangeEntry['vantage_point']): string | null =>
+    v?.country ? [v.country, v.region].filter(Boolean).join('·') : null;
+  const moved = new Map<string, { from: string; to: string }>();
   for (let i = 0; i < groups.length - 1; i += 1) {
-    const a = groups[i]?.vantage?.country ?? null;
-    const b = groups[i + 1]?.vantage?.country ?? null;
-    if (a && b && a !== b) moved.add(groups[i]!.at);
+    const to = place(groups[i]?.vantage);
+    const from = place(groups[i + 1]?.vantage);
+    if (to && from && to !== from) moved.set(groups[i]!.at, { from, to });
   }
 
   return (
@@ -112,8 +117,8 @@ export default async function ChangesPage() {
                       {moved.has(group.at) && (
                         <div className="aside warn" style={{ margin: '0 0 14px' }}>
                           <T
-                            en="This ran from a different country than the check before it. The values below may have moved for that reason alone, so reading them as “these services changed something” would be wrong."
-                            ko="직전 확인과 나라가 다릅니다. 아래 변경은 서비스가 바뀐 게 아니라 확인한 곳이 옮겨간 결과일 수 있습니다."
+                            en={`The check moved from ${moved.get(group.at)!.from} to ${moved.get(group.at)!.to} between these two runs. The values below may have moved for that reason alone, so reading them as “these services changed something” would be wrong. A different address range is enough on its own: on 15 August 2026, nine government and bank sites answered from Washington and not from Illinois, one run apart.`}
+                            ko={`직전 확인은 ${moved.get(group.at)!.from}, 이번은 ${moved.get(group.at)!.to} 입니다. 아래 변경은 서비스가 바뀐 게 아니라 확인한 곳이 옮겨간 결과일 수 있습니다. 주소 대역이 다른 것만으로 충분합니다. 2026년 8월 15일, 정부·은행 사이트 9곳이 Washington 에서는 응답하고 Illinois 에서는 응답하지 않았습니다.`}
                           />
                         </div>
                       )}
