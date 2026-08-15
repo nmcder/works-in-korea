@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T05:38:47.932Z",
+  "generated_at": "2026-08-15T08:07:45.107Z",
   "changes": [
     {
       "service_id": "gmarket",
@@ -566,6 +566,981 @@
       "vantage_point": {
         "country": "us",
         "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "amc",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "aladin",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "chingu-mobile",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "danawa",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ddocdoc",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ddocdoc",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "daangn",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "goodchoice",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gmoneytrans",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": null,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "goodoc",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gov-kr",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gov-kr",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hana-bank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gov-kr",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hikorea",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hikorea",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hikorea",
+      "signal": "signup_phone_auth",
+      "from": "required",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hikorea",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "homeplus",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hometax",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hometax",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kakao-t",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hometax",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ktmmobile",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ktmmobile",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kurly",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "national-museum",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nonghyup",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ntok",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ntok",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ntok",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nts",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nts",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nts",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "oliveyoung-global",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "payco",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "payco",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ridibooks",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sac",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "severance",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "signup_phone_auth",
+      "from": "required",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "starbucks-kr",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "required",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "starbucks-kr",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "tada",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "tossbank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "travel-wallet",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "wavve",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "wirebarley",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": false,
+        "android_listed": null,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yanolja",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": false,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24-ticket",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yogiyo",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "zigzag",
+      "signal": "app_availability",
+      "from": null,
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-15T08:07:45.107Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
         "ip_asn": "AS8075"
       }
     }

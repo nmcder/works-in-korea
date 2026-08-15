@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,7 +31,7 @@
             "http_status": 200,
             "final_url": "https://www.starbucks.co.kr/",
             "redirected": false,
-            "elapsed_ms": 4845,
+            "elapsed_ms": 5185,
             "body_sha256": "46223c228da9076d32ed1c0e26be1c18432e5fc7d5a55181aff9164adef35dbd",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -69,39 +69,84 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": "required",
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://www.starbucks.co.kr/error_page.html",
-        "final_url": "https://www.starbucks.co.kr/error_page.html",
+        "signup_url": "https://www.starbucks.co.kr/mem/join1.do",
+        "final_url": "https://www.starbucks.co.kr/mem/join1.do",
         "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
+        "page_kind": "combined",
+        "signup_markers": [
+          "회원가입",
+          "회원 가입",
+          "가입하기",
+          "가입신청",
+          "약관동의",
+          "약관에 동의",
+          "이용약관 동의"
+        ],
+        "form_input_count": 8,
+        "matched_vendors": [
           {
-            "url": "https://www.starbucks.co.kr/join",
-            "status": 200,
-            "used": true
+            "id": "ipin",
+            "name": "아이핀 (i-PIN)",
+            "matched": "아이핀",
+            "via": "text"
+          },
+          {
+            "id": "generic-phone-auth",
+            "name": "일반 휴대폰 본인인증 문구",
+            "matched": "본인인증",
+            "via": "text"
           }
         ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "strong_url_matches": 0,
+        "alternative_signup_markers": {
+          "text": [],
+          "url": []
+        },
+        "attempts": [
+          {
+            "url": "https://www.starbucks.co.kr/mem/join1.do",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
+          }
+        ],
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": {
+          "app_id": "466682252",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=466682252&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
+        "android": {
+          "package": "com.starbucks.co",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.starbucks.co&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
@@ -110,7 +155,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -134,7 +179,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:overseas_access",
@@ -29,9 +29,9 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://cdn-botmanager.stclab.com/yes24/deny/index.html?serverUrl=https%3A%2F%2Fbotmanager.stclab.com%2Fapi%2Fv1%2Fmacro&tenantId=TN250314-8E8F6C3B&domainName=ticket.yes24.com&detectionType=72&sessionId=mstyfh8g-yq55cqyz021vaiyjxfq&agentTag=BM-DotNet-agent-1.2.1&loginId=&redirectUrl=http%3A%2F%2Fticket.yes24.com%2FNew%2FMain.aspx",
+            "final_url": "https://cdn-botmanager.stclab.com/yes24/deny/index.html?serverUrl=https%3A%2F%2Fbotmanager.stclab.com%2Fapi%2Fv1%2Fmacro&tenantId=TN250314-8E8F6C3B&domainName=ticket.yes24.com&detectionType=72&sessionId=msu3scld-12wbvgrhyzpbmwi12ahe&agentTag=BM-DotNet-agent-1.2.1&loginId=&redirectUrl=http%3A%2F%2Fticket.yes24.com%2FNew%2FMain.aspx",
             "redirected": true,
-            "elapsed_ms": 2821,
+            "elapsed_ms": 3085,
             "body_sha256": "6db151be2b56a0738fe0217b92b0d994529ce51ca271030d0c0cb102dd93a39c",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -48,7 +48,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -72,7 +72,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
@@ -91,15 +91,25 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": null,
+        "android": {
+          "package": "com.yes24.ticket",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.yes24.ticket&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
@@ -108,7 +118,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -132,7 +142,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

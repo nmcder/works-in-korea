@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,7 +31,7 @@
             "http_status": 403,
             "final_url": "https://www.gmarket.co.kr/",
             "redirected": false,
-            "elapsed_ms": 2311,
+            "elapsed_ms": 2318,
             "body_sha256": "868edfe51ec8aca022e6e08f5c505d5ad5fb419deb61c04c8c3607081e7db3d6",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
@@ -43,7 +43,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -56,7 +56,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -93,7 +93,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -112,7 +112,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -132,7 +132,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

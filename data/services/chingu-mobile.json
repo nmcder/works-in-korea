@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,8 +31,8 @@
             "http_status": 200,
             "final_url": "https://chingumobile.com/",
             "redirected": true,
-            "elapsed_ms": 4191,
-            "body_sha256": "384950836e3b0641c9f71658b0e0dd7f73aafeb9c37d1b5711d6032e26fa9c4f",
+            "elapsed_ms": 5090,
+            "body_sha256": "ee8730dd6784aa39d4e0041fe9091263c4b46e48a77319b9b9a7a4ef553082ec",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -74,43 +74,50 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "required",
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
+        "signup_url": "https://chingumobile.com/index/signup",
+        "final_url": "https://chingumobile.com/index/signup",
+        "http_status": 200,
+        "page_kind": "combined",
+        "signup_markers": [
+          "회원가입",
+          "sign up",
+          "약관에 동의"
+        ],
+        "form_input_count": 15,
+        "matched_vendors": [
           {
-            "url": "https://www.chingumobile.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.chingumobile.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.chingumobile.com/member/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "https://www.chingumobile.com (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "id": "generic-phone-auth",
+            "name": "일반 휴대폰 본인인증 문구",
+            "matched": "본인확인",
+            "via": "text"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "strong_url_matches": 0,
+        "alternative_signup_markers": {
+          "text": [],
+          "url": []
+        },
+        "attempts": [
+          {
+            "url": "https://chingumobile.com/index/signup",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
+          }
+        ],
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -126,7 +133,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -150,13 +157,18 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
         "pages": [
+          {
+            "url": "https://chingumobile.com/faq",
+            "status": 200,
+            "chars": 9253
+          },
           {
             "url": "https://www.chingumobile.com",
             "status": 200,
@@ -168,12 +180,12 @@
             "chars": 9253
           }
         ],
-        "content_sha256": "836a0a450142b708b99ff084b9933e2afa28b22f6caca648c813bcf839583925",
+        "content_sha256": "d30e3dba279e1352ed677ec0a7a65644cca2a54e294297ab236291bf807bbf96",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.251,
+          "latin_ratio": 0.155,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

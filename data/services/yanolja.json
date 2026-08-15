@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,8 +31,8 @@
             "http_status": 200,
             "final_url": "https://nol.yanolja.com/",
             "redirected": true,
-            "elapsed_ms": 3832,
-            "body_sha256": "bb20ea3b5ebdc004cbfcd7266c02d6284976049ac67eda22bcc03385f794d327",
+            "elapsed_ms": 4180,
+            "body_sha256": "00b7c5ddac65bdffc1dba4b82982310030eebf6f04862c67c0e2c0f092c14225",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -45,7 +45,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -68,13 +68,13 @@
         ],
         "accept_language_responsive": true,
         "latin_char_ratio": 0.031,
-        "hangul_char_ratio": 0.528,
+        "hangul_char_ratio": 0.532,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
@@ -94,17 +94,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": false,
         "countries": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "436731843",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=436731843&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "com.yanolja.repo",
           "listed": false,
@@ -120,7 +127,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -144,7 +151,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -152,9 +159,14 @@
       "evidence": {
         "pages": [
           {
+            "url": "https://ad.yanolja.com/intro",
+            "status": 200,
+            "chars": 786
+          },
+          {
             "url": "https://www.yanolja.com",
             "status": 200,
-            "chars": 3848
+            "chars": 3837
           },
           {
             "url": "https://ad.yanolja.com/",
@@ -162,12 +174,12 @@
             "chars": 786
           }
         ],
-        "content_sha256": "12a5a2f14a62361e1ee186c59ece4376a56f30de96a565460ad2f0646bc6d7cd",
+        "content_sha256": "dba1d57e1b88813794c995e9825bd1e9f6442c8962fe3b01198589afdb600dcb",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.046,
+          "latin_ratio": 0.055,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

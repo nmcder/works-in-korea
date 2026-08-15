@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,7 +31,7 @@
             "http_status": 200,
             "final_url": "https://www.museum.go.kr/MUSEUM/main/index.do",
             "redirected": true,
-            "elapsed_ms": 4625,
+            "elapsed_ms": 6738,
             "body_sha256": "1a88cc9982417043ee8e77d8e3b18a85f838e1d5f2913be00a791a6844f9369c",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -48,7 +48,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -88,32 +88,42 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": "not_required",
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://www.museum.go.kr/join",
-        "final_url": "https://www.museum.go.kr/join",
+        "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
+        "final_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
         "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
+        "page_kind": "combined",
+        "signup_markers": [
+          "회원가입",
+          "가입신청"
+        ],
+        "form_input_count": 3,
+        "matched_vendors": [],
+        "strong_url_matches": 0,
+        "alternative_signup_markers": {
+          "text": [],
+          "url": []
+        },
         "attempts": [
           {
-            "url": "https://www.museum.go.kr/join",
-            "status": 200,
-            "used": true
+            "url": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
           }
         ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -129,7 +139,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -153,7 +163,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

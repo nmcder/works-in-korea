@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,7 +31,7 @@
             "http_status": 200,
             "final_url": "https://www.tving.com/",
             "redirected": false,
-            "elapsed_ms": 3277,
+            "elapsed_ms": 3317,
             "body_sha256": "1a7fb5cd687f2532fc9829e229931aa71c001062ccecea2522d9bbc97f276e3d",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -45,7 +45,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -74,7 +74,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -117,7 +117,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -139,7 +139,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -163,13 +163,18 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
         "pages": [
+          {
+            "url": "https://www.tving.com/help/notice",
+            "status": 200,
+            "chars": 122
+          },
           {
             "url": "https://www.tving.com",
             "status": 200,
@@ -181,12 +186,12 @@
             "chars": 122
           }
         ],
-        "content_sha256": "ec4d422131dcb22eb5385a1b80be0f43bcf04e28a3a9e4495c9c730f24620c82",
+        "content_sha256": "047901aabf697767c2110de2695b935ec3179f07b39df91e2af8da21b758ea9a",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.23,
+          "latin_ratio": 0.228,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

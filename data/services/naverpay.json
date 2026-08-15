@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,8 +31,8 @@
             "http_status": 200,
             "final_url": "https://nid.naver.com/nidlogin.login?url=http%3A%2F%2Fpay.naver.com%2Fpc%2Fhistory",
             "redirected": true,
-            "elapsed_ms": 4004,
-            "body_sha256": "8dc57196cab3d41a3410a5c97e21384552d2cce6187bcbf7e983237637ccf28e",
+            "elapsed_ms": 4807,
+            "body_sha256": "19063c907189cf089a7188f18b56f7245b573385ebb0e2ad8a16aa1df312a6b1",
             "content_type": "text/html;charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -79,7 +79,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -98,7 +98,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -116,7 +116,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -147,7 +147,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -155,17 +155,22 @@
       "evidence": {
         "pages": [
           {
+            "url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
+            "status": 200,
+            "chars": 1377
+          },
+          {
             "url": "https://pay.naver.com",
             "status": 200,
             "chars": 609
           }
         ],
-        "content_sha256": "2ca7e8a0a91c1c919970d7130941d9e1617515dc3a4b7a1a49b1810e82048c05",
+        "content_sha256": "b484f3f0381aff4bf8a15c0dd4d76d644bc18d062fa44ec81044c077ad86f169",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.717,
+          "latin_ratio": 0.272,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

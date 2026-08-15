@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,31 +31,31 @@
             "http_status": null,
             "final_url": null,
             "redirected": false,
-            "elapsed_ms": 540,
+            "elapsed_ms": 22353,
             "body_sha256": null,
             "content_type": null,
-            "not_measured": "robots: Disallow: /"
+            "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": "robots: Disallow: /"
+        "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
+        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
         "http_status": null,
         "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -67,7 +67,7 @@
             "url": "https://www.megabox.co.kr/join",
             "status": null,
             "used": false,
-            "reason": "robots: Disallow: /"
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           },
           {
             "url": "https://www.megabox.co.kr (이하 후보)",
@@ -81,7 +81,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -94,7 +94,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -106,7 +106,7 @@
             "url": "https://www.megabox.co.kr",
             "status": null,
             "scanned": false,
-            "reason": "robots: Disallow: /"
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
@@ -114,7 +114,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

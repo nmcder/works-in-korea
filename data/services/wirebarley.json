@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,7 +31,7 @@
             "http_status": 200,
             "final_url": "https://www.wirebarley.com/en",
             "redirected": true,
-            "elapsed_ms": 3216,
+            "elapsed_ms": 2762,
             "body_sha256": "d47e3f3880da2a175d24fc449799050a40f3b6c2354c44d73b8dec7790cfac41",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -54,7 +54,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -103,7 +103,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
@@ -126,15 +126,26 @@
       }
     },
     "app_availability": {
-      "value": null,
-      "measured_at": "2026-08-15T05:38:47.932Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "ios_listed": false,
+        "android_listed": null,
+        "countries": null
+      },
+      "measured_at": "2026-08-15T08:07:45.107Z",
+      "first_seen_at": "2026-08-15T08:07:45.107Z",
+      "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "앱 ID 미상",
-        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "ios": {
+          "app_id": "1250275816",
+          "listed": false,
+          "endpoint": "https://itunes.apple.com/lookup?id=1250275816&country=kr",
+          "http_status": 200,
+          "result_count": 0,
+          "error": null
+        },
+        "android": null,
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },
@@ -143,7 +154,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -167,13 +178,18 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T05:38:47.932Z",
+      "measured_at": "2026-08-15T08:07:45.107Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
         "pages": [
+          {
+            "url": "https://help.wirebarley.com/ko/support/home",
+            "status": 200,
+            "chars": 625
+          },
           {
             "url": "https://www.wirebarley.com",
             "status": 200,
@@ -190,12 +206,12 @@
             "chars": 2677
           }
         ],
-        "content_sha256": "aee2112ba37364d3f354111579e7b8c114a36167cca881b498febd7668373c30",
+        "content_sha256": "6d707469e39e9fd368c3c2f03e12ac7316251bc6fadaef3910b8ba2c2aa53c87",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.795,
+          "latin_ratio": 0.746,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }
