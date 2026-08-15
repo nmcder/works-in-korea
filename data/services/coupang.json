@@ -147,13 +147,32 @@
       }
     },
     "foreign_card": {
-      "value": "unknown",
-      "measured_at": null,
-      "first_seen_at": null,
-      "last_changed_at": null,
-      "method": "none",
-      "confidence": "unknown",
-      "evidence": null
+      "value": "works",
+      "measured_at": "2026-08-15T18:53:52.363Z",
+      "first_seen_at": "2026-08-15T18:53:52.363Z",
+      "last_changed_at": "2026-08-15T18:53:52.363Z",
+      "method": "community",
+      "confidence": "community",
+      "evidence": {
+        "reports": 1,
+        "outcomes": {
+          "works": 1,
+          "fails": 0,
+          "mixed": 0
+        },
+        "countries": [
+          "US"
+        ],
+        "brands": [
+          "Visa"
+        ],
+        "first_tried_on": "2026-08-15",
+        "last_tried_on": "2026-08-15",
+        "sources": [
+          "https://github.com/nmcder/works-in-korea-reports/issues/2"
+        ],
+        "note": "직접 겪은 사람들의 제보를 모은 값이다. 자동 재현은 불가능하다."
+      }
     },
     "foreign_phone_sms": {
       "value": "unknown",
