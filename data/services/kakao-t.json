@@ -13,7 +13,8 @@
     "support_url": "https://www.kakaomobility.com/customer-support",
     "english_url": null,
     "ios_app_id": "981110422",
-    "android_package": "com.kakao.taxi"
+    "android_package": "com.kakao.taxi",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

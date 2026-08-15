@@ -13,7 +13,8 @@
     "support_url": "https://help.watcha.com/hc/ko",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "com.frograms.wplay"
+    "android_package": "com.frograms.wplay",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

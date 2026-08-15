@@ -13,7 +13,8 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": "466682252",
-    "android_package": "com.starbucks.co"
+    "android_package": "com.starbucks.co",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

@@ -13,7 +13,8 @@
     "support_url": "https://cs.kakao.com/helps?locale=ko&service=101",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "net.daum.android.map"
+    "android_package": "net.daum.android.map",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

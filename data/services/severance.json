@@ -13,7 +13,8 @@
     "support_url": "https://sev.severance.healthcare/sev/patient-carer/appointment/checkup/faq.do",
     "english_url": null,
     "ios_app_id": "1291198838",
-    "android_package": "com.dbs.mcare.severance"
+    "android_package": "com.dbs.mcare.severance",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

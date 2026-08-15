@@ -13,7 +13,8 @@
     "support_url": "https://support.toss.im/",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "viva.republica.toss"
+    "android_package": "viva.republica.toss",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

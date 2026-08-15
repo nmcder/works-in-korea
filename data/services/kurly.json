@@ -13,7 +13,8 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": "1080244833",
-    "android_package": "com.dbs.kurly.m2"
+    "android_package": "com.dbs.kurly.m2",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

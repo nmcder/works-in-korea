@@ -13,7 +13,8 @@
     "support_url": "https://www.korail.com/ticket/guest/csc/korailcs",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "com.korail.talk"
+    "android_package": "com.korail.talk",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

@@ -12,8 +12,9 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "440487844",
+    "android_package": "com.interpark.app.ticket",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {
@@ -144,7 +145,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "The app is published as “NOL 티켓”. Interpark rebranded its ticketing app.",
+    "ko": "앱 이름은 ‘NOL 티켓’입니다. 인터파크가 예매 앱 이름을 바꿨습니다."
   }
 }

@@ -13,7 +13,8 @@
     "support_url": "https://etk.srail.kr/cms/archive.do?pageId=TK0406010000",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "kr.co.srail.app"
+    "android_package": "kr.co.srail.app",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

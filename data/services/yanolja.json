@@ -13,7 +13,8 @@
     "support_url": "https://ad.yanolja.com/intro",
     "english_url": null,
     "ios_app_id": "436731843",
-    "android_package": "com.yanolja.repo"
+    "android_package": "com.yanolja.repo",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

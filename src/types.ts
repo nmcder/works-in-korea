@@ -90,6 +90,14 @@ export interface ServiceHints {
   /** App Store 숫자 ID (trackId) */
   ios_app_id?: string | null;
   android_package?: string | null;
+  /**
+   * 사람이 두 스토어를 직접 찾아보고 별도 앱이 없음을 확인했을 때 true.
+   *
+   * "앱이 없다"는 것도 사실이다. 이걸 적을 곳이 없으면 "아직 확인 못 함"으로 남는데,
+   * 그건 확인해 놓고 안 한 척하는 것이다. 카카오톡 선물하기처럼 다른 앱 안에 있는
+   * 경우가 흔하므로, 어디에 있는지는 notes 에 적는다.
+   */
+  no_app?: boolean | null;
 }
 
 export interface Service {
@@ -114,6 +122,11 @@ export interface ProbeResult<V = unknown> {
   value: V;
   confidence: Confidence;
   evidence: Record<string, unknown> | null;
+  /**
+   * 측정 방법을 프로브가 직접 정할 때만 쓴다. 기본값은 `auto:<프로브명>`.
+   * 사람이 확인해 준 사실을 자동 측정으로 표시하면 신뢰도 표기가 거짓이 된다.
+   */
+  method?: string;
 }
 
 /** 하루치 실제 변경 목록 (data/changes/<date>.json) */

@@ -13,7 +13,8 @@
     "support_url": "https://help.danawa.com/",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": "com.sktelecom.Danawa.Main"
+    "android_package": "com.sktelecom.Danawa.Main",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

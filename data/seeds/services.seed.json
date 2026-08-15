@@ -42,7 +42,12 @@
       "category": "transport",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do"
+        "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
+        "no_app": true
+      },
+      "notes": {
+        "en": "No standalone app found on either store.",
+        "ko": "두 스토어 모두에서 별도 앱을 찾지 못했습니다."
       }
     },
     {
@@ -156,7 +161,15 @@
       },
       "url": "https://tickets.interpark.com",
       "category": "ticketing",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "440487844",
+        "android_package": "com.interpark.app.ticket"
+      },
+      "notes": {
+        "en": "The app is published as “NOL 티켓”. Interpark rebranded its ticketing app.",
+        "ko": "앱 이름은 ‘NOL 티켓’입니다. 인터파크가 예매 앱 이름을 바꿨습니다."
+      }
     },
     {
       "id": "interpark-global",
@@ -213,7 +226,9 @@
       "category": "ticketing",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr"
+        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
+        "ios_app_id": "6738896323",
+        "android_package": "co.kr.cgv.cjcgv"
       }
     },
     {
@@ -224,7 +239,11 @@
       },
       "url": "https://www.megabox.co.kr",
       "category": "ticketing",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "894443858",
+        "android_package": "com.megabox.mop"
+      }
     },
     {
       "id": "lotte-cinema",
@@ -275,7 +294,8 @@
       "hints": {
         "android_package": "com.coupang.mobile",
         "signup_url": "https://login.coupang.com/login/login.pang",
-        "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq"
+        "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq",
+        "ios_app_id": "454434967"
       }
     },
     {
@@ -286,7 +306,15 @@
       },
       "url": "https://shopping.naver.com",
       "category": "shopping",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "6738063154",
+        "android_package": "com.navercorp.navershopping"
+      },
+      "notes": {
+        "en": "The app is published as “네이버플러스 스토어”, not under the Naver Shopping name.",
+        "ko": "앱 이름은 ‘네이버플러스 스토어’입니다. 네이버쇼핑이라는 이름의 앱은 없습니다."
+      }
     },
     {
       "id": "gmarket",
@@ -299,7 +327,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.ebay.kr.gmarket",
-        "signup_url": "https://signup-web.gmarket.co.kr/signup/privateBuyer?url=http%3A%2F%2Fwww.gmarket.co.kr"
+        "signup_url": "https://signup-web.gmarket.co.kr/signup/privateBuyer?url=http%3A%2F%2Fwww.gmarket.co.kr",
+        "ios_app_id": "340330132"
       }
     },
     {
@@ -312,7 +341,8 @@
       "category": "shopping",
       "importance": 1,
       "hints": {
-        "android_package": "com.elevenst"
+        "android_package": "com.elevenst",
+        "ios_app_id": "397938216"
       }
     },
     {
@@ -355,7 +385,9 @@
       "category": "shopping",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000"
+        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000",
+        "ios_app_id": "873779010",
+        "android_package": "com.oliveyoung"
       }
     },
     {
@@ -384,7 +416,8 @@
       "category": "shopping",
       "importance": 1,
       "hints": {
-        "android_package": "com.musinsa.store"
+        "android_package": "com.musinsa.store",
+        "ios_app_id": "1003139529"
       }
     },
     {
@@ -405,7 +438,14 @@
       },
       "url": "https://gift.kakao.com",
       "category": "shopping",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "no_app": true
+      },
+      "notes": {
+        "en": "No standalone app. Gifting runs inside KakaoTalk.",
+        "ko": "별도 앱이 없습니다. 선물하기는 카카오톡 안에서 합니다."
+      }
     },
     {
       "id": "kurly",
@@ -545,7 +585,8 @@
       "category": "delivery",
       "importance": 1,
       "hints": {
-        "android_package": "com.sampleapp"
+        "android_package": "com.sampleapp",
+        "ios_app_id": "378084485"
       }
     },
     {
@@ -573,7 +614,8 @@
       "category": "delivery",
       "importance": 1,
       "hints": {
-        "android_package": "com.coupang.mobile.eats"
+        "android_package": "com.coupang.mobile.eats",
+        "ios_app_id": "1445504255"
       }
     },
     {
@@ -584,7 +626,11 @@
       },
       "url": "https://www.catchtable.co.kr",
       "category": "delivery",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "1485193566",
+        "android_package": "co.kr.catchtable.android.catchtable_app"
+      }
     },
     {
       "id": "naver-booking",
@@ -594,7 +640,14 @@
       },
       "url": "https://booking.naver.com",
       "category": "delivery",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "no_app": true
+      },
+      "notes": {
+        "en": "No standalone app. Booking runs inside the main Naver app.",
+        "ko": "별도 앱이 없습니다. 예약은 네이버 앱 안에서 합니다."
+      }
     },
     {
       "id": "starbucks-kr",
@@ -674,7 +727,11 @@
       },
       "url": "https://www.kakaobank.com",
       "category": "finance",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "1258016944",
+        "android_package": "com.kakaobank.channel"
+      }
     },
     {
       "id": "tossbank",
@@ -889,7 +946,13 @@
       "importance": 1,
       "hints": {
         "signup_url": "https://account.lguplus.com/login?client_id=G8RoYUvnwILirwwwK3xG4WR8q9D83to7&login_type=STANDARD_WEB&prompt=select_account&i18nextLng=ko",
-        "support_url": "https://www.lguplus.com/support/online/faq"
+        "support_url": "https://www.lguplus.com/support/online/faq",
+        "ios_app_id": "945578864",
+        "android_package": "com.lguplus.mobile.cs"
+      },
+      "notes": {
+        "en": "The app is published as “U+one”.",
+        "ko": "앱 이름은 ‘U+one’입니다."
       }
     },
     {
@@ -1106,7 +1169,14 @@
       },
       "url": "https://www.e-gen.or.kr",
       "category": "healthcare",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "385668523"
+      },
+      "notes": {
+        "en": "The app is published by the Ministry of Health and Welfare as “응급의료정보제공”, not under the E-Gen name.",
+        "ko": "앱 이름은 보건복지부가 낸 ‘응급의료정보제공’입니다. E-Gen이라는 이름의 앱은 없습니다."
+      }
     },
     {
       "id": "hira",

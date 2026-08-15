@@ -13,7 +13,8 @@
     "support_url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
     "english_url": null,
     "ios_app_id": "365898918",
-    "android_package": "kr.co.aladin.third_shop"
+    "android_package": "kr.co.aladin.third_shop",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

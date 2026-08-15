@@ -12,8 +12,9 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": "com.ebay.kr.gmarket"
+    "ios_app_id": "340330132",
+    "android_package": "com.ebay.kr.gmarket",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

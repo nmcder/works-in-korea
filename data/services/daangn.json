@@ -13,7 +13,8 @@
     "support_url": "https://daangn.com/wv/faqs",
     "english_url": null,
     "ios_app_id": "1018769995",
-    "android_package": "com.towneers.www"
+    "android_package": "com.towneers.www",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

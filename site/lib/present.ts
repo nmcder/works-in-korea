@@ -417,12 +417,14 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
         listed === true ? `${store} yes` : listed === false ? `${store} no` : `${store} unknown`;
       const partKo = (listed: boolean | null, store: string): string =>
         listed === true ? `${store} 있음` : listed === false ? `${store} 없음` : `${store} 모름`;
+      // "없음"도 기록된 사실이다. 예전에는 둘 다 false 면 tone 을 none 으로 줬는데,
+      // 그러면 확인해 놓고 확인 안 한 것처럼 회색으로 나온다. 값이 있으면 info 다.
       return {
         display: {
           en: `${part(a.ios_listed, 'iOS')} · ${part(a.android_listed, 'Android')}`,
           ko: `${partKo(a.ios_listed, 'iOS')} · ${partKo(a.android_listed, 'Android')}`,
         },
-        tone: a.ios_listed || a.android_listed ? 'info' : 'none',
+        tone: 'info',
       };
     }
     case 'payment_gate': {

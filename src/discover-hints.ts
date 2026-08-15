@@ -652,7 +652,8 @@ async function applyToSeed(found: Found[]): Promise<number> {
       support_url: f.support_url,
       ios_app_id: f.ios_app_id,
       android_package: f.android_package,
-    }) as [keyof typeof hints, Candidate[] | undefined][]) {
+      // no_app 은 사람만 정하는 값이라 이 도구가 건드리지 않는다
+    }) as ['signup_url' | 'support_url' | 'ios_app_id' | 'android_package', Candidate[] | undefined][]) {
       if (hints[field]) continue;
       const pick = cands?.find((c) => c.verdict === 'verified');
       if (!pick) continue;

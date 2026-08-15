@@ -78,7 +78,7 @@ export interface Service {
   url: string;
   category: Category;
   importance: 1 | 2 | 3;
-  hints?: Record<string, string | null> | undefined;
+  hints?: Record<string, string | boolean | null> | undefined;
   signals: Signals;
   notes?: { en?: string | null; ko?: string | null } | undefined;
 }

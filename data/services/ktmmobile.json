@@ -13,7 +13,8 @@
     "support_url": "https://www.ktmmobile.com/cs/serviceGuide.do",
     "english_url": null,
     "ios_app_id": "1094611503",
-    "android_package": "kt.co.ktmmobile"
+    "android_package": "kt.co.ktmmobile",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

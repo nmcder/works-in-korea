@@ -12,8 +12,9 @@
     "checkout_url": null,
     "support_url": "https://www.lguplus.com/support/online/faq",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "945578864",
+    "android_package": "com.lguplus.mobile.cs",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {
@@ -144,7 +145,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "The app is published as “U+one”.",
+    "ko": "앱 이름은 ‘U+one’입니다."
   }
 }

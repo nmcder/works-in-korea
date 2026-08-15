@@ -49,7 +49,9 @@ export function applyProbeResult<V>(
   probeName: string,
   now: string,
 ): ApplyOutcome<V> {
-  const method = `auto:${probeName}`;
+  // 프로브가 방법을 직접 밝히면 그것을 쓴다. 사람이 확인한 값을 자동 측정으로
+  // 표시하면 화면의 신뢰도 표기가 거짓이 된다.
+  const method = result.method ?? `auto:${probeName}`;
   const hadPrevious = previous !== undefined && previous.measured_at !== null;
   const changed = hadPrevious ? !valuesEqual(previous.value, result.value) : false;
 

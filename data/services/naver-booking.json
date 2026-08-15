@@ -13,7 +13,8 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null
+    "android_package": null,
+    "no_app": true
   },
   "signals": {
     "overseas_access": {
@@ -144,7 +145,7 @@
     }
   },
   "notes": {
-    "en": null,
-    "ko": null
+    "en": "No standalone app. Booking runs inside the main Naver app.",
+    "ko": "별도 앱이 없습니다. 예약은 네이버 앱 안에서 합니다."
   }
 }

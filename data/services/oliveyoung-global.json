@@ -13,7 +13,8 @@
     "support_url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
     "english_url": null,
     "ios_app_id": "1466755724",
-    "android_package": "com.cafe24.ec.pluseoliveyoung"
+    "android_package": "com.cafe24.ec.pluseoliveyoung",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

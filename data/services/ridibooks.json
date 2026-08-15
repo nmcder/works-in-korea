@@ -13,7 +13,8 @@
     "support_url": "https://ridihelp.ridibooks.com/support/home",
     "english_url": null,
     "ios_app_id": "338813698",
-    "android_package": "com.initialcoms.ridi"
+    "android_package": "com.initialcoms.ridi",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

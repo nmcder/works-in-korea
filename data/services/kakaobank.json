@@ -12,8 +12,9 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1258016944",
+    "android_package": "com.kakaobank.channel",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

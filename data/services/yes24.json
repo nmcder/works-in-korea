@@ -13,7 +13,8 @@
     "support_url": null,
     "english_url": null,
     "ios_app_id": "360051536",
-    "android_package": "com.yes24.commerce"
+    "android_package": "com.yes24.commerce",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

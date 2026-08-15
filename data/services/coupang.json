@@ -12,8 +12,9 @@
     "checkout_url": null,
     "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": "com.coupang.mobile"
+    "ios_app_id": "454434967",
+    "android_package": "com.coupang.mobile",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {

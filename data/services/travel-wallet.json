@@ -13,7 +13,8 @@
     "support_url": "https://enterprise.travel-wallet.com/home",
     "english_url": null,
     "ios_app_id": "1460769945",
-    "android_package": "com.mobiletoong.travelwallet"
+    "android_package": "com.mobiletoong.travelwallet",
+    "no_app": null
   },
   "signals": {
     "overseas_access": {
