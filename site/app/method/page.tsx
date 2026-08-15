@@ -221,7 +221,8 @@ export default async function MethodPage() {
             <T en="What each value means" ko="각 값이 뜻하는 것" />
           </h2>
 
-          <table className="datatable">
+          <div className="tablewrap">
+            <table className="datatable">
             <thead>
               <tr>
                 <th>
@@ -252,7 +253,8 @@ export default async function MethodPage() {
                 </tr>
               ))}
             </tbody>
-          </table>
+            </table>
+          </div>
 
           <h2>
             <T en="How far to trust a value" ko="값을 얼마나 믿을 수 있나" />

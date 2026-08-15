@@ -94,7 +94,7 @@ export default async function ChangesPage() {
             {days.map((day) => (
               <section className="day" key={day.date}>
                 <h2 className="day-date">{day.date}</h2>
-                <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
+                <p style={{ fontSize: 13, color: 'var(--text-3)', margin: 0 }}>
                   <T
                     en={`${day.changes.length} value${day.changes.length === 1 ? '' : 's'} moved`}
                     ko={`${day.changes.length}건 바뀜`}

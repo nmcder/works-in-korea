@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Dot } from '@/components/Dot';
 import { RelativeTime } from '@/components/RelativeTime';
 import { T, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
@@ -72,9 +73,22 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
         <div className="wrap">
           <p className="breadcrumb">
             <Link href="/">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 14 14"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <path d="M11 7H3M6.5 3.5 3 7l3.5 3.5" />
+              </svg>
               <T en="All services" ko="전체 서비스" />
             </Link>
-            {' · '}
+            <span aria-hidden>·</span>
             <T {...cat} />
           </p>
 
@@ -131,13 +145,13 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
           ))}
         </div>
 
-        <p style={{ margin: '26px 0 64px', fontSize: 14.5, color: 'var(--ink-3)' }}>
+        <p style={{ margin: '26px 0 64px', fontSize: 14.5, color: 'var(--text-3)' }}>
           <T
             en="Does a value here not match what you saw?"
             ko="여기 값이 직접 보신 것과 다른가요?"
           />{' '}
-          <Link href="/report/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
-            <T en="Send a correction" ko="정정 요청 보내기" />
+          <Link href="/report/" style={{ color: 'var(--accent)', fontWeight: 550 }}>
+            <T en="Send a correction →" ko="정정 요청 보내기 →" />
           </Link>
         </p>
       </div>
@@ -155,6 +169,7 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
       </h2>
 
       <p className="signal-a">
+        <Dot tone={v.tone} />
         <T {...v.display} />
       </p>
 
@@ -208,10 +223,7 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
         {v.evidence && Object.keys(v.evidence).length > 0 && (
           <details className="raw">
             <summary>
-              <T
-                en="Raw evidence"
-                ko="수집한 원본 보기"
-              />
+              <T en="Raw evidence" ko="수집한 원본 보기" />
             </summary>
             <pre>{JSON.stringify(v.evidence, null, 2)}</pre>
           </details>

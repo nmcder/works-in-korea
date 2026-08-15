@@ -1,26 +1,9 @@
 import type { Metadata } from 'next';
-import { Newsreader } from 'next/font/google';
 import Link from 'next/link';
 import { LangToggle } from '@/components/LangToggle';
 import { LANG_BOOTSTRAP, T } from '@/lib/i18n';
 import { SITE } from '@/lib/site-config';
 import './globals.css';
-
-/**
- * 제목용 세리프. 본문·데이터는 시스템 폰트를 쓴다.
- *
- * 한글 웹폰트는 파일이 수 MB라 정적 사이트에 얹으면 첫 화면이 눈에 띄게 느려진다.
- * 그래서 라틴 제목에만 웹폰트를 쓰고 한글은 OS 폰트에 맡긴다.
- * next/font 는 빌드 시점에 폰트를 받아 자체 호스팅하므로 방문자 브라우저는
- * 외부 요청을 하지 않는다 (추적 없음 원칙과도 맞는다).
- */
-const display = Newsreader({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-display',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -49,7 +32,7 @@ const NAV = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-lang="en" className={display.variable}>
+    <html lang="en" data-lang="en">
       <head>
         {/* 그리기 전에 언어를 확정한다 — 한국어 사용자에게 영어가 번쩍이지 않도록 */}
         <script dangerouslySetInnerHTML={{ __html: LANG_BOOTSTRAP }} />

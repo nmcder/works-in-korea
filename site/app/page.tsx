@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { Explorer, type Row } from '@/components/Explorer';
-import { RelativeTime } from '@/components/RelativeTime';
+import { Explorer, type HeroStats, type Row } from '@/components/Explorer';
 import { getBlockedServices, getLatestRun, getServices } from '@/lib/data';
 import { T, TBlock, type Bi } from '@/lib/i18n';
 import {
@@ -13,9 +12,9 @@ import {
 import { formatUtc } from '@/lib/time';
 
 const SHORT: Record<string, Bi> = {
-  overseas_access: { en: 'Opens from abroad', ko: '해외 접속' },
+  overseas_access: { en: 'From abroad', ko: '해외 접속' },
   i18n_ui: { en: 'Languages', ko: '언어' },
-  signup_phone_auth: { en: 'Signing up', ko: '가입' },
+  signup_phone_auth: { en: 'Sign-up', ko: '가입' },
 };
 
 export default async function HomePage() {
@@ -44,7 +43,7 @@ export default async function HomePage() {
       })),
       haystack: [s.name.en, s.name.ko, s.id, s.category, s.url].join(' ').toLowerCase(),
     }))
-    // 중요도 먼저, 그다음 값이 많은 순. 전부 목록에 있고 필터로 골라볼 수 있으므로
+    // 중요도 먼저, 그다음 값이 많은 순. 전부 목록에 있고 걸러 볼 수 있으므로
     // 감추는 것이 아니며, 첫 화면이 빈칸으로 덮이는 것을 막는다. (D-12)
     .sort(
       (a, b) =>
@@ -57,53 +56,20 @@ export default async function HomePage() {
     services.some((s) => s.category === id),
   );
 
+  const stats: HeroStats = {
+    services: services.length,
+    blocked: blocked.length,
+    lastChecked: run ? formatUtc(run.finished_at).slice(0, 10) : null,
+    vantage: run?.vantage_point.country
+      ? [run.vantage_point.country.toUpperCase(), run.vantage_point.region]
+          .filter(Boolean)
+          .join(' · ')
+      : null,
+  };
+
   return (
     <>
-      <section className="hero">
-        <div className="wrap">
-          <h1>
-            <T
-              en="Will this Korean site work for you?"
-              ko="이 한국 서비스, 외국인도 쓸 수 있나요?"
-            />
-          </h1>
-
-          <TBlock
-            className="standfirst"
-            en={`Checked every day from outside Korea: can you open it, what languages it offers, and whether signing up needs a Korean phone number. ${services.length} services.`}
-            ko={`서비스 ${services.length}개를 한국 밖에서 매일 확인합니다. 접속이 되는지, 어떤 언어를 쓸 수 있는지, 가입할 때 한국 휴대폰이 필요한지.`}
-          />
-
-          <div className="figures">
-            <div className="figure">
-              <b>{services.length}</b>
-              <span>
-                <T en="services" ko="서비스" />
-              </span>
-            </div>
-            <div className="figure">
-              <b style={{ fontSize: '1.02rem', letterSpacing: '-0.02em' }}>
-                {run ? formatUtc(run.finished_at).slice(0, 10) : '—'}
-              </b>
-              <span>
-                <T en="last checked" ko="마지막 확인" />
-                {run && <RelativeTime iso={run.finished_at} before=" · " />}
-              </span>
-            </div>
-            <div className="figure">
-              <b>{run?.vantage_point.country?.toUpperCase() ?? '—'}</b>
-              <span>
-                <T
-                  en={`checked from${run?.vantage_point.region ? ` ${run.vantage_point.region}` : ''}`}
-                  ko={`확인한 곳${run?.vantage_point.region ? ` · ${run.vantage_point.region}` : ''}`}
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Explorer rows={rows} categories={categories} />
+      <Explorer rows={rows} categories={categories} stats={stats} />
 
       <section className="band">
         <div className="wrap">
@@ -121,13 +87,13 @@ export default async function HomePage() {
             </Link>
           </p>
 
-          <p style={{ marginTop: 26, fontSize: 14, color: 'var(--ink-3)' }}>
+          <p style={{ marginTop: 26, fontSize: 14.5, color: 'var(--text-3)' }}>
             <T
-              en={`${blocked.length} of the ${services.length} sites refuse automated checks, so those rows stay empty until someone reports.`}
+              en={`${blocked.length} of the ${services.length} sites block automated checks, so those stay empty until someone reports.`}
               ko={`${services.length}개 중 ${blocked.length}개는 자동 확인을 막아 둬서, 제보가 올 때까지 비어 있습니다.`}
             />{' '}
-            <Link href="/method/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
-              <T en="How we check" ko="확인 방법" />
+            <Link href="/method/" style={{ color: 'var(--accent)', fontWeight: 550 }}>
+              <T en="How we check →" ko="확인 방법 →" />
             </Link>
           </p>
         </div>
