@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://watcha.com/ko/browse/all",
             "redirected": true,
-            "elapsed_ms": 2187,
+            "elapsed_ms": 3335,
             "body_sha256": "df39dd70477148a4f9280edecf3098f5227807bf1c6597deae5b4d6b181e35a8",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -47,7 +47,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -74,22 +74,21 @@
       }
     },
     "signup_phone_auth": {
-      "value": "not_required",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "unknown",
+      "measured_at": "2026-08-15T05:38:47.932Z",
+      "first_seen_at": "2026-08-15T05:38:47.932Z",
+      "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
         "signup_url": "https://watcha.com/ko/browse/all",
         "final_url": "https://watcha.com/ko/browse/all",
         "http_status": 200,
-        "matched_vendors": [],
-        "strong_url_matches": 0,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
+        "page_kind": "login",
+        "login_markers": [
+          "로그인"
+        ],
         "attempts": [
           {
             "url": "https://watcha.com/join",
@@ -97,7 +96,7 @@
             "used": true
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
@@ -106,7 +105,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -128,7 +127,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -152,7 +151,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -165,21 +164,17 @@
             "chars": 424
           },
           {
-            "url": "https://watcha.com/zendesk/login",
-            "status": 200,
-            "chars": 1027
-          },
-          {
             "url": "https://services.watcha.com/watcha-mediakit",
             "status": 200,
             "chars": 3186
           }
         ],
+        "content_sha256": "310c37ab51fa9cf8ca8aff0f1a03294b061abf68b05f69ef42c30e4318fa9158",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.107,
+          "latin_ratio": 0.1,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

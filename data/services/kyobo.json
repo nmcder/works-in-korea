@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,12 +27,12 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.kyobobook.co.kr/",
             "redirected": false,
-            "elapsed_ms": 2170,
-            "body_sha256": "39e7f7be8078a7808e00b4fa768bce27db813b82abab831a48d4fed3d0afe170",
+            "elapsed_ms": 3035,
+            "body_sha256": "6bdfd713293bd14c0a2121b55592751980606620d215e75676491c209b8d49ff",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -43,22 +43,17 @@
     },
     "i18n_ui": {
       "value": [
-        "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T05:38:47.932Z",
+      "first_seen_at": "2026-08-15T05:38:47.932Z",
+      "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
         "declared_html_lang": "ko",
         "hreflang": [],
-        "language_switcher_links": {
-          "en": [
-            "https://product.kyobobook.co.kr/detail/S000002290808"
-          ]
-        },
+        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "https://www.kyobobook.co.kr/en",
@@ -72,14 +67,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.138,
-        "hangul_char_ratio": 0.56,
+        "latin_char_ratio": 0.103,
+        "hangul_char_ratio": 0.588,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -118,7 +113,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -136,7 +131,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -167,7 +162,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -177,7 +172,7 @@
           {
             "url": "https://www.kyobobook.co.kr",
             "status": 200,
-            "chars": 1061
+            "chars": 1040
           },
           {
             "url": "https://www.kyobobook.co.kr/cscenter",
@@ -190,11 +185,12 @@
             "chars": 1429
           }
         ],
+        "content_sha256": "7a43c0e6741675b9f4a04626a0f77eca842ba3fe7c165f2245aefd90fbde0db4",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.117,
+          "latin_ratio": 0.118,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.nts.go.kr/",
             "redirected": false,
-            "elapsed_ms": 2341,
+            "elapsed_ms": 3372,
             "body_sha256": "46ba35032eac9c711f76a3806515eb4839b1f9872ccb71cbbb062a30b001c183",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -81,7 +81,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -120,7 +120,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -136,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -160,7 +160,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -180,14 +180,15 @@
           {
             "url": "https://www.mpm.go.kr/proactivePublicService/local/localNotice",
             "status": 200,
-            "chars": 2626
+            "chars": 2628
           }
         ],
+        "content_sha256": "6a127ab954d0c530dab3a7f33cdfeddb81c179c1fe443bd098d6d9c78f8717da",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.038,
+          "latin_ratio": 0.011,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

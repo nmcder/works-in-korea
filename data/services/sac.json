@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,12 +27,12 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.sac.or.kr/site/main/home",
             "redirected": true,
-            "elapsed_ms": 2386,
-            "body_sha256": "f1606cbf48930e7211351dccf6299adf61f757a3196803bfa882f3a6f7bd97d8",
+            "elapsed_ms": 4148,
+            "body_sha256": "2c0583b51b4e1f5af33ba5bae80451e36c0920c38f7b5a3e2f5c4d0daf366681",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -82,7 +82,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -121,7 +121,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -137,7 +137,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -161,7 +161,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -184,6 +184,7 @@
             "chars": 1787
           }
         ],
+        "content_sha256": "9efa38a0a8b203b9d275ac2a89cd1b55f5ddb7b4ffdc352de36765b89ff12dc8",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",

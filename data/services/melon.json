@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": null,
             "final_url": null,
             "redirected": false,
-            "elapsed_ms": 31,
+            "elapsed_ms": 954,
             "body_sha256": null,
             "content_type": null,
             "not_measured": "robots: Disallow: /"
@@ -42,7 +42,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -55,7 +55,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -85,7 +85,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -104,7 +104,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -124,7 +124,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:support_en",

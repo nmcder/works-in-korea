@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,12 +27,12 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 403,
             "final_url": "https://www.coupang.com/",
             "redirected": false,
-            "elapsed_ms": 2083,
-            "body_sha256": "0315d36d408d9e96c0fd836cd2feb72ddf1ae2e67a38c534c10c12390c3c1376",
+            "elapsed_ms": 2237,
+            "body_sha256": "2a0e6770e1e955370e1a2754dae405108ed92098d0d03692c5ebe8a3e06c8ccc",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": [
@@ -45,7 +45,7 @@
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -58,7 +58,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T04:28:31.541Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -89,7 +89,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -108,7 +108,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -128,7 +128,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:support_en",

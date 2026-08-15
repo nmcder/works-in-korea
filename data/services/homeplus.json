@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://mfront.homeplus.co.kr/",
             "redirected": true,
-            "elapsed_ms": 2086,
+            "elapsed_ms": 3960,
             "body_sha256": "debb1d7b14d8b641cacb28cca514917c1725c276e4413b2b20c23b4383867ebb",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -69,22 +69,19 @@
       }
     },
     "signup_phone_auth": {
-      "value": "not_required",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "unknown",
+      "measured_at": "2026-08-15T05:38:47.932Z",
+      "first_seen_at": "2026-08-15T05:38:47.932Z",
+      "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
         "signup_url": "https://front.homeplus.co.kr/join",
-        "final_url": "https://mfront.homeplus.co.kr/",
+        "final_url": "https://front.homeplus.co.kr/404",
         "http_status": 200,
-        "matched_vendors": [],
-        "strong_url_matches": 0,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
+        "page_kind": "unknown",
+        "login_markers": [],
         "attempts": [
           {
             "url": "https://front.homeplus.co.kr/join",
@@ -92,12 +89,12 @@
             "used": true
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -113,7 +110,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -137,7 +134,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -150,6 +147,7 @@
             "chars": 23
           }
         ],
+        "content_sha256": "25b2f804b78a564dc701a500ff3f389593fd347447ecc65edab7c644b165d500",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",

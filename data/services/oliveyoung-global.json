@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,12 +27,12 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2471,
-            "body_sha256": "106254081b7034f361cf54fee648dbbd4e591c9ba424860010dc1cdde06dc43d",
+            "elapsed_ms": 2451,
+            "body_sha256": "13a46dd5f2132693da0a4fc5029b4fe08374b8974a82a1b574b7ac1fba50a829",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,7 +46,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -73,14 +73,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.807,
+        "latin_char_ratio": 0.805,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T04:28:31.541Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -114,7 +114,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -132,7 +132,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -163,7 +163,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -174,20 +174,16 @@
             "url": "https://global.oliveyoung.com",
             "status": 200,
             "chars": 8000
-          },
-          {
-            "url": "https://help.global.oliveyoung.com/hc/categories/16411417936143-FAQ",
-            "status": 200,
-            "chars": 513
           }
         ],
+        "content_sha256": "2f35d1dca4a8697b229fcce3014e37d091cafbb4895976857843af60b94a3ee2",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "yes",
           "strong_markers": [
             "english support"
           ],
-          "latin_ratio": 0.8,
+          "latin_ratio": 0.805,
           "reason": "영문 지원을 명시하는 문구를 찾음"
         }
       }

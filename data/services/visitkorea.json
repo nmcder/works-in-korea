@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,12 +27,12 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://english.visitkorea.or.kr/svc/main/index.do",
             "redirected": true,
-            "elapsed_ms": 2682,
-            "body_sha256": "ebd08c9bce0e6873078d9e4d51ab7ac5c1ed7d2ab7192cc7ae894d27b7f7da12",
+            "elapsed_ms": 3423,
+            "body_sha256": "b1ce124fcb2765890872b3a08dd6f2f79c9db485458b9bc9993713f928e1c403",
             "content_type": "text/html;charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -52,7 +52,7 @@
         "ru",
         "zh"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -105,7 +105,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -144,7 +144,7 @@
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -160,7 +160,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -184,7 +184,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T03:19:01.018Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T03:17:07.455Z",
       "last_changed_at": "2026-08-15T03:17:07.455Z",
       "method": "auto:support_en",

@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.hometax.go.kr/",
             "redirected": false,
-            "elapsed_ms": 2137,
+            "elapsed_ms": 2853,
             "body_sha256": "e247137d87ea855bca13006ffaf5742f8a0633299eaaa74dbb5f9220c2955279",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -45,7 +45,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -73,46 +73,19 @@
       }
     },
     "signup_phone_auth": {
-      "value": "required",
-      "measured_at": "2026-08-15T04:28:31.541Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
+      "value": "unknown",
+      "measured_at": "2026-08-15T05:38:47.932Z",
+      "first_seen_at": "2026-08-15T05:38:47.932Z",
+      "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
         "signup_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
-        "final_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=index3",
+        "final_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
         "http_status": 200,
-        "page_kind": "combined",
-        "signup_markers": [
-          "회원가입"
-        ],
-        "form_input_count": 8,
-        "matched_vendors": [
-          {
-            "id": "ipin",
-            "name": "아이핀 (i-PIN)",
-            "matched": "/ipin",
-            "via": "url"
-          },
-          {
-            "id": "rrn",
-            "name": "주민등록번호 입력 요구",
-            "matched": "주민등록번호",
-            "via": "text"
-          },
-          {
-            "id": "generic-phone-auth",
-            "name": "일반 휴대폰 본인인증 문구",
-            "matched": "본인확인",
-            "via": "text"
-          }
-        ],
-        "strong_url_matches": 1,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
+        "page_kind": "unknown",
+        "login_markers": [],
         "attempts": [
           {
             "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
@@ -121,12 +94,12 @@
             "reason": "hints.signup_url"
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -142,7 +115,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -166,7 +139,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -179,6 +152,7 @@
             "chars": 7
           }
         ],
+        "content_sha256": "c60e6d6e906da830bb0b0f0f7e28f2633c4b775a1e55040f753737447b6f4162",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",

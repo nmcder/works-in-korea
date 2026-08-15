@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.sentbe.com/",
             "redirected": false,
-            "elapsed_ms": 2046,
+            "elapsed_ms": 2598,
             "body_sha256": "981ba38cdb5388f93130aea894956ecdb7ebb46888c586b1802e6bac9fef38fe",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -45,7 +45,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -73,22 +73,19 @@
       }
     },
     "signup_phone_auth": {
-      "value": "not_required",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "unknown",
+      "measured_at": "2026-08-15T05:38:47.932Z",
+      "first_seen_at": "2026-08-15T05:38:47.932Z",
+      "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
         "signup_url": "https://www.sentbe.com/join",
         "final_url": "https://corporate.sentbe.com/sentbe?lang=en",
         "http_status": 200,
-        "matched_vendors": [],
-        "strong_url_matches": 0,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
+        "page_kind": "unknown",
+        "login_markers": [],
         "attempts": [
           {
             "url": "https://www.sentbe.com/join",
@@ -96,12 +93,12 @@
             "used": true
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
       }
     },
     "app_availability": {
       "value": null,
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -117,7 +114,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -141,7 +138,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -154,6 +151,7 @@
             "chars": 11
           }
         ],
+        "content_sha256": "3f1794d69925a4f5de07067c8a3814c0fcb18da6dd947e39817468507c2bf435",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",

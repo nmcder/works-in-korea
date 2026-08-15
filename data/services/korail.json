@@ -18,7 +18,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -27,11 +27,11 @@
         "vantage_points": [
           {
             "id": "github-actions",
-            "country": "kr",
+            "country": "us",
             "http_status": 200,
             "final_url": "https://www.korail.com/",
-            "redirected": true,
-            "elapsed_ms": 2196,
+            "redirected": false,
+            "elapsed_ms": 2991,
             "body_sha256": "c35eeb957318eb5438a63823a6ecc39a490fc5fa3cd65ba8a4b934d47e040278",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -45,7 +45,7 @@
       "value": [
         "ko"
       ],
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -56,12 +56,12 @@
         "language_switcher_links": {},
         "english_url_checks": [
           {
-            "url": "https://www.letskorail.com/en",
+            "url": "https://www.korail.com/en",
             "status": 404,
             "ok": false
           },
           {
-            "url": "https://www.letskorail.com/en/",
+            "url": "https://www.korail.com/en/",
             "status": 404,
             "ok": false
           }
@@ -74,7 +74,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T04:28:31.541Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -103,7 +103,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -125,7 +125,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -133,7 +133,7 @@
       "evidence": {
         "scanned": [
           {
-            "url": "https://www.letskorail.com",
+            "url": "https://www.korail.com",
             "status": 200,
             "scanned": true
           }
@@ -149,7 +149,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
+      "measured_at": "2026-08-15T05:38:47.932Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -157,16 +157,22 @@
       "evidence": {
         "pages": [
           {
-            "url": "https://www.letskorail.com",
+            "url": "https://www.korail.com/ticket/guest/csc/korailcs",
+            "status": 200,
+            "chars": 9
+          },
+          {
+            "url": "https://www.korail.com",
             "status": 200,
             "chars": 9
           }
         ],
+        "content_sha256": "d4411a3fdaf31cd94bb83d932638d954e08e315809f198c11028ea5264439cf9",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.553,
+          "latin_ratio": 0.583,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }
