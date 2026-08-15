@@ -33,7 +33,7 @@ export const SITE = {
    * 공개 주소. sitemap·robots·OG 카드에 쓰인다.
    * 자체 도메인이 생기면 Vercel 환경변수 NEXT_PUBLIC_SITE_URL 로 덮어쓴다.
    */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://worksinkorea.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.worksinkorea.com',
 
   issuesRepo: ISSUES_REPO,
 
