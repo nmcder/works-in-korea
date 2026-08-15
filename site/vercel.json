@@ -1,4 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
+  "framework": "nextjs",
+
+  "$comment-ignoreCommand": "항상 빌드한다. 종료 코드 0 이면 건너뛰고 1 이면 빌드하는 규칙이라 exit 1 이다. 대시보드의 '변경 없으면 배포 건너뛰기'를 켜면 이 사이트는 영원히 갱신되지 않는다 — 크론이 고치는 것은 data/ 이고 그건 루트 디렉터리(site/) 바깥이라, Vercel 이 보기에는 아무것도 안 바뀐 것이 된다. 크론은 매일 초록색으로 돌고 사이트만 어제 값에 멈춘다. 이 프로젝트가 파는 것이 신선도이므로 설정 하나에 맡기지 않고 여기 박아 둔다.",
+  "ignoreCommand": "exit 1"
 }

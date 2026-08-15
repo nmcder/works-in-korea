@@ -155,6 +155,11 @@ app root; the old root-level `vercel.json` workaround cannot do that.
 Pages are still prerendered at build time and served from the CDN. A function runs once per
 submitted report, and the public JSON API stays a folder of static files.
 
+**Never enable "skip deployments when there are no changes to the root directory".** The cron
+commits to , which is outside , so Vercel would see nothing changed and skip the
+deploy — the cron would keep going green while the site froze on yesterday. 
+pins  so this holds even if the dashboard setting is flipped.
+
 The daily cron commits to `data/`, which triggers a Vercel rebuild. No manual step.
 
 ## Site conventions
