@@ -1,0 +1,91 @@
+name: "📱 SMS to a foreign number / 해외 번호 SMS"
+description: "Did a verification text reach a non-Korean number? / 해외 번호로 인증 문자가 왔나요?"
+title: "[sms] "
+labels: ["report", "report:foreign_phone_sms"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the only way this question ever gets answered.** We never request a real
+        verification message ourselves, so this column is built entirely from first-hand reports.
+
+        **이 질문은 이렇게만 답이 채워집니다.** 저희는 실제 인증 문자를 요청하지 않기 때문에,
+        이 항목은 전부 직접 해 본 분들의 제보로 채워집니다.
+
+        ⚠️ **Never write your phone number, not even partially.** Country only.
+        전화번호는 일부라도 적지 마세요. 국가만 적어 주세요.
+
+  - type: input
+    id: service
+    attributes:
+      label: "Which service? / 어느 서비스인가요?"
+      description: "Name or the id from the site URL, e.g. `naver` from /service/naver/"
+      placeholder: "naver"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: "What happened? / 결과는?"
+      options:
+        - "The text arrived / 문자가 도착함"
+        - "No text arrived / 문자가 오지 않음"
+        - "The form would not even accept a foreign number / 해외 번호 입력 자체가 안 됨"
+        - "Partly — it worked only sometimes / 경우에 따라 다름"
+    validations:
+      required: true
+
+  - type: input
+    id: number_country
+    attributes:
+      label: "Country of the phone number / 번호의 국가"
+      description: "Country only. Never the number itself. / 국가만. 번호는 절대 적지 마세요."
+      placeholder: "Germany"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: context
+    attributes:
+      label: "What were you doing? / 무엇을 하던 중이었나요?"
+      options:
+        - "Creating an account / 회원가입"
+        - "Logging in / 로그인"
+        - "Verifying identity for a payment / 결제 본인확인"
+        - "Recovering an account / 계정 찾기"
+        - "Other / 기타"
+    validations:
+      required: true
+
+  - type: input
+    id: tried_on
+    attributes:
+      label: "When did you try? / 언제 시도했나요?"
+      description: "YYYY-MM-DD"
+      placeholder: "2026-08-15"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "Anything else? / 그 밖에 알려줄 것"
+      description: >
+        Whether the country code was in the dropdown at all, what the error said, how long you waited.
+        / 국가번호가 목록에 있었는지, 오류 문구, 얼마나 기다렸는지 등.
+      placeholder: "The country dropdown only listed +82."
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: "Before you send / 보내기 전에"
+      options:
+        - label: >
+            This describes something I actually did, not something I heard or assumed.
+            (직접 겪은 일이며, 들은 이야기나 추측이 아닙니다.)
+          required: true
+        - label: >
+            I have not included my phone number or any contact details.
+            (전화번호나 연락처를 적지 않았습니다.)
+          required: true

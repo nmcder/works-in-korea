@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { useLang } from '@/components/use-lang';
+import { T, type Bi } from '@/lib/i18n';
 import type { Tone } from '@/lib/present';
 
 export interface RowSignal {
   key: string;
-  /** 카드에서 왼쪽에 붙는 짧은 이름 */
-  short: string;
-  value: string;
+  /** 좁은 화면에서 값 앞에 붙는 항목 이름 */
+  short: Bi;
+  value: Bi;
   tone: Tone;
 }
 
@@ -17,57 +19,57 @@ export interface Row {
   nameEn: string;
   nameKo: string;
   category: string;
-  categoryEn: string;
+  cat: Bi;
   importance: number;
-  /** 8개 시그널 중 값이 기록된 개수 */
   measured: number;
   total: number;
-  /** 자동 측정이 막혀 있으면 그 이유를 사람이 읽을 수 있게. 아니면 null */
-  crawlBlocked: string | null;
+  /** 자동 측정이 막혀 있으면 그 이유. 아니면 null */
+  blocked: Bi | null;
   signals: RowSignal[];
   haystack: string;
 }
 
 interface Facet {
   id: string;
-  label: string;
-  ko: string;
+  label: Bi;
   test: (r: Row) => boolean;
 }
 
-/**
- * 필터는 전부 "관측된 사실"로만 정의한다. 순위를 매기거나 추천하지 않는다.
- */
+/** 필터는 전부 "관측된 사실"로만 정의한다. 순위를 매기거나 추천하지 않는다. */
 const FACETS: Facet[] = [
   {
     id: 'english',
-    label: 'Has an English interface',
-    ko: '영어 인터페이스 있음',
-    test: (r) => r.signals.some((s) => s.key === 'i18n_ui' && /English/.test(s.value)),
+    label: { en: 'Has an English interface', ko: '영어 인터페이스 있음' },
+    test: (r) => r.signals.some((s) => s.key === 'i18n_ui' && /English/.test(s.value.en)),
   },
   {
     id: 'nophone',
-    label: 'No Korean phone check on the sign-up form',
-    ko: '가입 양식에 본인인증 없음',
-    test: (r) =>
-      r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'open'),
+    label: { en: 'No Korean phone check to sign up', ko: '가입에 본인인증 없음' },
+    test: (r) => r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'open'),
   },
   {
     id: 'phone',
-    label: 'Korean phone verification required',
-    ko: '본인인증 필수',
-    test: (r) =>
-      r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'barrier'),
+    label: { en: 'Korean phone verification required', ko: '본인인증 필수' },
+    test: (r) => r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'barrier'),
   },
   {
     id: 'blocked',
-    label: 'Machines can’t measure it',
-    ko: '자동 측정 불가',
-    test: (r) => r.crawlBlocked !== null,
+    label: { en: 'Machines can’t measure it', ko: '자동 측정 불가' },
+    test: (r) => r.blocked !== null,
   },
 ];
 
-export function Explorer({ rows, categories }: { rows: Row[]; categories: [string, string][] }) {
+const COLUMNS: Bi[] = [
+  { en: 'Service', ko: '서비스' },
+  { en: 'Category', ko: '분야' },
+  { en: 'From abroad', ko: '해외 접속' },
+  { en: 'Languages', ko: '언어' },
+  { en: 'Sign-up', ko: '가입' },
+  { en: 'Recorded', ko: '기록' },
+];
+
+export function Explorer({ rows, categories }: { rows: Row[]; categories: [string, Bi][] }) {
+  const lang = useLang();
   const [q, setQ] = useState('');
   const [cat, setCat] = useState<string | null>(null);
   const [facets, setFacets] = useState<string[]>([]);
@@ -88,27 +90,33 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
   const toggleFacet = (id: string): void =>
     setFacets((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
 
+  const dirty = facets.length > 0 || cat !== null || q !== '';
+
   return (
     <>
-      <div className="filters">
+      <div className="controls">
         <div className="wrap">
           <input
             className="search"
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search a service — Coupang, 쿠팡, korail, delivery…"
-            aria-label="Search services"
+            placeholder={
+              lang === 'ko'
+                ? '서비스 검색 — 쿠팡, coupang, 코레일, 배달…'
+                : 'Search a service — Coupang, 쿠팡, Korail, delivery…'
+            }
+            aria-label={lang === 'ko' ? '서비스 검색' : 'Search services'}
           />
 
-          <div className="chips" role="group" aria-label="Filter by category">
+          <div className="chips" role="group">
             <button
               type="button"
               className="chip"
               aria-pressed={cat === null}
               onClick={() => setCat(null)}
             >
-              All
+              <T en="All" ko="전체" />
             </button>
             {categories.map(([id, label]) => (
               <button
@@ -118,12 +126,12 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
                 aria-pressed={cat === id}
                 onClick={() => setCat(cat === id ? null : id)}
               >
-                {label}
+                <T {...label} />
               </button>
             ))}
           </div>
 
-          <div className="chips" role="group" aria-label="Filter by what was measured">
+          <div className="chips facets" role="group">
             {FACETS.map((f) => (
               <button
                 key={f.id}
@@ -131,79 +139,93 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
                 className="chip"
                 aria-pressed={facets.includes(f.id)}
                 onClick={() => toggleFacet(f.id)}
-                title={f.ko}
               >
-                {f.label}
+                <T {...f.label} />
               </button>
             ))}
           </div>
 
-          <p className="filter-meta">
-            Showing {filtered.length} of {rows.length} services
-            {facets.length > 0 || cat || q ? (
+          <p className="result-line">
+            <T
+              en={`Showing ${filtered.length} of ${rows.length} services`}
+              ko={`${rows.length}개 중 ${filtered.length}개 표시`}
+            />
+            {dirty && (
               <>
                 {' · '}
                 <button
                   type="button"
+                  className="linkish"
                   onClick={() => {
                     setQ('');
                     setCat(null);
                     setFacets([]);
                   }}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    padding: 0,
-                    font: 'inherit',
-                    color: 'var(--accent)',
-                    cursor: 'pointer',
-                  }}
                 >
-                  reset
+                  <T en="reset" ko="초기화" />
                 </button>
               </>
-            ) : null}
+            )}
           </p>
         </div>
       </div>
 
       <div className="wrap">
         {filtered.length === 0 ? (
-          <p className="empty">
-            Nothing matches that combination.
+          <p className="nothing">
+            <T
+              en="Nothing matches that combination."
+              ko="그 조합에 해당하는 서비스가 없습니다."
+            />
             <br />
-            <span style={{ fontSize: 13 }}>
-              That is a real answer too — it may mean nobody has measured it yet.
+            <span style={{ fontSize: 13.5 }}>
+              <T
+                en="That is an answer too — it may mean nobody has measured it yet."
+                ko="그것도 하나의 답입니다 — 아직 아무도 재지 않았다는 뜻일 수 있습니다."
+              />
             </span>
           </p>
         ) : (
-          <div className="grid">
+          <div className="ledger">
+            <div className="ledger-head" aria-hidden>
+              {COLUMNS.map((c) => (
+                <span key={c.en}>
+                  <T {...c} />
+                </span>
+              ))}
+            </div>
+
             {filtered.map((r) => (
-              <Link key={r.id} href={`/service/${r.id}/`} className="card">
-                <div className="card-head">
-                  <div className="card-name">
-                    {r.nameEn}
-                    {r.nameKo !== r.nameEn && <em>{r.nameKo}</em>}
-                  </div>
-                  <div className="card-cat">{r.categoryEn}</div>
-                </div>
+              <Link key={r.id} href={`/service/${r.id}/`} className="ledger-row">
+                <span className="svc-name">
+                  {r.nameEn}
+                  {r.nameKo !== r.nameEn && <em>{r.nameKo}</em>}
+                </span>
 
-                <div className="card-signals">
-                  {r.signals.map((s) => (
-                    <div key={s.key} className={`sigline t-${s.tone}`}>
-                      <span className="dot" aria-hidden />
-                      <span className="k">{s.short}</span>
-                      <span className="v">{s.value}</span>
-                    </div>
-                  ))}
-                </div>
+                <span className="svc-cat">
+                  <T {...r.cat} />
+                </span>
 
-                <div className="card-foot">
-                  <span>
-                    {r.measured} of {r.total} signals recorded
+                {r.signals.map((s) => (
+                  <span key={s.key} className={`val t-${s.tone}`}>
+                    <span className="pip" aria-hidden />
+                    <span className="cell-key">
+                      <T {...s.short} />
+                    </span>
+                    <span className="txt">
+                      <T {...s.value} />
+                    </span>
                   </span>
-                  {r.crawlBlocked && <span>{r.crawlBlocked}</span>}
-                </div>
+                ))}
+
+                <span className="tally">
+                  {r.measured}/{r.total}
+                  {r.blocked && (
+                    <i>
+                      <T {...r.blocked} />
+                    </i>
+                  )}
+                </span>
               </Link>
             ))}
           </div>

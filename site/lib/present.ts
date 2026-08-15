@@ -180,13 +180,13 @@ export const AUTO_KEYS: SignalKey[] = [
 
 export const COMMUNITY_KEYS: SignalKey[] = ['foreign_card', 'foreign_phone_sms'];
 
-/** 홈 목록에 압축해서 보여줄 4종 */
-export const HEADLINE_KEYS: SignalKey[] = [
-  'overseas_access',
-  'i18n_ui',
-  'signup_phone_auth',
-  'support_en',
-];
+/**
+ * 목록에 열로 세울 3종.
+ *
+ * support_en 은 뺐다 — 106건 중 105건이 unknown 이라 열 하나를 차지하면서
+ * 아무것도 알려주지 않는다. 상세 페이지에는 그대로 나온다.
+ */
+export const HEADLINE_KEYS: SignalKey[] = ['overseas_access', 'i18n_ui', 'signup_phone_auth'];
 
 const LANGUAGE_NAMES: Record<string, Bi> = {
   ko: { en: 'Korean', ko: '한국어' },

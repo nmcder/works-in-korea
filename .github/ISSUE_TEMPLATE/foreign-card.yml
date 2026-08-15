@@ -1,0 +1,95 @@
+name: "💳 Foreign card payment / 해외 카드 결제"
+description: "Did a card issued outside Korea work? / 해외 발급 카드로 결제가 됐나요?"
+title: "[card] "
+labels: ["report", "report:foreign_card"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the only way this question ever gets answered.** We never attempt a real
+        payment ourselves, so everything in this column comes from people who actually tried.
+
+        **이 질문은 이렇게만 답이 채워집니다.** 저희는 실제 결제를 시도하지 않기 때문에,
+        이 항목은 전부 직접 결제해 본 분들의 제보로 채워집니다.
+
+        ⚠️ **Do not write your name, email, phone number, card number, or any part of it.**
+        We do not want it, we will not store it, and an issue containing one will be closed.
+        이름·이메일·전화번호·카드번호(일부 포함)를 적지 마세요. 필요 없고, 저장하지 않으며,
+        포함된 제보는 닫힙니다.
+
+  - type: input
+    id: service
+    attributes:
+      label: "Which service? / 어느 서비스인가요?"
+      description: "Name or the id from the site URL, e.g. `coupang` from /service/coupang/"
+      placeholder: "coupang"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: "What happened? / 결과는?"
+      options:
+        - "It worked — the payment went through / 결제됨"
+        - "It failed — the card was rejected / 거부됨"
+        - "Partly — it worked only in some cases / 경우에 따라 다름"
+    validations:
+      required: true
+
+  - type: input
+    id: card_country
+    attributes:
+      label: "Country that issued the card / 카드 발급 국가"
+      description: "Country only. Never the card number. / 국가만. 카드번호는 절대 적지 마세요."
+      placeholder: "United States"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: card_brand
+    attributes:
+      label: "Card brand / 카드 브랜드"
+      options:
+        - Visa
+        - Mastercard
+        - American Express
+        - UnionPay
+        - JCB
+        - Discover
+        - "Other / 기타"
+    validations:
+      required: true
+
+  - type: input
+    id: tried_on
+    attributes:
+      label: "When did you try? / 언제 시도했나요?"
+      description: "YYYY-MM-DD. A report without a date cannot be aged, so this matters."
+      placeholder: "2026-08-15"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "Anything else? / 그 밖에 알려줄 것"
+      description: >
+        Error message, which step it failed at, whether a Korean phone number was also required.
+        No personal details. / 오류 메시지, 어느 단계에서 막혔는지, 한국 번호도 요구했는지 등.
+        개인정보는 적지 마세요.
+      placeholder: "Card was accepted at checkout but the 3-D Secure step never loaded."
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: "Before you send / 보내기 전에"
+      options:
+        - label: >
+            This describes something I actually did, not something I heard or assumed.
+            (직접 겪은 일이며, 들은 이야기나 추측이 아닙니다.)
+          required: true
+        - label: >
+            I have not included my name, contact details, or any card number.
+            (이름·연락처·카드번호를 적지 않았습니다.)
+          required: true

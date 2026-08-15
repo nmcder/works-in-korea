@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
  * 그래서 서버에서는 아무것도 그리지 않고, 브라우저에서 마운트된 뒤에만 채운다.
  * 절대 시각(UTC)은 항상 옆에 함께 표시되므로 JS가 없어도 정보는 온전하다.
  */
-export function RelativeTime({ iso }: { iso: string }) {
+export function RelativeTime({ iso, before }: { iso: string; before?: string }) {
   const [text, setText] = useState<string | null>(null);
 
   useEffect(() => {
@@ -21,8 +21,15 @@ export function RelativeTime({ iso }: { iso: string }) {
     return () => window.clearInterval(timer);
   }, [iso]);
 
+  // 아직 계산되지 않았으면 구분자까지 통째로 내지 않는다.
+  // 안 그러면 서버 HTML에 " · " 만 덩그러니 남는다.
   if (text === null) return null;
-  return <span title={iso}>{text}</span>;
+  return (
+    <span title={iso}>
+      {before}
+      {text}
+    </span>
+  );
 }
 
 function humanize(ms: number): string {

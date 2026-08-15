@@ -1,0 +1,11 @@
+# 빈 이슈로 개인정보가 흘러드는 경로를 막는다.
+# 자유 서식 이슈를 허용하면 사람들이 이메일·전화번호를 적어 보내게 되고,
+# 그 순간 "개인정보를 수집하지 않는다"는 약속이 깨진다. (CLAUDE.md 절대규칙 2)
+blank_issues_enabled: false
+contact_links:
+  - name: How measurement works / 측정 방법
+    url: https://works-in-korea.vercel.app/method/
+    about: What each value means and where the method is weak. / 각 값의 정의와 알려진 한계.
+  - name: The raw data / 원본 데이터
+    url: https://works-in-korea.vercel.app/api-docs/
+    about: Every value as JSON, CC BY 4.0. / 모든 값을 JSON으로. CC BY 4.0.

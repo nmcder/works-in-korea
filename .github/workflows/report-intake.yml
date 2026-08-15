@@ -1,0 +1,98 @@
+name: report-intake
+
+# 제보 이슈가 열리거나 수정되면 구조화해서 PR을 연다.
+# main 에 직접 쓰지 않는다 — 사람이 PR을 보고 승인해야 데이터가 된다.
+on:
+  issues:
+    types: [opened, edited, labeled]
+  workflow_dispatch:
+    inputs:
+      reapply:
+        description: '저장된 제보만 다시 집계 (이슈 없이)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+# 여러 제보가 동시에 들어와도 브랜치가 꼬이지 않게 한 번에 하나씩.
+concurrency:
+  group: report-intake
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    # 라벨 없는 이슈까지 다 돌 필요는 없다
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.issue.labels.*.name, 'report')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: 이슈 본문을 파일로 (셸에 직접 넣지 않는다 — 스크립트 인젝션 방지)
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_JSON: ${{ toJSON(github.event.issue) }}
+        run: node -e 'require("fs").writeFileSync("issue.json", process.env.ISSUE_JSON)'
+
+      - name: 제보 처리
+        run: |
+          if [ -f issue.json ]; then
+            npm run ingest -- --file=issue.json
+          else
+            npm run ingest -- --reapply
+          fi
+
+      - name: 스키마 검증 (깨진 데이터가 PR로 나가지 않게)
+        run: npm run validate
+
+      - name: 이슈에 결과 댓글
+        if: github.event_name == 'issues' && hashFiles('.report-comment.md') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --body-file .report-comment.md
+
+      - name: 변경이 있으면 PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          rm -f issue.json .report-comment.md
+          if git diff --quiet && git diff --staged --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "데이터 변경 없음 — PR 생략"
+            exit 0
+          fi
+
+          BRANCH="report/${ISSUE_NUMBER:-manual}-$(date -u +%Y%m%d%H%M%S)"
+          git config user.name  "works-in-korea-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/
+          git commit -m "report: 제보 #${ISSUE_NUMBER:-manual} 반영"
+          git push -u origin "$BRANCH"
+
+          gh pr create \
+            --title "제보 #${ISSUE_NUMBER:-manual} 반영" \
+            --body "$(printf '%s\n' \
+              "커뮤니티 제보를 데이터에 반영하는 PR입니다." \
+              "" \
+              "**승인 전에 확인할 것**" \
+              "- [ ] 개인정보가 들어 있지 않은가 (이름·연락처·번호·카드번호)" \
+              "- [ ] 제보 내용과 기록된 값이 일치하는가" \
+              "- [ ] 자동 측정값과 모순되면 \`conflicting\` 으로 남았는가" \
+              "" \
+              "원본 이슈: #${ISSUE_NUMBER:-—}")" \
+            --base main \
+            --head "$BRANCH"

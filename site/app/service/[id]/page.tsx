@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { RelativeTime } from '@/components/RelativeTime';
-import { formatUtc } from '@/lib/time';
+import { T, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
 import { CATEGORY_LABELS, type SignalView, measuredCount, viewAll } from '@/lib/present';
+import { formatUtc } from '@/lib/time';
 
 export const dynamicParams = false;
 
@@ -23,16 +24,18 @@ export async function generateMetadata({
   if (!service) return { title: 'Not found' };
   return {
     title: `${service.name.en} — does it work for foreigners?`,
-    description: `Measured facts about ${service.name.en} (${service.name.ko}): access from abroad, interface languages, Korean phone verification at sign-up, and English support. Each value is timestamped and sourced.`,
+    description: `Measured facts about ${service.name.en} (${service.name.ko}): access from abroad, interface languages, Korean phone verification at sign-up, and English support. Every value is timestamped and sourced.`,
   };
 }
 
-const CONFIDENCE_LABEL: Record<string, { en: string; ko: string }> = {
-  auto: { en: 'measured by machine', ko: '자동 측정' },
-  community: { en: 'reported by people', ko: '커뮤니티 제보' },
-  conflicting: { en: 'reports disagree', ko: '제보 엇갈림' },
+const CONFIDENCE: Record<string, Bi> = {
+  auto: { en: 'measured by machine', ko: '기계가 측정' },
+  community: { en: 'reported by people', ko: '사람이 제보' },
+  conflicting: { en: 'reports disagree', ko: '제보가 엇갈림' },
   unknown: { en: 'no value recorded', ko: '값 없음' },
 };
+
+const AWAITING: Bi = { en: 'waiting for a first-hand report', ko: '직접 겪은 제보를 기다리는 중' };
 
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -46,138 +49,155 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     .filter((t): t is string => Boolean(t))
     .sort()
     .at(-1);
+  const cat = CATEGORY_LABELS[service.category] ?? {
+    en: service.category,
+    ko: service.category,
+  };
 
   return (
     <>
-      <section className="detail-head">
+      <section className="record-head">
         <div className="wrap">
-          <p className="crumb">
-            <Link href="/">All services</Link> ·{' '}
-            {CATEGORY_LABELS[service.category]?.en ?? service.category}
+          <p className="breadcrumb">
+            <Link href="/">
+              <T en="All services" ko="전체 서비스" />
+            </Link>
+            {' · '}
+            <T {...cat} />
           </p>
+
           <h1>
             {service.name.en}
-            {service.name.ko !== service.name.en && <span className="ko">{service.name.ko}</span>}
+            {service.name.ko !== service.name.en && <em>{service.name.ko}</em>}
           </h1>
-          <div className="detail-meta">
+
+          <div className="record-meta">
             <span>
               <a href={service.url} rel="nofollow noreferrer" target="_blank">
                 {new URL(service.url).host}
               </a>
             </span>
             <span>
-              {recorded} of {views.length} signals have a value
+              <T
+                en={`${recorded} of ${views.length} signals have a value`}
+                ko={`시그널 ${views.length}종 중 ${recorded}종에 값이 있음`}
+              />
             </span>
             {lastMeasured && (
               <span>
-                last checked <span className="mono">{formatUtc(lastMeasured)}</span> (
-                <RelativeTime iso={lastMeasured} />)
+                <T en="last checked" ko="마지막 확인" />{' '}
+                <span className="mono">{formatUtc(lastMeasured)}</span>{' '}
+                <RelativeTime iso={lastMeasured} />
               </span>
             )}
           </div>
+
           {service.notes?.en && (
-            <div className="notice" style={{ marginTop: 16 }}>
-              {service.notes.en}
-              {service.notes.ko && (
-                <>
-                  <br />
-                  <span style={{ color: 'var(--faint)' }}>{service.notes.ko}</span>
-                </>
-              )}
+            <div className="aside mark" style={{ marginBottom: 0 }}>
+              <T en={service.notes.en} ko={service.notes.ko ?? service.notes.en} />
             </div>
           )}
         </div>
       </section>
 
       <div className="wrap">
-        <div className="signal-list">
+        <div className="signals">
           {views.map((v) => (
-            <SignalBlock key={v.key} v={v} />
+            <Record key={v.key} v={v} />
           ))}
         </div>
 
-        <div className="notice" style={{ margin: '18px 0 48px' }}>
-          <strong>Found something that is wrong?</strong> Every value here is falsifiable on purpose
-          — the raw evidence is printed under each one. Send a correction to{' '}
-          <a href="mailto:kkw5863@gmail.com">kkw5863@gmail.com</a> and it will be fixed with its
-          source recorded.
-          <br />
-          <span style={{ color: 'var(--faint)' }}>
-            사실과 다른 값을 발견하면 알려주세요. 각 값 아래에 원본 근거가 그대로 공개되어 있습니다.
-          </span>
+        <div className="aside" style={{ margin: '30px 0 64px' }}>
+          <h3>
+            <T en="Is something here wrong?" ko="여기 틀린 내용이 있나요?" />
+          </h3>
+          <T
+            en="Every value on this page is meant to be falsifiable — that is why the raw evidence sits underneath each one. If a value does not match what you experienced, say so and it will be corrected with its source recorded."
+            ko="이 페이지의 모든 값은 반증 가능하도록 만들어져 있습니다. 각 값 아래에 원본 근거가 그대로 공개돼 있는 이유입니다. 겪은 것과 다르면 알려주세요. 근거와 함께 정정합니다."
+          />
+          <p style={{ marginTop: 14 }}>
+            <Link className="button ghost" href="/report/">
+              <T en="Send a correction" ko="정정 요청 보내기" />
+            </Link>
+          </p>
         </div>
       </div>
     </>
   );
 }
 
-function SignalBlock({ v }: { v: SignalView }) {
-  const conf = CONFIDENCE_LABEL[v.confidence] ?? CONFIDENCE_LABEL.unknown!;
+function Record({ v }: { v: SignalView }) {
+  const conf = CONFIDENCE[v.confidence] ?? CONFIDENCE.unknown!;
 
   return (
     <article className={`signal t-${v.tone}`}>
-      <div className="signal-top">
-        <div className="signal-q">
-          {v.question.en}
-          <span className="ko">{v.question.ko}</span>
-        </div>
-        <div className="signal-val">
+      <h2 className="signal-q">
+        <T {...v.question} />
+      </h2>
+
+      <p className="signal-a">
+        <T {...v.display} />
+      </p>
+
+      <div className="signal-body">
+        {v.why && (
+          <p className="signal-note">
+            <T {...v.why} />
+          </p>
+        )}
+        {v.caveat && (
+          <p className="signal-note">
+            <T {...v.caveat} />
+          </p>
+        )}
+
+        <div className="stamp">
+          <span className={`tag ${v.awaitingReport ? 'community' : v.confidence}`}>
+            <T {...(v.awaitingReport ? AWAITING : conf)} />
+          </span>
           <span>
-            {v.display.en}
-            <span className="ko" style={{ display: 'block' }}>
-              {v.display.ko}
+            <b>
+              <T en="Method" ko="방법" />
+            </b>
+            <T {...v.methodLabel} />
+          </span>
+          {!v.awaitingReport && (
+            <span>
+              <b>
+                <T en="Measured" ko="측정" />
+              </b>
+              {v.measuredAt ? (
+                <>
+                  <span className="mono">{formatUtc(v.measuredAt)}</span>{' '}
+                  <RelativeTime iso={v.measuredAt} />
+                </>
+              ) : (
+                <T en="never" ko="없음" />
+              )}
             </span>
-          </span>
+          )}
+          {v.lastChangedAt && (
+            <span>
+              <b>
+                <T en="Changed" ko="변경" />
+              </b>
+              <span className="mono">{formatUtc(v.lastChangedAt)}</span>
+            </span>
+          )}
         </div>
-      </div>
 
-      {v.why && (
-        <p className="why">
-          {v.why.en}
-          <span className="ko">{v.why.ko}</span>
-        </p>
-      )}
-
-      {v.caveat && (
-        <p className="why">
-          {v.caveat.en}
-          <span className="ko">{v.caveat.ko}</span>
-        </p>
-      )}
-
-      <div className="provenance">
-        <span className={`badge ${v.awaitingReport ? 'community' : v.confidence}`}>
-          {v.awaitingReport ? 'waiting for a first-hand report' : conf.en}
-        </span>
-        <span>
-          <b>Method</b> {v.methodLabel.en}
-        </span>
-        {!v.awaitingReport && (
-          <span>
-            <b>Measured</b>{' '}
-            {v.measuredAt ? (
-              <>
-                <span className="mono">{formatUtc(v.measuredAt)}</span>{' '}
-                <RelativeTime iso={v.measuredAt} />
-              </>
-            ) : (
-              'never'
-            )}
-          </span>
-        )}
-        {v.lastChangedAt && (
-          <span>
-            <b>Last changed</b> <span className="mono">{formatUtc(v.lastChangedAt)}</span>
-          </span>
+        {v.evidence && Object.keys(v.evidence).length > 0 && (
+          <details className="raw">
+            <summary>
+              <T
+                en="Raw evidence — what the probe actually saw"
+                ko="원본 근거 — 프로브가 실제로 본 것"
+              />
+            </summary>
+            <pre>{JSON.stringify(v.evidence, null, 2)}</pre>
+          </details>
         )}
       </div>
-
-      {v.evidence && Object.keys(v.evidence).length > 0 && (
-        <details className="evidence">
-          <summary>Raw evidence — what the probe actually saw</summary>
-          <pre>{JSON.stringify(v.evidence, null, 2)}</pre>
-        </details>
-      )}
     </article>
   );
 }

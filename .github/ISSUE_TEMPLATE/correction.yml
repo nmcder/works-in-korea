@@ -1,0 +1,70 @@
+name: "✏️ Correction / 정정 요청"
+description: "A value on the site does not match reality / 사이트의 값이 사실과 다릅니다"
+title: "[fix] "
+labels: ["report", "report:correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every value on the site is published with the raw evidence underneath it, precisely so
+        that it can be argued with. If something is wrong, this is the right place.
+
+        사이트의 모든 값은 반박할 수 있도록 원본 근거와 함께 공개돼 있습니다.
+        틀린 것을 발견하셨다면 여기가 맞는 자리입니다.
+
+  - type: input
+    id: page
+    attributes:
+      label: "Which page? / 어느 페이지인가요?"
+      description: "Paste the URL / 주소를 붙여넣어 주세요"
+      placeholder: "https://works-in-korea.vercel.app/service/coupang/"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: signal
+    attributes:
+      label: "Which value? / 어느 값인가요?"
+      options:
+        - "Access from abroad / 해외 접속"
+        - "Interface languages / 인터페이스 언어"
+        - "Korean phone verification at sign-up / 가입 시 본인인증"
+        - "Mobile apps / 모바일 앱"
+        - "Payment gateways / 결제사"
+        - "English customer support / 영어 고객지원"
+        - "Foreign card / 해외 카드"
+        - "SMS to a foreign number / 해외 번호 SMS"
+        - "Service name, URL or category / 서비스 이름·주소·분야"
+        - "Something else / 기타"
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: "What did you actually see? / 실제로 무엇을 보셨나요?"
+      description: >
+        Be concrete. "It says English is available but every page is Korean" is useful.
+        "This is wrong" is not. / 구체적으로 적어 주세요. "영어가 있다고 나오는데 전부 한국어다"는
+        도움이 됩니다. "틀렸다"만으로는 고칠 수 없습니다.
+    validations:
+      required: true
+
+  - type: input
+    id: seen_on
+    attributes:
+      label: "When did you see it? / 언제 보셨나요?"
+      description: "YYYY-MM-DD"
+      placeholder: "2026-08-15"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: "Before you send / 보내기 전에"
+      options:
+        - label: >
+            I have not included my name, contact details, or account information.
+            (이름·연락처·계정 정보를 적지 않았습니다.)
+          required: true
