@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: '/', en: 'Services', ko: '서비스' },
   { href: '/changes/', en: 'Changes', ko: '변경 기록' },
-  { href: '/method/', en: 'Method', ko: '측정 방법' },
+  { href: '/method/', en: 'Method', ko: '확인 방법' },
   { href: '/report/', en: 'Report', ko: '제보' },
   { href: '/api-docs/', en: 'Data', ko: '데이터' },
 ];
@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <T
                 as="p"
                 en="An independent measurement log. No accounts, no advertising, no tracking, nothing for sale."
-                ko="독립 측정 기록. 계정·광고·추적 없음. 파는 것도 없음."
+                ko="직접 확인한 기록. 계정도 광고도 추적도 없고, 파는 것도 없습니다."
               />
             </div>
 

@@ -54,7 +54,7 @@ const FACETS: Facet[] = [
   },
   {
     id: 'blocked',
-    label: { en: 'Refuses automated checks', ko: '자동 확인 거부' },
+    label: { en: 'Blocks automated checks', ko: '자동 확인 막힘' },
     test: (r) => r.blocked !== null,
   },
 ];
@@ -101,7 +101,7 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
             onChange={(e) => setQ(e.target.value)}
             placeholder={
               lang === 'ko'
-                ? '서비스 검색 — 쿠팡, coupang, 코레일, 배달…'
+                ? '서비스 이름으로 찾기 — 쿠팡, coupang, 코레일, 배달…'
                 : 'Search a service — Coupang, 쿠팡, Korail, delivery…'
             }
             aria-label={lang === 'ko' ? '서비스 검색' : 'Search services'}
@@ -146,7 +146,7 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
           <p className="result-line">
             <T
               en={`Showing ${filtered.length} of ${rows.length} services`}
-              ko={`${rows.length}개 중 ${filtered.length}개 표시`}
+              ko={`${rows.length}개 중 ${filtered.length}개`}
             />
             {dirty && (
               <>

@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "976131101",
+    "android_package": "com.croquis.zigzag"
   },
   "signals": {
     "overseas_access": {

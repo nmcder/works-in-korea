@@ -29,13 +29,13 @@ export async function generateMetadata({
 }
 
 const CONFIDENCE: Record<string, Bi> = {
-  auto: { en: 'measured by machine', ko: '기계가 측정' },
-  community: { en: 'reported by people', ko: '사람이 제보' },
+  auto: { en: 'measured by machine', ko: '자동 확인' },
+  community: { en: 'reported by people', ko: '이용자 제보' },
   conflicting: { en: 'reports disagree', ko: '제보가 엇갈림' },
-  unknown: { en: 'no value recorded', ko: '값 없음' },
+  unknown: { en: 'no value recorded', ko: '기록 없음' },
 };
 
-const AWAITING: Bi = { en: 'waiting for a first-hand report', ko: '직접 겪은 제보를 기다리는 중' };
+const AWAITING: Bi = { en: 'waiting for a first-hand report', ko: '제보 기다리는 중' };
 
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -91,8 +91,8 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             </span>
             <span>
               <T
-                en={`${recorded} of ${views.length} signals have a value`}
-                ko={`시그널 ${views.length}종 중 ${recorded}종에 값이 있음`}
+                en={`${recorded} of ${views.length} questions answered`}
+                ko={`${views.length}개 항목 중 ${recorded}개 확인됨`}
               />
             </span>
             {lastMeasured && (
@@ -183,7 +183,7 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
           {!v.awaitingReport && (
             <span>
               <b>
-                <T en="Measured" ko="측정" />
+                <T en="Measured" ko="확인" />
               </b>
               {v.measuredAt ? (
                 <>
@@ -209,8 +209,8 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
           <details className="raw">
             <summary>
               <T
-                en="Raw evidence — what the probe actually saw"
-                ko="원본 근거 — 프로브가 실제로 본 것"
+                en="Raw evidence"
+                ko="수집한 원본 보기"
               />
             </summary>
             <pre>{JSON.stringify(v.evidence, null, 2)}</pre>

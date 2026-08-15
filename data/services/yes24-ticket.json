@@ -13,7 +13,7 @@
     "support_url": "https://ticket.yes24.com/UserGuide/FAQ",
     "english_url": null,
     "ios_app_id": null,
-    "android_package": null
+    "android_package": "com.yes24.ticket"
   },
   "signals": {
     "overseas_access": {

@@ -10,10 +10,10 @@
   "hints": {
     "signup_url": "https://global.oliveyoung.com/member/join?prePage=/",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1466755724",
+    "android_package": "com.cafe24.ec.pluseoliveyoung"
   },
   "signals": {
     "overseas_access": {

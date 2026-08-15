@@ -10,10 +10,10 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://enterprise.travel-wallet.com/home",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1460769945",
+    "android_package": "com.mobiletoong.travelwallet"
   },
   "signals": {
     "overseas_access": {

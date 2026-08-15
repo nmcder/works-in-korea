@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-08-15T08:03:28.997Z",
+  "services": [
+    {
+      "id": "aladin",
+      "name": "알라딘",
+      "signup_url": [
+        {
+          "value": "https://www.aladin.co.kr/account/waccount_makenew.aspx",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /account/"
+        }
+      ]
+    },
+    {
+      "id": "amc",
+      "name": "서울아산병원",
+      "signup_url": [
+        {
+          "value": "https://www.amc.seoul.kr/asan/member/join/intro.do",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 5개"
+        }
+      ]
+    },
+    {
+      "id": "cgv",
+      "name": "CGV",
+      "blocked": "사이트가 크롤러를 거부 (403/429)"
+    },
+    {
+      "id": "chingu-mobile",
+      "name": "친구모바일",
+      "signup_url": [
+        {
+          "value": "https://chingumobile.com/index/signup",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 15개"
+        }
+      ]
+    },
+    {
+      "id": "danawa",
+      "name": "다나와",
+      "signup_url": [
+        {
+          "value": "https://auth.danawa.com/joinStep1",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "daum",
+      "name": "다음",
+      "signup_url": [
+        {
+          "value": "https://logins.daum.net/accounts/oauth/join",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /"
+        },
+        {
+          "value": "https://register.search.daum.net/index.daum",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=login"
+        }
+      ]
+    },
+    {
+      "id": "ddocdoc",
+      "name": "똑닥",
+      "signup_url": [
+        {
+          "value": "https://hospital.ddocdoc.com/register?utm_source=ddocdoc-com&amp;utm_medium=bottom-list&amp;utm_campaign=etc",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=signup, 입력란 5개"
+        }
+      ]
+    },
+    {
+      "id": "hira",
+      "name": "건강보험심사평가원",
+      "signup_url": [
+        {
+          "value": "about:blank",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=unknown"
+        },
+        {
+          "value": "about:blank",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=unknown"
+        }
+      ]
+    },
+    {
+      "id": "kakaopay",
+      "name": "카카오페이",
+      "signup_url": [
+        {
+          "value": "https://www.kakaopay.com/services/life/membership",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=unknown"
+        }
+      ]
+    },
+    {
+      "id": "ktmmobile",
+      "name": "KT엠모바일",
+      "signup_url": [
+        {
+          "value": "https://www.ktmmobile.com/appForm/withoutUsim.do",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 2개"
+        }
+      ]
+    },
+    {
+      "id": "kurly",
+      "name": "마켓컬리",
+      "signup_url": [
+        {
+          "value": "https://event.kurly.com/lego/event/2023/0911/join/coupon#lc112b1",
+          "verdict": "weak",
+          "why": "가입 표시는 있으나 입력란 1개 — 안내 페이지로 보임"
+        },
+        {
+          "value": "https://event.kurly.com/lego/event/2023/0911/join/coupon",
+          "verdict": "weak",
+          "why": "가입 표시는 있으나 입력란 1개 — 안내 페이지로 보임"
+        }
+      ]
+    },
+    {
+      "id": "kyobo",
+      "name": "교보문고",
+      "signup_url": [
+        {
+          "value": "https://mmbr.kyobobook.co.kr/join",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "megabox",
+      "name": "메가박스",
+      "blocked": "robots.txt 가 크롤러를 금지"
+    },
+    {
+      "id": "national-museum",
+      "name": "국립중앙박물관",
+      "signup_url": [
+        {
+          "value": "https://www.museum.go.kr/MUSEUM/contents/membership.do",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 3개"
+        },
+        {
+          "value": "https://www.museum.go.kr/MUSEUM/main/membership.do?schM=guide",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=unknown"
+        }
+      ]
+    },
+    {
+      "id": "naverpay",
+      "name": "네이버페이",
+      "signup_url": [
+        {
+          "value": "https://nid.naver.com/account/signup?lang=ko_KR&realname=N&rurl=http%3A%2F%2Fpay.naver.com%2Fpc%2Fhistory",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /"
+        }
+      ]
+    },
+    {
+      "id": "ntok",
+      "name": "국립극장",
+      "signup_url": [
+        {
+          "value": "https://www.ntok.go.kr/ntok/sb/sbscrb/insertSbscrbInfo01.do?sbscrbCtx=ntok",
+          "verdict": "weak",
+          "why": "가입 표시는 있으나 입력란 1개 — 안내 페이지로 보임"
+        }
+      ]
+    },
+    {
+      "id": "payco",
+      "name": "페이코",
+      "signup_url": [
+        {
+          "value": "https://membership.payco.com/",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 5개"
+        }
+      ]
+    },
+    {
+      "id": "ridibooks",
+      "name": "리디북스",
+      "signup_url": [
+        {
+          "value": "https://ridibooks.com/account/login",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /account/"
+        }
+      ]
+    },
+    {
+      "id": "sac",
+      "name": "예술의전당",
+      "signup_url": [
+        {
+          "value": "https://www.sac.or.kr/site/main/membership/member_step_membership",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 38개"
+        },
+        {
+          "value": "https://www.sac.or.kr/site/main/membership/login",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 4개"
+        },
+        {
+          "value": "https://www.sac.or.kr/site/main/membership/member_step",
+          "verdict": "weak",
+          "why": "가입 표시는 있으나 입력란 1개 — 안내 페이지로 보임"
+        }
+      ]
+    },
+    {
+      "id": "samsung-hospital",
+      "name": "삼성서울병원",
+      "signup_url": [
+        {
+          "value": "https://www.samsunghospital.com/home/create/createAccount.do",
+          "verdict": "weak",
+          "why": "가입 표시는 있으나 입력란 0개 — 안내 페이지로 보임"
+        }
+      ]
+    },
+    {
+      "id": "severance",
+      "name": "세브란스병원",
+      "signup_url": [
+        {
+          "value": "https://sev.severance.healthcare/member/join.do",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /member/"
+        }
+      ]
+    },
+    {
+      "id": "sk7mobile",
+      "name": "SK세븐모바일",
+      "signup_url": [
+        {
+          "value": "https://www.sk7mobile.com/mmbr/join/memberJoinAgree.do?refer=pcutil",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /mmbr/"
+        },
+        {
+          "value": "https://www.sk7mobile.com/cust/post/joinInfo.do",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /cust/"
+        }
+      ]
+    },
+    {
+      "id": "starbucks-kr",
+      "name": "스타벅스 코리아",
+      "signup_url": [
+        {
+          "value": "https://www.starbucks.co.kr/mem/join1.do",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 8개"
+        },
+        {
+          "value": "https://www.starbucks.co.kr/mem/join1.do",
+          "verdict": "verified",
+          "why": "가입 양식 확인 — page_kind=combined, 입력란 8개"
+        }
+      ]
+    },
+    {
+      "id": "tada",
+      "name": "타다",
+      "signup_url": [
+        {
+          "value": "https://web-rider-external-ride-request.tadatada.com/main?entryPoint=tada_home_page",
+          "verdict": "rejected",
+          "why": "가입 표시 없음 — page_kind=unknown"
+        }
+      ]
+    },
+    {
+      "id": "tmoney",
+      "name": "티머니",
+      "blocked": "해외에서 robots.txt 를 읽지 못함"
+    },
+    {
+      "id": "yes24",
+      "name": "예스24",
+      "signup_url": [
+        {
+          "value": "https://www.yes24.com/Member/Join/Accept.aspx",
+          "verdict": "rejected",
+          "why": "차단 — robots: Disallow: /Member/"
+        }
+      ]
+    }
+  ]
+}

@@ -34,6 +34,7 @@ site/             the public site (Next.js static export)
 | `npm run validate` | check data against the schema |
 | `npm run seed` | sync `data/seeds` into `data/services` after editing the list |
 | `npm run hints` | regenerate [docs/05-hints-todo.md](docs/05-hints-todo.md) |
+| `npm run find-hints` | look for missing sign-up URLs, help pages and app IDs |
 | `npm run ingest -- --reapply` | re-aggregate stored community reports |
 
 Partial runs: `npm run probe -- --only=coupang,toss` or `--limit=5 --dry-run`.
@@ -43,6 +44,16 @@ Site: `cd site && npm install && npm run dev`.
 ## Adding or fixing a service
 
 Edit [`data/seeds/services.seed.json`](data/seeds/services.seed.json), run `npm run seed`, commit.
+
+`npm run find-hints` fills most of this in for you. It never guesses: a sign-up URL is
+only written after the page has been opened and found to contain a real form, and an app ID
+only when the service links to the store itself or the bundle ID matches exactly. Anything
+weaker lands in [docs/06-hint-candidates.md](docs/06-hint-candidates.md) for a human to pick.
+Add `--apply` to write the confirmed ones into the seed.
+
+It cannot search the App Store by name — Apple's robots.txt disallows `/search*` while
+allowing `/lookup?`, and this project obeys robots.txt. Services that also block our crawler
+therefore need their app IDs entered by hand.
 
 `hints` improve accuracy and are optional:
 

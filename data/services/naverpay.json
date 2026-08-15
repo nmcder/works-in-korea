@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
     "english_url": null,
     "ios_app_id": null,
     "android_package": null

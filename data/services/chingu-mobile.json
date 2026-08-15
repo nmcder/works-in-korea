@@ -8,9 +8,9 @@
   "category": "telecom",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://chingumobile.com/index/signup",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://chingumobile.com/faq",
     "english_url": null,
     "ios_app_id": null,
     "android_package": null

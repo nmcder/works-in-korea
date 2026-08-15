@@ -57,8 +57,8 @@ export default async function ChangesPage() {
           </h1>
           <TBlock
             className="standfirst"
-            en={`Korean services add an English page, drop it again, or start demanding phone verification — usually without announcing any of it. Every time a measured value moves, the date lands here along with where that run measured from. ${total} recorded so far.`}
-            ko={`한국 서비스는 영어 페이지를 조용히 열고 조용히 닫습니다. 측정값이 움직인 날은 어디서 잰 것인지와 함께 전부 여기 남습니다. 지금까지 ${total}건.`}
+            en={`Korean services add an English page, drop it again, or start demanding phone verification, usually without announcing it. Every time a value moves, the date lands here with the place it was checked from. ${total} so far.`}
+            ko={`한국 서비스는 영어 페이지를 조용히 열고 조용히 닫습니다. 값이 바뀐 날은 어디서 확인한 것인지와 함께 여기 남습니다. 지금까지 ${total}건.`}
           />
         </div>
       </section>
@@ -67,21 +67,21 @@ export default async function ChangesPage() {
         <div className="aside warn">
           <h3>
             <T
-              en="A change here means our measurement moved."
-              ko="여기의 변경은 우리 측정값이 움직였다는 뜻입니다."
+              en="A change here means the measurement moved."
+              ko="여기 적힌 변경은 확인한 값이 달라졌다는 뜻입니다."
             />
           </h3>
           <T
-            en="It is not proof that the company changed anything. Two things move a value with nobody touching the site: we measured from a different country, or a page that assembles itself in the browser rendered differently between two visits. Where the measuring location moved, this page says so above the affected batch."
-            ko="회사가 무언가를 바꿨다는 증명이 아닙니다. 아무도 사이트를 건드리지 않아도 값이 움직이는 경우가 둘 있습니다. 측정 국가가 바뀌었거나, 브라우저에서 조립되는 페이지가 방문마다 다르게 그려졌거나. 측정 지점이 옮겨간 구간에는 아래에 그 사실을 표시합니다."
+            en="It is not proof that the company changed anything. Two things move a value with nobody touching the site: the check ran from a different country, or a page that assembles itself in the browser rendered differently between two visits. Where the location moved, this page says so above the affected batch."
+            ko="회사가 뭔가를 바꿨다는 증명은 아닙니다. 아무도 사이트를 건드리지 않아도 값이 달라지는 경우가 둘 있습니다. 확인한 나라가 바뀌었거나, 브라우저에서 조립되는 페이지가 들어갈 때마다 다르게 그려졌거나. 확인한 곳이 옮겨간 구간에는 아래에 표시해 뒀습니다."
           />
         </div>
 
         {days.length === 0 ? (
           <p className="nothing">
             <T
-              en="Nothing has changed yet — measurement started recently."
-              ko="아직 변경 기록이 없습니다. 측정을 막 시작했습니다."
+              en="Nothing has changed yet. Measurement started recently."
+              ko="아직 변경 기록이 없습니다. 확인을 막 시작했습니다."
             />
           </p>
         ) : (
@@ -92,7 +92,7 @@ export default async function ChangesPage() {
                 <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
                   <T
                     en={`${day.changes.length} value${day.changes.length === 1 ? '' : 's'} moved`}
-                    ko={`값 ${day.changes.length}건 변경`}
+                    ko={`${day.changes.length}건 바뀜`}
                   />
                 </p>
 
@@ -104,7 +104,7 @@ export default async function ChangesPage() {
                         <p className="run-label">
                           <T
                             en={`measured from ${label} · ${group.changes.length} change${group.changes.length === 1 ? '' : 's'}`}
-                            ko={`측정 지점 ${label} · ${group.changes.length}건`}
+                            ko={`${label} 에서 확인 · ${group.changes.length}건`}
                           />
                         </p>
                       )}
@@ -112,8 +112,8 @@ export default async function ChangesPage() {
                       {moved.has(group.at) && (
                         <div className="aside warn" style={{ margin: '0 0 14px' }}>
                           <T
-                            en="We measured from a different country than the run before this one. The values below may have moved for that reason alone — reading them as “these services changed something” would be wrong."
-                            ko="직전 실행과 측정 국가가 다릅니다. 아래 변경은 서비스가 바뀐 것이 아니라 측정 지점이 옮겨간 결과일 수 있습니다."
+                            en="This ran from a different country than the check before it. The values below may have moved for that reason alone, so reading them as “these services changed something” would be wrong."
+                            ko="직전 확인과 나라가 다릅니다. 아래 변경은 서비스가 바뀐 게 아니라 확인한 곳이 옮겨간 결과일 수 있습니다."
                           />
                         </div>
                       )}

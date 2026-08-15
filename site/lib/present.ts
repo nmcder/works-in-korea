@@ -134,12 +134,12 @@ const SIGNAL_META: Record<SignalKey, { label: Bi; question: Bi }> = {
   app_availability: {
     label: { en: 'Mobile apps', ko: '모바일 앱' },
     question: {
-      en: 'Is there an app you can download?',
-      ko: '내려받을 수 있는 앱이 있나요?',
+      en: 'Is there an app?',
+      ko: '앱이 있나요?',
     },
   },
   payment_gate: {
-    label: { en: 'Payment gateways seen', ko: '탐지된 결제사' },
+    label: { en: 'Payment services', ko: '결제사' },
     question: {
       en: 'Which payment services does it use?',
       ko: '어떤 결제사를 쓰나요?',
@@ -234,14 +234,14 @@ function methodLabel(key: SignalKey, method: string, confidence: Confidence): Bi
   }
   if (method === 'community') {
     return confidence === 'conflicting'
-      ? { en: 'Community reports (conflicting)', ko: '커뮤니티 제보 (엇갈림)' }
-      : { en: 'Community report', ko: '커뮤니티 제보' };
+      ? { en: 'Community reports (conflicting)', ko: '이용자 제보 (엇갈림)' }
+      : { en: 'Community report', ko: '이용자 제보' };
   }
   if (method === 'manual') return { en: 'Checked by hand', ko: '수동 확인' };
   if (COMMUNITY_KEYS.includes(key)) {
-    return { en: 'Community reports only — by design', ko: '커뮤니티 제보 전용 — 의도된 설계' };
+    return { en: 'Community reports only, by design', ko: '제보로만 채우는 항목' };
   }
-  return { en: 'Not measured', ko: '측정 안 함' };
+  return { en: 'Not measured', ko: '확인 안 함' };
 }
 
 /**
@@ -255,14 +255,14 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
     return {
       kind: 'community-only',
       en: 'Nobody has reported trying yet. Confirming this means putting a real card through a real checkout, which we do not automate.',
-      ko: '아직 시도했다는 제보가 없습니다. 확인하려면 실제 카드로 실제 결제를 해야 하는데, 그것은 자동화하지 않습니다.',
+      ko: '아직 해봤다는 제보가 없습니다. 실제 카드로 결제를 눌러봐야 알 수 있어서 자동으로 확인하지 않습니다.',
     };
   }
   if (key === 'foreign_phone_sms') {
     return {
       kind: 'community-only',
       en: 'Nobody has reported trying yet. Confirming this means requesting a real verification text to a real foreign number, which we do not automate.',
-      ko: '아직 시도했다는 제보가 없습니다. 확인하려면 실제 해외 번호로 인증 문자를 요청해야 하는데, 그것은 자동화하지 않습니다.',
+      ko: '아직 해봤다는 제보가 없습니다. 실제 해외 번호로 인증 문자를 받아봐야 알 수 있어서 자동으로 확인하지 않습니다.',
     };
   }
 
@@ -290,31 +290,31 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
       return {
         kind: 'robots',
         en: 'The site’s robots.txt tells crawlers to stay away from this path, and we obey it. Only a person can answer this one.',
-        ko: '이 사이트의 robots.txt가 이 경로에 크롤러 접근을 막고 있고, 우리는 그것을 지킵니다. 사람만 답할 수 있는 항목입니다.',
+        ko: '이 사이트가 robots.txt로 자동 접근을 막아 뒀습니다. 규칙대로 열지 않았습니다. 직접 써 본 사람만 답할 수 있습니다.',
       };
     case 'bot-block':
       return {
         kind: 'bot-block',
         en: 'The site refused our crawler (HTTP 403/429) instead of serving the page. Bot filtering and country blocking look identical from outside, so we claim neither.',
-        ko: '사이트가 페이지 대신 거부 응답(HTTP 403·429)을 돌려줬습니다. 바깥에서는 봇 차단과 지역 차단이 같아 보여 어느 쪽도 단정하지 않습니다.',
+        ko: '페이지 대신 거부 응답(HTTP 403·429)이 돌아왔습니다. 밖에서 보면 봇 차단과 해외 차단이 똑같이 보여서 어느 쪽인지 단정하지 않습니다.',
       };
     case 'unreachable':
       return {
         kind: 'unreachable',
         en: 'The server never answered from outside Korea — the connection timed out. Deliberate blocking and a transient fault look the same from here.',
-        ko: '한국 밖에서 보낸 요청에 서버가 끝내 응답하지 않았습니다(연결 시간 초과). 의도적 차단인지 일시적 장애인지는 여기서 구분되지 않습니다.',
+        ko: '한국 밖에서 보낸 요청에 서버가 끝내 답하지 않았습니다. 일부러 막은 것인지 그때만 안 된 것인지는 여기서 구분되지 않습니다.',
       };
     case 'tls':
       return {
         kind: 'tls',
         en: 'The certificate chain could not be verified from here, so the connection was dropped before any page arrived. We do not switch certificate checking off to get a reading.',
-        ko: '인증서 체인을 검증하지 못해 페이지가 오기 전에 연결이 끊겼습니다. 값을 얻자고 인증서 검사를 끄지는 않습니다.',
+        ko: '인증서를 검증하지 못해 페이지가 오기 전에 연결이 끊겼습니다. 값을 얻자고 인증서 검사를 끄지는 않습니다.',
       };
     case 'robots-unreadable':
       return {
         kind: 'robots-unreadable',
         en: 'We could not read the site’s robots.txt, and we do not crawl a site whose rules we have not read.',
-        ko: 'robots.txt를 읽지 못했습니다. 규칙을 확인하지 못한 사이트는 크롤링하지 않습니다.',
+        ko: 'robots.txt를 읽지 못했습니다. 규칙을 모르는 사이트는 열지 않습니다.',
       };
     case null:
       break;
@@ -323,49 +323,49 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
     return {
       kind: 'no-app-id',
       en: 'We do not know this service’s App Store / Google Play identifier yet.',
-      ko: '이 서비스의 App Store·Google Play 식별자를 아직 모릅니다.',
+      ko: '이 서비스의 앱 ID를 아직 못 찾았습니다.',
     };
   }
   if (blob.includes('가입 페이지를 찾지 못함')) {
     return {
       kind: 'no-url',
       en: 'We have not found this service’s sign-up page yet. Common paths were tried; none was one.',
-      ko: '이 서비스의 가입 페이지 주소를 아직 찾지 못했습니다. 흔한 경로를 눌러봤지만 없었습니다.',
+      ko: '가입 페이지 주소를 아직 못 찾았습니다. 흔히 쓰는 경로를 눌러봤지만 없었습니다.',
     };
   }
   if (blob.includes('고객지원 페이지를 찾지 못함')) {
     return {
       kind: 'no-url',
       en: 'We have not found this service’s help centre page yet.',
-      ko: '이 서비스의 고객센터 주소를 아직 찾지 못했습니다.',
+      ko: '고객센터 주소를 아직 못 찾았습니다.',
     };
   }
   if (blob.includes('로그인 화면으로 보임')) {
     return {
       kind: 'inconclusive',
       en: 'The page we reached is a log-in screen, not a sign-up flow.',
-      ko: '도달한 페이지가 가입 절차가 아니라 로그인 화면입니다.',
+      ko: '열린 페이지가 가입이 아니라 로그인 화면이었습니다.',
     };
   }
   if (blob.includes('가입 양식을 확인하지 못함')) {
     return {
       kind: 'inconclusive',
       en: 'The page we reached reads as an information page, not a form with fields to fill in.',
-      ko: '도달한 페이지가 채울 입력란이 있는 양식이 아니라 안내 문서로 보입니다.',
+      ko: '열린 페이지에 입력란이 없습니다. 가입 양식이 아니라 안내 문서로 보입니다.',
     };
   }
   if (blob.includes('정상 응답을 받은 페이지가 없어')) {
     return {
       kind: 'bot-block',
       en: 'No page returned a usable response, so there was nothing to scan.',
-      ko: '정상 응답을 받은 페이지가 없어 스캔할 대상이 없었습니다.',
+      ko: '어느 페이지도 정상 응답을 주지 않아 확인할 대상이 없었습니다.',
     };
   }
   if (key === 'support_en') {
     return {
       kind: 'inconclusive',
       en: 'Nothing on the pages we could read states this either way.',
-      ko: '읽을 수 있었던 페이지에 이에 대한 명시가 없습니다.',
+      ko: '읽을 수 있는 페이지에 관련 안내가 없었습니다.',
     };
   }
   return {
@@ -381,8 +381,8 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
 
   switch (key) {
     case 'overseas_access': {
-      if (v === 'ok') return { display: { en: 'Yes', ko: '열림' }, tone: 'open' };
-      if (v === 'blocked') return { display: { en: 'Blocked', ko: '차단됨' }, tone: 'barrier' };
+      if (v === 'ok') return { display: { en: 'Yes', ko: '됨' }, tone: 'open' };
+      if (v === 'blocked') return { display: { en: 'Blocked', ko: '막힘' }, tone: 'barrier' };
       if (v === 'degraded') return { display: { en: 'Partly', ko: '일부만' }, tone: 'mixed' };
       return null;
     }
@@ -405,9 +405,9 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
       if (v === 'required')
         return { display: { en: 'Korean phone needed', ko: '한국 휴대폰 필요' }, tone: 'barrier' };
       if (v === 'optional')
-        return { display: { en: 'Optional', ko: '선택 사항' }, tone: 'mixed' };
+        return { display: { en: 'Optional', ko: '선택' }, tone: 'mixed' };
       if (v === 'not_required')
-        return { display: { en: 'Not on the form', ko: '양식에 없음' }, tone: 'open' };
+        return { display: { en: 'Not required', ko: '필요 없음' }, tone: 'open' };
       return null;
     }
     case 'app_availability': {
@@ -432,7 +432,7 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
         return {
           display: {
             en: 'None found',
-            ko: '탐지 안 됨',
+            ko: '확인된 것 없음',
           },
           tone: 'info',
         };
@@ -446,8 +446,8 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
       };
     }
     case 'support_en': {
-      if (v === 'yes') return { display: { en: 'Offered', ko: '제공' }, tone: 'open' };
-      if (v === 'no') return { display: { en: 'Not offered', ko: '제공 안 함' }, tone: 'barrier' };
+      if (v === 'yes') return { display: { en: 'Yes', ko: '있음' }, tone: 'open' };
+      if (v === 'no') return { display: { en: 'No', ko: '없음' }, tone: 'barrier' };
       return null;
     }
     case 'foreign_card':
@@ -478,14 +478,14 @@ function caveatFor(key: SignalKey, sig: Signal): Bi | null {
     if (p && p.gateways.length === 0) {
       return {
         en: 'Public pages only — most checkouts sit behind a login. Not a claim that the service has no gateway.',
-        ko: '로그인 없이 열리는 페이지 기준입니다. 결제 화면은 대개 로그인 뒤에 있어, 결제사가 없다는 뜻이 아닙니다.',
+        ko: '로그인 없이 열리는 페이지만 본 결과입니다. 결제 화면은 대개 로그인 뒤에 있어서, 결제사가 없다는 뜻은 아닙니다.',
       };
     }
   }
   if (key === 'signup_phone_auth' && sig.value === 'not_required') {
     return {
       en: 'We read the form but never submit it. A check that appears only after submitting would not be visible.',
-      ko: '양식을 읽기만 하고 제출하지 않습니다. 제출 뒤에 나타나는 인증은 보이지 않습니다.',
+      ko: '양식을 읽기만 하고 제출은 하지 않습니다. 제출한 뒤에 뜨는 인증은 확인할 수 없습니다.',
     };
   }
   return null;
@@ -500,7 +500,7 @@ export function viewSignal(service: Service, key: SignalKey): SignalView {
     key,
     label: meta.label,
     question: meta.question,
-    display: formatted?.display ?? { en: 'Not measured', ko: '측정 안 됨' },
+    display: formatted?.display ?? { en: 'Not measured', ko: '아직 확인 못 함' },
     tone: formatted?.tone ?? 'none',
     measuredAt: sig.measured_at ?? null,
     lastChangedAt: sig.last_changed_at ?? null,

@@ -10,9 +10,9 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://gmoneytrans.com/supported-countries/",
     "english_url": null,
-    "ios_app_id": null,
+    "ios_app_id": "1218137289",
     "android_package": null
   },
   "signals": {

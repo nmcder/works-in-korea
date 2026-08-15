@@ -10,10 +10,10 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://ridihelp.ridibooks.com/support/home",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "338813698",
+    "android_package": "com.initialcoms.ridi"
   },
   "signals": {
     "overseas_access": {

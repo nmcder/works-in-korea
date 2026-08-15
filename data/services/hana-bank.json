@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1362508015",
+    "android_package": "com.kebhana.hanapush"
   },
   "signals": {
     "overseas_access": {

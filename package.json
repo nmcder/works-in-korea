@@ -18,7 +18,8 @@
     "check-urls": "tsx src/check-urls.ts",
     "discover": "tsx src/discover-support.ts",
     "inspect": "tsx src/inspect-page.ts",
-    "ingest": "tsx src/ingest-report.ts"
+    "ingest": "tsx src/ingest-report.ts",
+    "find-hints": "tsx src/discover-hints.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

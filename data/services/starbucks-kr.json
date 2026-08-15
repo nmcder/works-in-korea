@@ -8,12 +8,12 @@
   "category": "delivery",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.starbucks.co.kr/mem/join1.do",
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "466682252",
+    "android_package": "com.starbucks.co"
   },
   "signals": {
     "overseas_access": {

@@ -10,10 +10,10 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "839333328",
+    "android_package": "viva.republica.toss"
   },
   "signals": {
     "overseas_access": {

@@ -10,9 +10,9 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://daangn.com/wv/faqs",
     "english_url": null,
-    "ios_app_id": null,
+    "ios_app_id": "1018769995",
     "android_package": "com.towneers.www"
   },
   "signals": {

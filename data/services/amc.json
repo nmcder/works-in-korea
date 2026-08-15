@@ -8,9 +8,9 @@
   "category": "healthcare",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.amc.seoul.kr/asan/member/join/intro.do",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
     "english_url": null,
     "ios_app_id": null,
     "android_package": null

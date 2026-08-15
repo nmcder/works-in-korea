@@ -10,9 +10,9 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.wirebarley.com/ko/support/home",
     "english_url": null,
-    "ios_app_id": null,
+    "ios_app_id": "1250275816",
     "android_package": null
   },
   "signals": {

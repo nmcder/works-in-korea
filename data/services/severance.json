@@ -10,10 +10,10 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://sev.severance.healthcare/sev/patient-carer/appointment/checkup/faq.do",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1291198838",
+    "android_package": "com.dbs.mcare.severance"
   },
   "signals": {
     "overseas_access": {

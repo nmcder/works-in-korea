@@ -10,9 +10,9 @@
   "hints": {
     "signup_url": "https://accounts.yanolja.com/v3/login",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://ad.yanolja.com/intro",
     "english_url": null,
-    "ios_app_id": null,
+    "ios_app_id": "436731843",
     "android_package": "com.yanolja.repo"
   },
   "signals": {

@@ -39,7 +39,7 @@ export default async function HomePage() {
       signals: HEADLINE_KEYS.map((k) => viewSignal(s, k)).map((v) => ({
         key: v.key,
         short: SHORT[v.key] ?? v.label,
-        value: v.tone === 'none' ? { en: 'Not checked', ko: '확인 안 됨' } : v.display,
+        value: v.tone === 'none' ? { en: 'Not checked yet', ko: '아직 확인 못 함' } : v.display,
         tone: v.tone,
       })),
       haystack: [s.name.en, s.name.ko, s.id, s.category, s.url].join(' ').toLowerCase(),
@@ -64,14 +64,14 @@ export default async function HomePage() {
           <h1>
             <T
               en="Will this Korean site work for you?"
-              ko="이 한국 사이트, 당신에게 작동할까요?"
+              ko="이 한국 서비스, 외국인도 쓸 수 있나요?"
             />
           </h1>
 
           <TBlock
             className="standfirst"
             en={`Checked every day from outside Korea: can you open it, what languages it offers, and whether signing up needs a Korean phone number. ${services.length} services.`}
-            ko={`한국 밖에서 매일 확인합니다. 접속이 되는지, 어떤 언어를 쓸 수 있는지, 가입에 한국 휴대폰이 필요한지. 서비스 ${services.length}개.`}
+            ko={`서비스 ${services.length}개를 한국 밖에서 매일 확인합니다. 접속이 되는지, 어떤 언어를 쓸 수 있는지, 가입할 때 한국 휴대폰이 필요한지.`}
           />
 
           <div className="figures">
@@ -95,7 +95,7 @@ export default async function HomePage() {
               <span>
                 <T
                   en={`checked from${run?.vantage_point.region ? ` ${run.vantage_point.region}` : ''}`}
-                  ko={`측정한 곳${run?.vantage_point.region ? ` · ${run.vantage_point.region}` : ''}`}
+                  ko={`확인한 곳${run?.vantage_point.region ? ` · ${run.vantage_point.region}` : ''}`}
                 />
               </span>
             </div>
@@ -117,14 +117,14 @@ export default async function HomePage() {
           />
           <p>
             <Link className="button" href="/report/">
-              <T en="Tell us what happened" ko="겪은 일 알려주기" />
+              <T en="Tell us what happened" ko="겪은 일 제보하기" />
             </Link>
           </p>
 
           <p style={{ marginTop: 26, fontSize: 14, color: 'var(--ink-3)' }}>
             <T
               en={`${blocked.length} of the ${services.length} sites refuse automated checks, so those rows stay empty until someone reports.`}
-              ko={`${services.length}개 중 ${blocked.length}개는 자동 확인을 거부해서, 제보가 올 때까지 비어 있습니다.`}
+              ko={`${services.length}개 중 ${blocked.length}개는 자동 확인을 막아 둬서, 제보가 올 때까지 비어 있습니다.`}
             />{' '}
             <Link href="/method/" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
               <T en="How we check" ko="확인 방법" />

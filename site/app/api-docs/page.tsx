@@ -23,8 +23,8 @@ export default async function DataPage() {
           </h1>
           <TBlock
             className="standfirst"
-            en={`Everything on this site is a static JSON file you can fetch. No key, no sign-up, no rate limit — ${SITE.license.name}, just credit the source. If you are building something for people arriving in Korea, take it.`}
-            ko={`이 사이트의 모든 데이터는 그냥 내려받을 수 있는 JSON 파일입니다. 키도 가입도 요청 제한도 없습니다. ${SITE.license.name} — 출처만 밝히면 됩니다. 한국에 오는 사람을 위한 무언가를 만들고 있다면 그냥 쓰세요.`}
+            en={`All of it is a static JSON file you can fetch. No key, no sign-up, no rate limit. ${SITE.license.name}, just credit the source.`}
+            ko={`전부 그냥 내려받을 수 있는 JSON 파일입니다. 키도 가입도 요청 제한도 없습니다. ${SITE.license.name}, 출처만 밝히면 됩니다.`}
           />
         </div>
       </section>
@@ -42,8 +42,8 @@ export default async function DataPage() {
                 </td>
                 <td>
                   <T
-                    en={`All ${services.length} services with all 8 signals — about ${recorded} recorded values.`}
-                    ko={`${services.length}개 서비스 전체와 시그널 8종. 기록된 값 약 ${recorded}개.`}
+                    en={`All ${services.length} services, all 8 questions. About ${recorded} recorded values.`}
+                    ko={`서비스 ${services.length}개 전체, 항목 8종. 기록된 값 약 ${recorded}개.`}
                   />
                 </td>
               </tr>
@@ -66,8 +66,8 @@ export default async function DataPage() {
                 </td>
                 <td>
                   <T
-                    en="Every value that has moved, grouped by date, newest first — each with the vantage point of the run that saw it."
-                    ko="움직인 값 전체를 날짜별로, 최신 순으로. 각 항목에 그것을 관측한 실행의 측정 지점이 붙어 있습니다."
+                    en="Every value that has moved, newest first, each with the place it was checked from."
+                    ko="바뀐 값 전체를 날짜별 최신순으로. 각 항목에 어디서 확인한 것인지가 붙어 있습니다."
                   />
                 </td>
               </tr>
@@ -77,8 +77,8 @@ export default async function DataPage() {
                 </td>
                 <td>
                   <T
-                    en="Dataset size, licence, and the last measurement run including where it ran from."
-                    ko="데이터셋 크기, 라이선스, 마지막 측정 실행 정보(측정 지점 포함)."
+                    en="Dataset size, licence, and the last run including where it ran from."
+                    ko="데이터 규모, 라이선스, 마지막 확인 정보(확인한 곳 포함)."
                   />
                 </td>
               </tr>
@@ -86,11 +86,11 @@ export default async function DataPage() {
           </table>
 
           <h2>
-            <T en="The shape of a signal" ko="시그널의 모양" />
+            <T en="The shape of a value" ko="값의 생김새" />
           </h2>
           <TBlock
-            en="All eight signals on every service share this envelope. The value is never alone."
-            ko="모든 서비스의 시그널 여덟 개가 같은 봉투를 씁니다. 값이 혼자 다니는 일은 없습니다."
+            en="All eight questions use the same shape. A value never travels alone."
+            ko="여덟 개 항목이 전부 같은 형태입니다. 값만 따로 있는 경우는 없습니다."
           />
           <pre>{`"signup_phone_auth": {
   "value": "required",
@@ -103,7 +103,7 @@ export default async function DataPage() {
 }`}</pre>
 
           <h2>
-            <T en="Three things to get right" ko="꼭 지켜야 할 세 가지" />
+            <T en="Three things to get right" ko="이것만은 지켜주세요" />
           </h2>
 
           <Only lang="en">
@@ -112,16 +112,15 @@ export default async function DataPage() {
                 <strong>
                   <code>confidence: &quot;unknown&quot;</code> is not a negative result.
                 </strong>{' '}
-                It means we did not measure it. The <code>evidence</code> object says why — robots.txt,
-                a refusal, no answer at all, an unknown URL, or evidence too weak to record. Rendering
-                it as &ldquo;no&rdquo; turns our honesty into your misinformation.
+                It means it was not measured. The <code>evidence</code> object says why: robots.txt, a
+                refusal, no answer at all, an unknown URL, or evidence too weak to record. Rendering it
+                as &ldquo;no&rdquo; turns a recorded gap into a false claim.
               </li>
               <li>
                 <strong>
                   Show <code>measured_at</code> wherever you show a value.
                 </strong>{' '}
-                A fact about a Korean sign-up flow has a shelf life. The timestamp is the part that
-                makes it usable.
+                Korean sign-up flows change often. Without the date a value is not usable.
               </li>
               <li>
                 <strong>An empty gateway list does not mean you cannot pay.</strong> It means nothing
@@ -136,20 +135,19 @@ export default async function DataPage() {
                 <strong>
                   <code>confidence: &quot;unknown&quot;</code>은 &lsquo;아니오&rsquo;가 아닙니다.
                 </strong>{' '}
-                재지 않았다는 뜻입니다. 왜 그런지는 <code>evidence</code>에 적혀 있습니다. robots.txt,
-                거부 응답, 무응답, 주소 미상, 근거 부족 중 하나입니다. 이걸 &lsquo;아니오&rsquo;로
-                표시하면 우리의 정직함이 당신 쪽의 잘못된 정보로 바뀝니다.
+                확인하지 못했다는 뜻입니다. 이유는 <code>evidence</code>에 있습니다. robots.txt, 거부
+                응답, 무응답, 주소 미상, 근거 부족 중 하나입니다. 이걸 &lsquo;아니오&rsquo;로 표시하면
+                모른다고 적어 둔 것이 틀린 정보가 되어 버립니다.
               </li>
               <li>
                 <strong>
                   값을 보여줄 때 <code>measured_at</code>을 함께 보여주세요.
                 </strong>{' '}
-                한국 가입 절차에 관한 사실에는 유통기한이 있습니다. 그 값을 쓸 수 있게 만들어 주는
-                것이 바로 이 시각입니다.
+                한국 서비스의 가입 절차는 자주 바뀝니다. 언제 확인한 값인지가 붙어야 쓸 수 있습니다.
               </li>
               <li>
-                <strong>결제사 목록이 비었다고 결제가 안 되는 게 아닙니다.</strong> 로그인 없이 열
-                수 있는 페이지에서 탐지되지 않았다는 뜻입니다.
+                <strong>결제사 목록이 비었다고 결제가 안 되는 건 아닙니다.</strong> 로그인 없이 열리는
+                페이지에서 못 찾았다는 뜻입니다.
               </li>
             </ul>
           </Only>
@@ -158,8 +156,8 @@ export default async function DataPage() {
             <T en="Licence" ko="라이선스" />
           </h2>
           <TBlock
-            en="Creative Commons Attribution 4.0. Use it commercially, build on it, redistribute it — just say where it came from. If you do build something, tell us: corrections from people using the data in anger are the most useful kind."
-            ko="Creative Commons Attribution 4.0. 상업적 이용·재배포·2차 창작 모두 됩니다. 출처만 밝혀 주세요. 뭔가 만드셨다면 알려주세요 — 실제로 쓰는 사람이 보내는 정정이 가장 정확합니다."
+            en="Creative Commons Attribution 4.0. Use it commercially, build on it, redistribute it. Just say where it came from. If you build something, tell us. Corrections from people actually using the data are the most useful kind."
+            ko="Creative Commons Attribution 4.0. 상업적 이용·재배포·2차 창작 모두 됩니다. 출처만 밝혀 주세요. 뭔가 만드셨다면 알려주세요. 실제로 써 본 사람이 보내는 정정이 가장 정확합니다."
           />
           <p style={{ marginTop: 18 }}>
             <a className="button ghost" href={SITE.license.url} rel="license noreferrer" target="_blank">

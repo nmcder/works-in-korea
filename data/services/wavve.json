@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": null,
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "987782077",
+    "android_package": "kr.co.captv.pooqV2"
   },
   "signals": {
     "overseas_access": {

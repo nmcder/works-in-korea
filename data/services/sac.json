@@ -8,9 +8,9 @@
   "category": "ticketing",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
     "english_url": null,
     "ios_app_id": null,
     "android_package": null

@@ -8,12 +8,12 @@
   "category": "telecom",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://www.ktmmobile.com/appForm/withoutUsim.do",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.ktmmobile.com/cs/serviceGuide.do",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null
+    "ios_app_id": "1094611503",
+    "android_package": "kt.co.ktmmobile"
   },
   "signals": {
     "overseas_access": {

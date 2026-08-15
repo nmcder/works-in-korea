@@ -66,7 +66,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.kakao.taxi",
-        "support_url": "https://www.kakaomobility.com/customer-support"
+        "support_url": "https://www.kakaomobility.com/customer-support",
+        "ios_app_id": "981110422"
       }
     },
     {
@@ -79,7 +80,8 @@
       "category": "transport",
       "importance": 2,
       "hints": {
-        "android_package": "com.skt.tmap.ku"
+        "android_package": "com.skt.tmap.ku",
+        "support_url": "https://www.tmapmobility.com/support/data"
       }
     },
     {
@@ -119,7 +121,12 @@
       },
       "url": "https://tadatada.com",
       "category": "transport",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://www.tadatada.com/ad-biz",
+        "ios_app_id": "1422751774",
+        "android_package": "kr.co.vcnc.tada"
+      }
     },
     {
       "id": "seoul-metro",
@@ -179,7 +186,8 @@
       "importance": 1,
       "hints": {
         "signup_url": "https://www.yes24.com/Member/Join/Accept.aspx",
-        "support_url": "https://ticket.yes24.com/UserGuide/FAQ"
+        "support_url": "https://ticket.yes24.com/UserGuide/FAQ",
+        "android_package": "com.yes24.ticket"
       }
     },
     {
@@ -239,7 +247,11 @@
       },
       "url": "https://www.sac.or.kr",
       "category": "ticketing",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
+        "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership"
+      }
     },
     {
       "id": "ntok",
@@ -356,7 +368,10 @@
       "category": "shopping",
       "importance": 1,
       "hints": {
-        "signup_url": "https://global.oliveyoung.com/member/join?prePage=/"
+        "signup_url": "https://global.oliveyoung.com/member/join?prePage=/",
+        "support_url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
+        "ios_app_id": "1466755724",
+        "android_package": "com.cafe24.ec.pluseoliveyoung"
       }
     },
     {
@@ -400,7 +415,11 @@
       },
       "url": "https://www.kurly.com",
       "category": "shopping",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1080244833",
+        "android_package": "com.dbs.kurly.m2"
+      }
     },
     {
       "id": "danawa",
@@ -410,7 +429,11 @@
       },
       "url": "https://www.danawa.com",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://help.danawa.com/",
+        "android_package": "com.sktelecom.Danawa.Main"
+      }
     },
     {
       "id": "ably",
@@ -430,7 +453,11 @@
       },
       "url": "https://zigzag.kr",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "976131101",
+        "android_package": "com.croquis.zigzag"
+      }
     },
     {
       "id": "homeplus",
@@ -440,7 +467,11 @@
       },
       "url": "https://front.homeplus.co.kr",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "429151787",
+        "android_package": "com.socialapps.homeplus"
+      }
     },
     {
       "id": "gsshop",
@@ -470,7 +501,10 @@
       },
       "url": "https://www.kyobobook.co.kr",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://www.kyobobook.co.kr/cscenter"
+      }
     },
     {
       "id": "yes24",
@@ -480,7 +514,11 @@
       },
       "url": "http://www.yes24.com",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "360051536",
+        "android_package": "com.yes24.commerce"
+      }
     },
     {
       "id": "aladin",
@@ -490,7 +528,12 @@
       },
       "url": "https://www.aladin.co.kr",
       "category": "shopping",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
+        "ios_app_id": "365898918",
+        "android_package": "kr.co.aladin.third_shop"
+      }
     },
     {
       "id": "baemin",
@@ -516,7 +559,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.fineapp.yogiyo",
-        "signup_url": "https://www.yogiyo.co.kr/mobile/#/login/"
+        "signup_url": "https://www.yogiyo.co.kr/mobile/#/login/",
+        "ios_app_id": "543831532"
       }
     },
     {
@@ -560,7 +604,12 @@
       },
       "url": "https://www.starbucks.co.kr",
       "category": "delivery",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "466682252",
+        "android_package": "com.starbucks.co",
+        "signup_url": "https://www.starbucks.co.kr/mem/join1.do"
+      }
     },
     {
       "id": "toss",
@@ -597,7 +646,10 @@
       },
       "url": "https://pay.naver.com",
       "category": "finance",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko"
+      }
     },
     {
       "id": "payco",
@@ -607,7 +659,12 @@
       },
       "url": "https://www.payco.com",
       "category": "finance",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "924292102",
+        "android_package": "com.nhnent.payapp",
+        "signup_url": "https://membership.payco.com/"
+      }
     },
     {
       "id": "kakaobank",
@@ -627,7 +684,12 @@
       },
       "url": "https://www.tossbank.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
+        "ios_app_id": "839333328",
+        "android_package": "viva.republica.toss"
+      }
     },
     {
       "id": "kbank",
@@ -637,7 +699,10 @@
       },
       "url": "https://www.kbanknow.com",
       "category": "finance",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://www.kbanknow.com/web/customer/faq/list"
+      }
     },
     {
       "id": "kbstar",
@@ -673,7 +738,11 @@
       },
       "url": "https://www.wooribank.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1470181651",
+        "android_package": "com.wooribank.smart.npib"
+      }
     },
     {
       "id": "hana-bank",
@@ -683,7 +752,11 @@
       },
       "url": "https://www.kebhana.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1362508015",
+        "android_package": "com.kebhana.hanapush"
+      }
     },
     {
       "id": "nonghyup",
@@ -723,7 +796,11 @@
       },
       "url": "https://www.wirebarley.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://help.wirebarley.com/ko/support/home",
+        "ios_app_id": "1250275816"
+      }
     },
     {
       "id": "sentbe",
@@ -743,7 +820,11 @@
       },
       "url": "https://www.gmoneytrans.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://gmoneytrans.com/supported-countries/",
+        "ios_app_id": "1218137289"
+      }
     },
     {
       "id": "themoin",
@@ -763,7 +844,12 @@
       },
       "url": "https://www.travel-wallet.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://enterprise.travel-wallet.com/home",
+        "ios_app_id": "1460769945",
+        "android_package": "com.mobiletoong.travelwallet"
+      }
     },
     {
       "id": "skt",
@@ -788,7 +874,8 @@
       "category": "telecom",
       "importance": 1,
       "hints": {
-        "signup_url": "https://accounts.kt.com/identify/personal"
+        "signup_url": "https://accounts.kt.com/identify/personal",
+        "android_package": "com.ktshow.cs"
       }
     },
     {
@@ -813,7 +900,13 @@
       },
       "url": "https://www.ktmmobile.com",
       "category": "telecom",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://www.ktmmobile.com/cs/serviceGuide.do",
+        "ios_app_id": "1094611503",
+        "android_package": "kt.co.ktmmobile",
+        "signup_url": "https://www.ktmmobile.com/appForm/withoutUsim.do"
+      }
     },
     {
       "id": "sk7mobile",
@@ -833,7 +926,11 @@
       },
       "url": "https://www.chingumobile.com",
       "category": "telecom",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://chingumobile.com/faq",
+        "signup_url": "https://chingumobile.com/index/signup"
+      }
     },
     {
       "id": "yanolja",
@@ -846,7 +943,9 @@
       "importance": 1,
       "hints": {
         "android_package": "com.yanolja.repo",
-        "signup_url": "https://accounts.yanolja.com/v3/login"
+        "signup_url": "https://accounts.yanolja.com/v3/login",
+        "support_url": "https://ad.yanolja.com/intro",
+        "ios_app_id": "436731843"
       }
     },
     {
@@ -859,7 +958,9 @@
       "category": "accommodation",
       "importance": 1,
       "hints": {
-        "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/"
+        "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
+        "ios_app_id": "884043462",
+        "android_package": "kr.goodchoice.abouthere"
       }
     },
     {
@@ -890,7 +991,10 @@
       },
       "url": "https://www.modetour.com",
       "category": "accommodation",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://www.modetour.com/customer-center"
+      }
     },
     {
       "id": "hikorea",
@@ -939,7 +1043,10 @@
       },
       "url": "https://www.nts.go.kr",
       "category": "government",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?mi=40254&bbsId=50692"
+      }
     },
     {
       "id": "nhis",
@@ -1029,7 +1136,11 @@
       },
       "url": "https://www.amc.seoul.kr",
       "category": "healthcare",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
+        "signup_url": "https://www.amc.seoul.kr/asan/member/join/intro.do"
+      }
     },
     {
       "id": "samsung-hospital",
@@ -1049,7 +1160,12 @@
       },
       "url": "https://sev.severance.healthcare",
       "category": "healthcare",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "support_url": "https://sev.severance.healthcare/sev/patient-carer/appointment/checkup/faq.do",
+        "ios_app_id": "1291198838",
+        "android_package": "com.dbs.mcare.severance"
+      }
     },
     {
       "id": "goodoc",
@@ -1059,7 +1175,11 @@
       },
       "url": "https://www.goodoc.co.kr",
       "category": "healthcare",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "517637141",
+        "android_package": "com.ksncho.hospitalinfo"
+      }
     },
     {
       "id": "ddocdoc",
@@ -1069,7 +1189,12 @@
       },
       "url": "https://www.ddocdoc.com",
       "category": "healthcare",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "ios_app_id": "1014889755",
+        "android_package": "com.bbros.sayup",
+        "signup_url": "https://hospital.ddocdoc.com/register?utm_source=ddocdoc-com&amp;utm_medium=bottom-list&amp;utm_campaign=etc"
+      }
     },
     {
       "id": "naver",
@@ -1119,7 +1244,9 @@
       "category": "culture",
       "importance": 2,
       "hints": {
-        "android_package": "com.towneers.www"
+        "android_package": "com.towneers.www",
+        "support_url": "https://daangn.com/wv/faqs",
+        "ios_app_id": "1018769995"
       }
     },
     {
@@ -1155,7 +1282,8 @@
       "category": "culture",
       "importance": 2,
       "hints": {
-        "android_package": "net.cj.cjhv.gs.tving"
+        "android_package": "net.cj.cjhv.gs.tving",
+        "support_url": "https://www.tving.com/help/notice"
       }
     },
     {
@@ -1166,7 +1294,11 @@
       },
       "url": "https://www.wavve.com",
       "category": "culture",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "987782077",
+        "android_package": "kr.co.captv.pooqV2"
+      }
     },
     {
       "id": "watcha",
@@ -1178,7 +1310,8 @@
       "category": "culture",
       "importance": 3,
       "hints": {
-        "android_package": "com.frograms.wplay"
+        "android_package": "com.frograms.wplay",
+        "support_url": "https://help.watcha.com/hc/ko"
       }
     },
     {
@@ -1189,7 +1322,12 @@
       },
       "url": "https://ridibooks.com",
       "category": "culture",
-      "importance": 3
+      "importance": 3,
+      "hints": {
+        "support_url": "https://ridihelp.ridibooks.com/support/home",
+        "ios_app_id": "338813698",
+        "android_package": "com.initialcoms.ridi"
+      }
     },
     {
       "id": "national-museum",
@@ -1199,7 +1337,10 @@
       },
       "url": "https://www.museum.go.kr",
       "category": "culture",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "signup_url": "https://www.museum.go.kr/MUSEUM/contents/membership.do"
+      }
     }
   ]
 }
