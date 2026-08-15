@@ -101,7 +101,7 @@ LLM API(제보 정규화용)만 월 3~5만원 예상. 어느 쪽이든 월 예�
 - [x] 주요 의사결정 기록 (`docs/03-decisions.md`)
 - [x] **1주차 완료 (2026-08-15)** — 데이터 스키마 + 자동 프로브 6종 + Actions 크론
 - [x] **2주차 완료 (2026-08-15)** — 공개 사이트 `site/` (홈·상세·`/changes`·`/method`·공개 API)
-- [x] **배포 완료 (2026-08-15)** — **https://works-in-korea.vercel.app** (Vercel Hobby, 무료)
+- [x] **배포 완료 (2026-08-15)** — **https://worksinkorea.com** (Vercel Hobby + Cloudflare 도메인)
 - [x] **3주차 완료 (2026-08-15)** — 제보 레이어 (Issue Form 3종 → 개인정보 차단 → 집계 → PR)
 - [x] **UI 전면 개편 (2026-08-15)** — 언어 전환(기본 영어/한국어), 원장형 목록, 세리프 제목
 - [ ] **← 여기부터 시작.** 4주차: 배포(홍보). 공개 API는 2주차에 이미 완료
@@ -110,7 +110,7 @@ LLM API(제보 정규화용)만 월 3~5만원 예상. 어느 쪽이든 월 예�
 
 | | |
 |---|---|
-| 사이트 | https://works-in-korea.vercel.app |
+| 사이트 | https://worksinkorea.com |
 | 공개 API | `/api/v1/services.json` · `/api/v1/services/<id>.json` · `/api/v1/changes.json` · `/api/v1/meta.json` |
 | 갱신 | 크론이 `data/` 커밋 → 푸시 → Vercel 자동 재배포. **사람 개입 없음** |
 

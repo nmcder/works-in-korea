@@ -44,43 +44,47 @@ html[data-lang='ko'] [data-l='en'] {
 /* ---------------------------------------------------------------- 토큰 */
 
 :root {
-  /* 종이는 아주 옅은 회색, 카드는 순백. 그림자 없이 깊이가 생긴다 */
-  --bg: #fbfbfc;
-  --bg-soft: #f4f5f7;
-  --bg-sunk: #eceef1;
+  /*
+   * 종이는 따뜻한 오프화이트, 카드는 순백.
+   * 차가운 회색(#fbfbfc 계열)은 어느 부트스트랩 템플릿에나 있는 기본값이라
+   * 그 자체로 "만들다 만 것" 처럼 읽힌다. 종이에 온도가 있어야 화면이 앉는다.
+   */
+  --bg: #f8f7f4;
+  --bg-soft: #f1efe9;
+  --bg-sunk: #e9e6de;
   --surface: #ffffff;
 
-  --line: #e4e6ea;
-  --line-strong: #d2d5db;
+  --line: #eae7df;
+  --line-strong: #d9d4c8;
   /*
    * 누를 수 있는 요소(검색창·칩·버튼)의 경계선은 3:1 이 필요하다 (WCAG 1.4.11).
    * 카드 구분선(line-strong 1.44:1)을 그대로 쓰면 경계가 보이지 않는 사람이 생긴다.
    */
-  --control: #868d97;
+  --control: #8a857a;
 
-  --text: #0b0d11;
-  --text-2: #414954;
-  --text-3: #626a76;
+  --text: #14130f;
+  --text-2: #4a463e;
+  --text-3: #67635b;
 
-  --accent: #14459e;
-  --accent-hover: #0f3479;
-  --accent-soft: #eef2fa;
-  --accent-line: #c9d6ee;
+  --accent: #1d4ed8;
+  --accent-hover: #1740b0;
+  --accent-soft: #eef2fd;
+  --accent-line: #c7d6f8;
 
   /* 장벽 없음 / 장벽 있음 / 조건부 / 참고 / 미확인 */
-  --ok: #0a6c40;
-  --ok-bg: #eaf6ef;
-  --ok-line: #b3ddc6;
-  --stop: #a63213;
-  --stop-bg: #fbefea;
-  --stop-line: #f0c6b5;
-  --warn: #85560a;
-  --warn-bg: #faf3e4;
-  --warn-line: #ecd5a0;
-  --info: #3d4653;
-  --info-bg: #eef0f3;
-  --info-line: #d7dae0;
-  --none: #6b7280;
+  --ok: #0a6a3f;
+  --ok-bg: #e8f5ed;
+  --ok-line: #b0dbc3;
+  --stop: #a33113;
+  --stop-bg: #fbeee8;
+  --stop-line: #efc4b2;
+  --warn: #82550a;
+  --warn-bg: #f9f2e2;
+  --warn-line: #ebd39e;
+  --info: #454138;
+  --info-bg: #f0ede6;
+  --info-line: #ddd8cc;
+  --none: #6e695f;
 
   --sans:
     -apple-system, BlinkMacSystemFont, 'Segoe UI Variable Text', 'Segoe UI', Pretendard,
@@ -91,12 +95,17 @@ html[data-lang='ko'] [data-l='en'] {
   --w-read: 47rem;
   --w-text: 40rem;
 
-  --r-sm: 6px;
-  --r: 10px;
+  --r-sm: 8px;
+  --r: 14px;
+  --r-lg: 20px;
 
-  /* 그림자는 있는 듯 없는 듯. 경계는 실선이 맡는다 */
-  --shadow-1: 0 1px 2px rgb(11 13 17 / 0.04);
-  --shadow-2: 0 6px 18px -8px rgb(11 13 17 / 0.14);
+  /*
+   * 나누는 일은 실선이 아니라 **여백과 면**이 한다.
+   * 1px 선을 여기저기 그으면 화면이 표·양식·문서로 읽힌다. 선을 줄이고
+   * 사이를 벌리면 같은 내용이 무겁고 차분해진다.
+   */
+  --shadow-1: 0 1px 2px rgb(20 19 15 / 0.04);
+  --shadow-2: 0 8px 24px -10px rgb(20 19 15 / 0.16);
 }
 
 *,
@@ -124,8 +133,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -133,9 +142,9 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 680;
-  line-height: 1.18;
-  letter-spacing: -0.022em;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -261,35 +270,36 @@ a {
 /* ---------------------------------------------------------------- 첫 화면 */
 
 .hero {
-  padding: 84px 0 44px;
+  padding: 116px 0 64px;
   background: var(--surface);
-  border-bottom: 1px solid var(--line);
   text-align: center;
 }
 .hero h1 {
-  font-size: clamp(2.1rem, 4.8vw, 3.15rem);
-  max-width: 18ch;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  max-width: 17ch;
   margin: 0 auto;
-  letter-spacing: -0.032em;
-  font-weight: 700;
+  letter-spacing: -0.042em;
+  font-weight: 720;
+  line-height: 1.08;
 }
 .hero .standfirst {
-  margin: 20px auto 0;
-  font-size: 1.06rem;
-  line-height: 1.65;
+  margin: 26px auto 0;
+  font-size: 1.16rem;
+  line-height: 1.6;
   color: var(--text-2);
-  max-width: 52ch;
+  max-width: 48ch;
 }
 
 /* 안쪽 페이지는 표지처럼 크지 않아도 된다 */
 .hero-narrow {
-  padding: 56px 0 34px;
+  padding: 76px 0 44px;
   text-align: left;
 }
 .hero-narrow h1 {
   margin: 0;
   max-width: 22ch;
-  font-size: clamp(1.85rem, 4vw, 2.45rem);
+  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  line-height: 1.14;
 }
 .hero-narrow .standfirst {
   margin: 18px 0 0;
@@ -300,12 +310,12 @@ a {
 /* 큰 검색창 — 이 사이트에 오는 이유가 이것이므로 첫 화면의 주인공으로 둔다 */
 .searchbox {
   position: relative;
-  max-width: 560px;
-  margin: 36px auto 0;
+  max-width: 600px;
+  margin: 42px auto 0;
 }
 .searchbox svg {
   position: absolute;
-  left: 18px;
+  left: 22px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-3);
@@ -314,10 +324,10 @@ a {
 .search {
   width: 100%;
   font: inherit;
-  font-size: 16px;
-  padding: 15px 18px 15px 48px;
+  font-size: 17px;
+  padding: 19px 22px 19px 56px;
   border: 1px solid var(--control);
-  border-radius: var(--r);
+  border-radius: var(--r-lg);
   background: var(--surface);
   color: var(--text);
   transition: border-color 0.14s ease, box-shadow 0.14s ease;
@@ -328,7 +338,7 @@ a {
 .search:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 /* 첫 화면 수치 — 테두리 없이 점으로 나눈다. 상자를 줄이면 무거워진다 */
@@ -337,8 +347,8 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   gap: 6px 22px;
-  margin-top: 26px;
-  font-size: 13.5px;
+  margin-top: 30px;
+  font-size: 14px;
   color: var(--text-3);
 }
 .figure {
@@ -364,7 +374,7 @@ a {
 /* -------------------------------------------------------------- 거르기 */
 
 .controls {
-  padding: 30px 0 0;
+  padding: 44px 0 0;
 }
 .filter-label {
   font-size: 11px;
@@ -385,9 +395,9 @@ a {
 }
 .chip {
   font: inherit;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.3;
-  padding: 7px 14px;
+  padding: 9px 17px;
   border-radius: 999px;
   border: 1px solid var(--control);
   background: var(--surface);
@@ -439,9 +449,9 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
-  gap: 14px;
-  margin: 18px 0 72px;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 18px;
+  margin: 24px 0 96px;
 }
 
 /*
@@ -454,12 +464,12 @@ a {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 18px 20px 8px;
+  padding: 24px 24px 10px;
   cursor: pointer;
   transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
 }
 .svc:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--line-strong);
   box-shadow: var(--shadow-2);
 }
@@ -471,29 +481,29 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 .svc-name {
-  font-size: 16.5px;
-  font-weight: 660;
-  letter-spacing: -0.018em;
-  line-height: 1.32;
+  font-size: 18.5px;
+  font-weight: 680;
+  letter-spacing: -0.026em;
+  line-height: 1.28;
   flex: 1;
 }
 .svc-name em {
   display: block;
   font-style: normal;
   font-weight: 450;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-3);
   margin-top: 4px;
   letter-spacing: 0;
 }
 .svc-go {
   flex: none;
-  width: 26px;
-  height: 26px;
-  border-radius: var(--r-sm);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   color: var(--text-3);
   display: grid;
   place-items: center;
@@ -513,18 +523,18 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .svc-row:last-child {
   border-bottom: 0;
 }
 .svc-row .k {
   color: var(--text-3);
-  font-size: 12.5px;
+  font-size: 13px;
   flex: none;
-  width: 100px;
+  width: 104px;
 }
 .svc-row .v {
   font-weight: 560;
@@ -591,18 +601,18 @@ a {
 
 .band {
   background: var(--surface);
-  border-top: 1px solid var(--line);
-  padding: 68px 0;
+  padding: 104px 0;
 }
 .band-title {
-  font-size: clamp(1.45rem, 2.8vw, 1.9rem);
-  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3.6vw, 2.4rem);
+  margin-bottom: 18px;
 }
 .band-lede {
   color: var(--text-2);
-  max-width: 56ch;
-  font-size: 16px;
-  margin-bottom: 28px;
+  max-width: 54ch;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 32px;
 }
 
 /* --------------------------------------------------------------- 버튼 */
@@ -611,10 +621,10 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14.5px;
-  font-weight: 600;
-  padding: 11px 20px;
-  border-radius: var(--r-sm);
+  font-size: 15.5px;
+  font-weight: 620;
+  padding: 14px 26px;
+  border-radius: var(--r);
   background: var(--accent);
   color: #fff;
   border: 1px solid var(--accent);
@@ -671,13 +681,13 @@ a {
 
 .prose {
   max-width: var(--w-text);
-  font-size: 16.5px;
-  line-height: 1.72;
-  padding-bottom: 24px;
+  font-size: 17px;
+  line-height: 1.75;
+  padding-bottom: 32px;
 }
 .prose h2 {
-  font-size: 1.42rem;
-  margin: 52px 0 14px;
+  font-size: 1.62rem;
+  margin: 60px 0 16px;
 }
 .prose h3 {
   font-size: 1.04rem;
@@ -811,9 +821,8 @@ a {
 /* ----------------------------------------------------------- 상세 화면 */
 
 .record-head {
-  padding: 28px 0 32px;
+  padding: 36px 0 46px;
   background: var(--surface);
-  border-bottom: 1px solid var(--line);
 }
 .breadcrumb {
   font-size: 13.5px;
@@ -833,9 +842,10 @@ a {
   color: var(--accent);
 }
 .record-head h1 {
-  font-size: clamp(1.95rem, 4vw, 2.6rem);
-  letter-spacing: -0.03em;
-  font-weight: 700;
+  font-size: clamp(2.2rem, 4.8vw, 3.1rem);
+  letter-spacing: -0.04em;
+  font-weight: 720;
+  line-height: 1.1;
 }
 .record-head h1 em {
   font-style: normal;
@@ -875,10 +885,10 @@ a {
  */
 .records {
   max-width: var(--w-read);
-  margin: 8px 0 0;
+  margin: 20px 0 0;
 }
 .signal {
-  padding: 24px 0;
+  padding: 34px 0;
   border-bottom: 1px solid var(--line);
 }
 .signal:last-child {
@@ -892,8 +902,8 @@ a {
   flex-wrap: wrap;
 }
 .signal-q {
-  font-size: 16.5px;
-  font-weight: 600;
+  font-size: 17.5px;
+  font-weight: 620;
   line-height: 1.45;
   color: var(--text);
   margin: 0;
@@ -901,18 +911,18 @@ a {
   flex: 1 1 16rem;
 }
 .signal-a {
-  font-size: 1.32rem;
-  font-weight: 680;
-  line-height: 1.3;
-  letter-spacing: -0.026em;
+  font-size: 1.62rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.034em;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   margin: 0;
 }
 .signal-a .dot {
-  width: 21px;
-  height: 21px;
+  width: 24px;
+  height: 24px;
 }
 .t-open .signal-a {
   color: var(--ok);
@@ -925,14 +935,14 @@ a {
 }
 .t-info .signal-a {
   color: var(--info);
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5;
 }
 .t-none .signal-a {
   color: var(--none);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.08rem;
+  font-weight: 520;
 }
 .signal-body {
   margin-top: 14px;
@@ -1120,7 +1130,7 @@ details.raw pre {
 .card {
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 24px;
+  padding: 28px;
   background: var(--surface);
   display: flex;
   flex-direction: column;
@@ -1147,7 +1157,7 @@ details.raw pre {
 
 .colophon {
   border-top: 1px solid var(--line);
-  padding: 52px 0 64px;
+  padding: 64px 0 80px;
   background: var(--surface);
 }
 .colophon-inner {
@@ -1230,4 +1240,174 @@ details.raw pre {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* --------------------------------------------------------------- 제보 폼 */
+
+.form {
+  max-width: 40rem;
+  margin: 28px 0 0;
+}
+.form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.field,
+.form-kinds {
+  display: block;
+  margin-bottom: 22px;
+}
+.form-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 620;
+  color: var(--text);
+  margin-bottom: 8px;
+  padding: 0;
+}
+.form-label em {
+  font-style: normal;
+  font-weight: 450;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+.form-hint {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  color: var(--text-3);
+}
+
+.form input[type='text'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 15.5px;
+  padding: 11px 13px;
+  border: 1px solid var(--control);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.14s ease, box-shadow 0.14s ease;
+}
+.form textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form ::placeholder {
+  color: var(--text-3);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 560px) {
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* 라디오는 통째로 누를 수 있어야 한다. 점만 누르게 하면 손가락으로 못 맞춘다 */
+.radios {
+  display: grid;
+  gap: 8px;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+.radio:hover {
+  border-color: var(--control);
+  background: var(--bg-soft);
+}
+.radio:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 550;
+}
+.radio input {
+  accent-color: var(--accent);
+  width: 17px;
+  height: 17px;
+  flex: none;
+  margin: 0;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-privacy {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-3);
+  background: var(--bg-soft);
+  border-radius: var(--r-sm);
+  padding: 13px 15px;
+  margin: 4px 0 20px;
+}
+
+.form-error {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--stop);
+  background: var(--stop-bg);
+  border: 1px solid var(--stop-line);
+  border-radius: var(--r-sm);
+  padding: 14px 16px;
+  margin: 0 0 20px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.form-done {
+  max-width: 40rem;
+  margin: 28px 0 0;
+  padding: 30px 28px;
+  background: var(--surface);
+  border: 1px solid var(--ok-line);
+  border-radius: var(--r);
+}
+.form-done h2 {
+  font-size: 1.32rem;
+  color: var(--ok);
+  margin-bottom: 10px;
+}
+.form-done p {
+  color: var(--text-2);
+  font-size: 15px;
+}
+.form-done .form-actions {
+  margin-top: 22px;
 }

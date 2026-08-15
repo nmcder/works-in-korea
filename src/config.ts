@@ -23,7 +23,7 @@ export const PATHS = {
  *
  * 자체 도메인이 생기면 WIK_PROJECT_URL / WIK_CONTACT 를 Actions 변수로 덮어쓴다.
  */
-export const PROJECT_URL = process.env.WIK_PROJECT_URL ?? 'https://works-in-korea.vercel.app';
+export const PROJECT_URL = process.env.WIK_PROJECT_URL ?? 'https://worksinkorea.com';
 export const CONTACT = process.env.WIK_CONTACT ?? 'nmcder117@gmail.com';
 export const BOT_TOKEN = 'WorksInKoreaBot';
 export const USER_AGENT = `${BOT_TOKEN}/0.1 (+${PROJECT_URL}; contact: ${CONTACT})`;

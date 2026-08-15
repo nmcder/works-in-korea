@@ -1,6 +1,6 @@
 # Works in Korea?
 
-**[works-in-korea.vercel.app](https://works-in-korea.vercel.app)**
+**[worksinkorea.com](https://worksinkorea.com)**
 
 Checks 106 Korean online services every day from outside Korea and publishes what it finds:
 whether the site opens, what languages it offers, and whether signing up requires a Korean

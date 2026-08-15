@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getBlockCounts, getBlockedServices, getServices } from '@/lib/data';
-import { T, TBlock, type Bi } from '@/lib/i18n';
-import { SITE, type ReportKind, reportUrl } from '@/lib/site-config';
+import { ReportForm, type ServiceOption } from '@/components/ReportForm';
+import { T, TBlock } from '@/lib/i18n';
+import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Report what happened',
@@ -9,43 +10,20 @@ export const metadata: Metadata = {
     'Two of the eight questions can only be answered by people who actually tried. No account, no email, no personal details.',
 };
 
-const FORMS: { kind: ReportKind; title: Bi; body: Bi; cta: Bi }[] = [
-  {
-    kind: 'foreign-card',
-    title: { en: 'A foreign card', ko: '해외 발급 카드' },
-    body: {
-      en: 'You paid with a card issued outside Korea. Did it go through or bounce? Issuing country and brand only — never the number.',
-      ko: '한국 밖에서 발급된 카드로 결제해 보셨나요? 됐는지 튕겼는지 알려주세요. 발급 국가와 브랜드만 받습니다. 번호는 받지 않습니다.',
-    },
-    cta: { en: 'Report a card payment', ko: '카드 결제 제보하기' },
-  },
-  {
-    kind: 'foreign-sms',
-    title: { en: 'A text to a foreign number', ko: '해외 번호로 온 문자' },
-    body: {
-      en: 'You asked for a code on a non-Korean number. Did it arrive, did nothing come, or would the form not take the number? Country only.',
-      ko: '한국 번호가 아닌 곳으로 인증번호를 받아 보셨나요? 왔는지, 안 왔는지, 아니면 번호 입력부터 막혔는지 알려주세요. 국가만 받습니다.',
-    },
-    cta: { en: 'Report an SMS attempt', ko: '문자 인증 제보하기' },
-  },
-  {
-    kind: 'correction',
-    title: { en: 'Something here is wrong', ko: '여기 틀린 게 있다' },
-    body: {
-      en: 'A value does not match what you saw. Point at the page and say what it actually did.',
-      ko: '사이트의 값이 직접 보신 것과 다릅니다. 어느 페이지인지, 실제로는 어땠는지 알려주세요.',
-    },
-    cta: { en: 'Send a correction', ko: '정정 요청 보내기' },
-  },
-];
-
 export default async function ReportPage() {
   const [services, blocked, counts] = await Promise.all([
     getServices(),
     getBlockedServices(),
     getBlockCounts(),
   ]);
-  const live = reportUrl('foreign-card') !== null;
+  // 창구가 붙어 있는지. 없으면 폼 대신 이메일을 안내한다.
+  const live = Boolean(SITE.issuesRepo);
+  const options: ServiceOption[] = services
+    .map((s) => ({
+      id: s.id,
+      name: s.name.ko && s.name.ko !== s.name.en ? `${s.name.en} · ${s.name.ko}` : s.name.en,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
   return (
     <>
@@ -66,7 +44,7 @@ export default async function ReportPage() {
         {!live && (
           <div className="aside warn">
             <h3>
-              <T en="The forms are not open yet." ko="제보 창구가 아직 열리지 않았습니다." />
+              <T en="The report desk is not connected yet." ko="제보 창구가 아직 연결되지 않았습니다." />
             </h3>
             <T
               en="Until they are, send it by email and it gets recorded the same way, under the same rule about personal details."
@@ -80,32 +58,7 @@ export default async function ReportPage() {
           </div>
         )}
 
-        <div className="cards">
-          {FORMS.map((f) => {
-            const href = reportUrl(f.kind);
-            return (
-              <article className="card" key={f.kind}>
-                <h3>
-                  <T {...f.title} />
-                </h3>
-                <p>
-                  <T {...f.body} />
-                </p>
-                <div className="cta">
-                  {href ? (
-                    <a className="button" href={href} rel="noreferrer" target="_blank">
-                      <T {...f.cta} />
-                    </a>
-                  ) : (
-                    <a className="button ghost" href={`mailto:${SITE.contact}`}>
-                      <T en="Email it instead" ko="이메일로 보내기" />
-                    </a>
-                  )}
-                </div>
-              </article>
-            );
-          })}
-        </div>
+        {live && <ReportForm services={options} />}
 
         <div className="prose" style={{ marginTop: 56, paddingBottom: 40 }}>
           <h2>
@@ -136,14 +89,14 @@ export default async function ReportPage() {
           <ol>
             <li>
               <T
-                en="The form is read automatically and turned into structured fields."
-                ko="폼을 자동으로 읽어 항목별로 정리합니다."
+                en="You send the form on this page. No account, no email address."
+                ko="이 페이지의 폼으로 보냅니다. 계정도 이메일도 받지 않습니다."
               />
             </li>
             <li>
               <T
-                en="Anything resembling personal information is stripped, and that report is returned rather than recorded."
-                ko="개인정보로 보이는 것은 걸러내고, 그런 제보는 기록하지 않고 돌려보냅니다."
+                en="Anything resembling personal information is caught before the report leaves this page, and nothing is saved."
+                ko="개인정보로 보이는 것은 제보가 이 페이지를 떠나기 전에 걸립니다. 아무것도 저장되지 않습니다."
               />
             </li>
             <li>

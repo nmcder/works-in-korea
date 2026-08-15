@@ -122,7 +122,7 @@ async function main(): Promise<void> {
   npm run add-app -- coupang "https://play.google.com/store/apps/details?id=com.coupang.mobile"
   npm run add-app -- cgv "https://apps.apple.com/kr/app/cgv/id372383054" "co.kr.cgv.cjcgv"
 
-서비스 id 는 사이트 주소에 쓰인 것과 같다. works-in-korea.vercel.app/service/coupang → coupang`);
+서비스 id 는 사이트 주소에 쓰인 것과 같다. worksinkorea.com/service/coupang → coupang`);
     process.exitCode = 1;
     return;
   }
