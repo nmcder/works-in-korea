@@ -38,6 +38,58 @@ const CONFIDENCE: Record<string, Bi> = {
 
 const AWAITING: Bi = { en: 'waiting for a first-hand report', ko: '제보 기다리는 중' };
 
+function ExternalIcon() {
+  return (
+    <svg
+      className="ext"
+      width="11"
+      height="11"
+      viewBox="0 0 12 12"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M4.5 2h5.5v5.5M10 2 5 7M8 9.5v.5H2V4h.5" />
+    </svg>
+  );
+}
+
+function AppleIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+      <path d="M11.05 8.5c-.02-1.6 1.31-2.37 1.37-2.41-.75-1.09-1.91-1.24-2.32-1.26-.99-.1-1.93.58-2.43.58-.5 0-1.27-.57-2.09-.55-1.07.02-2.06.62-2.61 1.58-1.12 1.94-.29 4.81.8 6.38.53.77 1.17 1.63 2 1.6.8-.03 1.1-.52 2.07-.52.96 0 1.24.52 2.09.5.86-.01 1.4-.78 1.93-1.55.61-.89.86-1.75.87-1.79-.02-.01-1.67-.64-1.68-2.56ZM9.5 3.78c.44-.53.73-1.27.65-2-.63.02-1.4.42-1.85.95-.4.47-.75 1.22-.66 1.94.7.05 1.42-.36 1.86-.89Z" />
+    </svg>
+  );
+}
+
+function PlayIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+      <path d="M2.4 1.6c-.2.21-.32.53-.32.95v10.9c0 .42.12.74.33.94l.05.05 6.1-6.1v-.14l-6.1-6.1-.06.05Zm8.15 4.13L8.52 3.7 3.03 1.34l7.52 4.39Zm0 4.54L3.03 14.66l5.49-5.49 2.03 2.03v-.93Zm.53-.31 1.9-1.11c.58-.34.58-.88 0-1.22l-1.9-1.11L9 8l2.08 1.96Z" />
+    </svg>
+  );
+}
+
+function GlobeIcon() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      aria-hidden
+    >
+      <circle cx="8" cy="8" r="6.2" />
+      <path d="M1.8 8h12.4M8 1.8c1.6 1.7 2.5 3.9 2.5 6.2S9.6 12.5 8 14.2C6.4 12.5 5.5 10.3 5.5 8S6.4 3.5 8 1.8Z" />
+    </svg>
+  );
+}
+
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const service = await getService(id);
@@ -66,6 +118,12 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     en: service.category,
     ko: service.category,
   };
+
+  // 앱을 받으러 온 사람에게 스토어 주소를 다시 찾게 하지 않는다.
+  // 앱 이름이 서비스 이름과 다른 경우가 흔해서(손택스·NOL 티켓·T world) 검색이 잘 안 된다.
+  const iosId = typeof service.hints?.ios_app_id === 'string' ? service.hints.ios_app_id : null;
+  const androidPkg =
+    typeof service.hints?.android_package === 'string' ? service.hints.android_package : null;
 
   return (
     <>
@@ -99,11 +157,6 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
           <div className="record-meta">
             <span>
-              <a href={service.url} rel="nofollow noreferrer" target="_blank">
-                {new URL(service.url).host}
-              </a>
-            </span>
-            <span>
               <T
                 en={`${recorded} of ${views.length} questions answered`}
                 ko={`${views.length}개 항목 중 ${recorded}개 확인됨`}
@@ -111,10 +164,42 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             </span>
             {lastMeasured && (
               <span>
-                <T en="last checked" ko="마지막 확인" />{' '}
-                <span className="mono">{formatUtc(lastMeasured)}</span>{' '}
+                <T en="last checked" ko="마지막 확인" />
+                <span className="mono">{formatUtc(lastMeasured)}</span>
                 <RelativeTime iso={lastMeasured} />
               </span>
+            )}
+          </div>
+
+          <div className="gotos">
+            <a className="goto" href={service.url} rel="nofollow noreferrer" target="_blank">
+              <GlobeIcon />
+              {new URL(service.url).host}
+              <ExternalIcon />
+            </a>
+            {iosId && (
+              <a
+                className="goto"
+                href={`https://apps.apple.com/kr/app/id${iosId}`}
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <AppleIcon />
+                <T en="App Store" ko="App Store" />
+                <ExternalIcon />
+              </a>
+            )}
+            {androidPkg && (
+              <a
+                className="goto"
+                href={`https://play.google.com/store/apps/details?id=${androidPkg}`}
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <PlayIcon />
+                <T en="Google Play" ko="Google Play" />
+                <ExternalIcon />
+              </a>
             )}
           </div>
 
@@ -128,7 +213,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
       <div className="wrap">
         {sharedKind && (
-          <div className="aside warn" style={{ margin: '26px 0 0' }}>
+          <div className="aside warn" style={{ margin: '28px 0 0' }}>
             <h3>
               <T
                 en={`${blockedViews.length} values are blank for the same reason`}
@@ -139,13 +224,13 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
           </div>
         )}
 
-        <div className="signals">
+        <div className="records">
           {views.map((v) => (
             <Record key={v.key} v={v} hideWhy={sharedKind !== null && blockedViews.includes(v)} />
           ))}
         </div>
 
-        <p style={{ margin: '26px 0 64px', fontSize: 14.5, color: 'var(--text-3)' }}>
+        <p style={{ margin: '32px 0 72px', fontSize: 14.5, color: 'var(--text-3)' }}>
           <T
             en="Does a value here not match what you saw?"
             ko="여기 값이 직접 보신 것과 다른가요?"
@@ -164,14 +249,15 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
 
   return (
     <article className={`signal t-${v.tone}`}>
-      <h2 className="signal-q">
-        <T {...v.question} />
-      </h2>
-
-      <p className="signal-a">
-        <Dot tone={v.tone} />
-        <T {...v.display} />
-      </p>
+      <div className="signal-head">
+        <h2 className="signal-q">
+          <T {...v.question} />
+        </h2>
+        <p className="signal-a">
+          <Dot tone={v.tone} />
+          <T {...v.display} />
+        </p>
+      </div>
 
       <div className="signal-body">
         {v.why && !hideWhy && (
@@ -198,7 +284,7 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
           {!v.awaitingReport && (
             <span>
               <b>
-                <T en="Measured" ko="확인" />
+                <T en="Checked" ko="확인" />
               </b>
               {v.measuredAt ? (
                 <>
