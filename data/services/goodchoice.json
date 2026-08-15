@@ -157,7 +157,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -171,8 +171,12 @@
           }
         ],
         "content_sha256": "d70bd1cc55acd9f32fa3e8a76a4b229786051997638697c7ceb5446e73ad6f16",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51E9TmpVtgCpg7JhBkK\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": null,
+          "reason": "페이지 텍스트에 고객지원 채널이나 영어 상담 관련 정보가 전혀 없어 판단할 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

@@ -165,7 +165,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -184,8 +184,12 @@
           }
         ],
         "content_sha256": "b484f3f0381aff4bf8a15c0dd4d76d644bc18d062fa44ec81044c077ad86f169",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51XWHszETzd9B2q5jSS\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "한국어 언어선택 한국어 English",
+          "reason": "페이지에 언어 선택(한국어/English) 옵션은 있으나, 실제 고객센터 상담 채널(ARS, 전화번호)이 영어로 응대 가능한지에 대한 명확한 언급이 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

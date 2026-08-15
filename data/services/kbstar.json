@@ -164,12 +164,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -179,8 +179,12 @@
           }
         ],
         "content_sha256": "8e1ef907f16dab92cdd10af6d3ad90f514f8bb53e2437aff97195e8227ee6629",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51QUS4XwNAmPErnSm7J\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "yes",
+          "quoted_evidence": "외국인 전용 1599-4477",
+          "reason": "외국인 전용 전화 상담 번호가 명시되어 있고 GLOBAL LANGUAGE English 메뉴도 존재하여 영어 문의가 가능한 채널이 확인됨."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

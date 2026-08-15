@@ -174,7 +174,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -188,8 +188,12 @@
           }
         ],
         "content_sha256": "79e7e3d92709f3e5ad77959ad6392b3e9135807c38f4080f2ae3de37eee68245",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51VtwbG5TaLKT6718XX\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "대표전화 02-2077-9000",
+          "reason": "영어(English) 언어 옵션은 존재하지만, 이것이 사이트 언어 전환 기능인지 실제 영어 상담 채널(전화/이메일 등)인지 명시되어 있지 않으며, 대표전화도 영어 응대 여부가 불명확함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

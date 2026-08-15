@@ -174,12 +174,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "no",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -204,8 +204,12 @@
           }
         ],
         "content_sha256": "01cf3db72ad7b3f596b55c10adabe9f27a88e2d92d314f5ad0c1f2b1e76e6aaa",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51T5XzPcQZxB8uM8uZx\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "no",
+          "quoted_evidence": "엠모바일 휴대폰에서 114(무료), 타사 이용 시 1899-5000(유료) - 운영시간 : 오전 9시 ~ 정오 12시 / 오후 1시 ~ 오후 6시 ■ 채팅상담 이용안내 - 경로 : 홈페이지 오른쪽 하단 HELP → CHAT → '채팅상담' 입력",
+          "reason": "고객센터 채널(전화, 채팅상담)은 명시되어 있으나 모두 한국어 기반 상담(ARS, 본인 명의 휴대폰 SMS 인증 등)으로 외국인, 미성년자는 상담사 개통신청만 가능하다고 명시되어 있어 영문 전용 상담 채널은 확인되지 않음."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

@@ -173,7 +173,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -188,7 +188,7 @@
           {
             "url": "https://www.kyobobook.co.kr",
             "status": 200,
-            "chars": 1101
+            "chars": 1033
           },
           {
             "url": "https://www.kyobobook.co.kr/cscenter",
@@ -201,13 +201,17 @@
             "chars": 1429
           }
         ],
-        "content_sha256": "7fa989c844af509461a4da8a2b58e7a347163465c8b97c5354194092b0efcb31",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51U1WRuK6CNa3TbQJbG\"}",
+        "content_sha256": "5b849f1908fe904420fcd86af0c344990dc17fff4a98da754c1d5ad9917c5bd5",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": null,
+          "reason": "고객센터 페이지에 전화상담(1544-1900), 1:1 문의 등 채널은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.121,
+          "latin_ratio": 0.117,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

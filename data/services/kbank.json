@@ -150,7 +150,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -179,8 +179,12 @@
           }
         ],
         "content_sha256": "25473ae6a9d04a766c34a13ad7013b6685de5e10a554759df3cba582885e4718",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51QYh3cp7F3pCQ5madW\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "고객센터 은행 1522-1000 카드 1522-1155 해외 82-2-3778-9111",
+          "reason": "해외 전용 전화번호가 있으나 이것이 영어 상담을 지원하는지 여부는 명시되어 있지 않아 판단 근거가 부족합니다."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

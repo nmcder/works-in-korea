@@ -170,7 +170,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -199,8 +199,12 @@
           }
         ],
         "content_sha256": "0c9e66501e46d31e0d81246b21a966f7f92f65bbda8cd9c78863a1bd8ce9e0ee",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51ndEWWMY3X3LC9C3KM\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "고객문의 : support@travel-wallet.com 기업문의 : business@travel-wallet.com",
+          "reason": "고객문의 이메일이 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 영문 상담 가능 여부를 판단할 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

@@ -152,7 +152,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -167,7 +167,7 @@
           {
             "url": "https://www.yanolja.com",
             "status": 200,
-            "chars": 3898
+            "chars": 3899
           },
           {
             "url": "https://ad.yanolja.com/",
@@ -175,9 +175,13 @@
             "chars": 786
           }
         ],
-        "content_sha256": "669ca2a73da6e7820e67a766accf33ed03eedf7e2af29ae89755348694b0db7c",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51qbxCg4J2Sq6dvkb7e\"}",
+        "content_sha256": "132194025d2d9bb861b9b6d04c22de4d722ff9ae5d0e4862e180c69d3732b565",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "고객센터 1644-1346 오전 9시 ~ 새벽 5시 , 연중무휴",
+          "reason": "고객센터 전화번호는 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

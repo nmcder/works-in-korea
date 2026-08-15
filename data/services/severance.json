@@ -167,12 +167,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -197,8 +197,12 @@
           }
         ],
         "content_sha256": "c9e59d5c8a5d5aa1800fc2c4e3b3e9a10678683f2a52ee43e73b420056314acc",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51edf63JtLoLFfVoZwx\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "yes",
+          "quoted_evidence": "비자신청용 신체검사 신촌세브란스병원 국제진료센터(02-2228-5815) 문의",
+          "reason": "국제진료센터라는 외국인 환자 대상 전화 문의 채널이 명시되어 있어 영어 상담이 가능한 창구로 볼 수 있습니다."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

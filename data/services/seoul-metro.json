@@ -157,28 +157,14 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.seoulmetro.co.kr",
-            "status": 200,
-            "chars": 6
-          }
-        ],
-        "content_sha256": "fd70d1f8c36d20ea0ae4c09d14dacf004392374dccc316a25be239cc3ee73e15",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51fHX9moUUQAgbMRMXa\"}",
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.595,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "not_measured": "고객지원 페이지를 찾지 못함",
+        "hint": "hints.support_url 을 채우면 측정 가능해진다"
       }
     },
     "foreign_card": {

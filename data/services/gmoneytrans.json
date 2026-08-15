@@ -174,7 +174,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -203,8 +203,12 @@
           }
         ],
         "content_sha256": "52d1836da70fdce750854fcf7ba0843f92097937c321da3cd01aecc781f7bcd8",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51FLVKmZuRVcqMXDuGR\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "E-mail : help@gmoneytrans.com ... Support 1670-4565 Support : 10:00am to 10:00pm",
+          "reason": "이메일과 전화번호 등 지원 채널은 명시되어 있으나, 해당 채널이 영어로 응대 가능한지에 대한 명시적 언급이 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

@@ -150,7 +150,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -169,8 +169,12 @@
           }
         ],
         "content_sha256": "1c6ffb7a435ed905891cf27ec3e1604411423365ba01a1449bda0ac9e24a96b9",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51rjTfy1F3DfuxRefGD\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "고객센터 : 1544-6399",
+          "reason": "전화번호 고객센터만 명시되어 있고 영어 지원 여부에 대한 언급이 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

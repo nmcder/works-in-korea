@@ -160,18 +160,18 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "no",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
             "url": "https://help.danawa.com/",
             "status": 200,
-            "chars": 1934
+            "chars": 1945
           },
           {
             "url": "https://www.danawa.com",
@@ -189,13 +189,17 @@
             "chars": 10000
           }
         ],
-        "content_sha256": "5542b5c1ad2ecc94edef880b85e6a081163f1defd2de3759b87f29150f57ec72",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51CNH95gTMK8hjSMGLS\"}",
+        "content_sha256": "9666734a9d538b225917ebcc56ea45bafa428789c3cd8b7084cf3d3d183a3889",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "no",
+          "quoted_evidence": "전화: 1688-2470 (유료) / 팩스: 1688-2451 / 이메일: cs@cowave.kr",
+          "reason": "고객센터 채널(전화, 팩스, 이메일)은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없고, 전체적으로 한국어 전용 서비스로 보임."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.092,
+          "latin_ratio": 0.086,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

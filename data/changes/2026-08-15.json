@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T18:24:37.122Z",
+  "generated_at": "2026-08-15T22:47:28.669Z",
   "changes": [
     {
       "service_id": "gmarket",
@@ -2819,6 +2819,174 @@
         "country": "us",
         "region": "California",
         "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "chingu-mobile",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "aladin",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "danawa",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "kbstar",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "ktmmobile",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "oliveyoung-global",
+      "signal": "support_en",
+      "from": "yes",
+      "to": "unknown",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "ridibooks",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "safedriving",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "severance",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "srt",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "tmap",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "visitkorea",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "wirebarley",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T22:47:28.669Z",
+      "vantage_point": {
+        "country": "united kingdom",
+        "region": null,
+        "ip_asn": null
       }
     }
   ]

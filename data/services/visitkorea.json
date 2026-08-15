@@ -201,12 +201,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T03:17:07.455Z",
-      "last_changed_at": "2026-08-15T03:17:07.455Z",
+      "value": "yes",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -221,8 +221,12 @@
           }
         ],
         "content_sha256": "29c60ccdcc18f2b0d0b7020ef713d3ed7921cf22f10b1fdbfa3d45c1ce66abe0",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51oweK9cfXGoCTitqpF\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "yes",
+          "quoted_evidence": "1330 Helpline Call/Chat Start a FREE Online Call (No charges for calls on Wi-Fi / Data charges may apply) Open 1330 Helpline Chat (Download not required)",
+          "reason": "영어로 운영되는 국제관광객 대상 1330 헬프라인의 통화/채팅 창구가 영문 사이트에 명시되어 있어 영어 문의가 가능함을 알 수 있다."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

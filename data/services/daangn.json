@@ -178,7 +178,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -207,8 +207,12 @@
           }
         ],
         "content_sha256": "009165c6e1195effac1961489ad897e83483765d85b43a47ad169a562b888985",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51CbZr4eDM7AXhTEhsm\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "전화 1877-9737 고객문의 cs@daangnservice.com",
+          "reason": "고객센터 전화/이메일은 있으나 영어 지원 여부에 대한 명시적 언급이 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

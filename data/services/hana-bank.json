@@ -185,7 +185,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -199,8 +199,12 @@
           }
         ],
         "content_sha256": "bb2e2146468935b5e04a945c91fc98a7d6e193e685cab165458534067e8a5651",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51HtPX36ksfyP4zXV4m\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "Language 한국어 English 日本語 中文 Tieng Viet",
+          "reason": "페이지에 다국어 언어 선택 옵션은 있지만, 실제 고객센터(고객상담, 이메일상담, 전화상담예약 등)가 영어로 응대 가능한지에 대한 명시적 정보는 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

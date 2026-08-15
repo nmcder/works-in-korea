@@ -175,12 +175,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "no",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -201,16 +201,20 @@
           {
             "url": "https://ridibooks.com/comics/bestsellers",
             "status": 200,
-            "chars": 3269
+            "chars": 3210
           }
         ],
-        "content_sha256": "4339cd11cfa4387f759f50b2a80ee7a85b53bd3e9365c64c73c4ee46330cf1b6",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51bB9JjxNctcxCmAj8C\"}",
+        "content_sha256": "7bf22109bfc0d9952dfb33a28bb06c0e27df8aae03879ff6c42e854fd4021be8",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "no",
+          "quoted_evidence": "이메일 : help@ridi.com / 대표전화 : 1644-0331",
+          "reason": "고객센터에서 제공하는 연락처는 일반 이메일과 국내 전화번호뿐이며, 영어 전용 문의 채널에 대한 언급이 없어 한국어 전용으로 판단됨."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.179,
+          "latin_ratio": 0.177,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

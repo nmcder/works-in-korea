@@ -174,7 +174,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -193,8 +193,12 @@
           }
         ],
         "content_sha256": "e0ab3f90f429d9f3b185476dba3a7588d04ce7f547874eff49423f20ac608e36",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51rqHAdJyR4t9YubWh6\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "고객만족센터 : 1661-5270(유료) 24시간, 연중무휴 support@yogiyo.co.kr",
+          "reason": "고객센터 전화번호와 이메일은 명시되어 있으나, 영어 상담 가능 여부에 대한 언급이 전혀 없어 영어 지원 여부를 판단할 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

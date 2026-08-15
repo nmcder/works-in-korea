@@ -157,12 +157,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -182,8 +182,12 @@
           }
         ],
         "content_sha256": "d30e3dba279e1352ed677ec0a7a65644cca2a54e294297ab236291bf807bbf96",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce5196Kd3H6aiMJLyAwNM\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "yes",
+          "quoted_evidence": "Please contact us via the chatting room if you have further inquires.",
+          "reason": "영어(EN) 페이지에서 채팅 상담을 통해 문의하라고 안내하고 있어 영문 문의가 가능한 채널로 판단됨."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

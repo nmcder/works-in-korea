@@ -163,12 +163,12 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T22:47:28.669Z",
+      "first_seen_at": "2026-08-15T22:47:28.669Z",
+      "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
@@ -178,8 +178,12 @@
           }
         ],
         "content_sha256": "b3060129be87b9b37916182216e25cda1f05bc5df33ff68e174344009939fc0e",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51cAJjfbM7CDGfzw4LD\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "yes",
+          "quoted_evidence": "외국어 상담(채팅) 카카오톡 「한국도로교통공단 고객센터」채널",
+          "reason": "외국어 상담 채팅 채널이 명시되어 있어 영어 문의가 가능한 것으로 판단됨"
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

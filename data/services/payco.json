@@ -175,7 +175,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -199,8 +199,12 @@
           }
         ],
         "content_sha256": "1ecc72dbaff97b850cc75eaaaf51cc4672173dfe4b055019119d6ba79ec5b173",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51aHCQq94Mtbo7UKGfj\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": null,
+          "reason": "페이지에 고객지원 채널(이메일, 전화, 채팅 등) 자체에 대한 정보가 없어 영어 지원 여부를 판단할 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

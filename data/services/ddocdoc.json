@@ -166,7 +166,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -185,8 +185,12 @@
           }
         ],
         "content_sha256": "de04ff62abf582825567a2a27bb3198981dad1b9ad092191fab3e3a909715ce8",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51Bqmr1sSgx4sgWrXie\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "대표전화 : 1899-6826 이메일 : support@bbros.kr",
+          "reason": "고객지원 연락처(전화, 이메일)는 있으나 영어 지원 여부에 대한 명시가 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

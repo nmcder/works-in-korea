@@ -165,7 +165,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -179,8 +179,12 @@
           }
         ],
         "content_sha256": "523c88f6800b0f4d085e5bda866cf16eada1ac2fb5eb271d2ac1d84add0c2dfc",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51thLEMftJKbvLGiYjV\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "문의전화 02-1670-8050 이메일 info@kakaostyle.com",
+          "reason": "고객지원 연락처(전화, 이메일)는 명시되어 있으나 영어 지원 여부에 대한 언급이 없어 판단 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

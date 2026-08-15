@@ -171,7 +171,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-15T22:47:28.669Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -200,8 +200,12 @@
           }
         ],
         "content_sha256": "275907b66f1f1b438793f69501d81cc5ff96e9c595a6deceebd03a77891b257d",
-        "method_detail": "heuristic-fallback (LLM 호출 실패)",
-        "llm_error": "Error: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"model: String should have at least 1 character\"},\"request_id\":\"req_011Ce51NWrcNjVoxHRXYFFQT\"}",
+        "method_detail": "llm:claude-sonnet-5",
+        "llm": {
+          "value": "unknown",
+          "quoted_evidence": "카카오톡 상담을 통해 서비스 관련 문의를 해결하세요. 쉽고 빠르게 문의 접수가 가능하고, 전문상담사와의 채팅 상담을 통해 문제를 해결할 수 있습니다.",
+          "reason": "고객지원 채널(챗봇, 상담톡)은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
+        },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],

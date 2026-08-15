@@ -1,24 +1,26 @@
 {
-  "started_at": "2026-08-15T18:24:37.122Z",
-  "finished_at": "2026-08-15T18:35:01.768Z",
-  "duration_ms": 624646,
+  "started_at": "2026-08-15T22:47:28.669Z",
+  "finished_at": "2026-08-15T22:51:15.661Z",
+  "duration_ms": 226992,
   "vantage_point": {
     "id": "github-actions",
-    "country": "us",
-    "region": "California",
-    "ip_asn": "AS8075"
+    "country": "united kingdom",
+    "region": null,
+    "ip_asn": null
   },
   "services_total": 106,
   "services_probed": 106,
-  "signals_measured": 329,
-  "signals_unknown": 307,
-  "changes": 80,
+  "signals_measured": 13,
+  "signals_unknown": 93,
+  "changes": 14,
   "errors": [],
   "llm": {
-    "calls": 0,
+    "calls": 75,
     "cached": 0,
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "model": null
+    "input_tokens": 285189,
+    "output_tokens": 8516,
+    "model": "claude-sonnet-5",
+    "failures": 0,
+    "last_error": null
   }
 }
