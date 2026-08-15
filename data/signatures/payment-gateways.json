@@ -1,0 +1,115 @@
+{
+  "$comment": "공개적으로 접근 가능한 페이지에서 PG사·3DS 시그니처를 탐지한다. 결제 시도는 절대 하지 않는다(D-6). 대부분의 서비스는 결제 페이지가 로그인 뒤에 있으므로 unknown이 정상이며, 그 경우 커뮤니티 제보(foreign_card)로 채운다.",
+  "updated_at": "2026-08-15",
+  "gateways": [
+    {
+      "id": "inicis",
+      "name": "KG이니시스",
+      "url": ["inicis.com", "stdpay.inicis.com", "mobile.inicis.com", "stgstdpay.inicis.com"],
+      "text": ["이니시스", "INIpay"]
+    },
+    {
+      "id": "tosspayments",
+      "name": "토스페이먼츠",
+      "url": ["tosspayments.com", "js.tosspayments.com", "api.tosspayments.com", "pay.toss.im"],
+      "text": ["토스페이먼츠"]
+    },
+    {
+      "id": "nicepay",
+      "name": "나이스페이먼츠",
+      "url": ["nicepay.co.kr", "web.nicepay.co.kr", "pg.nicepay.co.kr"],
+      "text": ["나이스페이"]
+    },
+    {
+      "id": "kcp",
+      "name": "NHN KCP",
+      "url": ["kcp.co.kr", "pay.kcp.co.kr", "testpay.kcp.co.kr"],
+      "text": ["NHN KCP"]
+    },
+    {
+      "id": "kakaopay",
+      "name": "카카오페이",
+      "url": ["kakaopay.com", "kapi.kakao.com/v1/payment", "online-pay.kakao.com"],
+      "text": ["카카오페이"]
+    },
+    {
+      "id": "naverpay",
+      "name": "네이버페이",
+      "url": ["pay.naver.com", "nsp.pay.naver.com"],
+      "text": ["네이버페이", "N Pay"]
+    },
+    {
+      "id": "payco",
+      "name": "PAYCO",
+      "url": ["payco.com", "bill.payco.com"],
+      "text": ["페이코", "PAYCO"]
+    },
+    {
+      "id": "danal",
+      "name": "다날 (휴대폰 결제)",
+      "url": ["danalpay.com", "teledit.com"],
+      "text": ["휴대폰 결제", "다날"]
+    },
+    {
+      "id": "settle",
+      "name": "세틀뱅크",
+      "url": ["settlebank.co.kr", "nsp.settlebank.co.kr"],
+      "text": ["세틀뱅크"]
+    },
+    {
+      "id": "eximbay",
+      "name": "엑심베이 (해외카드 특화)",
+      "url": ["eximbay.com", "api.eximbay.com"],
+      "text": ["Eximbay"]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "url": ["paypal.com/sdk", "www.paypalobjects.com", "paypal.com/checkoutnow"],
+      "text": ["PayPal"]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "url": ["js.stripe.com", "api.stripe.com"],
+      "text": ["Stripe"]
+    },
+    {
+      "id": "adyen",
+      "name": "Adyen",
+      "url": ["checkoutshopper-live.adyen.com", "adyen.com"],
+      "text": ["Adyen"]
+    },
+    {
+      "id": "portone",
+      "name": "포트원 (아임포트)",
+      "url": ["iamport.kr", "portone.io", "cdn.iamport.kr", "cdn.portone.io"],
+      "text": ["아임포트", "포트원"]
+    },
+    {
+      "id": "smartro",
+      "name": "스마트로",
+      "url": ["smartro.co.kr", "pg.smartro.co.kr"],
+      "text": ["스마트로"]
+    },
+    {
+      "id": "kgmobilians",
+      "name": "KG모빌리언스",
+      "url": ["mobilians.co.kr", "www.mobilians.co.kr"],
+      "text": ["모빌리언스"]
+    }
+  ],
+  "three_ds": {
+    "$comment": "3-D Secure(해외 카드 인증) 시그니처. 국내 카드 ISP/안심클릭 계열은 해외 카드로는 통과 불가한 경우가 많아 별도 표기한다.",
+    "url": [
+      "acs.",
+      "3dsecure",
+      "threedsecure",
+      "secure5.arcot.com",
+      "mpi.",
+      "cardinalcommerce.com",
+      "songbird.cardinalcommerce.com"
+    ],
+    "text": ["3-D Secure", "3D Secure", "안심클릭", "ISP 결제", "안전결제"]
+  }
+}

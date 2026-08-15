@@ -1,0 +1,106 @@
+name: daily-probe
+
+# 하루 1회 측정 (크롤링 예의: 저빈도). UTC 18:00 = KST 03:00
+on:
+  schedule:
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: '특정 서비스만 (쉼표 구분, 예: coupang,toss). 비우면 전체'
+        required: false
+        default: ''
+      limit:
+        description: '앞에서 N개만 측정 (테스트용). 비우면 전체'
+        required: false
+        default: ''
+      signals:
+        description: '특정 시그널만 (쉼표 구분). 비우면 6종 전부'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+# 측정이 겹치면 같은 사이트에 두 배로 요청이 나간다. 절대 동시 실행하지 않는다.
+concurrency:
+  group: daily-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      WIK_PROJECT_URL: ${{ vars.WIK_PROJECT_URL }}
+      WIK_CONTACT: ${{ vars.WIK_CONTACT }}
+      WIK_LLM_MODEL: ${{ vars.WIK_LLM_MODEL }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Playwright 브라우저 캐시
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Playwright chromium 설치
+        run: npx playwright install --with-deps chromium
+
+      - name: 측정 실행
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.only }}" ];    then ARGS="$ARGS --only=${{ github.event.inputs.only }}"; fi
+          if [ -n "${{ github.event.inputs.limit }}" ];   then ARGS="$ARGS --limit=${{ github.event.inputs.limit }}"; fi
+          if [ -n "${{ github.event.inputs.signals }}" ]; then ARGS="$ARGS --signals=${{ github.event.inputs.signals }}"; fi
+          npm run probe -- $ARGS
+
+      - name: 스키마 검증
+        run: npm run validate
+
+      - name: 결과 커밋
+        run: |
+          git config user.name  "works-in-korea-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          CHANGED=$(node -e "
+            const fs=require('fs');
+            const d=new Date().toISOString().slice(0,10);
+            try{ console.log(JSON.parse(fs.readFileSync('data/changes/'+d+'.json','utf8')).changes.length); }
+            catch{ console.log(0); }
+          ")
+          git commit -m "measure: $(date -u +%Y-%m-%d) (값 변경 ${CHANGED}건)"
+          git push
+
+      - name: 실행 요약
+        if: always()
+        run: |
+          echo "### 측정 요약" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/runs/latest.json ]; then
+            node -e "
+              const s = require('./data/runs/latest.json');
+              const out = [
+                '- 측정 지점: ' + s.vantage_point.country + ' (' + (s.vantage_point.region ?? '-') + ')',
+                '- 서비스: ' + s.services_probed + ' / ' + s.services_total,
+                '- 측정 성공: ' + s.signals_measured + ' · unknown: ' + s.signals_unknown,
+                '- 값 변경: ' + s.changes + '건',
+                '- 오류: ' + s.errors.length + '건',
+                '- 소요: ' + (s.duration_ms/1000).toFixed(0) + '초',
+              ].join('\n');
+              console.log(out);
+            " >> $GITHUB_STEP_SUMMARY
+          fi

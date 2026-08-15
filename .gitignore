@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
+
+# 프로브 실행 중 생기는 임시 산출물 (커밋 대상 아님)
+.cache/
+tmp/
+playwright-report/
+test-results/

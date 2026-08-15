@@ -1,0 +1,35 @@
+name: validate
+
+# 코드나 데이터가 바뀔 때마다 타입 + 스키마 검증. 크론이 깨진 데이터를 커밋하는 걸 막는다.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: 타입 검사
+        run: npm run typecheck
+      - name: 시드 동기화 확인 (시드와 데이터가 어긋나지 않는지)
+        run: |
+          npm run seed
+          if ! git diff --quiet data/; then
+            echo "::error::시드와 data/services 가 어긋나 있다. 로컬에서 'npm run seed' 후 커밋할 것."
+            git diff --stat data/
+            exit 1
+          fi
+      - name: 스키마 검증
+        run: npm run validate

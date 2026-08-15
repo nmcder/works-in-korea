@@ -1,0 +1,206 @@
+{
+  "id": "modetour",
+  "name": {
+    "en": "Mode Tour",
+    "ko": "모두투어"
+  },
+  "url": "https://www.modetour.com",
+  "category": "accommodation",
+  "importance": 3,
+  "hints": {
+    "signup_url": null,
+    "checkout_url": null,
+    "support_url": null,
+    "english_url": null,
+    "ios_app_id": null,
+    "android_package": null
+  },
+  "signals": {
+    "overseas_access": {
+      "value": "ok",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:48:11.388Z",
+      "last_changed_at": null,
+      "method": "auto:overseas_access",
+      "confidence": "auto",
+      "evidence": {
+        "vantage_points": [
+          {
+            "id": "github-actions",
+            "country": "kr",
+            "http_status": 200,
+            "final_url": "https://www.modetour.com/",
+            "redirected": false,
+            "elapsed_ms": 2358,
+            "body_sha256": "3b39ee9c7dbe5d990bb50f2bf43e28ffb8a31ac2549a0f0b13cd7b40d0c1ae78",
+            "content_type": "text/html; charset=utf-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
+          }
+        ],
+        "note": null
+      }
+    },
+    "i18n_ui": {
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:i18n_ui",
+      "confidence": "auto",
+      "evidence": {
+        "declared_html_lang": "ko",
+        "hreflang": [],
+        "language_switcher_links": {},
+        "english_url_checks": [
+          {
+            "url": "https://www.modetour.com/en",
+            "status": 404,
+            "ok": false
+          },
+          {
+            "url": "https://www.modetour.com/en/",
+            "status": 404,
+            "ok": false
+          }
+        ],
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0.122,
+        "hangul_char_ratio": 0.519,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+      }
+    },
+    "signup_phone_auth": {
+      "value": "unknown",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:signup_phone_auth",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "가입 페이지를 찾지 못함",
+        "attempts": [
+          {
+            "url": "https://www.modetour.com/join",
+            "status": 404,
+            "used": false
+          },
+          {
+            "url": "https://www.modetour.com/signup",
+            "status": 404,
+            "used": false
+          },
+          {
+            "url": "https://www.modetour.com/member/join",
+            "status": 404,
+            "used": false
+          },
+          {
+            "url": "https://www.modetour.com/register",
+            "status": 404,
+            "used": false
+          },
+          {
+            "url": "https://www.modetour.com/user/join",
+            "status": 404,
+            "used": false
+          }
+        ],
+        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+      }
+    },
+    "app_availability": {
+      "value": null,
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:app_availability",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "앱 ID 미상",
+        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
+      }
+    },
+    "payment_gate": {
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:payment_gate",
+      "confidence": "auto",
+      "evidence": {
+        "scanned": [
+          {
+            "url": "https://www.modetour.com",
+            "status": 200,
+            "scanned": true
+          }
+        ],
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
+      }
+    },
+    "support_en": {
+      "value": "unknown",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:support_en",
+      "confidence": "unknown",
+      "evidence": {
+        "pages": [
+          {
+            "url": "https://www.modetour.com",
+            "status": 200,
+            "chars": 2559
+          },
+          {
+            "url": "https://www.modetour.com/customer-center",
+            "status": 200,
+            "chars": 552
+          }
+        ],
+        "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
+        "heuristic": {
+          "value": "unknown",
+          "strong_markers": [],
+          "latin_ratio": 0.12,
+          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
+        }
+      }
+    },
+    "foreign_card": {
+      "value": "unknown",
+      "measured_at": null,
+      "first_seen_at": null,
+      "last_changed_at": null,
+      "method": "none",
+      "confidence": "unknown",
+      "evidence": null
+    },
+    "foreign_phone_sms": {
+      "value": "unknown",
+      "measured_at": null,
+      "first_seen_at": null,
+      "last_changed_at": null,
+      "method": "none",
+      "confidence": "unknown",
+      "evidence": null
+    }
+  },
+  "notes": {
+    "en": null,
+    "ko": null
+  }
+}

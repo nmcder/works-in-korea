@@ -1,0 +1,150 @@
+{
+  "id": "cgv",
+  "name": {
+    "en": "CGV",
+    "ko": "CGV"
+  },
+  "url": "http://www.cgv.co.kr",
+  "category": "ticketing",
+  "importance": 1,
+  "hints": {
+    "signup_url": null,
+    "checkout_url": null,
+    "support_url": null,
+    "english_url": null,
+    "ios_app_id": null,
+    "android_package": null
+  },
+  "signals": {
+    "overseas_access": {
+      "value": "unknown",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:48:11.388Z",
+      "last_changed_at": null,
+      "method": "auto:overseas_access",
+      "confidence": "unknown",
+      "evidence": {
+        "vantage_points": [
+          {
+            "id": "github-actions",
+            "country": "kr",
+            "http_status": 403,
+            "final_url": "https://cgv.co.kr/",
+            "redirected": true,
+            "elapsed_ms": 2083,
+            "body_sha256": "ae86317b69861afffaa739175e6afff85589451b6673bae58874322fc01cb3e3",
+            "content_type": "text/html; charset=UTF-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
+          }
+        ],
+        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+      }
+    },
+    "i18n_ui": {
+      "value": null,
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:i18n_ui",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "http_status=403",
+        "http_status": 403,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+      }
+    },
+    "signup_phone_auth": {
+      "value": "unknown",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:signup_phone_auth",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "가입 페이지를 찾지 못함",
+        "attempts": [
+          {
+            "url": "http://www.cgv.co.kr/join",
+            "status": 403,
+            "used": false
+          },
+          {
+            "url": "http://www.cgv.co.kr (이하 후보)",
+            "status": 403,
+            "used": false,
+            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+          }
+        ],
+        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+      }
+    },
+    "app_availability": {
+      "value": null,
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:app_availability",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "앱 ID 미상",
+        "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
+        "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
+      }
+    },
+    "payment_gate": {
+      "value": null,
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:payment_gate",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
+        "scanned": [
+          {
+            "url": "http://www.cgv.co.kr",
+            "status": 403,
+            "scanned": false,
+            "reason": "http_status=403"
+          }
+        ],
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+      }
+    },
+    "support_en": {
+      "value": "unknown",
+      "measured_at": "2026-08-15T02:51:04.464Z",
+      "first_seen_at": "2026-08-15T02:51:04.464Z",
+      "last_changed_at": null,
+      "method": "auto:support_en",
+      "confidence": "unknown",
+      "evidence": {
+        "not_measured": "고객지원 페이지를 찾지 못함",
+        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+      }
+    },
+    "foreign_card": {
+      "value": "unknown",
+      "measured_at": null,
+      "first_seen_at": null,
+      "last_changed_at": null,
+      "method": "none",
+      "confidence": "unknown",
+      "evidence": null
+    },
+    "foreign_phone_sms": {
+      "value": "unknown",
+      "measured_at": null,
+      "first_seen_at": null,
+      "last_changed_at": null,
+      "method": "none",
+      "confidence": "unknown",
+      "evidence": null
+    }
+  },
+  "notes": {
+    "en": null,
+    "ko": null
+  }
+}

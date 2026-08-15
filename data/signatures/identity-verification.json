@@ -1,0 +1,82 @@
+{
+  "$comment": "가입 페이지에서 '한국 휴대폰 본인인증'이 걸려 있는지 탐지하기 위한 시그니처. url = 스크립트/iframe URL에 포함되는 문자열, text = DOM 텍스트에 나타나는 문자열. 오탐을 줄이려면 url 시그니처를 우선 신뢰할 것.",
+  "updated_at": "2026-08-15",
+  "vendors": [
+    {
+      "id": "pass",
+      "name": "PASS (통신 3사 본인확인)",
+      "url": ["cert.vno.co.kr", "nice.checkplus.co.kr/CheckPlusSafeModel", "passauth", "pass.co.kr"],
+      "text": ["PASS 인증", "PASS로 인증", "통신사 본인확인", "휴대폰 본인확인"]
+    },
+    {
+      "id": "nice",
+      "name": "NICE평가정보 본인확인",
+      "url": ["nice.checkplus.co.kr", "niceapi.co.kr", "checkplus.co.kr", "nicepay.co.kr/cert"],
+      "text": ["NICE평가정보", "나이스평가정보", "체크플러스"]
+    },
+    {
+      "id": "kcb",
+      "name": "KCB 코리아크레딧뷰로 본인확인",
+      "url": ["safe.ok-name.co.kr", "okname.net", "kcb.co.kr", "ok-name.co.kr"],
+      "text": ["코리아크레딧뷰로", "KCB 본인확인"]
+    },
+    {
+      "id": "kmcert",
+      "name": "KMC 한국모바일인증",
+      "url": ["kmcert.com", "www.kmcert.com"],
+      "text": ["한국모바일인증"]
+    },
+    {
+      "id": "danal",
+      "name": "다날 본인인증",
+      "url": ["danalpay.com", "teledit.com", "danal.co.kr"],
+      "text": ["다날 본인인증"]
+    },
+    {
+      "id": "toss-cert",
+      "name": "토스인증서",
+      "url": ["cert.toss.im", "tosscert"],
+      "text": ["토스인증서", "토스로 인증"]
+    },
+    {
+      "id": "kakao-cert",
+      "name": "카카오 인증서",
+      "url": ["cert.kakao.com", "accounts.kakao.com/certification"],
+      "text": ["카카오 인증서", "카카오톡 지갑"]
+    },
+    {
+      "id": "pcc",
+      "name": "금융결제원 공동인증/금융인증",
+      "url": ["yessign.or.kr", "signkorea.com", "kftc.or.kr/cert"],
+      "text": ["공동인증서", "금융인증서", "공인인증서"]
+    },
+    {
+      "id": "generic-phone-auth",
+      "name": "일반 휴대폰 본인인증 문구",
+      "url": [],
+      "text": ["휴대폰 본인인증", "본인인증", "휴대폰 인증", "실명확인", "실명인증", "성인인증"]
+    }
+  ],
+  "alternative_signup_markers": {
+    "$comment": "본인인증 위젯이 있어도 이런 대안 가입 경로가 함께 보이면 required 대신 optional로 판정한다.",
+    "text": [
+      "이메일로 가입",
+      "이메일 가입",
+      "Sign up with email",
+      "Continue with Google",
+      "Continue with Apple",
+      "구글로 시작",
+      "애플로 시작",
+      "네이버로 시작",
+      "카카오로 시작",
+      "Sign in with Google",
+      "Sign up with Apple"
+    ],
+    "url": [
+      "accounts.google.com/o/oauth2",
+      "appleid.apple.com/auth",
+      "www.facebook.com/v",
+      "nid.naver.com/oauth2"
+    ]
+  }
+}
