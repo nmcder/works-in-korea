@@ -18,6 +18,7 @@
 
 | 명령어 | 하는 일 |
 |---|---|
+| `npm run hints` | **운영자 작업 목록 생성** → [docs/05-hints-todo.md](docs/05-hints-todo.md) |
 | `npm run seed` | 서비스 목록을 수정한 뒤 실행. 목록 → 데이터 파일 동기화 |
 | `npm run probe` | 측정 1회 실행 (전체 약 8분) |
 | `npm run validate` | 데이터가 규칙을 지키는지 검사 |
@@ -70,10 +71,11 @@ npm run probe -- --limit=5 --dry-run     # 파일에 쓰지 않고 결과만 출
 
 ### 운영자가 하면 코앞에서 좋아지는 것 2가지
 
-1. **`hints.signup_url` 채우기** — 우선순위 1등급 서비스 30개만 채워도 본인인증 시그널이 살아난다.
-   각 서비스 JSON의 `signals.signup_phone_auth.evidence.attempts` 에 어떤 주소를 시도했는지 남아 있다.
-2. **`ANTHROPIC_API_KEY` 를 저장소 Secret으로 등록** — 영문 지원 시그널이 켜진다.
-   비용은 아래 참조.
+1. **힌트 채우기** — `npm run hints` 를 실행하면 [docs/05-hints-todo.md](docs/05-hints-todo.md) 에
+   "어느 서비스에 무엇을 채워야 하는지"가 우선순위 순으로 나온다.
+   봇이 이미 시도해 본 주소와 실패 사유까지 같이 나오므로, 사이트에 들어가 주소만 복사해 오면 된다.
+   우선순위 1등급 30개만 해도 충분하다.
+2. **`ANTHROPIC_API_KEY` 를 저장소 Secret으로 등록** — 영문 지원 시그널이 켜진다. 비용은 아래 참조.
 
 ---
 
@@ -102,13 +104,26 @@ npm run probe -- --limit=5 --dry-run     # 파일에 쓰지 않고 결과만 출
 | Secret | `ANTHROPIC_API_KEY` | Claude API 키 | 선택 (없으면 `support_en` 이 unknown으로 남음) |
 | Variable | `WIK_PROJECT_URL` | 공개 사이트 주소 | 선택 (도메인 정해지면) |
 | Variable | `WIK_CONTACT` | 정정 요청 받을 주소 | 선택 |
-| Variable | `WIK_LLM_MODEL` | 기본 `claude-opus-5` | 선택 |
+| Variable | `WIK_LLM_MODEL` | 기본 `claude-sonnet-5` | 선택 |
 
 **Actions 사용량**: 1회 약 8분 → 월 약 250분. Free 플랜 2,000분의 **12%**. 여유가 크다.
 
-**LLM 비용**: `support_en` 을 켜면 106개 서비스 × 하루 1회 기준 월 4~7만원 예상 (`claude-opus-5`).
-예산이 부담되면 Variable `WIK_LLM_MODEL` 을 `claude-haiku-4-5` 로 두면 월 1만원 수준으로 내려간다.
-분류 난이도가 높지 않은 작업이라 실용적인 선택지다 — 운영자가 정할 문제라 기본값은 건드리지 않았다.
+### LLM 비용 — 매일 전부 분류하지 않는다
+
+고객지원 페이지는 거의 바뀌지 않으므로, **페이지 내용이 지난번과 같으면 LLM을 호출하지 않고
+이전 판정을 그대로 유지**한다 (`measured_at` 은 갱신되므로 신선도 정보는 유지된다).
+날짜·조회수처럼 매일 바뀌는 숫자는 해시 계산에서 제외해, 실제 내용이 바뀔 때만 다시 묻는다.
+
+| | `claude-sonnet-5` (기본) | `claude-haiku-4-5` |
+|---|---|---|
+| 첫 실행 (전량 분류) | 약 3,000원 (1회성) | 약 1,000원 |
+| 이후 매달 (바뀐 것만) | **1만원 안팎** | 3천원 안팎 |
+
+이 장치가 없으면 매일 106건을 다시 분류해 Sonnet 5 기준 월 15만원을 넘긴다.
+강제로 전부 다시 분류하려면 `WIK_LLM_FORCE=1 npm run probe` 를 쓴다.
+
+LLM에 보내는 글자 수는 서비스당 8,000자로 제한돼 있다 (`WIK_LLM_MAX_CHARS` 로 조절).
+늘리면 판정 정확도가 조금 오르고 비용이 비례해서 오른다.
 
 ---
 

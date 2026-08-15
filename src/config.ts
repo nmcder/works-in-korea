@@ -71,11 +71,22 @@ export const ROBOTS_EXEMPT_PREFIXES = [
   'https://itunes.apple.com/lookup', // iTunes Search API — Apple이 공개한 조회용 엔드포인트
 ];
 
-/** support_en 분류에 쓰는 LLM. 키가 없으면 휴리스틱만 쓰고 unknown으로 남긴다. */
+/**
+ * support_en 분류에 쓰는 LLM. 키가 없으면 휴리스틱만 쓰고 unknown으로 남긴다.
+ *
+ * 비용 통제: 고객지원 페이지는 거의 바뀌지 않으므로 매일 전부 다시 분류하지 않는다.
+ * 페이지 본문 해시가 지난번과 같으면 LLM을 호출하지 않고 이전 판정을 유지한다
+ * (measured_at 은 갱신되므로 신선도 정보는 유지된다).
+ * WIK_LLM_FORCE=1 로 강제 재분류할 수 있다.
+ */
 export const LLM = {
   apiKey: process.env.ANTHROPIC_API_KEY ?? null,
-  model: process.env.WIK_LLM_MODEL ?? 'claude-opus-5',
+  model: process.env.WIK_LLM_MODEL ?? 'claude-sonnet-5',
   enabled: Boolean(process.env.ANTHROPIC_API_KEY),
+  /** 내용이 그대로여도 다시 분류할지 */
+  force: process.env.WIK_LLM_FORCE === '1',
+  /** LLM에 보낼 최대 글자 수. 늘리면 정확도가 조금 오르고 비용이 비례해서 오른다. */
+  maxInputChars: num('WIK_LLM_MAX_CHARS', 8000),
 };
 
 /** app_availability 조회 대상 국가 (kr는 기준선) */

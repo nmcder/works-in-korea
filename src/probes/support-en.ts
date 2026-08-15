@@ -10,9 +10,9 @@
  */
 import Anthropic from '@anthropic-ai/sdk';
 import { LLM } from '../config.js';
-import { extractLinks, politeFetch, visibleText } from '../lib/http.js';
+import { extractLinks, politeFetch, sha256, visibleText } from '../lib/http.js';
 import { errMessage, log } from '../lib/log.js';
-import type { ProbeResult, Service, SupportEnValue } from '../types.js';
+import type { ProbeResult, Service, Signal, SupportEnValue } from '../types.js';
 
 const SUPPORT_LINK_HINTS = [
   'help',
@@ -48,7 +48,10 @@ function llm(): Anthropic {
   return client;
 }
 
-export async function probeSupportEn(service: Service): Promise<ProbeResult<SupportEnValue>> {
+export async function probeSupportEn(
+  service: Service,
+  previous?: Signal<SupportEnValue>,
+): Promise<ProbeResult<SupportEnValue>> {
   const pages = await collectSupportPages(service);
 
   if (pages.length === 0) {
@@ -62,15 +65,37 @@ export async function probeSupportEn(service: Service): Promise<ProbeResult<Supp
     };
   }
 
-  const combined = pages.map((p) => `# ${p.url}\n${p.text}`).join('\n\n').slice(0, 24000);
+  const combined = pages
+    .map((p) => `# ${p.url}\n${p.text}`)
+    .join('\n\n')
+    .slice(0, LLM.maxInputChars);
+  const contentHash = sha256(normalizeForHash(combined));
   const heuristic = classifyHeuristic(combined);
+  const pageMeta = pages.map((p) => ({ url: p.url, status: p.status, chars: p.text.length }));
+
+  // 내용이 지난번과 같으면 다시 물어보지 않는다. 이게 이 프로브의 유일한 비용 통제 장치다.
+  const prevHash = (previous?.evidence as { content_sha256?: string } | null | undefined)?.content_sha256;
+  const prevUsedLlm = typeof (previous?.evidence as { llm?: unknown } | null | undefined)?.llm === 'object';
+  if (!LLM.force && prevUsedLlm && prevHash === contentHash && previous?.value !== undefined) {
+    return {
+      value: previous.value,
+      confidence: previous.confidence === 'unknown' ? 'unknown' : 'auto',
+      evidence: {
+        ...(previous.evidence ?? {}),
+        pages: pageMeta,
+        content_sha256: contentHash,
+        reused: '고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)',
+      },
+    };
+  }
 
   if (!LLM.enabled) {
     return {
       value: heuristic.value,
       confidence: heuristic.value === 'unknown' ? 'unknown' : 'auto',
       evidence: {
-        pages: pages.map((p) => ({ url: p.url, status: p.status, chars: p.text.length })),
+        pages: pageMeta,
+        content_sha256: contentHash,
         method_detail: 'heuristic-only (ANTHROPIC_API_KEY 미설정)',
         heuristic,
       },
@@ -83,7 +108,8 @@ export async function probeSupportEn(service: Service): Promise<ProbeResult<Supp
       value: verdict.value,
       confidence: verdict.value === 'unknown' ? 'unknown' : 'auto',
       evidence: {
-        pages: pages.map((p) => ({ url: p.url, status: p.status, chars: p.text.length })),
+        pages: pageMeta,
+        content_sha256: contentHash,
         method_detail: `llm:${LLM.model}`,
         llm: verdict,
         heuristic,
@@ -95,7 +121,8 @@ export async function probeSupportEn(service: Service): Promise<ProbeResult<Supp
       value: heuristic.value,
       confidence: heuristic.value === 'unknown' ? 'unknown' : 'auto',
       evidence: {
-        pages: pages.map((p) => ({ url: p.url, status: p.status, chars: p.text.length })),
+        pages: pageMeta,
+        content_sha256: contentHash,
         method_detail: 'heuristic-fallback (LLM 호출 실패)',
         llm_error: errMessage(e),
         heuristic,
@@ -252,4 +279,18 @@ async function classifyWithLlm(service: Service, text: string): Promise<LlmVerdi
 
 function round(n: number): number {
   return Math.round(n * 1000) / 1000;
+}
+
+/**
+ * 재분류 여부를 판단하기 위한 해시 정규화.
+ *
+ * 고객센터 페이지에는 날짜·조회수·배너 순번처럼 매일 바뀌지만 판정과 무관한 값이 섞여 있다.
+ * 이걸 그대로 해시하면 매일 캐시가 깨져서 비용 통제 장치가 무력해진다.
+ * 숫자와 공백만 정규화하고 문장은 건드리지 않는다 (판정 근거는 보존).
+ */
+function normalizeForHash(text: string): string {
+  return text
+    .replace(/\d+/g, '#')
+    .replace(/\s+/g, ' ')
+    .trim();
 }

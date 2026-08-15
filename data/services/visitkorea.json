@@ -184,9 +184,9 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T02:51:04.464Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-15T03:19:01.018Z",
+      "first_seen_at": "2026-08-15T03:17:07.455Z",
+      "last_changed_at": "2026-08-15T03:17:07.455Z",
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
@@ -202,11 +202,12 @@
             "chars": 8788
           }
         ],
+        "content_sha256": "29c60ccdcc18f2b0d0b7020ef713d3ed7921cf22f10b1fdbfa3d45c1ce66abe0",
         "method_detail": "heuristic-only (ANTHROPIC_API_KEY 미설정)",
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.806,
+          "latin_ratio": 0.814,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

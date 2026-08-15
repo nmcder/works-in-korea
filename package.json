@@ -13,7 +13,8 @@
     "probe": "tsx src/run-probes.ts",
     "validate": "tsx src/validate.ts",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run validate"
+    "check": "npm run typecheck && npm run validate",
+    "hints": "tsx src/hints-todo.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

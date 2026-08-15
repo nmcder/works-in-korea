@@ -204,7 +204,8 @@ async function runProbe(
     case 'payment_gate':
       return probePaymentGate(service);
     case 'support_en':
-      return probeSupportEn(service);
+      // 이전 판정을 넘겨서, 페이지 내용이 그대로면 LLM을 다시 호출하지 않게 한다 (비용 통제)
+      return probeSupportEn(service, service.signals.support_en);
     default: {
       const exhaustive: never = key;
       throw new Error(`알 수 없는 시그널: ${String(exhaustive)}`);
