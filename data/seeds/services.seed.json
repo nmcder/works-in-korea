@@ -220,7 +220,9 @@
       "category": "ticketing",
       "importance": 1,
       "hints": {
-        "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15"
+        "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
+        "ios_app_id": "1103635576",
+        "android_package": "com.iloen.melonticket"
       }
     },
     {
@@ -262,7 +264,9 @@
       "category": "ticketing",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point"
+        "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
+        "ios_app_id": "601280722",
+        "android_package": "kr.co.lottecinema.lcm"
       }
     },
     {
@@ -711,7 +715,9 @@
       "category": "finance",
       "importance": 1,
       "hints": {
-        "support_url": "https://support.kakaopay.com/web/faq-list/all"
+        "support_url": "https://support.kakaopay.com/web/faq-list/all",
+        "ios_app_id": "1464496236",
+        "android_package": "com.kakaopay.app"
       }
     },
     {
@@ -724,7 +730,9 @@
       "category": "finance",
       "importance": 1,
       "hints": {
-        "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko"
+        "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
+        "ios_app_id": "1554807824",
+        "android_package": "com.naverfin.payapp"
       }
     },
     {
@@ -794,7 +802,9 @@
       "category": "finance",
       "importance": 1,
       "hints": {
-        "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F"
+        "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
+        "ios_app_id": "373742138",
+        "android_package": "com.kbstar.kbbank"
       }
     },
     {
@@ -807,7 +817,9 @@
       "category": "finance",
       "importance": 1,
       "hints": {
-        "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000"
+        "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
+        "ios_app_id": "357484932",
+        "android_package": "com.shinhan.sbanking"
       }
     },
     {
@@ -846,7 +858,11 @@
       },
       "url": "https://banking.nonghyup.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1444712671",
+        "android_package": "nh.smart.banking"
+      }
     },
     {
       "id": "ibk",
@@ -870,7 +886,11 @@
       },
       "url": "https://www.hanpass.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1344407760",
+        "android_package": "com.hanpass.remittance"
+      }
     },
     {
       "id": "wirebarley",
@@ -894,7 +914,11 @@
       },
       "url": "https://www.sentbe.com",
       "category": "finance",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "1115554824",
+        "android_package": "com.sentbe"
+      }
     },
     {
       "id": "gmoneytrans",
@@ -1113,7 +1137,9 @@
       "category": "government",
       "importance": 1,
       "hints": {
-        "signup_url": "https://plus.gov.kr/member/signUpAgree"
+        "signup_url": "https://plus.gov.kr/member/signUpAgree",
+        "ios_app_id": "586454505",
+        "android_package": "kr.go.minwon.m"
       }
     },
     {
@@ -1184,7 +1210,11 @@
       },
       "url": "https://english.visitkorea.or.kr",
       "category": "government",
-      "importance": 1
+      "importance": 1,
+      "hints": {
+        "ios_app_id": "417340885",
+        "android_package": "com.visitkorea.eng"
+      }
     },
     {
       "id": "seoul-global",
@@ -1323,7 +1353,11 @@
       },
       "url": "https://www.daum.net",
       "category": "culture",
-      "importance": 2
+      "importance": 2,
+      "hints": {
+        "ios_app_id": "365494029",
+        "android_package": "net.daum.android.daum"
+      }
     },
     {
       "id": "kakaotalk",

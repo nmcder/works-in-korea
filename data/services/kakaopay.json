@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": "https://support.kakaopay.com/web/faq-list/all",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "1464496236",
+    "android_package": "com.kakaopay.app",
     "no_app": null
   },
   "signals": {

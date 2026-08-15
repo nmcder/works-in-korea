@@ -1,7 +1,7 @@
 # 운영자 작업 목록 — 힌트 채우기
 
 > 이 파일은 `npm run hints` 로 자동 생성됩니다. 직접 고치지 마세요.
-> 생성 시각: 2026-08-15T08:52:14.874Z
+> 생성 시각: 2026-08-15T09:01:37.116Z
 
 ## 하는 법 (한 항목당 1~2분)
 
@@ -41,18 +41,18 @@
 | **[여기어때](https://www.yeogi.com)**<br><sub>`goodchoice`</sub> | support_url | `/login` → hints.signup_url |
 | **[놀 인터파크 글로벌](https://world.nol.com)**<br><sub>`interpark-global`</sub> | support_url, 앱 ID | `/en/auth-web/email-join` → hints.signup_url |
 | **[카카오 T](https://www.kakaomobility.com)**<br><sub>`kakao-t`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[카카오페이](https://www.kakaopay.com)**<br><sub>`kakaopay`</sub> | signup_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[카카오페이](https://www.kakaopay.com)**<br><sub>`kakaopay`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[카카오톡](https://www.kakaocorp.com)**<br><sub>`kakaotalk`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[KB국민은행](https://www.kbstar.com)**<br><sub>`kbstar`</sub> | support_url, 앱 ID | `/quics` → hints.signup_url |
-| **[롯데시네마](https://www.lottecinema.co.kr)**<br><sub>`lotte-cinema`</sub> | support_url, 앱 ID | `/NLCHS/Membership/l_point` → hints.signup_url |
-| **[멜론티켓](https://ticket.melon.com)**<br><sub>`melon-ticket`</sub> | support_url, 앱 ID | `/join/choice` → hints.signup_url |
+| **[KB국민은행](https://www.kbstar.com)**<br><sub>`kbstar`</sub> | support_url | `/quics` → hints.signup_url |
+| **[롯데시네마](https://www.lottecinema.co.kr)**<br><sub>`lotte-cinema`</sub> | support_url | `/NLCHS/Membership/l_point` → hints.signup_url |
+| **[멜론티켓](https://ticket.melon.com)**<br><sub>`melon-ticket`</sub> | support_url | `/join/choice` → hints.signup_url |
 | **[네이버](https://www.naver.com)**<br><sub>`naver`</sub> | support_url | `/account/signup/term` → hints.signup_url |
 | **[네이버 지도](https://map.naver.com)**<br><sub>`naver-map`</sub> | support_url | `/nidlogin.login` → hints.signup_url |
-| **[네이버페이](https://pay.naver.com)**<br><sub>`naverpay`</sub> | signup_url, 앱 ID | `/join` → 200 |
+| **[네이버페이](https://pay.naver.com)**<br><sub>`naverpay`</sub> | signup_url | `/join` → 200 |
 | **[국민건강보험공단](https://www.nhis.or.kr)**<br><sub>`nhis`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[SKT 티월드](https://www.tworld.co.kr)**<br><sub>`skt`</sub> | support_url, 앱 ID | `/web/login/tid-join` → hints.signup_url |
 | **[토스](https://toss.im)**<br><sub>`toss`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[한국관광공사 비지트코리아](https://english.visitkorea.or.kr)**<br><sub>`visitkorea`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[한국관광공사 비지트코리아](https://english.visitkorea.or.kr)**<br><sub>`visitkorea`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[요기요](https://www.yogiyo.co.kr)**<br><sub>`yogiyo`</sub> | support_url | `/mobile/` → hints.signup_url |
 
 ### 우선순위 2등급
@@ -62,16 +62,16 @@
 | **[서울아산병원](https://www.amc.seoul.kr)**<br><sub>`amc`</sub> | 앱 ID | `/asan/member/join/intro.do` → hints.signup_url |
 | **[친구모바일](https://www.chingumobile.com)**<br><sub>`chingu-mobile`</sub> | 앱 ID | `/index/signup` → hints.signup_url |
 | **[당근마켓](https://www.daangn.com)**<br><sub>`daangn`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[다음](https://www.daum.net)**<br><sub>`daum`</sub> | signup_url, support_url, 앱 ID | `/join` → robots: Disallow: / |
+| **[다음](https://www.daum.net)**<br><sub>`daum`</sub> | signup_url, support_url | `/join` → robots: Disallow: / |
 | **[지머니트랜스](https://www.gmoneytrans.com)**<br><sub>`gmoneytrans`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[하나은행](https://www.kebhana.com)**<br><sub>`hana-bank`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
-| **[한패스](https://www.hanpass.com)**<br><sub>`hanpass`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
+| **[한패스](https://www.hanpass.com)**<br><sub>`hanpass`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[건강보험심사평가원](https://www.hira.or.kr)**<br><sub>`hira`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[마켓컬리](https://www.kurly.com)**<br><sub>`kurly`</sub> | signup_url, support_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[국립중앙박물관](https://www.museum.go.kr)**<br><sub>`national-museum`</sub> | support_url, 앱 ID | `/MUSEUM/contents/membership.do` → hints.signup_url |
 | **[예술의전당](https://www.sac.or.kr)**<br><sub>`sac`</sub> | 앱 ID | `/site/main/membership/member_step_membership` → hints.signup_url |
 | **[삼성서울병원](http://www.samsunghospital.com)**<br><sub>`samsung-hospital`</sub> | signup_url, support_url, 앱 ID | `/join` → 400<br>`/signup` → 400<br>`/member/join` → 400<br>`/register` → 400<br>`/user/join` → 400 |
-| **[센트비](https://www.sentbe.com)**<br><sub>`sentbe`</sub> | signup_url, support_url, 앱 ID | `/join` → 200 |
+| **[센트비](https://www.sentbe.com)**<br><sub>`sentbe`</sub> | signup_url, support_url | `/join` → 200 |
 | **[서울글로벌센터](https://global.seoul.go.kr)**<br><sub>`seoul-global`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
 | **[세브란스병원](https://sev.severance.healthcare)**<br><sub>`severance`</sub> | signup_url | `/join` → 404<br>`/signup` → 404<br>`/member/join` → robots: Disallow: /member/ |
 | **[SK세븐모바일](https://www.sk7mobile.com)**<br><sub>`sk7mobile`</sub> | signup_url, support_url, 앱 ID | `/join` → 404<br>`/signup` → 404<br>`/member/join` → 404<br>`/register` → 404<br>`/user/join` → 404 |
@@ -141,7 +141,7 @@ npm run add-app -- coupang "https://play.google.com/store/apps/details?id=com.co
 | **쿠팡이츠**<br><sub>`coupang-eats`</sub> | iOS `1445504255`<br>Play `com.coupang.mobile.eats` |  |
 | **응급의료포털 E-Gen**<br><sub>`e-gen`</sub> | iOS `385668523` | [Play](https://play.google.com/store/search?q=%EC%9D%91%EA%B8%89%EC%9D%98%EB%A3%8C%ED%8F%AC%ED%84%B8%20E-Gen&c=apps) |
 | **G마켓**<br><sub>`gmarket`</sub> | iOS `340330132`<br>Play `com.ebay.kr.gmarket` |  |
-| **정부24**<br><sub>`gov-kr`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%A0%95%EB%B6%8024&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%A0%95%EB%B6%8024?src=serp) |
+| **정부24**<br><sub>`gov-kr`</sub> | iOS `586454505`<br>Play `kr.go.minwon.m` |  |
 | **하이코리아**<br><sub>`hikorea`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%ED%95%98%EC%9D%B4%EC%BD%94%EB%A6%AC%EC%95%84&c=apps) · [App Store](https://www.apple.com/kr/search/%ED%95%98%EC%9D%B4%EC%BD%94%EB%A6%AC%EC%95%84?src=serp) |
 | **국세청 홈택스**<br><sub>`hometax`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EA%B5%AD%EC%84%B8%EC%B2%AD%20%ED%99%88%ED%83%9D%EC%8A%A4&c=apps) · [App Store](https://www.apple.com/kr/search/%EA%B5%AD%EC%84%B8%EC%B2%AD%20%ED%99%88%ED%83%9D%EC%8A%A4?src=serp) |
 | **인터파크 티켓**<br><sub>`interpark-ticket`</sub> | iOS `440487844`<br>Play `com.interpark.app.ticket` |  |
@@ -155,14 +155,14 @@ npm run add-app -- coupang "https://play.google.com/store/apps/details?id=com.co
 | **네이버 예약**<br><sub>`naver-booking`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%98%88%EC%95%BD&c=apps) · [App Store](https://www.apple.com/kr/search/%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%98%88%EC%95%BD?src=serp) |
 | **네이버쇼핑**<br><sub>`naver-shopping`</sub> | iOS `6738063154`<br>Play `com.navercorp.navershopping` |  |
 | **올리브영**<br><sub>`oliveyoung`</sub> | iOS `873779010`<br>Play `com.oliveyoung` |  |
-| **신한은행**<br><sub>`shinhan-bank`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89&c=apps) · [App Store](https://www.apple.com/kr/search/%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89?src=serp) |
+| **신한은행**<br><sub>`shinhan-bank`</sub> | iOS `357484932`<br>Play `com.shinhan.sbanking` |  |
 | **옥션**<br><sub>`auction`</sub> | iOS `380239756`<br>Play `com.ebay.kr.auction` |  |
 | **우체국**<br><sub>`epost`</sub> | iOS `435940000`<br>Play `kr.go.epost.app.findZip` |  |
 | **인터파크 투어**<br><sub>`interpark-tour`</sub> | iOS `775349206`<br>Play `com.interpark.tour.mobile.main` |  |
 | **롯데온**<br><sub>`lotteon`</sub> | iOS `376622474`<br>Play `com.lotte` |  |
 | **멜론**<br><sub>`melon`</sub> | Play `com.iloen.melon` | [App Store](https://www.apple.com/kr/search/%EB%A9%9C%EB%A1%A0?src=serp) |
 | **무신사 글로벌**<br><sub>`musinsa-global`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EA%B8%80%EB%A1%9C%EB%B2%8C&c=apps) · [App Store](https://www.apple.com/kr/search/%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EA%B8%80%EB%A1%9C%EB%B2%8C?src=serp) |
-| **NH농협은행**<br><sub>`nonghyup`</sub> | 없음 | [Play](https://play.google.com/store/search?q=NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89&c=apps) · [App Store](https://www.apple.com/kr/search/NH%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89?src=serp) |
+| **NH농협은행**<br><sub>`nonghyup`</sub> | iOS `1444712671`<br>Play `nh.smart.banking` |  |
 | **국세청**<br><sub>`nts`</sub> | 없음 | [Play](https://play.google.com/store/search?q=%EA%B5%AD%EC%84%B8%EC%B2%AD&c=apps) · [App Store](https://www.apple.com/kr/search/%EA%B5%AD%EC%84%B8%EC%B2%AD?src=serp) |
 | **SSG닷컴**<br><sub>`ssg`</sub> | iOS `786135420`<br>Play `kr.co.ssg` |  |
 | **티머니**<br><sub>`tmoney`</sub> | iOS `1470361790`<br>Play `com.lgt.tmoney` |  |

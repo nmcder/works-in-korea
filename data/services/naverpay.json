@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": null,
+    "ios_app_id": "1554807824",
+    "android_package": "com.naverfin.payapp",
     "no_app": null
   },
   "signals": {
