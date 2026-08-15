@@ -173,34 +173,38 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "no",
+      "measured_at": "2026-08-15T23:32:04.858Z",
+      "first_seen_at": "2026-08-15T23:32:04.858Z",
+      "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
+          {
+            "url": "https://www.museum.go.kr/MUSEUM/contents/M0706000000.do",
+            "status": 200,
+            "chars": 1422
+          },
           {
             "url": "https://www.museum.go.kr",
             "status": 200,
             "chars": 5322
           }
         ],
-        "content_sha256": "79e7e3d92709f3e5ad77959ad6392b3e9135807c38f4080f2ae3de37eee68245",
+        "content_sha256": "fe815353d85fe17cf7db24d995bf226cea1afacfc344054ef8e4f22d8ed9540e",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": "대표전화 02-2077-9000",
-          "reason": "영어(English) 언어 옵션은 존재하지만, 이것이 사이트 언어 전환 기능인지 실제 영어 상담 채널(전화/이메일 등)인지 명시되어 있지 않으며, 대표전화도 영어 응대 여부가 불명확함."
+          "value": "no",
+          "quoted_evidence": "전자 민원 국민신문고 전자민원 묻고답하기 행정기관 민원서비스 통합에 따라, 국민신문고에서 통합운영하여 서비스하고 있습니다. 국민신문고 문의 : 1600-8172",
+          "reason": "민원 채널이 국민신문고로 통합 운영되며 한국어 전용 문의처(전화번호)만 안내되어 있고, 영어 언어 선택 메뉴는 있으나 별도의 영문 상담 채널은 명시되어 있지 않음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.06,
+          "latin_ratio": 0.068,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

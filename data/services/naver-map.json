@@ -145,7 +145,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -153,25 +153,29 @@
       "evidence": {
         "pages": [
           {
+            "url": "https://help.naver.com/service/5637/category/bookmark",
+            "status": 200,
+            "chars": 1388
+          },
+          {
             "url": "https://map.naver.com",
             "status": 200,
             "chars": 0
           }
         ],
-        "content_sha256": "70db875e151725598a5efbde1f62282c6f948b261e2e645d7153c184b09323a7",
+        "content_sha256": "f981ded085b8bd7a6356a2e968e4917436675b02f7990c95cba9ce95f67650fd",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에 고객지원 채널에 대한 정보가 전혀 없어 영어 지원 여부를 판단할 근거가 부족함."
+          "quoted_evidence": "한국어 언어선택 한국어 English",
+          "reason": "고객센터 페이지에 언어 선택으로 English 옵션이 있으나, 이는 UI 언어 전환일 뿐 실제 전화(ARS)나 상담 채널이 영어로 응대되는지에 대한 명확한 근거가 없어 판단하기 어렵습니다."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.667,
+          "latin_ratio": 0.084,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

@@ -180,7 +180,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -210,7 +210,8 @@
           "strong_markers": [],
           "latin_ratio": 0.144,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

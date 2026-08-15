@@ -158,34 +158,38 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T23:32:04.858Z",
+      "first_seen_at": "2026-08-15T23:32:04.858Z",
+      "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
+          {
+            "url": "https://global.seoul.go.kr/web/prmg/prco/prcoListPage.do",
+            "status": 200,
+            "chars": 1375
+          },
           {
             "url": "https://global.seoul.go.kr",
             "status": 200,
             "chars": 0
           }
         ],
-        "content_sha256": "088b593c8a00f26d073f11658d389e9945efaec491c3f1e4f328e752238d76ce",
+        "content_sha256": "0836e85f211b0e2cdb3b206e2a34c050f846ad8af514ae73fe6a3a06fa73bed8",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에 고객지원 채널이나 문의 방법에 대한 구체적인 정보가 없어 영어 상담 가능 여부를 판단할 근거가 부족함."
+          "value": "yes",
+          "quoted_evidence": "LANGUAGE 한국어 English 简体中文 ... Tel. +82-2-2229-4900 / Fax. +82-2-2229-4999 / Email. hotline@sfrc.seoul.kr",
+          "reason": "사이트가 English 언어 옵션을 제공하며, 외국인 대상 서비스 목적의 센터로 전화/이메일 연락처가 명시되어 있어 영어 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.69,
+          "latin_ratio": 0.122,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

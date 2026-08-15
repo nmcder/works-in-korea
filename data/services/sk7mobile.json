@@ -164,7 +164,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -174,7 +174,7 @@
           {
             "url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
             "status": 200,
-            "chars": 4391
+            "chars": 4390
           },
           {
             "url": "https://www.sk7mobile.com",
@@ -182,7 +182,7 @@
             "chars": 10
           }
         ],
-        "content_sha256": "91193b47099ffddc1c5b669219b95a39d73868d7cec0124f1f224572844897b3",
+        "content_sha256": "9e2f9a1d15b3d95182e843ece7570b20419797e42a11f514ecf0038e6677826e",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",

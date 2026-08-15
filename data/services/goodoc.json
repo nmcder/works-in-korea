@@ -171,7 +171,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -182,22 +182,26 @@
             "url": "https://www.goodoc.co.kr",
             "status": 200,
             "chars": 1331
+          },
+          {
+            "url": "https://www.goodoc.co.kr",
+            "status": 200,
+            "chars": 1331
           }
         ],
-        "content_sha256": "a6e9cc8adb833ccf964c11ee57a0d8311fac504233469c23a9707f43f49c5e23",
+        "content_sha256": "99f8cba7a3b3781fa8d8debe66db683b4d6dc3a178ab6b2ae55f6adac829ffc6",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
           "quoted_evidence": "고객센터 1661-8173 운영시간 09:00 ~ 18:00 1:1 채팅상담",
-          "reason": "고객센터 전화 및 채팅상담 채널은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
+          "reason": "고객센터 전화 및 채팅상담 채널은 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
           "latin_ratio": 0.091,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

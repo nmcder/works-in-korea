@@ -174,18 +174,18 @@
       }
     },
     "support_en": {
-      "value": "no",
-      "measured_at": "2026-08-15T22:58:13.388Z",
-      "first_seen_at": "2026-08-15T22:58:13.388Z",
-      "last_changed_at": "2026-08-15T22:58:13.388Z",
+      "value": "unknown",
+      "measured_at": "2026-08-15T23:32:04.858Z",
+      "first_seen_at": "2026-08-15T23:32:04.858Z",
+      "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "pages": [
           {
             "url": "https://www.payco.com/cs/faq.nhn",
             "status": 200,
-            "chars": 247
+            "chars": 927
           },
           {
             "url": "https://www.payco.com",
@@ -203,17 +203,17 @@
             "chars": 171
           }
         ],
-        "content_sha256": "b9af1aea8f06ad6ced2b0d06b44a107ba8401a66c9978fffb4b918444e7ad8eb",
+        "content_sha256": "32959fe721afc3ccef85c97576d10fac7e5e692e8a8090c83f84e3909883b30c",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "no",
-          "quoted_evidence": "고객센터 1544-6891 또는 PAYCO 앱 고객센터 1:1 문의로 문의해주세요.",
-          "reason": "고객센터 전화 및 앱 1:1 문의 채널이 안내되어 있으나 한국어 전화번호와 국내 앱 문의로 명시되어 있고 영어 지원에 대한 언급이 전혀 없어 한국어 전용 채널로 판단됨."
+          "value": "unknown",
+          "quoted_evidence": "이메일 문의 - help@payco.com 전화 문의 - 1544-6891",
+          "reason": "고객센터 이메일과 전화번호는 명시되어 있지만, 영어 지원 여부에 대한 언급이 전혀 없어 한국어 전용인지 영어 문의가 가능한지 판단할 근거가 부족함."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.142,
+          "latin_ratio": 0.151,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -173,7 +173,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -188,7 +188,7 @@
           {
             "url": "https://www.kyobobook.co.kr",
             "status": 200,
-            "chars": 1095
+            "chars": 1045
           },
           {
             "url": "https://www.kyobobook.co.kr/cscenter",
@@ -201,7 +201,7 @@
             "chars": 1429
           }
         ],
-        "content_sha256": "202d753e4fcbec8a62af976221259373a888eebd3c481151cae275bc5812cebf",
+        "content_sha256": "15c436331eba6faa7e42516d544d1c98e375249cb03f9f4320b3dfa32df9c3e8",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
@@ -211,7 +211,7 @@
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.116,
+          "latin_ratio": 0.117,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

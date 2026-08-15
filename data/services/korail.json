@@ -149,18 +149,18 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "yes",
+      "measured_at": "2026-08-15T23:32:04.858Z",
+      "first_seen_at": "2026-08-15T23:32:04.858Z",
+      "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
             "url": "https://www.korail.com/ticket/guest/csc/korailcs",
             "status": 200,
-            "chars": 9
+            "chars": 1479
           },
           {
             "url": "https://www.korail.com",
@@ -168,20 +168,19 @@
             "chars": 9
           }
         ],
-        "content_sha256": "d4411a3fdaf31cd94bb83d932638d954e08e315809f198c11028ea5264439cf9",
+        "content_sha256": "c4694cd4515e3b7d7113129a6ba05a747bf3c2dfaaf49ee26f36ed7dc79195d5",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에 고객지원 채널이나 영어 문의 가능 여부에 대한 정보가 전혀 없어 판단할 근거가 부족함."
+          "value": "yes",
+          "quoted_evidence": "영어상담전용 : 1599-7777 (08:00∼20:00)",
+          "reason": "페이지에 영어상담전용 전화번호가 명시되어 있어 영어로 문의 가능한 채널이 존재함."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.583,
+          "latin_ratio": 0.097,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

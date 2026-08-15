@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T22:58:13.388Z",
+  "generated_at": "2026-08-15T23:32:04.858Z",
   "changes": [
     {
       "service_id": "gmarket",
@@ -3046,6 +3046,138 @@
       "vantage_point": {
         "country": "us",
         "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "danawa",
+      "signal": "support_en",
+      "from": "no",
+      "to": "unknown",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "homeplus",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-global",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "korail",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kbstar",
+      "signal": "support_en",
+      "from": "yes",
+      "to": "unknown",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "national-museum",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "oliveyoung-global",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "payco",
+      "signal": "support_en",
+      "from": "no",
+      "to": "unknown",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ridibooks",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-global",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "yes",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "woori-bank",
+      "signal": "support_en",
+      "from": "yes",
+      "to": "unknown",
+      "changed_at": "2026-08-15T23:32:04.858Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Illinois",
         "ip_asn": "AS8075"
       }
     }

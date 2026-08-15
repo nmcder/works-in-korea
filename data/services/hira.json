@@ -164,37 +164,14 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
-            "status": 200,
-            "chars": 3737
-          },
-          {
-            "url": "https://www.hira.or.kr",
-            "status": 200,
-            "chars": 4
-          }
-        ],
-        "content_sha256": "e90a9217df9b1b94f3c720b6de2b98a64232f1df0def58dbfb64c7cb8c4b54e3",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "Language English Spanish",
-          "reason": "페이지에 English 언어 옵션은 있으나 실제 영어 상담 채널(이메일/전화/폼)이 명시되어 있지 않아 판단 근거가 부족합니다."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.071,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "not_measured": "고객지원 페이지를 찾지 못함",
+        "hint": "hints.support_url 을 채우면 측정 가능해진다"
       }
     },
     "foreign_card": {

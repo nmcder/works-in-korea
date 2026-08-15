@@ -113,33 +113,14 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
+      "measured_at": "2026-08-15T23:32:04.858Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",
       "confidence": "unknown",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.hikorea.go.kr",
-            "status": 200,
-            "chars": 23
-          }
-        ],
-        "content_sha256": "d1b19eb7381ffb1259f279fafacac4db096f9c0266e2631a8265b60dcd63669d",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에는 지원 채널(이메일, 전화, 채팅 등)에 대한 정보가 전혀 없어 영어 상담 가능 여부를 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.725,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "not_measured": "고객지원 페이지를 찾지 못함",
+        "hint": "hints.support_url 을 채우면 측정 가능해진다"
       }
     },
     "foreign_card": {

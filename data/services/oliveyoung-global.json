@@ -180,36 +180,40 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T22:58:13.388Z",
-      "first_seen_at": "2026-08-15T22:47:28.669Z",
-      "last_changed_at": "2026-08-15T22:47:28.669Z",
+      "value": "yes",
+      "measured_at": "2026-08-15T23:32:04.858Z",
+      "first_seen_at": "2026-08-15T23:32:04.858Z",
+      "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
+          {
+            "url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
+            "status": 403,
+            "chars": 484
+          },
           {
             "url": "https://global.oliveyoung.com",
             "status": 200,
             "chars": 8000
           }
         ],
-        "content_sha256": "2f35d1dca4a8697b229fcce3014e37d091cafbb4895976857843af60b94a3ee2",
+        "content_sha256": "94ca58e69e3db3f54b95e2a71994afee0b5d6357c93744abfc0395da36f4da4a",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": "Customer Service",
-          "reason": "영문 사이트이며 'Customer Service' 메뉴가 존재하지만, 실제 상담 채널(이메일/전화/채팅 등)이 영어를 지원하는지 구체적인 내용이 텍스트에 없어 판단할 근거가 부족함."
+          "value": "yes",
+          "quoted_evidence": "global-customerservice@oliveyoung.com",
+          "reason": "영어 기반 글로벌 사이트이며 global-customerservice@oliveyoung.com 이메일이 고객센터 창구로 명시되어 있어 영어 문의가 가능함을 알 수 있음."
         },
         "heuristic": {
           "value": "yes",
           "strong_markers": [
             "english support"
           ],
-          "latin_ratio": 0.805,
+          "latin_ratio": 0.765,
           "reason": "영문 지원을 명시하는 문구를 찾음"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {
