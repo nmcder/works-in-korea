@@ -58,12 +58,17 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: 측정 실행
+        # 입력값은 셸에 직접 넣지 않고 env를 거친다 (스크립트 인젝션 방지)
+        env:
+          IN_ONLY: ${{ github.event.inputs.only }}
+          IN_LIMIT: ${{ github.event.inputs.limit }}
+          IN_SIGNALS: ${{ github.event.inputs.signals }}
         run: |
-          ARGS=""
-          if [ -n "${{ github.event.inputs.only }}" ];    then ARGS="$ARGS --only=${{ github.event.inputs.only }}"; fi
-          if [ -n "${{ github.event.inputs.limit }}" ];   then ARGS="$ARGS --limit=${{ github.event.inputs.limit }}"; fi
-          if [ -n "${{ github.event.inputs.signals }}" ]; then ARGS="$ARGS --signals=${{ github.event.inputs.signals }}"; fi
-          npm run probe -- $ARGS
+          ARGS=()
+          if [ -n "$IN_ONLY" ];    then ARGS+=("--only=$IN_ONLY"); fi
+          if [ -n "$IN_LIMIT" ];   then ARGS+=("--limit=$IN_LIMIT"); fi
+          if [ -n "$IN_SIGNALS" ]; then ARGS+=("--signals=$IN_SIGNALS"); fi
+          npm run probe -- "${ARGS[@]}"
 
       - name: 스키마 검증
         run: npm run validate
