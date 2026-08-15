@@ -170,5 +170,8 @@ export interface RunSummary {
     input_tokens: number;
     output_tokens: number;
     model: string | null;
+    /** 호출이 실패해 휴리스틱으로 떨어진 횟수. 0 이 아니면 무언가 잘못된 것이다 */
+    failures: number;
+    last_error: string | null;
   };
 }

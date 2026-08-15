@@ -179,7 +179,9 @@ async function main(): Promise<void> {
       cached: llmUsage.cached,
       input_tokens: llmUsage.inputTokens,
       output_tokens: llmUsage.outputTokens,
-      model: llmUsage.calls > 0 ? LLM.model : null,
+      model: llmUsage.calls > 0 || llmUsage.failures > 0 ? LLM.model : null,
+      failures: llmUsage.failures,
+      last_error: llmUsage.lastError,
     },
   };
 

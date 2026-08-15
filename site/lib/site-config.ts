@@ -12,7 +12,19 @@
  * 코드는 비공개, **데이터와 제보 창구는 공개** — 를 위해 공개 레포가 하나 필요하다.
  * 운영자가 만들고 나면 여기 이름만 넣으면 UI가 붙는다.
  */
-const ISSUES_REPO = process.env.NEXT_PUBLIC_ISSUES_REPO ?? null;
+/**
+ * 환경변수를 읽되 **빈 문자열은 미설정으로 본다.**
+ *
+ * ⚠️ Actions 도 Vercel 도 변수가 비어 있으면 undefined 가 아니라 빈 문자열을 준다.
+ *  는 null/undefined 만 잡으므로 기본값이 무시된다. 2026-08-15 에 이 실수로
+ * 모델 이름이 빈 채로 API 에 나가 하루치 분류가 통째로 날아갔다.
+ */
+function env(name: string, fallback: string): string {
+  const raw = process.env[name]?.trim();
+  return raw ? raw : fallback;
+}
+
+const ISSUES_REPO = env('NEXT_PUBLIC_ISSUES_REPO', '') || null;
 
 export type ReportKind = 'foreign-card' | 'foreign-sms' | 'correction';
 
@@ -33,7 +45,7 @@ export const SITE = {
    * 공개 주소. sitemap·robots·OG 카드에 쓰인다.
    * 자체 도메인이 생기면 Vercel 환경변수 NEXT_PUBLIC_SITE_URL 로 덮어쓴다.
    */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.worksinkorea.com',
+  url: env('NEXT_PUBLIC_SITE_URL', 'https://www.worksinkorea.com'),
 
   issuesRepo: ISSUES_REPO,
 

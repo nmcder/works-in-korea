@@ -12,7 +12,8 @@ import { type BlockKind, crawlBlock } from './present';
 import type { ChangeFile, RunSummary, Service, SignalKey } from './types';
 
 /** 레포 루트의 data/. 사이트를 다른 위치에서 빌드해야 하면 WIK_DATA_DIR 로 덮어쓴다. */
-const DATA_DIR = process.env.WIK_DATA_DIR ?? path.join(process.cwd(), '..', 'data');
+// 빈 문자열은 미설정으로 본다. ?? 로 받으면 빈 값이 통과해 경로가 '' 가 된다.
+const DATA_DIR = process.env.WIK_DATA_DIR?.trim() || path.join(process.cwd(), '..', 'data');
 
 async function readJson<T>(file: string): Promise<T> {
   return JSON.parse(await readFile(file, 'utf8')) as T;

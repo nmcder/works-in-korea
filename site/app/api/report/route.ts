@@ -20,8 +20,11 @@ import { HIT_LABELS, screenForPersonalData } from '@/lib/screen';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const REPO = process.env.NEXT_PUBLIC_ISSUES_REPO ?? null;
-const TOKEN = process.env.REPORTS_TOKEN ?? null;
+/** 빈 문자열은 미설정으로 본다 — Vercel 은 빈 변수를 빈 문자열로 준다 */
+const envOr = (name: string): string | null => process.env[name]?.trim() || null;
+
+const REPO = envOr('NEXT_PUBLIC_ISSUES_REPO');
+const TOKEN = envOr('REPORTS_TOKEN');
 
 /** 폼이 뜬 뒤 이만큼도 안 지나서 제출됐으면 사람이 아니다 */
 const MIN_FILL_MS = 2500;

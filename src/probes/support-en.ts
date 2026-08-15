@@ -60,6 +60,15 @@ export const llmUsage = {
   cached: 0,
   inputTokens: 0,
   outputTokens: 0,
+  /**
+   * 호출이 실패해 휴리스틱으로 떨어진 횟수.
+   *
+   * ⚠️ 이걸 세지 않아서 사고가 하루 묻혔다. 2026-08-15 실행에서 모델 이름이 빈 채로
+   * 나가 70건이 전부 400 으로 튕겼는데, 프로브가 얌전히 휴리스틱으로 대체하는 바람에
+   * 실행 요약은 "오류 0건"이었다. 실패를 삼키는 것은 옳지만 **말없이** 삼키면 안 된다.
+   */
+  failures: 0,
+  lastError: null as string | null,
 };
 
 export function resetLlmUsage(): void {
@@ -67,6 +76,8 @@ export function resetLlmUsage(): void {
   llmUsage.cached = 0;
   llmUsage.inputTokens = 0;
   llmUsage.outputTokens = 0;
+  llmUsage.failures = 0;
+  llmUsage.lastError = null;
 }
 
 export async function probeSupportEn(
@@ -138,6 +149,8 @@ export async function probeSupportEn(
       },
     };
   } catch (e) {
+    llmUsage.failures += 1;
+    llmUsage.lastError = errMessage(e).slice(0, 300);
     log.warn(`[${service.id}] support_en LLM 분류 실패, 휴리스틱으로 대체: ${errMessage(e)}`);
     return {
       value: heuristic.value,

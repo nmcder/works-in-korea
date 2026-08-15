@@ -121,9 +121,13 @@ export const ROBOTS_EXEMPT_PREFIXES = [
  * WIK_LLM_FORCE=1 로 강제 재분류할 수 있다.
  */
 export const LLM = {
-  apiKey: process.env.ANTHROPIC_API_KEY ?? null,
-  model: process.env.WIK_LLM_MODEL ?? 'claude-sonnet-5',
-  enabled: Boolean(process.env.ANTHROPIC_API_KEY),
+  // ⚠️ env() 를 쓰는 이유는 위 PROJECT_URL 주석과 같다. Actions 는 변수가 없으면 빈 문자열을
+  // 넣고 `??` 는 그것을 통과시킨다. 2026-08-15 실행에서 실제로 모델 이름이 빈 채로 나가
+  // 70건이 전부 `400 model: String should have at least 1 character` 로 튕겼다.
+  // 실행은 오류 0건으로 초록색이었고, 화면에는 "아직 확인 못 함" 만 남았다.
+  apiKey: env('ANTHROPIC_API_KEY', '') || null,
+  model: env('WIK_LLM_MODEL', 'claude-sonnet-5'),
+  enabled: env('ANTHROPIC_API_KEY', '') !== '',
   /** 내용이 그대로여도 다시 분류할지 */
   force: process.env.WIK_LLM_FORCE === '1',
   /** LLM에 보낼 최대 글자 수. 늘리면 정확도가 조금 오르고 비용이 비례해서 오른다. */
