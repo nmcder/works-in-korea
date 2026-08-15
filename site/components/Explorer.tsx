@@ -39,33 +39,31 @@ interface Facet {
 const FACETS: Facet[] = [
   {
     id: 'english',
-    label: { en: 'Has an English interface', ko: '영어 인터페이스 있음' },
+    label: { en: 'Available in English', ko: '영어 지원' },
     test: (r) => r.signals.some((s) => s.key === 'i18n_ui' && /English/.test(s.value.en)),
   },
   {
     id: 'nophone',
-    label: { en: 'No Korean phone check to sign up', ko: '가입에 본인인증 없음' },
+    label: { en: 'Sign up without a Korean phone', ko: '한국 휴대폰 없이 가입' },
     test: (r) => r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'open'),
   },
   {
     id: 'phone',
-    label: { en: 'Korean phone verification required', ko: '본인인증 필수' },
+    label: { en: 'Needs a Korean phone', ko: '한국 휴대폰 필요' },
     test: (r) => r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'barrier'),
   },
   {
     id: 'blocked',
-    label: { en: 'Machines can’t measure it', ko: '자동 측정 불가' },
+    label: { en: 'Refuses automated checks', ko: '자동 확인 거부' },
     test: (r) => r.blocked !== null,
   },
 ];
 
 const COLUMNS: Bi[] = [
   { en: 'Service', ko: '서비스' },
-  { en: 'Category', ko: '분야' },
-  { en: 'From abroad', ko: '해외 접속' },
+  { en: 'Opens from abroad', ko: '해외 접속' },
   { en: 'Languages', ko: '언어' },
-  { en: 'Sign-up', ko: '가입' },
-  { en: 'Recorded', ko: '기록' },
+  { en: 'Signing up', ko: '가입' },
 ];
 
 export function Explorer({ rows, categories }: { rows: Row[]; categories: [string, Bi][] }) {
@@ -173,17 +171,7 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
       <div className="wrap">
         {filtered.length === 0 ? (
           <p className="nothing">
-            <T
-              en="Nothing matches that combination."
-              ko="그 조합에 해당하는 서비스가 없습니다."
-            />
-            <br />
-            <span style={{ fontSize: 13.5 }}>
-              <T
-                en="That is an answer too — it may mean nobody has measured it yet."
-                ko="그것도 하나의 답입니다 — 아직 아무도 재지 않았다는 뜻일 수 있습니다."
-              />
-            </span>
+            <T en="No services match." ko="해당하는 서비스가 없습니다." />
           </p>
         ) : (
           <div className="ledger">
@@ -199,33 +187,22 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
               <Link key={r.id} href={`/service/${r.id}/`} className="ledger-row">
                 <span className="svc-name">
                   {r.nameEn}
-                  {r.nameKo !== r.nameEn && <em>{r.nameKo}</em>}
+                  <em>
+                    {r.nameKo !== r.nameEn && `${r.nameKo} · `}
+                    <T {...r.cat} />
+                  </em>
                 </span>
 
-                <span className="svc-cat">
-                  <T {...r.cat} />
-                </span>
-
-                {r.signals.map((s) => (
-                  <span key={s.key} className={`val t-${s.tone}`}>
-                    <span className="pip" aria-hidden />
+                {r.signals.map((sig) => (
+                  <span key={sig.key} className={`t-${sig.tone}`}>
                     <span className="cell-key">
-                      <T {...s.short} />
+                      <T {...sig.short} />
                     </span>
-                    <span className="txt">
-                      <T {...s.value} />
+                    <span className="chipv">
+                      <T {...sig.value} />
                     </span>
                   </span>
                 ))}
-
-                <span className="tally">
-                  {r.measured}/{r.total}
-                  {r.blocked && (
-                    <i>
-                      <T {...r.blocked} />
-                    </i>
-                  )}
-                </span>
               </Link>
             ))}
           </div>

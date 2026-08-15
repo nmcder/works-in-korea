@@ -113,57 +113,57 @@ const SIGNAL_META: Record<SignalKey, { label: Bi; question: Bi }> = {
   overseas_access: {
     label: { en: 'Access from abroad', ko: '해외 접속' },
     question: {
-      en: 'Does the site load from an IP outside Korea?',
-      ko: '한국 밖 IP에서 사이트가 열리는가?',
+      en: 'Can you open it from outside Korea?',
+      ko: '한국 밖에서 접속되나요?',
     },
   },
   i18n_ui: {
     label: { en: 'Interface languages', ko: '인터페이스 언어' },
     question: {
-      en: 'Which languages does the interface actually offer?',
-      ko: '인터페이스가 실제로 제공하는 언어는?',
+      en: 'What languages can you use it in?',
+      ko: '어떤 언어로 쓸 수 있나요?',
     },
   },
   signup_phone_auth: {
     label: { en: 'Korean phone verification to sign up', ko: '가입 시 한국 휴대폰 본인인증' },
     question: {
-      en: 'Does signing up force Korean mobile identity verification?',
-      ko: '가입에 한국 휴대폰 본인인증이 강제되는가?',
+      en: 'Do you need a Korean phone to sign up?',
+      ko: '가입할 때 한국 휴대폰이 필요한가요?',
     },
   },
   app_availability: {
     label: { en: 'Mobile apps', ko: '모바일 앱' },
     question: {
-      en: 'Is there an app listed on the App Store and Google Play?',
-      ko: 'App Store·Google Play에 앱이 등록되어 있는가?',
+      en: 'Is there an app you can download?',
+      ko: '내려받을 수 있는 앱이 있나요?',
     },
   },
   payment_gate: {
     label: { en: 'Payment gateways seen', ko: '탐지된 결제사' },
     question: {
-      en: 'Which payment providers appear on the public pages?',
-      ko: '공개 페이지에서 어떤 결제사가 보이는가?',
+      en: 'Which payment services does it use?',
+      ko: '어떤 결제사를 쓰나요?',
     },
   },
   support_en: {
     label: { en: 'English customer support', ko: '영어 고객지원' },
     question: {
-      en: 'Does the service state that it offers support in English?',
-      ko: '영어 고객지원을 제공한다고 명시하는가?',
+      en: 'Is there help in English?',
+      ko: '영어 고객지원이 있나요?',
     },
   },
   foreign_card: {
     label: { en: 'Foreign card payment', ko: '해외 발급 카드 결제' },
     question: {
-      en: 'Does a card issued outside Korea actually go through?',
-      ko: '해외 발급 카드로 결제가 실제로 되는가?',
+      en: 'Does a foreign card work?',
+      ko: '해외 카드로 결제되나요?',
     },
   },
   foreign_phone_sms: {
     label: { en: 'SMS to a foreign number', ko: '해외 번호 SMS 수신' },
     question: {
-      en: 'Do verification texts arrive at a non-Korean number?',
-      ko: '해외 번호로 인증 문자가 도착하는가?',
+      en: 'Do codes reach a foreign number?',
+      ko: '해외 번호로 인증번호가 오나요?',
     },
   },
 };
@@ -381,11 +381,9 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
 
   switch (key) {
     case 'overseas_access': {
-      if (v === 'ok') return { display: { en: 'Loads', ko: '열림' }, tone: 'open' };
-      if (v === 'blocked')
-        return { display: { en: 'Blocked', ko: '차단됨' }, tone: 'barrier' };
-      if (v === 'degraded')
-        return { display: { en: 'Partly loads', ko: '일부만 열림' }, tone: 'mixed' };
+      if (v === 'ok') return { display: { en: 'Yes', ko: '열림' }, tone: 'open' };
+      if (v === 'blocked') return { display: { en: 'Blocked', ko: '차단됨' }, tone: 'barrier' };
+      if (v === 'degraded') return { display: { en: 'Partly', ko: '일부만' }, tone: 'mixed' };
       return null;
     }
     case 'i18n_ui': {
@@ -397,26 +395,26 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
       const names = others.map((l) => languageName(l));
       return {
         display: {
-          en: `Korean + ${names.map((n) => n.en).join(', ')}`,
-          ko: `한국어 + ${names.map((n) => n.ko).join(', ')}`,
+          en: names.map((n) => n.en).join(', '),
+          ko: names.map((n) => n.ko).join(', '),
         },
         tone: others.includes('en') ? 'open' : 'mixed',
       };
     }
     case 'signup_phone_auth': {
       if (v === 'required')
-        return { display: { en: 'Required', ko: '필수' }, tone: 'barrier' };
+        return { display: { en: 'Korean phone needed', ko: '한국 휴대폰 필요' }, tone: 'barrier' };
       if (v === 'optional')
-        return { display: { en: 'One option among others', ko: '선택 가능' }, tone: 'mixed' };
+        return { display: { en: 'Optional', ko: '선택 사항' }, tone: 'mixed' };
       if (v === 'not_required')
-        return { display: { en: 'Not seen on the form', ko: '양식에서 보이지 않음' }, tone: 'open' };
+        return { display: { en: 'Not on the form', ko: '양식에 없음' }, tone: 'open' };
       return null;
     }
     case 'app_availability': {
       const a = v as AppAvailabilityValue;
       if (!a) return null;
       const part = (listed: boolean | null, store: string): string =>
-        listed === true ? `${store}: listed` : listed === false ? `${store}: not found` : `${store}: unknown`;
+        listed === true ? `${store} yes` : listed === false ? `${store} no` : `${store} unknown`;
       const partKo = (listed: boolean | null, store: string): string =>
         listed === true ? `${store} 있음` : listed === false ? `${store} 없음` : `${store} 모름`;
       return {
@@ -433,8 +431,8 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
       if (p.gateways.length === 0) {
         return {
           display: {
-            en: 'None on public pages',
-            ko: '공개 페이지에서 없음',
+            en: 'None found',
+            ko: '탐지 안 됨',
           },
           tone: 'info',
         };
@@ -448,8 +446,8 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
       };
     }
     case 'support_en': {
-      if (v === 'yes') return { display: { en: 'Stated', ko: '명시함' }, tone: 'open' };
-      if (v === 'no') return { display: { en: 'Not stated', ko: '명시 없음' }, tone: 'barrier' };
+      if (v === 'yes') return { display: { en: 'Offered', ko: '제공' }, tone: 'open' };
+      if (v === 'no') return { display: { en: 'Not offered', ko: '제공 안 함' }, tone: 'barrier' };
       return null;
     }
     case 'foreign_card':
