@@ -20,13 +20,35 @@ interface Todo {
   blocked: string | null;
 }
 
+/**
+ * 사이트가 우리 봇을 막고 있는가.
+ *
+ * 세 가지 전부 "우리가 이 사이트에 닿을 수 없다"는 같은 결론이지만 원인은 다르다.
+ * 주소를 채워도 소용없다는 점에서만 같이 묶는다. (present.ts 의 classifyBlock 과 같은 기준)
+ */
+function siteBlocked(service: Service): string | null {
+  const sig = service.signals.overseas_access;
+  if (!sig || sig.confidence !== 'unknown') return null;
+  const raw = JSON.stringify(sig.evidence ?? {});
+  if (/robots-unavailable/.test(raw)) return '해외에서 응답 없음';
+  if (/robots:\s*Disallow/i.test(raw)) return 'robots.txt 금지';
+  if (/"http_status":\s*(403|429)/.test(raw)) return '크롤러 거부 (403/429)';
+  return null;
+}
+
 async function main(): Promise<void> {
   const ids = await listServiceIds();
   const todos: Todo[] = [];
+  const blockedServices: Todo[] = [];
 
   for (const id of ids) {
     const service = await loadService(id);
     if (!service) continue;
+
+    const siteBlock = siteBlocked(service);
+    if (siteBlock) {
+      blockedServices.push({ service, needs: ['앱 ID'], tried: [], blocked: siteBlock });
+    }
 
     const needs: string[] = [];
     const hints = service.hints ?? {};
@@ -50,17 +72,11 @@ async function main(): Promise<void> {
       (signup?.evidence as { attempts?: { url: string; status: number | null; reason?: string }[] } | null)
         ?.attempts ?? [];
 
-    // robots.txt가 막고 있으면 힌트를 채워도 소용없다 — 별도로 표시한다
-    const access = service.signals.overseas_access;
-    const accessNote = (access?.evidence as { vantage_points?: { not_measured?: string }[] } | null)
-      ?.vantage_points?.[0]?.not_measured;
-    const blocked = accessNote?.startsWith('robots:') ? accessNote : null;
-
-    todos.push({ service, needs, tried: attempts.slice(0, 6), blocked });
+    todos.push({ service, needs, tried: attempts.slice(0, 6), blocked: siteBlock });
   }
 
+  // 사이트가 막힌 곳은 주소를 채워도 소용없으므로 "지금 하면 되는 일"에서 뺀다
   const actionable = todos.filter((t) => !t.blocked).sort(byPriority);
-  const blockedList = todos.filter((t) => t.blocked).sort(byPriority);
 
   const lines: string[] = [];
   lines.push('# 운영자 작업 목록 — 힌트 채우기');
@@ -121,16 +137,56 @@ async function main(): Promise<void> {
     );
   }
 
-  if (blockedList.length > 0) {
+  // 자동 접근이 막힌 서비스도 앱 ID 는 채울 수 있다.
+  // 앱 여부는 애플·구글에 묻는 것이라 그 사이트의 차단과 무관하기 때문이다.
+  // 이 구분을 안 하면 "손대지 마세요" 한 줄이 31곳을 영원히 빈칸으로 남긴다.
+  const appFillable = blockedServices.sort(byPriority);
+
+  if (appFillable.length > 0) {
     lines.push('');
     lines.push('---');
     lines.push('');
-    lines.push(`## 힌트를 채워도 소용없는 서비스 (${blockedList.length}건) — 손대지 마세요`);
+    lines.push(`## 자동 접근이 막힌 서비스 (${appFillable.length}건) — 앱 ID만 채울 수 있습니다`);
     lines.push('');
-    lines.push('robots.txt가 우리 봇의 접근을 전면 금지하고 있어, 주소를 채워도 측정할 수 없습니다.');
-    lines.push('이 서비스들은 **커뮤니티 제보로만** 채웁니다 (docs/03-decisions.md D-9).');
+    lines.push('이 서비스들은 사이트가 우리 봇을 막고 있어 가입 주소·고객센터 주소를 채워도 소용없습니다.');
+    lines.push('**앱 정보는 다릅니다.** 앱이 스토어에 있는지는 애플·구글에 묻는 것이라 그 사이트의 차단과');
+    lines.push('무관합니다. 지금 이 31곳은 한 칸도 채워져 있지 않은데, 앱 ID 하나만 넣어도 빈 줄이 아니게 됩니다.');
     lines.push('');
-    lines.push(blockedList.map((t) => `\`${t.service.id}\``).join(', '));
+    lines.push('### 하는 법');
+    lines.push('');
+    lines.push('아래 표의 **Play** 나 **App Store** 링크를 눌러 앱을 찾은 다음, 주소창을 복사해서 붙여넣습니다.');
+    lines.push('');
+    lines.push('```bash');
+    lines.push('npm run add-app -- coupang "https://play.google.com/store/apps/details?id=com.coupang.mobile"');
+    lines.push('```');
+    lines.push('');
+    lines.push('주소는 **반드시 따옴표로 감싸세요.** `?` 와 `&` 가 있어서 그냥 넣으면 잘립니다.');
+    lines.push('두 스토어를 한 줄에 같이 줘도 되고, 하나만 줘도 됩니다.');
+    lines.push('');
+    lines.push('도구가 스토어에 실제로 있는지 확인하고 **앱 이름을 찍어 줍니다.** 이름이 엉뚱하면 잘못 복사한 것이니');
+    lines.push('다시 하면 됩니다. 없는 ID 는 아예 기록하지 않습니다.');
+    lines.push('');
+    lines.push('다 넣은 뒤 `npm run seed` 를 한 번 돌리고 커밋하면 끝입니다.');
+    lines.push('');
+    lines.push('| 서비스 | 이미 있는 것 | 스토어에서 찾기 |');
+    lines.push('|---|---|---|');
+    for (const t of appFillable) {
+      const h = t.service.hints ?? {};
+      const have = [
+        h.ios_app_id ? `iOS \`${h.ios_app_id}\`` : null,
+        h.android_package ? `Play \`${h.android_package}\`` : null,
+      ].filter(Boolean);
+      const q = encodeURIComponent(t.service.name.ko);
+      const search = [
+        h.android_package ? null : `[Play](https://play.google.com/store/search?q=${q}&c=apps)`,
+        h.ios_app_id ? null : `[App Store](https://www.apple.com/kr/search/${q}?src=serp)`,
+      ]
+        .filter(Boolean)
+        .join(' · ');
+      lines.push(
+        `| **${t.service.name.ko}**<br><sub>\`${t.service.id}\`</sub> | ${have.length > 0 ? have.join('<br>') : '없음'} | ${search} |`,
+      );
+    }
   }
 
   lines.push('');
@@ -143,7 +199,10 @@ async function main(): Promise<void> {
   await writeJson(path.join(PATHS.runs, 'hints-todo.json'), {
     generated_at: new Date().toISOString(),
     actionable: actionable.length,
-    blocked_by_robots: blockedList.length,
+    site_blocked: appFillable.length,
+    app_id_missing: appFillable.filter(
+      (t) => !t.service.hints?.ios_app_id && !t.service.hints?.android_package,
+    ).length,
     by_importance: {
       1: actionable.filter((t) => t.service.importance === 1).length,
       2: actionable.filter((t) => t.service.importance === 2).length,
@@ -151,7 +210,9 @@ async function main(): Promise<void> {
     },
   });
 
-  log.info(`docs/05-hints-todo.md 생성 — 채울 수 있는 것 ${actionable.length}건, robots 차단 ${blockedList.length}건`);
+  log.info(
+    `docs/05-hints-todo.md 생성 — 주소를 채울 곳 ${actionable.length}건, 앱 ID만 채울 수 있는 곳 ${appFillable.length}건`,
+  );
   log.info(
     `  우선순위 1등급: ${actionable.filter((t) => t.service.importance === 1).length}건 ← 여기부터 하면 된다`,
   );
