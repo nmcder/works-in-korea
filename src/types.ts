@@ -123,6 +123,14 @@ export interface ChangeEntry {
   from: unknown;
   to: unknown;
   changed_at: string;
+  /**
+   * 이 변경을 관측한 실행의 측정 지점.
+   *
+   * 없으면 "값이 바뀌었다"와 "우리가 다른 곳에서 쟀다"를 구분할 수 없다.
+   * 2026-08-15 측정 지점이 KR→US 로 바뀐 실행에서 39건이 한꺼번에 움직였는데,
+   * 이 정보가 없으면 39개 회사가 그날 뭔가 바꾼 것처럼 읽힌다. (D-14)
+   */
+  vantage_point?: { country: string | null; region: string | null; ip_asn: string | null };
 }
 
 export interface RunSummary {

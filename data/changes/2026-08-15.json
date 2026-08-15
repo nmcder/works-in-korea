@@ -3,18 +3,52 @@
   "generated_at": "2026-08-15T05:38:47.932Z",
   "changes": [
     {
-      "service_id": "amc",
+      "service_id": "gmarket",
       "signal": "signup_phone_auth",
-      "from": "not_required",
-      "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T04:28:31.541Z",
+      "vantage_point": {
+        "country": "kr",
+        "region": "Gyeonggi-do",
+        "ip_asn": "AS9318"
+      }
     },
     {
-      "service_id": "coupang-eats",
-      "signal": "overseas_access",
-      "from": "ok",
-      "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "service_id": "interpark-global",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T04:28:31.541Z",
+      "vantage_point": {
+        "country": "kr",
+        "region": "Gyeonggi-do",
+        "ip_asn": "AS9318"
+      }
+    },
+    {
+      "service_id": "oliveyoung-global",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T04:28:31.541Z",
+      "vantage_point": {
+        "country": "kr",
+        "region": "Gyeonggi-do",
+        "ip_asn": "AS9318"
+      }
+    },
+    {
+      "service_id": "yogiyo",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "not_required",
+      "changed_at": "2026-08-15T04:28:31.541Z",
+      "vantage_point": {
+        "country": "kr",
+        "region": "Gyeonggi-do",
+        "ip_asn": "AS9318"
+      }
     },
     {
       "service_id": "amc",
@@ -24,17 +58,24 @@
         "three_ds": null
       },
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
-      "service_id": "coupang-eats",
-      "signal": "i18n_ui",
-      "from": [
-        "en",
-        "ko"
-      ],
-      "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "service_id": "amc",
+      "signal": "signup_phone_auth",
+      "from": "not_required",
+      "to": "unknown",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "coupang-eats",
@@ -45,7 +86,39 @@
         "android_listed": true,
         "countries": null
       },
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "coupang-eats",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "coupang-eats",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "coupang-eats",
@@ -55,14 +128,12 @@
         "three_ds": null
       },
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "gsshop",
-      "signal": "overseas_access",
-      "from": "unknown",
-      "to": "ok",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "gsshop",
@@ -71,7 +142,24 @@
       "to": [
         "ko"
       ],
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gsshop",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "gsshop",
@@ -81,35 +169,48 @@
         "gateways": [],
         "three_ds": null
       },
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "homeplus",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "hometax",
       "signal": "signup_phone_auth",
       "from": "required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "kbank",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "kobus",
-      "signal": "overseas_access",
-      "from": "ok",
-      "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "kobus",
@@ -118,14 +219,24 @@
         "ko"
       ],
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "kobus",
-      "signal": "signup_phone_auth",
-      "from": "required",
+      "signal": "overseas_access",
+      "from": "ok",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "kobus",
@@ -135,35 +246,24 @@
         "three_ds": null
       },
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
-      "service_id": "lguplus",
-      "signal": "overseas_access",
-      "from": "ok",
+      "service_id": "kobus",
+      "signal": "signup_phone_auth",
+      "from": "required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "lguplus",
-      "signal": "i18n_ui",
-      "from": [
-        "ko"
-      ],
-      "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "lguplus",
-      "signal": "payment_gate",
-      "from": {
-        "gateways": [
-          "danal"
-        ],
-        "three_ds": null
-      },
-      "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "kyobo",
@@ -175,21 +275,67 @@
       "to": [
         "ko"
       ],
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lguplus",
+      "signal": "i18n_ui",
+      "from": [
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lguplus",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "lguplus",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "danal"
+        ],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "national-museum",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "nhis",
-      "signal": "overseas_access",
-      "from": "unknown",
-      "to": "ok",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "nhis",
@@ -198,7 +344,24 @@
       "to": [
         "ko"
       ],
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nhis",
+      "signal": "overseas_access",
+      "from": "unknown",
+      "to": "ok",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "nhis",
@@ -208,21 +371,36 @@
         "gateways": [],
         "three_ds": null
       },
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "payco",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
-      "service_id": "seoul-metro",
-      "signal": "overseas_access",
-      "from": "ok",
+      "service_id": "sentbe",
+      "signal": "signup_phone_auth",
+      "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "seoul-metro",
@@ -232,7 +410,24 @@
         "ko"
       ],
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "seoul-metro",
@@ -242,35 +437,36 @@
         "three_ds": null
       },
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "sentbe",
-      "signal": "signup_phone_auth",
-      "from": "not_required",
-      "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "starbucks-kr",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "themoin",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
-    },
-    {
-      "service_id": "tmoney",
-      "signal": "overseas_access",
-      "from": "ok",
-      "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "tmoney",
@@ -279,7 +475,24 @@
         "ko"
       ],
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "tmoney",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "unknown",
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "tmoney",
@@ -289,42 +502,72 @@
         "three_ds": null
       },
       "to": null,
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "watcha",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "wirebarley",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "yes24-ticket",
       "signal": "overseas_access",
       "from": "ok",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "yes24",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     },
     {
       "service_id": "zigzag",
       "signal": "signup_phone_auth",
       "from": "not_required",
       "to": "unknown",
-      "changed_at": "2026-08-15T05:38:47.932Z"
+      "changed_at": "2026-08-15T05:38:47.932Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
     }
   ]
 }

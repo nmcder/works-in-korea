@@ -12,6 +12,7 @@
  *   data/changes/<date>.json  실제로 값이 바뀐 것만 (재방문 유도 페이지의 근거)
  *   data/runs/latest.json     실행 요약
  */
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { PATHS } from './config.js';
 import { closeBrowser } from './lib/browser.js';
@@ -126,6 +127,13 @@ async function main(): Promise<void> {
             from: applied.previousValue,
             to: result.value,
             changed_at: now,
+            // 어디서 잰 실행이 이 변경을 봤는지. 측정 지점이 바뀐 날의 변경은
+            // 서비스가 바뀐 것이 아니라 우리가 옮겨간 것일 수 있다. (D-14)
+            vantage_point: {
+              country: vantage.country,
+              region: vantage.region,
+              ip_asn: vantage.ip_asn,
+            },
           });
           log.info(`  ${key}: ${short(applied.previousValue)} → ${short(result.value)}  (변경)`);
         } else {
@@ -170,11 +178,25 @@ async function main(): Promise<void> {
 
   if (!options.dryRun) {
     const date = now.slice(0, 10);
-    await writeJson(path.join(PATHS.changes, `${date}.json`), {
-      date,
-      generated_at: now,
-      changes,
-    });
+    const file = path.join(PATHS.changes, `${date}.json`);
+
+    // 같은 날 두 번 돌면 덮어쓰던 것을 이어붙이도록 바꿨다.
+    // 2026-08-15 에 실제로 두 번(KR·US) 돌았고, 앞 실행의 변경 4건이 사라졌다.
+    // git 로그에 쌓이는 변경 이력이 이 프로젝트의 해자라 한 건도 버리면 안 된다.
+    let previous: ChangeEntry[] = [];
+    try {
+      const existing = JSON.parse(await readFile(file, 'utf8')) as { changes?: ChangeEntry[] };
+      if (Array.isArray(existing.changes)) previous = existing.changes;
+    } catch {
+      /* 그날 첫 실행이면 파일이 없다 */
+    }
+    const seen = new Set(previous.map((c) => `${c.service_id}|${c.signal}|${c.changed_at}`));
+    const merged = [
+      ...previous,
+      ...changes.filter((c) => !seen.has(`${c.service_id}|${c.signal}|${c.changed_at}`)),
+    ];
+
+    await writeJson(file, { date, generated_at: now, changes: merged });
     await writeJson(path.join(PATHS.runs, 'latest.json'), summary);
   }
 

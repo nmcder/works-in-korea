@@ -38,11 +38,55 @@ export type Tone = 'open' | 'barrier' | 'mixed' | 'info' | 'none';
 export type WhyKind =
   | 'robots'
   | 'bot-block'
+  | 'unreachable'
+  | 'tls'
+  | 'robots-unreadable'
   | 'no-url'
   | 'no-app-id'
   | 'inconclusive'
   | 'community-only'
   | 'other';
+
+/**
+ * 자동 측정이 막힌 이유를 근거에서 가려낸다.
+ *
+ * ⚠️ 여기서 대충 하면 회사가 하지도 않은 일을 했다고 쓰게 된다.
+ * 엔진은 두 가지 전혀 다른 상황에 모두 'robots' 라는 낱말이 들어간 문자열을 남긴다.
+ *
+ *   "robots: Disallow: /"                            사이트가 크롤러를 금지했다
+ *   "robots: robots-unavailable(CONNECT_TIMEOUT)"    robots.txt 를 읽지도 못했다
+ *
+ * 앞의 것은 사이트의 의사표시고, 뒤의 것은 우리가 서버에 닿지도 못했다는 뜻이다.
+ * 낱말만 보고 뭉뚱그리면 후자를 "이 회사가 자동 접근을 금지함"으로 발표하게 되는데,
+ * 그건 사실이 아닐뿐더러 **진짜 발견(해외에서 접속이 안 됨)을 덮어버린다.**
+ * 2026-08-15 미국 러너 첫 실행에서 티머니·고속버스가 실제로 이 상태였다.
+ */
+export type BlockKind =
+  | 'robots-disallow'
+  | 'bot-block'
+  | 'unreachable'
+  | 'tls'
+  | 'robots-unreadable'
+  | null;
+
+export function classifyBlock(evidence: unknown): BlockKind {
+  const raw = JSON.stringify(evidence ?? {});
+
+  // robots.txt 를 "못 읽은" 경우를 먼저 걸러낸다. 순서를 바꾸면 안 된다.
+  const unavailable = /robots-unavailable\(([^)]*)\)/.exec(raw);
+  if (unavailable) {
+    const detail = unavailable[1] ?? '';
+    if (/CERT|SIGNATURE|TLS|SSL/i.test(detail)) return 'tls';
+    if (/TIMEOUT|ECONNREFUSED|ENOTFOUND|ECONNRESET|EAI_AGAIN|SOCKET|DNS/i.test(detail)) {
+      return 'unreachable';
+    }
+    return 'robots-unreadable';
+  }
+
+  if (/robots:\s*Disallow/i.test(raw)) return 'robots-disallow';
+  if (/"http_status":\s*(403|429)/.test(raw) || /http_status=(403|429)/.test(raw)) return 'bot-block';
+  return null;
+}
 
 export interface SignalView {
   key: SignalKey;
@@ -241,24 +285,39 @@ function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) |
   collect(ev.scanned);
   const blob = texts.join(' | ');
 
-  const httpBlocked =
-    JSON.stringify(ev).includes('"http_status":403') ||
-    JSON.stringify(ev).includes('"http_status":429') ||
-    blob.includes('http_status=403');
-
-  if (blob.includes('robots')) {
-    return {
-      kind: 'robots',
-      en: 'This site’s robots.txt tells automated clients to stay away from this path, so our crawler does not fetch it. That is our choice, not a failure — and it means only a person can answer this one.',
-      ko: '이 사이트의 robots.txt가 해당 경로에 자동 접근을 금지하고 있어 크롤러가 요청하지 않는다. 실패가 아니라 지키기로 한 규칙이며, 그래서 이 항목은 사람만 답할 수 있다.',
-    };
-  }
-  if (httpBlocked) {
-    return {
-      kind: 'bot-block',
-      en: 'The site answered our crawler with a refusal (HTTP 403/429) rather than the page. Bot filtering and country blocking look identical from outside, so we do not claim either.',
-      ko: '사이트가 페이지 대신 거부 응답(HTTP 403/429)을 돌려줬다. 바깥에서는 봇 차단과 지역 차단이 똑같아 보이므로 어느 쪽이라고도 단정하지 않는다.',
-    };
+  switch (classifyBlock(ev)) {
+    case 'robots-disallow':
+      return {
+        kind: 'robots',
+        en: 'This site’s robots.txt tells automated clients to stay away from this path, so our crawler does not fetch it. That is our choice, not a failure — and it means only a person can answer this one.',
+        ko: '이 사이트의 robots.txt가 해당 경로에 자동 접근을 금지하고 있어 크롤러가 요청하지 않는다. 실패가 아니라 지키기로 한 규칙이며, 그래서 이 항목은 사람만 답할 수 있다.',
+      };
+    case 'bot-block':
+      return {
+        kind: 'bot-block',
+        en: 'The site answered our crawler with a refusal (HTTP 403/429) rather than the page. Bot filtering and country blocking look identical from outside, so we do not claim either.',
+        ko: '사이트가 페이지 대신 거부 응답(HTTP 403/429)을 돌려줬다. 바깥에서는 봇 차단과 지역 차단이 똑같아 보이므로 어느 쪽이라고도 단정하지 않는다.',
+      };
+    case 'unreachable':
+      return {
+        kind: 'unreachable',
+        en: 'The server did not answer at all from our vantage point outside Korea — the connection timed out before any page was served. We cannot tell from here whether foreign or datacentre addresses are being dropped deliberately, or whether this was a transient fault, so we record no value. This is worth a first-hand check.',
+        ko: '한국 밖 측정 지점에서 서버가 아예 응답하지 않았다. 페이지를 받기 전에 연결이 시간 초과됐다. 해외·데이터센터 주소를 의도적으로 버리는 것인지 일시적 장애인지 여기서는 구분할 수 없어 값을 남기지 않는다. 실제로 확인해 볼 가치가 있는 항목이다.',
+      };
+    case 'tls':
+      return {
+        kind: 'tls',
+        en: 'The site’s TLS certificate chain could not be verified from our vantage point, so the connection was dropped before any page arrived. Browsers can sometimes repair an incomplete chain on their own; our client does not, and we will not switch certificate checking off just to obtain a reading.',
+        ko: 'TLS 인증서 체인을 검증하지 못해 페이지가 오기 전에 연결이 끊겼다. 브라우저는 끊긴 체인을 스스로 보완하기도 하지만 우리 클라이언트는 그러지 않으며, 값을 얻자고 인증서 검사를 끄지는 않는다.',
+      };
+    case 'robots-unreadable':
+      return {
+        kind: 'robots-unreadable',
+        en: 'We could not read this site’s robots.txt, and we do not crawl a site whose rules we have not managed to read. That is a conservative default on our side, not a statement about the site.',
+        ko: '이 사이트의 robots.txt를 읽지 못했다. 규칙을 확인하지 못한 사이트는 크롤링하지 않는다. 사이트에 대한 판단이 아니라 우리 쪽의 보수적 기본값이다.',
+      };
+    case null:
+      break;
   }
   if (key === 'app_availability' && blob.includes('앱 ID')) {
     return {
@@ -500,19 +559,22 @@ export function measuredCount(service: Service): number {
 }
 
 /**
- * 자동 측정이 원천적으로 막혀 있는가.
+ * 자동 측정이 원천적으로 막혀 있는가, 그렇다면 어떤 종류인가.
  *
- *   'robots'    사이트가 robots.txt로 자동 접근을 금지 → 우리가 요청하지 않는다
- *   'bot-block' 사이트가 크롤러에게 403/429로 응답 → 우리가 받아올 수 없다
- *
- * 둘 다 "아직 안 쟀다"와 다른 상태다. 사람의 제보 말고는 채울 방법이 없다는 뜻이고,
- * 시드의 26%가 여기 해당한다. (docs/03-decisions.md D-9)
+ * 다섯 가지는 전부 다른 사실이고 섞으면 안 된다 (classifyBlock 주석 참고).
+ * "아직 안 쟀다"와도 다르다 — 사람의 제보 말고는 채울 방법이 없다는 뜻이다. (D-9)
  */
-export function crawlBlock(service: Service): 'robots' | 'bot-block' | null {
+export function crawlBlock(service: Service): BlockKind {
   const sig = service.signals.overseas_access;
   if (!sig || sig.confidence !== 'unknown') return null;
-  const raw = JSON.stringify(sig.evidence ?? {});
-  if (raw.includes('robots')) return 'robots';
-  if (/"http_status":\s*(403|429)/.test(raw)) return 'bot-block';
-  return null;
+  return classifyBlock(sig.evidence);
 }
+
+/** 화면에 쓰는 짧은 이름 */
+export const BLOCK_LABELS: Record<NonNullable<BlockKind>, Bi> = {
+  'robots-disallow': { en: 'robots.txt says no', ko: 'robots.txt 금지' },
+  'bot-block': { en: 'refuses our crawler', ko: '크롤러 거부' },
+  unreachable: { en: 'no answer from abroad', ko: '해외에서 응답 없음' },
+  tls: { en: 'certificate not verifiable', ko: '인증서 검증 실패' },
+  'robots-unreadable': { en: 'robots.txt unreadable', ko: 'robots.txt 못 읽음' },
+};

@@ -89,6 +89,8 @@ export interface ChangeEntry {
   from: unknown;
   to: unknown;
   changed_at: string;
+  /** 이 변경을 관측한 실행의 측정 지점. 없으면 그 실행이 기록하기 전의 데이터다. (D-14) */
+  vantage_point?: { country: string | null; region: string | null; ip_asn: string | null };
 }
 
 export interface ChangeFile {

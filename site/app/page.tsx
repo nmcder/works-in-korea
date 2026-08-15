@@ -2,8 +2,15 @@ import Link from 'next/link';
 import { Explorer, type Row } from '@/components/Explorer';
 import { RelativeTime } from '@/components/RelativeTime';
 import { formatUtc } from '@/lib/time';
-import { getBlockedServices, getCoverage, getLatestRun, getServices } from '@/lib/data';
 import {
+  getBlockCounts,
+  getBlockedServices,
+  getCoverage,
+  getLatestRun,
+  getServices,
+} from '@/lib/data';
+import {
+  BLOCK_LABELS,
   CATEGORY_LABELS,
   HEADLINE_KEYS,
   crawlBlock,
@@ -32,12 +39,20 @@ const COVERAGE_LABELS: Record<SignalKey, string> = {
 };
 
 export default async function HomePage() {
-  const [services, run, coverage, blocked] = await Promise.all([
+  const [services, run, coverage, blocked, counts] = await Promise.all([
     getServices(),
     getLatestRun(),
     getCoverage(),
     getBlockedServices(),
+    getBlockCounts(),
   ]);
+
+  // 이름을 손으로 적어 두면 시드가 바뀔 때 조용히 거짓이 된다. 데이터에서 뽑는다.
+  const namedBlocked = blocked
+    .filter((b) => b.service.importance === 1)
+    .map((b) => b.service.name.en)
+    .sort((a, b) => a.localeCompare(b, 'en'))
+    .slice(0, 5);
 
   const rows: Row[] = services
     .map((s) => {
@@ -51,7 +66,10 @@ export default async function HomePage() {
         importance: s.importance,
         measured: measuredCount(s),
         total: 8,
-        crawlBlocked: crawlBlock(s),
+        crawlBlocked: (() => {
+          const k = crawlBlock(s);
+          return k ? BLOCK_LABELS[k].en : null;
+        })(),
         signals: views.map((v) => ({
           key: v.key,
           short: SHORT[v.key] ?? v.label.en,
@@ -119,7 +137,7 @@ export default async function HomePage() {
             </div>
             <div className="stat">
               <b>{blocked.length}</b>
-              <span>off-limits to our crawler</span>
+              <span>cannot be measured automatically</span>
             </div>
           </div>
         </div>
@@ -171,15 +189,38 @@ export default async function HomePage() {
           </p>
 
           <div className="notice">
-            <strong>{blocked.length} of {services.length} services block automated measurement.</strong>{' '}
-            {blocked.filter((b) => b.kind === 'robots').length} of them tell crawlers to stay away in
-            their robots.txt and we honour that;{' '}
-            {blocked.filter((b) => b.kind === 'bot-block').length} answer our crawler with a refusal.
-            Naver, Kakao, Interpark, Musinsa and Melon are among them. For those services, a human
-            report is not a supplement — it is the only source there is.
-            <br />
-            <br />
-            <Link href="/method/">How measurement works →</Link>
+            <strong>
+              {blocked.length} of {services.length} services could not be measured automatically.
+            </strong>{' '}
+            These are five different situations and we do not lump them together — saying a company
+            forbade something it did not forbid would be its own kind of false statement.
+            <ul style={{ margin: '10px 0 0', paddingLeft: 18 }}>
+              {(
+                [
+                  ['robots-disallow', 'tell crawlers to stay away in robots.txt, and we honour it'],
+                  ['bot-block', 'answer our crawler with a refusal (HTTP 403/429)'],
+                  ['unreachable', 'did not answer our request at all from outside Korea'],
+                  ['tls', 'served a certificate chain we could not verify'],
+                  ['robots-unreadable', 'have a robots.txt we could not read, so we stayed away'],
+                ] as const
+              )
+                .map(([kind, text]) => [counts[kind], text, kind] as const)
+                .filter(([n]) => n > 0)
+                .map(([n, text, kind]) => (
+                  <li key={kind} style={{ marginBottom: 3 }}>
+                    <strong>{n}</strong> {text}
+                  </li>
+                ))}
+            </ul>
+            {namedBlocked.length > 0 && (
+              <p style={{ margin: '10px 0 0' }}>
+                {namedBlocked.join(', ')} are among them. For these, a first-hand report is not a
+                supplement — it is the only source there is.
+              </p>
+            )}
+            <p style={{ margin: '10px 0 0' }}>
+              <Link href="/method/">How measurement works →</Link>
+            </p>
           </div>
         </div>
       </section>

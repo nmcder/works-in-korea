@@ -22,8 +22,8 @@ export interface Row {
   /** 8개 시그널 중 값이 기록된 개수 */
   measured: number;
   total: number;
-  /** 자동 측정이 막혀 있으면 그 이유. 아니면 null */
-  crawlBlocked: 'robots' | 'bot-block' | null;
+  /** 자동 측정이 막혀 있으면 그 이유를 사람이 읽을 수 있게. 아니면 null */
+  crawlBlocked: string | null;
   signals: RowSignal[];
   haystack: string;
 }
@@ -202,8 +202,7 @@ export function Explorer({ rows, categories }: { rows: Row[]; categories: [strin
                   <span>
                     {r.measured} of {r.total} signals recorded
                   </span>
-                  {r.crawlBlocked === 'robots' && <span>robots.txt says no</span>}
-                  {r.crawlBlocked === 'bot-block' && <span>refuses our crawler</span>}
+                  {r.crawlBlocked && <span>{r.crawlBlocked}</span>}
                 </div>
               </Link>
             ))}

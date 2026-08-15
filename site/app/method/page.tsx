@@ -55,9 +55,36 @@ export default async function MethodPage() {
           <h2>Where we measure from</h2>
           <p>
             The measurement runs on GitHub&rsquo;s hosted runners, which sit outside Korea. That is
-            not an accident of hosting — it is the point. The default environment of the robot is
-            the same environment a foreign visitor is in. Every run records the country, region and
-            network it came from, and that record is published with the data.
+            not an accident of hosting — it is the point. Every run records the country, region and
+            network it came from, and that record is published alongside the data.
+          </p>
+          <p>
+            <strong>
+              But a cloud runner is not the same thing as a tourist with a phone, and we will not
+              pretend otherwise.
+            </strong>{' '}
+            Those runners live in a datacentre, on address ranges that plenty of Korean sites treat
+            differently from a home broadband line or a roaming SIM — some block datacentre traffic
+            outright as suspected VPN or scraping. So when a site does not answer us, we are looking
+            at two possible causes at once: <em>being outside Korea</em> and{' '}
+            <em>being on a datacentre address</em>. One run cannot separate them, and we do not
+            report a guess as if it were a measurement.
+          </p>
+          <p>
+            This is not hypothetical. The first run from outside Korea (15 August 2026, US) found six
+            services that had answered normally from a Korean address a few hours earlier: two
+            refused outright with HTTP 403, one served a Korean &ldquo;abnormal access&rdquo;
+            interstitial, two never completed a connection at all, and one presented a certificate
+            chain that could not be verified. Every one of those is recorded as{' '}
+            <strong>no value</strong> rather than &ldquo;blocked&rdquo;. Working out which of them
+            actually turn a visitor away needs someone in the country with an ordinary connection —
+            which is the whole argument for first-hand reports.
+          </p>
+          <p className="ko">
+            해외 러너는 데이터센터 IP입니다. 한국 사이트 상당수가 데이터센터 대역을 VPN·스크래핑으로
+            보고 가정용 인터넷과 다르게 취급합니다. 그래서 응답이 없을 때 &ldquo;해외라서&rdquo;인지
+            &ldquo;데이터센터라서&rdquo;인지 한 번의 실행으로는 구분할 수 없고, 추측을 측정처럼
+            발표하지 않습니다.
           </p>
           {run && (
             <table>

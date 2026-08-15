@@ -8,7 +8,7 @@
  */
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { crawlBlock } from './present';
+import { type BlockKind, crawlBlock } from './present';
 import type { ChangeFile, RunSummary, Service, SignalKey } from './types';
 
 /** 레포 루트의 data/. 사이트를 다른 위치에서 빌드해야 하면 WIK_DATA_DIR 로 덮어쓴다. */
@@ -100,16 +100,33 @@ export async function getCoverage(): Promise<CoverageRow[]> {
  * "아직 안 쟀다"와 "회사가 자동 접근을 막아서 영원히 못 잰다"는 다른 사실이고,
  * 후자는 제보가 유일한 데이터원이라는 뜻이다. (docs/03-decisions.md D-9)
  */
-export async function getBlockedServices(): Promise<
-  { service: Service; kind: 'robots' | 'bot-block' }[]
-> {
+export interface BlockedService {
+  service: Service;
+  kind: NonNullable<BlockKind>;
+}
+
+export async function getBlockedServices(): Promise<BlockedService[]> {
   const services = await getServices();
-  const out: { service: Service; kind: 'robots' | 'bot-block' }[] = [];
+  const out: BlockedService[] = [];
   for (const service of services) {
     const kind = crawlBlock(service);
     if (kind) out.push({ service, kind });
   }
   return out;
+}
+
+/** 종류별 개수 — 화면에서 "robots가 막은 것"과 "서버가 응답 안 한 것"을 구분해 보여준다 */
+export async function getBlockCounts(): Promise<Record<NonNullable<BlockKind>, number>> {
+  const blocked = await getBlockedServices();
+  const counts = {
+    'robots-disallow': 0,
+    'bot-block': 0,
+    unreachable: 0,
+    tls: 0,
+    'robots-unreadable': 0,
+  };
+  for (const b of blocked) counts[b.kind] += 1;
+  return counts;
 }
 
 /** 사이트가 언제 만들어졌는지. 데이터 신선도와 별개로 표시한다. */
