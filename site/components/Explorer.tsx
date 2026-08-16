@@ -56,7 +56,16 @@ const FACETS: Facet[] = [
   {
     id: 'nophone',
     label: { en: 'No Korean phone to sign up', ko: '한국 휴대폰 없이 가입' },
-    test: (r) => r.signals.some((s) => s.key === 'signup_phone_auth' && s.tone === 'open'),
+    /*
+     * open 만 보면 안 된다. "해외 번호도 가능"(카카오)과 "다른 길이 함께 있음"은
+     * 둘 다 mixed 인데, 한국 휴대폰이 없어도 가입된다는 점에서는 똑같다.
+     * open 만 거르면 이 거르기를 누른 사람에게 카카오가 안 보인다 —
+     * 정작 그 사람이 제일 찾던 답인데.
+     */
+    test: (r) =>
+      r.signals.some(
+        (s) => s.key === 'signup_phone_auth' && (s.tone === 'open' || s.tone === 'mixed'),
+      ),
   },
   {
     id: 'phone',

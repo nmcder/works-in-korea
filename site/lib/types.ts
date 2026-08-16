@@ -51,7 +51,21 @@ export interface Signal<V = unknown> {
 
 export type OverseasAccessValue = 'ok' | 'blocked' | 'degraded' | 'unknown';
 export type I18nUiValue = string[] | null;
-export type SignupPhoneAuthValue = 'required' | 'optional' | 'not_required' | 'unknown';
+/**
+ * 가입할 때 한국 휴대폰이 필요한가.
+ *
+ * `any_phone` 이 따로 있는 이유: 카카오 계정은 휴대폰 인증을 요구하지만 국가번호에
+ * +1·+81·+63 같은 해외 번호를 고를 수 있다. 반면 야놀자·캐치테이블은 010 형식만 받는다.
+ * 둘을 똑같이 `required` 로 적으면 화면에 나란히 "한국 휴대폰 필요"로 나가는데,
+ * 앞쪽은 본국 번호로 그냥 되고 뒤쪽은 진짜로 막힌다 — 이 사이트를 보러 오는 사람에게
+ * 이보다 중요한 구분이 없다. 2026-08-16 손 확인에서 드러났다.
+ */
+export type SignupPhoneAuthValue =
+  | 'required'
+  | 'any_phone'
+  | 'optional'
+  | 'not_required'
+  | 'unknown';
 export type AppAvailabilityValue = {
   ios_listed: boolean | null;
   android_listed: boolean | null;

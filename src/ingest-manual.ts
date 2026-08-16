@@ -34,7 +34,7 @@ type Checkable = (typeof CHECKABLE)[number];
 
 const ALLOWED: Record<Checkable, (v: unknown) => boolean> = {
   signup_phone_auth: (v) =>
-    v === 'required' || v === 'optional' || v === 'not_required' || v === 'unknown',
+    v === 'required' || v === 'any_phone' || v === 'optional' || v === 'not_required' || v === 'unknown',
   i18n_ui: (v) =>
     v === null ||
     (Array.isArray(v) && v.length > 0 && v.every((x) => typeof x === 'string' && /^[a-z]{2}$/.test(x))),

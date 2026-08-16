@@ -404,6 +404,14 @@ function formatValue(key: SignalKey, sig: Signal): { display: Bi; tone: Tone } |
     case 'signup_phone_auth': {
       if (v === 'required')
         return { display: { en: 'Korean phone needed', ko: '한국 휴대폰 필요' }, tone: 'barrier' };
+      /*
+       * 인증은 하는데 **해외 번호를 받아 준다**. 카카오 계정이 이렇다 — 국가번호에
+       * +1·+81 을 고를 수 있다. 이걸 required 로 뭉개면 진짜로 막히는 야놀자·
+       * 캐치테이블(010 형식만 받음)과 화면에서 구분이 안 된다. 그 구분이
+       * 이 사이트를 보러 오는 사람에게는 "쓸 수 있다/없다"를 가른다.
+       */
+      if (v === 'any_phone')
+        return { display: { en: 'Foreign phone OK', ko: '해외 번호도 가능' }, tone: 'mixed' };
       if (v === 'optional')
         return { display: { en: 'Optional', ko: '선택' }, tone: 'mixed' };
       if (v === 'not_required')
@@ -515,6 +523,12 @@ function caveatFor(key: SignalKey, sig: Signal): Bi | null {
         ko: '로그인 없이 열리는 페이지만 본 결과입니다. 결제 화면은 대개 로그인 뒤에 있어서, 결제사가 없다는 뜻은 아닙니다.',
       };
     }
+  }
+  if (key === 'signup_phone_auth' && sig.value === 'any_phone') {
+    return {
+      en: 'A phone number is still verified — the difference is that the form accepts a country code other than +82, so your own number may work.',
+      ko: '휴대폰 인증 자체는 거칩니다. 다만 국가번호를 +82 말고 다른 것으로 고를 수 있어서, 쓰시던 번호로도 될 수 있습니다.',
+    };
   }
   if (key === 'signup_phone_auth' && sig.value === 'not_required') {
     return {

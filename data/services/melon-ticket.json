@@ -74,28 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "any_phone",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
-        "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
-        "final_url": "https://accounts.melon.com/join/choice?cpId=WP15",
-        "http_status": 200,
-        "page_kind": "combined",
-        "form_input_count": 0,
-        "attempts": [
-          {
-            "url": "https://accounts.melon.com/join/choice?cpId=WP15",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://accounts.melon.com/join/choice?cpId=WP15",
+        "saw": "가입 선택 화면에 '멜론은 카카오계정으로 회원가입 할 수 있습니다'라고 명시되어 있고 버튼은 카카오계정으로 로그인 / 카카오계정 만들기 두 개뿐, 이메일 등 다른 가입 방법은 없었음. 카카오계정 만들기로 진행하면 휴대폰 인증 단계가 필수로 나타남(국가번호는 해외 번호도 선택 가능).",
+        "recorded_at": "2026-08-16T11:26:05.060Z"
       }
     },
     "app_availability": {

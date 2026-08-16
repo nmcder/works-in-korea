@@ -35,7 +35,7 @@ const ASK: Record<string, { q: string; how: string; answers: string }> = {
     q: '가입할 때 한국 휴대폰 본인인증이 필요한가',
     how: '가입 페이지를 열고 **양식만 읽는다.** 계정을 만들지 않는다. 통신사 선택(SKT·KT·LG U+), "휴대폰 본인인증", "본인확인", PASS 앱, 아이핀 같은 것이 보이는지 본다.',
     answers:
-      'required = 한국 휴대폰 인증 말고는 길이 없음 / optional = 이메일·소셜 등 다른 길이 함께 있음 / not_required = 인증 요구가 아예 없음 / unknown = 가입 페이지를 못 찾았거나 확실하지 않음',
+      'required = 한국 번호(010) 인증 말고는 길이 없음 / any_phone = 인증은 하지만 국가번호를 +82 말고 다른 것도 고를 수 있음 / optional = 이메일·소셜 등 다른 길이 함께 있음 / not_required = 인증 요구가 아예 없음 / unknown = 확실하지 않음',
   },
   i18n_ui: {
     q: '어떤 언어로 쓸 수 있는가',
