@@ -43,34 +43,16 @@
       }
     },
     "i18n_ui": {
-      "value": [
-        "ko"
-      ],
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": null,
+      "measured_at": "2026-08-16T11:45:03.019Z",
+      "first_seen_at": "2026-08-16T11:45:03.019Z",
+      "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "language_switcher_links": {},
-        "english_url_checks": [
-          {
-            "url": "https://www.gsshop.com/en",
-            "status": 200,
-            "ok": false
-          },
-          {
-            "url": "https://www.gsshop.com/en/",
-            "status": 200,
-            "ok": false
-          }
-        ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0.538,
-        "hangul_char_ratio": 0.231,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "not_measured": "robots: Disallow: /",
+        "http_status": null,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {

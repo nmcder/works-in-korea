@@ -49,7 +49,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T11:45:03.019Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -83,7 +83,7 @@
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.69,
+        "latin_char_ratio": 0.691,
         "hangul_char_ratio": 0.001,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }

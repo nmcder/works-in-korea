@@ -118,6 +118,25 @@ async function main(): Promise<void> {
 
     log.group(`${id}`);
     for (const key of options.signals) {
+      /*
+       * 사람이 눈으로 확인한 값은 자동 측정이 건드리지 않는다.
+       *
+       * 2026-08-16 에 언어 프로브를 고치고 전체를 다시 돌렸더니, 사람이 확인해 둔
+       * **25건이 통째로 지워졌다.** 지마켓 ["ko","en","zh"] → null, 고속버스
+       * ["ko","en","zh","ja"] → null 같은 식이다. 기계가 못 본 것이 사람이 본 것을
+       * 덮어쓴 것이고, 이건 측정이 아니라 파괴다.
+       *
+       * 자동이 더 많이 찾는 경우도 있지만(우리은행에서 6개 언어를 찾았다) 그걸
+       * 이유로 덮게 두면 반대 방향 사고를 막을 수 없다. 사람 값은 사람이 다시
+       * 확인할 때만 바뀐다 — 그래서 화면에 확인 날짜가 붙어 있는 것이다.
+       *
+       * 자동에 맡기고 싶으면 그 값을 지우면 된다. 지우는 것은 사람의 결정이어야 한다.
+       */
+      if (service.signals[key]?.confidence === 'manual') {
+        log.info(`  ${key}: 사람이 확인한 값이라 건너뜀`);
+        continue;
+      }
+
       try {
         const previousSignal = service.signals[key];
         const result = await runProbe(key, service, vantage, now);
