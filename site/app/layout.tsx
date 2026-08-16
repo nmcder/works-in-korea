@@ -136,6 +136,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <T en="Public JSON API" ko="공개 JSON API" />
                 </Link>
               </p>
+              <p>
+                <a href={SITE.repo} rel="noreferrer" target="_blank">
+                  <T
+                    en="Source code and raw data on GitHub"
+                    ko="측정 코드와 원본 데이터 (GitHub)"
+                  />
+                </a>
+              </p>
             </div>
 
             <div>

@@ -55,22 +55,17 @@
         "checked_by": "operator",
         "url": "https://www.catchtable.co.kr",
         "saw": "footer의 'CATCHTABLE Global for foreigners' 링크를 누르면 catchtable.net으로 이동해 전체 화면이 영어(Restaurant, Location or Cuisine 등)로 나온다. 우측 상단에 ENG 표시도 있다.",
-        "recorded_at": "2026-08-16T07:07:06.186Z"
+        "recorded_at": "2026-08-16T07:02:07.669Z"
       }
     },
     "signup_phone_auth": {
-      "value": "optional",
-      "measured_at": "2026-08-16T00:00:00.000Z",
-      "first_seen_at": "2026-08-16T00:00:00.000Z",
-      "last_changed_at": "2026-08-16T00:00:00.000Z",
-      "method": "manual",
-      "confidence": "manual",
-      "evidence": {
-        "checked_by": "operator",
-        "url": "https://app.catchtable.co.kr/ct/login",
-        "saw": "로그인 화면에 카카오로 시작, 네이버(N), Apple, 휴대폰 아이콘 이렇게 네 가지 옵션이 있다. 휴대폰 인증 말고도 카카오·네이버·Apple 소셜 로그인으로 가입할 수 있다.",
-        "recorded_at": "2026-08-16T07:02:07.669Z"
-      }
+      "value": "unknown",
+      "measured_at": null,
+      "first_seen_at": null,
+      "last_changed_at": null,
+      "method": "none",
+      "confidence": "unknown",
+      "evidence": null
     },
     "app_availability": {
       "value": {
@@ -133,7 +128,7 @@
         "checked_by": "operator",
         "url": "https://app.catchtable.co.kr/ct/login",
         "saw": "로그인 화면 하단 '고객센터'를 누르면 챗봇이 뜨는데 안내 문구와 빠른답변 버튼이 모두 한국어뿐이었다.",
-        "recorded_at": "2026-08-16T07:07:06.186Z"
+        "recorded_at": "2026-08-16T07:02:07.669Z"
       }
     },
     "foreign_card": {

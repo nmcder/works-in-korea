@@ -218,6 +218,25 @@ export default async function MethodPage() {
             </li>
           </ul>
 
+          {/*
+            "규칙을 지킨다"는 말은 코드를 볼 수 있을 때만 검증 가능한 주장이다.
+            그 코드로 가는 길을 안 열어 두면 이 페이지 전체가 그냥 약속에 그친다.
+          */}
+          <div className="aside mark">
+            <h3>
+              <T en="You do not have to take our word for it" ko="말로만 믿으실 필요 없습니다" />
+            </h3>
+            <T
+              en="Every rule above is enforced in code, and the code is public along with every measurement ever taken. The daily results are committed to git, so what changed and when is in the history rather than in a claim."
+              ko="위 규칙은 전부 코드로 강제돼 있고, 그 코드와 지금까지의 모든 측정값이 공개돼 있습니다. 매일의 결과가 git에 쌓이므로 무엇이 언제 바뀌었는지는 주장이 아니라 기록으로 남습니다."
+            />
+            <p style={{ marginTop: 14 }}>
+              <a className="button ghost" href={SITE.repo} rel="noreferrer" target="_blank">
+                <T en="Read the measurement code" ko="측정 코드 보기" />
+              </a>
+            </p>
+          </div>
+
           <h2>
             <T en="What this site counts about you" ko="이 사이트가 방문자에 대해 세는 것" />
           </h2>

@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 93곳 · 8묶음.
+`npm run manual-queue` 가 생성. 남은 94곳 · 8묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -359,6 +359,14 @@
     ]
   },
   {
+    "service_id": "catchtable",
+    "name": "CatchTable",
+    "url": "https://www.catchtable.co.kr",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
     "service_id": "cgv",
     "name": "CGV",
     "url": "http://www.cgv.co.kr",
@@ -405,15 +413,6 @@
     "check": [
       "support_en"
     ]
-  },
-  {
-    "service_id": "visitkorea",
-    "name": "Visit Korea (KTO)",
-    "url": "https://english.visitkorea.or.kr",
-    "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
-    "check": [
-      "signup_phone_auth"
-    ]
   }
 ]
 ```
@@ -424,6 +423,15 @@
 
 ```json
 [
+  {
+    "service_id": "visitkorea",
+    "name": "Visit Korea (KTO)",
+    "url": "https://english.visitkorea.or.kr",
+    "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
   {
     "service_id": "yogiyo",
     "name": "Yogiyo",
@@ -534,16 +542,6 @@
       "i18n_ui",
       "support_en"
     ]
-  },
-  {
-    "service_id": "woori-bank",
-    "name": "Woori Bank",
-    "url": "https://www.wooribank.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
   }
 ]
 ```
@@ -554,6 +552,16 @@
 
 ```json
 [
+  {
+    "service_id": "woori-bank",
+    "name": "Woori Bank",
+    "url": "https://www.wooribank.com",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
   {
     "service_id": "daangn",
     "name": "Karrot (Danggeun Market)",
@@ -661,16 +669,6 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
-  {
-    "service_id": "travel-wallet",
-    "name": "Travel Wallet",
-    "url": "https://www.travel-wallet.com",
-    "support_url": "https://enterprise.travel-wallet.com/home",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
   }
 ]
 ```
@@ -681,6 +679,16 @@
 
 ```json
 [
+  {
+    "service_id": "travel-wallet",
+    "name": "Travel Wallet",
+    "url": "https://www.travel-wallet.com",
+    "support_url": "https://enterprise.travel-wallet.com/home",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
   {
     "service_id": "tving",
     "name": "TVING",
@@ -784,16 +792,6 @@
       "i18n_ui",
       "support_en"
     ]
-  },
-  {
-    "service_id": "genie",
-    "name": "Genie Music",
-    "url": "https://www.genie.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
   }
 ]
 ```
@@ -804,6 +802,16 @@
 
 ```json
 [
+  {
+    "service_id": "genie",
+    "name": "Genie Music",
+    "url": "https://www.genie.co.kr",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
   {
     "service_id": "ibk",
     "name": "IBK Industrial Bank",
@@ -909,16 +917,6 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
-  {
-    "service_id": "tada",
-    "name": "TADA",
-    "url": "https://tadatada.com",
-    "support_url": "https://www.tadatada.com/ad-biz",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
   }
 ]
 ```
@@ -929,6 +927,16 @@
 
 ```json
 [
+  {
+    "service_id": "tada",
+    "name": "TADA",
+    "url": "https://tadatada.com",
+    "support_url": "https://www.tadatada.com/ad-biz",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
   {
     "service_id": "themoin",
     "name": "Moin",

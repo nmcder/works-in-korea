@@ -91,5 +91,14 @@ export const SITE = {
 
   license: { name: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
 
+  /**
+   * 측정 코드가 있는 곳.
+   *
+   * 이 사이트는 "어떻게 쟀는지 밝힌다"를 파는데, 정작 재는 코드로 가는 길이 없었다.
+   * 방법을 검증하고 싶은 사람에게 /method 의 설명만 내미는 것은 반쪽이다 —
+   * 진짜 방법은 코드에 있다. 그리고 그 사람들이 이 프로젝트를 가장 잘 쓸 사람들이다.
+   */
+  repo: 'https://github.com/nmcder/works-in-korea',
+
   contact: 'nmcder117@gmail.com',
 } as const;

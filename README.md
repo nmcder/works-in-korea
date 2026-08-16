@@ -1,15 +1,61 @@
 # Works in Korea?
 
-**[worksinkorea.com](https://worksinkorea.com)**
+**Does this Korean website actually work if you don't have a Korean phone number, a Korean
+card, or a Korean address?** Nobody publishes that answer with a date on it. So this measures
+106 Korean online services every day, from outside Korea, and publishes what it finds.
 
-Checks 106 Korean online services every day from outside Korea and publishes what it finds:
-whether the site opens, what languages it offers, and whether signing up requires a Korean
-phone number. Every value carries the time it was taken and how.
+**→ [worksinkorea.com](https://worksinkorea.com)** · [public JSON API](https://www.worksinkorea.com/api-docs/) · data is [CC BY 4.0](LICENSE-DATA), code is MIT
 
-한국 온라인 서비스 106개를 매일 한국 밖에서 확인해 공개합니다. 접속 여부, 제공 언어,
-가입 시 한국 휴대폰 필요 여부. 모든 값에 측정 시각과 방법이 붙습니다.
+![Works in Korea?](https://www.worksinkorea.com/og/site.png)
 
-Code is MIT. Data is [CC BY 4.0](LICENSE-DATA).
+## What came out of it that I did not expect
+
+**1. Obeying robots.txt costs 34% of the dataset — and that is itself the finding.**
+
+The crawler reads robots.txt before every request and does not fetch a disallowed path.
+The result is that **36 of 106 services can never be measured this way**, including Coupang,
+Baemin, 11st, Melon, CGV and Musinsa.
+
+| why | services |
+|---|---|
+| robots.txt disallows it | 18 |
+| the server refuses the crawler (403/429) | 8 |
+| robots.txt itself could not be read from abroad | 10 |
+
+Those 36 are published as a list with the reason, not hidden as gaps. They are also exactly
+the services where a first-hand report from a real person is the *only* possible source, which
+is why the site has a report form at all.
+
+**2. "Can you open it from abroad" is not a property of a website.**
+
+Nine government and bank sites opened normally from Washington and did not answer at all from
+Illinois, on the same day, from the same runner image. Storing one value per service and calling
+it the answer was a modelling error, not noise. Results are now recorded per vantage point and
+the site shows the split when the answers disagree.
+
+**3. Saying "I don't know" needs a reason, or it reads as neglect.**
+
+Every empty value carries why it is empty — robots.txt, a refused request, an unreachable host,
+a certificate that would not verify, or a sign-up page that renders in JavaScript. An unexplained
+blank and a deliberate blank look identical, and only one of them is honest.
+
+## How it works
+
+```
+GitHub Actions (runners are outside Korea — that is the point, not a bug)
+  └─ 6 probes over 106 services, robots.txt checked before every request
+       └─ results committed to git as JSON
+            └─ "what changed and when" accumulates in the history for free
+                 └─ Next.js prerenders the site + a static JSON API
+```
+
+No servers, no database, no accounts, no advertising. One serverless function, which exists
+only so that reporting something does not require a GitHub account.
+
+Every value carries three things: **when it was measured, how, and how much to trust it**
+(machine / checked by hand / reported by a person). Values that cannot be measured by machine —
+whether a foreign card clears, whether an SMS code arrives — are never guessed and never
+automated, because that would mean putting a real card through a real checkout.
 
 ---
 
