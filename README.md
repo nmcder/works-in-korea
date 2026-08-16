@@ -83,7 +83,7 @@ site/             the public site (Next.js, prerendered + one API route)
 | `npm run find-hints` | look for missing sign-up URLs, help pages and app IDs |
 | `npm run ingest -- --reapply` | re-aggregate stored community reports |
 | `cd site && npm run icons` | download app icons for any service that does not have one yet |
-| `npm run manual-queue` | write one paste-ready prompt per batch of what only a human can check → `docs/queue/batch-N.md` |
+| `npm run manual-queue` | write a paste-ready prompt covering everything only a human can check → `docs/queue/all.md` |
 | `npm run ingest-manual -- --file=answers.json` | record hand-checked values (rejects anything without evidence) |
 
 Partial runs: `npm run probe -- --only=coupang,toss` or `--limit=5 --dry-run`.

@@ -56,9 +56,16 @@ function needs(service: Service, key: SignalKey): boolean {
 }
 
 async function main(): Promise<void> {
-  const batchSize = Number(
-    process.argv.find((a) => a.startsWith('--batch='))?.split('=')[1] ?? '12',
-  );
+  /*
+   * 기본은 **한 파일에 전부**다. 붙여넣기가 한 번이면 중간에 뭘 빠뜨릴 일이 없다.
+   *
+   * 나눠서 주고 싶으면 `--batch=12`. 나눌 이유가 하나 있긴 하다 — 2026-08-16 에
+   * 63곳을 한 번에 돌렸더니 앞쪽은 근거를 길게 적었는데 뒤로 갈수록 짧아졌고,
+   * 되돌려야 했던 8건 중 6건이 뒤쪽에 몰려 있었다. 길어지면 대충 해진다.
+   * 그래도 기본값은 한 파일로 둔다 — 나누는 판단은 결과를 보고 사람이 하면 된다.
+   */
+  const rawBatch = process.argv.find((a) => a.startsWith('--batch='))?.split('=')[1];
+  const batchSize = rawBatch ? Number(rawBatch) : Number.POSITIVE_INFINITY;
 
   const ids = await listServiceIds();
   const loaded = await Promise.all(ids.map((id) => loadService(id)));
@@ -72,6 +79,7 @@ async function main(): Promise<void> {
 
   const batches: (typeof rows)[] = [];
   for (let i = 0; i < rows.length; i += batchSize) batches.push(rows.slice(i, i + batchSize));
+  const single = batches.length === 1;
 
   const out: string[] = [];
   out.push('# 손으로 확인할 것');
@@ -155,7 +163,7 @@ async function main(): Promise<void> {
     );
     const filled = body.replace(PLACEHOLDER, `\`\`\`json\n${json}\n\`\`\``);
     await writeFile(
-      path.join(outDir, `batch-${i + 1}.md`),
+      path.join(outDir, single ? 'all.md' : `batch-${i + 1}.md`),
       `<!-- 이 파일 전체를 복사해서 코워크에 그대로 붙여넣으면 된다. 잘라낼 것 없음. -->\n<!-- npm run manual-queue 가 다시 만든다. 직접 고치지 말 것 — 프롬프트는 08 에 있다. -->\n${filled}`,
       'utf8',
     );
@@ -163,12 +171,19 @@ async function main(): Promise<void> {
 
   const counts = CHECKABLE.map((k) => `${k} ${rows.filter((r) => r.missing.includes(k)).length}건`);
   console.log(`남은 ${rows.length}곳 — ${counts.join(' · ')}`);
-  console.log(`${batches.length}묶음 (묶음당 ${batchSize}곳)`);
   console.log('');
-  console.log('코워크에 줄 것 — 파일 하나를 통째로 복사해서 붙여넣으면 된다:');
-  for (let i = 1; i <= batches.length; i += 1) console.log(`  docs/queue/batch-${i}.md`);
+  console.log('코워크에 줄 것 — 파일을 통째로 복사해서 붙여넣으면 된다:');
+  if (single) {
+    console.log(`  docs/queue/all.md   (${rows.length}곳 전부)`);
+    console.log('');
+    console.log('  나눠서 주려면: npm run manual-queue -- --batch=12');
+  } else {
+    for (const [i, b] of batches.entries()) {
+      console.log(`  docs/queue/batch-${i + 1}.md   (${b.length}곳)`);
+    }
+  }
   console.log('');
-  console.log(`전체 목록: ${dest}`);
+  console.log(`사람이 훑어볼 전체 목록: ${dest}`);
 }
 
 main().catch((err) => {

@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 62곳 · 6묶음.
+`npm run manual-queue` 가 생성. 남은 62곳 · 1묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -25,7 +25,7 @@
 
 ---
 
-## 묶음 1 / 6
+## 묶음 1 / 1
 
 ```json
 [
@@ -151,16 +151,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 2 / 6
-
-```json
-[
+  },
   {
     "service_id": "yanolja",
     "name": "Yanolja",
@@ -267,16 +258,7 @@
     "check": [
       "signup_phone_auth"
     ]
-  }
-]
-```
-
----
-
-## 묶음 3 / 6
-
-```json
-[
+  },
   {
     "service_id": "korail",
     "name": "Korail",
@@ -394,16 +376,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 4 / 6
-
-```json
-[
+  },
   {
     "service_id": "melon",
     "name": "Melon",
@@ -514,16 +487,7 @@
     "check": [
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 5 / 6
-
-```json
-[
+  },
   {
     "service_id": "seoul-global",
     "name": "Seoul Global Center",
@@ -629,16 +593,7 @@
     "check": [
       "signup_phone_auth"
     ]
-  }
-]
-```
-
----
-
-## 묶음 6 / 6
-
-```json
-[
+  },
   {
     "service_id": "ridibooks",
     "name": "RIDI Books",
