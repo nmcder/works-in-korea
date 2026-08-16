@@ -55,29 +55,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "not_required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.nts.go.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
-          },
-          {
-            "url": "https://www.nts.go.kr (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.nts.go.kr",
+        "saw": "국세청 홈페이지 메인 화면 어디에도 '회원가입'이나 '로그인' 링크가 없었다. 세금 신고·조회 등 실제 업무는 모두 별도 사이트인 홈택스로 연결되며, 국세청 자체 사이트에는 계정 생성 절차가 존재하지 않았다.",
+        "recorded_at": "2026-08-16T08:19:12.795Z"
       }
     },
     "app_availability": {

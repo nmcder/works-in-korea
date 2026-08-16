@@ -43,36 +43,34 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "http_status=403",
-        "http_status": 403,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://global.oliveyoung.com/",
+        "saw": "oliveyoung.co.kr 메인 우측 상단 'Global' 링크를 클릭하면 완전히 별도의 영어 전용 쇼핑몰(global.oliveyoung.com)이 새 탭에 열림.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000",
-        "attempts": [
-          {
-            "url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000",
+        "saw": "올리브영 가입은 CJ ONE 통합회원 가입으로 연결됨. 첫 화면 '가입 여부 확인' 단계에 이름, 법정생년월일 6자리, 휴대전화번호 뒤 7~8자리 입력란만 있고 다른 가입 경로(이메일/SNS)가 없음. 외국인의 경우도 국내 발급 외국인등록증 등록번호를 요구하며 휴대폰 번호는 그대로 필요함.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -126,15 +124,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://global.oliveyoung.com/",
+        "saw": "글로벌 사이트 하단 'Customer Service' 섹션에 영어 이메일(global-customerservice@oliveyoung.com)과 'Contact Us FAQs' 링크가 있음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

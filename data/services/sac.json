@@ -82,38 +82,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "not_required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
-        "final_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
-        "http_status": 200,
-        "page_kind": "combined",
-        "signup_markers": [
-          "회원가입",
-          "회원 가입",
-          "가입신청"
-        ],
-        "form_input_count": 38,
-        "matched_vendors": [],
-        "strong_url_matches": 0,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
-        "attempts": [
-          {
-            "url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "checked_by": "operator",
+        "url": "https://www.sac.or.kr/site/main/membership/member_step_01",
+        "saw": "Membership terms Article 21 item 12 requires at least one of I-PIN verification or mobile phone number verification",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -167,48 +146,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
-            "status": 200,
-            "chars": 1956
-          },
-          {
-            "url": "https://www.sac.or.kr",
-            "status": 200,
-            "chars": 3320
-          },
-          {
-            "url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
-            "status": 200,
-            "chars": 1956
-          },
-          {
-            "url": "https://www.sac.or.kr/site/main/content/musicSquare",
-            "status": 200,
-            "chars": 1787
-          }
-        ],
-        "content_sha256": "8b438868087e1c9bd0b59f5b86b4d8019dd24789b9e5b758a6ef376392026716",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "콜센터(1668-1352) 화-금 09:00~19:00 / 주말 및 공휴일 09:00~18:00",
-          "reason": "영문 페이지(ENG) 존재는 확인되나 고객센터(콜센터, 1:1문의)가 영어 응대를 지원하는지에 대한 명시적 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.057,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.sac.or.kr",
+        "saw": "Clicked ENG language link and confirmed full English UI with Opera House Music Hall Museum menus",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

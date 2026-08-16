@@ -74,27 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "http://www.yes24.com/notice.html",
-        "final_url": "http://www.yes24.com/notice.html",
-        "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
-          {
-            "url": "http://www.yes24.com/join",
-            "status": 200,
-            "used": true
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://www.yes24.com/Member/Join/Accept.aspx",
+        "saw": "14세 이상 일반회원 가입에서 '이메일 인증'을 선택하니 이름/생년월일/이메일만 입력하는 팝업이 떴고 휴대폰 번호 입력란은 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -155,34 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "http://www.yes24.com",
-            "status": 200,
-            "chars": 295
-          }
-        ],
-        "content_sha256": "fee844cfaccf66705acd07d28d3219f9833e7eddafba7386dc5fb96ed6dd13c2",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 1544-3800",
-          "reason": "고객센터 전화번호만 제공되며 영어 지원 여부에 대한 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.132,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.yes24.com/Main/default.aspx",
+        "saw": "홈페이지 하단 '고객문의' 영역에 분야별 한국어 전화번호와 1:1 문의하기만 있고 영어 지원 안내는 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

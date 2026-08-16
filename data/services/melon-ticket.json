@@ -156,38 +156,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://ticket.melon.com/customerservice/notice.htm",
-            "status": 200,
-            "chars": 658
-          },
-          {
-            "url": "https://ticket.melon.com",
-            "status": 200,
-            "chars": 0
-          }
-        ],
-        "content_sha256": "2141f97eade2b39b15e2f89b99b611302c64426369eb15849c56a2a74d0eb92e",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "Language KOR JAP ENG",
-          "reason": "ENG 언어 옵션은 있으나 전화(1588-2314, 1899-0042)나 이메일 등 실제 상담 채널이 영어를 지원하는지 명시되어 있지 않아 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.15,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://ticket.melon.com/customerservice/notice.htm",
+        "saw": "고객센터 페이지 우측 상단 'LANGUAGE' 드롭다운에 ENGLISH, 中文, 日本語가 있고 ENGLISH를 클릭하면 완전히 별도의 영어 전용 사이트(tkglobal.melon.com, 'Melon Ticket - Global')가 열리며 공연 목록과 정보가 영어로 표시됨.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

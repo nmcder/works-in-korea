@@ -74,28 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
-        "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
-        "final_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
-        "http_status": 200,
-        "page_kind": "combined",
-        "form_input_count": 0,
-        "attempts": [
-          {
-            "url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://platform.yeogi.com/register?redirectUri=https://www.yeogi.com/",
+        "saw": "로그인/회원가입 화면에는 카카오, 네이버, Apple, 페이스북, 구글, 이메일 6가지 옵션이 있었지만 '이메일로 시작하기'→'이메일로 회원가입'으로 약관 동의를 마치면 무조건 '휴대폰 인증' 화면(안내문구: '원활한 서비스 제공을 위해, 휴대폰 번호를 입력해 주세요.')으로 이동하며 휴대폰 번호(01012345678 형식) 입력이 필수 항목(빨간 별표)이고 건너뛸 방법이 없었음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -156,38 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.yeogi.com/faq",
-            "status": 200,
-            "chars": 3106
-          },
-          {
-            "url": "https://www.yeogi.com",
-            "status": 200,
-            "chars": 52
-          }
-        ],
-        "content_sha256": "17a1291c2b3da97d405e00415b08750a4cf400fed172f2d54c9ddd05ea77873c",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "모든 안내가 한국어로 전화, 채팅, 이메일(help@yeogi.com)을 제공하지만 영어 지원 여부에 대한 명시적 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.048,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.yeogi.com/faq",
+        "saw": "고객센터 페이지의 전화번호, 운영시간, 자주 묻는 질문 카테고리가 모두 한국어이고 언어 전환 옵션이 없음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

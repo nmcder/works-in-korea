@@ -55,7 +55,7 @@
         "checked_by": "operator",
         "url": "https://www.baemin.com",
         "saw": "우측 상단에 'For foreigners' 링크가 있고, 클릭하면 baemin.com/en/global/ 로 이동해 영어로 된 별도 페이지('Taste Korea', 'Korea's No.1 Food Delivery APP BAEMIN')가 뜬다. 그 페이지 우측 상단에도 KR/EN 전환이 있다.",
-        "recorded_at": "2026-08-16T07:07:06.186Z"
+        "recorded_at": "2026-08-16T07:02:07.669Z"
       }
     },
     "signup_phone_auth": {
@@ -135,15 +135,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.baemin.com/en/global/",
+        "saw": "메인 페이지 우측 상단 'For foreigners' 링크를 클릭하면 영어 전용 배민 글로벌 페이지가 열리고 FAQ가 전부 영어로 되어 있으며 앱이 영어/일본어/중국어를 지원한다고 안내됨.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

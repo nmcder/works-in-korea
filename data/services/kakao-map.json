@@ -145,34 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://map.kakao.com",
-            "status": 200,
-            "chars": 2073
-          }
-        ],
-        "content_sha256": "fdb8488415083542a6d64c72f339f4d55c5c2184e1c16b8377e94756592ef6c6",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터",
-          "reason": "고객센터 링크만 있을 뿐 영어 지원 여부에 대한 구체적 정보가 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.031,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://cs.kakao.com/helps?locale=ko&service=101",
+        "saw": "카카오맵 고객센터 페이지 우측 상단 '한국어' 드롭다운에 English 옵션이 있고 클릭하면 'Kakao Customer Service - How can we help you?'로 전체가 영어로 바뀌며 KakaoTalk, Kakao Account 등 서비스 아이콘도 영어로 표시됨.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

@@ -43,41 +43,33 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "http_status=403",
-        "http_status": 403,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.lguplus.com",
+        "saw": "메인 페이지 헤더(스토어, MY, 혜택, 고객지원, 너겟, 유독 등)에 언어 전환 버튼이나 EN 링크가 없음(find 도구로도 미확인).",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
-        "signup_url": "https://account.lguplus.com/login?client_id=G8RoYUvnwILirwwwK3xG4WR8q9D83to7&login_type=STANDARD_WEB&prompt=select_account&i18nextLng=ko",
-        "final_url": "https://account.lguplus.com/login?client_id=G8RoYUvnwILirwwwK3xG4WR8q9D83to7&login_type=STANDARD_WEB&prompt=select_account&i18nextLng=ko",
-        "http_status": 200,
-        "page_kind": "combined",
-        "form_input_count": 1,
-        "attempts": [
-          {
-            "url": "https://account.lguplus.com/login?client_id=G8RoYUvnwILirwwwK3xG4WR8q9D83to7&login_type=STANDARD_WEB&prompt=select_account&i18nextLng=ko",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://account.lguplus.com/identification?action=SIGNUP",
+        "saw": "회원가입 유형(개인고객) 선택 화면에 '개인 고객의 경우 본인확인이 필요합니다... 반드시 본인 명의의 휴대폰번호를 사용해 주세요'라는 안내가 있고, 다음 본인인증 화면에는 이름/성별/내국인·외국인 선택/생년월일/휴대폰번호(통신사 선택 포함) 입력란만 있음. 외국인을 선택해도 휴대폰번호 입력이 필수이고 이메일 등 다른 가입 경로는 없음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -131,33 +123,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.lguplus.com/support/online/faq",
-            "status": 403,
-            "chars": 1648
-          }
-        ],
-        "content_sha256": "e8a27b7266cd5c9578e1f475356f60e68b756d537e05d4f31545b3db4f598cf1",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 : 휴대폰 114(무료) 1544-0010(유료) 인터넷/IPTV/전화 101(무료) 1644-7000(유료)",
-          "reason": "전화, 1:1 문의 등 고객지원 채널은 명시되어 있으나 영어 응대 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.11,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.lguplus.com/support/online/faq",
+        "saw": "자주하는 질문 페이지의 카테고리와 질문/답변이 전부 한국어이고 언어 전환 옵션이 없음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

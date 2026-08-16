@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.modetour.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.modetour.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.modetour.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.modetour.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.modetour.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://auth.modetour.com/Account/Register/Cert",
+        "saw": "'14세 이상 회원가입'을 누르니 '회원가입>휴대폰 인증' 페이지로 이동했고 본인명의 휴대폰 인증 또는 통합인증(둘 다 본인인증) 외에 다른 가입 방법이 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -163,44 +138,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.modetour.com/customer-center",
-            "status": 200,
-            "chars": 552
-          },
-          {
-            "url": "https://www.modetour.com",
-            "status": 200,
-            "chars": 2559
-          },
-          {
-            "url": "https://www.modetour.com/customer-center",
-            "status": 200,
-            "chars": 552
-          }
-        ],
-        "content_sha256": "7a64a3ab41a37c9ed2b4d7cff4c8a0eb85952c812ed9ed4f8894f06cec4a35b4",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "전화 상담센터 및 고객센터 번호만 안내되어 있고 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.115,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.modetour.com/customer-center",
+        "saw": "고객센터 페이지의 자주 찾는 질문과 공지사항이 모두 한국어로만 표시됐다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

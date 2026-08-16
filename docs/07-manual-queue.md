@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 94곳 · 8묶음.
+`npm run manual-queue` 가 생성. 남은 62곳 · 6묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -25,7 +25,7 @@
 
 ---
 
-## 묶음 1 / 8
+## 묶음 1 / 6
 
 ```json
 [
@@ -45,59 +45,6 @@
     "url": "https://www.coupang.com",
     "signup_url": "https://login.coupang.com/login/login.pang",
     "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakaobank",
-    "name": "KakaoBank",
-    "url": "https://www.kakaobank.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kobus",
-    "name": "Kobus (Express Bus)",
-    "url": "https://www.kobus.co.kr",
-    "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "lguplus",
-    "name": "LG U+",
-    "url": "https://www.lguplus.com",
-    "signup_url": "https://account.lguplus.com/login?client_id=G8RoYUvnwILirwwwK3xG4WR8q9D83to7&login_type=STANDARD_WEB&prompt=select_account&i18nextLng=ko",
-    "support_url": "https://www.lguplus.com/support/online/faq",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "megabox",
-    "name": "Megabox",
-    "url": "https://www.megabox.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "musinsa",
-    "name": "Musinsa",
-    "url": "https://www.musinsa.com",
     "check": [
       "signup_phone_auth",
       "i18n_ui",
@@ -125,89 +72,9 @@
     ]
   },
   {
-    "service_id": "oliveyoung",
-    "name": "Olive Young",
-    "url": "https://www.oliveyoung.co.kr",
-    "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7030&brnd_cd=3000&mcht_no=3000",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "baemin",
-    "name": "Baemin",
-    "url": "https://www.baemin.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "coupang-eats",
     "name": "Coupang Eats",
     "url": "https://www.coupangeats.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  }
-]
-```
-
----
-
-## 묶음 2 / 8
-
-```json
-[
-  {
-    "service_id": "gmarket",
-    "name": "Gmarket",
-    "url": "https://www.gmarket.co.kr",
-    "signup_url": "https://signup-web.gmarket.co.kr/signup/privateBuyer?url=http%3A%2F%2Fwww.gmarket.co.kr",
-    "check": [
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "goodchoice",
-    "name": "GoodChoice (Yeogi Eottae)",
-    "url": "https://www.yeogi.com",
-    "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
-    "support_url": "https://www.yeogi.com/faq",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakao-gift",
-    "name": "Kakao Gift",
-    "url": "https://gift.kakao.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakao-map",
-    "name": "Kakao Map",
-    "url": "https://map.kakao.com",
-    "signup_url": "https://accounts.kakao.com/login/?continue=https%3A%2F%2Fmap.kakao.com",
-    "support_url": "https://cs.kakao.com/helps?locale=ko&service=101",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakao-t",
-    "name": "Kakao T",
-    "url": "https://www.kakaomobility.com",
-    "support_url": "https://www.kakaomobility.com/customer-support",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -218,48 +85,6 @@
     "name": "KakaoPay",
     "url": "https://www.kakaopay.com",
     "support_url": "https://support.kakaopay.com/web/faq-list/all",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakaotalk",
-    "name": "KakaoTalk",
-    "url": "https://www.kakaocorp.com",
-    "support_url": "https://cs.kakao.com/",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kbstar",
-    "name": "KB Kookmin Bank",
-    "url": "https://www.kbstar.com",
-    "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "lotte-cinema",
-    "name": "Lotte Cinema",
-    "url": "https://www.lottecinema.co.kr",
-    "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
-    "support_url": "https://www.lottecinema.co.kr/NLCHS/Customer",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "melon-ticket",
-    "name": "Melon Ticket",
-    "url": "https://ticket.melon.com",
-    "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
-    "support_url": "https://ticket.melon.com/customerservice/notice.htm",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -286,16 +111,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 3 / 8
-
-```json
-[
+  },
   {
     "service_id": "naverpay",
     "name": "Naver Pay",
@@ -335,7 +151,16 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 2 / 6
+
+```json
+[
   {
     "service_id": "yanolja",
     "name": "Yanolja",
@@ -348,14 +173,11 @@
     ]
   },
   {
-    "service_id": "yes24-ticket",
-    "name": "YES24 Ticket",
-    "url": "http://ticket.yes24.com",
-    "signup_url": "https://www.yes24.com/Member/Join/Accept.aspx",
-    "support_url": "https://ticket.yes24.com/UserGuide/FAQ",
+    "service_id": "baemin",
+    "name": "Baemin",
+    "url": "https://www.baemin.com",
     "check": [
-      "signup_phone_auth",
-      "support_en"
+      "signup_phone_auth"
     ]
   },
   {
@@ -385,6 +207,77 @@
     ]
   },
   {
+    "service_id": "kakao-gift",
+    "name": "Kakao Gift",
+    "url": "https://gift.kakao.com",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kakao-map",
+    "name": "Kakao Map",
+    "url": "https://map.kakao.com",
+    "signup_url": "https://accounts.kakao.com/login/?continue=https%3A%2F%2Fmap.kakao.com",
+    "support_url": "https://cs.kakao.com/helps?locale=ko&service=101",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kakao-t",
+    "name": "Kakao T",
+    "url": "https://www.kakaomobility.com",
+    "support_url": "https://www.kakaomobility.com/customer-support",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kakaobank",
+    "name": "KakaoBank",
+    "url": "https://www.kakaobank.com",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kakaotalk",
+    "name": "KakaoTalk",
+    "url": "https://www.kakaocorp.com",
+    "support_url": "https://cs.kakao.com/",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kbstar",
+    "name": "KB Kookmin Bank",
+    "url": "https://www.kbstar.com",
+    "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kobus",
+    "name": "Kobus (Express Bus)",
+    "url": "https://www.kobus.co.kr",
+    "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
+    "check": [
+      "signup_phone_auth"
+    ]
+  }
+]
+```
+
+---
+
+## 묶음 3 / 6
+
+```json
+[
+  {
     "service_id": "korail",
     "name": "Korail",
     "url": "https://www.korail.com",
@@ -395,34 +288,15 @@
     ]
   },
   {
-    "service_id": "kt",
-    "name": "KT",
-    "url": "https://www.kt.com",
-    "signup_url": "https://accounts.kt.com/identify/personal",
-    "support_url": "https://shop.kt.com/smart/supportAmtList.do",
+    "service_id": "melon-ticket",
+    "name": "Melon Ticket",
+    "url": "https://ticket.melon.com",
+    "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
+    "support_url": "https://ticket.melon.com/customerservice/notice.htm",
     "check": [
-      "support_en"
+      "signup_phone_auth"
     ]
   },
-  {
-    "service_id": "shinhan-bank",
-    "name": "Shinhan Bank",
-    "url": "https://bank.shinhan.com",
-    "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
-    "support_url": "https://www.shinhan.com/hpe/index.jsp",
-    "check": [
-      "support_en"
-    ]
-  }
-]
-```
-
----
-
-## 묶음 4 / 8
-
-```json
-[
   {
     "service_id": "visitkorea",
     "name": "Visit Korea (KTO)",
@@ -430,26 +304,6 @@
     "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
     "check": [
       "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "yogiyo",
-    "name": "Yogiyo",
-    "url": "https://www.yogiyo.co.kr",
-    "signup_url": "https://www.yogiyo.co.kr/mobile/#/login/",
-    "support_url": "https://www.yogiyo.co.kr",
-    "check": [
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "auction",
-    "name": "Auction",
-    "url": "https://www.auction.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
     ]
   },
   {
@@ -483,30 +337,9 @@
     ]
   },
   {
-    "service_id": "melon",
-    "name": "Melon",
-    "url": "https://www.melon.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "musinsa-global",
     "name": "Musinsa Global",
     "url": "https://global.musinsa.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "nts",
-    "name": "National Tax Service",
-    "url": "https://www.nts.go.kr",
-    "support_url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?mi=40254&bbsId=50692",
     "check": [
       "signup_phone_auth",
       "i18n_ui",
@@ -524,16 +357,6 @@
     ]
   },
   {
-    "service_id": "tmoney",
-    "name": "T-money",
-    "url": "https://www.t-money.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "txbus",
     "name": "Txbus (Intercity Bus)",
     "url": "https://txbus.t-money.co.kr",
@@ -542,23 +365,13 @@
       "i18n_ui",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 5 / 8
-
-```json
-[
+  },
   {
-    "service_id": "woori-bank",
-    "name": "Woori Bank",
-    "url": "https://www.wooribank.com",
+    "service_id": "auction",
+    "name": "Auction",
+    "url": "https://www.auction.co.kr",
     "check": [
       "signup_phone_auth",
-      "i18n_ui",
       "support_en"
     ]
   },
@@ -573,16 +386,6 @@
     ]
   },
   {
-    "service_id": "daum",
-    "name": "Daum",
-    "url": "https://www.daum.net",
-    "support_url": "https://cs.daum.net/",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "gmoneytrans",
     "name": "GME Remittance",
     "url": "https://www.gmoneytrans.com",
@@ -591,41 +394,20 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 4 / 6
+
+```json
+[
   {
-    "service_id": "hana-bank",
-    "name": "Hana Bank",
-    "url": "https://www.kebhana.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "hanpass",
-    "name": "Hanpass",
-    "url": "https://www.hanpass.com",
-    "support_url": "https://www.hanpass.com/en/cs",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "hira",
-    "name": "HIRA",
-    "url": "https://www.hira.or.kr",
-    "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kurly",
-    "name": "Market Kurly",
-    "url": "https://www.kurly.com",
-    "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
+    "service_id": "melon",
+    "name": "Melon",
+    "url": "https://www.melon.com",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -642,19 +424,19 @@
     ]
   },
   {
-    "service_id": "samsung-hospital",
-    "name": "Samsung Medical Center",
-    "url": "http://www.samsunghospital.com",
-    "support_url": "http://www.samsunghospital.com/home/info/ICUfaq.do",
+    "service_id": "nts",
+    "name": "National Tax Service",
+    "url": "https://www.nts.go.kr",
+    "support_url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?mi=40254&bbsId=50692",
     "check": [
-      "signup_phone_auth",
+      "i18n_ui",
       "support_en"
     ]
   },
   {
-    "service_id": "snuh",
-    "name": "Seoul National University Hospital",
-    "url": "https://www.snuh.org",
+    "service_id": "tmoney",
+    "name": "T-money",
+    "url": "https://www.t-money.co.kr",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -665,25 +447,6 @@
     "name": "Toss Bank",
     "url": "https://www.tossbank.com",
     "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  }
-]
-```
-
----
-
-## 묶음 6 / 8
-
-```json
-[
-  {
-    "service_id": "travel-wallet",
-    "name": "Travel Wallet",
-    "url": "https://www.travel-wallet.com",
-    "support_url": "https://enterprise.travel-wallet.com/home",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -700,67 +463,72 @@
     ]
   },
   {
-    "service_id": "wavve",
-    "name": "Wavve",
-    "url": "https://www.wavve.com",
-    "support_url": "https://www.wavve.com/customer/notice_list",
+    "service_id": "woori-bank",
+    "name": "Woori Bank",
+    "url": "https://www.wooribank.com",
     "check": [
       "signup_phone_auth",
       "support_en"
     ]
   },
   {
-    "service_id": "amc",
-    "name": "Asan Medical Center",
-    "url": "https://www.amc.seoul.kr",
-    "signup_url": "https://www.amc.seoul.kr/asan/member/join/intro.do",
-    "support_url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
+    "service_id": "daum",
+    "name": "Daum",
+    "url": "https://www.daum.net",
+    "support_url": "https://cs.daum.net/",
     "check": [
       "support_en"
     ]
   },
   {
-    "service_id": "sac",
-    "name": "Seoul Arts Center",
-    "url": "https://www.sac.or.kr",
-    "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
-    "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
-    "check": [
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "sentbe",
-    "name": "Sentbe",
-    "url": "https://www.sentbe.com",
-    "support_url": "https://help.sentbe.com/ko/support/home",
+    "service_id": "hana-bank",
+    "name": "Hana Bank",
+    "url": "https://www.kebhana.com",
     "check": [
       "signup_phone_auth"
     ]
   },
+  {
+    "service_id": "hanpass",
+    "name": "Hanpass",
+    "url": "https://www.hanpass.com",
+    "support_url": "https://www.hanpass.com/en/cs",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "hira",
+    "name": "HIRA",
+    "url": "https://www.hira.or.kr",
+    "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kurly",
+    "name": "Market Kurly",
+    "url": "https://www.kurly.com",
+    "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
+    "check": [
+      "support_en"
+    ]
+  }
+]
+```
+
+---
+
+## 묶음 5 / 6
+
+```json
+[
   {
     "service_id": "seoul-global",
     "name": "Seoul Global Center",
     "url": "https://global.seoul.go.kr",
     "support_url": "https://global.seoul.go.kr/web/prmg/prco/prcoListPage.do",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "severance",
-    "name": "Severance Hospital",
-    "url": "https://sev.severance.healthcare",
-    "support_url": "https://sev.severance.healthcare/sev/patient-carer/appointment/checkup/faq.do",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "sk7mobile",
-    "name": "SK 7mobile",
-    "url": "https://www.sk7mobile.com",
-    "support_url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
     "check": [
       "signup_phone_auth"
     ]
@@ -775,40 +543,20 @@
     ]
   },
   {
-    "service_id": "wirebarley",
-    "name": "WireBarley",
-    "url": "https://www.wirebarley.com",
-    "support_url": "https://help.wirebarley.com/ko/support/home",
+    "service_id": "travel-wallet",
+    "name": "Travel Wallet",
+    "url": "https://www.travel-wallet.com",
+    "support_url": "https://enterprise.travel-wallet.com/home",
     "check": [
       "signup_phone_auth"
     ]
   },
   {
-    "service_id": "ably",
-    "name": "Ably",
-    "url": "https://a-bly.com",
+    "service_id": "wavve",
+    "name": "Wavve",
+    "url": "https://www.wavve.com",
+    "support_url": "https://www.wavve.com/customer/notice_list",
     "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  }
-]
-```
-
----
-
-## 묶음 7 / 8
-
-```json
-[
-  {
-    "service_id": "genie",
-    "name": "Genie Music",
-    "url": "https://www.genie.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
       "support_en"
     ]
   },
@@ -823,87 +571,10 @@
     ]
   },
   {
-    "service_id": "ntok",
-    "name": "National Theater of Korea",
-    "url": "https://www.ntok.go.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "cjonstyle",
-    "name": "CJ ONSTYLE",
-    "url": "https://www.cjonstyle.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "danawa",
-    "name": "Danawa",
-    "url": "https://www.danawa.com",
-    "support_url": "https://help.danawa.com/",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "goodoc",
-    "name": "Goodoc",
-    "url": "https://www.goodoc.co.kr",
-    "support_url": "https://www.goodoc.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "gsshop",
-    "name": "GS Shop",
-    "url": "https://www.gsshop.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "hanatour",
-    "name": "Hana Tour",
-    "url": "https://www.hanatour.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "kbank",
     "name": "K bank",
     "url": "https://www.kbanknow.com",
     "support_url": "https://www.kbanknow.com/web/customer/faq/list",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kyobo",
-    "name": "Kyobo Book Centre",
-    "url": "https://www.kyobobook.co.kr",
-    "support_url": "https://www.kyobobook.co.kr/cscenter",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "modetour",
-    "name": "Mode Tour",
-    "url": "https://www.modetour.com",
-    "support_url": "https://www.modetour.com/customer-center",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -917,93 +588,57 @@
       "signup_phone_auth",
       "support_en"
     ]
+  },
+  {
+    "service_id": "ably",
+    "name": "Ably",
+    "url": "https://a-bly.com",
+    "check": [
+      "i18n_ui"
+    ]
+  },
+  {
+    "service_id": "cjonstyle",
+    "name": "CJ ONSTYLE",
+    "url": "https://www.cjonstyle.com",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "genie",
+    "name": "Genie Music",
+    "url": "https://www.genie.co.kr",
+    "check": [
+      "i18n_ui"
+    ]
+  },
+  {
+    "service_id": "gsshop",
+    "name": "GS Shop",
+    "url": "https://www.gsshop.com",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "kyobo",
+    "name": "Kyobo Book Centre",
+    "url": "https://www.kyobobook.co.kr",
+    "support_url": "https://www.kyobobook.co.kr/cscenter",
+    "check": [
+      "signup_phone_auth"
+    ]
   }
 ]
 ```
 
 ---
 
-## 묶음 8 / 8
+## 묶음 6 / 6
 
 ```json
 [
-  {
-    "service_id": "tada",
-    "name": "TADA",
-    "url": "https://tadatada.com",
-    "support_url": "https://www.tadatada.com/ad-biz",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "themoin",
-    "name": "Moin",
-    "url": "https://themoin.com",
-    "support_url": "https://www.themoin.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "watcha",
-    "name": "Watcha",
-    "url": "https://watcha.com",
-    "support_url": "https://help.watcha.com/hc/ko",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "yes24",
-    "name": "YES24",
-    "url": "http://www.yes24.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "zigzag",
-    "name": "Zigzag",
-    "url": "https://zigzag.kr",
-    "support_url": "https://zigzag.kr",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "ddocdoc",
-    "name": "DdocDoc",
-    "url": "https://www.ddocdoc.com",
-    "signup_url": "https://hospital.ddocdoc.com/register?utm_source=ddocdoc-com&amp;utm_medium=bottom-list&amp;utm_campaign=etc",
-    "check": [
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "homeplus",
-    "name": "Homeplus",
-    "url": "https://front.homeplus.co.kr",
-    "support_url": "https://mfront.homeplus.co.kr/cs?homeType=MART",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "payco",
-    "name": "PAYCO",
-    "url": "https://www.payco.com",
-    "signup_url": "https://membership.payco.com/",
-    "support_url": "https://www.payco.com/cs/faq.nhn",
-    "check": [
-      "support_en"
-    ]
-  },
   {
     "service_id": "ridibooks",
     "name": "RIDI Books",
@@ -1014,10 +649,10 @@
     ]
   },
   {
-    "service_id": "safedriving",
-    "name": "Korea Road Traffic Authority",
-    "url": "https://www.safedriving.or.kr",
-    "support_url": "https://www.safedriving.or.kr/main.do",
+    "service_id": "tada",
+    "name": "TADA",
+    "url": "https://tadatada.com",
+    "support_url": "https://www.tadatada.com/ad-biz",
     "check": [
       "signup_phone_auth"
     ]

@@ -174,39 +174,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.hanpass.com/en/cs",
-            "status": 200,
-            "chars": 714
-          },
-          {
-            "url": "https://www.hanpass.com",
-            "status": 200,
-            "chars": 7
-          }
-        ],
-        "content_sha256": "b406c050452480d5ffbacc61db252d45b8f7979255b253c0de4e4832ea95c2dc",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "Philippines 02-3409-1125 10:00~22:00 Vietnam 02-3409-1129 10:00~22:00",
-          "reason": "국가별 전화번호가 나열되어 있으나 이는 각국 언어 상담용으로 추정되며, 영어로 상담 가능한 채널인지 명확히 확인할 근거가 부족함"
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.261,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.hanpass.com",
+        "saw": "Full multi-country English support hotline page found listing contact numbers per country",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

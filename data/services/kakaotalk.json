@@ -167,39 +167,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.kakaocorp.com",
-            "status": 200,
-            "chars": 1550
-          },
-          {
-            "url": "https://www.kakaocorp.com/policy/cyberEthics/info",
-            "status": 200,
-            "chars": 2765
-          }
-        ],
-        "content_sha256": "4cf3dc3857b27e5acd11937d6f0d5ab19ff3bb7a8de87a1bfcb09fa3ec2a1b11",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "서비스 이용 문의는 고객센터를 이용 바랍니다 카카오 고객센터 Daum 고객센터",
-          "reason": "고객센터 채널은 언급되나 영어 지원 여부에 대한 명시적 정보가 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.058,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://cs.kakao.com/",
+        "saw": "Kakao Customer Service 영어 페이지의 서비스 아이콘 목록에 KakaoTalk이 명시되어 있고 클릭 시 영어로 된 카카오톡 전용 도움말로 연결됨(전체 UI가 영어).",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

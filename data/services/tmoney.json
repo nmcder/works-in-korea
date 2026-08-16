@@ -42,16 +42,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.t-money.co.kr",
+        "saw": "티머니 카드&페이 홈페이지 상단 메뉴(티머니, 회사소개, 개인, 티머니카드&페이, 고속버스예매, 시외버스예매, 로그인, 회원가입)를 확인했으나 언어 전환 버튼이나 영어 메뉴가 없었다.",
+        "recorded_at": "2026-08-16T08:19:12.795Z"
       }
     },
     "signup_phone_auth": {

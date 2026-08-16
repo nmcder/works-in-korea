@@ -174,15 +174,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://help.kt.com/main.jsp",
+        "saw": "고객지원 메인 페이지의 상담 채널(챗봇, 이메일 상담, 고객센터 전화 상담 1588-0010 등)이 모두 한국어로만 표기되어 있고, 페이지 전체와 하단 고객센터 안내 어디에도 영어(English) 옵션이나 외국어 전용 채널이 없었다.",
+        "recorded_at": "2026-08-16T08:19:12.795Z"
       }
     },
     "foreign_card": {

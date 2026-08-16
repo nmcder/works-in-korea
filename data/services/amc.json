@@ -159,49 +159,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.amc.seoul.kr/asan/custom/customervoice/customerVoiceInfo.do",
-            "status": 200,
-            "chars": 3863
-          },
-          {
-            "url": "https://www.amc.seoul.kr",
-            "status": 200,
-            "chars": 3596
-          },
-          {
-            "url": "https://www.amc.seoul.kr/asan/healthtv/video/videoCategoryList.do?categoryCode=C02009001&amcTacticsYn=B",
-            "status": 200,
-            "chars": 3408
-          },
-          {
-            "url": "https://www.amc.seoul.kr/asan/healthtv/video/videoCategoryList.do?categoryCode=C02009002&amcTacticsYn=V",
-            "status": 200,
-            "chars": 3467
-          }
-        ],
-        "content_sha256": "9ac0772dd13b2bece26de32174437a1ce567cb92b3c923c780aa92333c4ab276",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "국제진료센터",
-          "reason": "페이지에 Language 선택(English 등)과 '국제진료센터' 메뉴가 있으나, 이것이 영어로 문의 가능한 상담 채널인지 구체적인 연락처나 안내가 제공되지 않아 판단 근거가 부족함. 고객의소리, 전화(1688-7575) 등은 한국어 전용으로 보이며 국제진료센터에 대한 영어 대응 여부는 명시되지 않음."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.07,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://eng.amc.seoul.kr",
+        "saw": "English AMC site has Contact Us and International Healthcare Services links found via element search",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

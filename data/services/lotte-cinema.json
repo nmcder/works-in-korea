@@ -70,28 +70,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
-        "signup_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
-        "final_url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
-        "http_status": 200,
-        "page_kind": "combined",
-        "form_input_count": 0,
-        "attempts": [
-          {
-            "url": "https://www.lottecinema.co.kr/NLCHS/Membership/l_point",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://members.lpoint.com/exView/join/mbrJoin_15_001",
+        "saw": "가입 화면에서 'Foreigner' 버튼을 누르면 영어 전용 외국인 가입 절차로 전환됨. 최종 단계 'Enter information for Non-Koreans' 화면에는 이메일 인증, 성/이름(여권 영문명), 비밀번호, 국적, 생년월일, 성별이 필수(*)이고 'Mobile phone' 항목에는 필수 표시가 없으며 옆에 'Not Owned'(휴대폰 없음) 체크박스가 있어 휴대폰 없이도 가입 가능함.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -152,38 +141,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.lottecinema.co.kr/NLCHS/Customer",
-            "status": 200,
-            "chars": 909
-          },
-          {
-            "url": "https://www.lottecinema.co.kr",
-            "status": 200,
-            "chars": 5
-          }
-        ],
-        "content_sha256": "5a2f1b7ee134cec4b05cd219f05de78ac0117b911ae9ed0c82cadf45f866e48c",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 1544-8855 (유료)",
-          "reason": "고객센터 전화번호는 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.175,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.lottecinema.co.kr/NLCHS/Customer",
+        "saw": "고객센터 FAQ 목록과 카테고리가 전부 한국어이며 언어 전환 옵션이 없음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

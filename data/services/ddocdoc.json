@@ -165,39 +165,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.ddocdoc.com",
-            "status": 200,
-            "chars": 421
-          },
-          {
-            "url": "https://hospital.ddocdoc.com/register?utm_source=ddocdoc-com&amp;utm_medium=bottom-list&amp;utm_campaign=etc",
-            "status": 200,
-            "chars": 488
-          }
-        ],
-        "content_sha256": "de04ff62abf582825567a2a27bb3198981dad1b9ad092191fab3e3a909715ce8",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "대표전화 : 1899-6826 이메일 : support@bbros.kr",
-          "reason": "고객지원 연락처(전화, 이메일)는 있으나 영어 지원 여부에 대한 명시가 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.176,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.ddocdoc.com/",
+        "saw": "footer에 대표전화(1899-6826)와 이메일(support@bbros.kr)만 한국어로 안내되고 영어 지원 언급은 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

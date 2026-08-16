@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.snuh.org/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.snuh.org/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.snuh.org/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.snuh.org/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.snuh.org/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.snuh.org",
+        "saw": "Signup offers 2 options only: 본인 명의 휴대전화 인증 and 아이핀 인증, both Korean-identity-tied with no alternative",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -163,34 +138,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.snuh.org",
-            "status": 200,
-            "chars": 15
-          }
-        ],
-        "content_sha256": "9c694a7cd00394b670663a4c12d20006713021a4a61683eae9972b0fd7b80fa5",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "추출된 텍스트가 메인 페이지 설명뿐이며 고객지원 채널에 대한 구체적 정보가 없어 영어 상담 가능 여부를 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.395,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.snuh.org/global/en/main.do",
+        "saw": "English SNUH site has explicit Contact Us link found via element search",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

@@ -44,47 +44,19 @@
     },
     "i18n_ui": {
       "value": [
-        "en",
-        "ja",
         "ko",
-        "zh"
+        "en"
       ],
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "auto",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "language_switcher_links": {
-          "en": [
-            "https://www.kebhana.com/easyone_index_en.html",
-            "https://www.kebhana.com/easyone_index_vi.html"
-          ],
-          "ja": [
-            "https://www.kebhana.com/easyone_index_ja.html"
-          ],
-          "zh": [
-            "https://www.kebhana.com/easyone_index_zh.html"
-          ]
-        },
-        "english_url_checks": [
-          {
-            "url": "https://www.kebhana.com/en",
-            "status": 404,
-            "ok": false
-          },
-          {
-            "url": "https://www.kebhana.com/en/",
-            "status": 404,
-            "ok": false
-          }
-        ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0.034,
-        "hangul_char_ratio": 0.772,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "checked_by": "operator",
+        "url": "https://www.hanabank.com",
+        "saw": "Reached Hana Bank English Global site directly, rendered full English navigation and content",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "signup_phone_auth": {
@@ -184,34 +156,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.kebhana.com",
-            "status": 200,
-            "chars": 8000
-          }
-        ],
-        "content_sha256": "bb2e2146468935b5e04a945c91fc98a7d6e193e685cab165458534067e8a5651",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "Language 한국어 English 日本語 中文 Tieng Viet",
-          "reason": "페이지에 다국어 언어 선택 옵션은 있지만, 실제 고객센터(고객상담, 이메일상담, 전화상담예약 등)가 영어로 응대 가능한지에 대한 명시적 정보는 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.035,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.hanabank.com",
+        "saw": "English Global site lists Customer Support 1599-6111 with extension 8 for foreign languages",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

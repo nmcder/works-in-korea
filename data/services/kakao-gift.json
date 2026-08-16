@@ -54,7 +54,7 @@
         "checked_by": "operator",
         "url": "https://gift.kakao.com",
         "saw": "홈 화면 상단·좌측 메뉴 어디에도 언어 전환(KO/EN) 버튼이나 메뉴가 없었다.",
-        "recorded_at": "2026-08-16T07:07:06.186Z"
+        "recorded_at": "2026-08-16T07:02:07.669Z"
       }
     },
     "signup_phone_auth": {
@@ -121,15 +121,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://cs.kakao.com/",
+        "saw": "Kakao Customer Service 영어 페이지의 지원 서비스 아이콘 목록에 KakaoTalk, Kakao Account, KakaoStory, Kakaobus, KakaoMetro, KakaoMail만 있고 카카오 선물하기(Kakao Gift)는 목록에 없음.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

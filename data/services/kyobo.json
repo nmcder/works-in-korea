@@ -172,48 +172,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.kyobobook.co.kr/cscenter",
-            "status": 200,
-            "chars": 1640
-          },
-          {
-            "url": "https://www.kyobobook.co.kr",
-            "status": 200,
-            "chars": 1045
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/cscenter",
-            "status": 200,
-            "chars": 1640
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/cscenter/notice",
-            "status": 200,
-            "chars": 1429
-          }
-        ],
-        "content_sha256": "15c436331eba6faa7e42516d544d1c98e375249cb03f9f4320b3dfa32df9c3e8",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "고객센터 페이지에 전화상담, 1:1 문의 등 채널은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.117,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.kyobobook.co.kr/cscenter",
+        "saw": "고객센터 페이지의 자주 묻는 질문과 카테고리 메뉴가 모두 한국어로만 표시됐다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

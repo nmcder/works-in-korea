@@ -28,3 +28,7 @@ issues.json
 
 # 운영자 개인 메모 — 레포가 공개이므로 커밋하지 않는다
 CLAUDE.local.md
+
+# 코워크 답을 옮겨 담는 임시 파일 — 데이터가 아니다
+answers*.json
+cowork-*.json

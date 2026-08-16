@@ -74,28 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T03:53:01.010Z",
-      "last_changed_at": "2026-08-15T03:53:01.010Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://www.yes24.com/Member/Join/Accept.aspx",
-        "final_url": "https://www.yes24.com/notice.html?aspxerrorpath=/Member/Join/Accept.aspx",
-        "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
-          {
-            "url": "https://www.yes24.com/Member/Join/Accept.aspx",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://www.yes24.com/Member/Join/Accept.aspx",
+        "saw": "회원가입 본인인증 화면에 '휴대폰 본인인증'과 'I-Pin 본인인증' 외에, '본인명의의 휴대폰이나 아이핀이 없는 경우, 수신 가능한 휴대폰 또는 이메일을 통해 가입할 수 있습니다'라는 안내와 함께 'SMS 인증', '이메일 인증' 버튼이 별도로 있었다. 예스24 티켓의 회원가입 URL이 이 예스24 통합 가입 페이지로 연결된다.",
+        "recorded_at": "2026-08-16T08:19:12.795Z"
       }
     },
     "app_availability": {
@@ -149,39 +138,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://ticket.yes24.com/UserGuide/FAQ",
-            "status": 200,
-            "chars": 255
-          },
-          {
-            "url": "http://ticket.yes24.com",
-            "status": 200,
-            "chars": 255
-          }
-        ],
-        "content_sha256": "1c6ffb7a435ed905891cf27ec3e1604411423365ba01a1449bda0ac9e24a96b9",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 : 1544-6399",
-          "reason": "전화번호 고객센터만 명시되어 있고 영어 지원 여부에 대한 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.209,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://ticket.yes24.com/English/FAQ",
+        "saw": "티켓 사이트의 영어 버전(ticket.yes24.com/English)에 FAQ 메뉴가 있고, 실제로 영어로 된 질문·답변(Booking/Payment/Cancel-Refund 등)이 나온다. 페이지 하단에 'Customer Center-mail(global_yesticket@yes24.com)로 문의하면 2~3일 내 답변한다'는 영어 안내도 있다.",
+        "recorded_at": "2026-08-16T08:19:12.795Z"
       }
     },
     "foreign_card": {

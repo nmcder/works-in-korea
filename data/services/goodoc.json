@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.goodoc.co.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.goodoc.co.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.goodoc.co.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.goodoc.co.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.goodoc.co.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.goodoc.co.kr/",
+        "saw": "로그인/가입 버튼을 누르니 뜬 모달에 '카카오로 시작하기' 버튼 하나만 있고 다른 가입 수단(이메일/구글/애플)은 전혀 보이지 않았다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -170,38 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.goodoc.co.kr",
-            "status": 200,
-            "chars": 1331
-          },
-          {
-            "url": "https://www.goodoc.co.kr",
-            "status": 200,
-            "chars": 1331
-          }
-        ],
-        "content_sha256": "99f8cba7a3b3781fa8d8debe66db683b4d6dc3a178ab6b2ae55f6adac829ffc6",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 1661-8173 운영시간 09:00 ~ 18:00 1:1 채팅상담",
-          "reason": "고객센터 전화 및 채팅상담 채널은 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.091,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.goodoc.co.kr/",
+        "saw": "footer 고객센터 영역에 전화번호(1661-8173)와 1:1 채팅상담 버튼만 있고 영어 지원 안내나 언어 전환 옵션은 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

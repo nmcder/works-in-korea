@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.kurly.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kurly.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kurly.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kurly.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kurly.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.kurly.com",
+        "saw": "Actual signup form shows 휴대폰* mandatory field with 인증번호 받기 verification button alongside ID and password",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {

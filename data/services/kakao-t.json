@@ -170,49 +170,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.kakaomobility.com/customer-support",
-            "status": 200,
-            "chars": 2157
-          },
-          {
-            "url": "https://www.kakaomobility.com",
-            "status": 200,
-            "chars": 1835
-          },
-          {
-            "url": "https://www.kakaomobility.com/robotics",
-            "status": 200,
-            "chars": 2506
-          },
-          {
-            "url": "https://www.kakaomobility.com/customer-support",
-            "status": 200,
-            "chars": 2157
-          }
-        ],
-        "content_sha256": "275907b66f1f1b438793f69501d81cc5ff96e9c595a6deceebd03a77891b257d",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "카카오톡 상담을 통해 서비스 관련 문의를 해결하세요. 쉽고 빠르게 문의 접수가 가능하고, 전문상담사와의 채팅 상담을 통해 문제를 해결할 수 있습니다.",
-          "reason": "고객지원 채널(챗봇, 상담톡)은 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.089,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://service.kakaomobility.com/cs/",
+        "saw": "카카오모빌리티 고객지원 페이지(카카오 T, 택시, 대리 등 서비스 아이콘과 FAQ 목록)가 전부 한국어이며 언어 전환 메뉴를 찾지 못함.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

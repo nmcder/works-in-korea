@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.safedriving.or.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.safedriving.or.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.safedriving.or.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.safedriving.or.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.safedriving.or.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.safedriving.or.kr/loginManage/anyidAuthLogin.do",
+        "saw": "로그인 시 '본인인증' 화면이 뜨고 이름과 주민등록번호(13자리) 입력이 필수였으며, 그 아래 모바일신분증/간편인증/공동인증서도 모두 주민등록번호 기반 인증 수단이었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {

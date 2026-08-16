@@ -74,27 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://www.sentbe.com/join",
-        "final_url": "https://corporate.sentbe.com/sentbe?lang=en",
-        "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
-          {
-            "url": "https://www.sentbe.com/join",
-            "status": 200,
-            "used": true
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://help.sentbe.com/en/support/solutions/articles/67000748284",
+        "saw": "Official signup guide step 2.1 states 휴대폰 번호를 통해 본인 확인, phone verification is mandatory signup step",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {

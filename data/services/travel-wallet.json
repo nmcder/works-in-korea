@@ -169,49 +169,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://enterprise.travel-wallet.com/home",
-            "status": 200,
-            "chars": 838
-          },
-          {
-            "url": "https://www.travel-wallet.com",
-            "status": 200,
-            "chars": 8000
-          },
-          {
-            "url": "https://enterprise.travel-wallet.com/",
-            "status": 200,
-            "chars": 838
-          },
-          {
-            "url": "https://www.travel-wallet.com/ko/docs/privacy",
-            "status": 200,
-            "chars": 10000
-          }
-        ],
-        "content_sha256": "0c9e66501e46d31e0d81246b21a966f7f92f65bbda8cd9c78863a1bd8ce9e0ee",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객문의 : support@travel-wallet.com 기업문의 : business@travel-wallet.com",
-          "reason": "고객문의 이메일이 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 영문 상담 가능 여부를 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.058,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://docs.channel.io/travelwallet/en",
+        "saw": "English docs UI loads properly but searching any keyword like card returns 0 search results, no actual English content",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

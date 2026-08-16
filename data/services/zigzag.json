@@ -74,27 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://zigzag.kr/join",
-        "final_url": "https://zigzag.kr/join",
-        "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
-          {
-            "url": "https://zigzag.kr/join",
-            "status": 200,
-            "used": true
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://zigzag.kr/auth/mobile-authentication",
+        "saw": "'이메일로 가입' 경로로 약관 동의 후 진행하니 그 다음 화면이 '휴대폰 인증을 해주세요'였고 휴대폰 번호 입력 없이는 다음 단계로 진행할 수 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -164,38 +154,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://zigzag.kr",
-            "status": 200,
-            "chars": 505
-          },
-          {
-            "url": "https://zigzag.kr",
-            "status": 200,
-            "chars": 505
-          }
-        ],
-        "content_sha256": "3de0c6e513f189f4dcb02dec69d19814a43a1bc9132fb472a4a89e9e130d1867",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "문의전화 02-1670-8050 이메일 info@kakaostyle.com",
-          "reason": "전화번호와 이메일 등 지원 채널은 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.139,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://zigzag.kr/auth/login",
+        "saw": "로그인 페이지 하단 사업자 정보에 문의전화(02-1670-8050)와 이메일만 한국어로 기재되어 있고 영어 고객지원 안내는 없었다.",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {

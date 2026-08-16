@@ -75,42 +75,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "http://www.samsunghospital.com/join",
-            "status": 400,
-            "used": false
-          },
-          {
-            "url": "http://www.samsunghospital.com/signup",
-            "status": 400,
-            "used": false
-          },
-          {
-            "url": "http://www.samsunghospital.com/member/join",
-            "status": 400,
-            "used": false
-          },
-          {
-            "url": "http://www.samsunghospital.com/register",
-            "status": 400,
-            "used": false
-          },
-          {
-            "url": "http://www.samsunghospital.com/user/join",
-            "status": 400,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.samsunghospital.com",
+        "saw": "Signup offers 4 identity options: 휴대폰 인증, 간편인증 PASS/Naver, NICE 아이핀, 신용카드 인증, none are Apple/Google/email",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "app_availability": {
@@ -164,39 +139,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "http://www.samsunghospital.com/home/info/ICUfaq.do",
-            "status": 200,
-            "chars": 4968
-          },
-          {
-            "url": "http://www.samsunghospital.com",
-            "status": 200,
-            "chars": 8
-          }
-        ],
-        "content_sha256": "c3c7b09df39363411b5308c546df673ecaf4dccb2e3ae5a236dc23374da289e7",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "ENG 中國語 RUSSIAN",
-          "reason": "영문 페이지(ENG) 링크는 존재하지만, 영어로 문의 가능한 별도의 상담 채널(이메일/전화/채팅)이 명시되어 있지 않아 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.082,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.samsunghospital.com/home/eng",
+        "saw": "English site has explicit International Healthcare Services and Appointments contact links",
+        "recorded_at": "2026-08-16T08:54:35.873Z"
       }
     },
     "foreign_card": {
