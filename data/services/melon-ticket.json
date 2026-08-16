@@ -54,7 +54,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T23:48:29.144Z",
+      "measured_at": "2026-08-16T23:53:52.474Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -78,9 +78,7 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0,
         "hangul_char_ratio": 0,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-16T23:49:04.702Z",
-        "last_attempt_failed": "robots: robots-unavailable(ENOTFOUND)"
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {

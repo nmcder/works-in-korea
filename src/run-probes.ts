@@ -82,6 +82,23 @@ async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
   const startedAt = new Date();
 
+  /*
+   * 부분 실행은 "그날의 측정"이 아니다 — 요약과 변경 기록을 남기지 않는다.
+   *
+   * `latest.json` 은 사이트 첫 화면의 "마지막 확인 / 확인한 곳"으로 나간다.
+   * 그런데 개발 중에 `--only=melon-ticket` 같은 것을 한 번 돌리면 그게 그대로
+   * 덮어써서, 사이트가 **"106개 서비스 · 확인한 곳 KR · Gyeonggi-do"** 라고
+   * 발표하게 된다. 실제로는 한국에서 한 곳만 잰 것인데 말이다.
+   *
+   * 이 프로젝트가 파는 것이 "해외에서 쟀다"인데 그 자리에 KR 이 떠 있으면
+   * 주장 자체가 무너진다. 2026-08-16~17 에 세 번 그렇게 됐고 세 번 다 손으로
+   * 되돌렸다. 손으로 되돌릴 일이면 애초에 쓰지 않는 것이 맞다.
+   *
+   * 변경 기록도 마찬가지다. 부분 실행에서 나온 차이는 대개 우리가 코드를 고쳐서
+   * 생긴 것이지 서비스가 바뀐 것이 아니다.
+   */
+  const isFullRun = options.only === null && options.limit === null;
+
   // 1. 시드 동기화 (신규 서비스가 있으면 이번 실행부터 측정된다)
   const seeds = await loadSeeds();
   for (const seed of seeds) {
@@ -281,7 +298,14 @@ async function main(): Promise<void> {
     },
   };
 
-  if (!options.dryRun) {
+  if (!options.dryRun && !isFullRun) {
+    log.info(
+      '부분 실행이라 latest.json 과 변경 기록은 남기지 않았다 (측정값은 저장됨). ' +
+        '전체를 돌려야 그날의 측정으로 기록된다.',
+    );
+  }
+
+  if (!options.dryRun && isFullRun) {
     const date = now.slice(0, 10);
     const file = path.join(PATHS.changes, `${date}.json`);
 
