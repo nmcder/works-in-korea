@@ -47,11 +47,13 @@
         "en",
         "ja",
         "ko",
+        "mn",
+        "ru",
         "zh"
       ],
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-16T11:45:03.019Z",
+      "first_seen_at": "2026-08-16T11:45:03.019Z",
+      "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
@@ -66,6 +68,12 @@
           ],
           "zh": [
             "http://chn.amc.seoul.kr/gb/lang/main.do"
+          ],
+          "ru": [
+            "http://ru.amc.seoul.kr/gb/lang/main.do"
+          ],
+          "mn": [
+            "http://mn.amc.seoul.kr/gb/lang/main.do"
           ]
         },
         "english_url_checks": [

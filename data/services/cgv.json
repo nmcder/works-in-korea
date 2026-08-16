@@ -43,19 +43,16 @@
       }
     },
     "i18n_ui": {
-      "value": [
-        "ko"
-      ],
-      "measured_at": "2026-08-16T00:00:00.000Z",
-      "first_seen_at": "2026-08-16T00:00:00.000Z",
-      "last_changed_at": "2026-08-16T00:00:00.000Z",
-      "method": "manual",
-      "confidence": "manual",
+      "value": null,
+      "measured_at": "2026-08-16T11:45:03.019Z",
+      "first_seen_at": "2026-08-16T11:45:03.019Z",
+      "last_changed_at": "2026-08-16T11:45:03.019Z",
+      "method": "auto:i18n_ui",
+      "confidence": "unknown",
       "evidence": {
-        "checked_by": "operator",
-        "url": "https://cgv.co.kr",
-        "saw": "홈페이지 상단·좌측 메뉴·'더보기' 전체메뉴를 확인했지만 언어 전환(KO/EN) 버튼이나 메뉴가 전혀 없었다.",
-        "recorded_at": "2026-08-16T07:07:06.186Z"
+        "not_measured": "http_status=403",
+        "http_status": 403,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {
