@@ -50,16 +50,22 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": [
+        "en",
+        "ja",
+        "ko",
+        "vi",
+        "zh"
+      ],
+      "measured_at": "2026-08-16T11:45:03.019Z",
+      "first_seen_at": "2026-08-16T11:45:03.019Z",
+      "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
         "declared_html_lang": "ko",
         "hreflang": [],
+        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "https://www.nhis.or.kr/en",
@@ -72,9 +78,12 @@
             "ok": false
           }
         ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0,
+        "hangul_char_ratio": 1,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-08-16T18:32:56.752Z",
+        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
     "signup_phone_auth": {

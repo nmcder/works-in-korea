@@ -140,6 +140,51 @@ async function main(): Promise<void> {
       try {
         const previousSignal = service.signals[key];
         const result = await runProbe(key, service, vantage, now);
+        /*
+         * **오늘 못 본 것이 어제 본 것을 지우지 않는다.**
+         *
+         * markUnmeasured 는 이전 값을 지키도록 만들어져 있는데, 이 경로를 타는 것은
+         * 프로브가 아예 null 을 돌려줬을 때뿐이었다. 프로브들은 대개 그러지 않고
+         * `{ value: null, confidence: 'unknown' }` 을 돌려주는데, 그건 아래
+         * applyProbeResult 로 흘러가서 멀쩡한 값을 덮어썼다.
+         *
+         * 2026-08-16 밤 크론에서 실제로 그랬다. 미국 러너에서 KT 는 robots.txt 를
+         * 못 읽었고(연결 타임아웃), 멜론티켓은 423 을 받았고, SKT 는 렌더가 30초를
+         * 넘겼다. 셋 다 "사이트에 닿지 못했다"인데 그 결과로 전날 확인해 둔 언어
+         * 목록이 지워졌다. 신한은행의 가입 조건과 리디북스의 영어 지원도 같은 식으로
+         * 날아갔다 — 하루치 네트워크 사정이 데이터를 먹은 것이다.
+         *
+         * 값에 측정 시각이 붙어 있으므로 낡은 것은 화면에서 낡은 채로 보인다.
+         * "2026-08-15 에 확인함"이 "모름"보다 언제나 낫다.
+         *
+         * ※ overseas_access 는 영향이 없다. 거기서 차단은 unknown 이 아니라
+         *   'blocked' 라는 **값**이고, 그건 지워지지 않고 그대로 기록된다.
+         */
+        const failed =
+          result === null
+            ? 'probe returned null'
+            : result.confidence === 'unknown'
+              ? String(
+                  (result.evidence as { not_measured?: unknown } | null)?.not_measured ??
+                    'unknown 으로 돌아옴',
+                )
+              : null;
+
+        const hadValue = previousSignal !== undefined && previousSignal.measured_at !== null;
+
+        if (failed !== null && hadValue) {
+          service.signals[key] = markUnmeasured(
+            service.signals[key] as never,
+            UNKNOWN_VALUE[key] as never,
+            key,
+            failed,
+            now,
+          ) as never;
+          signalsUnknown += 1;
+          log.info(`  ${key}: 못 쟀다 (${failed.slice(0, 60)}) — 이전 값을 지킨다`);
+          continue;
+        }
+
         if (result === null) {
           service.signals[key] = markUnmeasured(
             service.signals[key] as never,

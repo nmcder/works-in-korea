@@ -49,16 +49,32 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": [
+        "en",
+        "ko"
+      ],
+      "measured_at": "2026-08-16T23:48:29.144Z",
+      "first_seen_at": "2026-08-15T18:24:37.122Z",
+      "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "declared_html_lang": "ko-KR",
+        "hreflang": [
+          "ko"
+        ],
+        "language_switcher_links": {},
+        "english_url_checks": [
+          {
+            "url": "https://www.kt.com/en",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0.126,
+        "hangul_char_ratio": 0.541,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
