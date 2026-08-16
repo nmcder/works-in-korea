@@ -219,6 +219,18 @@ export default async function MethodPage() {
           </ul>
 
           <h2>
+            <T en="What this site counts about you" ko="이 사이트가 방문자에 대해 세는 것" />
+          </h2>
+          <TBlock
+            en="Page views, in aggregate, through Cloudflare Web Analytics. It sets no cookies, stores nothing on your device, and does not keep IP addresses — your country is worked out from the request and then thrown away. It tells us that a page was opened, not who opened it, and there is no way to follow one visitor from one page to the next."
+            ko="페이지가 몇 번 열렸는지를 Cloudflare Web Analytics 로 셉니다. 쿠키를 만들지 않고, 기기에 아무것도 저장하지 않으며, IP 주소를 보관하지 않습니다 — 국가만 계산하고 바로 버립니다. 어떤 페이지가 열렸다는 사실만 알 수 있고 누가 열었는지는 알 수 없으며, 한 사람이 다음 페이지로 넘어가는 것을 따라갈 방법도 없습니다."
+          />
+          <TBlock
+            en="Why count at all: without it there is no way to tell whether anything here reaches anyone. Google Search Console shows only visitors who arrived through a Google search, so a link shared in a forum or a chat is invisible. Guessing is worse than a number that identifies nobody."
+            ko="왜 세느냐면, 세지 않으면 여기 있는 것이 누구에게든 닿는지 알 방법이 없기 때문입니다. Google Search Console 은 구글 검색으로 들어온 사람만 보여주므로, 커뮤니티나 메신저로 공유된 링크는 아예 보이지 않습니다. 아무도 특정하지 못하는 숫자 하나가, 짐작보다 낫다고 봤습니다."
+          />
+
+          <h2>
             <T en="The app icons" ko="앱 아이콘에 대해" />
           </h2>
           <TBlock

@@ -1,6 +1,6 @@
 {
   "$comment": "사람이 관리하는 시드 목록. 여기에 항목을 추가하면 다음 크론에서 data/services/<id>.json 이 자동 생성된다. hints는 비워도 되며, 채우면 해당 프로브의 정확도가 올라간다. hints.ios_app_id 는 확신 없는 값을 넣지 말고 null로 두면 프로브가 정직하게 unknown을 남긴다.",
-  "updated_at": "2026-08-15",
+  "updated_at": "2026-08-16",
   "services": [
     {
       "id": "korail",
@@ -61,7 +61,8 @@
       "category": "transport",
       "importance": 2,
       "hints": {
-        "android_package": "kr.co.tmoney.tia"
+        "android_package": "kr.co.tmoney.tia",
+        "ios_app_id": "1483433931"
       },
       "notes": {
         "en": "Booking runs through the “티머니GO” app, which merged the separate express-bus and intercity-bus apps into one.",
@@ -203,7 +204,8 @@
       "hints": {
         "signup_url": "https://world.nol.com/en/auth-web/email-join",
         "android_package": "com.interparktriple.kint5",
-        "support_url": "https://world.nol.com/en/my-info/inquiries/new"
+        "support_url": "https://world.nol.com/en/my-info/inquiries/new",
+        "ios_app_id": "6476254427"
       }
     },
     {
@@ -294,7 +296,8 @@
       "hints": {
         "support_url": "https://www.sac.or.kr/site/main/board/academyfaq/list",
         "signup_url": "https://www.sac.or.kr/site/main/membership/member_step_membership",
-        "android_package": "kr.or.sac.sacapp"
+        "android_package": "kr.or.sac.sacapp",
+        "ios_app_id": "1623791013"
       }
     },
     {
@@ -474,7 +477,8 @@
       "category": "shopping",
       "importance": 2,
       "hints": {
-        "android_package": "com.musinsa.global"
+        "android_package": "com.musinsa.global",
+        "ios_app_id": "1637547116"
       }
     },
     {
@@ -827,7 +831,8 @@
       "importance": 3,
       "hints": {
         "support_url": "https://www.kbanknow.com/web/customer/faq/list",
-        "android_package": "com.kbankwith.smartbank"
+        "android_package": "com.kbankwith.smartbank",
+        "ios_app_id": "1178872627"
       }
     },
     {
@@ -988,7 +993,8 @@
       "importance": 3,
       "hints": {
         "android_package": "com.themoin.remit",
-        "support_url": "https://www.themoin.com"
+        "support_url": "https://www.themoin.com",
+        "ios_app_id": "1228063143"
       }
     },
     {
@@ -1164,7 +1170,8 @@
       "category": "accommodation",
       "importance": 3,
       "hints": {
-        "android_package": "com.hanatour.dotcom"
+        "android_package": "com.hanatour.dotcom",
+        "ios_app_id": "550971489"
       }
     },
     {
@@ -1359,7 +1366,8 @@
       "importance": 2,
       "hints": {
         "android_package": "com.yagins.hiraportal",
-        "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98"
+        "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
+        "ios_app_id": "492606369"
       },
       "notes": {
         "en": "The app is published as “건강e음”.",
