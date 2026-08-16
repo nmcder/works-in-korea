@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "kind": "foreign_card",
+  "service_id": "coupang",
+  "outcome": "works",
+  "origin_country": "US",
+  "card_brand": "Visa",
+  "context": null,
+  "tried_on": "2026-08-15",
+  "details": "no\n\n---\n\n_Sent from the form on the website. No account, no email address, no personal details were collected._",
+  "received_at": "2026-08-15T10:15:51Z",
+  "source": "https://github.com/nmcder/works-in-korea-reports/issues/2",
+  "author": "nmcder",
+  "status": "accepted",
+  "note": null
+}
