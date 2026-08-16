@@ -42,36 +42,35 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "zh"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.gov.kr",
+        "saw": "상단 'For Foreigners' 메뉴를 누르면 한국어/English/中文 링크가 뜨고, English를 누르면 foreigner.gov.kr 로 이동해 전체가 영어인 별도 정부 사이트가 나온다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(robots.txt 응답 599)",
-        "signup_url": "https://plus.gov.kr/member/signUpAgree",
-        "attempts": [
-          {
-            "url": "https://plus.gov.kr/member/signUpAgree",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://plus.gov.kr/member/signUp",
+        "saw": "회원정보입력 단계에서 이름·주민등록번호(외국인등록번호)·아이디·비밀번호 입력 후 '인증 방식 선택(필수)'에서 간편인증 또는 모바일 신분증 중 하나를 반드시 선택해야 가입완료 버튼을 누를 수 있다. 이메일만으로 끝나는 경로는 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "app_availability": {
@@ -125,15 +124,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://foreigner.gov.kr/?langCd=en",
+        "saw": "정부24의 'For Foreigners' 메뉴에서 이동한 foreigner.gov.kr 영어 페이지에 'Support Centers' 메뉴가 있고 전체 페이지가 영어로 되어 있다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {

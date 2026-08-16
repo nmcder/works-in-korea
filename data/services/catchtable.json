@@ -42,42 +42,34 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.catchtable.co.kr",
+        "saw": "footer의 'CATCHTABLE Global for foreigners' 링크를 누르면 catchtable.net으로 이동해 전체 화면이 영어(Restaurant, Location or Cuisine 등)로 나온다. 우측 상단에 ENG 표시도 있다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.catchtable.co.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://www.catchtable.co.kr (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://app.catchtable.co.kr/ct/login",
+        "saw": "로그인 화면에 카카오로 시작, 네이버(N), Apple, 휴대폰 아이콘 이렇게 네 가지 옵션이 있다. 휴대폰 인증 말고도 카카오·네이버·Apple 소셜 로그인으로 가입할 수 있다.",
+        "recorded_at": "2026-08-16T07:02:07.669Z"
       }
     },
     "app_availability": {
@@ -131,15 +123,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://app.catchtable.co.kr/ct/login",
+        "saw": "로그인 화면 하단 '고객센터'를 누르면 챗봇이 뜨는데 안내 문구와 빠른답변 버튼이 모두 한국어뿐이었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {

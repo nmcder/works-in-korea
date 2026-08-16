@@ -43,16 +43,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "http_status=403",
-        "http_status": 403,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://cgv.co.kr",
+        "saw": "홈페이지 상단·좌측 메뉴·'더보기' 전체메뉴를 확인했지만 언어 전환(KO/EN) 버튼이나 메뉴가 전혀 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
@@ -126,15 +129,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://cgv.co.kr/csc/customerCenter",
+        "saw": "고객센터 안내 페이지에 자주 찾는 문의, 공지사항 등이 모두 한국어로만 되어 있고 영어 옵션이 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {

@@ -42,16 +42,20 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.baemin.com",
+        "saw": "우측 상단에 'For foreigners' 링크가 있고, 클릭하면 baemin.com/en/global/ 로 이동해 영어로 된 별도 페이지('Taste Korea', 'Korea's No.1 Food Delivery APP BAEMIN')가 뜬다. 그 페이지 우측 상단에도 KR/EN 전환이 있다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {

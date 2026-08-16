@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 98곳 · 9묶음.
+`npm run manual-queue` 가 생성. 남은 93곳 · 8묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -25,7 +25,7 @@
 
 ---
 
-## 묶음 1 / 9
+## 묶음 1 / 8
 
 ```json
 [
@@ -33,37 +33,6 @@
     "service_id": "11st",
     "name": "11st",
     "url": "https://www.11st.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "baemin",
-    "name": "Baemin",
-    "url": "https://www.baemin.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "catchtable",
-    "name": "CatchTable",
-    "url": "https://www.catchtable.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "cgv",
-    "name": "CGV",
-    "url": "http://www.cgv.co.kr",
-    "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
     "check": [
       "signup_phone_auth",
       "i18n_ui",
@@ -82,88 +51,6 @@
       "support_en"
     ]
   },
-  {
-    "service_id": "coupang-eats",
-    "name": "Coupang Eats",
-    "url": "https://www.coupangeats.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "e-gen",
-    "name": "Emergency Medical Portal (E-Gen)",
-    "url": "https://www.e-gen.or.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "gov-kr",
-    "name": "Government24",
-    "url": "https://www.gov.kr",
-    "signup_url": "https://plus.gov.kr/member/signUpAgree",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "hikorea",
-    "name": "HiKorea (Immigration)",
-    "url": "https://www.hikorea.go.kr",
-    "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "hometax",
-    "name": "Hometax (NTS)",
-    "url": "https://www.hometax.go.kr",
-    "signup_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "interpark-ticket",
-    "name": "Interpark Ticket",
-    "url": "https://tickets.interpark.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakao-gift",
-    "name": "Kakao Gift",
-    "url": "https://gift.kakao.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  }
-]
-```
-
----
-
-## 묶음 2 / 9
-
-```json
-[
   {
     "service_id": "kakaobank",
     "name": "KakaoBank",
@@ -249,6 +136,33 @@
     ]
   },
   {
+    "service_id": "baemin",
+    "name": "Baemin",
+    "url": "https://www.baemin.com",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "coupang-eats",
+    "name": "Coupang Eats",
+    "url": "https://www.coupangeats.com",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  }
+]
+```
+
+---
+
+## 묶음 2 / 8
+
+```json
+[
+  {
     "service_id": "gmarket",
     "name": "Gmarket",
     "url": "https://www.gmarket.co.kr",
@@ -264,6 +178,15 @@
     "url": "https://www.yeogi.com",
     "signup_url": "https://platform.yeogi.com/login?redirectUri=https://www.yeogi.com/",
     "support_url": "https://www.yeogi.com/faq",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "kakao-gift",
+    "name": "Kakao Gift",
+    "url": "https://gift.kakao.com",
     "check": [
       "signup_phone_auth",
       "support_en"
@@ -289,16 +212,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 3 / 9
-
-```json
-[
+  },
   {
     "service_id": "kakaopay",
     "name": "KakaoPay",
@@ -372,7 +286,16 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 3 / 8
+
+```json
+[
   {
     "service_id": "naverpay",
     "name": "Naver Pay",
@@ -423,16 +346,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 4 / 9
-
-```json
-[
+  },
   {
     "service_id": "yes24-ticket",
     "name": "YES24 Ticket",
@@ -442,6 +356,24 @@
     "check": [
       "signup_phone_auth",
       "support_en"
+    ]
+  },
+  {
+    "service_id": "cgv",
+    "name": "CGV",
+    "url": "http://www.cgv.co.kr",
+    "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "hikorea",
+    "name": "HiKorea (Immigration)",
+    "url": "https://www.hikorea.go.kr",
+    "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
+    "check": [
+      "signup_phone_auth"
     ]
   },
   {
@@ -482,7 +414,16 @@
     "check": [
       "signup_phone_auth"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 4 / 8
+
+```json
+[
   {
     "service_id": "yogiyo",
     "name": "Yogiyo",
@@ -552,16 +493,7 @@
       "i18n_ui",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 5 / 9
-
-```json
-[
+  },
   {
     "service_id": "nts",
     "name": "National Tax Service",
@@ -612,7 +544,16 @@
       "i18n_ui",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 5 / 8
+
+```json
+[
   {
     "service_id": "daangn",
     "name": "Karrot (Danggeun Market)",
@@ -681,16 +622,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 6 / 9
-
-```json
-[
+  },
   {
     "service_id": "nonghyup",
     "name": "NH Nonghyup Bank",
@@ -739,7 +671,16 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 6 / 8
+
+```json
+[
   {
     "service_id": "tving",
     "name": "TVING",
@@ -806,16 +747,7 @@
     "check": [
       "signup_phone_auth"
     ]
-  }
-]
-```
-
----
-
-## 묶음 7 / 9
-
-```json
-[
+  },
   {
     "service_id": "sk7mobile",
     "name": "SK 7mobile",
@@ -862,7 +794,16 @@
       "i18n_ui",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 7 / 8
+
+```json
+[
   {
     "service_id": "ibk",
     "name": "IBK Industrial Bank",
@@ -929,16 +870,7 @@
       "signup_phone_auth",
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 8 / 9
-
-```json
-[
+  },
   {
     "service_id": "kbank",
     "name": "K bank",
@@ -987,7 +919,16 @@
       "signup_phone_auth",
       "support_en"
     ]
-  },
+  }
+]
+```
+
+---
+
+## 묶음 8 / 8
+
+```json
+[
   {
     "service_id": "themoin",
     "name": "Moin",
@@ -1054,16 +995,7 @@
     "check": [
       "support_en"
     ]
-  }
-]
-```
-
----
-
-## 묶음 9 / 9
-
-```json
-[
+  },
   {
     "service_id": "ridibooks",
     "name": "RIDI Books",

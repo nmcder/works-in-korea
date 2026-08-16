@@ -42,36 +42,33 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://hometax.go.kr",
+        "saw": "메인 화면과 전체메뉴, 회원가입 화면 어디에도 언어 전환(KO/EN) 버튼이 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(robots.txt 응답 599)",
-        "signup_url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
-        "attempts": [
-          {
-            "url": "https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=UTXPPAAA80",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://hometax.go.kr",
+        "saw": "회원가입 3단계 '본인인증'에서 이름·주민등록번호 입력 후 인증방법(공동·금융인증/휴대전화 인증/신용카드 인증/간편인증) 중 하나를 반드시 선택해야 다음 단계로 넘어간다. 이메일만으로 끝나는 경로는 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "app_availability": {
@@ -118,15 +115,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://hometax.go.kr",
+        "saw": "'상담·불복·제보' 메뉴의 상담하기, 불복청구 등 하위 메뉴가 모두 한국어로만 되어 있고 영어 옵션이 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {

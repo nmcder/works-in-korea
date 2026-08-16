@@ -42,42 +42,36 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "ja",
+        "zh"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://tickets.interpark.com",
+        "saw": "페이지 하단 'Language' 메뉴에 Korean/English/Japanese/Chinese가 있고 English를 누르면 실제로 NOL World(world.nol.com/en)라는 영어 사이트로 이동한다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://tickets.interpark.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://tickets.interpark.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://accounts.yanolja.com/signup/email/identity-verification",
+        "saw": "이메일로 가입하기를 선택해도 약관 동의 후 '본인 인증을 진행해 주세요' 화면이 뜨고 '본인 인증하기' 버튼을 눌러야 다음 단계로 넘어간다. 이메일만으로 끝나는 가입 경로는 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "app_availability": {
@@ -131,15 +125,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://help.interpark.com/ticket",
+        "saw": "'티켓 고객센터'를 눌러 연 자주 묻는 질문 페이지가 전부 한국어였고 영어 옵션은 없었다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {

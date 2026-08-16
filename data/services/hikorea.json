@@ -42,16 +42,21 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "zh"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.hikorea.go.kr",
+        "saw": "상단에 '한국어 | ENGLISH | 中文' 메뉴가 있고 ENGLISH를 누르면 실제로 전체 화면(Petition Application, Information Lookup, Smart Entry Service 등)이 영어로 바뀐다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "signup_phone_auth": {
@@ -112,15 +117,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.hikorea.go.kr",
+        "saw": "영어 화면에서 Customer Center 메뉴를 누르면 FAQ 목록이 영어 질문·답변(예: 'Are there any new restrictions on applying for overseas Korean status (F-4)?')으로 나온다.",
+        "recorded_at": "2026-08-16T07:07:06.186Z"
       }
     },
     "foreign_card": {
