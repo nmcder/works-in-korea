@@ -36,11 +36,11 @@
 
 - **Vercel Hobby 무료 티어는 애초에 비상업 프로젝트 전용** (100GB 대역폭, 함수 100만 호출).
   상업화하면 유료 전환 대상 → 현재 조건이 정확히 맞물림.
-- **GitHub Actions**: 퍼블릭 무제한 / 프라이빗은 Free 2,000분·Pro 3,000분. 학생팩으로 Pro 무료.
+- **GitHub Actions**: 퍼블릭 무제한 / 프라이빗은 Free 2,000분·Pro 3,000분.
 - 선례: **코로나라이브** — 2000년생 학생이 혼자 2년 운영, 누적 조회 1.9억 회, 광고 0원·정부지원 0원.
   남은 후원금 4,136만원 전액 기부. 성공 공식은 "흩어진 데이터의 실시간 집계 + 압도적으로 단순한 UI".
 
-### A-4. 월 10만원의 실제 구매력
+### A-4. 소액 예산의 실제 구매력
 
 인프라(호스팅·크론·엣지·DB)가 전부 0원이므로 **예산 전액을 LLM API에 투입 가능**.
 2026년 8월 저가 모델 실가격: Qwen3.7 Flash $0.03/$0.13 per M tokens, DeepSeek V4-Flash $0.14/$0.28, Ling-2.6-flash $0.01/$0.03.
@@ -195,6 +195,5 @@
 - [국세청 — 1인미디어 창작자 세무안내](https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2480&cntntsId=7802)
 - [SBS — 코로나라이브 개발자 인터뷰](https://news.sbs.co.kr/news/endPage.do?news_id=N1006753720)
 - [GitHub Actions 과금 문서](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
-- [GitHub Student Developer Pack 2026 혜택](https://perkstack.co/blog/github-student-pack-guide)
 - [Vercel 요금제 2026](https://temps.sh/blog/vercel-pricing-complete-guide-2026)
 - [LLM API 가격 비교 2026](https://benchlm.ai/llm-pricing)
