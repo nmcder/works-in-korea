@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,14 +32,21 @@
             "http_status": 200,
             "final_url": "https://www.starbucks.co.kr/",
             "redirected": false,
-            "elapsed_ms": 4798,
+            "elapsed_ms": 4490,
             "body_sha256": "46223c228da9076d32ed1c0e26be1c18432e5fc7d5a55181aff9164adef35dbd",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -47,7 +54,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -71,7 +78,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -127,7 +134,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -156,7 +163,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -180,7 +187,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",

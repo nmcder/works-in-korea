@@ -18,95 +18,59 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:overseas_access",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 200,
-            "final_url": "https://bank.shinhan.com/",
+            "http_status": null,
+            "final_url": null,
             "redirected": false,
-            "elapsed_ms": 4082,
-            "body_sha256": "d23f48aa5b0d3d4e0ff83a22c49dcc5b3e7cb9ac77c00cb6bec94ea726499e07",
-            "content_type": "text/html",
-            "geo_block_markers": [],
-            "ambiguous_deny_markers": []
+            "elapsed_ms": 16770,
+            "body_sha256": null,
+            "content_type": null,
+            "not_measured": "robots: robots-unavailable(ECONNREFUSED)"
           }
         ],
-        "note": null
+        "note": "robots: robots-unavailable(ECONNREFUSED)",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: robots-unavailable(ECONNREFUSED)"
+          }
+        }
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:31:32.969Z",
       "last_changed_at": "2026-08-16T11:31:32.969Z",
       "method": "auto:i18n_ui",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://bank.shinhan.com/en",
-            "status": 404,
-            "ok": false
-          },
-          {
-            "url": "https://bank.shinhan.com/en/",
-            "status": 404,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "not_measured": "robots: robots-unavailable(ECONNREFUSED)",
+        "http_status": null,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {
-      "value": "required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "robots: robots-unavailable(robots.txt 응답 599)",
         "signup_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
-        "final_url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
-        "http_status": 200,
-        "page_kind": "combined",
-        "signup_markers": [
-          "회원가입",
-          "회원 가입",
-          "가입하기"
-        ],
-        "form_input_count": 6,
-        "matched_vendors": [
-          {
-            "id": "ipin",
-            "name": "아이핀 (i-PIN)",
-            "matched": "i-PIN",
-            "via": "text"
-          },
-          {
-            "id": "rrn",
-            "name": "주민등록번호 입력 요구",
-            "matched": "주민등록번호",
-            "via": "text"
-          }
-        ],
-        "strong_url_matches": 0,
-        "alternative_signup_markers": {
-          "text": [],
-          "url": []
-        },
         "attempts": [
           {
             "url": "https://www.shinhan.com/hpe/index.jsp#050601000000",
@@ -114,8 +78,7 @@
             "used": true,
             "reason": "hints.signup_url"
           }
-        ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        ]
       }
     },
     "app_availability": {
@@ -124,7 +87,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -149,30 +112,23 @@
       }
     },
     "payment_gate": {
-      "value": {
-        "gateways": [],
-        "three_ds": null
-      },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": null,
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://bank.shinhan.com",
-            "status": 200,
-            "scanned": true
+            "status": null,
+            "scanned": false,
+            "reason": "robots: robots-unavailable(ECONNREFUSED)"
           }
         ],
-        "detected": [],
-        "three_ds_matches": {
-          "url": [],
-          "text": []
-        },
-        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never"
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
       }
     },
     "support_en": {

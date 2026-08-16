@@ -18,28 +18,34 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:48:11.388Z",
-      "last_changed_at": null,
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:overseas_access",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 200,
-            "final_url": "https://www.kebhana.com/",
+            "http_status": null,
+            "final_url": null,
             "redirected": false,
-            "elapsed_ms": 5120,
-            "body_sha256": "5a430698776d2255f0fb73f9e4b9610f8e8c25d86369ab547f03ea7004870dcd",
-            "content_type": "text/html",
-            "geo_block_markers": [],
-            "ambiguous_deny_markers": []
+            "elapsed_ms": 22502,
+            "body_sha256": null,
+            "content_type": null,
+            "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": null
+        "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -61,7 +67,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -71,28 +77,15 @@
         "attempts": [
           {
             "url": "https://www.kebhana.com/join",
-            "status": 404,
-            "used": false
+            "status": null,
+            "used": false,
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           },
           {
-            "url": "https://www.kebhana.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kebhana.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kebhana.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kebhana.com/user/join",
-            "status": 404,
-            "used": false
+            "url": "https://www.kebhana.com (이하 후보)",
+            "status": null,
+            "used": false,
+            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
@@ -104,7 +97,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -129,30 +122,23 @@
       }
     },
     "payment_gate": {
-      "value": {
-        "gateways": [],
-        "three_ds": null
-      },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": null,
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://www.kebhana.com",
-            "status": 200,
-            "scanned": true
+            "status": null,
+            "scanned": false,
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "detected": [],
-        "three_ds_matches": {
-          "url": [],
-          "text": []
-        },
-        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never"
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
       }
     },
     "support_en": {

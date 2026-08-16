@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -30,16 +30,23 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "http://www.yes24.com/",
-            "redirected": false,
-            "elapsed_ms": 2959,
-            "body_sha256": "565200ebcadb3d911aee8379cbc0f80f65808e68b09cc889479fbd0c9b8304d1",
-            "content_type": "text/html",
+            "final_url": "https://www.yes24.com/Main/default.aspx",
+            "redirected": true,
+            "elapsed_ms": 5836,
+            "body_sha256": "c2ef11c323163198fe2117084dcb02ee1fd9066412c9c5012d10b2696d0103fe",
+            "content_type": "text/html; charset=ks_c_5601-1987",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -47,7 +54,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -94,7 +101,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -120,12 +127,14 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [],
+        "gateways": [
+          "paypal"
+        ],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -136,7 +145,14 @@
             "scanned": true
           }
         ],
-        "detected": [],
+        "detected": [
+          {
+            "id": "paypal",
+            "name": "PayPal",
+            "matched": "PayPal",
+            "via": "text"
+          }
+        ],
         "three_ds_matches": {
           "url": [],
           "text": []

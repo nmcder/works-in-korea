@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,13 +32,20 @@
             "http_status": null,
             "final_url": null,
             "redirected": false,
-            "elapsed_ms": 568,
+            "elapsed_ms": 544,
             "body_sha256": null,
             "content_type": null,
             "not_measured": "robots: Disallow: /"
           }
         ],
-        "note": "robots: Disallow: /"
+        "note": "robots: Disallow: /",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: Disallow: /"
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -77,7 +84,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -103,7 +110,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

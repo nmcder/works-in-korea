@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,14 +32,21 @@
             "http_status": 200,
             "final_url": "https://english.visitkorea.or.kr/svc/main/index.do",
             "redirected": true,
-            "elapsed_ms": 3376,
-            "body_sha256": "d6d0e6a44480001bffc6fb3e29d1f2ae2c25733ee0101e7e577d8b26ba1ea429",
+            "elapsed_ms": 3175,
+            "body_sha256": "a43886eaa06a8b2fc17df6b81f2f261526d5fc9dc11ac34d7496b399e330ae14",
             "content_type": "text/html;charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -54,7 +61,7 @@
         "th",
         "zh"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -133,7 +140,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -162,7 +169,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -186,7 +193,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -196,7 +203,7 @@
           {
             "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
             "status": 200,
-            "chars": 7040
+            "chars": 7041
           },
           {
             "url": "https://english.visitkorea.or.kr",
@@ -209,12 +216,12 @@
             "chars": 8788
           }
         ],
-        "content_sha256": "76f2ee8f6717b61316036eeed060f00a48010b8ba75146c9000e0fd4fb33dc82",
+        "content_sha256": "dfa02b505e8a3b52a288f24a8b2184ee5451b0c0e20873e468b967028c309bdd",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "1330 Korea Travel Helpline is a telephone and real-time chat service. We provide tourists from within and outside Korea with information about traveling in Korea. ... Online Voice Call ... Online Chat 1330 Messenger ... 1330 (in Korea), +82-2-1330 (from Overseas)",
-          "reason": "영어로 운영되는 1330 여행 헬프라인(전화, 실시간 채팅, 메신저)이 외국인 관광객을 위해 명시적으로 제공되고 있어 영어 상담 채널이 확인됨."
+          "quoted_evidence": "1330 Korea Travel Helpline is a telephone and real-time chat service. We provide tourists from within and outside Korea with information about traveling in Korea... 1330 (in Korea), +82-2-1330 (from Overseas)",
+          "reason": "영어 웹사이트에 1330 여행 헬프라인 전화/채팅 서비스가 다국어(영어 포함) 여행 정보 및 통역 서비스로 명시되어 있어 영어 문의가 가능함을 확인할 수 있음."
         },
         "heuristic": {
           "value": "unknown",

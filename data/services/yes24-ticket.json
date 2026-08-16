@@ -18,28 +18,37 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:overseas_access",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "http://tkfile.yes24.com/images/notice/Notice_ticket.html?2026021602",
+            "final_url": "https://cdn-botmanager.stclab.com/yes24/deny/index.html?serverUrl=https%3A%2F%2Fbotmanager.stclab.com%2Fapi%2Fv1%2Fmacro&tenantId=TN250314-8E8F6C3B&domainName=ticket.yes24.com&detectionType=72&sessionId=msw56de6-q3iubllywsvkhox10uf&agentTag=BM-DotNet-agent-1.2.1&loginId=&redirectUrl=http%3A%2F%2Fticket.yes24.com%2FNew%2FMain.aspx",
             "redirected": true,
-            "elapsed_ms": 3587,
-            "body_sha256": "2881a651b2c109dd0b2acb210817c297c9b4568a7f6ebb2ea80f23eacff34c80",
+            "elapsed_ms": 2703,
+            "body_sha256": "6db151be2b56a0738fe0217b92b0d994529ce51ca271030d0c0cb102dd93a39c",
             "content_type": "text/html",
             "geo_block_markers": [],
-            "ambiguous_deny_markers": []
+            "ambiguous_deny_markers": [
+              "비정상적인 접근"
+            ]
           }
         ],
-        "note": null
+        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다.",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -47,20 +56,15 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
-        "declared_html_lang": "ko",
+        "declared_html_lang": null,
         "hreflang": [],
-        "language_switcher_links": {
-          "en": [
-            "https://ticket.yes24.com/English?Gcode=009_205",
-            "https://ticket.yes24.com/English"
-          ]
-        },
+        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "http://ticket.yes24.com/en",
@@ -68,9 +72,9 @@
             "ok": true
           }
         ],
-        "accept_language_responsive": true,
-        "latin_char_ratio": 0.103,
-        "hangul_char_ratio": 0.51,
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0.494,
+        "hangul_char_ratio": 0.305,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -94,7 +98,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -116,7 +120,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,14 +32,21 @@
             "http_status": 200,
             "final_url": "https://www.amc.seoul.kr/asan/main.do",
             "redirected": true,
-            "elapsed_ms": 4538,
+            "elapsed_ms": 4336,
             "body_sha256": "9d9c7be235863d11ad0a5cc2fe7ed42adec8ac8ac5e9b2f63e7ac6e02e949ecb",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -51,7 +58,7 @@
         "ru",
         "zh"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -91,7 +98,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -129,7 +136,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -148,7 +155,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",

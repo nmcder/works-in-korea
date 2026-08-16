@@ -1,0 +1,352 @@
+{
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T18:23:49.790Z",
+  "changes": [
+    {
+      "service_id": "hana-bank",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hanatour",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hira",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-global",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kbank",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kt",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "musinsa-global",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "melon-ticket",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "melon-ticket",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "naver",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "nhis",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko",
+        "vi",
+        "zh"
+      ],
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sac",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ridibooks",
+      "signal": "support_en",
+      "from": "no",
+      "to": "unknown",
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "signup_phone_auth",
+      "from": "required",
+      "to": "unknown",
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "skt",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": null,
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "themoin",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "txbus",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": null,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "yes24",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "paypal"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-16T18:23:49.790Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,13 +32,20 @@
             "http_status": null,
             "final_url": null,
             "redirected": false,
-            "elapsed_ms": 1115,
+            "elapsed_ms": 22779,
             "body_sha256": null,
             "content_type": null,
-            "not_measured": "robots: Disallow: /"
+            "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": "robots: Disallow: /"
+        "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -76,17 +83,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "1483433931",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1483433931&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "kr.co.tmoney.tia",
           "listed": true,
@@ -99,7 +113,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -111,7 +125,7 @@
             "url": "https://txbus.t-money.co.kr",
             "status": null,
             "scanned": false,
-            "reason": "robots: Disallow: /"
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
@@ -119,7 +133,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,42 +32,34 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 3975,
-            "body_sha256": "3b39ee9c7dbe5d990bb50f2bf43e28ffb8a31ac2549a0f0b13cd7b40d0c1ae78",
+            "elapsed_ms": 8202,
+            "body_sha256": "ac10c5213233be66ff90f95b86d161f29975a84274ee7f904e4b2de8bb21df96",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
       "confidence": "unknown",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://www.modetour.com/en",
-            "status": 404,
-            "ok": false
-          },
-          {
-            "url": "https://www.modetour.com/en/",
-            "status": 404,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "not_measured": "AbortError: This operation was aborted",
+        "http_status": null,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {
@@ -90,7 +82,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -112,7 +104,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

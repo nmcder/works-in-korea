@@ -18,62 +18,52 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:overseas_access",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 200,
-            "final_url": "https://www.kt.com/",
+            "http_status": null,
+            "final_url": null,
             "redirected": false,
-            "elapsed_ms": 2993,
-            "body_sha256": "afa551f2b667eb565b367968c1de82df1193275263bef3209924982b029ad409",
-            "content_type": "text/html",
-            "geo_block_markers": [],
-            "ambiguous_deny_markers": []
+            "elapsed_ms": 22201,
+            "body_sha256": null,
+            "content_type": null,
+            "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": null
+        "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+          }
+        }
       }
     },
     "i18n_ui": {
-      "value": [
-        "en",
-        "ko"
-      ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": null,
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:i18n_ui",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
-        "declared_html_lang": "ko-KR",
-        "hreflang": [
-          "ko"
-        ],
-        "language_switcher_links": {},
-        "english_url_checks": [
-          {
-            "url": "https://www.kt.com/en",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0.126,
-        "hangul_char_ratio": 0.541,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
+        "http_status": null,
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
       }
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -129,7 +119,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -147,30 +137,23 @@
       }
     },
     "payment_gate": {
-      "value": {
-        "gateways": [],
-        "three_ds": null
-      },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": null,
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://www.kt.com",
-            "status": 200,
-            "scanned": true
+            "status": null,
+            "scanned": false,
+            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "detected": [],
-        "three_ds_matches": {
-          "url": [],
-          "text": []
-        },
-        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never"
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
       }
     },
     "support_en": {

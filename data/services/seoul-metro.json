@@ -18,33 +18,39 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "value": "unknown",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:overseas_access",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 200,
-            "final_url": "https://www.seoulmetro.co.kr/",
+            "http_status": null,
+            "final_url": null,
             "redirected": false,
-            "elapsed_ms": 5650,
-            "body_sha256": "0d0c4d7db78653e4624e06cb1176efeda58029b280299d1d5cb7ed9b6cc35262",
-            "content_type": "text/html;charset=UTF-8",
-            "geo_block_markers": [],
-            "ambiguous_deny_markers": []
+            "elapsed_ms": 3093,
+            "body_sha256": null,
+            "content_type": null,
+            "not_measured": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
           }
         ],
-        "note": null
+        "note": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+          }
+        }
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -57,7 +63,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -67,31 +73,15 @@
         "attempts": [
           {
             "url": "https://www.seoulmetro.co.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.seoulmetro.co.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.seoulmetro.co.kr/member/join",
             "status": null,
             "used": false,
-            "reason": "TypeError: fetch failed"
+            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
           },
           {
-            "url": "https://www.seoulmetro.co.kr/register",
+            "url": "https://www.seoulmetro.co.kr (이하 후보)",
             "status": null,
             "used": false,
-            "reason": "TypeError: fetch failed"
-          },
-          {
-            "url": "https://www.seoulmetro.co.kr/user/join",
-            "status": null,
-            "used": false,
-            "reason": "TypeError: fetch failed"
+            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
@@ -103,7 +93,7 @@
         "android_listed": null,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -123,7 +113,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",
@@ -135,7 +125,7 @@
             "url": "https://www.seoulmetro.co.kr",
             "status": null,
             "scanned": false,
-            "reason": "TypeError: fetch failed"
+            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
@@ -143,7 +133,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:support_en",

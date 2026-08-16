@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,14 +32,21 @@
             "http_status": 200,
             "final_url": "https://www.sac.or.kr/site/main/home",
             "redirected": true,
-            "elapsed_ms": 4360,
-            "body_sha256": "cd1c9b3a70c1fc6e57d182da6591fd71859a787ae8e6080d501266e3f4e3dae3",
+            "elapsed_ms": 4859,
+            "body_sha256": "d43d20da9b95b2ac82f39edc1ec82bc621c09ce738deae5a4b523c333b0606fb",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -47,7 +54,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -77,7 +84,7 @@
         ],
         "accept_language_responsive": true,
         "latin_char_ratio": 0.033,
-        "hangul_char_ratio": 0.534,
+        "hangul_char_ratio": 0.538,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -97,17 +104,24 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
+        "ios_listed": true,
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T18:24:37.122Z",
-      "last_changed_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "1623791013",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1623791013&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
           "package": "kr.or.sac.sacapp",
           "listed": true,
@@ -123,7 +137,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

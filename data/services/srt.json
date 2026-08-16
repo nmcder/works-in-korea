@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,14 +32,21 @@
             "http_status": 200,
             "final_url": "https://etk.srail.kr/main.do",
             "redirected": true,
-            "elapsed_ms": 6261,
-            "body_sha256": "98a04fe2ebe64b7c4f12fd12e26f878200ee8781e483eafe5dbf92a6105af67a",
+            "elapsed_ms": 5819,
+            "body_sha256": "dc7fbd6a5d8bb0d1254e34c098a2d8dd2bfc09c855201eb58dd02956d4356914",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
@@ -49,7 +56,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -89,7 +96,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
@@ -137,7 +144,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T00:32:39.941Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T00:32:39.941Z",
       "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
@@ -166,7 +173,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -190,7 +197,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",

@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:overseas_access",
@@ -32,33 +32,34 @@
             "http_status": 200,
             "final_url": "https://www.nhis.or.kr/",
             "redirected": false,
-            "elapsed_ms": 3200,
+            "elapsed_ms": 3344,
             "body_sha256": "652bdbfc5e3839272fa2af916a509701849c53cf167afa890d94ca9a95c4d712",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
-      "value": [
-        "en",
-        "ja",
-        "ko",
-        "vi",
-        "zh"
-      ],
-      "measured_at": "2026-08-16T11:45:03.019Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
+      "value": null,
+      "measured_at": "2026-08-16T18:23:49.790Z",
+      "first_seen_at": "2026-08-16T18:23:49.790Z",
+      "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:i18n_ui",
-      "confidence": "auto",
+      "confidence": "unknown",
       "evidence": {
+        "not_measured": "언어 전환 수단을 찾지 못했다",
         "declared_html_lang": "ko",
         "hreflang": [],
-        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "https://www.nhis.or.kr/en",
@@ -71,10 +72,9 @@
             "ok": false
           }
         ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0,
-        "hangul_char_ratio": 1,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "rendered_checked": true,
+        "rendered_error": null,
+        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
       }
     },
     "signup_phone_auth": {
@@ -97,7 +97,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -119,7 +119,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",

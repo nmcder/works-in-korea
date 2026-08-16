@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,19 +32,26 @@
             "http_status": 200,
             "final_url": "https://www.sk7mobile.com/",
             "redirected": false,
-            "elapsed_ms": 3003,
+            "elapsed_ms": 3036,
             "body_sha256": "f1171b72f73c06b7002e78e0b05d0102a9ba900ed6864b2059bdee4651ba046a",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null
+        "note": null,
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "ok",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          }
+        }
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -90,7 +97,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -112,7 +119,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -136,7 +143,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -146,7 +153,7 @@
           {
             "url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
             "status": 200,
-            "chars": 4390
+            "chars": 4391
           },
           {
             "url": "https://www.sk7mobile.com",
@@ -154,12 +161,12 @@
             "chars": 10
           }
         ],
-        "content_sha256": "9e2f9a1d15b3d95182e843ece7570b20419797e42a11f514ecf0038e6677826e",
+        "content_sha256": "91193b47099ffddc1c5b669219b95a39d73868d7cec0124f1f224572844897b3",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "Customer service for foreigner : 1599-0563(charged number), Weekdays 9:00 ~ 18:00 (not available 12:00 ~ 13:00)",
-          "reason": "외국인 전용 고객센터 전화번호가 영문으로 명시되어 있어 영어 문의가 가능한 채널로 판단됨."
+          "reason": "외국인 전용 고객센터 전화번호가 영어로 명시되어 있어 영문 문의가 가능함을 확인할 수 있다."
         },
         "heuristic": {
           "value": "unknown",

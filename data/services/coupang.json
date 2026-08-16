@@ -19,7 +19,7 @@
   "signals": {
     "overseas_access": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -32,8 +32,8 @@
             "http_status": 403,
             "final_url": "https://www.coupang.com/",
             "redirected": false,
-            "elapsed_ms": 2587,
-            "body_sha256": "a5ab48bea55c9a562cc4a02146b0e7c00c6ec6ba65be8928419e4f5f2e546937",
+            "elapsed_ms": 2185,
+            "body_sha256": "f6328ecb97e902ee2523666fb24dd1e146b6e5e1dfb805fa5cb3ff1a174b1046",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": [
@@ -41,12 +41,19 @@
             ]
           }
         ],
-        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다.",
+        "by_vantage": {
+          "us·Arizona": {
+            "value": "unknown",
+            "at": "2026-08-16T18:23:49.790Z",
+            "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+          }
+        }
       }
     },
     "i18n_ui": {
       "value": null,
-      "measured_at": "2026-08-16T11:45:03.019Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -59,7 +66,7 @@
     },
     "signup_phone_auth": {
       "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -90,7 +97,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -116,7 +123,7 @@
     },
     "payment_gate": {
       "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -136,7 +143,7 @@
     },
     "support_en": {
       "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
+      "measured_at": "2026-08-16T18:23:49.790Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:support_en",
@@ -149,17 +156,17 @@
             "chars": 217
           }
         ],
-        "content_sha256": "ab31bc4129bb8df0875bd0b038831d61ede7856e7bf549d593e06c4bb64fd49b",
+        "content_sha256": "15f3037188f0aaa87e737432d726abcffc258a2b9bfe9b6e0295af6c804279bb",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "unknown",
           "quoted_evidence": null,
-          "reason": "페이지 접근이 차단되어 지원 채널 및 영어 지원 여부에 대한 정보를 확인할 수 없음."
+          "reason": "페이지 접근이 차단되어 고객지원 채널 정보 자체를 확인할 수 없음"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.632,
+          "latin_ratio": 0.647,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }
