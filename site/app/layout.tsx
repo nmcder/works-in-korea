@@ -20,6 +20,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   robots: { index: true, follow: true },
+
+  /*
+   * 검색엔진 소유 확인 코드. 비밀이 아니다 — 어차피 HTML 에 그대로 실린다.
+   * 환경변수로 받는 이유는 코드에 박아 두면 나중에 도메인이 바뀌었을 때
+   * 왜 여기 이런 문자열이 있는지 아무도 모르게 되기 때문이다.
+   *
+   * Google Search Console → 속성 추가 → HTML 태그 방식에서 content 값만 넣는다.
+   * Vercel 환경변수 NEXT_PUBLIC_GOOGLE_VERIFICATION 에 넣고 재배포하면 붙는다.
+   */
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION?.trim()
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION.trim() }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_NAVER_VERIFICATION?.trim()
+      ? { other: { 'naver-site-verification': process.env.NEXT_PUBLIC_NAVER_VERIFICATION.trim() } }
+      : {}),
+  },
 };
 
 const NAV = [

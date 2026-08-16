@@ -576,7 +576,8 @@ export const CATEGORY_LABELS: Record<string, Bi> = {
   transport: { en: 'Transport', ko: '교통' },
   ticketing: { en: 'Ticketing', ko: '예매' },
   shopping: { en: 'Shopping', ko: '쇼핑' },
-  delivery: { en: 'Delivery', ko: '배달' },
+  // 배달앱만 있는 것이 아니라 스타벅스·캐치테이블·네이버예약처럼 주문·예약이 함께 있다
+  delivery: { en: 'Food & booking', ko: '음식·예약' },
   finance: { en: 'Finance', ko: '금융' },
   telecom: { en: 'Telecom', ko: '통신' },
   government: { en: 'Government', ko: '행정' },
