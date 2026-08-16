@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { LangToggle } from '@/components/LangToggle';
 import { LANG_BOOTSTRAP, T } from '@/lib/i18n';
-import { SITE } from '@/lib/site-config';
+import { SITE, ogImage } from '@/lib/site-config';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,6 +18,15 @@ export const metadata: Metadata = {
     description: SITE.tagline.en,
     type: 'website',
     locale: 'en_US',
+    siteName: SITE.name,
+    url: '/',
+    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.name,
+    description: SITE.tagline.en,
+    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
   },
   robots: { index: true, follow: true },
 

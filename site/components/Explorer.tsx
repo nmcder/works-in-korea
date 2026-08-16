@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { AppIcon } from '@/components/AppIcon';
 import { Dot } from '@/components/Dot';
 import { useLang } from '@/components/use-lang';
 import { T, type Bi } from '@/lib/i18n';
@@ -21,6 +22,8 @@ export interface Row {
   nameKo: string;
   category: string;
   cat: Bi;
+  /** 아이콘 파일이 있는가. 빌드 시점에 정해진다 (lib/icons.ts) */
+  icon: boolean;
   importance: number;
   measured: number;
   total: number;
@@ -284,9 +287,17 @@ export function Explorer({
         ) : (
           <>
             <div className="grid">
-              {visible.map((r) => (
-                <Link key={r.id} href={`/service/${r.id}/`} className="svc">
+              {visible.map((r, i) => (
+                <Link
+                  key={r.id}
+                  href={`/service/${r.id}/`}
+                  className="svc"
+                  /* 한 화면에 들어오는 것만 차례로 올라온다. 전부 흔들면 어지럽다 */
+                  style={i < 12 ? ({ '--i': i } as React.CSSProperties) : undefined}
+                  data-rise={i < 12 ? '' : undefined}
+                >
                   <div className="svc-top">
+                    <AppIcon id={r.id} name={r.nameEn} has={r.icon} size={42} />
                     <span className="svc-name">
                       {r.nameEn}
                       <em>

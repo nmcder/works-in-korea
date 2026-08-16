@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Explorer, type HeroStats, type Row } from '@/components/Explorer';
 import { getBlockedServices, getLatestRun, getServices } from '@/lib/data';
+import { getIconIds } from '@/lib/icons';
 import { T, TBlock, type Bi } from '@/lib/i18n';
 import {
   CATEGORY_LABELS,
@@ -10,11 +12,27 @@ import {
   viewSignal,
 } from '@/lib/present';
 import { datasetSchema, jsonLd } from '@/lib/seo';
-import { SITE } from '@/lib/site-config';
+import { SITE, ogImage } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
-export const metadata = {
+/*
+ * og:image 를 여기서 한 번 더 적는다.
+ *
+ * layout.tsx 에도 같은 것을 적어 뒀지만 홈에서는 그게 이기지 못한다 —
+ * app/opengraph-image.tsx 라는 파일이 있으면 Next 가 그 경로(`/`)의 메타데이터에
+ * 주소를 **자동으로 끼워 넣고**, 그 자동 주소에는 끝 슬래시가 없다.
+ * 레이아웃보다 페이지 쪽이 더 구체적이라 여기서 적어야 덮인다.
+ * 슬래시가 왜 중요한지는 lib/site-config.ts 의 ogImage() 주석에 있다.
+ */
+export const metadata: Metadata = {
   alternates: { canonical: '/' },
+  openGraph: {
+    url: '/',
+    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+  },
+  twitter: {
+    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+  },
 };
 
 const SHORT: Record<string, Bi> = {
@@ -23,11 +41,30 @@ const SHORT: Record<string, Bi> = {
   signup_phone_auth: { en: 'Sign-up', ko: '가입' },
 };
 
+/**
+ * 목록 카드에서만 언어 나열을 줄인다.
+ *
+ * 한국관광공사는 7개 언어를 지원하는데, 그걸 다 적으면 그 카드만 다섯 줄이 되고
+ * 격자가 그 줄에 맞춰 늘어나 옆 카드 두 장이 텅 빈 채 길어진다. 목록에서 알아야 할
+ * 것은 "영어가 되나"이지 전부가 아니다. 전체 목록은 상세 페이지에 그대로 있다.
+ */
+const LIST_MAX_LANGS = 3;
+
+function shorten(v: Bi): Bi {
+  const cut = (s: string): string => {
+    const parts = s.split(', ');
+    if (parts.length <= LIST_MAX_LANGS) return s;
+    return `${parts.slice(0, LIST_MAX_LANGS).join(', ')} +${parts.length - LIST_MAX_LANGS}`;
+  };
+  return { en: cut(v.en), ko: cut(v.ko) };
+}
+
 export default async function HomePage() {
-  const [services, run, blocked] = await Promise.all([
+  const [services, run, blocked, icons] = await Promise.all([
     getServices(),
     getLatestRun(),
     getBlockedServices(),
+    getIconIds(),
   ]);
 
   const rows: Row[] = services
@@ -37,6 +74,7 @@ export default async function HomePage() {
       nameKo: s.name.ko,
       category: s.category,
       cat: CATEGORY_LABELS[s.category] ?? { en: s.category, ko: s.category },
+      icon: icons.has(s.id),
       importance: s.importance,
       measured: measuredCount(s),
       total: 8,
@@ -44,7 +82,7 @@ export default async function HomePage() {
       signals: HEADLINE_KEYS.map((k) => viewSignal(s, k)).map((v) => ({
         key: v.key,
         short: SHORT[v.key] ?? v.label,
-        value: v.tone === 'none' ? { en: 'Not checked yet', ko: '아직 확인 못 함' } : v.display,
+        value: v.key === 'i18n_ui' ? shorten(v.display) : v.display,
         tone: v.tone,
       })),
       haystack: [s.name.en, s.name.ko, s.id, s.category, s.url].join(' ').toLowerCase(),

@@ -55,7 +55,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const rows = HEADLINE_KEYS.map((k) => viewSignal(service, k)).map((v) => ({
     key: v.key,
     label: LABEL[v.key] ?? v.label.en,
-    value: v.tone === 'none' ? 'Not checked yet' : v.display.en,
+    value: v.display.en,
     tone: TONE[v.tone] ?? TONE.none!,
   }));
   const cat = CATEGORY_LABELS[service.category]?.en ?? service.category;

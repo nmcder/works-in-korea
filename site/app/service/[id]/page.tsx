@@ -1,13 +1,21 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { AppIcon } from '@/components/AppIcon';
 import { Dot } from '@/components/Dot';
 import { RelativeTime } from '@/components/RelativeTime';
 import { T, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
-import { CATEGORY_LABELS, type SignalView, measuredCount, viewAll } from '@/lib/present';
+import { hasIcon } from '@/lib/icons';
+import {
+  CATEGORY_LABELS,
+  HEADLINE_KEYS,
+  type SignalView,
+  measuredCount,
+  viewAll,
+} from '@/lib/present';
 import { jsonLd, serviceDescription, serviceFaq } from '@/lib/seo';
-import { SITE } from '@/lib/site-config';
+import { SITE, ogImage } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
 export const dynamicParams = false;
@@ -38,6 +46,14 @@ export async function generateMetadata({
       description: serviceDescription(service),
       url: path,
       type: 'article',
+      siteName: SITE.name,
+      images: [{ ...ogImage(path), alt: `${service.name.en} — measured answers` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.name.en} — does it work for foreigners?`,
+      description: serviceDescription(service),
+      images: [{ ...ogImage(path), alt: `${service.name.en} — measured answers` }],
     },
   };
 }
@@ -50,6 +66,13 @@ const CONFIDENCE: Record<string, Bi> = {
 };
 
 const AWAITING: Bi = { en: 'waiting for a first-hand report', ko: '제보 기다리는 중' };
+
+/** 맨 위 요약 칸의 제목. 아래 기록의 긴 질문문을 그대로 쓰면 칸이 글자로 꽉 찬다. */
+const GLANCE_LABEL: Record<string, Bi> = {
+  overseas_access: { en: 'Opens from abroad', ko: '해외에서 접속' },
+  i18n_ui: { en: 'Languages', ko: '쓸 수 있는 언어' },
+  signup_phone_auth: { en: 'Sign-up', ko: '가입 조건' },
+};
 
 function ExternalIcon() {
   return (
@@ -108,7 +131,9 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
   const service = await getService(id);
   if (!service) notFound();
 
+  const icon = await hasIcon(service.id);
   const views = viewAll(service);
+  const glance = HEADLINE_KEYS.map((k) => views.find((v) => v.key === k)!).filter(Boolean);
   const recorded = measuredCount(service);
   const lastMeasured = views
     .map((v) => v.measuredAt)
@@ -173,10 +198,13 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             <T {...cat} />
           </p>
 
-          <h1>
-            {service.name.en}
-            {service.name.ko !== service.name.en && <em>{service.name.ko}</em>}
-          </h1>
+          <div className="record-title">
+            <AppIcon id={service.id} name={service.name.en} has={icon} size={68} />
+            <h1>
+              {service.name.en}
+              {service.name.ko !== service.name.en && <em>{service.name.ko}</em>}
+            </h1>
+          </div>
 
           <div className="record-meta">
             <span>
@@ -226,8 +254,34 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             )}
           </div>
 
+          {/*
+           * 세 개의 답을 먼저, 크게.
+           *
+           * 사람들은 이 페이지에 "되나 안 되나" 하나를 확인하러 온다. 그 답이 여덟 개의
+           * 기록 사이 어딘가에 글로 섞여 있으면 읽어서 찾아야 한다. 위에 크게 세워 두면
+           * 스크롤 전에 끝난다. 아래 기록은 "왜 그렇게 나왔나"를 보려는 사람 몫이다.
+           *
+           * "아직 확인 못 함"도 똑같이 큰 칸을 차지한다. 작게 줄이거나 빼면 모른다는
+           * 사실이 화면에서 사라지고, 그건 이 사이트가 가진 유일한 자산이다. (D-12)
+           */}
+          <div className="verdict">
+            {glance.map((v) => (
+              <div key={v.key} className={`vcard t-${v.tone}`}>
+                <p className="vcard-q">
+                  <T {...(GLANCE_LABEL[v.key] ?? v.label)} />
+                </p>
+                <p className="vcard-a">
+                  <Dot tone={v.tone} />
+                  <span>
+                    <T {...v.display} />
+                  </span>
+                </p>
+              </div>
+            ))}
+          </div>
+
           {service.notes?.en && (
-            <div className="aside mark" style={{ marginBottom: 0 }}>
+            <div className="aside mark" style={{ margin: '26px 0 0' }}>
               <T en={service.notes.en} ko={service.notes.ko ?? service.notes.en} />
             </div>
           )}

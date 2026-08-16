@@ -1,0 +1,303 @@
+{
+  "note": "앱 아이콘은 각 회사의 상표·저작물이다. 해당 앱을 가리키기 위해서만, 원본 그대로 쓴다. 빼 달라는 요청이 오면 뺀다.",
+  "contact": "nmcder117@gmail.com",
+  "count": 98,
+  "sources": {
+    "11st": {
+      "source": "cached"
+    },
+    "ably": {
+      "source": "cached"
+    },
+    "aladin": {
+      "source": "cached"
+    },
+    "amc": {
+      "source": "cached"
+    },
+    "auction": {
+      "source": "cached"
+    },
+    "baemin": {
+      "source": "cached"
+    },
+    "catchtable": {
+      "source": "cached"
+    },
+    "cgv": {
+      "source": "cached"
+    },
+    "cjonstyle": {
+      "source": "cached"
+    },
+    "coupang": {
+      "source": "cached"
+    },
+    "coupang-eats": {
+      "source": "cached"
+    },
+    "daangn": {
+      "source": "cached"
+    },
+    "danawa": {
+      "source": "cached"
+    },
+    "daum": {
+      "source": "cached"
+    },
+    "ddocdoc": {
+      "source": "cached"
+    },
+    "e-gen": {
+      "source": "cached"
+    },
+    "epost": {
+      "source": "cached"
+    },
+    "genie": {
+      "source": "cached"
+    },
+    "gmarket": {
+      "source": "cached"
+    },
+    "gmoneytrans": {
+      "source": "cached"
+    },
+    "goodchoice": {
+      "source": "cached"
+    },
+    "goodoc": {
+      "source": "cached"
+    },
+    "gov-kr": {
+      "source": "cached"
+    },
+    "gsshop": {
+      "source": "cached"
+    },
+    "hana-bank": {
+      "source": "cached"
+    },
+    "hanatour": {
+      "source": "cached"
+    },
+    "hanpass": {
+      "source": "cached"
+    },
+    "hira": {
+      "source": "cached"
+    },
+    "homeplus": {
+      "source": "cached"
+    },
+    "hometax": {
+      "source": "cached"
+    },
+    "ibk": {
+      "source": "cached"
+    },
+    "interpark-global": {
+      "source": "cached"
+    },
+    "interpark-ticket": {
+      "source": "cached"
+    },
+    "interpark-tour": {
+      "source": "cached"
+    },
+    "kakao-map": {
+      "source": "cached"
+    },
+    "kakao-t": {
+      "source": "cached"
+    },
+    "kakaobank": {
+      "source": "cached"
+    },
+    "kakaopay": {
+      "source": "cached"
+    },
+    "kakaotalk": {
+      "source": "cached"
+    },
+    "kbank": {
+      "source": "cached"
+    },
+    "kbstar": {
+      "source": "cached"
+    },
+    "korail": {
+      "source": "cached"
+    },
+    "kt": {
+      "source": "cached"
+    },
+    "ktmmobile": {
+      "source": "cached"
+    },
+    "kurly": {
+      "source": "cached"
+    },
+    "kyobo": {
+      "source": "cached"
+    },
+    "lguplus": {
+      "source": "cached"
+    },
+    "lotte-cinema": {
+      "source": "cached"
+    },
+    "lotteon": {
+      "source": "cached"
+    },
+    "megabox": {
+      "source": "cached"
+    },
+    "melon": {
+      "source": "cached"
+    },
+    "melon-ticket": {
+      "source": "cached"
+    },
+    "modetour": {
+      "source": "cached"
+    },
+    "musinsa": {
+      "source": "cached"
+    },
+    "musinsa-global": {
+      "source": "cached"
+    },
+    "national-museum": {
+      "source": "cached"
+    },
+    "naver": {
+      "source": "cached"
+    },
+    "naver-map": {
+      "source": "cached"
+    },
+    "naver-shopping": {
+      "source": "cached"
+    },
+    "naverpay": {
+      "source": "cached"
+    },
+    "nhis": {
+      "source": "cached"
+    },
+    "nonghyup": {
+      "source": "cached"
+    },
+    "oliveyoung": {
+      "source": "cached"
+    },
+    "oliveyoung-global": {
+      "source": "cached"
+    },
+    "payco": {
+      "source": "cached"
+    },
+    "ridibooks": {
+      "source": "cached"
+    },
+    "sac": {
+      "source": "cached"
+    },
+    "safedriving": {
+      "source": "cached"
+    },
+    "samsung-hospital": {
+      "source": "cached"
+    },
+    "sentbe": {
+      "source": "cached"
+    },
+    "seoul-metro": {
+      "source": "cached"
+    },
+    "severance": {
+      "source": "cached"
+    },
+    "shinhan-bank": {
+      "source": "cached"
+    },
+    "sk7mobile": {
+      "source": "cached"
+    },
+    "skt": {
+      "source": "cached"
+    },
+    "snuh": {
+      "source": "cached"
+    },
+    "srt": {
+      "source": "apple",
+      "app_name": "SRT - 수서고속철도"
+    },
+    "ssg": {
+      "source": "cached"
+    },
+    "starbucks-kr": {
+      "source": "cached"
+    },
+    "tada": {
+      "source": "cached"
+    },
+    "themoin": {
+      "source": "cached"
+    },
+    "tmap": {
+      "source": "cached"
+    },
+    "tmoney": {
+      "source": "cached"
+    },
+    "toss": {
+      "source": "cached"
+    },
+    "tossbank": {
+      "source": "cached"
+    },
+    "travel-wallet": {
+      "source": "cached"
+    },
+    "tving": {
+      "source": "cached"
+    },
+    "txbus": {
+      "source": "cached"
+    },
+    "visitkorea": {
+      "source": "cached"
+    },
+    "watcha": {
+      "source": "cached"
+    },
+    "wavve": {
+      "source": "cached"
+    },
+    "wirebarley": {
+      "source": "apple",
+      "app_name": "WireBarley"
+    },
+    "woori-bank": {
+      "source": "cached"
+    },
+    "yanolja": {
+      "source": "cached"
+    },
+    "yes24": {
+      "source": "cached"
+    },
+    "yes24-ticket": {
+      "source": "cached"
+    },
+    "yogiyo": {
+      "source": "cached"
+    },
+    "zigzag": {
+      "source": "cached"
+    }
+  }
+}

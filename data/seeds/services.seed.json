@@ -27,9 +27,10 @@
       "category": "transport",
       "importance": 1,
       "hints": {
-        "android_package": "kr.co.srail.app",
+        "android_package": "kr.co.srail.newapp",
         "signup_url": "https://etk.srail.kr/cmc/02/selectJoinInfo.do?pageId=TK0702000000",
-        "support_url": "https://etk.srail.kr/cms/archive.do?pageId=TK0406010000"
+        "support_url": "https://etk.srail.kr/cms/archive.do?pageId=TK0406010000",
+        "ios_app_id": "1350286957"
       }
     },
     {
@@ -943,7 +944,8 @@
       "importance": 2,
       "hints": {
         "support_url": "https://help.wirebarley.com/ko/support/home",
-        "ios_app_id": "1250275816"
+        "ios_app_id": "1164356190",
+        "android_package": "com.wirebarley.android"
       }
     },
     {

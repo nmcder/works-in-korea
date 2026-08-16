@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getBlockCounts, getBlockedServices, getLatestRun, getServices } from '@/lib/data';
 import { T, TBlock, type Bi } from '@/lib/i18n';
+import { SITE } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
 export const metadata: Metadata = {
@@ -216,6 +217,18 @@ export default async function MethodPage() {
               />
             </li>
           </ul>
+
+          <h2>
+            <T en="The app icons" ko="앱 아이콘에 대해" />
+          </h2>
+          <TBlock
+            en="Each icon comes from that app's own App Store or Google Play listing, and we serve it from here rather than linking to Apple's or Google's servers — that way opening this page does not tell them you did. The icons are their owners' trademarks, shown unaltered and only to identify the app being described. Nothing here is endorsed by, or affiliated with, any of these companies."
+            ko="아이콘은 각 앱의 App Store·Google Play 등록 정보에서 가져왔고, 애플·구글 서버에 링크하지 않고 이 사이트에서 직접 내보냅니다. 그래야 이 페이지를 열었다는 사실이 그쪽에 넘어가지 않습니다. 아이콘은 각 회사의 상표이며, 어떤 앱을 말하는지 가리키기 위해서만 원본 그대로 씁니다. 여기 있는 어떤 회사와도 제휴 관계가 없고, 어느 곳의 승인도 받지 않았습니다."
+          />
+          <TBlock
+            en={`If you own one of these marks and would rather it not appear here, email ${SITE.contact} and it will be taken down.`}
+            ko={`권리자이시고 아이콘을 빼기를 원하시면 ${SITE.contact} 으로 알려주시면 내리겠습니다.`}
+          />
 
           <h2>
             <T en="What each value means" ko="각 값이 뜻하는 것" />

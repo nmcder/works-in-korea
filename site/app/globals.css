@@ -106,6 +106,11 @@ html[data-lang='ko'] [data-l='en'] {
    */
   --shadow-1: 0 1px 2px rgb(20 19 15 / 0.04);
   --shadow-2: 0 8px 24px -10px rgb(20 19 15 / 0.16);
+  /*
+   * 떠 있는 것(요약 칸)에만 쓴다. 두 겹인 이유: 가까운 그림자가 모서리를 세우고
+   * 먼 그림자가 무게를 준다. 한 겹으로 흐리게만 깔면 번진 자국처럼 보인다.
+   */
+  --shadow-3: 0 1px 2px rgb(20 19 15 / 0.05), 0 12px 32px -14px rgb(20 19 15 / 0.2);
 }
 
 *,
@@ -267,12 +272,62 @@ a {
   color: #fff;
 }
 
+/* ------------------------------------------------------------------ 움직임 */
+
+/*
+ * 들어오는 동작은 한 종류만 쓴다. 페이드·슬라이드·확대를 섞으면 화면이 부산해지고,
+ * 부산한 것은 값싸 보인다. 아주 살짝 올라오는 것 하나로 통일한다.
+ *
+ * cubic-bezier(0.22, 1, 0.36, 1) 은 빠르게 나가서 부드럽게 멎는 곡선이다.
+ * 기본 ease 로 두면 미끄러지는 느낌이 나서 반응이 굼떠 보인다.
+ *
+ * fill-mode 는 both 가 아니라 backwards 다 — 끝난 뒤에는 원래 스타일로 돌아가야
+ * .svc:hover 의 transform 이 살아난다. both 로 두면 카드가 hover 에 반응하지 않는다.
+ *
+ * ※ 움직임을 줄이도록 설정한 사람에게는 위쪽 전역 규칙이 animation 을 전부 끈다.
+ */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+[data-rise] {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 26ms);
+}
+
 /* ---------------------------------------------------------------- 첫 화면 */
 
+/*
+ * 흰 면 하나만 깔면 아무리 크게 써도 평평하다. 위쪽에 아주 옅은 빛을 하나 두면
+ * 면에 깊이가 생긴다 — 눈에 띄면 실패다. 있는지 모를 정도여야 한다.
+ */
 .hero {
+  position: relative;
   padding: 116px 0 64px;
   background: var(--surface);
   text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -40% 0 auto;
+  height: 620px;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 50%,
+    rgb(29 78 216 / 0.055),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.hero > * {
+  position: relative;
 }
 .hero h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -479,8 +534,8 @@ a {
 
 .svc-top {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 13px;
   margin-bottom: 18px;
 }
 .svc-name {
@@ -489,6 +544,7 @@ a {
   letter-spacing: -0.026em;
   line-height: 1.28;
   flex: 1;
+  min-width: 0;
 }
 .svc-name em {
   display: block;
@@ -542,6 +598,37 @@ a {
   align-items: center;
   gap: 8px;
   color: var(--text);
+}
+
+/* ------------------------------------------------------------- 앱 아이콘 */
+
+/*
+ * 애플·구글이 화면에서 쓰는 모서리 비율이 대략 변의 22.5% 다. 픽셀로 박으면
+ * 42px 카드와 68px 상세 화면에서 서로 다른 모양이 되므로 비율로 준다.
+ *
+ * 테두리는 바깥이 아니라 **안쪽 그림자**로 넣는다. 아이콘 배경이 흰색인 곳이
+ * 많아서(스타벅스·토스) 흰 카드 위에 놓으면 형태가 사라지는데, 바깥에 선을 두르면
+ * 이번엔 아이콘 색이 잘려 나간다.
+ */
+.appicon {
+  flex: none;
+  display: block;
+  border-radius: 22.5%;
+  object-fit: cover;
+  background: var(--bg-soft);
+  box-shadow: inset 0 0 0 1px rgb(20 19 15 / 0.09);
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.appicon.tile {
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgb(20 19 15 / 0.07);
+}
+.svc:hover .appicon {
+  transform: scale(1.06);
 }
 
 /* 상태 아이콘 — 색만으로 뜻을 전하지 않기 위해 모양이 서로 다르다 */
@@ -821,8 +908,27 @@ a {
 /* ----------------------------------------------------------- 상세 화면 */
 
 .record-head {
-  padding: 36px 0 46px;
+  padding: 36px 0 44px;
   background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.record-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.record-title .appicon {
+  box-shadow: inset 0 0 0 1px rgb(20 19 15 / 0.09), 0 6px 18px -8px rgb(20 19 15 / 0.28);
+}
+@media (max-width: 560px) {
+  .record-title {
+    gap: 14px;
+  }
+  .record-title .appicon {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 23px !important;
+  }
 }
 .breadcrumb {
   font-size: 13.5px;
@@ -879,20 +985,154 @@ a {
 }
 
 /*
+ * 맨 위 요약 칸 — 스크롤하기 전에 답이 끝나야 한다.
+ *
+ * 칸마다 뜻에 맞는 옅은 색을 깐다. 흰 머리면 위에 흰 칸을 얹으면 그림자로만
+ * 버텨야 해서 흐리멍덩해지고, 무엇보다 세 칸을 한눈에 갈라 보지 못한다.
+ * 색이 단독으로 뜻을 전하지는 않는다 — 점 모양과 글자가 늘 함께 있다.
+ */
+.verdict {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: var(--w-read);
+  margin: 30px 0 0;
+}
+.vcard {
+  background: var(--bg-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r);
+  padding: 16px 18px 18px;
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.vcard.t-open {
+  background: var(--ok-bg);
+  border-color: var(--ok-line);
+}
+.vcard.t-barrier {
+  background: var(--stop-bg);
+  border-color: var(--stop-line);
+}
+.vcard.t-mixed {
+  background: var(--warn-bg);
+  border-color: var(--warn-line);
+}
+.vcard.t-info {
+  background: var(--info-bg);
+  border-color: var(--info-line);
+}
+.vcard:nth-child(2) {
+  animation-delay: 60ms;
+}
+.vcard:nth-child(3) {
+  animation-delay: 120ms;
+}
+.vcard-q {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.vcard-a {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 1.28rem;
+  font-weight: 690;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+.vcard-a .dot {
+  margin-top: 4px;
+}
+.vcard.t-open .vcard-a {
+  color: var(--ok);
+}
+.vcard.t-barrier .vcard-a {
+  color: var(--stop);
+}
+.vcard.t-mixed .vcard-a {
+  color: var(--warn);
+}
+.vcard.t-info .vcard-a {
+  color: var(--info);
+  font-size: 1.02rem;
+  font-weight: 620;
+}
+/* 모른다는 것도 같은 크기의 칸을 차지한다. 줄이면 화면에서 사라진다 (D-12) */
+.vcard.t-none {
+  border-style: dashed;
+  border-color: var(--control);
+  background: transparent;
+}
+.vcard.t-none .vcard-a {
+  color: var(--none);
+  font-size: 1rem;
+  font-weight: 520;
+  letter-spacing: -0.01em;
+}
+@media (max-width: 780px) {
+  .verdict {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .vcard {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 13px 16px;
+  }
+  .vcard-q {
+    margin: 0;
+  }
+  .vcard-a {
+    font-size: 1.06rem;
+    text-align: right;
+  }
+  .vcard.t-info .vcard-a,
+  .vcard.t-none .vcard-a {
+    font-size: 0.95rem;
+  }
+}
+
+/*
  * 한 서비스에 대한 여덟 개의 답은 훑는 것이 아니라 위에서 아래로 읽는 것이다.
  * 격자로 늘어놓으면 눈이 지그재그로 움직이고, 카드 높이가 제각각이라 줄이 안 맞는다.
  * 한 줄에 하나씩, 질문은 왼쪽 답은 오른쪽. 명세표처럼 읽힌다.
+ *
+ * 흰 면 하나에 담는 이유: 종이 위에 선만 그어 두면 화면이 양식지로 읽힌다.
+ * 면을 깔면 같은 내용이 "정리된 기록"이 된다 — 무게는 여기서 나온다.
  */
 .records {
   max-width: var(--w-read);
-  margin: 20px 0 0;
+  margin: 40px 0 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 0 32px;
 }
 .signal {
-  padding: 34px 0;
+  padding: 26px 0;
   border-bottom: 1px solid var(--line);
 }
 .signal:last-child {
   border-bottom: 0;
+}
+.signal-body {
+  margin-top: 12px;
+}
+details.raw {
+  margin-top: 10px;
+}
+@media (max-width: 560px) {
+  .records {
+    padding: 0 20px;
+    border-radius: var(--r);
+  }
 }
 .signal-head {
   display: flex;
@@ -947,25 +1187,36 @@ a {
 .signal-body {
   margin-top: 14px;
 }
+/*
+ * "왜 값이 없는가" 같은 설명. 선 하나로 구분하면 본문과 섞여서 결국 다 읽게 된다.
+ * 면을 깔아 두면 눈이 "여긴 부연"이라고 알아보고 필요한 사람만 읽는다.
+ */
 .signal-note {
   margin: 0 0 10px;
   font-size: 14.5px;
   line-height: 1.68;
   color: var(--text-2);
   max-width: 64ch;
+  background: var(--bg-soft);
   border-left: 2px solid var(--line-strong);
-  padding-left: 16px;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  padding: 12px 16px;
 }
 .signal.t-none .signal-note {
   border-left-style: dashed;
 }
 
+/*
+ * 언제 / 어떻게 / 얼마나 믿을 만한가. 셋 다 반드시 붙는다 (절대규칙 5).
+ * 다만 이건 답이 아니라 답의 출처라서, 답보다 조용해야 한다 — 크기와 색으로만 낮춘다.
+ * 지우거나 접으면 이 사이트가 블로그 글과 구별되는 유일한 점이 사라진다.
+ */
 .stamp {
-  margin-top: 14px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px 16px;
+  gap: 5px 14px;
   font-size: 12px;
   color: var(--text-3);
 }
@@ -1053,6 +1304,27 @@ details.raw pre {
 @media (max-width: 640px) {
   .signal-head {
     gap: 8px;
+  }
+}
+
+/*
+ * 좁은 화면에서 항목 사이 가운뎃점이 줄바꿈에 걸리면 다음 줄 맨 앞에 점 하나가
+ * 남는다. 붙였다 뗐다 하는 구분자는 한 줄일 때만 쓸모가 있으므로, 세로로 쌓일 때는
+ * 아예 없앤다.
+ */
+@media (max-width: 560px) {
+  .record-meta,
+  .figures {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .figures {
+    align-items: center;
+  }
+  .record-meta > span + span::before,
+  .figure + .figure::before {
+    display: none;
   }
 }
 

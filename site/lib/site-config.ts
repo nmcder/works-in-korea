@@ -34,6 +34,27 @@ export function reportUrl(kind: ReportKind): string | null {
   return `https://github.com/${ISSUES_REPO}/issues/new?template=${kind}.yml`;
 }
 
+/**
+ * 공유 미리보기 그림의 주소를 만든다.
+ *
+ * ⚠️ 끝의 슬래시가 핵심이다. 이 사이트는 `trailingSlash: true` 로 빌드되므로
+ * `/opengraph-image` 로 요청하면 서버가 **308 로 `/opengraph-image/` 에 넘긴다.**
+ * 그런데 Next 가 og:image 태그에 자동으로 넣는 주소에는 슬래시가 없다.
+ *
+ * 카카오톡·페이스북의 미리보기 수집기는 이미지 주소의 리다이렉트를 따라가지 않는다.
+ * 그래서 그림 파일이 멀쩡히 있는데도(69KB PNG, 200 OK) 링크에 회색 상자만 떴다.
+ * 2026-08-16 에 실제로 그랬다. 여기서 주소를 직접 적어 자동 생성을 덮어쓴다.
+ */
+export function ogImage(path: string): {
+  url: string;
+  width: number;
+  height: number;
+  type: string;
+} {
+  const clean = path.endsWith('/') ? path : `${path}/`;
+  return { url: `${clean}opengraph-image/`, width: 1200, height: 630, type: 'image/png' };
+}
+
 export const SITE = {
   name: 'Works in Korea?',
   tagline: {

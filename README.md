@@ -36,10 +36,17 @@ site/             the public site (Next.js, prerendered + one API route)
 | `npm run hints` | regenerate [docs/05-hints-todo.md](docs/05-hints-todo.md) |
 | `npm run find-hints` | look for missing sign-up URLs, help pages and app IDs |
 | `npm run ingest -- --reapply` | re-aggregate stored community reports |
+| `cd site && npm run icons` | download app icons for any service that does not have one yet |
 
 Partial runs: `npm run probe -- --only=coupang,toss` or `--limit=5 --dry-run`.
 
 Site: `cd site && npm install && npm run dev`.
+
+Run `npm run icons` after adding a service or fixing an app ID; it skips anything
+already downloaded (`--force` to refetch everything). Icons are committed, so the
+build never touches the network. A service that fails there usually has a wrong app
+ID rather than no icon — that is how two false `app_availability` values were found
+(see [D-23](docs/03-decisions.md)).
 
 ## Adding or fixing a service
 

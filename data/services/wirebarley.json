@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": "https://help.wirebarley.com/ko/support/home",
     "english_url": null,
-    "ios_app_id": "1250275816",
-    "android_package": null,
+    "ios_app_id": "1164356190",
+    "android_package": "com.wirebarley.android",
     "no_app": null
   },
   "signals": {
@@ -128,25 +128,31 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": false,
-        "android_listed": null,
+        "ios_listed": true,
+        "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-16T00:32:39.941Z",
+      "first_seen_at": "2026-08-16T00:32:39.941Z",
+      "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
         "ios": {
-          "app_id": "1250275816",
-          "listed": false,
-          "endpoint": "https://itunes.apple.com/lookup?id=1250275816&country=kr",
+          "app_id": "1164356190",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1164356190&country=kr",
           "http_status": 200,
-          "result_count": 0,
+          "result_count": 1,
           "error": null
         },
-        "android": null,
+        "android": {
+          "package": "com.wirebarley.android",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.wirebarley.android&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },

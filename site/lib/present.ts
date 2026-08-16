@@ -534,7 +534,9 @@ export function viewSignal(service: Service, key: SignalKey): SignalView {
     key,
     label: meta.label,
     question: meta.question,
-    display: formatted?.display ?? { en: 'Not measured', ko: '아직 확인 못 함' },
+    // "Not measured" 가 아니라 "Not checked yet" 이다. 두 낱말은 다른 것을 뜻한다 —
+    // 앞의 것은 "우리가 안 잰다"로, 뒤의 것은 "아직 못 쟀다"로 읽힌다. 대부분은 뒤쪽이다.
+    display: formatted?.display ?? { en: 'Not checked yet', ko: '아직 확인 못 함' },
     tone: formatted?.tone ?? 'none',
     measuredAt: sig.measured_at ?? null,
     lastChangedAt: sig.last_changed_at ?? null,

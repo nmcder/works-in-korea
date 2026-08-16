@@ -12,8 +12,8 @@
     "checkout_url": null,
     "support_url": "https://etk.srail.kr/cms/archive.do?pageId=TK0406010000",
     "english_url": null,
-    "ios_app_id": null,
-    "android_package": "kr.co.srail.app",
+    "ios_app_id": "1350286957",
+    "android_package": "kr.co.srail.newapp",
     "no_app": null
   },
   "signals": {
@@ -133,22 +133,29 @@
     },
     "app_availability": {
       "value": {
-        "ios_listed": null,
-        "android_listed": false,
+        "ios_listed": true,
+        "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-16T00:32:39.941Z",
+      "first_seen_at": "2026-08-16T00:32:39.941Z",
+      "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
-        "ios": null,
+        "ios": {
+          "app_id": "1350286957",
+          "listed": true,
+          "endpoint": "https://itunes.apple.com/lookup?id=1350286957&country=kr",
+          "http_status": 200,
+          "result_count": 1,
+          "error": null
+        },
         "android": {
-          "package": "kr.co.srail.app",
-          "listed": false,
-          "endpoint": "https://play.google.com/store/apps/details?id=kr.co.srail.app&hl=en",
-          "http_status": 404,
+          "package": "kr.co.srail.newapp",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=kr.co.srail.newapp&hl=en",
+          "http_status": 200,
           "error": null
         },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
