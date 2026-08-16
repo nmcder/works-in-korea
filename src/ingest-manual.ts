@@ -61,6 +61,122 @@ function reject(id: string, key: string, why: string): void {
   console.log(`  ✕ ${id.padEnd(20)} ${key.padEnd(20)} ${why}`);
 }
 
+function readJsonAnswers(text: string): Answer[] {
+  const raw = JSON.parse(text) as unknown;
+  return Array.isArray(raw) ? (raw as Answer[]) : ((raw as { answers?: Answer[] }).answers ?? []);
+}
+
+/**
+ * 운영자가 손으로 채운 작업표(docs/09-byhand.md)를 읽는다.
+ *
+ * 왜 마크다운을 읽는가: 87개 항목을 JSON 으로 적게 하면 중간에 쉼표 하나가 빠지고,
+ * 그걸 찾느라 지치고, 결국 안 하게 된다. 운영자는 코드를 쓰지 않는 사람이다.
+ * 그래서 만들어 준 표에 두 줄만 채우게 하고 같은 파일을 그대로 다시 읽는다.
+ *
+ * 찾는 것은 이 네 줄뿐이다. 나머지 설명글은 전부 무시한다.
+ *   ### 이름   `service-id`
+ *   **n. 제목**  `signal_key`
+ *   열기: <주소>
+ *   답: <값>
+ *   본 것: <관찰>
+ */
+function parseWorksheet(text: string): Answer[] {
+  const lines = text.split(/\r?\n/);
+  const byService = new Map<string, Answer>();
+  let serviceId = '';
+  let key = '';
+  let url = '';
+
+  const flush = (value: string, saw: string): void => {
+    if (!serviceId || !key || !value) return;
+    const v = normalizeWorksheetValue(key, value);
+    if (v === undefined) {
+      /*
+       * 알아볼 수 없는 답을 조용히 버리면 안 된다. 운영자는 적었다고 생각하고
+       * 넘어가는데 데이터에는 아무것도 안 들어간다 — 그 사실을 영영 모른다.
+       * "모름"은 일부러 비운 것이니 조용히 넘기고, 나머지는 소리 내어 알린다.
+       */
+      if (!/^(모름|unknown|-)$/i.test(value.trim())) {
+        console.log(
+          `  ⚠ ${serviceId.padEnd(20)} ${key.padEnd(20)} "${value}" 를 알아보지 못했다 — 기록하지 않았다`,
+        );
+      }
+      return;
+    }
+    const entry = byService.get(serviceId) ?? { service_id: serviceId };
+    (entry as Record<string, unknown>)[key] = { value: v, url, saw };
+    byService.set(serviceId, entry);
+  };
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i] ?? '';
+
+    const svc = /^###\s+.*`([a-z0-9][a-z0-9-]{1,48})`\s*$/.exec(line);
+    if (svc) {
+      serviceId = svc[1]!;
+      key = '';
+      continue;
+    }
+    const sig = /^\*\*\d+\..*`(signup_phone_auth|i18n_ui|support_en)`\s*$/.exec(line);
+    if (sig) {
+      key = sig[1]!;
+      url = '';
+      continue;
+    }
+    const open = /^열기:\s*(\S+)/.exec(line);
+    if (open) {
+      url = open[1]!;
+      continue;
+    }
+    const ans = /^답:\s*(.*)$/.exec(line);
+    if (ans) {
+      const value = (ans[1] ?? '').trim();
+      // 바로 다음 줄이 "본 것:" 이다. 여러 줄로 적었을 수도 있으니 다음 표시줄까지 모은다.
+      const sawLines: string[] = [];
+      for (let j = i + 1; j < lines.length; j += 1) {
+        const l = lines[j] ?? '';
+        if (/^본 것:\s*/.test(l)) {
+          sawLines.push(l.replace(/^본 것:\s*/, ''));
+          continue;
+        }
+        if (sawLines.length === 0) break;
+        if (/^(###|\*\*\d+\.|열기:|답:|---)/.test(l)) break;
+        sawLines.push(l);
+      }
+      flush(value, sawLines.join(' ').trim());
+      continue;
+    }
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  return [...byService.values()].map((a) => ({ ...a, checked_at: today }));
+}
+
+/** 사람이 적은 낱말을 스키마 값으로. 알아볼 수 없으면 undefined — 건너뛴다. */
+function normalizeWorksheetValue(key: string, raw: string): unknown {
+  const v = raw.trim().toLowerCase();
+  if (v === '' || v === '모름' || v === 'unknown' || v === '-') return undefined;
+
+  if (key === 'signup_phone_auth') {
+    if (['required', '필수', '한국번호만'].includes(v)) return 'required';
+    if (['any_phone', 'any', '해외번호도', '해외 번호도'].includes(v)) return 'any_phone';
+    if (['optional', '선택'].includes(v)) return 'optional';
+    if (['not_required', '없음', '인증없음'].includes(v)) return 'not_required';
+    return undefined;
+  }
+  if (key === 'support_en') {
+    if (['yes', 'y', '있음', '있다'].includes(v)) return 'yes';
+    if (['no', 'n', '없음', '없다'].includes(v)) return 'no';
+    return undefined;
+  }
+  if (key === 'i18n_ui') {
+    // "ko en" · "ko, en" · "ko/en" 다 받는다. 사람이 어떻게 적을지 모른다.
+    const codes = [...new Set(v.split(/[\s,/·]+/).filter((c) => /^[a-z]{2}$/.test(c)))];
+    return codes.length > 0 ? codes.sort() : undefined;
+  }
+  return undefined;
+}
+
 async function main(): Promise<void> {
   const file = process.argv.find((a) => a.startsWith('--file='))?.split('=')[1];
   const dryRun = process.argv.includes('--dry-run');
@@ -69,12 +185,14 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const raw = JSON.parse(await readFile(file, 'utf8')) as unknown;
-  const answers: Answer[] = Array.isArray(raw)
-    ? (raw as Answer[])
-    : ((raw as { answers?: Answer[] }).answers ?? []);
+  const text = await readFile(file, 'utf8');
+  const answers: Answer[] = file.endsWith('.md') ? parseWorksheet(text) : readJsonAnswers(text);
   if (!Array.isArray(answers) || answers.length === 0) {
-    console.error('답 배열을 찾지 못했다. 최상위가 배열이거나 { "answers": [...] } 여야 한다.');
+    console.error(
+      file.endsWith('.md')
+        ? '채워진 항목을 찾지 못했다. `답:` 과 `본 것:` 두 줄에 내용이 있어야 한다.'
+        : '답 배열을 찾지 못했다. 최상위가 배열이거나 { "answers": [...] } 여야 한다.',
+    );
     process.exit(1);
   }
 

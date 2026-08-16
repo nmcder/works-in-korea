@@ -84,7 +84,8 @@ site/             the public site (Next.js, prerendered + one API route)
 | `npm run ingest -- --reapply` | re-aggregate stored community reports |
 | `cd site && npm run icons` | download app icons for any service that does not have one yet |
 | `npm run manual-queue` | write a paste-ready prompt covering everything only a human can check → `docs/queue/all.md` |
-| `npm run ingest-manual -- --file=answers.json` | record hand-checked values (rejects anything without evidence) |
+| `npm run byhand` | write a fill-in worksheet of what is left for a person → `docs/09-byhand.md` |
+| `npm run ingest-manual -- --file=<answers.json\|worksheet.md>` | record hand-checked values (rejects anything without evidence) |
 
 Partial runs: `npm run probe -- --only=coupang,toss` or `--limit=5 --dry-run`.
 

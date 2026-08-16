@@ -23,7 +23,8 @@
     "add-app": "tsx src/add-app.ts",
     "check-support": "tsx src/check-support.ts",
     "manual-queue": "tsx src/manual-queue.ts",
-    "ingest-manual": "tsx src/ingest-manual.ts"
+    "ingest-manual": "tsx src/ingest-manual.ts",
+    "byhand": "tsx src/byhand.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",
