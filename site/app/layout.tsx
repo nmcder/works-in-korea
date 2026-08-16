@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: SITE.name,
     url: '/',
-    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+    images: [{ ...ogImage(), alt: SITE.tagline.en }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.name,
     description: SITE.tagline.en,
-    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+    images: [{ ...ogImage(), alt: SITE.tagline.en }],
   },
   robots: { index: true, follow: true },
 

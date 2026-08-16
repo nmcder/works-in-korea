@@ -26,6 +26,9 @@ function env(name: string, fallback: string): string {
 
 const ISSUES_REPO = env('NEXT_PUBLIC_ISSUES_REPO', '') || null;
 
+/** ogImage() 가 SITE 보다 먼저 정의되므로 주소는 따로 꺼내 둔다 */
+const SITE_URL = env('NEXT_PUBLIC_SITE_URL', 'https://www.worksinkorea.com');
+
 export type ReportKind = 'foreign-card' | 'foreign-sms' | 'correction';
 
 /** 이슈 폼 바로가기. 창구가 없으면 null 을 돌려준다 (링크를 만들지 않기 위해). */
@@ -35,24 +38,40 @@ export function reportUrl(kind: ReportKind): string | null {
 }
 
 /**
- * 공유 미리보기 그림의 주소를 만든다.
+ * 공유 미리보기 그림의 주소.
  *
- * ⚠️ 끝의 슬래시가 핵심이다. 이 사이트는 `trailingSlash: true` 로 빌드되므로
- * `/opengraph-image` 로 요청하면 서버가 **308 로 `/opengraph-image/` 에 넘긴다.**
- * 그런데 Next 가 og:image 태그에 자동으로 넣는 주소에는 슬래시가 없다.
+ * 여기서 Next 가 자동으로 넣는 주소를 덮어쓴다. 이유가 두 겹이다.
  *
- * 카카오톡·페이스북의 미리보기 수집기는 이미지 주소의 리다이렉트를 따라가지 않는다.
- * 그래서 그림 파일이 멀쩡히 있는데도(69KB PNG, 200 OK) 링크에 회색 상자만 떴다.
- * 2026-08-16 에 실제로 그랬다. 여기서 주소를 직접 적어 자동 생성을 덮어쓴다.
+ * 1. **끝의 슬래시.** 이 사이트는 `trailingSlash: true` 라서 `/opengraph-image` 는
+ *    308 로 `/opengraph-image/` 에 넘어가는데, Next 가 자동으로 쓰는 주소에는
+ *    슬래시가 없다. 미리보기 수집기는 이미지 주소의 리다이렉트를 따라가지 않는다.
+ *
+ * 2. **확장자.** 1번을 고쳐도 카카오톡에서는 여전히 안 떴다. 남은 차이는 주소가
+ *    `.png` 로 끝나지 않고 폴더처럼 보인다는 것이다. 그래서 next.config.mjs 에
+ *    `.png` 로 끝나는 주소를 rewrite 로 하나 더 달고, 여기서 그 주소를 쓴다.
+ *
+ * 둘 다 "그림이 있느냐"가 아니라 "저쪽이 그림으로 알아보느냐"의 문제였다.
+ * 브라우저로 열면 언제나 잘 보이기 때문에 눈으로는 못 찾는다. 확인하는 법은
+ * 빌드 결과 HTML 에서 og:image 값을 꺼내 `curl -I` 로 찍어 보는 것뿐이다.
  */
-export function ogImage(path: string): {
+export interface OgImage {
   url: string;
+  secureUrl: string;
   width: number;
   height: number;
   type: string;
-} {
-  const clean = path.endsWith('/') ? path : `${path}/`;
-  return { url: `${clean}opengraph-image/`, width: 1200, height: 630, type: 'image/png' };
+}
+
+export function ogImage(serviceId?: string): OgImage {
+  const path = serviceId ? `/og/s/${serviceId}/image.png` : '/og/site.png';
+  return {
+    url: path,
+    // og:image:secure_url 을 따로 보는 수집기가 있다. 절대 주소여야 한다.
+    secureUrl: `${SITE_URL}${path}`,
+    width: 1200,
+    height: 630,
+    type: 'image/png',
+  };
 }
 
 export const SITE = {
@@ -66,7 +85,7 @@ export const SITE = {
    * 공개 주소. sitemap·robots·OG 카드에 쓰인다.
    * 자체 도메인이 생기면 Vercel 환경변수 NEXT_PUBLIC_SITE_URL 로 덮어쓴다.
    */
-  url: env('NEXT_PUBLIC_SITE_URL', 'https://www.worksinkorea.com'),
+  url: SITE_URL,
 
   issuesRepo: ISSUES_REPO,
 

@@ -26,6 +26,24 @@ const nextConfig = {
   images: { unoptimized: true },
   // 정적 호스팅에서 /service/coupang 같은 주소가 새로고침에도 열리도록 디렉터리 형태로 뽑는다.
   trailingSlash: true,
+
+  /*
+   * 공유 미리보기 그림에 **.png 로 끝나는 주소**를 하나 더 달아 준다.
+   *
+   * 왜: Next 가 만드는 주소는 `/opengraph-image/` 라서 파일이 아니라 폴더처럼 보인다.
+   * 카카오톡 수집기는 확장자로 이미지를 가려내는 것으로 알려져 있어서, 그림이 200 으로
+   * 멀쩡히 나오는데도 미리보기를 비워 둔다. 트위터·슬랙처럼 잘 되는 곳이 있어서
+   * "그림이 없다"가 아니라 "저쪽이 안 알아본다"를 의심해야 하는 종류의 문제다.
+   *
+   * redirect 가 아니라 rewrite 인 것이 핵심이다 — 주소는 그대로 두고 내용만 가져온다.
+   * 리다이렉트로 하면 수집기가 따라오지 않아서 지금과 똑같은 문제가 된다.
+   */
+  async rewrites() {
+    return [
+      { source: '/og/site.png', destination: '/opengraph-image' },
+      { source: '/og/s/:id/image.png', destination: '/service/:id/opengraph-image' },
+    ];
+  },
 };
 
 export default nextConfig;

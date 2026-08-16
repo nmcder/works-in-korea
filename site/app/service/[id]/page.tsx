@@ -47,13 +47,13 @@ export async function generateMetadata({
       url: path,
       type: 'article',
       siteName: SITE.name,
-      images: [{ ...ogImage(path), alt: `${service.name.en} — measured answers` }],
+      images: [{ ...ogImage(service.id), alt: `${service.name.en} — measured answers` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${service.name.en} — does it work for foreigners?`,
       description: serviceDescription(service),
-      images: [{ ...ogImage(path), alt: `${service.name.en} — measured answers` }],
+      images: [{ ...ogImage(service.id), alt: `${service.name.en} — measured answers` }],
     },
   };
 }

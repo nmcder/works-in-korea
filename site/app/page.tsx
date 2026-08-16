@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   openGraph: {
     url: '/',
-    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+    images: [{ ...ogImage(), alt: SITE.tagline.en }],
   },
   twitter: {
-    images: [{ ...ogImage('/'), alt: SITE.tagline.en }],
+    images: [{ ...ogImage(), alt: SITE.tagline.en }],
   },
 };
 
