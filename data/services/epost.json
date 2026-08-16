@@ -42,42 +42,34 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.epost.go.kr/main/eng/Enpost_Introduction1.html",
+        "saw": "메인 우측 상단 ENGLISH 링크 클릭시 전체 영문 사이트로 전환됨, KOREAN 버튼으로 복귀 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.epost.go.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
-          },
-          {
-            "url": "https://www.epost.go.kr (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.epost.go.kr/usr/member/cafzb000k03.jsp",
+        "saw": "본인확인 단계에 아이핀 인증, 휴대폰 인증, 카카오뱅크 인증 3가지만 있고 이메일 전용 가입 경로는 없음을 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {
@@ -131,15 +123,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.epost.go.kr/bbs.RetrieveBbsMain.comm",
+        "saw": "고객센터 자주하는 질문 TOP10 목록 전체가 한국어로만 표시됨을 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

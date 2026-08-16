@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.kyobobook.co.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kyobobook.co.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://mmbr.kyobobook.co.kr/join",
+        "saw": "회원가입 화면에 카카오/네이버/구글/휴대폰/이메일 5개 아이콘이 나열되어 있고 '이메일' 클릭 시 '이메일 간편가입' 2단계 화면(이메일 입력 후 인증번호 발송)으로 이동, 휴대폰 인증 없이 이메일만으로 가입 진행됨을 확인",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

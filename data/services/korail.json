@@ -74,28 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T04:15:30.926Z",
-      "last_changed_at": "2026-08-15T04:15:30.926Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음",
-        "signup_url": "https://www.korail.com/ticket/membership/ageCheck",
-        "final_url": "https://www.korail.com/ticket/membership/ageCheck",
-        "http_status": 200,
-        "page_kind": "combined",
-        "form_input_count": 0,
-        "attempts": [
-          {
-            "url": "https://www.korail.com/ticket/membership/ageCheck",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "실제 가입 양식이 뜨는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://www.korail.com/ticket/membership/memberCheck",
+        "saw": "회원가입 여부확인 화면에 '아이핀과 휴대전화 인증을 통해 본인인증을 진행해 주세요' 문구와 함께 인증 방식이 아이핀(I-PIN) 또는 휴대전화 문자 인증 두 가지뿐이었고, 이메일/소셜 로그인 등 다른 가입 경로는 보이지 않음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

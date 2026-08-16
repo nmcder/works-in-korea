@@ -269,26 +269,6 @@
     ]
   },
   {
-    "service_id": "nhis",
-    "name": "National Health Insurance Service",
-    "url": "https://www.nhis.or.kr",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "skt",
-    "name": "SK Telecom (T world)",
-    "url": "https://www.tworld.co.kr",
-    "signup_url": "https://www.tworld.co.kr/web/login/tid-join",
-    "support_url": "https://www.tworld.co.kr/web/support/faq/keyword",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "toss",
     "name": "Toss",
     "url": "https://toss.im",
@@ -299,46 +279,9 @@
     ]
   },
   {
-    "service_id": "yanolja",
-    "name": "Yanolja",
-    "url": "https://www.yanolja.com",
-    "signup_url": "https://accounts.yanolja.com/v3/login",
-    "support_url": "https://ad.yanolja.com/intro",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "baemin",
     "name": "Baemin",
     "url": "https://www.baemin.com",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "catchtable",
-    "name": "CatchTable",
-    "url": "https://www.catchtable.co.kr",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "cgv",
-    "name": "CGV",
-    "url": "http://www.cgv.co.kr",
-    "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "hikorea",
-    "name": "HiKorea (Immigration)",
-    "url": "https://www.hikorea.go.kr",
-    "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
     "check": [
       "signup_phone_auth"
     ]
@@ -406,16 +349,6 @@
     ]
   },
   {
-    "service_id": "korail",
-    "name": "Korail",
-    "url": "https://www.korail.com",
-    "signup_url": "https://www.korail.com/ticket/membership/ageCheck",
-    "support_url": "https://www.korail.com/ticket/guest/csc/korailcs",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
     "service_id": "melon-ticket",
     "name": "Melon Ticket",
     "url": "https://ticket.melon.com",
@@ -423,55 +356,6 @@
     "support_url": "https://ticket.melon.com/customerservice/notice.htm",
     "check": [
       "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "visitkorea",
-    "name": "Visit Korea (KTO)",
-    "url": "https://english.visitkorea.or.kr",
-    "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "epost",
-    "name": "Korea Post",
-    "url": "https://www.epost.go.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "interpark-tour",
-    "name": "Interpark Tour",
-    "url": "https://tour.interpark.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "lotteon",
-    "name": "Lotte ON",
-    "url": "https://www.lotteon.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "musinsa-global",
-    "name": "Musinsa Global",
-    "url": "https://global.musinsa.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
     ]
   },
   {
@@ -485,103 +369,6 @@
     ]
   },
   {
-    "service_id": "txbus",
-    "name": "Txbus (Intercity Bus)",
-    "url": "https://txbus.t-money.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "auction",
-    "name": "Auction",
-    "url": "https://www.auction.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "daangn",
-    "name": "Karrot (Danggeun Market)",
-    "url": "https://www.daangn.com",
-    "support_url": "https://daangn.com/wv/faqs",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "gmoneytrans",
-    "name": "GME Remittance",
-    "url": "https://www.gmoneytrans.com",
-    "support_url": "https://gmoneytrans.com/supported-countries/",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "melon",
-    "name": "Melon",
-    "url": "https://www.melon.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "nonghyup",
-    "name": "NH Nonghyup Bank",
-    "url": "https://banking.nonghyup.com",
-    "support_url": "https://banking.nonghyup.com/servlet/content/ip/ec/IPEC0001M.thtml",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "nts",
-    "name": "National Tax Service",
-    "url": "https://www.nts.go.kr",
-    "support_url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?mi=40254&bbsId=50692",
-    "check": [
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "tmoney",
-    "name": "T-money",
-    "url": "https://www.t-money.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "tossbank",
-    "name": "Toss Bank",
-    "url": "https://www.tossbank.com",
-    "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "tving",
-    "name": "TVING",
-    "url": "https://www.tving.com",
-    "support_url": "https://www.tving.com/help/notice",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "woori-bank",
     "name": "Woori Bank",
     "url": "https://www.wooribank.com",
@@ -591,12 +378,29 @@
     ]
   },
   {
-    "service_id": "daum",
-    "name": "Daum",
-    "url": "https://www.daum.net",
-    "support_url": "https://cs.daum.net/",
+    "service_id": "auction",
+    "name": "Auction",
+    "url": "https://www.auction.co.kr",
     "check": [
-      "support_en"
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "daangn",
+    "name": "Karrot (Danggeun Market)",
+    "url": "https://www.daangn.com",
+    "support_url": "https://daangn.com/wv/faqs",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "gmoneytrans",
+    "name": "GME Remittance",
+    "url": "https://www.gmoneytrans.com",
+    "support_url": "https://gmoneytrans.com/supported-countries/",
+    "check": [
+      "signup_phone_auth"
     ]
   },
   {
@@ -626,12 +430,28 @@
     ]
   },
   {
-    "service_id": "kurly",
-    "name": "Market Kurly",
-    "url": "https://www.kurly.com",
-    "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
+    "service_id": "lotteon",
+    "name": "Lotte ON",
+    "url": "https://www.lotteon.com",
     "check": [
-      "support_en"
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "melon",
+    "name": "Melon",
+    "url": "https://www.melon.com",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "nonghyup",
+    "name": "NH Nonghyup Bank",
+    "url": "https://banking.nonghyup.com",
+    "support_url": "https://banking.nonghyup.com/servlet/content/ip/ec/IPEC0001M.thtml",
+    "check": [
+      "signup_phone_auth"
     ]
   },
   {
@@ -653,6 +473,23 @@
     ]
   },
   {
+    "service_id": "tmoney",
+    "name": "T-money",
+    "url": "https://www.t-money.co.kr",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "tossbank",
+    "name": "Toss Bank",
+    "url": "https://www.tossbank.com",
+    "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
     "service_id": "travel-wallet",
     "name": "Travel Wallet",
     "url": "https://www.travel-wallet.com",
@@ -662,10 +499,18 @@
     ]
   },
   {
-    "service_id": "wavve",
-    "name": "Wavve",
-    "url": "https://www.wavve.com",
-    "support_url": "https://www.wavve.com/customer/notice_list",
+    "service_id": "tving",
+    "name": "TVING",
+    "url": "https://www.tving.com",
+    "support_url": "https://www.tving.com/help/notice",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "txbus",
+    "name": "Txbus (Intercity Bus)",
+    "url": "https://txbus.t-money.co.kr",
     "check": [
       "support_en"
     ]
@@ -700,14 +545,6 @@
     ]
   },
   {
-    "service_id": "ably",
-    "name": "Ably",
-    "url": "https://a-bly.com",
-    "check": [
-      "i18n_ui"
-    ]
-  },
-  {
     "service_id": "cjonstyle",
     "name": "CJ ONSTYLE",
     "url": "https://www.cjonstyle.com",
@@ -716,26 +553,9 @@
     ]
   },
   {
-    "service_id": "genie",
-    "name": "Genie Music",
-    "url": "https://www.genie.co.kr",
-    "check": [
-      "i18n_ui"
-    ]
-  },
-  {
     "service_id": "gsshop",
     "name": "GS Shop",
     "url": "https://www.gsshop.com",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "kyobo",
-    "name": "Kyobo Book Centre",
-    "url": "https://www.kyobobook.co.kr",
-    "support_url": "https://www.kyobobook.co.kr/cscenter",
     "check": [
       "signup_phone_auth"
     ]

@@ -105,42 +105,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "not_required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://english.visitkorea.or.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://english.visitkorea.or.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://english.visitkorea.or.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://english.visitkorea.or.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://english.visitkorea.or.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://english.visitkorea.or.kr/svc/login/signup_email.do",
+        "saw": "이메일 회원가입 페이지의 필수정보 목록에 '이메일 주소, 비밀번호, 성별, 사용자명, 관심사, 생년월일, 국가/지역'만 명시되어 있고 휴대폰 번호는 목록에 없었음. 로그인/가입 옵션도 이메일, 구글, 애플, 페이스북, X, LINE으로 휴대폰 인증 없이 가입 가능.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

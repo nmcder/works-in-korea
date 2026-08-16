@@ -42,16 +42,20 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.nts.go.kr/english/main.do",
+        "saw": "ENGLISH 링크 클릭 시 영문 국세청 사이트로 전환됨, 상단에 KOREAN 링크로 재전환 가능",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "signup_phone_auth": {
@@ -102,15 +106,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.nts.go.kr/english/main.do",
+        "saw": "영문 사이트에 Help Desk, Help Line 1588-0560, FAQ, Q&A, Contact Your District Tax Office 메뉴 확인",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

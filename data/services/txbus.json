@@ -42,42 +42,36 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "zh",
+        "ja"
+      ],
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://intercitybuse.tmoney.co.kr/",
+        "saw": "Language 버튼에 한국어/English/中文/日本語 옵션 있고 English 클릭시 영문 UI로 실제 전환됨을 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "not_required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://txbus.t-money.co.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://txbus.t-money.co.kr (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://txbus.t-money.co.kr",
+        "saw": "사이트 전체에 로그인이나 회원가입 링크가 전혀 없어 비회원 승차권 예매 시스템임을 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

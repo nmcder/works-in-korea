@@ -173,49 +173,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://gmoneytrans.com/supported-countries/",
-            "status": 200,
-            "chars": 1197
-          },
-          {
-            "url": "https://www.gmoneytrans.com",
-            "status": 200,
-            "chars": 7370
-          },
-          {
-            "url": "https://gmoneytrans.com/contact-us/",
-            "status": 200,
-            "chars": 1590
-          },
-          {
-            "url": "https://gmoneytrans.com/supported-countries/",
-            "status": 200,
-            "chars": 1197
-          }
-        ],
-        "content_sha256": "52d1836da70fdce750854fcf7ba0843f92097937c321da3cd01aecc781f7bcd8",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "E-mail : help@gmoneytrans.com ... Support 1670-4565 Support : 10:00am to 10:00pm",
-          "reason": "이메일과 전화번호 등 지원 채널은 명시되어 있으나, 해당 채널이 영어로 응대 가능한지에 대한 명시적 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.806,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://gmoneytrans.com/supported-countries/",
+        "saw": "footer의 Support 섹션에 전화번호 1670-4565, 운영시간, 이메일이 영어로 표시됨을 확인함",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

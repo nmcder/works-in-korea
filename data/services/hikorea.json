@@ -60,23 +60,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "not_required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "signup_url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
-        "attempts": [
-          {
-            "url": "https://www.hikorea.go.kr/memb/stipDetailRM.pt",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://www.hikorea.go.kr/memb/realnmConfRM.pt",
+        "saw": "회원유형에서 '등록외국인' 선택 시 실명확인 화면은 외국인등록번호(ARC)+성명+캡차 입력만 요구하며 휴대폰 SMS/PASS 인증 절차가 전혀 없음. 이용약관 내 개인정보 표에도 고유식별정보는 외국인등록번호로 명시(주민등록번호 아님).",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

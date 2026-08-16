@@ -74,23 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: *login*",
-        "signup_url": "https://www.tworld.co.kr/web/login/tid-join",
-        "attempts": [
-          {
-            "url": "https://www.tworld.co.kr/web/login/tid-join",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://www.tworld.co.kr/web/login/tid-join",
+        "saw": "'Register (for foreigners)' 버튼을 눌러도 'Please proceed with mobile phone identification' 화면으로 이동, Name/첫 6자리 주민번호/SKT·KT·LGU+ 통신사 선택/휴대폰번호/인증번호 입력 요구, 대체 경로 없음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {
@@ -144,38 +138,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.tworld.co.kr/web/support/faq/keyword",
-            "status": 200,
-            "chars": 1194
-          },
-          {
-            "url": "https://www.tworld.co.kr",
-            "status": 200,
-            "chars": 57
-          }
-        ],
-        "content_sha256": "3ebc57f3862caf0e32e78f0eea00e897fabcd6dd46cd86311537d014c140a7b8",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "전자우편주소 tworld.cs@sktelecom.com",
-          "reason": "고객센터 전화번호와 이메일 주소는 명시되어 있으나, 이들이 영어 문의를 지원하는지 여부는 텍스트에서 확인할 수 없어 판단 근거가 부족합니다."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.247,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.tworld.co.kr/poc/eng/html/EN.html",
+        "saw": "ENG 링크로 이동한 영어 T world 페이지에 'Support / Contact' 섹션과 전화번호 080-252-5011이 명시되어 있음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

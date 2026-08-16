@@ -59,23 +59,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
-        "attempts": [
-          {
-            "url": "https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000&mcht_no=1000&coop_return_url=https%3A%2F%2Fcgv.co.kr",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://www.cjone.com/cjmweb/join.do",
+        "saw": "가입 전 '회원가입여부 확인' 단계에서 이름/생년월일 6자리/휴대전화번호 뒤 7~8자리가 모두 필수이며 전화번호 미입력시 '국번제외 휴대폰번호를 입력해주세요' 오류 표시. 외국인 등록증 번호 언급은 있으나 이 화면엔 전화번호 없이 진행할 대체 경로가 없음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {

@@ -74,42 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.nhis.or.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.nhis.or.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.nhis.or.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.nhis.or.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.nhis.or.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.nhis.or.kr/nhis/etc/personalLoginPage.do",
+        "saw": "개인 회원 로그인 화면에 '간편인증(네이버/카카오/금융기관 등 전자서명)'과 '공동·금융인증서' 두 가지만 있고 둘 다 한국 휴대폰/신원 기반 인증이며 이메일·여권 등 대체 경로 없음. 별도 회원가입 절차 자체가 없고 이 로그인이 곧 가입임.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {
@@ -163,34 +138,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.nhis.or.kr",
-            "status": 200,
-            "chars": 6
-          }
-        ],
-        "content_sha256": "adbcde3bf5739762e8137b63a495f9d769c973108ed519b5f1674a2f048f6349",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "제공된 텍스트에 고객지원 채널이나 영어 문의 가능 여부에 대한 정보가 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.516,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.nhis.or.kr/english/index.do",
+        "saw": "영어 전용 사이트(NHIS Center for Foreign Residents)에 Contact us 1577-1000 및 외국인 안내 섹션이 별도로 존재함.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

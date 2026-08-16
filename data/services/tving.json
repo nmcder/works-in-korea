@@ -163,43 +163,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.tving.com/help/notice",
-            "status": 200,
-            "chars": 1568
-          },
-          {
-            "url": "https://www.tving.com",
-            "status": 200,
-            "chars": 72
-          },
-          {
-            "url": "https://www.tving.com/help/notice",
-            "status": 200,
-            "chars": 122
-          }
-        ],
-        "content_sha256": "68f8de055cc04c190daecc00fa49760fcc8e279a225c03aad5da99d1896026ba",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "대표메일 : tving@cj.net 대표번호(유료) : 1670-1525",
-          "reason": "고객센터 채널(전화, 이메일, 채팅)은 명시되어 있으나 영어 지원 여부에 대한 언급이 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.117,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://www.tving.com/help/notice",
+        "saw": "고객센터 공지사항/FAQ 전부 한국어, 언어전환 옵션 없음",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

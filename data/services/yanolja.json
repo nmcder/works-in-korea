@@ -74,23 +74,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T03:53:01.010Z",
-      "last_changed_at": "2026-08-15T03:53:01.010Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://accounts.yanolja.com/v3/login",
-        "attempts": [
-          {
-            "url": "https://accounts.yanolja.com/v3/login",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://accounts.yanolja.com/v3/login/email",
+        "saw": "'이메일로 가입하기' 선택 후 약관 동의 → '본인 인증하기'/'문자 인증하기' 단계로 강제 이동, 최종적으로 '이름과 휴대폰 번호를 입력해주세요' 화면(010-0000-0000 형식, 국가번호 선택 없음)에 도달, 대체 경로 없음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "app_availability": {
@@ -151,44 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://ad.yanolja.com/intro",
-            "status": 200,
-            "chars": 786
-          },
-          {
-            "url": "https://www.yanolja.com",
-            "status": 200,
-            "chars": 3900
-          },
-          {
-            "url": "https://ad.yanolja.com/",
-            "status": 200,
-            "chars": 786
-          }
-        ],
-        "content_sha256": "132194025d2d9bb861b9b6d04c22de4d722ff9ae5d0e4862e180c69d3732b565",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 1644-1346 오전 9시 ~ 새벽 5시 , 연중무휴",
-          "reason": "고객센터 전화번호는 명시되어 있으나 영어 지원 여부에 대한 언급이 전혀 없어 판단 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.055,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://ad.yanolja.com/intro",
+        "saw": "지정된 support_url(NOL 광고센터)은 전부 한국어이며 자주 묻는 질문, 고객센터 1644-1346 모두 한국어만 제공, 언어 전환 옵션 없음. 메인 nol.yanolja.com에도 언어 전환 버튼 없음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

@@ -145,39 +145,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://cs.daum.net/",
-            "status": 200,
-            "chars": 829
-          },
-          {
-            "url": "https://www.daum.net",
-            "status": 200,
-            "chars": 4
-          }
-        ],
-        "content_sha256": "71df827c02b639b74c3c4408af3670e9bbe60aaec5afb416488bb924a69da45b",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 문의하기 ... 카카오톡 채널 문의 ... Daum 고객센터 : 1577-3321",
-          "reason": "고객지원 채널(문의하기, 카카오톡, 전화)은 명시되어 있으나 영어 응대 여부에 대한 언급이 전혀 없어 판단할 근거가 부족함."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.095,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://cs.daum.net/",
+        "saw": "고객센터 홈이 전부 한국어, 카카오톡 채널 문의만 안내, 언어전환 없음",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

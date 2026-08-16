@@ -170,49 +170,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
-            "status": 200,
-            "chars": 1123
-          },
-          {
-            "url": "https://www.tossbank.com",
-            "status": 200,
-            "chars": 1432
-          },
-          {
-            "url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
-            "status": 200,
-            "chars": 1123
-          },
-          {
-            "url": "https://www.tossbank.com/customer/information/privacy/credit-information",
-            "status": 200,
-            "chars": 1123
-          }
-        ],
-        "content_sha256": "20e9b736fb3fb85dd2bf6b851ed9ca8cf57ad8d35366913f7a5cfb6286435ec6",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 전화 : 1661-7654(24시간 연중무휴) 해외전화 : +82-2-6975-9000 이메일 : help@tossbank.com",
-          "reason": "해외전화와 이메일이 있으나 영어 지원 여부에 대한 명시적 언급이 없어 영어 상담 가능 여부를 판단할 근거가 부족합니다."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.066,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://www.tossbank.com/customer/counselling",
+        "saw": "전화상담 ARS 메뉴 전부 한국어(예금적금,카드,대출 등), 영어 안내 옵션 없음",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
       }
     },
     "foreign_card": {

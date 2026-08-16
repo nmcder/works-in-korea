@@ -59,13 +59,18 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": null,
-      "first_seen_at": null,
-      "last_changed_at": null,
-      "method": "none",
-      "confidence": "unknown",
-      "evidence": null
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
+      "evidence": {
+        "checked_by": "operator",
+        "url": "https://app.catchtable.co.kr/ct/join",
+        "saw": "카카오/네이버 외 이메일·닉네임 로그인 경로로 회원가입 진행해도 약관 동의 후 '휴대폰 번호를 입력해주세요' 화면(010-0000-0000 형식, 국가번호 선택 없음)으로 강제 이동, 인증번호 발송 필요. Apple 로그인 버튼 클릭 시 별도 응답 없음.",
+        "recorded_at": "2026-08-16T11:21:15.329Z"
+      }
     },
     "app_availability": {
       "value": {
