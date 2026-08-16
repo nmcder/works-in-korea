@@ -58,29 +58,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.lotteon.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://www.lotteon.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.lotteon.com/p/member/join/emlJoin/emlEasnJoinStep1",
+        "saw": "로그인 페이지에 카카오/네이버/본인인증으로 계속하기 옵션과 별도로 '이메일 간편회원 가입' 링크가 있었음. 클릭하니 이름과 이메일 아이디만 입력하는 1단계 가입 폼과 '이메일 인증하기' 버튼이 나타났고, 이 단계에는 휴대폰 번호 입력란이 없었음.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {

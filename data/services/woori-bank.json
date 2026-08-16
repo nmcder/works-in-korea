@@ -135,15 +135,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T23:32:04.858Z",
-      "first_seen_at": "2026-08-15T23:32:04.858Z",
-      "last_changed_at": "2026-08-15T23:32:04.858Z",
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://spot.wooribank.com/pot/Dream?withyou=ENENG0521",
+        "saw": "wooribank.com 에서 GLOBAL > Language > English 로 이동하면 나오는 영어 사이트에 'Customer Plaza' 섹션이 있고, 22개의 영어 질문과 답변이 있는 FAQ 페이지를 확인함 (예: 'Why is DESIGNATION mandatory in Korea?', 'Can I cancel money transfers made through Internet Banking?').",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "foreign_card": {

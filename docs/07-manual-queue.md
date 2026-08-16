@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 62곳 · 1묶음.
+`npm run manual-queue` 가 생성. 남은 57곳 · 1묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -84,15 +84,6 @@
     ]
   },
   {
-    "service_id": "baemin",
-    "name": "Baemin",
-    "url": "https://www.baemin.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui"
-    ]
-  },
-  {
     "service_id": "coupang-eats",
     "name": "Coupang Eats",
     "url": "https://www.coupangeats.com",
@@ -153,6 +144,14 @@
     ]
   },
   {
+    "service_id": "baemin",
+    "name": "Baemin",
+    "url": "https://www.baemin.com",
+    "check": [
+      "i18n_ui"
+    ]
+  },
+  {
     "service_id": "catchtable",
     "name": "CatchTable",
     "url": "https://www.catchtable.co.kr",
@@ -188,14 +187,6 @@
     ]
   },
   {
-    "service_id": "kakaobank",
-    "name": "KakaoBank",
-    "url": "https://www.kakaobank.com",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
     "service_id": "kakaotalk",
     "name": "KakaoTalk",
     "url": "https://www.kakaocorp.com",
@@ -209,15 +200,6 @@
     "name": "KB Kookmin Bank",
     "url": "https://www.kbstar.com",
     "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "kobus",
-    "name": "Kobus (Express Bus)",
-    "url": "https://www.kobus.co.kr",
-    "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
     "check": [
       "signup_phone_auth"
     ]
@@ -260,15 +242,6 @@
       "signup_phone_auth",
       "i18n_ui",
       "support_en"
-    ]
-  },
-  {
-    "service_id": "auction",
-    "name": "Auction",
-    "url": "https://www.auction.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui"
     ]
   },
   {
@@ -321,12 +294,11 @@
     ]
   },
   {
-    "service_id": "woori-bank",
-    "name": "Woori Bank",
-    "url": "https://www.wooribank.com",
+    "service_id": "auction",
+    "name": "Auction",
+    "url": "https://www.auction.co.kr",
     "check": [
-      "signup_phone_auth",
-      "support_en"
+      "i18n_ui"
     ]
   },
   {
@@ -365,15 +337,6 @@
     ]
   },
   {
-    "service_id": "hanpass",
-    "name": "Hanpass",
-    "url": "https://www.hanpass.com",
-    "support_url": "https://www.hanpass.com/en/cs",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
     "service_id": "hira",
     "name": "HIRA",
     "url": "https://www.hira.or.kr",
@@ -399,14 +362,6 @@
     "support_url": "https://docs.google.com/forms/d/e/1FAIpQLScWcjRuN6eWJK-G8x3NwBfE8IyKZIOq7jhD3fUXuKSWwPqzJw/viewform",
     "check": [
       "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "lotteon",
-    "name": "Lotte ON",
-    "url": "https://www.lotteon.com",
-    "check": [
-      "signup_phone_auth"
     ]
   },
   {
@@ -445,15 +400,6 @@
     ]
   },
   {
-    "service_id": "travel-wallet",
-    "name": "Travel Wallet",
-    "url": "https://www.travel-wallet.com",
-    "support_url": "https://enterprise.travel-wallet.com/home",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
     "service_id": "txbus",
     "name": "Txbus (Intercity Bus)",
     "url": "https://txbus.t-money.co.kr",
@@ -468,6 +414,14 @@
     "support_url": "https://www.wavve.com/customer/notice_list",
     "check": [
       "i18n_ui"
+    ]
+  },
+  {
+    "service_id": "woori-bank",
+    "name": "Woori Bank",
+    "url": "https://www.wooribank.com",
+    "check": [
+      "signup_phone_auth"
     ]
   },
   {
@@ -488,15 +442,6 @@
       "signup_phone_auth",
       "i18n_ui",
       "support_en"
-    ]
-  },
-  {
-    "service_id": "cjonstyle",
-    "name": "CJ ONSTYLE",
-    "url": "https://www.cjonstyle.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui"
     ]
   },
   {
@@ -532,6 +477,14 @@
     "service_id": "ably",
     "name": "Ably",
     "url": "https://a-bly.com",
+    "check": [
+      "i18n_ui"
+    ]
+  },
+  {
+    "service_id": "cjonstyle",
+    "name": "CJ ONSTYLE",
+    "url": "https://www.cjonstyle.com",
     "check": [
       "i18n_ui"
     ]

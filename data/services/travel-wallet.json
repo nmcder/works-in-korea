@@ -73,42 +73,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.travel-wallet.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.travel-wallet.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.travel-wallet.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.travel-wallet.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.travel-wallet.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://docs.channel.io/travelwallet/ko/articles/71c559c9",
+        "saw": "공식 지원 문서를 열어 확인함. travel-wallet.com 에는 웹 가입 링크가 없고(앱 전용), 가입 절차가 1단계 약관동의, 2단계 '휴대폰 번호 SMS 인증번호 확인', 이후 은행 연동과 인증서 기반 본인확인 순으로 나열되어 있었으며 대안 경로는 제시되지 않았음.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {

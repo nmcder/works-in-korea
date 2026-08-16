@@ -71,22 +71,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://display.cjonstyle.com/p/homeTab/main?hmtabMenuId=H00005",
-        "attempts": [
-          {
-            "url": "https://www.cjonstyle.com/join",
-            "status": 200,
-            "used": true
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://base.cjonstyle.com/p/page/account/register",
+        "saw": "가입 관문 화면에 '본인인증없이 간편회원 가입'이라는 대안이 있었음. 클릭해서 연 폼에서 휴대폰번호(하이픈 없이 입력) 항목에 필수(*) 표시가 있었고 ID/비밀번호/이름/생년월일/이메일과 함께 필수 항목으로 지정되어 있었음 — 본인인증 없는 경로라도 한국 형식 휴대폰 번호 입력란은 필수였음.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {

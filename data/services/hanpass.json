@@ -78,42 +78,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.hanpass.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hanpass.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hanpass.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hanpass.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hanpass.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.hanpass.com/en/faq",
+        "saw": "공식 영어 FAQ 문서를 열어 확인함. 'Service sign-up is not supported on the Hanpass homepage'(앱 전용)라고 명시되어 있고, 가입 절차 1단계로 'Login information and mobile phone authentication'이 나열되어 있으며 다른 대안 인증 방법은 언급되지 않았음.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {

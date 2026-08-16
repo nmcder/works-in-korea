@@ -61,23 +61,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
-        "signup_url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
-        "attempts": [
-          {
-            "url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoin.do",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://www.kobus.co.kr/mbrs/mbrsjoin/mbrsJoinHpAou.do",
+        "saw": "약관 동의 후 인증 단계 화면에 'Express Bus T-money 멤버십 서비스 이용을 위해 본인인증이 필요합니다'라는 문구와 함께 'PASS(모바일) 인증' 옵션 하나만 있었고, 이메일이나 다른 대안은 보이지 않았음.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {

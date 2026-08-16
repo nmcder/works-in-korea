@@ -56,28 +56,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-15T18:24:37.122Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-16T00:00:00.000Z",
+      "first_seen_at": "2026-08-16T00:00:00.000Z",
+      "last_changed_at": "2026-08-16T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.auction.co.kr/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "https://www.auction.co.kr (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://signup.auction.co.kr/signup/privateBuyer",
+        "saw": "ID/비밀번호/이름/이메일을 입력하고 휴대폰 번호는 비워둔 채 완료 버튼을 클릭하니 '휴대폰번호 숫자만 정확히 입력해주세요' 오류가 뜨며 제출이 막힘. 휴대폰 번호 입력란은 앞자리가 자동으로 010으로 채워지고 숫자/한국 형식이 아니면 거부됨. 이 휴대폰 입력란을 건너뛰는 카카오/네이버/이메일 전용 가입 경로는 찾지 못함.",
+        "recorded_at": "2026-08-16T13:22:02.482Z"
       }
     },
     "app_availability": {
