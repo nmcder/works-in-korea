@@ -1,23 +1,6 @@
-# 코워크에 줄 프롬프트
+<!-- 이 파일 전체를 복사해서 코워크에 그대로 붙여넣으면 된다. 잘라낼 것 없음. -->
+<!-- npm run manual-queue 가 다시 만든다. 직접 고치지 말 것 — 프롬프트는 08 에 있다. -->
 
-**코워크에는 `docs/queue/batch-N.md` 파일 하나를 통째로 복사해서 붙여넣으면 된다.**
-그 파일에 아래 프롬프트와 해당 묶음이 이미 합쳐져 있다. 잘라낼 것도 끼워 넣을 것도 없다.
-`npm run manual-queue` 가 남은 것만 골라 다시 만든다.
-
-답을 받으면 `answers.json` 으로 저장하고:
-
-```bash
-npm run ingest-manual -- --file=answers.json --dry-run   # 먼저 확인
-npm run ingest-manual -- --file=answers.json             # 통과하면 기록
-npm run validate
-```
-
-`--dry-run` 을 먼저 돌리는 이유는 **거절되는 항목을 보기 위해서**다. 근거를 안 적었거나
-값이 이상하면 기록 전에 걸린다. 거절이 많으면 프롬프트를 더 조이거나 다시 시키면 된다.
-
----
-
-## 프롬프트 (여기서부터 복사)
 
 > 아래는 원본이다. 실제로 줄 때는 `docs/queue/batch-N.md` 를 쓴다 — 여기를 고치면
 > 다음 `npm run manual-queue` 때 그 파일들에 반영된다.
@@ -190,7 +173,128 @@ npm run validate
 
 ### 확인할 목록
 
-(여기에 `docs/07-manual-queue.md` 의 묶음 JSON 을 붙여넣는다)
+```json
+[
+  {
+    "service_id": "korail",
+    "name": "Korail",
+    "url": "https://www.korail.com",
+    "signup_url": "https://www.korail.com/ticket/membership/ageCheck",
+    "support_url": "https://www.korail.com/ticket/guest/csc/korailcs",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "melon-ticket",
+    "name": "Melon Ticket",
+    "url": "https://ticket.melon.com",
+    "signup_url": "https://accounts.melon.com/join/choice?cpId=WP15",
+    "support_url": "https://ticket.melon.com/customerservice/notice.htm",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "visitkorea",
+    "name": "Visit Korea (KTO)",
+    "url": "https://english.visitkorea.or.kr",
+    "support_url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=140632&menuSn=454",
+    "check": [
+      "signup_phone_auth"
+    ]
+  },
+  {
+    "service_id": "epost",
+    "name": "Korea Post",
+    "url": "https://www.epost.go.kr",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "interpark-tour",
+    "name": "Interpark Tour",
+    "url": "https://tour.interpark.com",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "lotteon",
+    "name": "Lotte ON",
+    "url": "https://www.lotteon.com",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "musinsa-global",
+    "name": "Musinsa Global",
+    "url": "https://global.musinsa.com",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "ssg",
+    "name": "SSG.COM",
+    "url": "https://www.ssg.com",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "txbus",
+    "name": "Txbus (Intercity Bus)",
+    "url": "https://txbus.t-money.co.kr",
+    "check": [
+      "signup_phone_auth",
+      "i18n_ui",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "auction",
+    "name": "Auction",
+    "url": "https://www.auction.co.kr",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "daangn",
+    "name": "Karrot (Danggeun Market)",
+    "url": "https://www.daangn.com",
+    "support_url": "https://daangn.com/wv/faqs",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  },
+  {
+    "service_id": "gmoneytrans",
+    "name": "GME Remittance",
+    "url": "https://www.gmoneytrans.com",
+    "support_url": "https://gmoneytrans.com/supported-countries/",
+    "check": [
+      "signup_phone_auth",
+      "support_en"
+    ]
+  }
+]
+```
 
 각 항목의 `check` 배열에 있는 것만 확인하면 됩니다. 이미 값이 있는 것은
 빠져 있으므로 다시 볼 필요가 없습니다.
@@ -198,19 +302,3 @@ npm run validate
 `signup_url` 과 `support_url` 이 적혀 있으면 그 주소부터 열어 보세요.
 없으면 `url` 에서 직접 찾아야 합니다 — 찾다가 못 찾으면 `unknown` 입니다.
 
-## 프롬프트 끝
-
----
-
-## 받은 뒤에 할 일
-
-1. `answers.json` 으로 저장
-2. `npm run ingest-manual -- --file=answers.json --dry-run` — 거절 목록 확인
-3. **거절 사유를 읽는다.** 근거를 안 적은 것이 많으면 다시 시킨다
-4. `npm run ingest-manual -- --file=answers.json`
-5. `npm run validate`
-6. `npm run manual-queue` 로 남은 목록 갱신
-7. 커밋
-
-기록된 값은 사이트에 **"사람이 직접 확인 · 2026-08-16"** 으로 나갑니다.
-자동값과 섞이지 않고, 매일 다시 재지지 않으므로 그 날짜가 곧 유통기한입니다.

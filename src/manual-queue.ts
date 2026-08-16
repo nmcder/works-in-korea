@@ -19,7 +19,7 @@
  *   사람    눈으로 봐야 아는 것            signup_phone_auth · i18n_ui · support_en
  *   제보    실물이 있어야 아는 것          foreign_card · foreign_phone_sms
  */
-import { writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { listServiceIds, loadService } from './lib/store.js';
@@ -118,10 +118,57 @@ async function main(): Promise<void> {
   const dest = path.join(ROOT, 'docs', '07-manual-queue.md');
   await writeFile(dest, `${out.join('\n')}\n`, 'utf8');
 
+  /*
+   * 묶음마다 "그대로 복사해서 붙여넣으면 되는" 파일을 따로 만든다.
+   *
+   * 왜: 전에는 프롬프트 문서에서 본문을 잘라내고 목록 문서에서 묶음을 찾아 그 자리에
+   * 끼워 넣어야 했다. 여섯 번을 더 해야 하는 일에서 조립 단계를 사람에게 맡기면
+   * 언젠가 프롬프트 절반만 붙이거나 묶음을 두 개 붙인다. 파일 하나 = 붙여넣기 한 번.
+   *
+   * 프롬프트 본문은 08 에 한 벌만 두고 여기서 읽어다 쓴다. 두 벌이 되면 한쪽만
+   * 고쳐지고, 실패 사례를 추가한 보람이 사라진다.
+   */
+  const promptDoc = await readFile(path.join(ROOT, 'docs', '08-manual-prompt.md'), 'utf8');
+  const body = promptDoc.split('## 프롬프트 (여기서부터 복사)')[1]?.split('## 프롬프트 끝')[0];
+  if (!body) {
+    console.error('⚠️ 08-manual-prompt.md 에서 프롬프트 구간을 못 찾았다. 표시줄이 바뀌었는지 확인할 것.');
+    return;
+  }
+
+  const outDir = path.join(ROOT, 'docs', 'queue');
+  await rm(outDir, { recursive: true, force: true });
+  await mkdir(outDir, { recursive: true });
+
+  const PLACEHOLDER = '(여기에 `docs/07-manual-queue.md` 의 묶음 JSON 을 붙여넣는다)';
+  for (const [i, batch] of batches.entries()) {
+    const json = JSON.stringify(
+      batch.map((r) => ({
+        service_id: r.service.id,
+        name: r.service.name.en,
+        url: r.service.url,
+        ...(r.service.hints?.signup_url ? { signup_url: r.service.hints.signup_url } : {}),
+        ...(r.service.hints?.support_url ? { support_url: r.service.hints.support_url } : {}),
+        check: r.missing,
+      })),
+      null,
+      2,
+    );
+    const filled = body.replace(PLACEHOLDER, `\`\`\`json\n${json}\n\`\`\``);
+    await writeFile(
+      path.join(outDir, `batch-${i + 1}.md`),
+      `<!-- 이 파일 전체를 복사해서 코워크에 그대로 붙여넣으면 된다. 잘라낼 것 없음. -->\n<!-- npm run manual-queue 가 다시 만든다. 직접 고치지 말 것 — 프롬프트는 08 에 있다. -->\n${filled}`,
+      'utf8',
+    );
+  }
+
   const counts = CHECKABLE.map((k) => `${k} ${rows.filter((r) => r.missing.includes(k)).length}건`);
   console.log(`남은 ${rows.length}곳 — ${counts.join(' · ')}`);
   console.log(`${batches.length}묶음 (묶음당 ${batchSize}곳)`);
-  console.log(dest);
+  console.log('');
+  console.log('코워크에 줄 것 — 파일 하나를 통째로 복사해서 붙여넣으면 된다:');
+  for (let i = 1; i <= batches.length; i += 1) console.log(`  docs/queue/batch-${i}.md`);
+  console.log('');
+  console.log(`전체 목록: ${dest}`);
 }
 
 main().catch((err) => {
