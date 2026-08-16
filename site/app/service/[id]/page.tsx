@@ -6,6 +6,8 @@ import { RelativeTime } from '@/components/RelativeTime';
 import { T, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
 import { CATEGORY_LABELS, type SignalView, measuredCount, viewAll } from '@/lib/present';
+import { jsonLd, serviceDescription, serviceFaq } from '@/lib/seo';
+import { SITE } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
 export const dynamicParams = false;
@@ -23,9 +25,20 @@ export async function generateMetadata({
   const { id } = await params;
   const service = await getService(id);
   if (!service) return { title: 'Not found' };
+
+  // 106개가 같은 설명을 달고 있으면 검색엔진이 구분할 이유가 없고 사람도 누를 이유가 없다.
+  // 실제로 잰 답을 넣는다 (lib/seo.ts).
+  const path = `/service/${service.id}/`;
   return {
-    title: `${service.name.en} — does it work for foreigners?`,
-    description: `Measured facts about ${service.name.en} (${service.name.ko}): access from abroad, interface languages, Korean phone verification at sign-up, and English support. Every value is timestamped and sourced.`,
+    title: `${service.name.en} (${service.name.ko}) — does it work for foreigners?`,
+    description: serviceDescription(service),
+    alternates: { canonical: path },
+    openGraph: {
+      title: `${service.name.en} — does it work for foreigners?`,
+      description: serviceDescription(service),
+      url: path,
+      type: 'article',
+    },
   };
 }
 
@@ -125,8 +138,18 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
   const androidPkg =
     typeof service.hints?.android_package === 'string' ? service.hints.android_package : null;
 
+  // 이 페이지는 말 그대로 질문과 답의 목록이다. 그대로 FAQPage 로 알린다.
+  const faq = serviceFaq(service, `${SITE.url}/service/${service.id}/`);
+
   return (
     <>
+      {faq !== null && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(faq) }}
+        />
+      )}
+
       <section className="record-head">
         <div className="wrap">
           <p className="breadcrumb">

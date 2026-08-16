@@ -9,7 +9,13 @@ import {
   measuredCount,
   viewSignal,
 } from '@/lib/present';
+import { datasetSchema, jsonLd } from '@/lib/seo';
+import { SITE } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
+
+export const metadata = {
+  alternates: { canonical: '/' },
+};
 
 const SHORT: Record<string, Bi> = {
   overseas_access: { en: 'From abroad', ko: '해외 접속' },
@@ -67,8 +73,23 @@ export default async function HomePage() {
       : null,
   };
 
+  /*
+   * 이 사이트는 그 자체로 공개 데이터셋이다. Dataset 스키마를 붙이면
+   * Google Dataset Search 에 잡힌다. 이 프로젝트에 잘 맞는 통로다 —
+   * 데이터셋으로 찾아오는 사람은 재사용할 사람이고, 재사용하는 사람이 보내는
+   * 정정이 가장 정확하다.
+   */
+  const dataset = datasetSchema({
+    url: SITE.url,
+    services: services.length,
+    modified: run?.finished_at ?? null,
+    license: SITE.license.url,
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(dataset) }} />
+
       <Explorer rows={rows} categories={categories} stats={stats} />
 
       <section className="band">
