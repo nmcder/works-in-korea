@@ -34,8 +34,8 @@ export default async function ReportPage() {
           </h1>
           <TBlock
             className="standfirst"
-            en={`Two of the eight questions cannot be answered by a machine, and ${blocked.length} of the ${services.length} services cannot be measured by one at all. For those, someone who actually tried is the only source there is.`}
-            ko={`여덟 개 질문 중 둘은 기계가 답할 수 없고, 서비스 ${services.length}개 중 ${blocked.length}개는 기계로 아예 확인할 수 없습니다. 이런 항목은 직접 해 본 사람 말고는 알 방법이 없습니다.`}
+            en={`${blocked.length} of the ${services.length} services here cannot be measured by a machine at all, and two of the eight questions never can be. For those, someone who actually tried is the only source there is. Corrections, missing services and anything about the site itself go through the same form.`}
+            ko={`여기 있는 ${services.length}개 중 ${blocked.length}개는 기계로 아예 확인할 수 없고, 여덟 개 질문 중 둘은 어떤 경우에도 확인할 수 없습니다. 이런 것은 직접 해 본 사람 말고는 알 방법이 없습니다. 틀린 값을 고치거나, 빠진 서비스를 알려주거나, 사이트 자체에 대한 이야기도 같은 폼으로 받습니다.`}
           />
         </div>
       </section>
@@ -78,8 +78,8 @@ export default async function ReportPage() {
             ko="개정 개인정보보호법이 2026년 9월 11일 시행됩니다. 72시간 안에 유출을 알려야 하고, 과징금은 매출에 연동됩니다. 이 프로젝트는 한 사람이 운영합니다. 개인정보 데이터베이스는 부채일 뿐이라 만들지 않았습니다."
           />
           <TBlock
-            en="What is kept is what the site shows: which service, what happened, the issuing country, the card brand, the date, and your GitHub username as the author."
-            ko="남기는 것은 사이트에 보이는 것과 같습니다. 어느 서비스인지, 무슨 일이 있었는지, 발급 국가, 카드 브랜드, 날짜, 그리고 제보자 GitHub 아이디."
+            en="What is kept is what the site shows: which service, what happened, the issuing country, the card brand, and the date. Nothing identifies you — the form posts on your behalf, so not even a username is attached."
+            ko="남기는 것은 사이트에 보이는 것과 같습니다. 어느 서비스인지, 무슨 일이 있었는지, 발급 국가, 카드 브랜드, 날짜. 제보자를 가리키는 것은 하나도 없습니다 — 폼이 대신 접수하므로 아이디조차 남지 않습니다."
           />
 
           <h2>

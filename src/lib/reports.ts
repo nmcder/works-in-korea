@@ -100,7 +100,16 @@ export function parseIssueForm(body: string): Record<string, string> {
     const cut = block.indexOf('\n');
     if (cut === -1) continue;
     const label = block.slice(0, cut).trim().toLowerCase();
-    const value = block.slice(cut + 1).trim();
+    /*
+     * 마지막 항목 뒤에 우리가 붙인 안내문이 오면 그 값에 딸려 들어간다.
+     * 그러면 **우리가 쓴 문장이 제보자가 쓴 말로 저장된다.** 2026-08-15 시험
+     * 제보의 details 가 실제로 "no + 안내문" 이 됐다. 지금은 안내문을 맨 앞으로
+     * 옮겼지만, 이미 들어온 이슈에도 남아 있으므로 여기서도 잘라 낸다.
+     */
+    const value = block
+      .slice(cut + 1)
+      .replace(/\n+---\s*\n[\s\S]*$/, '')
+      .trim();
     if (!value || value === '_No response_') continue;
     const match = FIELD_MATCHERS.find((m) => label.includes(m.needle));
     if (match && out[match.field] === undefined) out[match.field] = value;

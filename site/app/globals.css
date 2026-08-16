@@ -470,7 +470,13 @@ a {
   border-color: var(--text);
   color: #fff;
 }
-.chips.facets .chip[aria-pressed='true'] {
+/*
+ * 검은 알약은 **거르기**(목록을 줄이는 것)에만 쓴다. 폼 안의 알약은 거르는 것이
+ * 아니라 답을 고르는 것이고, 바로 위 선택 카드가 파랑이므로 같은 색이어야
+ * "지금 고른 것"이 한 갈래로 읽힌다. 색이 두 갈래면 둘이 다른 종류로 보인다.
+ */
+.chips.facets .chip[aria-pressed='true'],
+.form .chip[aria-pressed='true'] {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
@@ -1525,10 +1531,27 @@ details.raw pre {
   padding: 0;
   margin: 0;
 }
-.field,
-.form-kinds {
+/*
+ * 칸 사이를 칸 안쪽보다 **넉넉히** 벌린다.
+ *
+ * 라벨과 입력칸 사이가 8px 인데 칸과 칸 사이가 22px 이면 차이가 부족해서, 라벨이
+ * 자기 입력칸이 아니라 위쪽 칸에 붙어 보인다. 폼이 한 덩어리로 읽히는 원인이 이것이다.
+ * 안쪽 8 : 바깥 30 이면 눈이 묶음을 알아서 가른다.
+ */
+/*
+ * ⚠️ `.form .field` 로 쓴다. `.field` 만으로는 위의 `.form fieldset { margin: 0 }`
+ * 에 진다 (요소 선택자 하나가 더 있어서 우선순위가 높다). 그래서 <fieldset> 으로
+ * 만든 칸 — 무엇을 해보셨나요 · 어떻게 됐나요 — 만 여백 없이 위에 딱 붙어 있었다.
+ * <label> 로 만든 칸은 멀쩡했기 때문에 눈으로는 "가끔 좁다" 로만 보였다.
+ */
+.form .field,
+.form .form-kinds {
   display: block;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
+}
+/* 첫 선택은 뒤의 질문을 통째로 바꾸므로 한 단계 더 끊어 준다 */
+.form .form-kinds {
+  margin-bottom: 38px;
 }
 .form-label {
   display: flex;
@@ -1625,6 +1648,103 @@ details.raw pre {
   height: 17px;
   flex: none;
   margin: 0;
+}
+
+/*
+ * 첫 선택 — "어떤 이야기를 하러 오셨나요".
+ *
+ * 전에는 작은 알약 세 개였는데, 그 셋이 전부 우리가 비워 둔 칸 이름이었다.
+ * 사이트가 이상하다고 말하러 온 사람은 셋 중 어디에도 자기 자리가 없다고 보고 나간다.
+ * 넷으로 늘리고, 각각에 한 줄 설명을 붙여 **누를 것을 고르는 화면**으로 만든다.
+ * 이 선택 하나가 뒤의 질문을 전부 바꾸므로 화면에서 가장 큰 요소여야 한다.
+ */
+.picker {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (max-width: 620px) {
+  .picker {
+    grid-template-columns: 1fr;
+  }
+}
+.pick {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  text-align: left;
+  font: inherit;
+  padding: 16px 18px;
+  border: 1px solid var(--control);
+  border-radius: var(--r);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.14s ease, background 0.14s ease, box-shadow 0.14s ease;
+}
+.pick:hover {
+  border-color: var(--text-3);
+  background: var(--bg-soft);
+}
+.pick[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.pick-mark {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--bg-sunk);
+  color: var(--text-2);
+  transition: background 0.14s ease, color 0.14s ease;
+}
+.pick[aria-pressed='true'] .pick-mark {
+  background: var(--accent);
+  color: #fff;
+}
+.pick-text {
+  display: block;
+  min-width: 0;
+}
+.pick-text b {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 640;
+  letter-spacing: -0.018em;
+  line-height: 1.35;
+}
+.pick-text em {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-3);
+}
+
+/* 빈칸 바로 옆에서 제보로 보내는 고리 */
+.fillin {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 7px 13px 7px 10px;
+  border: 1px dashed var(--control);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 550;
+  color: var(--text-2);
+  transition: border-color 0.14s ease, background 0.14s ease, color 0.14s ease;
+}
+.fillin:hover {
+  border-style: solid;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .honeypot {

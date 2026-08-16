@@ -96,7 +96,22 @@ async function toReport(issue: IssuePayload, known: string[]): Promise<Report> {
   base.details = freeText ? freeText.slice(0, 1000) : null;
 
   if (kind === null) {
-    return { ...base, status: 'needs-review', note: '제보 종류 라벨이 없다' };
+    /*
+     * 자동 반영하는 것은 해외 카드·해외 SMS 둘뿐이다. 나머지(해외 접속·언어·가입·
+     * 영어 지원 같은 직접 관측)는 자동 측정값과 부딪힐 수 있어서 사람이 맞춰 봐야 한다.
+     * 라벨이 아예 없는 것과 "받았지만 자동 반영 대상이 아닌 것"은 다른 상황이므로
+     * 메모에서 구분한다 — 안 그러면 운영자가 폼이 고장 난 줄 알고 찾아 나선다.
+     */
+    const tag = (issue.labels ?? [])
+      .map((l) => (typeof l === 'string' ? l : (l.name ?? '')))
+      .find((n) => n.startsWith('report:'));
+    return {
+      ...base,
+      status: 'needs-review',
+      note: tag
+        ? `${tag} 는 자동 반영 대상이 아니다. 사람이 근거를 확인한 뒤 처리한다.`
+        : '제보 종류 라벨이 없다',
+    };
   }
   if (kind === 'correction') {
     return {

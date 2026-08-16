@@ -303,7 +303,12 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
         <div className="records">
           {views.map((v) => (
-            <Record key={v.key} v={v} hideWhy={sharedKind !== null && blockedViews.includes(v)} />
+            <Record
+              key={v.key}
+              v={v}
+              serviceId={service.id}
+              hideWhy={sharedKind !== null && blockedViews.includes(v)}
+            />
           ))}
         </div>
 
@@ -312,7 +317,11 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             en="Does a value here not match what you saw?"
             ko="여기 값이 직접 보신 것과 다른가요?"
           />{' '}
-          <Link href="/report/" style={{ color: 'var(--accent)', fontWeight: 550 }}>
+          {/* 서비스를 다시 고르게 하지 않는다 — 폼이 주소에서 읽어 미리 채운다 */}
+          <Link
+            href={`/report/?intent=correction&service=${service.id}`}
+            style={{ color: 'var(--accent)', fontWeight: 550 }}
+          >
             <T en="Send a correction →" ko="정정 요청 보내기 →" />
           </Link>
         </p>
@@ -321,8 +330,35 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
   );
 }
 
-function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
+/**
+ * 값이 비어 있는 항목에서 바로 제보로 갈 수 있게 한다.
+ *
+ * "제보해 주세요"를 페이지 맨 아래에 한 번 두는 것과, **빈칸 바로 옆**에 두는 것은
+ * 전혀 다르다. 사람이 "아, 이건 내가 아는데" 하고 느끼는 순간이 여기이기 때문이다.
+ * 그 자리를 지나 아래까지 스크롤할 이유는 없다.
+ *
+ * 자동으로 잴 수 있는 항목이면 굳이 부르지 않는다 — 크롤러가 막힌 곳만 사람이 필요하다.
+ */
+const REPORT_TOPIC: Record<string, string> = {
+  overseas_access: 'overseas-access',
+  i18n_ui: 'languages',
+  signup_phone_auth: 'signup',
+  foreign_card: 'foreign-card',
+  foreign_phone_sms: 'foreign-sms',
+  support_en: 'support-en',
+};
+
+function Record({
+  v,
+  serviceId,
+  hideWhy,
+}: {
+  v: SignalView;
+  serviceId: string;
+  hideWhy?: boolean;
+}) {
   const conf = CONFIDENCE[v.confidence] ?? CONFIDENCE.unknown!;
+  const topic = v.tone === 'none' ? REPORT_TOPIC[v.key] : undefined;
 
   return (
     <article className={`signal t-${v.tone}`}>
@@ -382,6 +418,16 @@ function Record({ v, hideWhy }: { v: SignalView; hideWhy?: boolean }) {
             </span>
           )}
         </div>
+
+        {topic && (
+          <Link className="fillin" href={`/report/?service=${serviceId}&topic=${topic}`}>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+              strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M8 3.5v9M3.5 8h9" />
+            </svg>
+            <T en="You tried this? Fill it in" ko="해보셨다면 채워 주세요" />
+          </Link>
+        )}
 
         {v.evidence && Object.keys(v.evidence).length > 0 && (
           <details className="raw">
