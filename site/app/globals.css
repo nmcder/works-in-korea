@@ -1249,6 +1249,12 @@ details.raw {
   color: var(--accent);
   border-color: var(--accent-line);
 }
+/* 사람이 직접 본 값. 자동값(파랑)과 제보(노랑) 사이에 있는 별개의 출처다 */
+.tag.manual {
+  background: var(--ok-bg);
+  color: var(--ok);
+  border-color: var(--ok-line);
+}
 .tag.community {
   background: var(--warn-bg);
   color: var(--warn);

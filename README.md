@@ -37,6 +37,8 @@ site/             the public site (Next.js, prerendered + one API route)
 | `npm run find-hints` | look for missing sign-up URLs, help pages and app IDs |
 | `npm run ingest -- --reapply` | re-aggregate stored community reports |
 | `cd site && npm run icons` | download app icons for any service that does not have one yet |
+| `npm run manual-queue` | list what only a human can check, in batches → [docs/07-manual-queue.md](docs/07-manual-queue.md) |
+| `npm run ingest-manual -- --file=answers.json` | record hand-checked values (rejects anything without evidence) |
 
 Partial runs: `npm run probe -- --only=coupang,toss` or `--limit=5 --dry-run`.
 
@@ -92,18 +94,31 @@ Leave a hint blank if you are unsure. A blank stays honest; a wrong URL publishe
 Two documented exceptions live in `src/config.ts` (`ROBOTS_EXEMPT_PREFIXES`,
 `HOST_DELAY_OVERRIDES`) and are published on the site's `/method` page.
 
-## Signal coverage (2026-08-15, 106 services)
+## Signal coverage (2026-08-16, 106 services)
 
 | signal | measured | limiting factor |
 |---|---|---|
-| `overseas_access` | 75 | 31 sites refuse automated checks |
-| `i18n_ui` | 75 | same |
-| `payment_gate` | 75 | checkout usually sits behind a login, so 11 detect a provider |
-| `app_availability` | 20 | app IDs missing from the seed list |
-| `signup_phone_auth` | 23 | sign-up URLs missing from the seed list |
-| `support_en` | 1 | `ANTHROPIC_API_KEY` not set |
-| `foreign_card` | 0 | community reports only, by design |
+| `app_availability` | 104 | — |
+| `overseas_access` | 70 | 36 sites refuse automated checks; **only a foreign vantage point can answer this**, so a human cannot fill it in |
+| `i18n_ui` | 70 | same, but a human *can* fill it in |
+| `payment_gate` | 68 | checkout usually sits behind a login |
+| `support_en` | 19 | help-centre URL unknown for 43 services |
+| `signup_phone_auth` | 16 | sign-up forms render in JavaScript or the site blocks us. `find-hints` found **zero** usable URLs |
+| `foreign_card` | 1 | community reports only, by design |
 | `foreign_phone_sms` | 0 | community reports only, by design |
+
+The three gaps split by who can close them, and the split is strict:
+
+| | who | how |
+|---|---|---|
+| `overseas_access` | the cron | needs a non-Korean vantage point |
+| `i18n_ui` · `signup_phone_auth` · `support_en` | a person | `npm run manual-queue`, then [docs/08-manual-prompt.md](docs/08-manual-prompt.md) |
+| `foreign_card` · `foreign_phone_sms` | a reporter | needs a real foreign card or number |
+
+Hand-checked values are stored as `method: manual`, `confidence: manual` and shown as
+"checked by hand" with the date. They are **not** re-verified daily, so the date is the
+shelf life — that is why they are labelled differently rather than mixed in with the
+automated ones.
 
 Run `npm run hints` for the prioritised list of what to fill in.
 

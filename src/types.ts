@@ -41,7 +41,18 @@ export const AUTO_SIGNAL_KEYS = [
 ] as const;
 export type AutoSignalKey = (typeof AUTO_SIGNAL_KEYS)[number];
 
-export type Confidence = 'auto' | 'community' | 'conflicting' | 'unknown';
+/**
+ * 값을 얼마나 믿을 만한가 — 정확히는 **누가 어떻게 알아낸 값인가**.
+ *
+ * `manual` 이 따로 있는 이유: 크롤러가 막힌 곳(36곳)과 가입 양식이 자바스크립트
+ * 뒤에 있는 곳은 기계로 영원히 못 잰다. 그런데 사람이 열어 보면 5초면 안다.
+ * 그 값을 `auto` 로 적으면 화면에 "자동 확인"이라고 나가서 **거짓이 된다.**
+ * 손으로 잰 것은 손으로 쟀다고 적는다 — 그게 이 프로젝트가 파는 유일한 것이다.
+ *
+ * auto 와 다른 점이 하나 더 있다: manual 값은 **매일 다시 재지지 않는다.**
+ * 확인 날짜를 달고 낡아간다. 화면이 그 날짜를 그대로 보여주므로 숨기는 것은 없다.
+ */
+export type Confidence = 'auto' | 'manual' | 'community' | 'conflicting' | 'unknown';
 
 export interface Signal<V = unknown> {
   value: V;

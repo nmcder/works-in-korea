@@ -21,7 +21,9 @@
     "ingest": "tsx src/ingest-report.ts",
     "find-hints": "tsx src/discover-hints.ts",
     "add-app": "tsx src/add-app.ts",
-    "check-support": "tsx src/check-support.ts"
+    "check-support": "tsx src/check-support.ts",
+    "manual-queue": "tsx src/manual-queue.ts",
+    "ingest-manual": "tsx src/ingest-manual.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

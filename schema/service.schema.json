@@ -190,7 +190,8 @@
         },
         "confidence": {
           "type": "string",
-          "enum": ["auto", "community", "conflicting", "unknown"]
+          "enum": ["auto", "manual", "community", "conflicting", "unknown"],
+          "description": "auto=기계가 잼 · manual=사람이 눈으로 확인 · community=이용자 제보 · conflicting=제보가 엇갈림 · unknown=값 없음"
         },
         "evidence": {
           "type": ["object", "null"],

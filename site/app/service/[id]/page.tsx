@@ -60,6 +60,8 @@ export async function generateMetadata({
 
 const CONFIDENCE: Record<string, Bi> = {
   auto: { en: 'measured by machine', ko: '자동 확인' },
+  // 기계가 못 여는 곳을 사람이 눈으로 본 값. 매일 다시 재지지 않으므로 옆의 날짜가 중요하다.
+  manual: { en: 'checked by hand', ko: '사람이 직접 확인' },
   community: { en: 'reported by people', ko: '이용자 제보' },
   conflicting: { en: 'reports disagree', ko: '제보가 엇갈림' },
   unknown: { en: 'no value recorded', ko: '기록 없음' },

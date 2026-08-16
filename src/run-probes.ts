@@ -32,7 +32,14 @@ import {
 import { probePaymentGate } from './probes/payment-gate.js';
 import { probeSignupPhoneAuth } from './probes/signup-phone-auth.js';
 import { llmUsage, probeSupportEn } from './probes/support-en.js';
-import { AUTO_SIGNAL_KEYS, type AutoSignalKey, type ChangeEntry, type RunSummary, type Service } from './types.js';
+import {
+  AUTO_SIGNAL_KEYS,
+  type AutoSignalKey,
+  type ChangeEntry,
+  type Confidence,
+  type RunSummary,
+  type Service,
+} from './types.js';
 
 interface Options {
   only: string[] | null;
@@ -248,7 +255,9 @@ async function runProbe(
   service: Service,
   vantage: VantagePoint,
   now: string,
-): Promise<{ value: unknown; confidence: 'auto' | 'unknown' | 'community' | 'conflicting'; evidence: Record<string, unknown> | null } | null> {
+  // 신뢰도 종류를 여기에 손으로 늘어놓으면 types.ts 에 하나 추가할 때마다 여기서 깨진다.
+  // 실제로 'manual' 을 추가하다가 깨졌다. 타입을 그대로 가져다 쓴다.
+): Promise<{ value: unknown; confidence: Confidence; evidence: Record<string, unknown> | null } | null> {
   switch (key) {
     case 'overseas_access':
       // 이전 지점별 기록을 넘겨서 누적시킨다
