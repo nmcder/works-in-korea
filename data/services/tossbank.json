@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "839333328",
     "android_package": "viva.republica.toss",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1422751774",
     "android_package": "kr.co.vcnc.tada",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

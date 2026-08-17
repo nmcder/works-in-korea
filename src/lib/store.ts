@@ -117,6 +117,7 @@ function normalizeHints(hints: SeedService['hints']): Service['hints'] {
     ios_app_id: hints?.ios_app_id ?? null,
     android_package: hints?.android_package ?? null,
     no_app: hints?.no_app ?? null,
+    signup_app_only: hints?.signup_app_only ?? null,
   };
 }
 

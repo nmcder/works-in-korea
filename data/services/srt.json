@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1350286957",
     "android_package": "kr.co.srail.newapp",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

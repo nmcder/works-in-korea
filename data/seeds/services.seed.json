@@ -82,7 +82,8 @@
       "hints": {
         "android_package": "com.kakao.taxi",
         "support_url": "https://service.kakaomobility.com/cs/faqs/content/?category=242",
-        "ios_app_id": "981110422"
+        "ios_app_id": "981110422",
+        "signup_app_only": true
       }
     },
     {
@@ -96,7 +97,8 @@
       "importance": 2,
       "hints": {
         "android_package": "com.skt.tmap.ku",
-        "support_url": "https://www.tmapmobility.com/support/data"
+        "support_url": "https://www.tmapmobility.com/support/data",
+        "signup_app_only": true
       }
     },
     {
@@ -141,7 +143,8 @@
       "hints": {
         "support_url": "https://www.tadatada.com/ad-biz",
         "ios_app_id": "1422751774",
-        "android_package": "kr.co.vcnc.tada"
+        "android_package": "kr.co.vcnc.tada",
+        "signup_app_only": true
       }
     },
     {
@@ -690,7 +693,8 @@
       "importance": 1,
       "hints": {
         "android_package": "com.coupang.mobile.eats",
-        "ios_app_id": "1445504255"
+        "ios_app_id": "1445504255",
+        "signup_app_only": true
       }
     },
     {
@@ -829,7 +833,8 @@
       "hints": {
         "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
         "ios_app_id": "839333328",
-        "android_package": "viva.republica.toss"
+        "android_package": "viva.republica.toss",
+        "signup_app_only": true
       }
     },
     {
@@ -948,7 +953,8 @@
       "hints": {
         "ios_app_id": "1344407760",
         "android_package": "com.hanpass.remittance",
-        "support_url": "https://www.hanpass.com/en/cs"
+        "support_url": "https://www.hanpass.com/en/cs",
+        "signup_app_only": true
       }
     },
     {
@@ -992,7 +998,8 @@
       "importance": 2,
       "hints": {
         "support_url": "https://gmoneytrans.com/supported-countries/",
-        "ios_app_id": "1218137289"
+        "ios_app_id": "1218137289",
+        "signup_app_only": true
       }
     },
     {
@@ -1022,7 +1029,8 @@
       "hints": {
         "support_url": "https://enterprise.travel-wallet.com/home",
         "ios_app_id": "1460769945",
-        "android_package": "com.mobiletoong.travelwallet"
+        "android_package": "com.mobiletoong.travelwallet",
+        "signup_app_only": true
       }
     },
     {
@@ -1531,7 +1539,8 @@
       "hints": {
         "android_package": "com.towneers.www",
         "support_url": "https://daangn.com/wv/faqs",
-        "ios_app_id": "1018769995"
+        "ios_app_id": "1018769995",
+        "signup_app_only": true
       }
     },
     {

@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "357484932",
     "android_package": "com.shinhan.sbanking",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

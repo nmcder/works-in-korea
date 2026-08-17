@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1464496236",
     "android_package": "com.kakaopay.app",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

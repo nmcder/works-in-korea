@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1218137289",
     "android_package": null,
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

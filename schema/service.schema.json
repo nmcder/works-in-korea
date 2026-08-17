@@ -117,6 +117,13 @@
             "null"
           ],
           "pattern": "^[A-Za-z][A-Za-z0-9_]*(\\.[A-Za-z0-9_]+)+$"
+        },
+        "signup_app_only": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "웹에 가입 창구가 없고 앱에서만 가입되는 경우 true (사람이 확인)"
         }
       }
     },

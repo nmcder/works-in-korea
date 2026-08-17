@@ -45,6 +45,7 @@ export type WhyKind =
   | 'no-app-id'
   | 'inconclusive'
   | 'community-only'
+  | 'app-only'
   | 'other';
 
 /**
@@ -250,7 +251,26 @@ function methodLabel(key: SignalKey, method: string, confidence: Confidence): Bi
  * 근거 문자열은 엔진이 한국어로 남긴다. 여기서 영어 문구로 옮기되,
  * 못 알아본 경우 원문을 그대로 노출한다 — 임의로 지어내지 않는다.
  */
-function explainMissing(key: SignalKey, sig: Signal): (Bi & { kind: WhyKind }) | null {
+function explainMissing(
+  key: SignalKey,
+  sig: Signal,
+  service?: Service,
+): (Bi & { kind: WhyKind }) | null {
+  /*
+   * 웹에 가입 창구가 아예 없는 서비스 (토스·카카오톡·티맵…).
+   *
+   * 여기를 "아직 확인 못 함"으로 두면 우리가 게을러서 안 잰 것처럼 읽힌다.
+   * 사실은 **웹에서 잴 수 있는 것이 없다**는 뜻이고, 그건 이 사이트를 보러 온
+   * 사람에게 쓸모 있는 정보다 — "이건 앱을 깔아야 시작된다"는 뜻이니까.
+   */
+  if (key === 'signup_phone_auth' && service?.hints?.signup_app_only === true) {
+    return {
+      kind: 'app-only',
+      en: 'There is no way to sign up on the web — the site is an introduction page and the account is created inside the app. What the app asks for cannot be read from outside it.',
+      ko: '웹에서는 가입할 수 없습니다. 웹사이트는 소개 페이지이고 계정은 앱 안에서 만듭니다. 앱이 무엇을 요구하는지는 바깥에서 읽을 수 없습니다.',
+    };
+  }
+
   if (key === 'foreign_card') {
     return {
       kind: 'community-only',
@@ -557,7 +577,7 @@ export function viewSignal(service: Service, key: SignalKey): SignalView {
     method: sig.method,
     methodLabel: methodLabel(key, sig.method, sig.confidence),
     confidence: sig.confidence,
-    why: formatted ? null : explainMissing(key, sig),
+    why: formatted ? null : explainMissing(key, sig, service),
     caveat: formatted ? caveatFor(key, sig) : null,
     awaitingReport: COMMUNITY_KEYS.includes(key) && sig.method === 'none',
     evidence: sig.evidence,

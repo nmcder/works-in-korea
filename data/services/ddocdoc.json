@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1014889755",
     "android_package": "com.bbros.sayup",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

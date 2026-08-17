@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1445504255",
     "android_package": "com.coupang.mobile.eats",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

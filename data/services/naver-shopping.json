@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "6738063154",
     "android_package": "com.navercorp.navershopping",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

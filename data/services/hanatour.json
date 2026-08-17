@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "550971489",
     "android_package": "com.hanatour.dotcom",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": null,
     "android_package": "com.skt.tmap.ku",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

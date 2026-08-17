@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "775349206",
     "android_package": "com.interpark.tour.mobile.main",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1094611503",
     "android_package": "kt.co.ktmmobile",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

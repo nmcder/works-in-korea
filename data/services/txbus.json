@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1483433931",
     "android_package": "kr.co.tmoney.tia",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": null
   },
   "signals": {
     "overseas_access": {

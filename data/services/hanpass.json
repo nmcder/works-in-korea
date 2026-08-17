@@ -14,7 +14,8 @@
     "english_url": null,
     "ios_app_id": "1344407760",
     "android_package": "com.hanpass.remittance",
-    "no_app": null
+    "no_app": null,
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {
