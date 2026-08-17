@@ -4,12 +4,12 @@
   "private": true,
   "description": "Works in Korea? — public static site",
   "scripts": {
-    "api": "node scripts/build-api.mjs",
+    "api": "node scripts/build-api.mjs && node scripts/build-llms.mjs",
     "icons": "node scripts/fetch-icons.mjs",
     "favicon": "node scripts/make-favicon.mjs",
-    "predev": "node scripts/build-api.mjs",
+    "predev": "node scripts/build-api.mjs && node scripts/build-llms.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/build-api.mjs",
+    "prebuild": "node scripts/build-api.mjs && node scripts/build-llms.mjs",
     "build": "next build",
     "typecheck": "tsc --noEmit"
   },

@@ -85,6 +85,45 @@ export default async function DataPage() {
             </tbody>
           </table>
 
+          {/*
+            챗봇에 "카카오T 외국인도 써?" 를 묻는 사람이 늘었다. 그때 챗봇은 웹을
+            한두 번 긁어서 답하는데, 우리 데이터는 106장으로 흩어져 있고 한 장에
+            근거 JSON 이 본문보다 크다. 긁는 쪽에 나쁜 모양이라 통짜 텍스트를 따로 둔다.
+          */}
+          <h2>
+            <T en="For language models" ko="AI가 읽을 형태" />
+          </h2>
+          <TBlock
+            en="Everything above is also published as plain text, in one file, with a legend explaining what each value means and one line asking not to read a missing value as a “no”. If you are pointing an assistant at this dataset, start here."
+            ko="위의 것을 통짜 텍스트로도 냅니다. 파일 하나에 전부 들어 있고, 각 값이 무슨 뜻인지와 “빈칸을 아니오로 읽지 말 것”이 앞에 적혀 있습니다. AI에게 이 데이터를 물리려면 여기서 시작하면 됩니다."
+          />
+          <table className="datatable">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/llms.txt">/llms.txt</a>
+                </td>
+                <td>
+                  <T
+                    en="What this dataset is, how to read a value, and where everything lives."
+                    ko="이 데이터가 무엇인지, 값을 어떻게 읽는지, 나머지는 어디 있는지."
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="/llms-full.txt">/llms-full.txt</a>
+                </td>
+                <td>
+                  <T
+                    en={`All ${services.length} services and every measured value in one file, with the reason beside anything left unknown.`}
+                    ko={`서비스 ${services.length}개와 측정값 전부가 한 파일에. 비어 있는 항목에는 왜 비었는지가 붙어 있습니다.`}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <h2>
             <T en="The shape of a value" ko="값의 생김새" />
           </h2>
