@@ -738,6 +738,26 @@ a {
   border-color: var(--text-3);
 }
 
+/*
+ * 본문 안의 버튼.
+ *
+ * `.prose a` 가 링크를 파란 밑줄 글씨로 만드는데, 그게 `.button` 보다 명시도가
+ * 높아서(클래스+태그 대 클래스) 버튼 안에서도 이겼다. 결과는 **파란 바탕에
+ * 파란 글씨** — /method 맨 아래 "정정 요청 보내기" 가 통째로 안 보였다.
+ * 명시도로 진 것이라 순서를 바꿔도 안 고쳐진다. 버튼은 링크가 아니라고 따로 말해야 한다.
+ */
+.prose a.button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 620;
+}
+.prose a.button.ghost {
+  color: var(--text);
+}
+.prose a.button.ghost:hover {
+  color: var(--text);
+}
+
 /* 스토어·홈페이지로 바로 가는 줄 */
 .gotos {
   display: flex;
