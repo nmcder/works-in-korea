@@ -138,8 +138,20 @@ export default async function DataPage() {
   "last_changed_at": "2026-08-15T04:15:30.926Z",
   "method": "auto:signup_phone_auth",
   "confidence": "auto",
-  "evidence": { "...": "what the probe actually saw" }
+  "evidence": { "...": "what the probe actually saw" },
+  "source_url": "https://www.worksinkorea.com/service/coupang/#signup_phone_auth"
 }`}</pre>
+          {/*
+            레코드 안에 URL 이 둘이라 헷갈릴 수 있다. 하나는 그 회사 것이고 하나는
+            우리 것인데, 잘못 고르면 우리 데이터를 쓰면서 그 회사를 출처로 단다.
+          */}
+          <h2>
+            <T en="Two URLs, and which one to cite" ko="주소가 둘인 이유" />
+          </h2>
+          <TBlock
+            en="Each record carries url — the website being measured, which is not us — and source_url, our page for that service. Every signal carries its own source_url with an anchor, which opens on that one value with its evidence underneath. If you publish a value from here, source_url is the link, and the licence asks you to use it."
+            ko="레코드마다 url 과 source_url 이 있습니다. url 은 측정 대상 서비스의 주소이고(우리가 아닙니다), source_url 은 그 서비스에 대한 우리 페이지입니다. 시그널마다도 각자의 source_url 이 있고, 열면 그 값 하나와 그 아래 근거로 바로 갑니다. 여기서 가져간 값을 어딘가에 실으신다면 source_url 이 그 링크이고, 라이선스가 요구하는 것도 그것입니다."
+          />
 
           <h2>
             <T en="Three things to get right" ko="이것만은 지켜주세요" />

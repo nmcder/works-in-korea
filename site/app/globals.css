@@ -1162,6 +1162,11 @@ a {
 .signal {
   padding: 26px 0;
   border-bottom: 1px solid var(--line);
+  /*
+   * 값 하나로 바로 오는 주소(.../service/kakao-t/#signup_phone_auth)를 열면
+   * 머리말이 sticky 라 그 값을 덮는다. 머리말 높이(64px)에 숨 쉴 틈을 더한다.
+   */
+  scroll-margin-top: 88px;
 }
 .signal:last-child {
   border-bottom: 0;

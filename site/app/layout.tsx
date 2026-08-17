@@ -81,6 +81,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* 그리기 전에 언어를 확정한다 — 한국어 사용자에게 영어가 번쩍이지 않도록 */}
         <script dangerouslySetInnerHTML={{ __html: LANG_BOOTSTRAP }} />
+        {/*
+          이 사이트 전체를 통짜 텍스트로 읽는 길. 사람이 볼 것은 아니지만, 페이지를
+          긁어 온 쪽이 "더 나은 모양이 따로 있다"는 것을 알 방법이 여기 말고 없다.
+        */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="Works in Korea? for language models" />
       </head>
       <body>
         <a className="skip" href="#main">

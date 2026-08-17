@@ -166,7 +166,10 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     typeof service.hints?.android_package === 'string' ? service.hints.android_package : null;
 
   // 이 페이지는 말 그대로 질문과 답의 목록이다. 그대로 FAQPage 로 알린다.
-  const faq = serviceFaq(service, `${SITE.url}/service/${service.id}/`);
+  const faq = serviceFaq(service, `${SITE.url}/service/${service.id}/`, {
+    url: SITE.url,
+    name: SITE.name,
+  });
   const answer = answerSentence(service);
 
   return (
@@ -371,7 +374,12 @@ function Record({
   const topic = v.tone === 'none' ? REPORT_TOPIC[v.key] : undefined;
 
   return (
-    <article className={`signal t-${v.tone}`}>
+    /*
+     * id 는 시그널 키 그대로다. 이 페이지의 값 하나를 정확히 가리킬 수 있어야
+     * 인용하는 쪽이 "카카오T 페이지" 가 아니라 "카카오T 의 가입 조건" 을 걸 수 있다.
+     * 주소 규칙은 /llms.txt 와 API 의 각 시그널 source_url 에도 같은 모양으로 적혀 있다.
+     */
+    <article id={v.key} className={`signal t-${v.tone}`}>
       <div className="signal-head">
         <h2 className="signal-q">
           <T {...v.question} />

@@ -21,6 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE.url}/changes/`, lastModified: runAt, changeFrequency: 'daily', priority: 0.8 },
     { url: `${SITE.url}/method/`, lastModified: runAt, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE.url}/api-docs/`, lastModified: runAt, changeFrequency: 'monthly', priority: 0.6 },
+    /*
+     * llms.txt 도 넣는다. 이 파일은 어디에서도 링크되지 않아 사실상 주소를 아는
+     * 사람만 열 수 있었다 — robots.txt 에도 sitemap 에도 <link> 에도 없었다.
+     * 통째로 인용되라고 만든 파일이 발견되지 않으면 만든 값어치가 없다.
+     */
+    { url: `${SITE.url}/llms.txt`, lastModified: runAt, changeFrequency: 'daily', priority: 0.5 },
   ];
 
   for (const s of services) {

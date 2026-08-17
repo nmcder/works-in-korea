@@ -37,7 +37,15 @@ export const SIGNAL_KEYS = [
 ] as const;
 export type SignalKey = (typeof SIGNAL_KEYS)[number];
 
-export type Confidence = 'auto' | 'community' | 'conflicting' | 'unknown';
+/**
+ * ⚠️ `src/types.ts` 의 같은 이름과 짝이다. 한쪽만 고치면 조용히 어긋난다.
+ *
+ * 실제로 어긋나 있었다. 엔진에 `manual` 을 더한 날 이 파일을 안 고쳤고, 데이터에는
+ * manual 값이 60건 넘게 들어와 있었는데 타입에는 없었다. 걸리지 않은 이유는 이
+ * 사이트가 JSON 을 읽어 `Service` 로 단언(cast)하기 때문이다 — 타입 검사가 닿지 않는다.
+ * 화면은 `manual` 을 그릴 줄 알았으므로 눈에는 멀쩡해 보였다.
+ */
+export type Confidence = 'auto' | 'manual' | 'community' | 'conflicting' | 'unknown';
 
 export interface Signal<V = unknown> {
   value: V;

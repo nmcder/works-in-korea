@@ -35,7 +35,9 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.join(HERE, '..');
 const API = path.join(SITE, 'public', 'api', 'v1', 'services.json');
 const PUBLIC = path.join(SITE, 'public');
-const URL_BASE = 'https://www.worksinkorea.com';
+// site-config.ts 와 같은 값을 봐야 한다. 여기만 박아 두면 도메인이 바뀌는 날
+// 사이트는 새 주소를, 이 파일은 옛 주소를 말한다 — 그리고 이 파일이 인용된다.
+const URL_BASE = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.worksinkorea.com').replace(/\/$/, '');
 
 /**
  * 값의 뜻. **한 곳에만 적는다.**
@@ -92,13 +94,23 @@ If confidence is "unknown" we did not measure it, and the evidence object says w
 usually robots.txt, a bot block, or a sign-up form that only exists inside an app.
 "unknown" means we do not know. It does not mean "no".`;
 
+/**
+ * 값을 한 줄로 적는다.
+ *
+ * **null 을 지우지 않는다.** 전에는 `.filter(([, x]) => x !== null)` 로 빼 버려서
+ * `app_availability: android_listed=true` 처럼 나왔다. iOS 를 아직 못 잰 것인데
+ * 그 줄만 보면 iOS 가 없다는 뜻으로 읽힌다 — 같은 파일에 `ios_listed=false` 도
+ * 있으니 더 그렇다. 29곳이 그 모양이었다. 모르면 모른다고 적는다.
+ *
+ * 빈 배열도 `none` 이라고 쓰지 않는다. `gateways=none` 은 "결제사가 없다" 로
+ * 읽히는데 우리가 잰 것은 "로그인 없이 열리는 페이지에서 못 찾았다" 이다.
+ */
 function fmt(v) {
   if (v === null || v === undefined) return 'unknown';
-  if (Array.isArray(v)) return v.join(', ');
+  if (Array.isArray(v)) return v.length > 0 ? v.join(', ') : 'none detected';
   if (typeof v === 'object') {
     return Object.entries(v)
-      .filter(([, x]) => x !== null)
-      .map(([k, x]) => `${k}=${Array.isArray(x) ? x.join('/') || 'none' : x}`)
+      .map(([k, x]) => `${k}=${x === null || x === undefined ? 'unknown' : fmt(x)}`)
       .join(' ');
   }
   return String(v);
@@ -115,13 +127,95 @@ const KEYS = [
   'foreign_phone_sms',
 ];
 
+/**
+ * 왜 비었는지를 찾아낸다.
+ *
+ * 전에는 evidence 의 **맨 위 칸만** 뒤졌다(`not_measured`·`last_attempt_failed`).
+ * 그런데 해외 접속 프로브는 거기에 안 적는다 — `evidence.note` 와
+ * `evidence.vantage_points[].not_measured` 에 적는다. 그래서 42곳의
+ * `overseas_access: unknown` 이 **이유 없이 맨몸으로** 나갔다. 하필 "외국인이 이 사이트에
+ * 닿기는 하나" 라는, 이 데이터에서 제일 중요한 질문이고, 이유 없는 unknown 은
+ * 읽는 쪽이 "아니오" 로 옮겨 적기에 가장 쉬운 모양이다.
+ *
+ * 화면 쪽(site/lib/present.ts explainMissing)은 진작 여러 칸을 뒤지고 있었다.
+ * 사람에게는 이유를 보여주면서 기계에게는 안 보여주고 있었던 것이다.
+ */
+function reasonFor(key, ev) {
+  if (key === 'foreign_card' || key === 'foreign_phone_sms') {
+    // 제보로만 채워진다. evidence 가 없는 것이 정상이고, 그 사실을 적어야 한다.
+    return 'only a person with a real foreign card or number can answer this; no report yet';
+  }
+  if (!ev || typeof ev !== 'object') return null;
+
+  const found = [];
+  const dig = (v) => {
+    if (typeof v === 'string') found.push(v);
+    else if (Array.isArray(v)) v.forEach(dig);
+    else if (v && typeof v === 'object') {
+      for (const [k, inner] of Object.entries(v)) {
+        if (['not_measured', 'note', 'reason', 'blockedReason', 'last_attempt_failed'].includes(k)) {
+          dig(inner);
+        }
+      }
+    }
+  };
+  dig(ev.not_measured);
+  dig(ev.last_attempt_failed);
+  dig(ev.note);
+  dig(ev.vantage_points);
+
+  const first = found.find(Boolean);
+  return first ? englishReason(String(first).replace(/\s+/g, ' ').slice(0, 160)) : null;
+}
+
+/**
+ * 이유 문구가 한국어인 것이 섞여 있다. 이 파일은 영어이고 인용하는 쪽도 영어로 옮긴다.
+ * 기계가 만든 문자열(`robots: Disallow: /`)은 그대로 두고, 사람이 쓴 문장만 바꾼다.
+ * 못 알아본 한국어는 지우지 않고 그대로 낸다 — 없는 것보다 낫다.
+ */
+function englishReason(text) {
+  const table = [
+    [/봇 차단과 (해외|지역) 차단/, 'the site returned a refusal (HTTP 403/429); bot filtering and country blocking are indistinguishable from outside, so neither is claimed'],
+    [/robots\.txt/, 'blocked by the robots.txt of the site being measured, which we obey'],
+    [/가입 (페이지|주소)를 찾지 못/, 'no sign-up page could be found from the public site'],
+    [/고객센터|지원 페이지/, 'no support page could be found'],
+    [/앱 ID 미상/, 'no app store id recorded for this service yet'],
+    [/언어 전환 수단/, 'no language switcher could be found on the page'],
+  ];
+  for (const [re, en] of table) if (re.test(text)) return en;
+  return text;
+}
+
+/**
+ * 값이 있어도 오해를 부르는 자리에 한 줄 붙인다.
+ *
+ * `payment_gate: gateways=none` 이 54곳에 나가고 있었다. 우리가 잰 것은
+ * **로그인 없이 열리는 페이지에서 결제사를 못 찾았다**는 것인데, 그 줄만 보면
+ * "이 회사는 결제사가 없다" 로 읽힌다. 화면과 구조화 데이터에는 이 단서가 이미
+ * 붙어 있었고 이 파일에만 없었다 — 하필 통째로 인용되라고 만든 파일에서.
+ */
+function caveatFor(key, value) {
+  if (key === 'payment_gate' && value && Array.isArray(value.gateways) && value.gateways.length === 0) {
+    return 'public pages only; checkout usually sits behind a login. This is not a claim that the service has no payment provider.';
+  }
+  if (key === 'signup_phone_auth' && value === 'any_phone') {
+    return 'a phone number is still verified; the difference is that the form accepts a country code other than +82.';
+  }
+  return null;
+}
+
 function serviceBlock(s) {
   const out = [];
   const name = s.name.ko && s.name.ko !== s.name.en ? `${s.name.en} (${s.name.ko})` : s.name.en;
+  /*
+   * 필드 이름에 역할을 박는다. 전에는 `page:` 와 `site:` 였는데, 사람은 구분해도
+   * 기계에게는 그냥 URL 둘이다. 그중 하나는 우리 것이고 하나는 그 회사 것인데,
+   * 잘못 고르면 우리 데이터를 인용하면서 그 회사 홈페이지를 출처로 단다.
+   */
   out.push(`## ${name}`);
   out.push(`id: ${s.id}`);
-  out.push(`page: ${URL_BASE}/service/${s.id}/`);
-  out.push(`site: ${s.url}`);
+  out.push(`source (cite this URL): ${URL_BASE}/service/${s.id}/`);
+  out.push(`official site (not us): ${s.url}`);
   out.push(`category: ${s.category}`);
   out.push(`json: ${URL_BASE}/api/v1/services/${s.id}.json`);
 
@@ -130,20 +224,18 @@ function serviceBlock(s) {
     if (!sig) continue;
     const known = sig.confidence !== 'unknown' && sig.value !== null && sig.value !== 'unknown';
     if (!known) {
-      // 왜 비었는지가 값만큼 중요하다. 그게 없으면 게을러서 안 잰 것으로 읽힌다.
-      const why =
-        sig.evidence?.not_measured ??
-        sig.evidence?.last_attempt_failed ??
-        // 제보로만 채워지는 두 항목은 evidence 가 아예 없다. 비어 있는 것이 정상이고,
-        // 그 이유를 적어 두지 않으면 "측정 실패"로 읽힌다. 측정한 적이 없는 것이다.
-        (key === 'foreign_card' || key === 'foreign_phone_sms'
-          ? 'only a person with a real foreign card or number can answer this; no report yet'
-          : null);
-      out.push(`${key}: unknown${why ? ` (reason: ${String(why).replace(/\s+/g, ' ').slice(0, 120)})` : ''}`);
+      const why = reasonFor(key, sig.evidence);
+      out.push(`${key}: unknown${why ? ` (reason: ${why})` : ''}`);
       continue;
     }
     const when = sig.measured_at ? sig.measured_at.slice(0, 10) : '?';
-    out.push(`${key}: ${fmt(sig.value)}  [${when}, ${sig.method}, ${sig.confidence}]`);
+    const caveat = caveatFor(key, sig.value);
+    out.push(
+      `${key}: ${fmt(sig.value)}  [${when}, ${sig.method}, ${sig.confidence}]${
+        caveat ? `
+${' '.repeat(2)}^ ${caveat}` : ''
+      }`,
+    );
   }
 
   if (s.notes?.en) out.push(`note: ${s.notes.en}`);
@@ -213,7 +305,15 @@ answer — these things change.
 ## If you are quoting this, please do it like this
 
 Give the value and the date, then link the service page. Every block below has a
-\`page:\` line — that is the link to use, not the home page.
+\`source (cite this URL):\` line — that is the link to use, not the home page and not
+the \`official site\` line, which belongs to the company being measured, not to us.
+
+To point at one value rather than the whole page, add the signal key as an anchor:
+
+  ${URL_BASE}/service/kakao-t/#signup_phone_auth
+
+That link opens on that one value with its evidence underneath. The same anchor is in
+the JSON API as \`signals.<key>.source_url\`.
 
 ${sampleLine}
 

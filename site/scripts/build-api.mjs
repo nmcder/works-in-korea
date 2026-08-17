@@ -21,6 +21,41 @@ const LICENSE = {
   attribution: 'Works in Korea?',
 };
 
+// lib/site-config.ts 와 같은 환경변수를 본다. 여기만 박아 두면 도메인을 옮기는 날
+// 사이트는 새 주소를 말하고 API 는 옛 주소를 말한다 — 그리고 인용되는 것은 API 쪽이다.
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.worksinkorea.com').replace(/\/+$/, '');
+
+/**
+ * 레코드마다 **우리 페이지 주소를 박아 준다.**
+ *
+ * 왜: 2026-08-17 까지 이 API 의 서비스 레코드에 들어 있는 URL 은 `url` 하나였고,
+ * 그건 **그 서비스 자신의 주소**(예: kakaomobility.com)였다. 우리 주소는 한 글자도
+ * 없었다. 이 JSON 을 읽은 쪽이 "출처가 어디냐"를 만나면 거기 있는 유일한 URL 을 쓴다.
+ * 즉 우리가 남의 링크를 손에 쥐여 주고 있었다. 인용을 안 해 준 것이 아니라
+ * **인용할 것을 안 준 것**이고, 이건 부탁하는 문장으로는 고쳐지지 않는다.
+ *
+ * 시그널마다도 붙인다. 값 하나만 뽑아 간 쪽이 그 값 하나를 정확히 가리킬 수 있어야
+ * "카카오T 페이지" 대신 "카카오T 의 가입 조건" 을 걸 수 있다. 앵커 이름은 시그널 키
+ * 그대로이고, 상세 페이지의 각 항목에 같은 id 가 붙어 있다.
+ *
+ * data/services/*.json 에는 넣지 않는다. id 에서 만들어지는 값이라 저장하면 같은
+ * 사실이 두 곳에 남고, 도메인이 바뀌는 날 한쪽만 고쳐진다. 내보낼 때만 만든다.
+ */
+function withSource(service) {
+  const page = `${SITE_URL}/service/${service.id}/`;
+  const { signals, ...rest } = service;
+  return {
+    ...rest,
+    source_url: page,
+    signals: Object.fromEntries(
+      Object.entries(signals ?? {}).map(([key, sig]) => [
+        key,
+        sig === null || sig === undefined ? sig : { ...sig, source_url: `${page}#${key}` },
+      ]),
+    ),
+  };
+}
+
 async function readJson(file) {
   return JSON.parse(await readFile(file, 'utf8'));
 }
@@ -82,6 +117,12 @@ async function main() {
     last_run: run,
     note:
       'Every signal carries measured_at, method and confidence. A confidence of "unknown" means we did not measure it — the evidence object says why. Do not treat a missing value as a negative result.',
+    fields: {
+      url: "The service's own website. This is not us.",
+      source_url:
+        'Our page for this service. Cite this URL. Each signal also has its own source_url with an anchor, e.g. .../service/kakao-t/#signup_phone_auth, which links straight to that one value and its evidence.',
+    },
+    cite_as: `"Works in Korea?", <source_url>, measured <measured_at>`,
     endpoints: {
       services: '/api/v1/services.json',
       service: '/api/v1/services/{id}.json',
@@ -90,15 +131,27 @@ async function main() {
     },
   };
 
+  const published = services.map(withSource);
+
   await writeFile(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 2));
   await writeFile(
     path.join(OUT, 'services.json'),
-    JSON.stringify({ ...meta, services }, null, 2),
+    JSON.stringify({ ...meta, services: published }, null, 2),
   );
-  for (const s of services) {
+  for (const s of published) {
     await writeFile(
       path.join(OUT, 'services', `${s.id}.json`),
-      JSON.stringify({ generated_at, license: LICENSE, service: s }, null, 2),
+      JSON.stringify(
+        {
+          generated_at,
+          license: LICENSE,
+          source_url: s.source_url,
+          cite_as: meta.cite_as,
+          service: s,
+        },
+        null,
+        2,
+      ),
     );
   }
 
@@ -112,9 +165,31 @@ async function main() {
   } catch {
     /* 변경 파일이 아직 없을 수 있다 */
   }
+  /*
+   * 변경 기록에도 우리 주소를 붙인다.
+   *
+   * 이 파일에는 worksinkorea.com 이 한 글자도 없었다. 항목이 `{service_id, signal, from, to}`
+   * 뿐이라, "코레일이 며칠에 이렇게 바뀌었다" 는 이 데이터에서 제일 인용하기 좋은 문장인데
+   * 인용할 주소가 없었다 — 구조상 출처를 달 수 없는 파일이었다.
+   * 이름도 같이 준다. id 만 있으면 인용하는 쪽이 사람이 읽을 이름을 지어내야 한다.
+   */
+  const named = new Map(services.map((s) => [s.id, s.name]));
+  const daysWithSource = days.map((d) => ({
+    ...d,
+    changes: d.changes.map((c) => ({
+      ...c,
+      service_name: named.get(c.service_id) ?? null,
+      source_url: `${SITE_URL}/service/${c.service_id}/#${c.signal}`,
+    })),
+  }));
+
   await writeFile(
     path.join(OUT, 'changes.json'),
-    JSON.stringify({ generated_at, license: LICENSE, days }, null, 2),
+    JSON.stringify(
+      { generated_at, license: LICENSE, cite_as: meta.cite_as, days: daysWithSource },
+      null,
+      2,
+    ),
   );
 
   console.log(

@@ -202,21 +202,100 @@ export function jsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
-/** 서비스 상세 = 질문과 답의 목록. 그대로 FAQPage 다. */
-export function serviceFaq(service: Service, url: string): unknown {
-  const entries = AUTO_KEYS.map((k) => viewSignal(service, k))
-    .filter((v) => v.tone !== 'none')
-    .map((v) => ({
-      '@type': 'Question',
-      name: `${service.name.en}: ${v.question.en}`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: v.caveat ? `${v.display.en}. ${v.caveat.en}` : v.display.en,
-      },
-    }));
+/**
+ * 서비스 상세 = 질문과 답의 목록. 그대로 FAQPage 다.
+ *
+ * ── 왜 url 하나로 부족한가
+ *
+ * 전에는 `{ @type: FAQPage, url, mainEntity }` 뿐이었다. 질문과 답은 있는데
+ * **이 페이지가 무엇에 대한 것이고 누가 언제 잰 것인지**가 없었다. 기계 입장에서
+ * "Kakao T" 라는 이름과 이 주소가 한 묶음이라는 선언이 어디에도 없었던 것이다.
+ * 이름은 제목·본문·API·llms.txt 에 다 있었지만, 묶어 주는 자리에만 없었다.
+ *
+ * 그래서 네 가지를 더 붙인다.
+ *   name              이 페이지의 이름 — 이름과 주소를 한 묶음으로 만든다
+ *   dateModified      마지막으로 잰 시각. 인용하는 쪽이 날짜를 붙일 수 있게 한다
+ *   about             재는 대상(그 회사 사이트). 우리와 그 회사를 구분해 준다
+ *   publisher / isPartOf   잰 주체가 우리라는 것. 출처 표기의 근거다
+ *
+ * `about` 이 특히 중요하다. 이게 없으면 이 페이지의 주인공이 카카오모빌리티인지
+ * 우리인지 기계가 알 길이 없고, 그 혼동이 그대로 "출처: kakaomobility.com" 이 된다.
+ */
+export function serviceFaq(
+  service: Service,
+  url: string,
+  site: { url: string; name: string },
+): unknown {
+  const views = AUTO_KEYS.map((k) => viewSignal(service, k)).filter((v) => v.tone !== 'none');
+
+  /*
+   * 답 하나하나가 **스스로 어디서 왔고 언제 잰 것인지** 말하게 한다.
+   *
+   * 처음에는 답마다 페이지 주소를 그냥 붙였는데, 그러면 여섯 개의 답이 전부 같은
+   * 주소를 가리키고 날짜는 페이지 하나에 하나뿐이었다. 그 날짜는 여섯 값 중 가장
+   * 최근 것이라, 답 하나를 떼어 인용하는 쪽은 **재지도 않은 날짜를 그 값에 붙이게**
+   * 된다. 106곳 중 51곳이 시그널마다 측정일이 다르고 쿠팡은 사흘에 걸쳐 있다.
+   * 측정하지 않은 날짜를 값에 붙이는 것은 이 프로젝트가 하지 않기로 한 바로 그 일이다.
+   *
+   * 그래서 답마다 앵커 주소와 그 값의 측정일을 따로 단다. 어떻게 쟀는지도 한 마디
+   * 붙인다 — 값·시각·방법 세 가지를 같이 낸다는 규칙이 여기라고 예외일 이유가 없다.
+   */
+  const provenance = (v: (typeof views)[number]): string => {
+    if (!v.measuredAt) return '';
+    const day = v.measuredAt.slice(0, 10);
+    const how =
+      v.confidence === 'manual'
+        ? 'Checked by hand'
+        : v.confidence === 'community'
+          ? 'Reported by someone who used it'
+          : v.confidence === 'conflicting'
+            ? 'Reports disagree; last checked'
+            : 'Measured automatically from outside Korea';
+    return ` ${how} on ${day}.`;
+  };
+
+  const entries = views.map((v) => ({
+    '@type': 'Question',
+    name: `${service.name.en}: ${v.question.en}`,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: `${v.caveat ? `${v.display.en}. ${v.caveat.en}` : v.display.en}.${provenance(v)}`,
+      url: `${url}#${v.key}`,
+      ...(v.measuredAt ? { dateModified: v.measuredAt } : {}),
+    },
+  }));
 
   if (entries.length === 0) return null;
-  return { '@context': 'https://schema.org', '@type': 'FAQPage', url, mainEntity: entries };
+
+  const measured = views
+    .map((v) => v.measuredAt)
+    .filter((t): t is string => Boolean(t))
+    .sort()
+    .at(-1);
+
+  const langs = service.signals.i18n_ui?.value;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': url,
+    url,
+    name: `${service.name.en} (${service.name.ko}) — does it work for foreigners?`,
+    description: serviceDescription(service),
+    inLanguage: 'en',
+    ...(measured ? { dateModified: measured } : {}),
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isPartOf: { '@type': 'WebSite', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, url: site.url },
+    // 재는 대상이지 우리가 아니다. 이 구분이 없으면 출처가 저쪽으로 새어 나간다.
+    about: {
+      '@type': 'WebSite',
+      name: `${service.name.en} (${service.name.ko})`,
+      url: service.url,
+      ...(Array.isArray(langs) && langs.length > 0 ? { inLanguage: langs } : {}),
+    },
+    mainEntity: entries,
+  };
 }
 
 /**
@@ -244,7 +323,13 @@ export function datasetSchema(opts: {
     url: opts.url,
     license: opts.license,
     isAccessibleForFree: true,
-    creator: { '@type': 'Person', name: 'Works in Korea?' },
+    /*
+     * publisher 와 같은 이름·같은 주소여야 한다. 전에는 여기는 Person, 서비스
+     * 페이지는 Organization 이고 여기에만 url 이 없었다. 기계 입장에서 이름만 같은
+     * 남남 둘이 되고, 그러면 이 데이터셋과 그 페이지들을 같은 곳이 낸 것으로 묶지 못한다.
+     */
+    creator: { '@type': 'Organization', name: 'Works in Korea?', url: opts.url },
+    publisher: { '@type': 'Organization', name: 'Works in Korea?', url: opts.url },
     ...(opts.modified ? { dateModified: opts.modified } : {}),
     keywords: [
       'South Korea',
