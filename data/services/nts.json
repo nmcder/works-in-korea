@@ -46,7 +46,9 @@
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
-        }
+        },
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "i18n_ui": {
@@ -90,7 +92,9 @@
       "evidence": {
         "not_measured": "앱 ID 미상",
         "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
-        "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
+        "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "앱 ID 미상"
       }
     },
     "payment_gate": {
@@ -110,7 +114,9 @@
             "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
     "support_en": {

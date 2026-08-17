@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.gsshop.com/",
             "redirected": false,
-            "elapsed_ms": 2134,
+            "elapsed_ms": 2295,
             "body_sha256": "c4c77c671105e74a1a7c320b159872bb484a2ebe5fedd8befb3387d1ff7fc9d5",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -45,6 +45,11 @@
           "us·Arizona": {
             "value": "ok",
             "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-17T18:34:29.140Z",
             "note": null
           }
         }
@@ -86,7 +91,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -108,7 +113,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",

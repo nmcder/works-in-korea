@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wavve.com/",
             "redirected": false,
-            "elapsed_ms": 2504,
+            "elapsed_ms": 2818,
             "body_sha256": "f077ecf259b4fd6306b5e2451b71e3387bc079b0bb96710fccfde8925f34e547",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -45,6 +45,11 @@
           "us·Arizona": {
             "value": "ok",
             "at": "2026-08-16T18:23:49.790Z",
+            "note": null
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-17T18:34:29.140Z",
             "note": null
           }
         }
@@ -86,7 +91,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -115,7 +120,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

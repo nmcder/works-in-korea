@@ -46,7 +46,9 @@
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
-        }
+        },
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "i18n_ui": {
@@ -75,12 +77,14 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.126,
         "hangul_char_ratio": 0.541,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
       }
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -136,7 +140,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -170,7 +174,9 @@
             "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
     "support_en": {

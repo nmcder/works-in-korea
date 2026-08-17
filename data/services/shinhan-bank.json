@@ -19,32 +19,38 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": "ok",
+      "measured_at": "2026-08-17T18:34:29.140Z",
+      "first_seen_at": "2026-08-17T18:34:29.140Z",
+      "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": null,
-            "final_url": null,
+            "http_status": 200,
+            "final_url": "https://bank.shinhan.com/",
             "redirected": false,
-            "elapsed_ms": 16770,
-            "body_sha256": null,
-            "content_type": null,
-            "not_measured": "robots: robots-unavailable(ECONNREFUSED)"
+            "elapsed_ms": 4254,
+            "body_sha256": "d23f48aa5b0d3d4e0ff83a22c49dcc5b3e7cb9ac77c00cb6bec94ea726499e07",
+            "content_type": "text/html",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "robots: robots-unavailable(ECONNREFUSED)",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: robots-unavailable(ECONNREFUSED)"
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-17T18:34:29.140Z",
+            "note": null
           }
         }
       }
@@ -114,8 +120,8 @@
           }
         ],
         "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-08-16T18:32:56.752Z",
-        "last_attempt_failed": "robots: robots-unavailable(robots.txt 응답 599)"
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
     "app_availability": {
@@ -124,7 +130,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -149,23 +155,30 @@
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-08-17T18:34:29.140Z",
+      "first_seen_at": "2026-08-17T18:34:29.140Z",
+      "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://bank.shinhan.com",
-            "status": null,
-            "scanned": false,
-            "reason": "robots: robots-unavailable(ECONNREFUSED)"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {

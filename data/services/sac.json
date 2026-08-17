@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.sac.or.kr/site/main/home",
             "redirected": true,
-            "elapsed_ms": 4859,
-            "body_sha256": "d43d20da9b95b2ac82f39edc1ec82bc621c09ce738deae5a4b523c333b0606fb",
+            "elapsed_ms": 5069,
+            "body_sha256": "0bd10dc6d7eccd367a4dc90304d115950a341d7b80f6fd50e4a7912ffb17424b",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,6 +46,11 @@
             "value": "ok",
             "at": "2026-08-16T18:23:49.790Z",
             "note": null
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-17T18:34:29.140Z",
+            "note": null
           }
         }
       }
@@ -55,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -109,7 +114,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -138,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

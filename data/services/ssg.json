@@ -46,7 +46,9 @@
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: Disallow: /"
           }
-        }
+        },
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "i18n_ui": {
@@ -59,33 +61,49 @@
       "evidence": {
         "not_measured": "robots: Disallow: /",
         "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다).",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "robots: Disallow: /"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "required",
+      "measured_at": "2026-08-17T18:34:29.140Z",
+      "first_seen_at": "2026-08-17T18:34:29.140Z",
+      "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
+        "signup_url": "https://member.ssg.com/member/join/auth.ssg",
+        "final_url": "https://member.ssg.com/member/join/auth.ssg",
+        "http_status": 200,
+        "page_kind": "combined",
+        "signup_markers": [
+          "회원가입"
+        ],
+        "form_input_count": 7,
+        "matched_vendors": [
           {
-            "url": "https://www.ssg.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://www.ssg.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
+            "id": "generic-phone-auth",
+            "name": "일반 휴대폰 본인인증 문구",
+            "matched": "본인인증",
+            "via": "text"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "strong_url_matches": 0,
+        "alternative_signup_markers": {
+          "text": [],
+          "url": []
+        },
+        "attempts": [
+          {
+            "url": "https://member.ssg.com/member/join/auth.ssg",
+            "status": null,
+            "used": true,
+            "reason": "hints.signup_url"
+          }
+        ],
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
@@ -94,7 +112,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -135,7 +153,9 @@
             "reason": "robots: Disallow: /"
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
     "support_en": {
@@ -147,7 +167,9 @@
       "confidence": "unknown",
       "evidence": {
         "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "hint": "hints.support_url 을 채우면 측정 가능해진다",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "고객지원 페이지를 찾지 못함"
       }
     },
     "foreign_card": {

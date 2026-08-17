@@ -46,7 +46,9 @@
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: Disallow: /"
           }
-        }
+        },
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "i18n_ui": {
@@ -59,7 +61,9 @@
       "evidence": {
         "not_measured": "robots: Disallow: /",
         "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다).",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "robots: Disallow: /"
       }
     },
     "signup_phone_auth": {
@@ -85,7 +89,9 @@
             "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "가입 페이지를 찾지 못함"
       }
     },
     "app_availability": {
@@ -94,7 +100,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -135,7 +141,9 @@
             "reason": "robots: Disallow: /"
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다."
+        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
     "support_en": {
@@ -147,7 +155,9 @@
       "confidence": "unknown",
       "evidence": {
         "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다"
+        "hint": "hints.support_url 을 채우면 측정 가능해진다",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "고객지원 페이지를 찾지 못함"
       }
     },
     "foreign_card": {

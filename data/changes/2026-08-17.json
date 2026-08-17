@@ -1,0 +1,109 @@
+{
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T18:34:29.140Z",
+  "changes": [
+    {
+      "service_id": "amc",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hana-bank",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "naver",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "i18n_ui",
+      "from": null,
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "shinhan-bank",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ssg",
+      "signal": "signup_phone_auth",
+      "from": "unknown",
+      "to": "required",
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "toss",
+      "signal": "support_en",
+      "from": "unknown",
+      "to": "no",
+      "changed_at": "2026-08-17T18:34:29.140Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,10 +31,10 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://toss.im/",
-            "redirected": false,
-            "elapsed_ms": 2830,
-            "body_sha256": "a15b609fab69807c8190534196bc0cee510cedd6ef7cbe7d0193ae8983d9203d",
+            "final_url": "https://toss.im/en-us",
+            "redirected": true,
+            "elapsed_ms": 3806,
+            "body_sha256": "f45e26930ca4d7c52821aea92f9754a8bc86a0f50954a048003345d34d1d9db5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -46,6 +46,11 @@
             "value": "ok",
             "at": "2026-08-16T18:23:49.790Z",
             "note": null
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-17T18:34:29.140Z",
+            "note": null
           }
         }
       }
@@ -55,29 +60,30 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
-        "declared_html_lang": "ko",
+        "declared_html_lang": "en-us",
         "hreflang": [],
-        "language_switcher_links": {
-          "en": [
-            "https://toss.im/en"
-          ]
-        },
+        "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "https://toss.im/en",
             "status": 200,
-            "ok": true
+            "ok": false
+          },
+          {
+            "url": "https://toss.im/en/",
+            "status": 200,
+            "ok": false
           }
         ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0.012,
-        "hangul_char_ratio": 0.678,
+        "accept_language_responsive": true,
+        "latin_char_ratio": 0.677,
+        "hangul_char_ratio": 0.022,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -117,7 +123,9 @@
             "used": false
           }
         ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
+        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_failed": "가입 페이지를 찾지 못함"
       }
     },
     "app_availability": {
@@ -126,7 +134,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -150,7 +158,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T18:34:29.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -180,49 +188,38 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": "no",
+      "measured_at": "2026-08-17T18:34:29.140Z",
+      "first_seen_at": "2026-08-17T18:34:29.140Z",
+      "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:support_en",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "pages": [
           {
-            "url": "https://support.toss.im/",
+            "url": "https://support.toss.im/faq/207",
             "status": 200,
-            "chars": 962
+            "chars": 1894
           },
           {
             "url": "https://toss.im",
             "status": 200,
-            "chars": 2525
-          },
-          {
-            "url": "https://support.toss.im/",
-            "status": 200,
-            "chars": 962
-          },
-          {
-            "url": "https://support.toss.im/faq",
-            "status": 200,
-            "chars": 572
+            "chars": 93
           }
         ],
-        "content_sha256": "30708f24acc71746fcc8c25a33c82df3eee6ae4ce09f21e50452969f3a091b62",
+        "content_sha256": "601306cdf3dd691630d632fa5cc6f93912702df0996371470cd60d5dc478e419",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 전화: 1599-4905(24시간 연중무휴) 이메일: support@toss.im",
-          "reason": "전화, 이메일, 채팅 등 지원 채널은 명시되어 있으나 영어 응대 가능 여부에 대한 언급은 없어 판단할 근거가 부족함."
+          "value": "no",
+          "quoted_evidence": "고객센터 전화: 1599-4905 (24시간 연중무휴) 이메일(고객전용): support@toss.im",
+          "reason": "고객센터 채널은 명시되어 있으나 모두 한국어 전화상담(카카오톡 검색 등)이며 영어 전용 문의 채널에 대한 언급이 없음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.029,
+          "latin_ratio": 0.061,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {
