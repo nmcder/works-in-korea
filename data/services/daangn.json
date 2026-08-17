@@ -89,42 +89,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.daangn.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.daangn.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.daangn.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.daangn.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.daangn.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.daangn.com/wv/faqs?q=%EB%B3%B8%EC%9D%B8%EC%9D%B8%EC%A6%9D",
+        "saw": "당근 공식 고객센터 문서를 열어 확인함. '본인인증은 통신사에 등록 된 휴대폰 번호 인증을 통해서' 하며, '최초 1회 — 소셜 로그인(구글·카카오·네이버) 또는 이메일로 로그인할 때 휴대폰 본인인증을 등록해요' 라고 되어 있어 소셜·이메일로 들어와도 휴대폰 인증을 피할 수 없다. 인증 창구는 이동통신사(SKT, KT, LG U+) 뿐이고, 외국인은 '통신사에 외국인 등록번호가 등록되어있다면 본인인증이 가능' 하다고 적혀 있다. 즉 한국 통신사에 개통된 본인 명의 번호가 있어야 한다.",
+        "recorded_at": "2026-08-17T01:26:57.384Z"
       }
     },
     "app_availability": {

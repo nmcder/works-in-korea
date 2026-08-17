@@ -67,29 +67,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.wooribank.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(ECONNRESET)"
-          },
-          {
-            "url": "https://www.wooribank.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://spot.wooribank.com/pot/Dream?withyou=CQIBG0011",
+        "saw": "우리은행 공식 '홈페이지 가입고객 안내' 를 열어 확인함. STEP 02 가 '계좌번호, 계좌비밀번호, 생년월일(8자리)를 등록 후 인증서 또는 본인명의 휴대폰 인증' 이다. 휴대폰 말고 인증서 길이 하나 더 있지만 둘 다 한국 실명확인 기반이고 이메일·여권 같은 대체 경로는 없다. 시작하려면 이미 우리은행 계좌가 있어야 한다. 별개로 신규회원가입 주소는 보안프로그램 설치 안내 페이지로 넘어간다.",
+        "recorded_at": "2026-08-17T01:26:57.384Z"
       }
     },
     "app_availability": {

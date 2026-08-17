@@ -66,29 +66,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "any_phone",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://gift.kakao.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: Disallow: /"
-          },
-          {
-            "url": "https://gift.kakao.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://accounts.kakao.com/weblogin/create_account",
+        "saw": "가입 주소가 accounts.kakao.com 의 카카오계정 만들기 화면 그대로다. 카카오계정 가입은 휴대폰 인증이 필수지만 국가번호를 +82 말고 다른 나라로 고를 수 있는 것을 카카오맵·카카오T 확인 때 직접 봤고, 카카오 공식 고객센터도 해외번호 가입 시 국가번호를 고르라고 안내한다. 즉 인증은 하되 해외 번호를 받아 준다.",
+        "recorded_at": "2026-08-17T01:26:57.384Z"
       }
     },
     "app_availability": {

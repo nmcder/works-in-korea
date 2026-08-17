@@ -86,42 +86,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "any_phone",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.kakaocorp.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaocorp.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaocorp.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaocorp.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaocorp.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://cs.kakao.com/helps_html/123104314?locale=ko",
+        "saw": "카카오톡 계정은 카카오계정이고, 카카오 공식 고객센터에 '해외번호로 카카오톡을 사용하고 싶어요' 문서가 따로 있다. 국가코드를 제외한 번호를 넣고 SMS 인증을 거치면 되며 가입 시 국가번호를 고르라고 안내한다. 같은 카카오계정 가입 화면에서 국가번호 선택을 카카오맵·카카오T 확인 때 직접 봤다. 인증 자체는 면제되지 않는다.",
+        "recorded_at": "2026-08-17T01:26:57.384Z"
       }
     },
     "app_availability": {

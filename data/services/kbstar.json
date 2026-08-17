@@ -95,23 +95,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
-        "attempts": [
-          {
-            "url": "https://obank.kbstar.com/quics?page=C055068&QSL=F",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://kbthink.com/savings/basics/foreigner-account.html",
+        "saw": "KB국민은행 공식 외국인 안내 문서를 열어 확인함. '국내 통신사를 이용하는 휴대폰 본인확인 절차가 필요해요. 외국 통신사나 선불 유심을 이용 중인 휴대폰으로는 본인확인이 어려우니 유의하세요.' 라고 명시돼 있다. 신분증도 외국인등록증·영주증·국내거소신고증만 되고 외국 여권은 안 된다고 적혀 있다.",
+        "recorded_at": "2026-08-17T01:26:57.384Z"
       }
     },
     "app_availability": {
