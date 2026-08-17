@@ -6,6 +6,7 @@ import { describeRawValue, signalLabel } from '@/lib/present';
 import type { ChangeEntry, SignalKey } from '@/lib/types';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/changes/' },
   title: 'What changed',
   description:
     'A dated log of every measured value that moved, and where each run measured from. Korean services change quietly; this is the record of when they did.',

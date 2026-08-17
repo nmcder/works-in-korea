@@ -5,6 +5,7 @@ import { SITE } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/method/' },
   title: 'How this is measured',
   description:
     'What each value means, how it was produced, what the crawler never does, and where the method is weak.',

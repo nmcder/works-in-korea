@@ -4,6 +4,7 @@ import { Explorer, type HeroStats, type Row } from '@/components/Explorer';
 import { getBlockedServices, getLatestRun, getServices } from '@/lib/data';
 import { getIconIds } from '@/lib/icons';
 import { T, TBlock, type Bi } from '@/lib/i18n';
+import { CATEGORIES } from '@/lib/types';
 import {
   CATEGORY_LABELS,
   HEADLINE_KEYS,
@@ -155,6 +156,54 @@ export default async function HomePage() {
               <T en="How we check →" ko="확인 방법 →" />
             </Link>
           </p>
+        </div>
+      </section>
+
+      {/*
+        전체 목록.
+
+        위쪽 탐색기는 처음에 24곳만 그리고 나머지는 "더 보기" 를 눌러야 나온다.
+        사람에게는 그게 맞지만, 검색엔진과 AI 는 그 버튼을 누르지 않는다. 그래서
+        이 사이트에서 가장 힘 있는 한 장(홈)이 106곳 중 24곳만 가리키고 있었다.
+        나머지 82곳으로 가는 안쪽 길이 sitemap 말고는 없었던 것이다.
+
+        숨겨 두지 않는다 — 안 보이는 글자를 심는 것은 검색엔진이 벌하는 짓이고,
+        무엇보다 이 목록은 사람에게도 쓸모가 있다. 전체를 한눈에 훑거나
+        Ctrl+F 로 찾을 곳이 지금까지 없었다.
+      */}
+      <section className="index-band">
+        <div className="wrap">
+          <h2 className="band-title">
+            <T en="Everything we check" ko="확인하는 곳 전부" />
+          </h2>
+          <TBlock
+            className="band-lede"
+            en={`All ${services.length}, by kind. Each one opens the record of what was measured and when.`}
+            ko={`${services.length}곳 전부입니다. 종류별로 묶었고, 누르면 무엇을 언제 쟀는지가 나옵니다.`}
+          />
+
+          <div className="index-cols">
+            {CATEGORIES.filter((c) => services.some((s) => s.category === c)).map((cat) => (
+              <div key={cat} className="index-group">
+                <h3>
+                  <T {...(CATEGORY_LABELS[cat] ?? { en: cat, ko: cat })} />
+                </h3>
+                <ul>
+                  {services
+                    .filter((s) => s.category === cat)
+                    .sort((a, b) => a.name.en.localeCompare(b.name.en))
+                    .map((s) => (
+                      <li key={s.id}>
+                        <Link href={`/service/${s.id}/`}>
+                          {s.name.en}
+                          {s.name.ko !== s.name.en && <span aria-hidden> · {s.name.ko}</span>}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

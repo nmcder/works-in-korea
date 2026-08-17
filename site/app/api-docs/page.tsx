@@ -4,6 +4,7 @@ import { Only, T, TBlock } from '@/lib/i18n';
 import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/api-docs/' },
   title: 'Get the data',
   description:
     'The whole dataset as plain JSON, free to use under CC BY 4.0. No key, no sign-up, no rate limit.',

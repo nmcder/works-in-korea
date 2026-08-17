@@ -4,7 +4,18 @@ import { ReportForm, type ServiceOption } from '@/components/ReportForm';
 import { T, TBlock } from '@/lib/i18n';
 import { SITE } from '@/lib/site-config';
 
+  /*
+   * 표준 주소를 못 박는다.
+   *
+   * 이 페이지는 주소 뒤에 붙는 값으로 폼을 미리 채운다 —
+   * /report/?service=tossbank&topic=languages 같은 식이고, 상세 페이지 106장이
+   * 저마다 그런 링크를 건다. 조합이 수백 개인데 내용은 전부 같은 한 장이다.
+   * 2026-08-17 Search Console 에서 구글이 실제로 그런 주소를 타고 들어온 것을 확인했다.
+   * 표준 주소를 안 밝히면 구글이 그 수백 장을 저마다 다른 페이지로 보고,
+   * 이제 막 발견되기 시작한 사이트의 크롤링 몫이 거기서 새어 나간다.
+   */
 export const metadata: Metadata = {
+  alternates: { canonical: '/report/' },
   title: 'Report what happened',
   description:
     'Two of the eight questions can only be answered by people who actually tried. No account, no email, no personal details.',

@@ -696,6 +696,74 @@ a {
   background: var(--surface);
   padding: 104px 0;
 }
+
+/*
+ * 전체 목록 — 홈 맨 아래.
+ *
+ * 위 탐색기가 24곳만 그리는 탓에 홈에서 나머지 82곳으로 가는 안쪽 길이 없었다.
+ * 촘촘하게 짜서 106줄이 화면 한두 번 스크롤에 들어오게 한다. 읽으라고 두는 것이
+ * 아니라 **찾으라고** 두는 것이라, 본문보다 작고 조용하다.
+ */
+.index-band {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  padding: 84px 0 96px;
+}
+.index-cols {
+  margin-top: 40px;
+  columns: 4 210px;
+  column-gap: 34px;
+}
+.index-group {
+  break-inside: avoid;
+  margin-bottom: 30px;
+}
+.index-group h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.index-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.index-group li {
+  margin-bottom: 2px;
+}
+.index-group a {
+  display: block;
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 3px 6px;
+  margin-left: -6px;
+  border-radius: var(--r-sm);
+  color: var(--text-2);
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.index-group a:hover {
+  background: var(--surface);
+  color: var(--accent);
+}
+/* 한글 이름은 곁들이는 것이라 더 조용하게 */
+.index-group a span {
+  color: var(--text-3);
+  font-size: 13px;
+}
+@media (max-width: 560px) {
+  .index-band {
+    padding: 64px 0 72px;
+  }
+  .index-cols {
+    columns: 2 140px;
+    column-gap: 20px;
+  }
+}
 .band-title {
   font-size: clamp(1.8rem, 3.6vw, 2.4rem);
   margin-bottom: 18px;
