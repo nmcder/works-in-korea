@@ -150,6 +150,40 @@ async function main(): Promise<void> {
   out.push(`확인한 날짜는 적지 않아도 된다 — 반영하는 날(${today} 같은)로 기록된다.`);
 
   const dest = path.join(ROOT, 'docs', '09-byhand.md');
+
+  /*
+   * **채우던 것을 덮어쓰지 않는다.**
+   *
+   * 이 파일은 운영자가 직접 손으로 채우는 것이라, 다시 만들면 그때까지 적은 것이
+   * 통째로 사라진다. 2026-08-17 에 실제로 그랬다 — 주소 19건을 넣고 작업표를
+   * 새로 만들었는데, 그 사이에 채우고 계시던 답이 전부 날아갔다.
+   *
+   * 한 줄이라도 채워져 있으면 멈춘다. 덮어쓰려면 --force 를 붙이거나,
+   * 먼저 `npm run ingest-manual -- --file=docs/09-byhand.md` 로 채운 것을
+   * 데이터에 넣고 나서 다시 만들면 된다 (그러면 채운 항목은 목록에서 빠진다).
+   */
+  const force = process.argv.includes('--force');
+  if (!force) {
+    try {
+      const existing = await readFile(dest, 'utf8');
+      const filled = existing.split(/\r?\n/).filter((l) => /^답:\s*\S/.test(l)).length;
+      if (filled > 0) {
+        console.error(`⚠️  ${dest}`);
+        console.error(`   이미 ${filled}개 항목이 채워져 있다. 덮어쓰지 않았다.`);
+        console.error('');
+        console.error('   채운 것을 먼저 데이터에 넣으려면:');
+        console.error('     npm run ingest-manual -- --file=docs/09-byhand.md');
+        console.error('   넣고 나서 다시 만들면 채운 항목은 목록에서 빠진다.');
+        console.error('');
+        console.error('   그냥 새로 만들려면 (채운 것은 사라진다): npm run byhand -- --force');
+        process.exitCode = 1;
+        return;
+      }
+    } catch {
+      /* 아직 없으면 그냥 만든다 */
+    }
+  }
+
   await writeFile(dest, `${out.join('\n')}\n`, 'utf8');
 
   const blocked = rows.filter((r) => BLOCKED.has(r.s.id)).length;
