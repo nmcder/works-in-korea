@@ -84,23 +84,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "signup_url": "https://nid.naver.com/account/signup/term",
-        "attempts": [
-          {
-            "url": "https://nid.naver.com/account/signup/term",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ]
+        "checked_by": "operator",
+        "url": "https://nid.naver.com/account/signup/term",
+        "saw": "가입 화면에서 외국인을 선택해 진행할 수는 있으나, 휴대폰 인증 단계에서 통신사가 국내 3사(알뜰폰 포함 6개)만 선택 가능해 사실상 국내 번호가 필요했다. 다만 네이버가 최근 여권 인증 서비스를 도입해 외국인·관광객도 본인인증이 가능해졌다고 안내하고 있어, 그 경로가 실제로 가입까지 이어지는지는 따로 확인이 필요하다.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "app_availability": {
@@ -154,39 +148,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://help.naver.com/service/5627/contents/9148?lang=ko",
-            "status": 200,
-            "chars": 1064
-          },
-          {
-            "url": "https://www.naver.com",
-            "status": 200,
-            "chars": 112
-          }
-        ],
-        "content_sha256": "527bbfe70479e2b7886081ae612f7b3bd77a88bdcdcf56e01904778d02e0ed02",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "한국어 언어선택 한국어 English",
-          "reason": "언어 선택에 English 옵션이 있으나 이는 도움말 페이지 언어 전환일 뿐이며, 실제 상담 채널(전화, 이메일 등)이 영어를 지원하는지에 대한 명확한 언급은 없어 판단 근거가 부족합니다."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.103,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "checked_by": "operator",
+        "url": "https://help.naver.com/service/5627/contents/9148?lang=ko",
+        "saw": "고객센터에 영어 전환 버튼이 있고 영어로 문의할 수 있었다.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "foreign_card": {

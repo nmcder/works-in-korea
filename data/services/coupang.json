@@ -53,43 +53,33 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "http_status=403",
-        "http_status": 403,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.coupang.com",
+        "saw": "영어로 전환하는 수단이 없었다. 전부 한국어.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://login.coupang.com/login/login.pang",
-        "final_url": "https://login.coupang.com/login/login.pang",
-        "http_status": 403,
-        "page_kind": "login",
-        "login_markers": [
-          "login"
-        ],
-        "attempts": [
-          {
-            "url": "https://login.coupang.com/login/login.pang",
-            "status": null,
-            "used": true,
-            "reason": "hints.signup_url"
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://login.coupang.com/login/login.pang",
+        "saw": "가입에 한국 통신사 인증이 필수였다. 다른 경로가 보이지 않았다.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "app_availability": {
@@ -143,33 +133,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:47:26.950Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://mc.coupang.com/ssr/desktop/contact/faq",
-            "status": 403,
-            "chars": 217
-          }
-        ],
-        "content_sha256": "15f3037188f0aaa87e737432d726abcffc258a2b9bfe9b6e0295af6c804279bb",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": null,
-          "reason": "페이지 접근이 차단되어 고객지원 채널 정보 자체를 확인할 수 없음"
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.647,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        "checked_by": "operator",
+        "url": "https://mc.coupang.com/ssr/desktop/contact/faq",
+        "saw": "영어 전환 버튼이 없고, 문의하려면 로그인해야 하는데 한국 번호가 없으면 로그인 자체가 안 된다.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "foreign_card": {

@@ -78,42 +78,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "any_phone",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.kakaopay.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaopay.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaopay.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaopay.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.kakaopay.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://accounts.kakao.com/weblogin/create_account",
+        "saw": "카카오 계정을 쓰며 해외 번호로도 가입이 됐다.",
+        "recorded_at": "2026-08-17T00:41:56.939Z"
       }
     },
     "app_availability": {
