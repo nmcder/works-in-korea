@@ -6,6 +6,7 @@
   "scripts": {
     "api": "node scripts/build-api.mjs",
     "icons": "node scripts/fetch-icons.mjs",
+    "favicon": "node scripts/make-favicon.mjs",
     "predev": "node scripts/build-api.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/build-api.mjs",
