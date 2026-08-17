@@ -967,6 +967,24 @@ a {
   margin-left: 14px;
   letter-spacing: -0.01em;
 }
+/*
+ * 제목 밑 한 문단. 표보다 먼저 읽히는 유일한 문장이라 본문보다 조금 크게 둔다.
+ * 여기에 있는 말이 검색 결과 미리보기로도 나가고 AI 가 인용해 가기도 한다.
+ */
+.record-answer {
+  margin-top: 18px;
+  max-width: 62ch;
+  font-size: 17px;
+  line-height: 1.58;
+  color: var(--text-2);
+  letter-spacing: -0.011em;
+}
+@media (max-width: 640px) {
+  .record-answer {
+    font-size: 16px;
+  }
+}
+
 .record-meta {
   margin-top: 14px;
   display: flex;

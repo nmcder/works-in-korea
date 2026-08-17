@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { AppIcon } from '@/components/AppIcon';
 import { Dot } from '@/components/Dot';
 import { RelativeTime } from '@/components/RelativeTime';
-import { T, type Bi } from '@/lib/i18n';
+import { T, TBlock, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
 import { hasIcon } from '@/lib/icons';
 import {
@@ -14,7 +14,7 @@ import {
   measuredCount,
   viewAll,
 } from '@/lib/present';
-import { jsonLd, serviceDescription, serviceFaq } from '@/lib/seo';
+import { answerSentence, jsonLd, serviceDescription, serviceFaq } from '@/lib/seo';
 import { SITE, ogImage } from '@/lib/site-config';
 import { formatUtc } from '@/lib/time';
 
@@ -167,6 +167,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
   // 이 페이지는 말 그대로 질문과 답의 목록이다. 그대로 FAQPage 로 알린다.
   const faq = serviceFaq(service, `${SITE.url}/service/${service.id}/`);
+  const answer = answerSentence(service);
 
   return (
     <>
@@ -207,6 +208,13 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
               {service.name.ko !== service.name.en && <em>{service.name.ko}</em>}
             </h1>
           </div>
+
+          {/*
+            표 위에 문장을 한 줄 둔다. 사람이 검색창에 치는 것도 문장이고,
+            검색 결과 미리보기와 AI 가 인용해 가는 것도 문장이라, 뽑아 쓸 문장이
+            화면에 없으면 우리가 아무리 정확해도 그 자리에 안 나온다. (lib/seo.ts)
+          */}
+          {answer && <TBlock className="record-answer" {...answer} />}
 
           <div className="record-meta">
             <span>
