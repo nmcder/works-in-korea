@@ -8,9 +8,9 @@
   "category": "shopping",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://nid.naver.com/account/signup",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://help.pay.naver.com/faq/list.help",
     "english_url": null,
     "ios_app_id": "6738063154",
     "android_package": "com.navercorp.navershopping",

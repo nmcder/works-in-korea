@@ -8,7 +8,7 @@
   "category": "healthcare",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://ptl.hira.or.kr/main.do?pageType=regist",
     "checkout_url": null,
     "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
     "english_url": null,

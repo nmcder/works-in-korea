@@ -1,6 +1,6 @@
 # 손으로 확인할 것
 
-`npm run manual-queue` 가 생성. 남은 57곳 · 1묶음.
+`npm run manual-queue` 가 생성. 남은 39곳 · 1묶음.
 
 각 묶음을 `docs/08-manual-prompt.md` 의 프롬프트와 함께 코워크에 준다.
 답을 받으면 `npm run ingest-manual -- --file=<답.json>` 으로 넣는다.
@@ -29,120 +29,6 @@
 
 ```json
 [
-  {
-    "service_id": "11st",
-    "name": "11st",
-    "url": "https://www.11st.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "coupang",
-    "name": "Coupang",
-    "url": "https://www.coupang.com",
-    "signup_url": "https://login.coupang.com/login/login.pang",
-    "support_url": "https://mc.coupang.com/ssr/desktop/contact/faq",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "naver-booking",
-    "name": "Naver Booking",
-    "url": "https://booking.naver.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "naver-map",
-    "name": "Naver Map",
-    "url": "https://map.naver.com",
-    "signup_url": "https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fmap.naver.com%2F",
-    "support_url": "https://help.naver.com/service/5637/category/bookmark",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "naver-shopping",
-    "name": "Naver Shopping",
-    "url": "https://shopping.naver.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "coupang-eats",
-    "name": "Coupang Eats",
-    "url": "https://www.coupangeats.com",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "kakao-t",
-    "name": "Kakao T",
-    "url": "https://www.kakaomobility.com",
-    "support_url": "https://www.kakaomobility.com/customer-support",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "kakaopay",
-    "name": "KakaoPay",
-    "url": "https://www.kakaopay.com",
-    "support_url": "https://support.kakaopay.com/web/faq-list/all",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "naver",
-    "name": "Naver",
-    "url": "https://www.naver.com",
-    "signup_url": "https://nid.naver.com/account/signup/term",
-    "support_url": "https://help.naver.com/service/5627/contents/9148?lang=ko",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "naverpay",
-    "name": "Naver Pay",
-    "url": "https://pay.naver.com",
-    "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
-  {
-    "service_id": "toss",
-    "name": "Toss",
-    "url": "https://toss.im",
-    "support_url": "https://support.toss.im/",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
-    ]
-  },
   {
     "service_id": "baemin",
     "name": "Baemin",
@@ -176,23 +62,6 @@
     "support_url": "https://www.yeogi.com/faq",
     "check": [
       "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "kakao-gift",
-    "name": "Kakao Gift",
-    "url": "https://gift.kakao.com",
-    "check": [
-      "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "kakaotalk",
-    "name": "KakaoTalk",
-    "url": "https://www.kakaocorp.com",
-    "support_url": "https://cs.kakao.com/",
-    "check": [
-      "signup_phone_auth"
     ]
   },
   {
@@ -235,19 +104,10 @@
     ]
   },
   {
-    "service_id": "ssg",
-    "name": "SSG.COM",
-    "url": "https://www.ssg.com",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
-    ]
-  },
-  {
     "service_id": "melon",
     "name": "Melon",
     "url": "https://www.melon.com",
+    "signup_url": "https://accounts.melon.com/join/choice",
     "check": [
       "signup_phone_auth",
       "i18n_ui"
@@ -278,16 +138,6 @@
     "name": "Toss Bank",
     "url": "https://www.tossbank.com",
     "support_url": "https://www.tossbank.com/customer/information/privacy/privacy-policy",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "tving",
-    "name": "TVING",
-    "url": "https://www.tving.com",
-    "support_url": "https://www.tving.com/help/notice",
     "check": [
       "signup_phone_auth",
       "i18n_ui"
@@ -340,6 +190,7 @@
     "service_id": "hira",
     "name": "HIRA",
     "url": "https://www.hira.or.kr",
+    "signup_url": "https://ptl.hira.or.kr/main.do?pageType=regist",
     "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
     "check": [
       "signup_phone_auth"
@@ -395,6 +246,7 @@
     "service_id": "tmoney",
     "name": "T-money",
     "url": "https://www.t-money.co.kr",
+    "signup_url": "https://pay.tmoney.co.kr/ncs/pct/mbrsintg/ReadIntgJoinPrsnAthn.dev",
     "check": [
       "signup_phone_auth"
     ]
@@ -403,6 +255,7 @@
     "service_id": "txbus",
     "name": "Txbus (Intercity Bus)",
     "url": "https://txbus.t-money.co.kr",
+    "support_url": "https://intercitybuse.tmoney.co.kr/support/faq.do",
     "check": [
       "support_en"
     ]
@@ -420,18 +273,9 @@
     "service_id": "woori-bank",
     "name": "Woori Bank",
     "url": "https://www.wooribank.com",
+    "signup_url": "https://spot.wooribank.com/pot/Dream?withyou=CQMEM0014&__STEP=1",
     "check": [
       "signup_phone_auth"
-    ]
-  },
-  {
-    "service_id": "ibk",
-    "name": "IBK Industrial Bank",
-    "url": "https://www.ibk.co.kr",
-    "check": [
-      "signup_phone_auth",
-      "i18n_ui",
-      "support_en"
     ]
   },
   {
@@ -451,16 +295,6 @@
     "check": [
       "signup_phone_auth",
       "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "kbank",
-    "name": "K bank",
-    "url": "https://www.kbanknow.com",
-    "support_url": "https://www.kbanknow.com/web/customer/faq/list",
-    "check": [
-      "signup_phone_auth",
-      "support_en"
     ]
   },
   {
@@ -541,15 +375,6 @@
     "support_url": "https://www.payco.com/cs/faq.nhn",
     "check": [
       "i18n_ui"
-    ]
-  },
-  {
-    "service_id": "ridibooks",
-    "name": "RIDI Books",
-    "url": "https://ridibooks.com",
-    "support_url": "https://ridihelp.ridibooks.com/support/home",
-    "check": [
-      "signup_phone_auth"
     ]
   },
   {

@@ -8,9 +8,9 @@
   "category": "shopping",
   "importance": 1,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://login.11st.co.kr/auth/mobile/join",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://cs.11st.co.kr/page/customer/faq",
     "english_url": null,
     "ios_app_id": "397938216",
     "android_package": "com.elevenst",

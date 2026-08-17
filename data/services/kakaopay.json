@@ -10,7 +10,7 @@
   "hints": {
     "signup_url": null,
     "checkout_url": null,
-    "support_url": "https://support.kakaopay.com/web/faq-list/all",
+    "support_url": "https://support.kakaopay.com/web/faq-list/CUSTOMER_CENTER_FAQ_ACCOUNT_SECURITY",
     "english_url": null,
     "ios_app_id": "1464496236",
     "android_package": "com.kakaopay.app",

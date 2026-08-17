@@ -8,9 +8,9 @@
   "category": "shopping",
   "importance": 2,
   "hints": {
-    "signup_url": null,
+    "signup_url": "https://member.ssg.com/member/join/auth.ssg",
     "checkout_url": null,
-    "support_url": null,
+    "support_url": "https://www.ssg.com/customer/main.ssg",
     "english_url": null,
     "ios_app_id": "786135420",
     "android_package": "kr.co.ssg",

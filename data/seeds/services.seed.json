@@ -62,7 +62,8 @@
       "importance": 2,
       "hints": {
         "android_package": "kr.co.tmoney.tia",
-        "ios_app_id": "1483433931"
+        "ios_app_id": "1483433931",
+        "support_url": "https://intercitybuse.tmoney.co.kr/support/faq.do"
       },
       "notes": {
         "en": "Booking runs through the “티머니GO” app, which merged the separate express-bus and intercity-bus apps into one.",
@@ -80,7 +81,7 @@
       "importance": 1,
       "hints": {
         "android_package": "com.kakao.taxi",
-        "support_url": "https://www.kakaomobility.com/customer-support",
+        "support_url": "https://service.kakaomobility.com/cs/faqs/content/?category=242",
         "ios_app_id": "981110422"
       }
     },
@@ -167,7 +168,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1470361790",
-        "android_package": "com.lgt.tmoney"
+        "android_package": "com.lgt.tmoney",
+        "signup_url": "https://pay.tmoney.co.kr/ncs/pct/mbrsintg/ReadIntgJoinPrsnAthn.dev"
       }
     },
     {
@@ -344,7 +346,9 @@
       "importance": 1,
       "hints": {
         "ios_app_id": "6738063154",
-        "android_package": "com.navercorp.navershopping"
+        "android_package": "com.navercorp.navershopping",
+        "signup_url": "https://nid.naver.com/account/signup",
+        "support_url": "https://help.pay.naver.com/faq/list.help"
       },
       "notes": {
         "en": "The app is published as “네이버플러스 스토어”, not under the Naver Shopping name.",
@@ -377,7 +381,9 @@
       "importance": 1,
       "hints": {
         "android_package": "com.elevenst",
-        "ios_app_id": "397938216"
+        "ios_app_id": "397938216",
+        "signup_url": "https://login.11st.co.kr/auth/mobile/join",
+        "support_url": "https://cs.11st.co.kr/page/customer/faq"
       }
     },
     {
@@ -405,7 +411,9 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "786135420",
-        "android_package": "kr.co.ssg"
+        "android_package": "kr.co.ssg",
+        "signup_url": "https://member.ssg.com/member/join/auth.ssg",
+        "support_url": "https://www.ssg.com/customer/main.ssg"
       }
     },
     {
@@ -491,7 +499,8 @@
       "category": "shopping",
       "importance": 1,
       "hints": {
-        "no_app": true
+        "no_app": true,
+        "signup_url": "https://accounts.kakao.com/weblogin/create_account"
       },
       "notes": {
         "en": "No standalone app. Gifting runs inside KakaoTalk.",
@@ -708,7 +717,9 @@
       "category": "delivery",
       "importance": 1,
       "hints": {
-        "no_app": true
+        "no_app": true,
+        "signup_url": "https://nid.naver.com/account/signup",
+        "support_url": "https://help.naver.com/service/11713/category/bookmark"
       },
       "notes": {
         "en": "No standalone app. Booking runs inside the main Naver app.",
@@ -742,7 +753,7 @@
       "importance": 1,
       "hints": {
         "android_package": "viva.republica.toss",
-        "support_url": "https://support.toss.im/"
+        "support_url": "https://support.toss.im/faq/207"
       }
     },
     {
@@ -755,7 +766,7 @@
       "category": "finance",
       "importance": 1,
       "hints": {
-        "support_url": "https://support.kakaopay.com/web/faq-list/all",
+        "support_url": "https://support.kakaopay.com/web/faq-list/CUSTOMER_CENTER_FAQ_ACCOUNT_SECURITY",
         "ios_app_id": "1464496236",
         "android_package": "com.kakaopay.app"
       }
@@ -772,7 +783,8 @@
       "hints": {
         "support_url": "https://help.naver.com/service/5640/category/bookmark?lang=ko",
         "ios_app_id": "1554807824",
-        "android_package": "com.naverfin.payapp"
+        "android_package": "com.naverfin.payapp",
+        "signup_url": "https://nid.naver.com/account/signup"
       }
     },
     {
@@ -877,7 +889,8 @@
       "importance": 2,
       "hints": {
         "ios_app_id": "1470181651",
-        "android_package": "com.wooribank.smart.npib"
+        "android_package": "com.wooribank.smart.npib",
+        "signup_url": "https://spot.wooribank.com/pot/Dream?withyou=CQMEM0014&__STEP=1"
       }
     },
     {
@@ -1367,7 +1380,8 @@
       "hints": {
         "android_package": "com.yagins.hiraportal",
         "support_url": "https://www.hira.or.kr/bbsDummy.do?pgmid=HIRAA010006011020&amp;WT.gnb=%EC%83%81%EB%8B%B4%EB%AC%B8%EC%9D%98",
-        "ios_app_id": "492606369"
+        "ios_app_id": "492606369",
+        "signup_url": "https://ptl.hira.or.kr/main.do?pageType=regist"
       },
       "notes": {
         "en": "The app is published as “건강e음”.",
@@ -1530,7 +1544,8 @@
       "category": "culture",
       "importance": 2,
       "hints": {
-        "android_package": "com.iloen.melon"
+        "android_package": "com.iloen.melon",
+        "signup_url": "https://accounts.melon.com/join/choice"
       }
     },
     {
@@ -1558,7 +1573,8 @@
       "importance": 2,
       "hints": {
         "android_package": "net.cj.cjhv.gs.tving",
-        "support_url": "https://www.tving.com/help/notice"
+        "support_url": "https://www.tving.com/help/notice",
+        "signup_url": "https://www.tving.com/account/signup"
       }
     },
     {

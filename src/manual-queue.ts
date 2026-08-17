@@ -30,6 +30,28 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 /** 사람이 확인할 수 있는 것만. 나머지는 여기 넣으면 안 된다 (파일 첫머리 주석 참고). */
 const CHECKABLE: SignalKey[] = ['signup_phone_auth', 'i18n_ui', 'support_en'];
 
+/**
+ * 브라우저를 쓰는 도우미가 **구조적으로** 볼 수 없는 곳. 이 목록에서 뺀다.
+ *
+ * 두 부류다.
+ *   1. 확장 프로그램이 안전 정책으로 도메인을 통째로 막는다 (하위 도메인 포함)
+ *      — 네이버·쿠팡·11번가·토스·SSG·IBK·케이뱅크·카카오페이
+ *   2. 그 브라우저가 이미 로그인돼 있어 신규 방문자 화면이 안 나온다
+ *      — 카카오 계열·TVING·리디북스
+ *
+ * 2026-08-16 에 두 번 시도해서 두 번 다 전부 unknown 으로 돌아왔다. 세 번째를
+ * 시키는 것은 시간을 버리는 것이고, 무엇보다 **돌아온 unknown 이 "확인했는데
+ * 모르겠다"인지 "열지도 못했다"인지 구분이 안 되게** 만든다.
+ *
+ * 이 18곳은 `npm run byhand` 가 만드는 운영자용 작업표 맨 앞에 들어간다.
+ * 사람이 시크릿 창에서 열면 되는 일이다.
+ */
+const AGENT_CANNOT_REACH = new Set([
+  '11st', 'coupang', 'coupang-eats', 'naver', 'naver-booking', 'naver-shopping',
+  'naver-map', 'naverpay', 'toss', 'ssg', 'ibk', 'kbank', 'kakaopay',
+  'kakao-gift', 'kakao-map', 'kakao-t', 'kakaotalk', 'tving', 'ridibooks',
+]);
+
 const ASK: Record<string, { q: string; how: string; answers: string }> = {
   signup_phone_auth: {
     q: '가입할 때 한국 휴대폰 본인인증이 필요한가',
@@ -74,6 +96,7 @@ async function main(): Promise<void> {
   const rows = services
     .map((s) => ({ service: s, missing: CHECKABLE.filter((k) => needs(s, k)) }))
     .filter((r) => r.missing.length > 0)
+    .filter((r) => !AGENT_CANNOT_REACH.has(r.service.id))
     // 중요도 높은 것 먼저, 그다음 빈칸이 많은 것 먼저 — 한 번 열 때 많이 채우는 편이 싸다
     .sort((a, b) => a.service.importance - b.service.importance || b.missing.length - a.missing.length);
 
@@ -170,7 +193,10 @@ async function main(): Promise<void> {
   }
 
   const counts = CHECKABLE.map((k) => `${k} ${rows.filter((r) => r.missing.includes(k)).length}건`);
-  console.log(`남은 ${rows.length}곳 — ${counts.join(' · ')}`);
+  console.log(`코워크가 할 수 있는 ${rows.length}곳 — ${counts.join(' · ')}`);
+  console.log(
+    `(확장이 막거나 이미 로그인된 ${AGENT_CANNOT_REACH.size}곳은 뺐다 — docs/09-byhand.md 에 있다)`,
+  );
   console.log('');
   console.log('코워크에 줄 것 — 파일을 통째로 복사해서 붙여넣으면 된다:');
   if (single) {

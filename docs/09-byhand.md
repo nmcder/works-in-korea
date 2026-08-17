@@ -52,7 +52,7 @@
 
 **1. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.11st.co.kr
+열기: https://login.11st.co.kr/auth/mobile/join
 
 답:
 본 것:
@@ -66,7 +66,7 @@
 
 **3. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://www.11st.co.kr
+열기: https://cs.11st.co.kr/page/customer/faq
 
 답:
 본 것:
@@ -98,7 +98,7 @@
 
 **7. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://booking.naver.com
+열기: https://nid.naver.com/account/signup
 
 답:
 본 것:
@@ -112,7 +112,7 @@
 
 **9. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://booking.naver.com
+열기: https://help.naver.com/service/11713/category/bookmark
 
 답:
 본 것:
@@ -144,7 +144,7 @@
 
 **13. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://shopping.naver.com
+열기: https://nid.naver.com/account/signup
 
 답:
 본 것:
@@ -158,7 +158,7 @@
 
 **15. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://shopping.naver.com
+열기: https://help.pay.naver.com/faq/list.help
 
 답:
 본 것:
@@ -206,7 +206,7 @@
 
 **21. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://support.kakaopay.com/web/faq-list/all
+열기: https://support.kakaopay.com/web/faq-list/CUSTOMER_CENTER_FAQ_ACCOUNT_SECURITY
 
 답:
 본 것:
@@ -231,7 +231,7 @@
 
 **24. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://pay.naver.com
+열기: https://nid.naver.com/account/signup
 
 답:
 본 것:
@@ -254,7 +254,7 @@
 
 **27. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://support.toss.im/
+열기: https://support.toss.im/faq/207
 
 답:
 본 것:
@@ -263,7 +263,7 @@
 
 **28. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://gift.kakao.com
+열기: https://accounts.kakao.com/weblogin/create_account
 
 답:
 본 것:
@@ -281,7 +281,7 @@
 
 **30. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.ssg.com
+열기: https://member.ssg.com/member/join/auth.ssg
 
 답:
 본 것:
@@ -295,7 +295,7 @@
 
 **32. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://www.ssg.com
+열기: https://www.ssg.com/customer/main.ssg
 
 답:
 본 것:
@@ -304,7 +304,7 @@
 
 **33. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.tving.com
+열기: https://www.tving.com/account/signup
 
 답:
 본 것:
@@ -444,7 +444,7 @@
 
 **49. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.melon.com
+열기: https://accounts.melon.com/join/choice
 
 답:
 본 것:
@@ -553,7 +553,7 @@
 
 **62. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.hira.or.kr
+열기: https://ptl.hira.or.kr/main.do?pageType=regist
 
 답:
 본 것:
@@ -607,7 +607,7 @@
 
 **68. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.t-money.co.kr
+열기: https://pay.tmoney.co.kr/ncs/pct/mbrsintg/ReadIntgJoinPrsnAthn.dev
 
 답:
 본 것:
@@ -616,7 +616,7 @@
 
 **69. 영어로 문의할 수 있는가**  `support_en`
 
-열기: https://txbus.t-money.co.kr
+열기: https://intercitybuse.tmoney.co.kr/support/faq.do
 
 답:
 본 것:
@@ -634,7 +634,7 @@
 
 **71. 가입할 때 한국 휴대폰이 필요한가**  `signup_phone_auth`
 
-열기: https://www.wooribank.com
+열기: https://spot.wooribank.com/pot/Dream?withyou=CQMEM0014&__STEP=1
 
 답:
 본 것:
@@ -777,4 +777,4 @@
 
 ---
 
-확인한 날짜는 적지 않아도 된다 — 반영하는 날(2026-08-16 같은)로 기록된다.
+확인한 날짜는 적지 않아도 된다 — 반영하는 날(2026-08-17 같은)로 기록된다.
