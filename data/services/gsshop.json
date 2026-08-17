@@ -51,55 +51,33 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://www.gsshop.com/en",
-            "status": 200,
-            "ok": false
-          },
-          {
-            "url": "https://www.gsshop.com/en/",
-            "status": 200,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "checked_by": "operator",
+        "url": "https://www.gsshop.com",
+        "saw": "홈페이지 상단 헤더, 좌측 카테고리 영역, 하단 푸터까지 전체를 스크롤하며 확인했으나 언어 전환 링크나 English 표기를 찾지 못함.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음",
-        "signup_url": "https://www.gsshop.com/join",
-        "final_url": "https://www.gsshop.com/join",
-        "http_status": 200,
-        "page_kind": "unknown",
-        "login_markers": [],
-        "attempts": [
-          {
-            "url": "https://www.gsshop.com/join",
-            "status": 200,
-            "used": true
-          }
-        ],
-        "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다"
+        "checked_by": "operator",
+        "url": "https://www.gsshop.com/cust/grm/gate.gs?page=JOIN",
+        "saw": "회원가입 화면에서 카카오/네이버 소셜가입 외에 '휴대폰 인증으로 가입하기'와 '이메일 ID로 가입하기' 옵션이 있음. '이메일 ID로 가입하기'를 선택해 가입 폼을 끝까지 확인한 결과, 이메일 경로에도 '휴대폰번호' 항목이 필수(*) 입력란으로 존재했고 '010'이 고정 접두어로 표시되어 있었으며 국가번호 선택란은 없었음 — 이메일 가입을 선택해도 결국 한국 휴대폰번호 인증이 필수임.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "app_availability": {

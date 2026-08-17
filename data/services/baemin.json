@@ -52,7 +52,9 @@
     "i18n_ui": {
       "value": [
         "ko",
-        "en"
+        "en",
+        "ja",
+        "zh"
       ],
       "measured_at": "2026-08-17T00:00:00.000Z",
       "first_seen_at": "2026-08-17T00:00:00.000Z",
@@ -61,9 +63,9 @@
       "confidence": "manual",
       "evidence": {
         "checked_by": "operator",
-        "url": "https://www.baemin.com",
-        "saw": "메인 우측 상단 \"For foreigners\" 링크를 누르면 영어 전용 배민 글로벌 페이지가 열리고 FAQ 가 전부 영어다 (같은 링크를 고객센터 확인 때도 열어 봤다).",
-        "recorded_at": "2026-08-17T00:51:55.556Z"
+        "url": "https://www.baemin.com/en/global/",
+        "saw": "메인 페이지(www.baemin.com) 우측 상단에 'For foreigners' 링크가 있어 클릭하니 baemin.com/en/global/ 페이지로 이동했다. 우측 상단 EN 드롭다운을 클릭하니 KO/EN/JP/CN 네 가지 옵션이 나왔다. JP를 클릭하니 URL이 /jp/global/로 바뀌고 본문 전체(히어로 문구 제외 나머지 섹션, FAQ 등)가 일본어로 바뀌었다. CN(/cn/global/)으로 이동하니 본문이 중국어(간체)로 바뀌었다. EN(/en/global/) 페이지도 본문이 영어로 되어 있음을 확인했다. 기본 메인 페이지(www.baemin.com)는 한국어로 되어 있었다.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "signup_phone_auth": {

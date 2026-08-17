@@ -50,16 +50,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:31:32.969Z",
-      "last_changed_at": "2026-08-16T11:31:32.969Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.melon.com/",
+        "saw": "멜론 메인 페이지 상단 헤더와 하단 푸터를 모두 스크롤하며 확인했으나 KO/EN 전환 버튼, 지구본 아이콘, Language 메뉴 등 언어 전환 요소가 전혀 보이지 않았다. 전체 UI가 한국어로만 되어 있었다.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "signup_phone_auth": {

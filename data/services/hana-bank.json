@@ -67,29 +67,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.kebhana.com/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
-          },
-          {
-            "url": "https://www.kebhana.com (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://www.kebhana.com/nftf2/index.do?_menuNo=62683",
+        "saw": "하나은행 비대면 계좌개설 페이지에서 '신청자격: 만 14세 이상 내국인 개인 및 개인사업자'라고 명시됨. 계좌개설을 시작하려면 SMS 인증만 가능하며, 휴대폰 번호 입력란은 통신사 접두번호 드롭다운(010/011/016/017/018/019)만 있고 국가번호 선택란은 전혀 없음. 이메일/소셜 로그인으로 계좌를 개설하는 대체 경로는 보이지 않았음.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "app_availability": {

@@ -52,8 +52,7 @@
     },
     "i18n_ui": {
       "value": [
-        "ko",
-        "en"
+        "ko"
       ],
       "measured_at": "2026-08-17T00:00:00.000Z",
       "first_seen_at": "2026-08-17T00:00:00.000Z",
@@ -62,9 +61,9 @@
       "confidence": "manual",
       "evidence": {
         "checked_by": "operator",
-        "url": "https://www.hanatour.com",
-        "saw": "메인에 \"For Foreign Travellers\" 링크가 있고 눌러 보니 hanatouritc.com 으로 이동해 Login·Sign up·BEST SELLER 등 화면이 전부 영어인 별도 사이트가 열렸다.",
-        "recorded_at": "2026-08-17T00:51:55.556Z"
+        "url": "https://www.hanatour.com/",
+        "saw": "메인 화면 헤더와 푸터, 전체메뉴 팝업을 모두 확인했으나 언어 전환 UI는 존재하지 않음. 전체메뉴의 '연계서비스' 항목에 'For Foreign Travellers' 링크가 있었지만, 이는 hanatour.com이 아닌 완전히 별도 도메인(hanatouritc.com)의 다른 서비스로 연결되는 것이었고 hanatour.com 자체의 언어 전환 기능은 아니었다.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "signup_phone_auth": {

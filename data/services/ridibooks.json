@@ -87,42 +87,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://ridibooks.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ridibooks.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ridibooks.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ridibooks.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://ridibooks.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다"
+        "checked_by": "operator",
+        "url": "https://ridibooks.com/support/notice/7",
+        "saw": "리디 공식 공지 「외국인 회원가입 안내」(2009-11-27 자, 현재도 공지사항에 게시돼 있음)를 읽어 확인함. \"한국 국적의 주민등록번호가 없는 외국인 고객님도 리디북스의 회원이 되실 수 있습니다. 회원가입하기에서 [외국인 회원] 버튼을 누르고 회원 정보를 입력하세요\" 라고 되어 있고, 이후 해당 국가의 신분증을 팩스(82-2-3413-0331) 또는 이메일(ridi@initialcoms.com)로 보내면 24시간 안에 본인 확인 후 가입을 승인한다고 적혀 있다. 즉 한국 휴대폰 없이 여권·신분증으로 가는 길이 문서상 존재한다. 주의: 공지가 2009년 것이고 안내된 이메일 도메인이 옛 사명(initialcoms)이다. 현재 가입 화면에 [외국인 회원] 버튼이 실제로 남아 있는지는 확인하지 못했다 — 리디 가입 페이지는 robots.txt 가 막고 있다.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "app_availability": {

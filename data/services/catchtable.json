@@ -50,16 +50,24 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "ja",
+        "zh",
+        "vi",
+        "th"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.catchtable.net",
+        "saw": "www.catchtable.co.kr 첫 화면(모바일 레이아웃)은 한국어(ko)뿐이었고, 페이지 하단에 'CATCHTABLE Global for foreigners' 링크가 있었다. 이를 클릭하니 catchtable.net(글로벌 사이트)이 새 탭으로 열렸고 기본 언어가 영어(ENG)였다. 우측 상단 언어 선택 버튼을 눌러 'Language' 목록에서 日本語, 中文(简体), ภาษาไทย, Tiếng Việt, Bahasa Melayu 등을 차례로 클릭했더니 실제로 URL이 각각 /ja-JP, /zh-CN, /th-TH, /vi-VN, /ms-MY 로 바뀌고 헤더 배너·메뉴·카테고리 텍스트가 전부 해당 언어로 번역되어 표시되는 것을 직접 확인했다. 繁體中文, Bahasa Indonesia, Français, Deutsch 등도 목록에 있었으나 직접 클릭해 전환을 확인하지는 않았다.",
+        "recorded_at": "2026-08-17T01:46:24.041Z"
       }
     },
     "signup_phone_auth": {
