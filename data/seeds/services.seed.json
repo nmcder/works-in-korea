@@ -1145,7 +1145,7 @@
       "category": "accommodation",
       "importance": 1,
       "hints": {
-        "android_package": "com.yanolja.repo",
+        "android_package": "com.cultsotry.yanolja.nativeapp",
         "signup_url": "https://accounts.yanolja.com/v3/login",
         "support_url": "https://ad.yanolja.com/intro",
         "ios_app_id": "436731843"

@@ -13,7 +13,7 @@
     "support_url": "https://ad.yanolja.com/intro",
     "english_url": null,
     "ios_app_id": "436731843",
-    "android_package": "com.yanolja.repo",
+    "android_package": "com.cultsotry.yanolja.nativeapp",
     "no_app": null,
     "signup_app_only": null
   },
@@ -83,12 +83,12 @@
     "app_availability": {
       "value": {
         "ios_listed": true,
-        "android_listed": false,
+        "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-17T01:05:31.018Z",
+      "first_seen_at": "2026-08-17T01:05:31.018Z",
+      "last_changed_at": "2026-08-17T01:05:31.018Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
@@ -101,10 +101,10 @@
           "error": null
         },
         "android": {
-          "package": "com.yanolja.repo",
-          "listed": false,
-          "endpoint": "https://play.google.com/store/apps/details?id=com.yanolja.repo&hl=en",
-          "http_status": 404,
+          "package": "com.cultsotry.yanolja.nativeapp",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.cultsotry.yanolja.nativeapp&hl=en",
+          "http_status": 200,
           "error": null
         },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."

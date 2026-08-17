@@ -88,11 +88,11 @@
         "android_listed": false,
         "countries": null
       },
-      "measured_at": "2026-08-16T18:23:49.790Z",
+      "measured_at": "2026-08-17T01:05:31.018Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "manual",
-      "confidence": "community",
+      "confidence": "manual",
       "evidence": {
         "checked_by": "사람이 App Store 와 Google Play 를 직접 검색해 별도 앱이 없음을 확인",
         "note": "다른 앱 안에서 쓰는 기능인 경우가 흔하다. 어디에 있는지는 이 서비스의 notes 를 볼 것.",

@@ -28,13 +28,18 @@ export async function probeAppAvailability(
   const iosId = service.hints?.ios_app_id ?? null;
   const androidPkg = service.hints?.android_package ?? null;
 
-  // 사람이 두 스토어를 직접 찾아보고 별도 앱이 없다고 확인해 준 경우.
-  // 이것도 사실이므로 "아직 확인 못 함"으로 두지 않는다. 다만 자동 측정이 아니므로
-  // method 를 manual 로 밝히고, 신뢰도는 사람 확인(community)으로 남긴다.
+  /*
+   * 사람이 두 스토어를 직접 찾아보고 별도 앱이 없다고 확인해 준 경우.
+   * 이것도 사실이므로 "아직 확인 못 함"으로 두지 않는다.
+   *
+   * 신뢰도는 `manual` 이다. 전에는 `community` 라고 적었는데, 그때는 Confidence 에
+   * manual 이 없어서 가장 가까운 것을 골랐던 것이다. 지금은 있고, community 는
+   * 화면에 "제보"라고 나간다 — 아무도 제보하지 않았다. 운영자가 직접 찾아본 것이다.
+   */
   if (!iosId && !androidPkg && service.hints?.no_app === true) {
     return {
       value: { ios_listed: false, android_listed: false, countries: null },
-      confidence: 'community',
+      confidence: 'manual',
       method: 'manual',
       evidence: {
         checked_by: '사람이 App Store 와 Google Play 를 직접 검색해 별도 앱이 없음을 확인',

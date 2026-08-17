@@ -148,8 +148,13 @@ async function main(): Promise<void> {
        * 확인할 때만 바뀐다 — 그래서 화면에 확인 날짜가 붙어 있는 것이다.
        *
        * 자동에 맡기고 싶으면 그 값을 지우면 된다. 지우는 것은 사람의 결정이어야 한다.
+       *
+       * app_availability 만 예외다. 이 시그널의 사람 값은 손으로 적어 넣은 것이
+       * 아니라 **hints.no_app 에서 매번 다시 만들어지는 것**이라, 여기서 얼려 두면
+       * 나중에 앱 ID 를 찾아 hints 에 넣어도 화면은 계속 "앱 없음"이라고 말한다.
+       * 지워지는 사고가 일어날 수 없는 자리이므로 얼릴 이유도 없다.
        */
-      if (service.signals[key]?.confidence === 'manual') {
+      if (service.signals[key]?.confidence === 'manual' && key !== 'app_availability') {
         log.info(`  ${key}: 사람이 확인한 값이라 건너뜀`);
         continue;
       }
