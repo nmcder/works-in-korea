@@ -51,31 +51,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://www.ddocdoc.com/en",
-            "status": null,
-            "ok": false
-          },
-          {
-            "url": "https://www.ddocdoc.com/en/",
-            "status": 404,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "checked_by": "operator",
+        "url": "https://www.ddocdoc.com",
+        "saw": "홈페이지를 브라우저로 그려서 화면에 보이는 글자 전체와 모든 링크를 언어 전환 표시(English·Language·지구본·글로벌·日本語·中文 등)로 훑었으나 언어를 바꿀 수단이 없었다. 걸린 낱말은 \"해외여행\"·\"글로벌 위크\"처럼 상품·행사 이름이었고 언어와 무관했다.",
+        "recorded_at": "2026-08-17T00:51:55.556Z"
       }
     },
     "signup_phone_auth": {

@@ -51,31 +51,20 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko-kr",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://www.hanatour.com/en",
-            "status": 404,
-            "ok": false
-          },
-          {
-            "url": "https://www.hanatour.com/en/",
-            "status": 404,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다."
+        "checked_by": "operator",
+        "url": "https://www.hanatour.com",
+        "saw": "메인에 \"For Foreign Travellers\" 링크가 있고 눌러 보니 hanatouritc.com 으로 이동해 Login·Sign up·BEST SELLER 등 화면이 전부 영어인 별도 사이트가 열렸다.",
+        "recorded_at": "2026-08-17T00:51:55.556Z"
       }
     },
     "signup_phone_auth": {

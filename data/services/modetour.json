@@ -51,16 +51,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "AbortError: This operation was aborted",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다)."
+        "checked_by": "operator",
+        "url": "https://www.modetour.com",
+        "saw": "홈페이지를 브라우저로 그려서 화면에 보이는 글자 전체와 모든 링크를 언어 전환 표시(English·Language·지구본·글로벌·日本語·中文 등)로 훑었으나 언어를 바꿀 수단이 없었다. 걸린 낱말은 \"해외여행\"·\"글로벌 위크\"처럼 상품·행사 이름이었고 언어와 무관했다.",
+        "recorded_at": "2026-08-17T00:51:55.556Z"
       }
     },
     "signup_phone_auth": {
