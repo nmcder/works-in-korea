@@ -15,7 +15,7 @@
     "ios_app_id": "1178872627",
     "android_package": "com.kbankwith.smartbank",
     "no_app": null,
-    "signup_app_only": null
+    "signup_app_only": true
   },
   "signals": {
     "overseas_access": {

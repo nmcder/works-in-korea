@@ -849,7 +849,8 @@
       "hints": {
         "support_url": "https://www.kbanknow.com/web/customer/faq/list",
         "android_package": "com.kbankwith.smartbank",
-        "ios_app_id": "1178872627"
+        "ios_app_id": "1178872627",
+        "signup_app_only": true
       }
     },
     {
