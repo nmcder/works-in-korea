@@ -56,33 +56,22 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T11:45:03.019Z",
-      "last_changed_at": "2026-08-16T11:45:03.019Z",
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "zh",
+        "ja"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "언어 전환 수단을 찾지 못했다",
-        "declared_html_lang": "ko",
-        "hreflang": [],
-        "english_url_checks": [
-          {
-            "url": "https://map.naver.com/en",
-            "status": null,
-            "ok": false
-          },
-          {
-            "url": "https://map.naver.com/en/",
-            "status": 200,
-            "ok": false
-          }
-        ],
-        "rendered_checked": true,
-        "rendered_error": null,
-        "note": "전환 링크·hreflang·전용 경로 어디서도 한국어 외 언어를 찾지 못했다. 브라우저로 그려서도 다시 봤다. 이것은 \"한국어만 제공한다\"는 뜻이 아니라 \"찾지 못했다\"는 뜻이므로 값을 내지 않는다 — 사람이 직접 봐야 한다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
+        "checked_by": "operator",
+        "url": "https://map.naver.com",
+        "saw": "운영자가 직접 확인함. 웹(map.naver.com)에서는 아무리 찾아도 언어 전환 수단이 없었다. 앱은 설정에서 언어를 바꿀 수 있고 목록에 영어·중국어·일본어 세 가지가 있었다. 즉 언어를 고르려면 앱을 깔아야 한다. 웹 쪽은 우리가 자동으로 확인할 수도 없다 — map.naver.com 이 /p 로 넘어가는데 그 경로를 robots.txt 가 막고 있다.",
+        "recorded_at": "2026-08-18T11:53:01.721Z"
       }
     },
     "signup_phone_auth": {
