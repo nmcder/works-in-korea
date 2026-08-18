@@ -88,7 +88,20 @@ export function vantageKey(v: VantagePoint): string {
   return [v.country, v.region].filter(Boolean).join('·') || v.id;
 }
 
-type ByVantage = Record<string, { value: OverseasAccessValue; at: string; note: string | null }>;
+type ByVantage = Record<
+  string,
+  {
+    value: OverseasAccessValue;
+    at: string;
+    note: string | null;
+    /**
+     * 이 지점에서 **서버가 아예 응답하지 않았다**는 표시.
+     * 한 번은 우연일 수 있으므로 값으로 삼지 않고, 같은 지점에서 두 번 연속일 때만
+     * blocked 로 적는다. 그 판단을 하려면 지난번에도 그랬는지를 알아야 한다.
+     */
+    no_answer?: true;
+  }
+>;
 
 /** 이전 측정에 쌓인 지점별 기록을 꺼낸다 */
 export function readByVantage(previous: Signal<OverseasAccessValue> | undefined): ByVantage {
@@ -115,7 +128,14 @@ export async function probeOverseasAccess(
   const record = (
     value: OverseasAccessValue,
     note: string | null,
-  ): ByVantage => ({ ...byVantage, [key]: { value, at: now, note } });
+    noAnswer?: true,
+  ): ByVantage => ({
+    ...byVantage,
+    [key]: { value, at: now, note, ...(noAnswer ? { no_answer: true } : {}) },
+  });
+
+  /** 지난번에도 같은 지점에서 응답이 없었나 */
+  const failedHereBefore = byVantage[key]?.no_answer === true;
 
   const point: Record<string, unknown> = {
     id: vantage.id,
@@ -128,30 +148,80 @@ export async function probeOverseasAccess(
     content_type: res.headers['content-type'] ?? null,
   };
 
-  if (res.blockedReason) {
-    point['not_measured'] = res.blockedReason;
+  /*
+   * ── "우리가 안 본 것" 과 "그쪽이 대답을 안 한 것" 은 다르다
+   *
+   * 2026-08-17 까지 이 둘이 같은 unknown 으로 뭉개져 있었다. 그런데 이 시그널이
+   * 재는 것이 바로 **해외에서 응답하느냐** 이므로, 뒤쪽은 못 잰 것이 아니라 잰 것이다.
+   *
+   * 그렇게 뭉개진 12곳의 정체가 정부24·홈택스·하이코리아·국세청·우체국·고속버스·
+   * 시외버스·국립극장·티머니·KT·우리은행이었다. 외국인이 가장 아쉬워할 자리이고,
+   * 열 곳이 연결 자체가 안 되는 경우였다.
+   *
+   * 한 번의 타임아웃은 우연일 수 있으므로 값으로 삼지 않는다. **같은 지점에서 두 번
+   * 연속** 응답이 없을 때만 blocked 로 적는다. 그래야 /changes 에 가짜 변경이 안 쌓인다.
+   *
+   * 데이터센터 IP 라서 국가 차단인지 데이터센터 차단인지는 여전히 못 가른다 (D-14).
+   * 그건 blocked 의 뜻에 이미 포함돼 있고 화면과 범례에 적혀 있다.
+   */
+  const failure = res.blockedReason ?? res.error;
+  const noAnswer =
+    failure !== null &&
+    /UND_ERR_CONNECT_TIMEOUT|ETIMEDOUT|ECONNREFUSED|ECONNRESET|ENOTFOUND|EAI_AGAIN|SocketError|ConnectTimeout/i.test(
+      failure,
+    );
+
+  if (noAnswer) {
+    point['not_measured'] = failure;
+    point['no_answer'] = true;
+    if (failedHereBefore) {
+      const note = `${key} 에서 서버가 응답하지 않는다 (${failure}). 같은 지점에서 두 번 연속 확인됨. 우리 측정 지점은 데이터센터 IP라 국가 차단인지 데이터센터 차단인지는 가르지 못한다.`;
+      return {
+        value: 'blocked',
+        confidence: 'auto',
+        evidence: { vantage_points: [point], note, by_vantage: record('blocked', note, true) },
+      };
+    }
+    const note = `${key} 에서 서버가 응답하지 않았다 (${failure}). 한 번은 우연일 수 있어 값으로 삼지 않는다 — 다음 측정에서 같은 지점에 또 그러면 blocked 로 적는다.`;
     return {
       value: 'unknown',
       confidence: 'unknown',
-      evidence: {
-        vantage_points: [point],
-        note: res.blockedReason,
-        by_vantage: record('unknown', res.blockedReason),
-      },
+      evidence: { vantage_points: [point], note, by_vantage: record('unknown', note, true) },
+    };
+  }
+
+  if (res.blockedReason) {
+    point['not_measured'] = res.blockedReason;
+    /*
+     * robots.txt 를 받아 왔는데 그것이 열지 말라고 한 경우다. 즉 **서버는 이 지점에
+     * 응답했다.** 비어 있는 이유가 그쪽의 차단이 아니라 우리 결정이라는 것을 적어 둔다.
+     * 그래도 ok 라고는 못 한다 — 첫 페이지가 지역 차단을 걸어 두는 경우가 따로 있다.
+     */
+    const served = /Disallow/i.test(res.blockedReason);
+    const note = served
+      ? `${res.blockedReason} — robots.txt 는 이 지점에서 정상으로 받아 왔으므로 서버 자체는 해외에 응답한다. 페이지를 열지 않은 것은 우리 결정이다.`
+      : res.blockedReason;
+    return {
+      value: 'unknown',
+      confidence: 'unknown',
+      evidence: { vantage_points: [point], note, by_vantage: record('unknown', note) },
     };
   }
 
   if (res.error !== null) {
     point['error'] = res.error;
-    // 네트워크 실패는 차단의 증거가 아니다. 추측하지 않고 unknown.
+    /*
+     * 연결은 됐는데 그 뒤가 실패한 경우다 (인증서 검증 실패 등). 서버는 응답했으므로
+     * 응답 없음과 다르고, 페이지를 못 읽었으므로 ok 와도 다르다. 사유를 그대로 적는다.
+     */
+    const tls = /CERT|SELF_SIGNED|UNABLE_TO_VERIFY|SSL|TLS/i.test(res.error);
+    const note = tls
+      ? `서버는 응답하지만 인증서를 검증할 수 없다 (${res.error}). 브라우저에서는 경고 화면이 먼저 뜬다.`
+      : `요청 실패 — 차단 여부 판정 불가 (${res.error})`;
     return {
       value: 'unknown',
       confidence: 'unknown',
-      evidence: {
-        vantage_points: [point],
-        note: '요청 실패 — 차단 여부 판정 불가',
-        by_vantage: record('unknown', '요청 실패'),
-      },
+      evidence: { vantage_points: [point], note, by_vantage: record('unknown', note) },
     };
   }
 

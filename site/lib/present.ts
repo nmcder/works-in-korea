@@ -523,6 +523,20 @@ export function vantageSplit(sig: Signal): { place: string; value: string }[] | 
 
 function caveatFor(key: SignalKey, sig: Signal): Bi | null {
   if (key === 'overseas_access') {
+    /*
+     * "안 열림" 은 이 데이터에서 가장 센 말이다. 특히 정부24·홈택스처럼 대안이 없는
+     * 곳에 붙으면 읽는 사람이 포기해 버린다. 그런데 우리가 실제로 아는 것은
+     * "우리 데이터센터 IP 에 응답하지 않았다" 까지다 — 나라를 막은 것인지 데이터센터를
+     * 막은 것인지는 밖에서 구분할 방법이 없다 (D-14).
+     *
+     * 그래서 값은 그대로 내되 한 줄을 붙인다. 겁주지 않으면서, 확정할 방법도 함께 알린다.
+     */
+    if (sig.value === 'blocked' && !vantageSplit(sig)) {
+      return {
+        en: 'Our check runs from a datacentre network. A refusal there can mean the country is blocked, or just that datacentre — from outside we cannot tell them apart. A first-hand report settles it.',
+        ko: '저희는 데이터센터 회선에서 확인합니다. 거기서 거부됐다는 것이 나라를 막았다는 뜻인지 그 데이터센터만 막았다는 뜻인지는 밖에서 구분할 수 없습니다. 실제로 해외에서 써 보신 분의 제보가 있으면 확정됩니다.',
+      };
+    }
     const split = vantageSplit(sig);
     if (split) {
       const en = split.map((r) => `${r.place}: ${r.value === 'ok' ? 'opened' : r.value}`).join(' · ');
