@@ -134,17 +134,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        "checked_by": "operator",
+        "url": "https://help.pay.naver.com/faq/list.help",
+        "saw": "네이버페이 공식 고객센터(help.pay.naver.com)를 열어 확인함. 취소/반품/교환·환불·주문·결제·후불결제·선물하기 등 모든 분류와 본문이 한국어이고 언어 전환 수단이 없었다. 네이버 고객센터의 영문 경로(help.naver.com/alias/en/index.help)도 열어 봤지만 주소만 en 이고 내용은 한국어로 나왔다.",
+        "recorded_at": "2026-08-18T08:26:42.706Z"
       }
     },
     "foreign_card": {

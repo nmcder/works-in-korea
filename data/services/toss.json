@@ -88,44 +88,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://toss.im/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://toss.im/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://toss.im/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://toss.im/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://toss.im/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://support.toss.im/faq/207",
+        "saw": "토스 공식 고객센터의 「내 명의 휴대폰이 없는데 가입/로그인을 할 수 있나요?」 문서를 열어 확인함. '2023년 10월 23일 부터 토스 가입/로그인 과정에서 내 명의의 휴대폰 본인인증이 반드시 필요하여, 휴대폰 본인인증을 진행할 수 없다면 토스 가입/로그인이 어려워요' 라고 명시돼 있고, '본인확인 기관으로 지정된 이동통신사에 내 명의로 휴대폰을 개통하여 사용해주세요' 라고 안내한다. 국내 통신사 본인확인 말고 다른 길은 문서에 없다. 별개로, 토스가 낸 '해외에서 본인 인증' 안내는 '만 14세 이상의 재외국민' 대상이라 외국인에게는 해당하지 않는다.",
+        "recorded_at": "2026-08-18T08:26:42.706Z"
       }
     },
     "app_availability": {

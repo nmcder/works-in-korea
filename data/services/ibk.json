@@ -52,18 +52,25 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko",
+        "en",
+        "vi",
+        "th",
+        "id",
+        "ru",
+        "km"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다).",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "robots: Disallow: /"
+        "checked_by": "operator",
+        "url": "https://global.ibk.co.kr/en/",
+        "saw": "IBK 자체 도메인의 영문·다국어 사이트(global.ibk.co.kr)를 열어 확인함. 상단에 Language Selection 메뉴가 있고 /en/ /vi/ /th/ /id/ /ru/ /km/ 여섯 경로를 하나씩 직접 열어 본문이 실제로 그 언어로 바뀌는 것을 봤다 (예: 베트남어 'IBK, Đối tác tài chính của bạn vì một tương lai tốt đẹp hơn', 러시아어 'Ваш финансовый партнер для лучшего будущего', 태국어·인니어·크메르어도 각각 확인). 한국어 본사이트(www.ibk.co.kr)는 robots.txt 가 막고 있어 열지 않았다. 언어 선택 목록에는 중국어·일본어도 보이지만 /zh/ 는 404 라 확인된 것만 적는다.",
+        "recorded_at": "2026-08-18T08:26:42.706Z"
       }
     },
     "signup_phone_auth": {
@@ -147,17 +154,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "yes",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "고객지원 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://global.ibk.co.kr/en/common/ContactUs",
+        "saw": "영문 사이트의 Contact Us 페이지를 열어 확인함. Category(Account/Inquiry/Card/IR/Others) · Name · E-mail · Subject · Content · Submit 로 된 영어 문의 양식이 실제로 있고, 하단에 'Customer Service Local | 1566-2566, 1588-2588 / Overseas | 82-31-888-8000' 과 나라별 서비스 코드(USA 571, Vietnam 574 등)가 함께 안내된다.",
+        "recorded_at": "2026-08-18T08:26:42.706Z"
       }
     },
     "foreign_card": {

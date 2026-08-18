@@ -171,51 +171,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "pages": [
-          {
-            "url": "https://www.kbanknow.com/web/customer/faq/list",
-            "status": 200,
-            "chars": 1799
-          },
-          {
-            "url": "https://www.kbanknow.com",
-            "status": 200,
-            "chars": 1343
-          },
-          {
-            "url": "https://www.kbanknow.com/web/customer/faq/list",
-            "status": 200,
-            "chars": 1799
-          },
-          {
-            "url": "https://www.kbanknow.com/web/about/ethics/info?tab=general",
-            "status": 200,
-            "chars": 1839
-          }
-        ],
-        "content_sha256": "25473ae6a9d04a766c34a13ad7013b6685de5e10a554759df3cba582885e4718",
-        "method_detail": "llm:claude-sonnet-5",
-        "llm": {
-          "value": "unknown",
-          "quoted_evidence": "고객센터 은행 1522-1000 카드 1522-1155 해외 82-2-3778-9111",
-          "reason": "해외 전용 전화번호가 있으나 이것이 영어 상담을 지원하는지 여부는 명시되어 있지 않아 판단 근거가 부족합니다."
-        },
-        "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.066,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        "checked_by": "operator",
+        "url": "https://www.kbanknow.com/web/customer/faq/list",
+        "saw": "케이뱅크 공식 고객센터의 자주 묻는 질문 페이지를 열어 확인함. 분류(예금·적금, 대출, 카드, 해외, 보험, 케이뱅크 페이, 인증·OTP 등)와 질문이 전부 한국어이고 언어 전환 수단이 없었다. en.kbanknow.com · global.kbanknow.com 도 열리지 않는다(연결 실패).",
+        "recorded_at": "2026-08-18T08:26:42.706Z"
       }
     },
     "foreign_card": {
