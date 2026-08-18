@@ -43,6 +43,12 @@ export async function generateMetadata({
     alternates: { canonical: path },
     openGraph: {
       title: `${service.name.en} — does it work for foreigners?`,
+      /*
+       * 레이아웃에도 locale 이 있지만, 페이지가 openGraph 를 정의하면 Next 가 그 객체를
+       * **통째로** 갈아 끼운다. 그래서 이 줄이 없으면 og:locale 이 아예 사라진다.
+       * 2026-08-18 확인 — 홈과 상세 106장 전부에서 빠져 있었다.
+       */
+      locale: 'en_US',
       description: serviceDescription(service),
       url: path,
       type: 'article',
