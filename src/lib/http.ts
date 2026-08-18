@@ -108,6 +108,36 @@ export async function politeFetch(url: string, options: FetchOptions = {}): Prom
     const retryable = last.error !== null || (last.status !== null && last.status >= 500);
     if (!retryable) break;
   }
+
+  /*
+   * **넘어간 곳도 robots 를 지킨다.**
+   *
+   * 2026-08-17 에 global.ssg.com 을 열었더니 www.ssg.com 으로 넘어갔다. 앞의 것은
+   * robots 가 허용하고 뒤의 것은 `Disallow: /` 다. 우리는 요청한 주소만 검사하고
+   * 그 뒤 redirect 는 그대로 따라가고 있었으므로, **열지 않겠다고 한 페이지를 열었다.**
+   *
+   * 이 프로젝트가 파는 것은 "적힌 대로 잰다" 하나뿐이라, 여기서 새면 나머지가 다 무의미하다.
+   * 넘어간 주소가 막혀 있으면 받아 온 내용을 쓰지 않고 버린다.
+   *
+   * 왜 hop 마다 미리 검사하지 않는가: fetch 는 redirect 를 한 번에 따라가 버려서
+   * 중간에 끼어들려면 `redirect: 'manual'` 로 직접 따라가야 하는데, 그러면 쿠키·상대경로·
+   * 순환을 전부 우리가 다시 구현하게 된다. 지금은 **받은 것을 쓰지 않는 쪽**을 택했다.
+   * 요청이 한 번 나간 것은 되돌릴 수 없지만, 그 내용이 데이터가 되는 일은 막는다.
+   */
+  if (!exempt && last.finalUrl && normalizeUrl(last.finalUrl) !== normalizeUrl(url)) {
+    const after = await checkRobots(last.finalUrl, fetchRobotsText);
+    if (!after.allowed) {
+      return {
+        ...empty,
+        status: last.status,
+        finalUrl: last.finalUrl,
+        redirected: true,
+        blockedReason: `robots(redirect): ${last.finalUrl} — ${after.reason}`,
+        elapsedMs: Date.now() - started,
+      };
+    }
+  }
+
   return last;
 }
 

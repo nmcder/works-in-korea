@@ -91,6 +91,30 @@ export async function snapshotPage(url: string): Promise<PageSnapshot> {
       // 위젯 스크립트는 대개 로드 직후 붙는다. networkidle은 광고 때문에 잘 안 오므로 짧게 고정 대기.
       await page.waitForTimeout(2500);
 
+      /*
+       * **넘어간 곳도 robots 를 지킨다.** (http.ts 의 같은 주석 참고)
+       *
+       * page.goto 는 redirect 를 알아서 따라간다. 요청한 주소만 검사하면
+       * global.ssg.com → www.ssg.com 처럼 **허용된 문으로 들어가 막힌 방에 닿는다.**
+       * 최종 주소가 막혀 있으면 읽은 것을 버린다.
+       */
+      const landed = page.url();
+      if (landed && landed !== url) {
+        const after = await checkRobots(landed, async (robotsUrl) => {
+          const res = await politeFetch(robotsUrl, { skipRobots: true });
+          return { status: res.status ?? 599, text: res.body ?? '' };
+        });
+        if (!after.allowed) {
+          return {
+            ...empty,
+            status: response?.status() ?? null,
+            finalUrl: landed,
+            requestedUrls,
+            blockedReason: `robots(redirect): ${landed} — ${after.reason}`,
+          };
+        }
+      }
+
       const html = await page.content();
       const text = await page.innerText('body', { timeout: 5000 }).catch(() => '');
 
