@@ -72,44 +72,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "any_phone",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://tadatada.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://tadatada.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://tadatada.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://tadatada.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://tadatada.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://tadatada.com",
+        "saw": "운영자가 앱으로 직접 확인함. 가입 화면에 '해외 유저이신가요?' 버튼이 따로 있고, 그것을 누르면 국가번호를 고른 뒤 번호를 넣을 수 있다. 즉 휴대폰 인증은 하되 한국 번호가 아니어도 된다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "app_availability": {

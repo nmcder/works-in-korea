@@ -71,30 +71,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.coupangeats.com/join",
-            "status": 403,
-            "used": false
-          },
-          {
-            "url": "https://www.coupangeats.com (이하 후보)",
-            "status": 403,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://www.coupangeats.com",
+        "saw": "운영자가 앱으로 직접 확인함. 웹사이트는 소개 페이지라 아무 기능이 없고 가입은 앱에서만 된다. 앱 가입 절차에 국내 통신사 인증이 필요해서 한국 번호가 없으면 가입할 수 없다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "app_availability": {

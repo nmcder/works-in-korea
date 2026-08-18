@@ -57,62 +57,35 @@
     },
     "i18n_ui": {
       "value": [
+        "ko",
         "en",
-        "ko"
+        "zh",
+        "ja"
       ],
-      "measured_at": "2026-08-17T18:34:29.140Z",
-      "first_seen_at": "2026-08-17T18:34:29.140Z",
-      "last_changed_at": "2026-08-17T18:34:29.140Z",
-      "method": "auto:i18n_ui",
-      "confidence": "auto",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "declared_html_lang": null,
-        "hreflang": [],
-        "language_switcher_links": {},
-        "english_url_checks": [
-          {
-            "url": "https://www.seoulmetro.co.kr/en",
-            "status": null,
-            "ok": false
-          },
-          {
-            "url": "https://www.seoulmetro.co.kr/en/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0,
-        "hangul_char_ratio": 1,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "checked_by": "operator",
+        "url": "http://www.seoulmetro.co.kr/kr/index.do?device=PC",
+        "saw": "운영자가 한국에서 직접 열어 확인함. 우측 상단에 언어 변경 버튼이 있고 영어·중국어·일본어 세 가지를 지원한다. 다만 사이트가 몇십 초 동안 열리지 않다가 'Not secure' 경고창이 뜨고, 계속을 눌러야 http 주소로 넘어가 열렸다. 해외에서 자동 확인할 때는 계속 응답이 없었다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.seoulmetro.co.kr/join",
-            "status": null,
-            "used": false,
-            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
-          },
-          {
-            "url": "https://www.seoulmetro.co.kr (이하 후보)",
-            "status": null,
-            "used": false,
-            "reason": "첫 후보가 차단되어 나머지 후보 탐색을 중단함 (불필요한 요청 방지)"
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "http://www.seoulmetro.co.kr/kr/index.do?device=PC",
+        "saw": "운영자가 가입 화면을 직접 열어 확인함. 인증 방식이 휴대폰 인증과 아이핀 인증 두 가지뿐이고, 휴대폰 인증은 통신사 인증을 반드시 거쳐야 한다. 이메일·여권 같은 대체 경로는 없다. 한국 휴대폰이 없는 외국인은 가입이 어렵다고 판단됨.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "app_availability": {

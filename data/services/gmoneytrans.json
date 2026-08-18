@@ -13,7 +13,7 @@
     "support_url": "https://gmoneytrans.com/supported-countries/",
     "english_url": null,
     "ios_app_id": "1218137289",
-    "android_package": null,
+    "android_package": "com.gmoneytrans",
     "no_app": null,
     "signup_app_only": true
   },
@@ -106,55 +106,28 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "optional",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.gmoneytrans.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.gmoneytrans.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.gmoneytrans.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.gmoneytrans.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.gmoneytrans.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://play.google.com/store/apps/details?id=com.gmoneytrans",
+        "saw": "운영자가 앱으로 직접 확인함. 가입 화면에서 외국인을 선택하면 여권과 외국인등록증 중 하나를 골라 인증할 수 있다. 즉 한국 휴대폰 본인인증 말고 신분증으로 가는 길이 따로 있다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "app_availability": {
       "value": {
         "ios_listed": true,
-        "android_listed": null,
+        "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
+      "measured_at": "2026-08-18T10:45:56.407Z",
+      "first_seen_at": "2026-08-18T10:45:56.407Z",
+      "last_changed_at": "2026-08-18T10:45:56.407Z",
       "method": "auto:app_availability",
       "confidence": "auto",
       "evidence": {
@@ -166,7 +139,13 @@
           "result_count": 1,
           "error": null
         },
-        "android": null,
+        "android": {
+          "package": "com.gmoneytrans",
+          "listed": true,
+          "endpoint": "https://play.google.com/store/apps/details?id=com.gmoneytrans&hl=en",
+          "http_status": 200,
+          "error": null
+        },
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다."
       }
     },

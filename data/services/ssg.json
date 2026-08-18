@@ -52,18 +52,19 @@
       }
     },
     "i18n_ui": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:i18n_ui",
-      "confidence": "unknown",
+      "value": [
+        "ko"
+      ],
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "robots: Disallow: /",
-        "http_status": null,
-        "note": "정상 응답을 받지 못해 언어 제공 여부를 판정하지 않았다 (차단·오류 페이지는 근거로 쓰지 않는다).",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "robots: Disallow: /"
+        "checked_by": "operator",
+        "url": "https://www.ssg.com",
+        "saw": "운영자가 브라우저로 직접 열어 확인함. 사이트에 언어 변경 버튼이 없다. 고객센터 페이지까지 들어가 봐도 언어 변경 버튼이 없었다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "signup_phone_auth": {
@@ -159,17 +160,17 @@
       }
     },
     "support_en": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:support_en",
-      "confidence": "unknown",
+      "value": "no",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "고객지원 페이지를 찾지 못함",
-        "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "고객지원 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://www.ssg.com/customer/main.ssg",
+        "saw": "운영자가 고객센터를 직접 열어 확인함. 영어 지원이 없다. 일반 문의는 이메일로만 받고 있고, 고객센터 핫라인이라는 창구가 따로 있으나 로그인해야 열려서 거기까지는 확인하지 못했다. 고객센터 페이지에도 언어 변경 버튼은 없었다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "foreign_card": {

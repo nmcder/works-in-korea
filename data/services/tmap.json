@@ -72,44 +72,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.tmap.co.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tmap.co.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tmap.co.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tmap.co.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tmap.co.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "checked_by": "operator",
+        "url": "https://www.tmap.co.kr",
+        "saw": "운영자가 앱으로 직접 확인함. 웹은 소개 페이지이고 가입은 앱에서만 된다. 국내 번호가 없으면 가입할 수 없었다.",
+        "recorded_at": "2026-08-18T10:45:30.123Z"
       }
     },
     "app_availability": {
