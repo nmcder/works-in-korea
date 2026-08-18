@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://bank.shinhan.com/",
             "redirected": false,
-            "elapsed_ms": 4254,
+            "elapsed_ms": 4974,
             "body_sha256": "d23f48aa5b0d3d4e0ff83a22c49dcc5b3e7cb9ac77c00cb6bec94ea726499e07",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-17T18:34:29.140Z",
+            "at": "2026-08-18T18:35:04.087Z",
             "note": null
           }
         }
@@ -76,7 +76,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-15T18:24:37.122Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:signup_phone_auth",
@@ -119,9 +119,7 @@
             "reason": "hints.signup_url"
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
@@ -130,7 +128,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -159,7 +157,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:payment_gate",

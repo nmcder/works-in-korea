@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://map.kakao.com/",
             "redirected": false,
-            "elapsed_ms": 3745,
-            "body_sha256": "4ffc2177c086cbe9686faa6ecf6b5788c1fc7be40066691d64732d3bd6da0ad8",
+            "elapsed_ms": 3725,
+            "body_sha256": "44fc69bb9b07bdf94ecff4c995115392211798ddcc8f939d0ea1930d22649056",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-17T18:34:29.140Z",
+            "at": "2026-08-18T18:35:04.087Z",
             "note": null
           }
         }
@@ -84,7 +84,9 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.024,
         "hangul_char_ratio": 0.671,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-08-18T18:35:04.087Z",
+        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
     "signup_phone_auth": {
@@ -107,7 +109,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -129,7 +131,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

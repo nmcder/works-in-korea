@@ -19,37 +19,40 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": "ok",
+      "measured_at": "2026-08-18T18:35:04.087Z",
+      "first_seen_at": "2026-08-18T18:35:04.087Z",
+      "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 423,
+            "http_status": 200,
             "final_url": "https://ticket.melon.com/",
             "redirected": false,
-            "elapsed_ms": 2861,
-            "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "content_type": "text/html",
+            "elapsed_ms": 3118,
+            "body_sha256": "ffe7cdcedc595d1f42cdfc656df6d2c7beb1d0de3ebd611066f67b5507b490ad",
+            "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": "판정 불가한 상태코드 423",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "판정 불가한 상태코드 423"
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-18T18:35:04.087Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -57,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-16T23:53:52.474Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -81,9 +84,7 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0,
         "hangul_char_ratio": 0,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "http_status=423"
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
@@ -106,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -131,25 +132,30 @@
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-08-18T18:35:04.087Z",
+      "first_seen_at": "2026-08-18T18:35:04.087Z",
+      "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://ticket.melon.com",
-            "status": 423,
-            "scanned": false,
-            "reason": "http_status=423"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {

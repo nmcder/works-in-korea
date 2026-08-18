@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://watcha.com/ko/browse/all",
             "redirected": true,
-            "elapsed_ms": 3916,
+            "elapsed_ms": 3823,
             "body_sha256": "df39dd70477148a4f9280edecf3098f5227807bf1c6597deae5b4d6b181e35a8",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-17T18:34:29.140Z",
+            "at": "2026-08-18T18:35:04.087Z",
             "note": null
           }
         }
@@ -61,7 +61,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -107,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -129,7 +129,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

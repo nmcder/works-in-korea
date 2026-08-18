@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tving.com/",
             "redirected": false,
-            "elapsed_ms": 3445,
+            "elapsed_ms": 3113,
             "body_sha256": "1a7fb5cd687f2532fc9829e229931aa71c001062ccecea2522d9bbc97f276e3d",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-17T18:34:29.140Z",
+            "at": "2026-08-18T18:35:04.087Z",
             "note": null
           }
         }
@@ -91,7 +91,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -113,7 +113,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

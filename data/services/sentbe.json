@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.sentbe.com/",
             "redirected": false,
-            "elapsed_ms": 2852,
+            "elapsed_ms": 2841,
             "body_sha256": "981ba38cdb5388f93130aea894956ecdb7ebb46888c586b1802e6bac9fef38fe",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-17T18:34:29.140Z",
+            "at": "2026-08-18T18:35:04.087Z",
             "note": null
           }
         }
@@ -66,7 +66,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -113,7 +113,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -142,7 +142,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -166,7 +166,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-17T18:34:29.140Z",
+      "measured_at": "2026-08-18T18:35:04.087Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -176,7 +176,7 @@
           {
             "url": "https://help.sentbe.com/ko/support/home",
             "status": 200,
-            "chars": 729
+            "chars": 725
           },
           {
             "url": "https://www.sentbe.com",
@@ -184,20 +184,19 @@
             "chars": 11
           }
         ],
-        "content_sha256": "172fb8f040dce9bcd4b329a11d70550701e22c4b7058293d49556e07462520d9",
+        "content_sha256": "6cb6df3d37f5266af459d1e15ecc51d3a276cd8ad51c4f2a82c2e053918c85cc",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "English › Find help in English",
-          "reason": "고객지원 페이지에 영어로 도움을 받을 수 있는 전용 섹션이 명시되어 있음"
+          "reason": "고객지원 페이지에 영어로 도움을 받을 수 있는 채널이 명시되어 있음"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.524,
+          "latin_ratio": 0.56,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

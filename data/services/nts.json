@@ -19,36 +19,40 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
+      "value": "ok",
+      "measured_at": "2026-08-18T18:35:04.087Z",
+      "first_seen_at": "2026-08-18T18:35:04.087Z",
+      "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": null,
-            "final_url": null,
+            "http_status": 200,
+            "final_url": "https://www.nts.go.kr/",
             "redirected": false,
-            "elapsed_ms": 22516,
-            "body_sha256": null,
-            "content_type": null,
-            "not_measured": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+            "elapsed_ms": 3720,
+            "body_sha256": "32428818a6dc4a7ae6c6ad97dd4aa6d1095394712084fddaf0609b586a486b85",
+            "content_type": "text/html;charset=UTF-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-08-18T18:35:04.087Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -93,30 +97,35 @@
         "not_measured": "앱 ID 미상",
         "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
+        "last_attempt_at": "2026-08-18T18:35:04.087Z",
         "last_attempt_failed": "앱 ID 미상"
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T08:07:45.107Z",
-      "last_changed_at": "2026-08-15T08:07:45.107Z",
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-08-18T18:35:04.087Z",
+      "first_seen_at": "2026-08-18T18:35:04.087Z",
+      "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://www.nts.go.kr",
-            "status": null,
-            "scanned": false,
-            "reason": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {
