@@ -88,44 +88,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.hira.or.kr/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hira.or.kr/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hira.or.kr/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hira.or.kr/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.hira.or.kr/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음"
+        "checked_by": "operator",
+        "url": "https://ptl.hira.or.kr/main.do?pageType=regist",
+        "saw": "국민회원 가입 절차를 실제로 열어 확인함(입력·제출은 하지 않음). 약관 동의 다음 단계가 본인확인이고, 제시되는 수단이 '휴대폰인증' 과 '공동인증서 인증' 두 개뿐이다. 이메일·여권 같은 대체 경로는 없고 둘 다 한국 실명확인 기반이다. 다만 '국민회원 가입하기' 를 누르면 '국민회원은 회원가입 없이 주요 서비스를 이용하실 수 있습니다' 라는 안내가 먼저 뜬다 — 가입하지 않아도 주요 서비스는 쓸 수 있다는 뜻이다.",
+        "recorded_at": "2026-08-18T08:47:10.355Z"
       }
     },
     "app_availability": {

@@ -72,44 +72,17 @@
       }
     },
     "signup_phone_auth": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
-      "method": "auto:signup_phone_auth",
-      "confidence": "unknown",
+      "value": "required",
+      "measured_at": "2026-08-17T00:00:00.000Z",
+      "first_seen_at": "2026-08-17T00:00:00.000Z",
+      "last_changed_at": "2026-08-17T00:00:00.000Z",
+      "method": "manual",
+      "confidence": "manual",
       "evidence": {
-        "not_measured": "가입 페이지를 찾지 못함",
-        "attempts": [
-          {
-            "url": "https://www.tving.com/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tving.com/signup",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tving.com/member/join",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tving.com/register",
-            "status": 404,
-            "used": false
-          },
-          {
-            "url": "https://www.tving.com/user/join",
-            "status": 404,
-            "used": false
-          }
-        ],
-        "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-17T18:34:29.140Z",
-        "last_attempt_failed": "입력란이 있는 가입 양식을 확인하지 못함 (안내 페이지로 보임) — 본인인증 요구 여부를 판정하지 않음"
+        "checked_by": "operator",
+        "url": "https://www.tving.com/account/signup",
+        "saw": "가입 양식을 실제로 열어 확인함(입력·제출은 하지 않음). 필수 약관만 동의하고 다음을 누르면 '본인 확인' 화면이 나오고, 입력란이 이름 · 생년월일 6자리 · 통신사 · 휴대폰 번호로 되어 있다. 통신사 목록을 펼쳐 보니 SKT · KT · LG U+ · SKT 알뜰폰 · KT 알뜰폰 · LG U+ 알뜰폰 여섯 개뿐이고 국가번호를 고르는 칸은 없었다. 이 화면에 이메일·소셜·아이핀 같은 다른 경로는 없었고, 앞 단계에서 본인확인을 건너뛰는 길도 없었다.",
+        "recorded_at": "2026-08-18T08:47:10.355Z"
       }
     },
     "app_availability": {
