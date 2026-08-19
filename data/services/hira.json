@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.hira.or.kr/",
             "redirected": false,
-            "elapsed_ms": 4374,
+            "elapsed_ms": 3257,
             "body_sha256": "df7bd63d949888a60e2a9e6990a4fcfc34e4dc805bf2e296df8c3331e759d00d",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-18T18:35:04.087Z",
+            "at": "2026-08-19T18:31:43.232Z",
             "note": null
           }
         }
@@ -60,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -107,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -136,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

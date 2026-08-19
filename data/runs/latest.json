@@ -1,7 +1,7 @@
 {
-  "started_at": "2026-08-18T18:35:04.087Z",
-  "finished_at": "2026-08-18T18:41:25.630Z",
-  "duration_ms": 381543,
+  "started_at": "2026-08-19T18:31:43.232Z",
+  "finished_at": "2026-08-19T18:38:13.845Z",
+  "duration_ms": 390613,
   "vantage_point": {
     "id": "github-actions",
     "country": "us",
@@ -10,15 +10,15 @@
   },
   "services_total": 106,
   "services_probed": 106,
-  "signals_measured": 312,
-  "signals_unknown": 92,
-  "changes": 8,
+  "signals_measured": 304,
+  "signals_unknown": 100,
+  "changes": 1,
   "errors": [],
   "llm": {
     "calls": 7,
-    "cached": 12,
-    "input_tokens": 41141,
-    "output_tokens": 945,
+    "cached": 13,
+    "input_tokens": 40902,
+    "output_tokens": 971,
     "model": "claude-sonnet-5",
     "failures": 0,
     "last_error": null

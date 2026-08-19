@@ -53,7 +53,7 @@
             "note": null
           }
         },
-        "last_attempt_at": "2026-08-18T18:35:04.087Z",
+        "last_attempt_at": "2026-08-19T18:31:43.232Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
@@ -96,7 +96,7 @@
         "android_listed": null,
         "countries": null
       },
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -132,7 +132,7 @@
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-08-18T18:35:04.087Z",
+        "last_attempt_at": "2026-08-19T18:31:43.232Z",
         "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
@@ -146,7 +146,7 @@
       "evidence": {
         "not_measured": "고객지원 페이지를 찾지 못함",
         "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-18T18:35:04.087Z",
+        "last_attempt_at": "2026-08-19T18:31:43.232Z",
         "last_attempt_failed": "고객지원 페이지를 찾지 못함"
       }
     },

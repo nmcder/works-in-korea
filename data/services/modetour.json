@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 5986,
-            "body_sha256": "2f3078d8113bdb6e982c8b6a25c649b9d6e2ebcaaaf16dc0101f398132b84db1",
+            "elapsed_ms": 4818,
+            "body_sha256": "ac9b8ed60d991aed0ff89269d20e047ec96b44727fb76ce8dd703aa81f420bb0",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-18T18:35:04.087Z",
+            "at": "2026-08-19T18:31:43.232Z",
             "note": null
           }
         }
@@ -91,7 +91,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -113,7 +113,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-18T18:35:04.087Z",
+      "measured_at": "2026-08-19T18:31:43.232Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
