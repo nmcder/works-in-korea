@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2626,
-            "body_sha256": "f4a325021441ee5325185bba1e8bcbdaebae13b4ad8ba78a9349c9185e30b4bd",
+            "elapsed_ms": 2756,
+            "body_sha256": "04148c3903f680720ef8d0eadf6f750946888f3b3e2f2fd243e0353fa60cd526",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-16T18:23:49.790Z",
+            "at": "2026-08-20T18:34:42.027Z",
             "note": null
           },
           "us·Virginia": {
@@ -60,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -94,7 +94,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -132,7 +132,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -163,7 +163,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -194,7 +194,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",

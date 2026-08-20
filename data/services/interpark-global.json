@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:50:45.613Z",
       "last_changed_at": "2026-08-15T02:50:45.613Z",
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://world.nol.com/",
             "redirected": false,
-            "elapsed_ms": 2172,
-            "body_sha256": "3b69f82a9391ef8ea3d9afe4fe8016966512968edd5bf51b70ba910e634d3f33",
+            "elapsed_ms": 2510,
+            "body_sha256": "6f98e37e7fb547772b01dcf3d7a12495f50107dc6ac99eaf353a14666bee1ec1",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-16T18:23:49.790Z",
+            "at": "2026-08-20T18:34:42.027Z",
             "note": null
           },
           "us·Virginia": {
@@ -62,7 +62,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -91,14 +91,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.689,
+        "latin_char_ratio": 0.694,
         "hangul_char_ratio": 0.001,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -135,7 +135,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -164,7 +164,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -188,7 +188,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -203,20 +203,20 @@
           {
             "url": "https://world.nol.com",
             "status": 200,
-            "chars": 5249
+            "chars": 5615
           }
         ],
-        "content_sha256": "469c44a4acb39a014f9deb1af8d9b3fa2c25016c928fdfd0602adf32b9dcf1dd",
+        "content_sha256": "fa2fca0f4b2f0f2abded3d8ff5a3494d011ce58450b81b7d9e9e06fc95ed5a42",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "English Account Tickets Stays Tours & Activities Food & Attractions Pop-ups Travel Guides Customer Support Inquiry Type",
-          "reason": "영문 페이지 내 'Customer Support Inquiry' 폼이 English 사이트 상에 명시되어 있어 영어로 문의 접수가 가능함을 시사함."
+          "reason": "영문 사이트(world.nol.com/en) 내 Customer Support 문의 폼이 영어로 제공되어 영어로 문의 접수가 가능함을 명시하고 있다."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.703,
+          "latin_ratio": 0.706,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://sev.severance.healthcare/sev/index.do",
             "redirected": true,
-            "elapsed_ms": 5102,
-            "body_sha256": "ba4b5725413380e4a97bb81e34217b6b78f2d2d615e85961f1752748c28ecdc5",
+            "elapsed_ms": 4177,
+            "body_sha256": "ad4d73fba86f0c53d60a2432346d2fa936c835cd073e13227adb7edf0745616c",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-16T18:23:49.790Z",
+            "at": "2026-08-20T18:34:42.027Z",
             "note": null
           },
           "us·Virginia": {
@@ -92,7 +92,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -121,7 +121,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -145,7 +145,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -160,7 +160,7 @@
           {
             "url": "https://sev.severance.healthcare",
             "status": 200,
-            "chars": 4695
+            "chars": 4673
           },
           {
             "url": "https://sev.severance.healthcare/sev/patient-carer/appointment/checkup/faq.do",

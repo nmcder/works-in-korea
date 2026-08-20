@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://etk.srail.kr/main.do",
             "redirected": true,
-            "elapsed_ms": 8132,
-            "body_sha256": "ed1306486d50f8539773ba08c99e47884e40e65f0e9698aed20855efa34d31b4",
+            "elapsed_ms": 6863,
+            "body_sha256": "f22e44ae20f181ef3686a5aec5bbf91f6bb79b186d0a93da13f611c27dfcf2a3",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-16T18:23:49.790Z",
+            "at": "2026-08-20T18:34:42.027Z",
             "note": null
           },
           "us·Virginia": {
@@ -62,7 +62,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -96,13 +96,13 @@
         ],
         "accept_language_responsive": false,
         "latin_char_ratio": 0.036,
-        "hangul_char_ratio": 0.66,
+        "hangul_char_ratio": 0.661,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T03:53:01.010Z",
       "last_changed_at": "2026-08-15T03:53:01.010Z",
       "method": "auto:signup_phone_auth",
@@ -150,7 +150,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-16T00:32:39.941Z",
       "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
@@ -179,7 +179,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -203,7 +203,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -218,7 +218,7 @@
           {
             "url": "https://etk.srail.kr",
             "status": 200,
-            "chars": 4276
+            "chars": 4289
           },
           {
             "url": "https://etk.srail.kr/cms/archive.do?pageId=TK0406010000",
@@ -231,17 +231,17 @@
             "chars": 1567
           }
         ],
-        "content_sha256": "c2c178d17a0df585b88818cf29b3ef26ac077ffd538589794f8edb462f9345cf",
+        "content_sha256": "36460e2aa63f5e24911296bd64961693be8761a292ad3c8a7b1d27912b85931c",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "7 외국어(영어) 상담 / For English Service 9 ~ 18시 운영",
-          "reason": "고객센터 ARS 메뉴에 영어 상담(For English Service)이 명시되어 있어 영어로 문의 가능한 채널이 존재함."
+          "reason": "고객센터 ARS 메뉴에 영어 상담 전용 메뉴(7번)가 명시되어 있어 영어로 전화 상담이 가능함을 확인할 수 있음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.067,
+          "latin_ratio": 0.066,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }

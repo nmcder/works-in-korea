@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kbanknow.com/web/web-home/home/main",
             "redirected": true,
-            "elapsed_ms": 4724,
+            "elapsed_ms": 4140,
             "body_sha256": "9e9c98d70c5765f50a50dfd7934a5b5bca84748d64ff4ba670b61acb8f27100c",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-16T18:23:49.790Z",
+            "at": "2026-08-20T18:34:42.027Z",
             "note": null
           },
           "us·Virginia": {
@@ -60,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -109,7 +109,7 @@
           }
         ],
         "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다",
-        "last_attempt_at": "2026-08-19T18:31:43.232Z",
+        "last_attempt_at": "2026-08-20T18:34:42.027Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -119,7 +119,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -148,7 +148,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-19T18:31:43.232Z",
+      "measured_at": "2026-08-20T18:34:42.027Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
