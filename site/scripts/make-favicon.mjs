@@ -10,11 +10,21 @@
  *
  * ── 왜 그림 파일을 만들어 두는가 (SVG 하나로 안 끝내고)
  *
- * 16px 에서 읽히는 것과 512px 에서 읽히는 것은 다른 문제다. 그리고 브라우저는
+ * 16px 에서 읽히는 것과 큰 화면에서 읽히는 것은 다른 문제다. 그리고 브라우저는
  * 아직도 아무 말 없이 /favicon.ico 를 먼저 찾는다. 그래서 세 벌을 만든다.
- *   favicon.ico    32·48px 두 장을 담은 통 — 브라우저 탭과 구글
- *   icon.png       512px — 고해상도 화면, 안드로이드 홈 화면
+ *   favicon.ico    48·96px 두 장을 담은 통 — 브라우저 탭과 구글
+ *   icon.png       480px — 고해상도 화면, 안드로이드 홈 화면
  *   apple-icon.png 180px — 아이폰 홈 화면 (여기만 모서리를 안 깎는다, iOS 가 깎는다)
+ *
+ * ── 왜 하필 48 의 배수인가
+ *
+ * 구글이 검색 결과 옆에 쓰는 파비콘은 **정사각형이고 한 변이 48px 의 배수**여야 한다고
+ * 문서에 적혀 있다. 처음에는 32·48·512 로 냈는데 32 도 512 도 48 의 배수가 아니다.
+ * 2026-08-21 까지 나흘이 지나도 검색 결과에는 지구본이 그대로였다.
+ *
+ * 이것이 원인이라고 단정할 수는 없다 — 구글 파비콘은 원래 몇 주씩 걸리기도 한다.
+ * 다만 규격을 안 맞춘 채로 기다리는 것과 맞추고 기다리는 것은 다르므로 맞춰 둔다.
+ * 애플 아이콘만 180 그대로다. 그건 애플 규격이고 구글이 보는 것이 아니다.
  *
  * ── 무엇을 그리는가
  *
@@ -109,20 +119,20 @@ const browser = await chromium.launch();
 try {
   await mkdir(APP, { recursive: true });
 
-  const [i32, i48, i512, iApple] = await Promise.all([
-    draw(browser, 32),
+  const [i48, i96, i480, iApple] = await Promise.all([
     draw(browser, 48),
-    draw(browser, 512),
+    draw(browser, 96),
+    draw(browser, 480),
     // iOS 는 자기가 모서리를 깎는다. 우리가 미리 깎으면 두 번 깎여 알약이 된다.
     draw(browser, 180, { rounded: false }),
   ]);
 
-  await writeFile(path.join(APP, 'favicon.ico'), ico([{ size: 32, buf: i32 }, { size: 48, buf: i48 }]));
-  await writeFile(path.join(APP, 'icon.png'), i512);
+  await writeFile(path.join(APP, 'favicon.ico'), ico([{ size: 48, buf: i48 }, { size: 96, buf: i96 }]));
+  await writeFile(path.join(APP, 'icon.png'), i480);
   await writeFile(path.join(APP, 'apple-icon.png'), iApple);
 
-  console.log('app/favicon.ico     32 + 48px');
-  console.log('app/icon.png        512px');
+  console.log('app/favicon.ico     48 + 96px  (48의 배수)');
+  console.log('app/icon.png        480px      (48의 배수)');
   console.log('app/apple-icon.png  180px (모서리 안 깎음 — iOS 가 깎는다)');
   console.log('');
   console.log('Next 가 <link rel="icon"> 을 알아서 붙인다. npm run build 로 확인할 것.');
