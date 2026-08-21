@@ -6,7 +6,7 @@ import { Dot } from '@/components/Dot';
 import { RelativeTime } from '@/components/RelativeTime';
 import { T, TBlock, type Bi } from '@/lib/i18n';
 import { getService, getServices } from '@/lib/data';
-import { hasIcon } from '@/lib/icons';
+import { getIconIds, hasIcon } from '@/lib/icons';
 import {
   CATEGORY_LABELS,
   HEADLINE_KEYS,
@@ -178,6 +178,27 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
   });
   const answer = answerSentence(service);
 
+  /*
+   * 같은 종류의 다른 서비스.
+   *
+   * ── 왜 넣는가
+   *
+   * 이 사이트는 바퀴살 모양이었다. 홈이 106곳을 가리키고, **서비스 페이지끼리는
+   * 링크가 하나도 없었다.** 그래서 상세 페이지 한 장에 들어오는 안쪽 링크가
+   * 홈에서 오는 하나뿐이었다. 검색엔진에게 그건 "중요하지 않은 잎사귀"로 읽힌다.
+   *
+   * 그리고 사람에게도 필요하다. "배달 앱 중에 뭐가 되나"를 알아보러 온 사람이
+   * 지금은 한 곳을 보고 홈으로 돌아가 다시 골라야 했다. 비교가 이 데이터의 쓸모인데
+   * 비교할 길을 안 만들어 둔 셈이다.
+   *
+   * 값을 같이 보여준다 — 이름만 늘어놓으면 링크 모음이지 비교가 아니다.
+   */
+  const siblings = (await getServices())
+    .filter((s) => s.category === service.category && s.id !== service.id)
+    .sort((a, b) => a.importance - b.importance || a.name.en.localeCompare(b.name.en))
+    .slice(0, 6);
+  const siblingIcons = siblings.length > 0 ? await getIconIds() : new Set<string>();
+
   return (
     <>
       {faq !== null && (
@@ -330,6 +351,52 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
             />
           ))}
         </div>
+
+        {siblings.length > 0 && (
+          <section className="siblings">
+            <h2>
+              <T en={`Others in ${cat.en.toLowerCase()}`} ko={`같은 종류의 다른 서비스`} />
+            </h2>
+            <div className="sibling-grid">
+              {siblings.map((sib) => {
+                const sv = viewAll(sib);
+                return (
+                  <Link key={sib.id} href={`/service/${sib.id}/`} className="sibling">
+                    <span className="sibling-head">
+                      <AppIcon
+                        id={sib.id}
+                        name={sib.name.en}
+                        has={siblingIcons.has(sib.id)}
+                        size={30}
+                      />
+                      <span className="sibling-name">{sib.name.en}</span>
+                    </span>
+                    <span className="sibling-rows">
+                      {HEADLINE_KEYS.map((k) => {
+                        const v = sv.find((x) => x.key === k);
+                        if (!v) return null;
+                        return (
+                          <span key={k} className="sibling-row">
+                            <span className="sibling-label">
+                              <T {...(GLANCE_LABEL[k] ?? v.label)} />
+                            </span>
+                            <span className={`sibling-value t-${v.tone}`}>
+                              {v.tone === 'none' ? (
+                                <T en="not checked" ko="확인 못 함" />
+                              ) : (
+                                <T {...v.display} />
+                              )}
+                            </span>
+                          </span>
+                        );
+                      })}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         <p style={{ margin: '32px 0 72px', fontSize: 14.5, color: 'var(--text-3)' }}>
           <T

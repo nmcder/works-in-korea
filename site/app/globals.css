@@ -704,6 +704,83 @@ a {
  * 촘촘하게 짜서 106줄이 화면 한두 번 스크롤에 들어오게 한다. 읽으라고 두는 것이
  * 아니라 **찾으라고** 두는 것이라, 본문보다 작고 조용하다.
  */
+/*
+ * 같은 종류의 다른 서비스 — 상세 페이지 아래.
+ *
+ * 이름만 늘어놓으면 링크 모음이고, 그건 사람에게도 검색엔진에게도 값이 없다.
+ * 세 줄 값을 같이 보여 줘서 **여기서 바로 비교가 되게** 한다. 이 데이터의 쓸모가
+ * 원래 비교인데, 지금까지 비교하려면 홈으로 돌아갔다 다시 골라야 했다.
+ */
+.siblings {
+  margin: 56px 0 8px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.siblings h2 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.sibling-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  gap: 12px;
+}
+.sibling {
+  display: block;
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--surface);
+  transition: border-color 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+}
+.sibling:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-2);
+}
+.sibling-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 11px;
+}
+.sibling-name {
+  font-size: 15px;
+  font-weight: 640;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.sibling-rows {
+  display: grid;
+  gap: 4px;
+}
+.sibling-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+.sibling-label {
+  color: var(--text-3);
+  white-space: nowrap;
+}
+.sibling-value {
+  text-align: right;
+  font-weight: 560;
+  color: var(--text-2);
+}
+/* 색은 홈 목록과 같은 뜻으로 쓴다 — 장벽이 있는가만 나타낸다 (D-12) */
+.sibling-value.t-open { color: var(--ok); }
+.sibling-value.t-barrier { color: var(--stop); }
+.sibling-value.t-mixed { color: var(--warn); }
+.sibling-value.t-none { color: var(--none); font-weight: 500; }
+
 .index-band {
   background: var(--bg-soft);
   border-top: 1px solid var(--line);
