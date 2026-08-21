@@ -44,6 +44,31 @@ const nextConfig = {
       { source: '/og/s/:id/image.png', destination: '/service/:id/opengraph-image' },
     ];
   },
+
+  /*
+   * 위의 rewrite 때문에 **같은 그림이 두 주소로 나간다.**
+   *   /og/s/coupang/image.png   ← 우리가 메타태그에 적는 주소
+   *   /service/coupang/opengraph-image/  ← Next 가 원래 만드는 주소
+   *
+   * 107쌍이다. 검색엔진 입장에서는 내용이 같은 주소가 두 배로 늘어난 것이고,
+   * 새 사이트에 배정된 크롤링 몫이 거기로 샌다. 2026-08-21 기준 색인이 안 된
+   * 38장 중 24장이 "발견됐지만 아직 안 가져감"인데, 그건 몫이 모자랄 때 나오는 상태다.
+   *
+   * 원래 주소는 우리가 아무 데서도 링크하지 않으므로 색인될 이유가 없다.
+   * noindex 를 달아 한쪽만 남긴다. 그림 자체는 그대로 열린다 — 미리보기는 영향받지 않는다.
+   */
+  async headers() {
+    return [
+      {
+        source: '/opengraph-image',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      {
+        source: '/service/:id/opengraph-image',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
