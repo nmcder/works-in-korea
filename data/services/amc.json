@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.amc.seoul.kr/asan/main.do",
             "redirected": true,
-            "elapsed_ms": 4965,
-            "body_sha256": "da2260c24ab0dc7bc3ab1121464085ed938fc326fab306e535121b2373160573",
+            "elapsed_ms": 4600,
+            "body_sha256": "78033d2c9126d86f815134830c624d026326920555e8b2c49f848f67153a37b8",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -51,6 +51,11 @@
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
             "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
+            "note": null
           }
         }
       }
@@ -64,7 +69,7 @@
         "ru",
         "zh"
       ],
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -98,13 +103,13 @@
         ],
         "accept_language_responsive": false,
         "latin_char_ratio": 0.049,
-        "hangul_char_ratio": 0.685,
+        "hangul_char_ratio": 0.684,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -142,7 +147,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -184,7 +189,7 @@
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
         "payment_attempt": "never",
-        "last_attempt_at": "2026-08-20T18:34:42.027Z",
+        "last_attempt_at": "2026-08-22T18:25:33.559Z",
         "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },

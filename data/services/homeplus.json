@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://mfront.homeplus.co.kr/",
             "redirected": true,
-            "elapsed_ms": 4053,
+            "elapsed_ms": 4151,
             "body_sha256": "debb1d7b14d8b641cacb28cca514917c1725c276e4413b2b20c23b4383867ebb",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -51,6 +51,11 @@
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
             "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
+            "note": null
           }
         }
       }
@@ -60,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -102,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -131,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -155,7 +160,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -165,7 +170,7 @@
           {
             "url": "https://mfront.homeplus.co.kr/cs?homeType=MART",
             "status": 200,
-            "chars": 1263
+            "chars": 1246
           },
           {
             "url": "https://front.homeplus.co.kr",
@@ -173,22 +178,19 @@
             "chars": 23
           }
         ],
-        "content_sha256": "e7d3c5781efbd8abd891833946a7aaf9d908e32e43efabc1f7179e51868b3e22",
+        "content_sha256": "f9134f546ee83d474859252bcde4955a365313e8ce99e42477b3b00f098640df",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
           "quoted_evidence": "고객센터1577-3355업무시간 : 10시 ~ 20시(명절당일 휴무)Email :onlinemart@homeplus.co.kr",
-          "reason": "고객센터 전화와 이메일이 명시되어 있으나 한국어 전용 채널로 안내되어 있으며 영어 지원에 대한 언급이 전혀 없음."
+          "reason": "고객센터 전화/이메일 채널만 명시되어 있고 영어 지원에 대한 언급이 없으며, 전반적으로 한국어 전용 고객센터로 판단됨."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.186,
+          "latin_ratio": 0.188,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-08-19T18:31:43.232Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {

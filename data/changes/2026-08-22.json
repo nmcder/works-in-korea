@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T18:25:33.559Z",
+  "changes": [
+    {
+      "service_id": "epost",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-22T18:25:33.559Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "ssg",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-22T18:25:33.559Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

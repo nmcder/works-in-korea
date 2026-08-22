@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2756,
-            "body_sha256": "04148c3903f680720ef8d0eadf6f750946888f3b3e2f2fd243e0353fa60cd526",
+            "elapsed_ms": 2657,
+            "body_sha256": "3b0bd50b5232013194aae416f7460f799362a89d3e1103bde11d582914911bbb",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -51,6 +51,11 @@
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
             "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
+            "note": null
           }
         }
       }
@@ -60,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -87,14 +92,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.805,
+        "latin_char_ratio": 0.806,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -132,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -163,7 +168,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -194,7 +199,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -212,22 +217,21 @@
             "chars": 8000
           }
         ],
-        "content_sha256": "94ca58e69e3db3f54b95e2a71994afee0b5d6357c93744abfc0395da36f4da4a",
+        "content_sha256": "a733ddb092790e6b1fe1b308f590ef562539f573c9b99930432dd474436e813d",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "global-customerservice@oliveyoung.com",
-          "reason": "영어 기반 글로벌 사이트이며 global-customerservice@oliveyoung.com 이메일이 고객센터 창구로 명시되어 있어 영어 문의가 가능함을 알 수 있음."
+          "reason": "글로벌 고객센터 이메일 주소가 명시되어 있고, 사이트 전체가 영어로 서비스되는 글로벌 전용 페이지이므로 영어 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "yes",
           "strong_markers": [
             "english support"
           ],
-          "latin_ratio": 0.765,
+          "latin_ratio": 0.769,
           "reason": "영문 지원을 명시하는 문구를 찾음"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://map.kakao.com/",
             "redirected": false,
-            "elapsed_ms": 3382,
+            "elapsed_ms": 3188,
             "body_sha256": "1b87d78ac2a42e600935f4692f2e982fb8dee10ecc228ed9893fe650e7efdafe",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -50,6 +50,11 @@
           "us·Virginia": {
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
+            "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
         }
@@ -85,7 +90,7 @@
         "latin_char_ratio": 0.024,
         "hangul_char_ratio": 0.671,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-20T18:34:42.027Z",
+        "last_attempt_at": "2026-08-22T18:25:33.559Z",
         "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
@@ -109,7 +114,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -131,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

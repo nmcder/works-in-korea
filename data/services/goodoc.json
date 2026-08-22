@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.goodoc.co.kr/",
             "redirected": false,
-            "elapsed_ms": 2891,
+            "elapsed_ms": 2904,
             "body_sha256": "e56337dc205fa8e342a1cf760a3cc4d9c2e66b721d4cc71ceb36ad7b2c51de70",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -50,6 +50,11 @@
           "us·Virginia": {
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
+            "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
         }
@@ -91,7 +96,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -120,7 +125,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

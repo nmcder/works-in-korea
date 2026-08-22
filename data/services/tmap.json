@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 4087,
-            "body_sha256": "84fc7cd977f51c7ae5da1c10b6326961878a9da1e156cef4c9bd1fb2935a43ea",
+            "elapsed_ms": 3716,
+            "body_sha256": "f4f4372cfd80c23005de65a9720c643217d26916baac581aa36fc8c46b6306c2",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -50,6 +50,11 @@
           "us·Virginia": {
             "value": "ok",
             "at": "2026-08-19T18:31:43.232Z",
+            "note": null
+          },
+          "us·California": {
+            "value": "ok",
+            "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
         }
@@ -91,7 +96,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -113,7 +118,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -137,7 +142,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-22T18:25:33.559Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -165,12 +170,12 @@
             "chars": 111
           }
         ],
-        "content_sha256": "949cab6ca7c4799fa2f431e14c9b36d92460bf2505e5f2ce3d91959a2c8a1cbd",
+        "content_sha256": "a108f5b626113093a3de9b7d282ebfd057091b74af6d71172c344f1f111ba86e",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
           "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의",
-          "reason": "고객센터가 앱 내 1:1문의로만 안내되어 있고 영어 지원 채널에 대한 언급이 없어 한국어 전용으로 판단됩니다."
+          "reason": "고객지원은 앱 내 1:1문의 채널만 명시되어 있으며, 영어 지원 여부에 대한 언급이 없고 전반적으로 한국어 서비스로 보임."
         },
         "heuristic": {
           "value": "unknown",
