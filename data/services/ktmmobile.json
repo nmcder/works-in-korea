@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.ktmmobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 4243,
-            "body_sha256": "e1b39acb992b897e5ff6ceb4e64daeb9ecdefbd9518de2b9bf3d198256bef9f0",
+            "elapsed_ms": 5266,
+            "body_sha256": "d43d9f642310af4f61d654f1b19ebd39cfb5a3e245412343e6d24586c9d36080",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-19T18:31:43.232Z",
+            "at": "2026-08-23T18:23:56.526Z",
             "note": null
           },
           "us·California": {
@@ -78,7 +78,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -125,7 +125,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -154,7 +154,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -178,7 +178,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.aladin.co.kr/home/welcome.aspx",
             "redirected": true,
-            "elapsed_ms": 3825,
-            "body_sha256": "beed3e9388dfba7d9c05a5d26ec2ccf6668f0efc15a333ea65d1828067a45dde",
+            "elapsed_ms": 3835,
+            "body_sha256": "7b7f99ba2121ad45075642c9fe0998bf3a137c0828d486c2e2e1c5d5d40e7027",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-19T18:31:43.232Z",
+            "at": "2026-08-23T18:23:56.526Z",
             "note": null
           },
           "us·California": {
@@ -66,7 +66,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -98,7 +98,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -134,7 +134,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -163,7 +163,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -187,7 +187,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -227,7 +227,8 @@
           "strong_markers": [],
           "latin_ratio": 0.047,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

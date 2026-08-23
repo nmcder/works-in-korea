@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2657,
-            "body_sha256": "3b0bd50b5232013194aae416f7460f799362a89d3e1103bde11d582914911bbb",
+            "elapsed_ms": 2694,
+            "body_sha256": "f73d171c98054b01f809021e94901d62899a88f81b45b46c952fe0fdb7884302",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-19T18:31:43.232Z",
+            "at": "2026-08-23T18:23:56.526Z",
             "note": null
           },
           "us·California": {
@@ -65,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -99,7 +99,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -137,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -168,7 +168,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -199,7 +199,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -231,7 +231,8 @@
           ],
           "latin_ratio": 0.769,
           "reason": "영문 지원을 명시하는 문구를 찾음"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

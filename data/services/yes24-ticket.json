@@ -50,7 +50,7 @@
             "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
           }
         },
-        "last_attempt_at": "2026-08-22T18:25:33.559Z",
+        "last_attempt_at": "2026-08-23T18:23:56.526Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
@@ -59,7 +59,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -101,7 +101,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -123,7 +123,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

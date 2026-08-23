@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://zigzag.kr/",
             "redirected": false,
-            "elapsed_ms": 2656,
-            "body_sha256": "8a71d9f5edc14afea0c8af7150323ab8cb8ed3a716cc53189dc865e71cdd51ee",
+            "elapsed_ms": 3452,
+            "body_sha256": "6bd5ce897841dab0497b44f54fecd8600d610c5571747c7c6135997aaff5c20b",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-19T18:31:43.232Z",
+            "at": "2026-08-23T18:23:56.526Z",
             "note": null
           },
           "us·California": {
@@ -96,7 +96,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -127,7 +127,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-23T18:23:56.526Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
