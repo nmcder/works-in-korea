@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tadatada.com/",
             "redirected": true,
-            "elapsed_ms": 2403,
-            "body_sha256": "34a5174a03df40e5f602ae34cdbc01a4cb37d7cea8d871167e5236a1369cf4fa",
+            "elapsed_ms": 2229,
+            "body_sha256": "2a945aec63e2be57894338211f7f6100a7f2f9ddbc0c550aea0212176fedd989",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-28T02:01:28.608Z",
             "note": null
           },
           "us·California": {
@@ -96,7 +96,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -125,7 +125,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://banking.nonghyup.com/",
             "redirected": false,
-            "elapsed_ms": 5960,
+            "elapsed_ms": 6782,
             "body_sha256": "499a1f53a26c59824603969b8160d7479f533eb8b00c9e6e663243b40508e02f",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-28T02:01:28.608Z",
             "note": null
           },
           "us·California": {
@@ -116,7 +116,7 @@
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-08-23T18:23:56.526Z",
+        "last_attempt_at": "2026-08-28T02:01:28.608Z",
         "last_attempt_failed": "가입 페이지를 찾지 못함"
       }
     },
@@ -126,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -155,7 +155,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:payment_gate",

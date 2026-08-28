@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wooribank.com/",
             "redirected": false,
-            "elapsed_ms": 3335,
+            "elapsed_ms": 3696,
             "body_sha256": "f8e95892ab08e480e60671442ceb2e7c5b180c66d9652766b9aff297a3a603f5",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-19T18:31:43.232Z",
+            "at": "2026-08-28T02:01:28.608Z",
             "note": null
           },
           "us·California": {
@@ -57,9 +57,7 @@
             "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-08-23T18:23:56.526Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -99,7 +97,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -128,7 +126,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-22T18:25:33.559Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
@@ -147,9 +145,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-08-23T18:23:56.526Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {

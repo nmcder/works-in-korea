@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.kakaocorp.com/page/",
             "redirected": true,
-            "elapsed_ms": 4543,
-            "body_sha256": "b8175dd3cbbc803cb6bf9f7f05e6f5311ecfcebd53df362b03b0753e8a9fc814",
+            "elapsed_ms": 4389,
+            "body_sha256": "ea0102cb43cfd29a68d6a6a73ecdc7c76d64d32ae0bcfa0b5449649a4b972358",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-28T02:01:28.608Z",
             "note": null
           },
           "us·California": {
@@ -65,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -115,7 +115,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -137,7 +137,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

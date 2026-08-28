@@ -1,0 +1,41 @@
+{
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T02:01:28.608Z",
+  "changes": [
+    {
+      "service_id": "interpark-global",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-08-28T02:01:28.608Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-metro",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-08-28T02:01:28.608Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

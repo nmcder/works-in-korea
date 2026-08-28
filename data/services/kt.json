@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kt.com/",
             "redirected": false,
-            "elapsed_ms": 3427,
+            "elapsed_ms": 4160,
             "body_sha256": "ad930d0a86fa545fc0f6a460faa0ea1479aa304f4c1cc1b4f8156f1a6d564db0",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-28T02:01:28.608Z",
             "note": null
           }
         }
@@ -60,7 +60,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
@@ -86,7 +86,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -142,7 +142,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -164,7 +164,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-28T02:01:28.608Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
