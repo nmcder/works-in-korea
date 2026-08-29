@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T20:22:46.113Z",
+  "changes": [
+    {
+      "service_id": "aladin",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko",
+        "zh"
+      ],
+      "to": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "changed_at": "2026-08-29T20:22:46.113Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

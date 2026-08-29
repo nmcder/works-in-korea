@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.aladin.co.kr/home/welcome.aspx",
             "redirected": true,
-            "elapsed_ms": 4032,
-            "body_sha256": "e911cddae82512543e02c6c1b18540d2339ca10e7763e5bfbbfedc60c9451b89",
+            "elapsed_ms": 3693,
+            "body_sha256": "1ce18ed65bf1f4263d017f1e5ef81f876307c78ec2f6f2ff9da3dd52febbd919",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-28T02:01:28.608Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -63,12 +63,13 @@
     "i18n_ui": {
       "value": [
         "en",
+        "ja",
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-28T02:01:28.608Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-08-29T20:22:46.113Z",
+      "first_seen_at": "2026-08-29T20:22:46.113Z",
+      "last_changed_at": "2026-08-29T20:22:46.113Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
@@ -77,8 +78,10 @@
         "language_switcher_links": {
           "en": [
             "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176",
-            "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176",
-            "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400309213"
+            "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176"
+          ],
+          "ja": [
+            "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400983167"
           ],
           "zh": [
             "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=78353"
@@ -92,14 +95,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.093,
-        "hangul_char_ratio": 0.597,
+        "latin_char_ratio": 0.094,
+        "hangul_char_ratio": 0.591,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -135,7 +138,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -164,7 +167,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -188,7 +191,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -198,7 +201,7 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5714
+            "chars": 5701
           },
           {
             "url": "https://www.aladin.co.kr",
@@ -208,20 +211,20 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5714
+            "chars": 5701
           },
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=238&UpperId=238",
             "status": 200,
-            "chars": 5695
+            "chars": 5682
           }
         ],
-        "content_sha256": "476f2af40750949a331234cd80d9300229469439162088bb02d44c20e001ea8a",
+        "content_sha256": "4f96e6ac233b615a81f68a81a4c632f4689c0be9d4159e28abf796b5b8ea59c6",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 ... 고객센터 운영시간 평일 09:00 ~ 18:00",
-          "reason": "고객센터 채널(전화, 1:1 문의, FAQ)이 모두 한국어 기반으로 안내되어 있고 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용임이 명확합니다."
+          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 ... 이메일 privacy@aladin.co.kr",
+          "reason": "고객센터는 전화(1544-2514), 이메일, 1:1 문의 등으로 명시되어 있으나 모든 안내와 메뉴가 한국어로만 되어 있고 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
         },
         "heuristic": {
           "value": "unknown",

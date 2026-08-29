@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.daangn.com/kr/",
             "redirected": true,
-            "elapsed_ms": 3179,
-            "body_sha256": "93f1a54a20ffa36ad8076ab5f378cfceff5cac9bbf9ec05705db414995e60c67",
+            "elapsed_ms": 2802,
+            "body_sha256": "7d881de80d103ff72ebe0073c5a2a0af3aa863dc655ea133a4e4fa96335f6da4",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-28T02:01:28.608Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -66,7 +66,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -93,8 +93,8 @@
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.072,
-        "hangul_char_ratio": 0.55,
+        "latin_char_ratio": 0.069,
+        "hangul_char_ratio": 0.561,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -118,7 +118,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -147,7 +147,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

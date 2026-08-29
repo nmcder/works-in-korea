@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.lottecinema.co.kr/",
             "redirected": false,
-            "elapsed_ms": 3757,
+            "elapsed_ms": 3639,
             "body_sha256": "32edf19485b20db115cd4a35160c044c996fee785d9f8af3a989dcbb7987c6e7",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-28T02:01:28.608Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -65,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -107,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -136,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

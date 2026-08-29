@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kbstar.com/",
             "redirected": false,
-            "elapsed_ms": 5156,
+            "elapsed_ms": 5606,
             "body_sha256": "2270fe87b65e80367537932d753ea26e2e1f1073cd6c13790fddd3216303ff8b",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -57,9 +57,7 @@
             "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -69,7 +67,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -103,9 +101,7 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.142,
         "hangul_char_ratio": 0.558,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
@@ -128,7 +124,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -157,7 +153,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -176,9 +172,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {

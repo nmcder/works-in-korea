@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,10 +31,10 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.sac.or.kr/intro_20260828.jsp",
+            "final_url": "https://www.sac.or.kr/site/main/home",
             "redirected": true,
-            "elapsed_ms": 4619,
-            "body_sha256": "e9075dfce6c7f94b31a7669333df464cd59fd0c533c370c5e6746bd227fc02fe",
+            "elapsed_ms": 5510,
+            "body_sha256": "dde2a66e7828eb0c768d65f194359667a307d76ae04db1560c09f8ad260b3baf",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-28T02:01:28.608Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -65,7 +65,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -94,11 +94,9 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.033,
-        "hangul_char_ratio": 0.548,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
+        "latin_char_ratio": 0.034,
+        "hangul_char_ratio": 0.543,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
@@ -121,7 +119,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -150,7 +148,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://bank.shinhan.com/",
             "redirected": false,
-            "elapsed_ms": 5410,
+            "elapsed_ms": 4858,
             "body_sha256": "d23f48aa5b0d3d4e0ff83a22c49dcc5b3e7cb9ac77c00cb6bec94ea726499e07",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-23T18:23:56.526Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -57,9 +57,7 @@
             "at": "2026-08-22T18:25:33.559Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -83,7 +81,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-08-20T18:34:42.027Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:signup_phone_auth",
@@ -126,9 +124,7 @@
             "reason": "hints.signup_url"
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "robots: robots-unavailable(robots.txt 응답 599)"
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
@@ -137,7 +133,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -166,7 +162,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:payment_gate",
@@ -185,9 +181,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-08-28T02:01:28.608Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {

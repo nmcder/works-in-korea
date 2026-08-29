@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 4435,
+            "elapsed_ms": 4669,
             "body_sha256": "d9ae8bf57daa1aec962450a4ecb7b66f4b58519c62a5013c844c41f3b02a77a9",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-28T02:01:28.608Z",
+            "at": "2026-08-29T20:22:46.113Z",
             "note": null
           },
           "us·California": {
@@ -96,7 +96,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -118,7 +118,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -142,7 +142,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-28T02:01:28.608Z",
+      "measured_at": "2026-08-29T20:22:46.113Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -160,22 +160,27 @@
             "chars": 2188
           },
           {
+            "url": "https://ethics.sk.co.kr/",
+            "status": 200,
+            "chars": 799
+          },
+          {
             "url": "https://www.tmap.co.kr/tmap2/mobile/tmap.jsp?scheme=tmap&amp;host=cs?pageid=qna",
             "status": 200,
             "chars": 111
           }
         ],
-        "content_sha256": "18bf0a60ace644c0858c0f862f4b526e7e9ea8cf66c11896614ae86df9407bb0",
+        "content_sha256": "fc997b1238f405825fc2004dc80ad97ad4a292e2c6f85b39b94c997f8f7ed0b2",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의 (새창)",
-          "reason": "고객센터 채널이 앱 내 1:1문의로만 안내되어 있고 영어 지원 여부에 대한 언급이 없으며, 전체 페이지가 한국어 전용 서비스임을 시사함."
+          "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의",
+          "reason": "고객지원 채널은 앱 내 1:1문의로 명시되어 있으나 영어 지원 여부에 대한 언급이 없고, 전체 페이지가 한국어 전용 서비스로 구성되어 있어 영문 문의 채널이 확인되지 않음"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.168,
+          "latin_ratio": 0.176,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         }
       }
