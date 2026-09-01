@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T20:31:16.169Z",
+  "changes": [
+    {
+      "service_id": "aladin",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "to": [
+        "en",
+        "ko",
+        "zh"
+      ],
+      "changed_at": "2026-09-01T20:31:16.169Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Wyoming",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-09-01T20:31:16.169Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Wyoming",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

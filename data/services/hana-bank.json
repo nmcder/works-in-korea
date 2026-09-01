@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kebhana.com/",
             "redirected": false,
-            "elapsed_ms": 5258,
+            "elapsed_ms": 5818,
             "body_sha256": "5a430698776d2255f0fb73f9e4b9610f8e8c25d86369ab547f03ea7004870dcd",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -55,6 +55,11 @@
           "us·California": {
             "value": "ok",
             "at": "2026-08-31T22:24:59.382Z",
+            "note": null
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-01T20:31:16.169Z",
             "note": null
           }
         }
@@ -97,7 +102,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -126,7 +131,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:payment_gate",

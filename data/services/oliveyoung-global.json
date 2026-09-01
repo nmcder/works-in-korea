@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2717,
-            "body_sha256": "a1f07feb1aa6da02735da584379583ed51d81147810fd9a6c02091b5f7375662",
+            "elapsed_ms": 2642,
+            "body_sha256": "3735da75d1ea4c179ff429ec272dc82ad55848a017c2780276716589b16a7883",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -56,6 +56,11 @@
             "value": "ok",
             "at": "2026-08-31T22:24:59.382Z",
             "note": null
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-01T20:31:16.169Z",
+            "note": null
           }
         }
       }
@@ -65,7 +70,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -99,7 +104,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -137,7 +142,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -168,7 +173,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -199,7 +204,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -215,11 +220,6 @@
             "url": "https://global.oliveyoung.com",
             "status": 200,
             "chars": 8000
-          },
-          {
-            "url": "https://help.global.oliveyoung.com/",
-            "status": 200,
-            "chars": 398
           }
         ],
         "content_sha256": "b3efcb9da162c74c2ee328cb6ba3f1ce2e3e639801cf7517221b442c0f367131",
@@ -236,7 +236,8 @@
           ],
           "latin_ratio": 0.757,
           "reason": "영문 지원을 명시하는 문구를 찾음"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wirebarley.com/en",
             "redirected": true,
-            "elapsed_ms": 2809,
+            "elapsed_ms": 2911,
             "body_sha256": "0dbc4804dea71788310e41ab3bf8549ff58ebc5a326a288a2956deb33e6f4d5c",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -56,6 +56,11 @@
             "value": "ok",
             "at": "2026-08-31T22:24:59.382Z",
             "note": null
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-01T20:31:16.169Z",
+            "note": null
           }
         }
       }
@@ -73,7 +78,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -140,7 +145,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-16T00:32:39.941Z",
       "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
@@ -169,7 +174,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -193,7 +198,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -213,7 +218,7 @@
           {
             "url": "https://help.wirebarley.com/en/support/home",
             "status": 200,
-            "chars": 1038
+            "chars": 1045
           },
           {
             "url": "https://www.wirebarley.com/en/customer/terms",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.yes24.com/Main/default.aspx",
             "redirected": true,
-            "elapsed_ms": 4995,
-            "body_sha256": "35a973aa5dbd58e293b3f0a954d583cb2ad7f4d19f0b8a024f77510a416919c8",
+            "elapsed_ms": 5644,
+            "body_sha256": "5eb9619b01105d2f18fb2d19406815665f5e601b73490c6defe36682f012e50e",
             "content_type": "text/html; charset=ks_c_5601-1987",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -56,6 +56,11 @@
             "value": "ok",
             "at": "2026-08-31T22:24:59.382Z",
             "note": null
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-01T20:31:16.169Z",
+            "note": null
           }
         }
       }
@@ -65,7 +70,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -88,7 +93,7 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.088,
+        "latin_char_ratio": 0.091,
         "hangul_char_ratio": 0.002,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
@@ -113,7 +118,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -144,7 +149,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",

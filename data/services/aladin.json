@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-29T20:22:46.113Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.aladin.co.kr/home/welcome.aspx",
             "redirected": true,
-            "elapsed_ms": 3693,
-            "body_sha256": "1ce18ed65bf1f4263d017f1e5ef81f876307c78ec2f6f2ff9da3dd52febbd919",
+            "elapsed_ms": 4580,
+            "body_sha256": "481cc2df2857d9e6d200abfd5df5f81f5df21af455316ca961ebcd0ea9e2da94",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -56,22 +56,24 @@
             "value": "ok",
             "at": "2026-08-22T18:25:33.559Z",
             "note": null
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-01T20:31:16.169Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-08-31T22:24:59.382Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
       "value": [
         "en",
-        "ja",
         "ko",
         "zh"
       ],
-      "measured_at": "2026-08-29T20:22:46.113Z",
-      "first_seen_at": "2026-08-29T20:22:46.113Z",
-      "last_changed_at": "2026-08-29T20:22:46.113Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
+      "first_seen_at": "2026-09-01T20:31:16.169Z",
+      "last_changed_at": "2026-09-01T20:31:16.169Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
@@ -80,10 +82,8 @@
         "language_switcher_links": {
           "en": [
             "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176",
-            "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176"
-          ],
-          "ja": [
-            "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400983167"
+            "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=106176",
+            "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=389480852"
           ],
           "zh": [
             "https://www.aladin.co.kr/shop/wbrowse.aspx?CID=78353"
@@ -97,16 +97,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.094,
-        "hangul_char_ratio": 0.591,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-08-31T22:24:59.382Z",
-        "last_attempt_failed": "http_status=403"
+        "latin_char_ratio": 0.093,
+        "hangul_char_ratio": 0.589,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-08-29T20:22:46.113Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -133,9 +131,7 @@
             "used": true
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-08-31T22:24:59.382Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
       }
     },
     "app_availability": {
@@ -144,7 +140,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -173,7 +169,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-29T20:22:46.113Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -192,14 +188,12 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-08-31T22:24:59.382Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-29T20:22:46.113Z",
+      "measured_at": "2026-09-01T20:31:16.169Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -209,7 +203,7 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5701
+            "chars": 5696
           },
           {
             "url": "https://www.aladin.co.kr",
@@ -219,29 +213,27 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5701
+            "chars": 5696
           },
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=238&UpperId=238",
             "status": 200,
-            "chars": 5682
+            "chars": 5677
           }
         ],
-        "content_sha256": "4f96e6ac233b615a81f68a81a4c632f4689c0be9d4159e28abf796b5b8ea59c6",
+        "content_sha256": "24e5da28a4fed56e8ff714d1087800e61f87a5e25fe0fa9bb2110d1fd534094d",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 ... 이메일 privacy@aladin.co.kr",
-          "reason": "고객센터는 전화(1544-2514), 이메일, 1:1 문의 등으로 명시되어 있으나 모든 안내와 메뉴가 한국어로만 되어 있고 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
+          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 고객센터 운영시간 평일 09:00 ~ 18:00 점심시간 12:00 ~ 13:00 토,공휴일 휴무",
+          "reason": "페이지에 안내된 고객센터 채널(전화, 1:1 문의)은 모두 한국어 기반이며 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
           "latin_ratio": 0.047,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "last_attempt_at": "2026-08-31T22:24:59.382Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {
