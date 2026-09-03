@@ -47,7 +47,7 @@
             "note": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
           }
         },
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
+        "last_attempt_at": "2026-09-03T20:28:20.060Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
@@ -90,7 +90,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -132,7 +132,7 @@
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
+        "last_attempt_at": "2026-09-03T20:28:20.060Z",
         "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },

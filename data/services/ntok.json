@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.ntok.go.kr/",
             "redirected": false,
-            "elapsed_ms": 2715,
+            "elapsed_ms": 2961,
             "body_sha256": "77bda616806894ca08ae2cf3d97932ab61c8e5ec022ca4c5b527147662feec3a",
             "content_type": "text/html;charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-29T20:22:46.113Z",
+            "at": "2026-09-03T20:28:20.060Z",
             "note": null
           },
           "us·California": {
@@ -57,9 +57,7 @@
             "at": "2026-08-31T22:24:59.382Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -99,7 +97,7 @@
         "android_listed": false,
         "countries": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "manual",
@@ -115,7 +113,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-08-31T22:24:59.382Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
@@ -134,9 +132,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {

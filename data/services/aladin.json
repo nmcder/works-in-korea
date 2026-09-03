@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.aladin.co.kr/home/welcome.aspx",
             "redirected": true,
-            "elapsed_ms": 4580,
-            "body_sha256": "481cc2df2857d9e6d200abfd5df5f81f5df21af455316ca961ebcd0ea9e2da94",
+            "elapsed_ms": 3942,
+            "body_sha256": "050cfe26b960768f15bc6c9b5cdff930adbd906a5696f05f7d75fe2080c3000a",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-29T20:22:46.113Z",
+            "at": "2026-09-03T20:28:20.060Z",
             "note": null
           },
           "us·California": {
@@ -71,7 +71,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-09-01T20:31:16.169Z",
       "last_changed_at": "2026-09-01T20:31:16.169Z",
       "method": "auto:i18n_ui",
@@ -97,14 +97,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.093,
+        "latin_char_ratio": 0.092,
         "hangul_char_ratio": 0.589,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -140,7 +140,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -169,7 +169,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -193,7 +193,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -203,7 +203,7 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5696
+            "chars": 5671
           },
           {
             "url": "https://www.aladin.co.kr",
@@ -213,20 +213,20 @@
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=237&UpperId=237",
             "status": 200,
-            "chars": 5696
+            "chars": 5671
           },
           {
             "url": "https://www.aladin.co.kr/cs_center/wcs_faq_list.aspx?CategoryId=238&UpperId=238",
             "status": 200,
-            "chars": 5677
+            "chars": 5652
           }
         ],
-        "content_sha256": "24e5da28a4fed56e8ff714d1087800e61f87a5e25fe0fa9bb2110d1fd534094d",
+        "content_sha256": "bae58e445b15494a0adc55e87dc00b4ddda9beefe995df9737cd341443ca3fed",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 고객센터 운영시간 평일 09:00 ~ 18:00 점심시간 12:00 ~ 13:00 토,공휴일 휴무",
-          "reason": "페이지에 안내된 고객센터 채널(전화, 1:1 문의)은 모두 한국어 기반이며 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
+          "quoted_evidence": "ARS 전화 상담 일반문의 (발신자 부담) 1544-2514 ... 고객센터 운영시간 평일 09:00 ~ 18:00",
+          "reason": "고객센터는 국내 전화(ARS)와 1:1 문의만 제공하며 영어 지원 채널에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
         },
         "heuristic": {
           "value": "unknown",

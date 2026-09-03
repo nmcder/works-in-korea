@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T20:28:20.060Z",
+  "changes": [
+    {
+      "service_id": "seoul-global",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "id",
+        "ja",
+        "km",
+        "ko",
+        "mn",
+        "ru",
+        "th",
+        "vi",
+        "zh"
+      ],
+      "changed_at": "2026-09-03T20:28:20.060Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

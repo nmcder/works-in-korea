@@ -50,7 +50,7 @@
             "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
           }
         },
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
+        "last_attempt_at": "2026-09-03T20:28:20.060Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
@@ -90,7 +90,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -132,7 +132,7 @@
           }
         ],
         "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
+        "last_attempt_at": "2026-09-03T20:28:20.060Z",
         "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
@@ -146,7 +146,7 @@
       "evidence": {
         "not_measured": "고객지원 페이지를 찾지 못함",
         "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-09-01T20:31:16.169Z",
+        "last_attempt_at": "2026-09-03T20:28:20.060Z",
         "last_attempt_failed": "고객지원 페이지를 찾지 못함"
       }
     },

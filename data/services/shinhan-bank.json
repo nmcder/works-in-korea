@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://bank.shinhan.com/",
             "redirected": false,
-            "elapsed_ms": 4189,
+            "elapsed_ms": 4787,
             "body_sha256": "d23f48aa5b0d3d4e0ff83a22c49dcc5b3e7cb9ac77c00cb6bec94ea726499e07",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-08-29T20:22:46.113Z",
+            "at": "2026-09-03T20:28:20.060Z",
             "note": null
           },
           "us·California": {
@@ -86,7 +86,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:signup_phone_auth",
@@ -138,7 +138,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -167,7 +167,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-03T20:28:20.060Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:payment_gate",
