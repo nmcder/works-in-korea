@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T20:15:14.110Z",
+  "changes": [
+    {
+      "service_id": "e-gen",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-09-04T20:15:14.110Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Wyoming",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-09-04T20:15:14.110Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Wyoming",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

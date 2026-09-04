@@ -19,36 +19,40 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:48:11.388Z",
-      "last_changed_at": null,
+      "value": "ok",
+      "measured_at": "2026-09-04T20:15:14.110Z",
+      "first_seen_at": "2026-09-04T20:15:14.110Z",
+      "last_changed_at": "2026-09-04T20:15:14.110Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": null,
-            "final_url": null,
+            "http_status": 200,
+            "final_url": "https://www.e-gen.or.kr/",
             "redirected": false,
-            "elapsed_ms": 3593,
-            "body_sha256": null,
-            "content_type": null,
-            "not_measured": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+            "elapsed_ms": 3772,
+            "body_sha256": "2fb4c664a8e939e6a2e1b0666cdc6e0c1e53b079d540fe4b7010677920ce6629",
+            "content_type": "text/html;charset=UTF-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+          },
+          "us·Wyoming": {
+            "value": "ok",
+            "at": "2026-09-04T20:15:14.110Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-09-03T20:28:20.060Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -88,7 +92,7 @@
         "android_listed": null,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -107,25 +111,30 @@
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-09-04T20:15:14.110Z",
+      "first_seen_at": "2026-09-04T20:15:14.110Z",
+      "last_changed_at": "2026-09-04T20:15:14.110Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://www.e-gen.or.kr",
-            "status": null,
-            "scanned": false,
-            "reason": "robots: robots-unavailable(UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-09-03T20:28:20.060Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {

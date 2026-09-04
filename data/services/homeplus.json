@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://mfront.homeplus.co.kr/",
             "redirected": true,
-            "elapsed_ms": 4748,
-            "body_sha256": "8df8d54b755ed5db7e325d50cffb5f6d0643f9fddcc4506a6d0c96d4b4ba1c1c",
+            "elapsed_ms": 4855,
+            "body_sha256": "e92b0623715829818a1fffe0cca14eb70a83916aa4797cfbe04c0235f32f4716",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-01T20:31:16.169Z",
+            "at": "2026-09-04T20:15:14.110Z",
             "note": null
           }
         }
@@ -70,7 +70,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -112,7 +112,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -141,7 +141,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -197,7 +197,7 @@
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
         "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-09-03T20:28:20.060Z",
+        "last_attempt_at": "2026-09-04T20:15:14.110Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },

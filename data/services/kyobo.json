@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.kyobobook.co.kr/",
             "redirected": false,
-            "elapsed_ms": 2985,
-            "body_sha256": "859d5e4431d7bb3f3b2384b0598a43130796ebc7e2e9c60ba284cac91ebd53fd",
+            "elapsed_ms": 3269,
+            "body_sha256": "03674befd7e02e1510a93a4304446b04c3b0f327fc37ac98aac244d210c780b1",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-01T20:31:16.169Z",
+            "at": "2026-09-04T20:15:14.110Z",
             "note": null
           }
         }
@@ -68,12 +68,11 @@
     "i18n_ui": {
       "value": [
         "en",
-        "ja",
         "ko"
       ],
-      "measured_at": "2026-09-03T20:28:20.060Z",
-      "first_seen_at": "2026-09-01T20:31:16.169Z",
-      "last_changed_at": "2026-09-01T20:31:16.169Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
+      "first_seen_at": "2026-09-04T20:15:14.110Z",
+      "last_changed_at": "2026-09-04T20:15:14.110Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
@@ -93,8 +92,8 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.112,
-        "hangul_char_ratio": 0.59,
+        "latin_char_ratio": 0.116,
+        "hangul_char_ratio": 0.589,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -118,7 +117,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -142,7 +141,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

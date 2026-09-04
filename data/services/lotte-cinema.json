@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.lottecinema.co.kr/",
             "redirected": false,
-            "elapsed_ms": 3548,
+            "elapsed_ms": 3369,
             "body_sha256": "32edf19485b20db115cd4a35160c044c996fee785d9f8af3a989dcbb7987c6e7",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-01T20:31:16.169Z",
+            "at": "2026-09-04T20:15:14.110Z",
             "note": null
           }
         }
@@ -70,7 +70,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -112,7 +112,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -141,7 +141,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

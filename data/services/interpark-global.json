@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:50:45.613Z",
       "last_changed_at": "2026-08-15T02:50:45.613Z",
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://world.nol.com/",
             "redirected": false,
-            "elapsed_ms": 2147,
-            "body_sha256": "c31ec9b6db25a434a9f4c926f7aa8efe4505695be078c3f7cd1ea6dc2854fad7",
+            "elapsed_ms": 2212,
+            "body_sha256": "59151c73ebdfdb7611e6d4c66ae1be2cfa9ba14485715b43ce0aca611e146f2a",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-01T20:31:16.169Z",
+            "at": "2026-09-04T20:15:14.110Z",
             "note": null
           }
         }
@@ -70,7 +70,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-28T02:01:28.608Z",
       "last_changed_at": "2026-08-28T02:01:28.608Z",
       "method": "auto:i18n_ui",
@@ -91,23 +91,18 @@
           {
             "url": "https://world.nol.com/en",
             "status": 200,
-            "ok": false
-          },
-          {
-            "url": "https://world.nol.com/en/",
-            "status": 200,
-            "ok": false
+            "ok": true
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.695,
+        "latin_char_ratio": 0.694,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -144,7 +139,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -173,7 +168,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -197,7 +192,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -212,15 +207,15 @@
           {
             "url": "https://world.nol.com",
             "status": 200,
-            "chars": 5753
+            "chars": 5659
           }
         ],
-        "content_sha256": "3fb8eb2813e919f2e55561154d520a2d9132898671744fce531f54776332713f",
+        "content_sha256": "205999675a1ffc303f7fe8f9d0f8433105f4b1447ac6315c1c6b5b2dd6387b60",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "https://world.nol.com/en/my-info/inquiries/new ... Customer Support Inquiry Type ... Support Hours: 09:00–18:00 (KST)",
-          "reason": "영문 페이지(English)에서 제공되는 문의 폼을 통해 영어로 문의를 제출할 수 있는 채널이 명시되어 있음."
+          "quoted_evidence": "English Account Tickets Stays Tours & Activities Food & Attractions Pop-ups Travel Guides Customer Support Inquiry Type",
+          "reason": "영문(English) 사이트 내에 고객지원 문의 폼(Customer Support Inquiry)이 제공되며 전체 UI가 영어로 되어 있어 영어로 문의 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "unknown",

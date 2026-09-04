@@ -62,7 +62,9 @@
             "at": "2026-09-01T20:31:16.169Z",
             "note": null
           }
-        }
+        },
+        "last_attempt_at": "2026-09-04T20:15:14.110Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "i18n_ui": {
@@ -102,7 +104,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-03T20:28:20.060Z",
+      "measured_at": "2026-09-04T20:15:14.110Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,7 +152,9 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never"
+        "payment_attempt": "never",
+        "last_attempt_at": "2026-09-04T20:15:14.110Z",
+        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
       }
     },
     "support_en": {
