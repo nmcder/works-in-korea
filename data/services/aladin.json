@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.aladin.co.kr/home/welcome.aspx",
             "redirected": true,
-            "elapsed_ms": 4544,
-            "body_sha256": "190c0e1e0fd164a6d12620ea9eb4755b5a28b3e278e7dc5240b7b60deca1e432",
+            "elapsed_ms": 15137,
+            "body_sha256": "d3b4c0d3900db84819045f6f2ae398170408bdee9b78cb164430c92fcd1d8de5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -61,6 +61,11 @@
             "value": "ok",
             "at": "2026-09-04T20:15:14.110Z",
             "note": null
+          },
+          "us·Washington": {
+            "value": "ok",
+            "at": "2026-09-05T19:54:32.877Z",
+            "note": null
           }
         }
       }
@@ -71,7 +76,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-09-01T20:31:16.169Z",
       "last_changed_at": "2026-09-01T20:31:16.169Z",
       "method": "auto:i18n_ui",
@@ -104,7 +109,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:signup_phone_auth",
@@ -140,7 +145,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -169,7 +174,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -193,7 +198,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",

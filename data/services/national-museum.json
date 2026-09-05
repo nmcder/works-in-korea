@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.museum.go.kr/MUSEUM/main/index.do",
             "redirected": true,
-            "elapsed_ms": 5933,
+            "elapsed_ms": 4077,
             "body_sha256": "4ad59283b7b59c3c31bb9d578d9d43356edd8af9fdc01483b20d3541cfef1764",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -61,6 +61,11 @@
             "value": "ok",
             "at": "2026-09-04T20:15:14.110Z",
             "note": null
+          },
+          "us·Washington": {
+            "value": "ok",
+            "at": "2026-09-05T19:54:32.877Z",
+            "note": null
           }
         }
       }
@@ -72,7 +77,7 @@
         "ko",
         "zh"
       ],
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -113,7 +118,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -151,7 +156,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -173,7 +178,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -197,7 +202,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-04T20:15:14.110Z",
+      "measured_at": "2026-09-05T19:54:32.877Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
