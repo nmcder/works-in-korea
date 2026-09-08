@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T20:41:57.323Z",
+  "changes": [
+    {
+      "service_id": "interpark-ticket",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-09-08T20:41:57.323Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-tour",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": true,
+        "android_listed": true,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": true,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-09-08T20:41:57.323Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-09-08T20:41:57.323Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "sk7mobile",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "danal",
+          "kakaopay",
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-09-08T20:41:57.323Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

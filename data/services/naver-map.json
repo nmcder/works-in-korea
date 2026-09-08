@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://map.naver.com/p/",
             "redirected": true,
-            "elapsed_ms": 4195,
+            "elapsed_ms": 3472,
             "body_sha256": "58bb0abf115e8e33d356f7439a45fc22b24d884574712ed4ad1eb014ab75e356",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-08-31T22:24:59.382Z",
+            "at": "2026-09-08T20:41:57.323Z",
             "note": null
           },
           "us·Wyoming": {
@@ -114,7 +114,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -136,7 +136,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

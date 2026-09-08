@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://chingumobile.com/",
             "redirected": true,
-            "elapsed_ms": 4847,
-            "body_sha256": "4e517dae5d84ff86086b0646d3126dafd171188cf225d46ed2d616b329f31b5a",
+            "elapsed_ms": 4085,
+            "body_sha256": "a5bb4d931b128c0298f2db46b0dfc9be9e6357436b65fcbe0e0cf69836a0352a",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-08-31T22:24:59.382Z",
+            "at": "2026-09-08T20:41:57.323Z",
             "note": null
           },
           "us·Wyoming": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -109,7 +109,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -160,7 +160,7 @@
         "not_measured": "앱 ID 미상",
         "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다.",
-        "last_attempt_at": "2026-09-06T19:58:34.942Z",
+        "last_attempt_at": "2026-09-08T20:41:57.323Z",
         "last_attempt_failed": "앱 ID 미상"
       }
     },
@@ -169,7 +169,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -193,7 +193,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-06T19:58:34.942Z",
+      "measured_at": "2026-09-08T20:41:57.323Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
