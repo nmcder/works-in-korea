@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kakaomobility.com/",
             "redirected": false,
-            "elapsed_ms": 3242,
+            "elapsed_ms": 3251,
             "body_sha256": "43e18788c4d91ee22c3040fa8b6a6a9ec4807cf18cedeea4732940d59be6ecd5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -64,7 +64,7 @@
           },
           "us·Washington": {
             "value": "ok",
-            "at": "2026-09-05T19:54:32.877Z",
+            "at": "2026-09-09T20:22:43.216Z",
             "note": null
           },
           "us·Illinois": {
@@ -111,7 +111,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -140,7 +140,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

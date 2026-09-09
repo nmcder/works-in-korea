@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T20:22:43.216Z",
+  "changes": [
+    {
+      "service_id": "ridibooks",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "ko",
+        "ru"
+      ],
+      "changed_at": "2026-09-09T20:22:43.216Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

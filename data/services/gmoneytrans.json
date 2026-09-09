@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://gmoneytrans.com/",
             "redirected": true,
-            "elapsed_ms": 4006,
+            "elapsed_ms": 3802,
             "body_sha256": "8d92dc789599acee8aedb583d6215d536e95375bbe009e9a2b7a220118c09cd0",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
@@ -64,7 +64,7 @@
           },
           "us·Washington": {
             "value": "ok",
-            "at": "2026-09-05T19:54:32.877Z",
+            "at": "2026-09-09T20:22:43.216Z",
             "note": null
           },
           "us·Illinois": {
@@ -82,7 +82,7 @@
         "ko",
         "th"
       ],
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -145,7 +145,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-18T10:45:56.407Z",
       "last_changed_at": "2026-08-18T10:45:56.407Z",
       "method": "auto:app_availability",
@@ -174,7 +174,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-08T20:41:57.323Z",
+      "measured_at": "2026-09-09T20:22:43.216Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
