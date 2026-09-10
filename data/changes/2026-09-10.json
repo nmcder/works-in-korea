@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T20:24:12.052Z",
+  "changes": [
+    {
+      "service_id": "hanpass",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "bn",
+        "en",
+        "id",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "mn",
+        "my",
+        "ne",
+        "ru",
+        "si",
+        "th",
+        "tl",
+        "ur",
+        "uz",
+        "vi",
+        "zh"
+      ],
+      "changed_at": "2026-09-10T20:24:12.052Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
