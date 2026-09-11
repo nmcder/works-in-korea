@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://toss.im/en-us",
             "redirected": true,
-            "elapsed_ms": 3907,
+            "elapsed_ms": 3561,
             "body_sha256": "1b69beb13d4a637fd031011ba4445c40e02441c5fc42cdc08f22f92c2aaab515",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-04T20:15:14.110Z",
+            "at": "2026-09-11T20:25:10.266Z",
             "note": null
           },
           "us·Washington": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -127,7 +127,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -151,7 +151,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -182,7 +182,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-17T18:34:29.140Z",
       "last_changed_at": "2026-08-17T18:34:29.140Z",
       "method": "auto:support_en",

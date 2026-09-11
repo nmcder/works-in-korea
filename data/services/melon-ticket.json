@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://ticket.melon.com/",
             "redirected": false,
-            "elapsed_ms": 3177,
+            "elapsed_ms": 2905,
             "body_sha256": "ffe7cdcedc595d1f42cdfc656df6d2c7beb1d0de3ebd611066f67b5507b490ad",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-04T20:15:14.110Z",
+            "at": "2026-09-11T20:25:10.266Z",
             "note": null
           },
           "us·Washington": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -127,7 +127,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -156,7 +156,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",

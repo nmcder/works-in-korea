@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.ddocdoc.com/",
             "redirected": false,
-            "elapsed_ms": 2338,
+            "elapsed_ms": 2816,
             "body_sha256": "0d21be42b6751915a97d8f005d6b59c133279899cf6c059e27ac26370c0542c0",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-04T20:15:14.110Z",
+            "at": "2026-09-11T20:25:10.266Z",
             "note": null
           },
           "us·Washington": {
@@ -93,7 +93,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -131,7 +131,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -160,7 +160,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-10T20:24:12.052Z",
+      "measured_at": "2026-09-11T20:25:10.266Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
