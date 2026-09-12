@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-12T20:09:59.022Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.hanatour.com/",
             "redirected": false,
-            "elapsed_ms": 3848,
-            "body_sha256": "40031616f22a6c484871a8677c37b7c9900a90013ca0e62a2ae4e0581fd1c4d4",
+            "elapsed_ms": 4185,
+            "body_sha256": "71f03e453f90a71ed2b0e8f5ffe337ccfb9c473860a6becea367b7bffc469857",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-10T20:24:12.052Z",
+            "at": "2026-09-12T20:09:59.022Z",
             "note": null
           },
           "us·California": {
@@ -111,7 +111,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-12T20:09:59.022Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -142,7 +142,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-12T20:09:59.022Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

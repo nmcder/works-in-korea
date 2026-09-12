@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-12T20:09:59.022Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,11 +31,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.kyobobook.co.kr/",
-            "redirected": false,
-            "elapsed_ms": 3228,
-            "body_sha256": "a62ad1465133690b27d1c3a889f65b54ea9cfaeecf30d12e0f064d120d4733cc",
-            "content_type": "text/html; charset=utf-8",
+            "final_url": "https://www.kyobobook.co.kr/newborn/kyobonotice.html",
+            "redirected": true,
+            "elapsed_ms": 2918,
+            "body_sha256": "478d2678bc1b54d70f80b35172ff9529d4f8f99ad83e3dc274aab4762b22c65f",
+            "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-10T20:24:12.052Z",
+            "at": "2026-09-12T20:09:59.022Z",
             "note": null
           },
           "us·California": {
@@ -104,7 +104,9 @@
         "accept_language_responsive": true,
         "latin_char_ratio": 0.102,
         "hangul_char_ratio": 0.603,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-09-12T20:09:59.022Z",
+        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
     "signup_phone_auth": {
@@ -127,7 +129,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-12T20:09:59.022Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -146,14 +148,12 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [
-          "tosspayments"
-        ],
+        "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-11T20:25:10.266Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "measured_at": "2026-09-12T20:09:59.022Z",
+      "first_seen_at": "2026-09-12T20:09:59.022Z",
+      "last_changed_at": "2026-09-12T20:09:59.022Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -164,14 +164,7 @@
             "scanned": true
           }
         ],
-        "detected": [
-          {
-            "id": "tosspayments",
-            "name": "토스페이먼츠",
-            "matched": "tosspayments.com",
-            "via": "url"
-          }
-        ],
+        "detected": [],
         "three_ds_matches": {
           "url": [],
           "text": []
