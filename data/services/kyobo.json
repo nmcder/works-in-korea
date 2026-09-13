@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-12T20:09:59.022Z",
+      "measured_at": "2026-09-13T20:17:32.215Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,11 +31,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.kyobobook.co.kr/newborn/kyobonotice.html",
-            "redirected": true,
-            "elapsed_ms": 2918,
-            "body_sha256": "478d2678bc1b54d70f80b35172ff9529d4f8f99ad83e3dc274aab4762b22c65f",
-            "content_type": "text/html",
+            "final_url": "https://www.kyobobook.co.kr/",
+            "redirected": false,
+            "elapsed_ms": 2974,
+            "body_sha256": "c3a4502551036de6ed021461c4ffe8df9ca8506d9e3524593a664943a7fe9051",
+            "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-08-20T18:34:42.027Z",
+            "at": "2026-09-13T20:17:32.215Z",
             "note": null
           },
           "us·Virginia": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-11T20:25:10.266Z",
+      "measured_at": "2026-09-13T20:17:32.215Z",
       "first_seen_at": "2026-09-11T20:25:10.266Z",
       "last_changed_at": "2026-09-11T20:25:10.266Z",
       "method": "auto:i18n_ui",
@@ -102,11 +102,9 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.102,
-        "hangul_char_ratio": 0.603,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-09-12T20:09:59.022Z",
-        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
+        "latin_char_ratio": 0.112,
+        "hangul_char_ratio": 0.589,
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
@@ -129,7 +127,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-12T20:09:59.022Z",
+      "measured_at": "2026-09-13T20:17:32.215Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -148,12 +146,14 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [],
+        "gateways": [
+          "tosspayments"
+        ],
         "three_ds": null
       },
-      "measured_at": "2026-09-12T20:09:59.022Z",
-      "first_seen_at": "2026-09-12T20:09:59.022Z",
-      "last_changed_at": "2026-09-12T20:09:59.022Z",
+      "measured_at": "2026-09-13T20:17:32.215Z",
+      "first_seen_at": "2026-09-13T20:17:32.215Z",
+      "last_changed_at": "2026-09-13T20:17:32.215Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -164,7 +164,14 @@
             "scanned": true
           }
         ],
-        "detected": [],
+        "detected": [
+          {
+            "id": "tosspayments",
+            "name": "토스페이먼츠",
+            "matched": "tosspayments.com",
+            "via": "url"
+          }
+        ],
         "three_ds_matches": {
           "url": [],
           "text": []

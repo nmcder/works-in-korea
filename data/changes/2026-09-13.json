@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T20:17:32.215Z",
+  "changes": [
+    {
+      "service_id": "kyobo",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "tosspayments"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-09-13T20:17:32.215Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
