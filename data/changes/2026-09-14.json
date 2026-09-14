@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T21:26:50.481Z",
+  "changes": [
+    {
+      "service_id": "cgv",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-09-14T21:26:50.481Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
