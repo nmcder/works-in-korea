@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2662,
-            "body_sha256": "be3ed18a57c274e389cb7e37e0a5f26c044ea20b45036ea16e2084b980f8ed22",
+            "elapsed_ms": 2633,
+            "body_sha256": "34a68aca5fb89b5563cd1e557088f908b5c10ae59bd6551e36483dac8a64c430",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-14T21:26:50.481Z",
+            "at": "2026-09-15T20:51:04.241Z",
             "note": null
           },
           "us·California": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -114,7 +114,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -152,7 +152,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -183,7 +183,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -214,7 +214,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-14T21:26:50.481Z",
+      "measured_at": "2026-09-15T20:51:04.241Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -224,7 +224,7 @@
           {
             "url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
             "status": 403,
-            "chars": 835
+            "chars": 505
           },
           {
             "url": "https://global.oliveyoung.com",
@@ -232,19 +232,19 @@
             "chars": 8000
           }
         ],
-        "content_sha256": "7bc2c1df7358eae430a27552970e8ed6f04914f59853dcd9c6bf2d6cc02cbead",
+        "content_sha256": "c7e06b4c74527963b712bb3e42e8715f65affe49748f9616aba4ea75fb97d53b",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "global-customerservice@oliveyoung.com",
-          "reason": "고객센터 페이지에 영문 서비스명(Global Customer Service)을 포함한 이메일 주소가 명시되어 있고, 다국어 지원 언어에 English가 포함되어 있어 영어 문의가 가능함을 알 수 있다."
+          "reason": "글로벌 고객센터 이메일 주소가 명시되어 있고, 사이트가 영어 기반 글로벌 서비스로 운영되므로 영어 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "yes",
           "strong_markers": [
             "english support"
           ],
-          "latin_ratio": 0.746,
+          "latin_ratio": 0.765,
           "reason": "영문 지원을 명시하는 문구를 찾음"
         }
       }
