@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-15T20:51:04.241Z",
+      "measured_at": "2026-09-16T20:51:23.923Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.danawa.com/",
             "redirected": false,
-            "elapsed_ms": 3418,
-            "body_sha256": "f2297ba073062ae04a6fc6a7ecbf48fe54fb66bf0ad906187764745bc7ae0713",
+            "elapsed_ms": 3855,
+            "body_sha256": "b7910a4490d5270baed5593107a3735f880b4d1cf33e288fcc4be967f1afed86",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-09-13T20:17:32.215Z",
+            "at": "2026-09-16T20:51:23.923Z",
             "note": null
           },
           "us·Virginia": {
@@ -111,7 +111,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-15T20:51:04.241Z",
+      "measured_at": "2026-09-16T20:51:23.923Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -133,7 +133,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-15T20:51:04.241Z",
+      "measured_at": "2026-09-16T20:51:23.923Z",
       "first_seen_at": "2026-08-20T18:34:42.027Z",
       "last_changed_at": "2026-08-20T18:34:42.027Z",
       "method": "auto:payment_gate",
