@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://corporate.sentbe.com/sentbe",
             "redirected": true,
-            "elapsed_ms": 3935,
+            "elapsed_ms": 4687,
             "body_sha256": "1327efd35cc2f8a0fffa051356cd0f267ca8d0d8185e42a5cb05a8fb1d6e3e18",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -69,7 +69,7 @@
           },
           "us·Illinois": {
             "value": "ok",
-            "at": "2026-09-06T19:58:34.942Z",
+            "at": "2026-09-17T20:56:10.067Z",
             "note": null
           }
         }
@@ -86,7 +86,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -136,7 +136,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -165,7 +165,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -189,7 +189,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -219,7 +219,8 @@
           "strong_markers": [],
           "latin_ratio": 0.321,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

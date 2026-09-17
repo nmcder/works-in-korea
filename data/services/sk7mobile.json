@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.sk7mobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 4092,
-            "body_sha256": "57e3250bb16ea313d096c2514edb3d33afe28b05f9b9220429325e35ec76cc38",
+            "elapsed_ms": 4716,
+            "body_sha256": "2276cc38dcb8679efba21e2b78a47adfd2a1467213991d4ca8f30926f7655be6",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -69,7 +69,7 @@
           },
           "us·Illinois": {
             "value": "ok",
-            "at": "2026-09-06T19:58:34.942Z",
+            "at": "2026-09-17T20:56:10.067Z",
             "note": null
           }
         }
@@ -111,7 +111,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -137,7 +137,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-09-08T20:41:57.323Z",
       "last_changed_at": "2026-09-08T20:41:57.323Z",
       "method": "auto:payment_gate",
@@ -180,7 +180,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-16T20:51:23.923Z",
+      "measured_at": "2026-09-17T20:56:10.067Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -220,7 +220,8 @@
           "strong_markers": [],
           "latin_ratio": 0.094,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {
