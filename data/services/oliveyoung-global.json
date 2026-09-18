@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2547,
-            "body_sha256": "5bfa8c282bd64e969e37bd7d713494603c166f9a00275a7e1386db74dcec59c1",
+            "elapsed_ms": 2536,
+            "body_sha256": "530f3a555097971aeb829c854cc3a66d29b702b88f658f61b1754cc4f6cbbf3a",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -64,7 +64,7 @@
           },
           "us·Washington": {
             "value": "ok",
-            "at": "2026-09-09T20:22:43.216Z",
+            "at": "2026-09-18T20:22:49.370Z",
             "note": null
           },
           "us·Illinois": {
@@ -80,7 +80,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -107,14 +107,14 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.805,
+        "latin_char_ratio": 0.804,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -152,7 +152,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -183,7 +183,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -214,7 +214,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-17T20:56:10.067Z",
+      "measured_at": "2026-09-18T20:22:49.370Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -224,7 +224,7 @@
           {
             "url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
             "status": 403,
-            "chars": 505
+            "chars": 835
           },
           {
             "url": "https://global.oliveyoung.com",
@@ -232,19 +232,19 @@
             "chars": 8000
           }
         ],
-        "content_sha256": "088ac4aea75cc33bc5d12858aefd10c55d9673d05d91c35e9fc2ca8932ea8277",
+        "content_sha256": "4ae9e0a43bcd28515b6e30d8d39fd09c9247acf379ac2dc679fd6340a190f0f7",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "global-customerservice@oliveyoung.com",
-          "reason": "영문 글로벌 고객센터 이메일(global-customerservice@oliveyoung.com)이 명시되어 있어 영어로 문의 가능한 채널로 판단됨."
+          "quoted_evidence": "global-customerservice@oliveyoung.com ... English (United States)",
+          "reason": "고객센터 페이지에 English 언어 옵션과 함께 global-customerservice 이메일이 명시되어 있어 영어 문의가 가능함을 알 수 있음."
         },
         "heuristic": {
           "value": "yes",
           "strong_markers": [
             "english support"
           ],
-          "latin_ratio": 0.762,
+          "latin_ratio": 0.741,
           "reason": "영문 지원을 명시하는 문구를 찾음"
         }
       }
