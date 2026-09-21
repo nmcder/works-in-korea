@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-21T21:41:55.625Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.ktmmobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 4205,
-            "body_sha256": "f2a4defb614b9fd03c8c2859410a69ed99f64d9e62c6dd6bf4d361eb1ab9ad59",
+            "elapsed_ms": 5212,
+            "body_sha256": "89c40ed22f6326de583f27825aa6deb3e96834306f6087670dacb5ed3a28ec94",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-15T20:51:04.241Z",
+            "at": "2026-09-21T21:41:55.625Z",
             "note": null
           },
           "us·California": {
@@ -93,7 +93,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-21T21:41:55.625Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -140,7 +140,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-21T21:41:55.625Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -169,7 +169,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-21T21:41:55.625Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -193,7 +193,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-21T21:41:55.625Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -203,30 +203,30 @@
           {
             "url": "https://www.ktmmobile.com/cs/serviceGuide.do",
             "status": 200,
-            "chars": 6170
+            "chars": 6182
           },
           {
             "url": "https://www.ktmmobile.com",
             "status": 200,
-            "chars": 2723
+            "chars": 2711
           },
           {
             "url": "https://www.ktmmobile.com/cs/serviceGuide.do",
             "status": 200,
-            "chars": 6170
+            "chars": 6182
           },
           {
             "url": "https://www.ktmmobile.com/cs/csNoticeList.do",
             "status": 200,
-            "chars": 3188
+            "chars": 3200
           }
         ],
-        "content_sha256": "8bed8985b567af8f77243149bf2d7c61fdf9376188a4e975456f316e21c7664a",
+        "content_sha256": "01a3541b6c5c694ae6c4b38270f67a2b4ced0ef4ff4216b86f0c0197b9d4b8ad",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "엠모바일 휴대폰에서 114(무료), 타사 이용 시 1899-5000(유료) - 운영시간 : 오전 9시 ~ 정오 12시 / 오후 1시 ~ 오후 6시",
-          "reason": "고객센터는 전화, 채팅, 1:1문의 등이 명시되어 있으나 모두 한국어 상담을 전제로 하며(본인 명의 SMS 인증 등), 외국인/미성년자는 셀프개통이 아닌 '상담사 개통신청'을 이용해야 한다는 안내만 있을 뿐 영어 지원 채널에 대한 언급은 전혀 없음."
+          "quoted_evidence": "엠모바일 휴대폰에서 114(무료), 타사 이용 시 1899-5000(유료) - 운영시간 : 오전 9시 ~ 정오 12시 / 오후 1시 ~ 오후 6시 ■ 채팅상담 이용안내 - 경로 : 홈페이지 오른쪽 하단 HELP → CHAT → '채팅상담' 입력 → 채팅상담 연결 - 본인 명의 휴대폰 SMS 인증 필요 (미성년자, 법인 상담 불가)",
+          "reason": "고객센터 전화·채팅 상담이 모두 한국어 기반이며 본인 명의 휴대폰 인증을 요구하고, 외국인은 셀프개통이 불가하여 별도 상담사 개통만 가능하다고 명시되어 있어 한국어 전용 지원임이 명확합니다."
         },
         "heuristic": {
           "value": "unknown",
