@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 4772,
-            "body_sha256": "2e9cd3c05d825b82ee136d0767cdb59768ca7fdc63296f4d864c37fb3582d8be",
+            "elapsed_ms": 4135,
+            "body_sha256": "0ed5d2e5e71d1e2401ecfa62687c7009df22f399169cbe1bed97b42e037928d0",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -70,6 +70,11 @@
           "us·Illinois": {
             "value": "ok",
             "at": "2026-09-17T20:56:10.067Z",
+            "note": null
+          },
+          "us·Iowa": {
+            "value": "ok",
+            "at": "2026-09-23T21:03:41.784Z",
             "note": null
           }
         }
@@ -111,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -133,7 +138,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -157,7 +162,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -172,7 +177,7 @@
           {
             "url": "https://www.tmap.co.kr",
             "status": 200,
-            "chars": 2170
+            "chars": 2196
           },
           {
             "url": "https://ethics.sk.co.kr/",
@@ -185,20 +190,19 @@
             "chars": 111
           }
         ],
-        "content_sha256": "2147c078efdf6efc11c18558c6882515e28f28ac02be27ad4518e40f53bd3b7a",
+        "content_sha256": "fb310c2b0b936239313e50d49a91d79803272dc579791cacdb4bd96ec0bd8013",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의 (새창)",
-          "reason": "고객지원 채널은 앱 내 1:1문의로 명시되어 있으나 영어 지원 여부에 대한 언급이 없고 한국어 서비스로만 안내되어 있어 한국어 전용으로 판단됨."
+          "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의",
+          "reason": "고객지원 채널이 앱 내 1:1문의로만 안내되어 있고 영어 지원 여부에 대한 언급이 없으며, 전체 페이지가 한국어로만 구성되어 한국어 전용 지원임을 시사함."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.173,
+          "latin_ratio": 0.172,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

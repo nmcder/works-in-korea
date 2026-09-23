@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2445,
-            "body_sha256": "2f4ff252e19c816270be178c3755b215aa37362199fc85f1490b597b8e822f3d",
+            "elapsed_ms": 2587,
+            "body_sha256": "ef9bb97781cdbe17a475e1115a5ac3f2c302979d161d46e3bbb65d4fae2d07f4",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -71,6 +71,11 @@
             "value": "ok",
             "at": "2026-09-17T20:56:10.067Z",
             "note": null
+          },
+          "us·Iowa": {
+            "value": "ok",
+            "at": "2026-09-23T21:03:41.784Z",
+            "note": null
           }
         }
       }
@@ -80,7 +85,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -114,7 +119,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -152,7 +157,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -183,7 +188,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -214,7 +219,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",

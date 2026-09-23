@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kbanknow.com/web/web-home/home/main",
             "redirected": true,
-            "elapsed_ms": 3426,
+            "elapsed_ms": 4776,
             "body_sha256": "b14818318553d9aad37800f769e444bf0dbf8fbfa12b9fc9fb0362d52df5a34e",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -71,10 +71,13 @@
             "value": "ok",
             "at": "2026-09-17T20:56:10.067Z",
             "note": null
+          },
+          "us·Iowa": {
+            "value": "ok",
+            "at": "2026-09-23T21:03:41.784Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-09-21T21:41:55.625Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -82,7 +85,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -106,9 +109,7 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.037,
         "hangul_char_ratio": 0.73,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-09-21T21:41:55.625Z",
-        "last_attempt_failed": "robots: robots-unavailable(UND_ERR_CONNECT_TIMEOUT)"
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
     "signup_phone_auth": {
@@ -133,8 +134,8 @@
           }
         ],
         "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다",
-        "last_attempt_at": "2026-09-21T21:41:55.625Z",
-        "last_attempt_failed": "가입 페이지를 찾지 못함"
+        "last_attempt_at": "2026-09-23T21:03:41.784Z",
+        "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
     "app_availability": {
@@ -143,7 +144,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -172,7 +173,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-18T20:22:49.370Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -191,9 +192,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-09-21T21:41:55.625Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {

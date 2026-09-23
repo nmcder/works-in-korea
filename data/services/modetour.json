@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 4374,
-            "body_sha256": "2445ad3c05142c8862db36c53c1c696c756d9df7b8f896675b7bfd0f62de624c",
+            "elapsed_ms": 4748,
+            "body_sha256": "2bc7709cfda5857c5d900dfe5ddbf668c5d0b001bd336d2ee09fd87abe22a0a5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -70,6 +70,11 @@
           "us·Illinois": {
             "value": "ok",
             "at": "2026-09-17T20:56:10.067Z",
+            "note": null
+          },
+          "us·Iowa": {
+            "value": "ok",
+            "at": "2026-09-23T21:03:41.784Z",
             "note": null
           }
         }
@@ -111,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -133,7 +138,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-21T21:41:55.625Z",
+      "measured_at": "2026-09-23T21:03:41.784Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
