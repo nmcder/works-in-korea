@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.sk7mobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 4509,
+            "elapsed_ms": 4495,
             "body_sha256": "ea4c7f5988ddf94e637b3e95eb8eab10e8d3a739867155d5057c031fe091140e",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-23T21:03:41.784Z",
+            "at": "2026-09-24T21:07:26.605Z",
             "note": null
           }
         }
@@ -116,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -142,7 +142,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-09-08T20:41:57.323Z",
       "last_changed_at": "2026-09-08T20:41:57.323Z",
       "method": "auto:payment_gate",
@@ -185,7 +185,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",

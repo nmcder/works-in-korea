@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://zigzag.kr/",
             "redirected": false,
-            "elapsed_ms": 4062,
-            "body_sha256": "35dd392e4dec5b82eb6cd51623bf0737141d4609bff7d8ef38123ac68f36c599",
+            "elapsed_ms": 3219,
+            "body_sha256": "35992aa4df8e5532ae70e9e36ec2a11f85684e51e7992b11e97fd91cb86ae07a",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-23T21:03:41.784Z",
+            "at": "2026-09-24T21:07:26.605Z",
             "note": null
           }
         }
@@ -116,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -147,7 +147,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

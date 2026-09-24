@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.payco.com/",
             "redirected": false,
-            "elapsed_ms": 3383,
+            "elapsed_ms": 3437,
             "body_sha256": "bbae860d5660ca460b9680a33de7aba0cb1d32ec7b63921a22659eab4c575872",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-23T21:03:41.784Z",
+            "at": "2026-09-24T21:07:26.605Z",
             "note": null
           }
         }
@@ -98,7 +98,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -136,7 +136,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -167,7 +167,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

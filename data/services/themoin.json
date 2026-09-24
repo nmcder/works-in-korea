@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.themoin.com/",
             "redirected": true,
-            "elapsed_ms": 2319,
+            "elapsed_ms": 2300,
             "body_sha256": "518475f69b2508a80a66fa8ded05353d0efdbbe855f5f43b44516f74bb47664c",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-23T21:03:41.784Z",
+            "at": "2026-09-24T21:07:26.605Z",
             "note": null
           }
         }
@@ -85,7 +85,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -132,7 +132,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-23T21:03:41.784Z",
+      "measured_at": "2026-09-24T21:07:26.605Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
