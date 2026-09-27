@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-26T20:37:54.772Z",
+      "measured_at": "2026-09-27T20:51:07.494Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.gsshop.com/",
             "redirected": false,
-            "elapsed_ms": 2233,
+            "elapsed_ms": 2065,
             "body_sha256": "c4c77c671105e74a1a7c320b159872bb484a2ebe5fedd8befb3387d1ff7fc9d5",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-09-08T20:41:57.323Z",
+            "at": "2026-09-27T20:51:07.494Z",
             "note": null
           },
           "us·Wyoming": {
@@ -116,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-26T20:37:54.772Z",
+      "measured_at": "2026-09-27T20:51:07.494Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -138,7 +138,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-26T20:37:54.772Z",
+      "measured_at": "2026-09-27T20:51:07.494Z",
       "first_seen_at": "2026-08-15T05:38:47.932Z",
       "last_changed_at": "2026-08-15T05:38:47.932Z",
       "method": "auto:payment_gate",
