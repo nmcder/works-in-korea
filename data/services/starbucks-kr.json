@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.starbucks.co.kr/",
             "redirected": false,
-            "elapsed_ms": 3832,
+            "elapsed_ms": 4589,
             "body_sha256": "46223c228da9076d32ed1c0e26be1c18432e5fc7d5a55181aff9164adef35dbd",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-26T20:37:54.772Z",
+            "at": "2026-09-28T22:55:31.245Z",
             "note": null
           },
           "us·California": {
@@ -85,7 +85,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -109,7 +109,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -165,7 +165,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -194,7 +194,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -218,7 +218,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -228,7 +228,7 @@
           {
             "url": "https://www.starbucks.co.kr/community/faq.do?menu_cd=STB2703&amp;cate=F17",
             "status": 200,
-            "chars": 3092
+            "chars": 3102
           },
           {
             "url": "https://www.starbucks.co.kr",
@@ -236,20 +236,19 @@
             "chars": 0
           }
         ],
-        "content_sha256": "303cceaa1da29b8a31ec8589e9e545068f9aa3b9e6e41fe771690e82fd4f3b8b",
+        "content_sha256": "ac2e7587785b9f6097d06e8b961075473f6568c126d24282fe10f944878c2281",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
           "quoted_evidence": "전화 접수 - 대표번호 : 1522-3232 (상담시간: 평일 오전 9:00 ~ 오후 18:00)",
-          "reason": "고객 문의 접수 방법이 전화, 고객의 소리 게시판, 스토어 케어 접수로 명시되어 있으나 모두 한국어 기반 채널이며 영문 지원에 대한 언급이 전혀 없음."
+          "reason": "고객 문의 채널(전화, 고객의 소리 게시판)이 명시되어 있으나 모두 한국어 기반 국내 고객센터로, 영어 지원에 대한 언급이 전혀 없음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
           "latin_ratio": 0.144,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

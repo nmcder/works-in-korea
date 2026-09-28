@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://nol.yanolja.com/",
             "redirected": true,
-            "elapsed_ms": 3781,
-            "body_sha256": "d5acc6ba0db61363e1069147f4cdaf1841a77977589ae8c2280f5e5a3e44d6f1",
+            "elapsed_ms": 4396,
+            "body_sha256": "22be75ef0ff52e07b93fb3786cf10f84185ca7565f52464f25a692bfcb067027",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-26T20:37:54.772Z",
+            "at": "2026-09-28T22:55:31.245Z",
             "note": null
           },
           "us·California": {
@@ -116,7 +116,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-17T01:05:31.018Z",
       "last_changed_at": "2026-08-17T01:05:31.018Z",
       "method": "auto:app_availability",
@@ -145,7 +145,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-27T20:51:07.494Z",
+      "measured_at": "2026-09-28T22:55:31.245Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
