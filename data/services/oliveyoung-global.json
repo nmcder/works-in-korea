@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2556,
-            "body_sha256": "e33210f09a3a2262886fb8905b16d1c81f296901b6daeb75d7a3d50209de5e41",
+            "elapsed_ms": 2667,
+            "body_sha256": "1205d3dbef92fac7234656218eeabe9fdf4b539488cac7d2d2053030c62d23e1",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -76,6 +76,11 @@
             "value": "ok",
             "at": "2026-09-24T21:07:26.605Z",
             "note": null
+          },
+          "us·Texas": {
+            "value": "ok",
+            "at": "2026-09-29T21:50:04.183Z",
+            "note": null
           }
         }
       }
@@ -85,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -119,7 +124,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -157,7 +162,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -188,7 +193,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -219,7 +224,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-09-28T22:55:31.245Z",
+      "measured_at": "2026-09-29T21:50:04.183Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -229,7 +234,7 @@
           {
             "url": "https://help.global.oliveyoung.com/hc/ko/categories/16411417936143-FAQ",
             "status": 403,
-            "chars": 835
+            "chars": 505
           },
           {
             "url": "https://global.oliveyoung.com",
@@ -237,18 +242,20 @@
             "chars": 8000
           }
         ],
-        "content_sha256": "6c82c1260a6d5393912f126fdc8a51812a3db05a182cca97b8be027f5dc2232a",
+        "content_sha256": "2e5756450323dcd1dc3bad0e3791574d05d391a767e31936f8cd3ba3aa80e42e",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "global-customerservice@oliveyoung.com ... English (United States)",
-          "reason": "글로벌 고객센터 이메일과 English 언어 옵션이 명시되어 있어 영문 문의가 가능함을 시사함"
+          "quoted_evidence": "global-customerservice@oliveyoung.com",
+          "reason": "글로벌 영어 서비스 사이트(global.oliveyoung.com)의 고객센터에 global-customerservice@oliveyoung.com 이메일이 명시되어 있고 전체 페이지가 영어로 운영되므로 영문 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
-          "value": "unknown",
-          "strong_markers": [],
-          "latin_ratio": 0.746,
-          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
+          "value": "yes",
+          "strong_markers": [
+            "english support"
+          ],
+          "latin_ratio": 0.763,
+          "reason": "영문 지원을 명시하는 문구를 찾음"
         }
       }
     },
