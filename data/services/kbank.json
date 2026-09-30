@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-29T21:50:04.183Z",
+      "measured_at": "2026-09-30T21:51:15.992Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.kbanknow.com/web/web-home/home/main",
             "redirected": true,
-            "elapsed_ms": 4530,
-            "body_sha256": "b704c6cf4ff94d361d195eb4454f3ae8de3ccd5d947e054e1f03dc0dc376db86",
+            "elapsed_ms": 4274,
+            "body_sha256": "9d241be518b43363503409619e6d611bd64c7cfbac84648e86365a88689fffca",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-09-16T20:51:23.923Z",
+            "at": "2026-09-30T21:51:15.992Z",
             "note": null
           },
           "us·Virginia": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-09-29T21:50:04.183Z",
+      "measured_at": "2026-09-30T21:51:15.992Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -113,7 +113,7 @@
         ],
         "accept_language_responsive": false,
         "latin_char_ratio": 0.037,
-        "hangul_char_ratio": 0.73,
+        "hangul_char_ratio": 0.731,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -139,7 +139,7 @@
           }
         ],
         "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다",
-        "last_attempt_at": "2026-09-29T21:50:04.183Z",
+        "last_attempt_at": "2026-09-30T21:51:15.992Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -149,7 +149,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-29T21:50:04.183Z",
+      "measured_at": "2026-09-30T21:51:15.992Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -178,7 +178,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-29T21:50:04.183Z",
+      "measured_at": "2026-09-30T21:51:15.992Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
