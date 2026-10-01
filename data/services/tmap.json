@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-09-30T21:51:15.992Z",
+      "measured_at": "2026-10-01T22:19:36.397Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 3941,
+            "elapsed_ms": 5157,
             "body_sha256": "0b9eda0b9a43aa89f9faad5f8522879d8b5a4878186a47b2cf4976610a8a0f9b",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-09-28T22:55:31.245Z",
+            "at": "2026-10-01T22:19:36.397Z",
             "note": null
           },
           "us·California": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-09-30T21:51:15.992Z",
+      "measured_at": "2026-10-01T22:19:36.397Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-09-30T21:51:15.992Z",
+      "measured_at": "2026-10-01T22:19:36.397Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -167,7 +167,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-09-29T21:50:04.183Z",
+      "measured_at": "2026-10-01T22:19:36.397Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -182,12 +182,7 @@
           {
             "url": "https://www.tmap.co.kr",
             "status": 200,
-            "chars": 2196
-          },
-          {
-            "url": "https://ethics.sk.co.kr/",
-            "status": 200,
-            "chars": 799
+            "chars": 2186
           },
           {
             "url": "https://www.tmap.co.kr/tmap2/mobile/tmap.jsp?scheme=tmap&amp;host=cs?pageid=qna",
@@ -195,22 +190,19 @@
             "chars": 111
           }
         ],
-        "content_sha256": "fb310c2b0b936239313e50d49a91d79803272dc579791cacdb4bd96ec0bd8013",
+        "content_sha256": "e762c772f7b0301cd17fdcecbdea659d1fbf56c5a8adf8ee4ad75f6e55ce3e7a",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
           "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의",
-          "reason": "티맵 고객센터는 앱 내 1:1문의만 안내되어 있고, 영어 지원 채널에 대한 언급이 없어 한국어 전용으로 판단됩니다."
+          "reason": "고객센터 채널이 앱 내 1:1문의로만 안내되어 있고 영어 지원 관련 언급이 전혀 없어 한국어 전용으로 판단됨"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.172,
+          "latin_ratio": 0.164,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-09-30T21:51:15.992Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {
