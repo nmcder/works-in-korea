@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-01T22:19:36.397Z",
+      "measured_at": "2026-10-02T21:48:03.402Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.ddocdoc.com/",
             "redirected": false,
-            "elapsed_ms": 2182,
+            "elapsed_ms": 2456,
             "body_sha256": "d4d580a0655a2fedeced9b0adeaa17cf565872df851847ec1068a0d23b9bfcc2",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-09-30T21:51:15.992Z",
+            "at": "2026-10-02T21:48:03.402Z",
             "note": null
           },
           "us·Virginia": {
@@ -103,7 +103,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-10-01T22:19:36.397Z",
+      "measured_at": "2026-10-02T21:48:03.402Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -141,7 +141,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-01T22:19:36.397Z",
+      "measured_at": "2026-10-02T21:48:03.402Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -170,7 +170,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-01T22:19:36.397Z",
+      "measured_at": "2026-10-02T21:48:03.402Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
