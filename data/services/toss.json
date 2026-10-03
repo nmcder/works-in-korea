@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://toss.im/en-us",
             "redirected": true,
-            "elapsed_ms": 3632,
+            "elapsed_ms": 3837,
             "body_sha256": "1b69beb13d4a637fd031011ba4445c40e02441c5fc42cdc08f22f92c2aaab515",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-24T21:07:26.605Z",
+            "at": "2026-10-03T20:34:59.523Z",
             "note": null
           },
           "us·Texas": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -137,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -222,7 +222,9 @@
           "strong_markers": [],
           "latin_ratio": 0.494,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "last_attempt_at": "2026-10-03T20:34:59.523Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "foreign_card": {

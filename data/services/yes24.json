@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.yes24.com/Main/default.aspx",
             "redirected": true,
-            "elapsed_ms": 4578,
-            "body_sha256": "f72c4ee45941047d8c4ba3fd86c8f8cffd635dde750d1b0e770010d3b4bf0c32",
+            "elapsed_ms": 6211,
+            "body_sha256": "37aa9ccfd733715bdd5ec592d92e5e6744b0204869717c0016800c1eb8df8713",
             "content_type": "text/html; charset=ks_c_5601-1987",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-24T21:07:26.605Z",
+            "at": "2026-10-03T20:34:59.523Z",
             "note": null
           },
           "us·Texas": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -138,7 +138,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -169,7 +169,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:payment_gate",

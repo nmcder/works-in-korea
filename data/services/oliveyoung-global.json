@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2527,
-            "body_sha256": "f75ee1e54198c98a0b6d04caeb1349f7f992bc6fe8bd384a4e7cad0ab1ae659a",
+            "elapsed_ms": 2691,
+            "body_sha256": "fafd6c5b444495c7537664b75f874cae96de57713b755e825a83eb078111a243",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-09-24T21:07:26.605Z",
+            "at": "2026-10-03T20:34:59.523Z",
             "note": null
           },
           "us·Texas": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -154,7 +154,7 @@
           }
         ],
         "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-10-02T21:48:03.402Z",
+        "last_attempt_at": "2026-10-03T20:34:59.523Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -164,7 +164,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -195,7 +195,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -226,7 +226,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-10-02T21:48:03.402Z",
+      "measured_at": "2026-10-03T20:34:59.523Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
