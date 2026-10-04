@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-03T20:34:59.523Z",
+      "measured_at": "2026-10-04T20:51:00.140Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://ridibooks.com/comics/ebook",
             "redirected": true,
-            "elapsed_ms": 3395,
-            "body_sha256": "85ced9f0b26dbaccd25999fb41162e797e835584e8265823d43aaba064004f79",
+            "elapsed_ms": 3015,
+            "body_sha256": "86ae45474fdbf3127b9f265a31e39edc983fc876824b2c8a34820179ccf31b05",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-01T22:19:36.397Z",
+            "at": "2026-10-04T20:51:00.140Z",
             "note": null
           },
           "us·California": {
@@ -115,7 +115,7 @@
         "latin_char_ratio": 0.169,
         "hangul_char_ratio": 0.51,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-10-03T20:34:59.523Z",
+        "last_attempt_at": "2026-10-04T20:51:00.140Z",
         "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
@@ -139,7 +139,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-03T20:34:59.523Z",
+      "measured_at": "2026-10-04T20:51:00.140Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -168,7 +168,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-03T20:34:59.523Z",
+      "measured_at": "2026-10-04T20:51:00.140Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -233,7 +233,7 @@
           "latin_ratio": 0.173,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
-        "last_attempt_at": "2026-10-03T20:34:59.523Z",
+        "last_attempt_at": "2026-10-04T20:51:00.140Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
