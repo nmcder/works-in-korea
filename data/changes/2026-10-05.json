@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T23:42:42.193Z",
+  "changes": [
+    {
+      "service_id": "ridibooks",
+      "signal": "i18n_ui",
+      "from": [
+        "ko",
+        "ru"
+      ],
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-10-05T23:42:42.193Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "toss",
+      "signal": "support_en",
+      "from": "yes",
+      "to": "no",
+      "changed_at": "2026-10-05T23:42:42.193Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Arizona",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,11 +31,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://chingumobile.com/",
+            "final_url": "https://chingumobile.com/ko",
             "redirected": true,
-            "elapsed_ms": 5242,
-            "body_sha256": "6a36d1a6ea95e36c65a6326beb45a3f703678dbe40c8fa5c68f03e7a12e953af",
-            "content_type": "text/html; charset=UTF-8",
+            "elapsed_ms": 5419,
+            "body_sha256": "af3173f294d2e79e9ba95fa0d61375703da9c2da91df1954034f7fc2aa1b194c",
+            "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-02T21:48:03.402Z",
+            "at": "2026-10-05T23:42:42.193Z",
             "note": null
           },
           "us·Virginia": {
@@ -90,30 +90,25 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
-        "declared_html_lang": "en",
+        "declared_html_lang": "ko",
         "hreflang": [],
         "language_switcher_links": {},
         "english_url_checks": [
           {
             "url": "https://www.chingumobile.com/en",
-            "status": 404,
-            "ok": false
-          },
-          {
-            "url": "https://www.chingumobile.com/en/",
-            "status": 404,
-            "ok": false
+            "status": 200,
+            "ok": true
           }
         ],
-        "accept_language_responsive": true,
-        "latin_char_ratio": 0.646,
-        "hangul_char_ratio": 0.036,
+        "accept_language_responsive": false,
+        "latin_char_ratio": 0.229,
+        "hangul_char_ratio": 0.323,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -156,7 +151,9 @@
             "reason": "hints.signup_url"
           }
         ],
-        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다."
+        "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
+        "last_attempt_at": "2026-10-05T23:42:42.193Z",
+        "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
     "app_availability": {
@@ -170,7 +167,7 @@
         "not_measured": "앱 ID 미상",
         "hint": "data/seeds/services.seed.json 의 hints.ios_app_id / hints.android_package 를 채우면 측정된다",
         "method_limitation": "국가별 출시 여부는 측정하지 않는다. iTunes lookup(country=), apps.apple.com 스토어프론트 페이지, play.google.com(gl=) 세 경로 모두 앱의 존재 여부만 반영하고 배포 국가를 구분하지 않는 것을 2026-08-15에 확인했다 (한국 전용으로 보이는 앱도 모든 국가에서 동일 응답). 추측으로 채우지 않고 countries=null 로 남긴다.",
-        "last_attempt_at": "2026-10-04T20:51:00.140Z",
+        "last_attempt_at": "2026-10-05T23:42:42.193Z",
         "last_attempt_failed": "앱 ID 미상"
       }
     },
@@ -179,7 +176,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -239,7 +236,9 @@
           "latin_ratio": 0.155,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
+        "last_attempt_at": "2026-10-05T23:42:42.193Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "foreign_card": {

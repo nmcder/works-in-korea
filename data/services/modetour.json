@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 3538,
+            "elapsed_ms": 4067,
             "body_sha256": "fcf302afe8f99fc769e95443bddc4fbe1a7199e9488c3c6f499ac0c599e7671c",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-02T21:48:03.402Z",
+            "at": "2026-10-05T23:42:42.193Z",
             "note": null
           },
           "us·Virginia": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-04T20:51:00.140Z",
+      "measured_at": "2026-10-05T23:42:42.193Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
