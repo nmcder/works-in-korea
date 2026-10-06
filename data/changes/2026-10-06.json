@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T22:18:22.468Z",
+  "changes": [
+    {
+      "service_id": "chingu-mobile",
+      "signal": "overseas_access",
+      "from": "ok",
+      "to": "blocked",
+      "changed_at": "2026-10-06T22:18:22.468Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Washington",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

@@ -1,24 +1,24 @@
 {
-  "started_at": "2026-10-05T23:42:42.193Z",
-  "finished_at": "2026-10-05T23:48:33.107Z",
-  "duration_ms": 350914,
+  "started_at": "2026-10-06T22:18:22.468Z",
+  "finished_at": "2026-10-06T22:23:55.505Z",
+  "duration_ms": 333037,
   "vantage_point": {
     "id": "github-actions",
     "country": "us",
-    "region": "Arizona",
+    "region": "Washington",
     "ip_asn": "AS8075"
   },
   "services_total": 106,
   "services_probed": 106,
   "signals_measured": 309,
   "signals_unknown": 95,
-  "changes": 2,
+  "changes": 1,
   "errors": [],
   "llm": {
     "calls": 10,
     "cached": 10,
-    "input_tokens": 53518,
-    "output_tokens": 1425,
+    "input_tokens": 52695,
+    "output_tokens": 1470,
     "model": "claude-sonnet-5",
     "failures": 0,
     "last_error": null

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-05T23:42:42.193Z",
+      "measured_at": "2026-10-06T22:18:22.468Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://toss.im/en-us",
             "redirected": true,
-            "elapsed_ms": 3488,
-            "body_sha256": "1b69beb13d4a637fd031011ba4445c40e02441c5fc42cdc08f22f92c2aaab515",
+            "elapsed_ms": 3494,
+            "body_sha256": "f6b9de586a7a5f0a8ec77e8ac70a1ac7339bd65806dde16cb12c173948ab8d80",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -64,7 +64,7 @@
           },
           "us·Washington": {
             "value": "ok",
-            "at": "2026-09-18T20:22:49.370Z",
+            "at": "2026-10-06T22:18:22.468Z",
             "note": null
           },
           "us·Illinois": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-05T23:42:42.193Z",
+      "measured_at": "2026-10-06T22:18:22.468Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -112,8 +112,8 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.677,
-        "hangul_char_ratio": 0.022,
+        "latin_char_ratio": 0.705,
+        "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -137,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-05T23:42:42.193Z",
+      "measured_at": "2026-10-06T22:18:22.468Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-05T23:42:42.193Z",
+      "measured_at": "2026-10-06T22:18:22.468Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -192,7 +192,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-10-05T23:42:42.193Z",
+      "measured_at": "2026-10-06T22:18:22.468Z",
       "first_seen_at": "2026-10-05T23:42:42.193Z",
       "last_changed_at": "2026-10-05T23:42:42.193Z",
       "method": "auto:support_en",
@@ -202,20 +202,20 @@
           {
             "url": "https://support.toss.im/faq/207",
             "status": 200,
-            "chars": 1899
+            "chars": 1890
           },
           {
             "url": "https://toss.im",
             "status": 200,
-            "chars": 93
+            "chars": 95
           }
         ],
-        "content_sha256": "a3e14adde58b385091cb830d49b40e4de376886c954ee4471f8f9dcb10e91770",
+        "content_sha256": "5e489135f433b5c5cd7f71450fdde448b7a0a10fec1122cc0a7574231a4e18c2",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "전화: 1599-4905 (24시간 연중무휴) 이메일(고객전용): support@toss.im",
-          "reason": "고객센터 연락처는 명시되어 있으나 전화/채팅(카카오톡) 모두 한국어 기반 채널이며 영어 응대 안내는 없음"
+          "quoted_evidence": "전화 : 1599-4905 채팅 : ‘카카오톡’ → 친구 목록 위의 돋모기 모양 ‘검색’ → “토스” 입력",
+          "reason": "고객센터 연락 방법이 전화와 카카오톡 채팅으로 모두 한국어 기반이며 영어 지원에 대한 언급이 전혀 없어 한국어 전용으로 판단됩니다."
         },
         "heuristic": {
           "value": "unknown",
