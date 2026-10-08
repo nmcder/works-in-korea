@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 4345,
-            "body_sha256": "4bc58ab5fd6e410cdba29d959008be4844a10eb38d38078a0d57946c0c02c3de",
+            "elapsed_ms": 4481,
+            "body_sha256": "798ad736455a8f88a55b96bddc99a52771f23890a878a05c75e0598b1efa00ee",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -79,7 +79,7 @@
           },
           "us·Texas": {
             "value": "ok",
-            "at": "2026-09-29T21:50:04.183Z",
+            "at": "2026-10-08T22:53:10.733Z",
             "note": null
           }
         }
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

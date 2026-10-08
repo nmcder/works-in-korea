@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tadatada.com/",
             "redirected": true,
-            "elapsed_ms": 2367,
-            "body_sha256": "fd83abf78dc9ac3b7edef8036747b18598b37e4c3f4cc164afb67737d79dcadb",
+            "elapsed_ms": 2580,
+            "body_sha256": "5ec9ab67e1d551451b81dc23cb747be29b831d863b31b31815a4f0b8363366fe",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -79,7 +79,7 @@
           },
           "us·Texas": {
             "value": "ok",
-            "at": "2026-09-29T21:50:04.183Z",
+            "at": "2026-10-08T22:53:10.733Z",
             "note": null
           }
         }
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

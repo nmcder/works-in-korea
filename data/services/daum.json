@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.daum.net/",
             "redirected": false,
-            "elapsed_ms": 4078,
-            "body_sha256": "a52cd869b33124a6468c97668ba5770039a1e17e329c8ada0e4f7e5116dc44e2",
+            "elapsed_ms": 3741,
+            "body_sha256": "d27556d5c90f4261df1b806a4eade8cce36ac534da81ebcbc177f316e511752b",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -79,7 +79,7 @@
           },
           "us·Texas": {
             "value": "ok",
-            "at": "2026-09-29T21:50:04.183Z",
+            "at": "2026-10-08T22:53:10.733Z",
             "note": null
           }
         }
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-07T22:40:09.344Z",
+      "measured_at": "2026-10-08T22:53:10.733Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

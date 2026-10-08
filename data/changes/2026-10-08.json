@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T22:53:10.733Z",
+  "changes": [
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-10-08T22:53:10.733Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Texas",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
