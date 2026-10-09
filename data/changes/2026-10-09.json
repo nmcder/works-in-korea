@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T22:13:14.829Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-10-09T22:13:14.829Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
