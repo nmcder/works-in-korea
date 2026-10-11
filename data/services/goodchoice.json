@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-09T22:13:14.829Z",
+      "measured_at": "2026-10-11T21:27:25.553Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.yeogi.com/",
             "redirected": false,
-            "elapsed_ms": 2681,
-            "body_sha256": "a50b777ee15acff97d9acb60c5dc383d0cae54a8fd2695699bb10b524579805a",
+            "elapsed_ms": 3271,
+            "body_sha256": "c492abf96cd306da802828989fb559af2783dd01e50468e5dc9f9e18a37a271c",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-05T23:42:42.193Z",
+            "at": "2026-10-11T21:27:25.553Z",
             "note": null
           },
           "us·Virginia": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-09T22:13:14.829Z",
+      "measured_at": "2026-10-11T21:27:25.553Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-09T22:13:14.829Z",
+      "measured_at": "2026-10-11T21:27:25.553Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
