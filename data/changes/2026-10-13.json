@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T22:16:35.063Z",
+  "changes": [
+    {
+      "service_id": "naver",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko",
+        "th"
+      ],
+      "to": [
+        "en",
+        "ko"
+      ],
+      "changed_at": "2026-10-13T22:16:35.063Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
