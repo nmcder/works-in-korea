@@ -19,10 +19,10 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "ok",
-      "measured_at": "2026-10-13T22:16:35.063Z",
-      "first_seen_at": "2026-08-15T02:48:11.388Z",
-      "last_changed_at": null,
+      "value": "blocked",
+      "measured_at": "2026-10-15T20:55:03.135Z",
+      "first_seen_at": "2026-10-15T20:55:03.135Z",
+      "last_changed_at": "2026-10-15T20:55:03.135Z",
       "method": "auto:overseas_access",
       "confidence": "auto",
       "evidence": {
@@ -33,19 +33,21 @@
             "http_status": 200,
             "final_url": "https://www.tving.com/",
             "redirected": false,
-            "elapsed_ms": 2872,
-            "body_sha256": "a34b6a7f40f6e91ef1fbd0c8517535c94f41f4f613bfeba54ee95ab53118f37a",
+            "elapsed_ms": 3431,
+            "body_sha256": "b2d447c3b649eb86b441fa8676e61024311cdbb3f8eecd9f76aa0ee4d0140666",
             "content_type": "text/html; charset=utf-8",
-            "geo_block_markers": [],
+            "geo_block_markers": [
+              "한국에서만 이용"
+            ],
             "ambiguous_deny_markers": []
           }
         ],
-        "note": null,
+        "note": "본문이 지역(국가) 제한을 명시함",
         "by_vantage": {
           "us·Arizona": {
-            "value": "ok",
-            "at": "2026-10-11T21:27:25.553Z",
-            "note": null
+            "value": "blocked",
+            "at": "2026-10-15T20:55:03.135Z",
+            "note": "본문이 지역(국가) 제한을 명시함"
           },
           "us·Virginia": {
             "value": "ok",
@@ -121,7 +123,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-13T22:16:35.063Z",
+      "measured_at": "2026-10-15T20:55:03.135Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -143,7 +145,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-13T22:16:35.063Z",
+      "measured_at": "2026-10-15T20:55:03.135Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
