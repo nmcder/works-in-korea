@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-15T20:55:03.135Z",
+      "measured_at": "2026-10-16T20:28:45.776Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://nol.yanolja.com/",
             "redirected": true,
-            "elapsed_ms": 4007,
-            "body_sha256": "6e22f75faf578b3c018a11353cb68aa0788a3ad5a89f926b31031ca98f573e07",
+            "elapsed_ms": 4144,
+            "body_sha256": "c42856cdf3d136de2b9c3f8ecb68377a50671f1141b27f5f9691376fc7c8377c",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-10-13T22:16:35.063Z",
+            "at": "2026-10-16T20:28:45.776Z",
             "note": null
           },
           "us·Texas": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-15T20:55:03.135Z",
+      "measured_at": "2026-10-16T20:28:45.776Z",
       "first_seen_at": "2026-08-17T01:05:31.018Z",
       "last_changed_at": "2026-08-17T01:05:31.018Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-15T20:55:03.135Z",
+      "measured_at": "2026-10-16T20:28:45.776Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
