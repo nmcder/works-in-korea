@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,10 +31,10 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.kbanknow.com/web/web-home/home/main",
+            "final_url": "https://www.kbanknow.com/notice/2026_3rd_PM.html",
             "redirected": true,
-            "elapsed_ms": 4635,
-            "body_sha256": "9b5bfbd274db161ba201d901acf8fd5e7e969cf4953eef559e65667d3e470bac",
+            "elapsed_ms": 6523,
+            "body_sha256": "7d1064617378cd2badc50b5ecb9edded5f58af4a709299604cf3230cf4c08ddb",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-04T20:51:00.140Z",
+            "at": "2026-10-17T20:04:48.897Z",
             "note": null
           },
           "us·California": {
@@ -114,7 +114,9 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.037,
         "hangul_char_ratio": 0.731,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-10-17T20:04:48.897Z",
+        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
     "signup_phone_auth": {
@@ -139,7 +141,7 @@
           }
         ],
         "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다",
-        "last_attempt_at": "2026-10-16T20:28:45.776Z",
+        "last_attempt_at": "2026-10-17T20:04:48.897Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -149,7 +151,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -178,7 +180,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

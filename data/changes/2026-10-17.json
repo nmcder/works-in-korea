@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T20:04:48.897Z",
+  "changes": [
+    {
+      "service_id": "kakaobank",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-10-17T20:04:48.897Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

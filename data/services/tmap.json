@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 4516,
+            "elapsed_ms": 4444,
             "body_sha256": "94a69ae39fcd174422a9adafa3730d054cf44923fbe4978a221db392a5ebf533",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-04T20:51:00.140Z",
+            "at": "2026-10-17T20:04:48.897Z",
             "note": null
           },
           "us·California": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -167,7 +167,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-10-16T20:28:45.776Z",
+      "measured_at": "2026-10-17T20:04:48.897Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
