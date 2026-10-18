@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.ktmmobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 5127,
-            "body_sha256": "4a75671922e0c70e76d199a6bc3ff4269c5908ed7ced57fadc3ca6dba73591ae",
+            "elapsed_ms": 4500,
+            "body_sha256": "c637dc8e300cfb6ad4edae3da327891a71835de33d912c531e8368fd2493f8af",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-15T20:55:03.135Z",
+            "at": "2026-10-18T20:04:19.045Z",
             "note": null
           },
           "us·Virginia": {
@@ -103,7 +103,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -150,7 +150,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -179,7 +179,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -203,7 +203,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -228,7 +228,7 @@
           {
             "url": "https://www.ktmmobile.com/cs/csNoticeList.do",
             "status": 200,
-            "chars": 3242
+            "chars": 3254
           }
         ],
         "content_sha256": "e7221b6f0a85faf8d78451cc4f248781a973198b74ac3a3f1b2c3f25f1258ed0",
@@ -243,7 +243,8 @@
           "strong_markers": [],
           "latin_ratio": 0.138,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

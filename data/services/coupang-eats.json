@@ -19,39 +19,35 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": "ok",
+      "measured_at": "2026-10-18T20:04:19.045Z",
+      "first_seen_at": "2026-10-18T20:04:19.045Z",
+      "last_changed_at": "2026-10-18T20:04:19.045Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": 403,
+            "http_status": 200,
             "final_url": "https://www.coupangeats.com/",
             "redirected": false,
-            "elapsed_ms": 2712,
-            "body_sha256": "51f1f5b921f6b38f58ce24c70033122ef73de4206de6a3c03c3fc7d03cdc97a0",
-            "content_type": "text/html",
+            "elapsed_ms": 5355,
+            "body_sha256": "7fde7530c08746c7cbfa6167be301e7915d44903c70a21f49840208500fc810f",
+            "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
-            "ambiguous_deny_markers": [
-              "access denied"
-            ]
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다.",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
-            "value": "unknown",
-            "at": "2026-08-16T18:23:49.790Z",
-            "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+            "value": "ok",
+            "at": "2026-10-18T20:04:19.045Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-10-17T20:04:48.897Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -90,7 +86,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-17T20:04:48.897Z",
+      "measured_at": "2026-10-18T20:04:19.045Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -115,25 +111,30 @@
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T05:38:47.932Z",
-      "last_changed_at": "2026-08-15T05:38:47.932Z",
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-10-18T20:04:19.045Z",
+      "first_seen_at": "2026-10-18T20:04:19.045Z",
+      "last_changed_at": "2026-10-18T20:04:19.045Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://www.coupangeats.com",
-            "status": 403,
-            "scanned": false,
-            "reason": "http_status=403"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-10-17T20:04:48.897Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {
@@ -146,8 +147,8 @@
       "evidence": {
         "not_measured": "고객지원 페이지를 찾지 못함",
         "hint": "hints.support_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-10-17T20:04:48.897Z",
-        "last_attempt_failed": "고객지원 페이지를 찾지 못함"
+        "last_attempt_at": "2026-10-18T20:04:19.045Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "foreign_card": {
