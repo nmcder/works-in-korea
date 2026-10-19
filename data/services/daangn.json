@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.daangn.com/kr/",
             "redirected": true,
-            "elapsed_ms": 6072,
-            "body_sha256": "0dd7a2b574218ca3a996a7ed544a70aac5a7f885cdbda4c174744149ae618db5",
+            "elapsed_ms": 3558,
+            "body_sha256": "72d74e712833f47d1daff70a3a8e8ef3aa4c899a1c79edf5662523e48f761cb6",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-17T20:04:48.897Z",
+            "at": "2026-10-19T21:58:45.325Z",
             "note": null
           },
           "us·California": {
@@ -91,7 +91,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -143,7 +143,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -172,7 +172,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.sk7mobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 3970,
-            "body_sha256": "d41d711b3d6d63bfca2df1eab66aa891c83fb8bb5a324071b8b3d11aed21946f",
+            "elapsed_ms": 4665,
+            "body_sha256": "f2e9ddb7e2772e710a8df0793586d8b1b287a872e9bea83db0426cfce27dd876",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-17T20:04:48.897Z",
+            "at": "2026-10-19T21:58:45.325Z",
             "note": null
           },
           "us·California": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -147,7 +147,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-09-08T20:41:57.323Z",
       "last_changed_at": "2026-09-08T20:41:57.323Z",
       "method": "auto:payment_gate",
@@ -190,7 +190,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T22:58:13.388Z",
       "last_changed_at": "2026-08-15T22:58:13.388Z",
       "method": "auto:support_en",
@@ -200,7 +200,7 @@
           {
             "url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
             "status": 200,
-            "chars": 4398
+            "chars": 4411
           },
           {
             "url": "https://www.sk7mobile.com",
@@ -210,20 +210,20 @@
           {
             "url": "https://www.sk7mobile.com/shop/cmmn/inquiryIntro.do?refer=mognb",
             "status": 200,
-            "chars": 3532
+            "chars": 3545
           },
           {
             "url": "https://www.sk7mobile.com/util/support/deviceChange.do?refer=mognb",
             "status": 200,
-            "chars": 4398
+            "chars": 4411
           }
         ],
-        "content_sha256": "50dbbc43f61683ea25e50f78ae924100ec30255b6d668640647ddc28c7c87427",
+        "content_sha256": "dbbd2dff01deb0d7bbd98ffc2169e87ac371094d32444518bdf54316cab0c3e7",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "English Customer Service : 1599-0563 (Toll), Operating Hours : 09:00 ~ 18:00 (MON ~ FRI) (Lunch Break : 12:00 ~ 13:00)",
-          "reason": "페이지에 'English Customer Service'라는 명칭과 전용 전화번호, 운영시간이 명시되어 있어 영어로 문의할 수 있는 채널이 존재함을 확인할 수 있습니다."
+          "reason": "페이지에 영어 고객센터 전화번호와 운영시간이 명시되어 있어 영문 문의가 가능함을 확인할 수 있다."
         },
         "heuristic": {
           "value": "unknown",

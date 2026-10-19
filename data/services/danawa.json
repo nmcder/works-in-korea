@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.danawa.com/",
             "redirected": false,
-            "elapsed_ms": 5809,
-            "body_sha256": "bdba659c74d4d853b568fa545870a502a1f10003c7d8dfeb058ef3ff10823913",
+            "elapsed_ms": 4314,
+            "body_sha256": "928fc73c16b342a1b56877da15fd0a673635b2e065366e1abb8c048f4fb47021",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-17T20:04:48.897Z",
+            "at": "2026-10-19T21:58:45.325Z",
             "note": null
           },
           "us·California": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -140,14 +140,12 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [
-          "naverpay"
-        ],
+        "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-18T20:04:19.045Z",
-      "first_seen_at": "2026-10-18T20:04:19.045Z",
-      "last_changed_at": "2026-10-18T20:04:19.045Z",
+      "measured_at": "2026-10-19T21:58:45.325Z",
+      "first_seen_at": "2026-10-19T21:58:45.325Z",
+      "last_changed_at": "2026-10-19T21:58:45.325Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -158,14 +156,7 @@
             "scanned": true
           }
         ],
-        "detected": [
-          {
-            "id": "naverpay",
-            "name": "네이버페이",
-            "matched": "네이버페이",
-            "via": "text"
-          }
-        ],
+        "detected": [],
         "three_ds_matches": {
           "url": [],
           "text": []
