@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://map.kakao.com/",
             "redirected": false,
-            "elapsed_ms": 3364,
-            "body_sha256": "749ef73b89a0df3b11c67dd4a4a049af34e07efcf2bc8ef0c4b008dba7c782d3",
+            "elapsed_ms": 3461,
+            "body_sha256": "b5f9ea09e600d76e9d1078e20a454b94b7393ba67045d819d1f98e4cde53c447",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -79,7 +79,7 @@
           },
           "us·Texas": {
             "value": "ok",
-            "at": "2026-10-08T22:53:10.733Z",
+            "at": "2026-10-20T21:13:46.894Z",
             "note": null
           }
         }
@@ -115,7 +115,7 @@
         "latin_char_ratio": 0.024,
         "hangul_char_ratio": 0.671,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
-        "last_attempt_at": "2026-10-19T21:58:45.325Z",
+        "last_attempt_at": "2026-10-20T21:13:46.894Z",
         "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
@@ -139,7 +139,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

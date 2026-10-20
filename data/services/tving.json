@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "blocked",
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-10-15T20:55:03.135Z",
       "last_changed_at": "2026-10-15T20:55:03.135Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tving.com/",
             "redirected": false,
-            "elapsed_ms": 2832,
+            "elapsed_ms": 3361,
             "body_sha256": "e125fe45e0cadd3fe0341dbd628d4f7b027b7c3f667839fae1cbef36395ed60d",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [
@@ -80,9 +80,9 @@
             "note": "본문이 지역(국가) 제한을 명시함"
           },
           "us·Texas": {
-            "value": "ok",
-            "at": "2026-10-08T22:53:10.733Z",
-            "note": null
+            "value": "blocked",
+            "at": "2026-10-20T21:13:46.894Z",
+            "note": "본문이 지역(국가) 제한을 명시함"
           }
         }
       }
@@ -123,7 +123,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -145,7 +145,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-19T21:58:45.325Z",
+      "measured_at": "2026-10-20T21:13:46.894Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
