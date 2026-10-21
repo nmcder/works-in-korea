@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-20T21:13:46.894Z",
+      "measured_at": "2026-10-21T21:14:07.515Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wirebarley.com/en",
             "redirected": true,
-            "elapsed_ms": 2911,
+            "elapsed_ms": 3891,
             "body_sha256": "01510c97d2324b756bd0e574a2f850d4df3c1b32cfc6be736cc2c19a1999d8f4",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -64,7 +64,7 @@
           },
           "us·Washington": {
             "value": "ok",
-            "at": "2026-10-06T22:18:22.468Z",
+            "at": "2026-10-21T21:14:07.515Z",
             "note": null
           },
           "us·Illinois": {
@@ -98,7 +98,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-10-20T21:13:46.894Z",
+      "measured_at": "2026-10-21T21:14:07.515Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -165,7 +165,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-20T21:13:46.894Z",
+      "measured_at": "2026-10-21T21:14:07.515Z",
       "first_seen_at": "2026-08-16T00:32:39.941Z",
       "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
@@ -194,7 +194,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-20T21:13:46.894Z",
+      "measured_at": "2026-10-21T21:14:07.515Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -218,7 +218,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-10-20T21:13:46.894Z",
+      "measured_at": "2026-10-21T21:14:07.515Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -228,7 +228,7 @@
           {
             "url": "https://help.wirebarley.com/ko/support/home",
             "status": 200,
-            "chars": 612
+            "chars": 616
           },
           {
             "url": "https://www.wirebarley.com",
@@ -246,12 +246,12 @@
             "chars": 2677
           }
         ],
-        "content_sha256": "95c3fe4fb8270f23812cc2554fcb5fe226a006c5286b66bcbc0ebb459c327ff5",
+        "content_sha256": "1fbb2b943cf67798e480c69e171ee0551ea6eb46bd8bbac343cc9aae260934f8",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "Customer Service also available in 6 languages Supported languages Korean, English, Chinese, Vietnamese, Thai, Filipino",
-          "reason": "페이지에 고객서비스가 영어를 포함한 6개 언어로 지원된다고 명시되어 있어 영문 상담이 가능함을 알 수 있습니다."
+          "quoted_evidence": "Service available in 11 languages Customer Service also available in 6 languages Supported languages Korean, English, Chinese, Vietnamese, Thai, Filipino Contact us",
+          "reason": "고객 서비스가 영어를 포함한 6개 언어로 제공된다고 명시되어 있어 영어 상담이 가능함을 확인할 수 있습니다."
         },
         "heuristic": {
           "value": "unknown",
