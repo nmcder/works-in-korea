@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://mfront.homeplus.co.kr/",
             "redirected": true,
-            "elapsed_ms": 4428,
-            "body_sha256": "e0a071fc01e7718d4d6a27d9936089eb41cf28acf10a6020e00a7407caeb1ad6",
+            "elapsed_ms": 4264,
+            "body_sha256": "b6b2d08e5b84516391c9f619e9ff6cdc7d8c83efd58531582b5d135134a7988e",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-18T20:04:19.045Z",
+            "at": "2026-10-22T21:23:22.230Z",
             "note": null
           },
           "us·Virginia": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -132,7 +132,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -185,7 +185,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-08-23T18:23:56.526Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -195,7 +195,7 @@
           {
             "url": "https://mfront.homeplus.co.kr/cs?homeType=MART",
             "status": 200,
-            "chars": 1246
+            "chars": 1204
           },
           {
             "url": "https://front.homeplus.co.kr",
@@ -203,22 +203,19 @@
             "chars": 23
           }
         ],
-        "content_sha256": "f9134f546ee83d474859252bcde4955a365313e8ce99e42477b3b00f098640df",
+        "content_sha256": "061e442fa6c3a13b8118082e17622f805fa1a30893ce020b6add7a70d058a5d2",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "고객센터1577-3355업무시간 : 10시 ~ 20시(명절당일 휴무)Email :onlinemart@homeplus.co.kr",
-          "reason": "고객센터 전화/이메일 채널만 명시되어 있고 영어 지원에 대한 언급이 없으며, 전반적으로 한국어 전용 고객센터로 판단됨."
+          "quoted_evidence": "고객센터 Email :onlinemart@homeplus.co.kr / 익스프레스 전용 고객센터 1844-1472",
+          "reason": "고객센터 이메일과 전화번호가 제공되나 모두 한국어 기반 채널로 보이며 영문 지원에 대한 명시가 없습니다."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.188,
+          "latin_ratio": 0.194,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-10-21T21:14:07.515Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {

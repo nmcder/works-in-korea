@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 3838,
+            "elapsed_ms": 3927,
             "body_sha256": "b60c99e26ff3f10588e287119f4369edcdbd593342fab9a8eff494377c0848a3",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-18T20:04:19.045Z",
+            "at": "2026-10-22T21:23:22.230Z",
             "note": null
           },
           "us·Virginia": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-21T21:14:07.515Z",
+      "measured_at": "2026-10-22T21:23:22.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -209,7 +209,7 @@
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
         "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-10-21T21:14:07.515Z",
+        "last_attempt_at": "2026-10-22T21:23:22.230Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
