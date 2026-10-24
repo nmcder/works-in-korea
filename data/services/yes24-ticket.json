@@ -19,39 +19,40 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-16T18:23:49.790Z",
-      "last_changed_at": "2026-08-16T18:23:49.790Z",
+      "value": "ok",
+      "measured_at": "2026-10-24T20:11:18.673Z",
+      "first_seen_at": "2026-10-24T20:11:18.673Z",
+      "last_changed_at": "2026-10-24T20:11:18.673Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://cdn-botmanager.stclab.com/yes24/deny/index.html?serverUrl=https%3A%2F%2Fbotmanager.stclab.com%2Fapi%2Fv1%2Fmacro&tenantId=TN250314-8E8F6C3B&domainName=ticket.yes24.com&detectionType=72&sessionId=msw56de6-q3iubllywsvkhox10uf&agentTag=BM-DotNet-agent-1.2.1&loginId=&redirectUrl=http%3A%2F%2Fticket.yes24.com%2FNew%2FMain.aspx",
+            "final_url": "http://tkfile.yes24.com/images/notice/Notice_ticket.html?2026081602",
             "redirected": true,
-            "elapsed_ms": 2703,
-            "body_sha256": "6db151be2b56a0738fe0217b92b0d994529ce51ca271030d0c0cb102dd93a39c",
+            "elapsed_ms": 4853,
+            "body_sha256": "d69dfef645131688c1c574c2451f1fbb858d5503d88affab6b10b30640084b77",
             "content_type": "text/html",
             "geo_block_markers": [],
-            "ambiguous_deny_markers": [
-              "비정상적인 접근"
-            ]
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다.",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "요청이 거부됐으나 사유가 지역 차단인지 봇 차단(UA/데이터센터 IP)인지 구분할 수 없다. 해외 차단으로 단정하지 않는다 — 실제 브라우저 접속 결과 제보로 확정할 항목이다."
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-10-24T20:11:18.673Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-10-22T21:23:22.230Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -78,7 +79,9 @@
         "accept_language_responsive": false,
         "latin_char_ratio": 0.494,
         "hangul_char_ratio": 0.305,
-        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
+        "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다.",
+        "last_attempt_at": "2026-10-24T20:11:18.673Z",
+        "last_attempt_failed": "언어 전환 수단을 찾지 못했다"
       }
     },
     "signup_phone_auth": {
@@ -101,7 +104,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -123,7 +126,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

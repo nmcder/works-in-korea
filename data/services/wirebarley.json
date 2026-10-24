@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wirebarley.com/en",
             "redirected": true,
-            "elapsed_ms": 2503,
+            "elapsed_ms": 2644,
             "body_sha256": "bd16ca1d9d5842794dee3dbdcb05893b94582e67c1ee6ef278dbe41e6efac41b",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-19T21:58:45.325Z",
+            "at": "2026-10-24T20:11:18.673Z",
             "note": null
           },
           "us·California": {
@@ -98,7 +98,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -165,7 +165,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-16T00:32:39.941Z",
       "last_changed_at": "2026-08-16T00:32:39.941Z",
       "method": "auto:app_availability",
@@ -194,7 +194,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -218,7 +218,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -258,7 +258,8 @@
           "strong_markers": [],
           "latin_ratio": 0.747,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        }
+        },
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
       }
     },
     "foreign_card": {

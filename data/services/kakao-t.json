@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.kakaomobility.com/",
             "redirected": false,
-            "elapsed_ms": 3256,
-            "body_sha256": "1434a8cced4b2cd197cb0946e03aef711452e72bb91d02702431e1c10d49cacd",
+            "elapsed_ms": 3680,
+            "body_sha256": "7830266c11f8299d38cf68005bd891257bbaef8a73f1c37f8a8542ec0d422ee8",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-19T21:58:45.325Z",
+            "at": "2026-10-24T20:11:18.673Z",
             "note": null
           },
           "us·California": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-22T21:23:22.230Z",
+      "measured_at": "2026-10-24T20:11:18.673Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
