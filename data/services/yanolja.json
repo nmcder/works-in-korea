@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-25T20:21:50.936Z",
+      "measured_at": "2026-10-26T22:21:00.205Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://nol.yanolja.com/",
             "redirected": true,
-            "elapsed_ms": 3930,
-            "body_sha256": "fb2009366c0ab151c2903625cddf5a88b9f60d7156c4ec915cd650500e725193",
+            "elapsed_ms": 4070,
+            "body_sha256": "124df95a4f853e3311f447d77223c64988604759f68943765eaee820498ff9b9",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-09-27T20:51:07.494Z",
+            "at": "2026-10-26T22:21:00.205Z",
             "note": null
           },
           "us·Wyoming": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-25T20:21:50.936Z",
+      "measured_at": "2026-10-26T22:21:00.205Z",
       "first_seen_at": "2026-08-17T01:05:31.018Z",
       "last_changed_at": "2026-08-17T01:05:31.018Z",
       "method": "auto:app_availability",
@@ -150,7 +150,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-25T20:21:50.936Z",
+      "measured_at": "2026-10-26T22:21:00.205Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
