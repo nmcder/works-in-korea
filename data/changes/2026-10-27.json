@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T21:48:10.839Z",
+  "changes": [
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko",
+        "zh"
+      ],
+      "to": [
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-10-27T21:48:10.839Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "seoul-global",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "id",
+        "ja",
+        "km",
+        "ko",
+        "mn",
+        "ru",
+        "th",
+        "vi",
+        "zh"
+      ],
+      "to": [
+        "en",
+        "id",
+        "ja",
+        "ko",
+        "mn",
+        "ru",
+        "th",
+        "vi",
+        "zh"
+      ],
+      "changed_at": "2026-10-27T21:48:10.839Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
