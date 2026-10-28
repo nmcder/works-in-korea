@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.hanpass.com/en",
             "redirected": true,
-            "elapsed_ms": 3561,
-            "body_sha256": "bac5f6a9ee758c1e972d764a06373d3bed590d85481b375ff3342259e26bfc86",
+            "elapsed_ms": 3341,
+            "body_sha256": "8b06ff586d88de5589c7c633d91e4e82ddf939658c31ad0cdb5e835ade8762ee",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-10-26T22:21:00.205Z",
+            "at": "2026-10-28T22:09:31.770Z",
             "note": null
           },
           "us·Wyoming": {
@@ -106,7 +106,7 @@
         "vi",
         "zh"
       ],
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-09-10T20:24:12.052Z",
       "last_changed_at": "2026-09-10T20:24:12.052Z",
       "method": "auto:i18n_ui",
@@ -185,7 +185,7 @@
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.671,
+        "latin_char_ratio": 0.67,
         "hangul_char_ratio": 0.096,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
@@ -210,7 +210,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -239,7 +239,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.sac.or.kr/site/main/home",
             "redirected": true,
-            "elapsed_ms": 5210,
-            "body_sha256": "317c1204e04cc63f76c452632b7e675b6520ca0244632ae7eeb3c02de4a65c93",
+            "elapsed_ms": 4309,
+            "body_sha256": "7ba45039d0da407926d8a2ce8199765407dd09941d87c43e3374bc22da12353b",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-10-26T22:21:00.205Z",
+            "at": "2026-10-28T22:09:31.770Z",
             "note": null
           },
           "us·Wyoming": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -119,8 +119,8 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.038,
-        "hangul_char_ratio": 0.55,
+        "latin_char_ratio": 0.037,
+        "hangul_char_ratio": 0.549,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -144,7 +144,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -173,7 +173,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-27T21:48:10.839Z",
+      "measured_at": "2026-10-28T22:09:31.770Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
