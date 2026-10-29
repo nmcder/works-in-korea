@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-28T22:09:31.770Z",
+      "measured_at": "2026-10-29T22:25:03.848Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.payco.com/",
             "redirected": false,
-            "elapsed_ms": 3232,
+            "elapsed_ms": 3503,
             "body_sha256": "4249d876807d7f89b591c9816e8ccc0a1124536932b7f5fb87c98b6e772c36ee",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-24T20:11:18.673Z",
+            "at": "2026-10-29T22:25:03.848Z",
             "note": null
           },
           "us·California": {
@@ -133,7 +133,7 @@
           }
         ],
         "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-10-28T22:09:31.770Z",
+        "last_attempt_at": "2026-10-29T22:25:03.848Z",
         "last_attempt_failed": "robots: robots-unavailable(robots.txt 응답 599)"
       }
     },
@@ -143,7 +143,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-28T22:09:31.770Z",
+      "measured_at": "2026-10-29T22:25:03.848Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -174,7 +174,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-28T22:09:31.770Z",
+      "measured_at": "2026-10-29T22:25:03.848Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

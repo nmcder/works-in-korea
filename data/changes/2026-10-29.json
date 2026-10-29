@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T22:25:03.848Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-10-29T22:25:03.848Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "hanatour",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-10-29T22:25:03.848Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-tour",
+      "signal": "payment_gate",
+      "from": null,
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-10-29T22:25:03.848Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "safedriving",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ko",
+        "mn",
+        "vi",
+        "zh"
+      ],
+      "changed_at": "2026-10-29T22:25:03.848Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

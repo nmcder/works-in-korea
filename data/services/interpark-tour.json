@@ -19,36 +19,40 @@
   },
   "signals": {
     "overseas_access": {
-      "value": "unknown",
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:48:11.388Z",
-      "last_changed_at": null,
+      "value": "ok",
+      "measured_at": "2026-10-29T22:25:03.848Z",
+      "first_seen_at": "2026-10-29T22:25:03.848Z",
+      "last_changed_at": "2026-10-29T22:25:03.848Z",
       "method": "auto:overseas_access",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
         "vantage_points": [
           {
             "id": "github-actions",
             "country": "us",
-            "http_status": null,
-            "final_url": null,
-            "redirected": false,
-            "elapsed_ms": 622,
-            "body_sha256": null,
-            "content_type": null,
-            "not_measured": "robots: Disallow: /"
+            "http_status": 200,
+            "final_url": "https://nol.yanolja.com/",
+            "redirected": true,
+            "elapsed_ms": 4242,
+            "body_sha256": "4a2d7a79ed3b270f1e5eae266523016374b49850ca1ab9078d066ced7403f552",
+            "content_type": "text/html; charset=utf-8",
+            "geo_block_markers": [],
+            "ambiguous_deny_markers": []
           }
         ],
-        "note": "robots: Disallow: /",
+        "note": null,
         "by_vantage": {
           "us·Arizona": {
             "value": "unknown",
             "at": "2026-08-16T18:23:49.790Z",
             "note": "robots: Disallow: /"
+          },
+          "us·Virginia": {
+            "value": "ok",
+            "at": "2026-10-29T22:25:03.848Z",
+            "note": null
           }
-        },
-        "last_attempt_at": "2026-10-28T22:09:31.770Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -90,7 +94,7 @@
         "android_listed": false,
         "countries": null
       },
-      "measured_at": "2026-10-28T22:09:31.770Z",
+      "measured_at": "2026-10-29T22:25:03.848Z",
       "first_seen_at": "2026-09-08T20:41:57.323Z",
       "last_changed_at": "2026-09-08T20:41:57.323Z",
       "method": "auto:app_availability",
@@ -115,25 +119,30 @@
       }
     },
     "payment_gate": {
-      "value": null,
-      "measured_at": "2026-08-16T18:23:49.790Z",
-      "first_seen_at": "2026-08-15T02:51:04.464Z",
-      "last_changed_at": null,
+      "value": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "measured_at": "2026-10-29T22:25:03.848Z",
+      "first_seen_at": "2026-10-29T22:25:03.848Z",
+      "last_changed_at": "2026-10-29T22:25:03.848Z",
       "method": "auto:payment_gate",
-      "confidence": "unknown",
+      "confidence": "auto",
       "evidence": {
-        "not_measured": "정상 응답을 받은 페이지가 없어 스캔하지 못함",
         "scanned": [
           {
             "url": "https://tour.interpark.com",
-            "status": null,
-            "scanned": false,
-            "reason": "robots: Disallow: /"
+            "status": 200,
+            "scanned": true
           }
         ],
-        "note": "차단·오류 페이지는 근거로 쓰지 않는다. \"PG 없음\"이 아니라 \"측정 못 함\"이다.",
-        "last_attempt_at": "2026-10-28T22:09:31.770Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "detected": [],
+        "three_ds_matches": {
+          "url": [],
+          "text": []
+        },
+        "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
+        "payment_attempt": "never"
       }
     },
     "support_en": {
