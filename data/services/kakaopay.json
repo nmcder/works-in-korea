@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kakaopay.com/",
             "redirected": false,
-            "elapsed_ms": 5660,
+            "elapsed_ms": 4038,
             "body_sha256": "98bfb8ff00dfa36cd506944ff01f22a623312cca39daf74b44408e4ece3607b5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-25T20:21:50.936Z",
+            "at": "2026-10-30T21:55:27.069Z",
             "note": null
           },
           "us·Virginia": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -132,7 +132,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -163,7 +163,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

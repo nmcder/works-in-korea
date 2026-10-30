@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://watcha.com/ko/browse/all",
             "redirected": true,
-            "elapsed_ms": 3896,
+            "elapsed_ms": 3437,
             "body_sha256": "a1bd87096d1237f58b3ab21fc3e19f4de990ca5164547379122396cf16102fec",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-25T20:21:50.936Z",
+            "at": "2026-10-30T21:55:27.069Z",
             "note": null
           },
           "us·Virginia": {
@@ -91,7 +91,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -137,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -159,7 +159,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

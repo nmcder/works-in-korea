@@ -53,7 +53,7 @@
             "note": null
           }
         },
-        "last_attempt_at": "2026-10-29T22:25:03.848Z",
+        "last_attempt_at": "2026-10-30T21:55:27.069Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
@@ -62,7 +62,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -104,7 +104,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -126,7 +126,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-10-30T21:55:27.069Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
