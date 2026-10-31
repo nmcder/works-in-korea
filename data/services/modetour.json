@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-30T21:55:27.069Z",
+      "measured_at": "2026-10-31T20:57:32.360Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 4649,
-            "body_sha256": "f72366dbf5965dfd42ed433c689f295e6d05a2804d6e5a7999409f05c083a8ea",
+            "elapsed_ms": 13499,
+            "body_sha256": "b68d3048acce1afafcccdea6f3e72cf0c2fbc320a43b359d1289907237d0a37e",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-09-11T20:25:10.266Z",
+            "at": "2026-10-31T20:57:32.360Z",
             "note": null
           },
           "us·Washington": {
@@ -121,7 +121,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-10-30T21:55:27.069Z",
+      "measured_at": "2026-10-31T20:57:32.360Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -143,7 +143,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-10-30T21:55:27.069Z",
+      "measured_at": "2026-10-31T20:57:32.360Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
