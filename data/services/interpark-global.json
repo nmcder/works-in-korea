@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T02:50:45.613Z",
       "last_changed_at": "2026-08-15T02:50:45.613Z",
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://world.nol.com/",
             "redirected": false,
-            "elapsed_ms": 2218,
-            "body_sha256": "29576b20fc40b5c7c46adabdf6229a0d5acb0e1482ea767d9b8c950c6a3f1d24",
+            "elapsed_ms": 2068,
+            "body_sha256": "deed53b341bc988a2c383ac9d2b486155475f408d152f8b6e3ecdbc0db4c9eb5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-29T22:25:03.848Z",
+            "at": "2026-11-03T22:52:55.458Z",
             "note": null
           },
           "us·California": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-28T02:01:28.608Z",
       "last_changed_at": "2026-08-28T02:01:28.608Z",
       "method": "auto:i18n_ui",
@@ -104,7 +104,7 @@
             "https://world.nol.com/en/ticket",
             "https://world.nol.com/en/stay/accommodations",
             "https://world.nol.com/en/tna/categories/all/products",
-            "https://world.nol.com/en/regions/seoul/restaurants"
+            "https://world.nol.com/en/tna/categories/beauty"
           ]
         },
         "english_url_checks": [
@@ -119,7 +119,7 @@
             "ok": false
           }
         ],
-        "accept_language_responsive": false,
+        "accept_language_responsive": true,
         "latin_char_ratio": 0.713,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
@@ -127,7 +127,7 @@
     },
     "signup_phone_auth": {
       "value": "not_required",
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T04:28:31.541Z",
       "last_changed_at": "2026-08-15T04:28:31.541Z",
       "method": "auto:signup_phone_auth",
@@ -164,7 +164,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -193,7 +193,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -217,7 +217,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -227,20 +227,20 @@
           {
             "url": "https://world.nol.com/en/my-info/inquiries/new",
             "status": 200,
-            "chars": 836
+            "chars": 824
           },
           {
             "url": "https://world.nol.com",
             "status": 200,
-            "chars": 6568
+            "chars": 6567
           }
         ],
-        "content_sha256": "cb94e782356619ef0c0deb245d2e2a31a0cde4b4e13bdd094c0d6db106aca5bb",
+        "content_sha256": "edb473f2af1a40bfadd1caf1b59a5b300a4775b91506e96b3cb06f7a8f4d3e76",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "English My Account Tickets Hotels Tours & Activities Food & Attractions Pop-ups Travel Guides Customer Support Inquiry Type Select your category",
-          "reason": "영문 전용 페이지(world.nol.com/en)에서 Customer Support 문의 폼이 영어로 제공되며, 이는 영어로 문의 가능한 창구임을 명시함."
+          "quoted_evidence": "English My Account Tickets Hotels Tours & Activities ... Customer Support Inquiry Type ... Support Hours: 09:00–18:00 (KST)",
+          "reason": "영문 사이트(world.nol.com/en) 내 Customer Support 문의 폼이 영어로 제공되며, 해당 경로 전체가 영문 UI로 운영되어 영어 문의가 가능한 채널로 판단됨."
         },
         "heuristic": {
           "value": "unknown",

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://mfront.homeplus.co.kr/",
             "redirected": true,
-            "elapsed_ms": 4808,
+            "elapsed_ms": 4769,
             "body_sha256": "a3b577253f8b2b2c30a3ee2654e0521ee93f6a6dbd0700e771e0ca8f2c0da3b9",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-29T22:25:03.848Z",
+            "at": "2026-11-03T22:52:55.458Z",
             "note": null
           },
           "us·California": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -132,7 +132,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -161,7 +161,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-03T00:28:30.015Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -185,7 +185,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-10-26T22:21:00.205Z",
+      "measured_at": "2026-11-03T22:52:55.458Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -195,7 +195,7 @@
           {
             "url": "https://mfront.homeplus.co.kr/cs?homeType=MART",
             "status": 200,
-            "chars": 1250
+            "chars": 1278
           },
           {
             "url": "https://front.homeplus.co.kr",
@@ -203,21 +203,19 @@
             "chars": 23
           }
         ],
-        "content_sha256": "df34a89b54d55f3dd8d2d3aa18418b6db1ea54cc8df2d9d187177fa1f618fcb1",
+        "content_sha256": "bb1e55dd4569f1189368a4e1cd38bb1bf796d66f70369711b51e5023a086f484",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
-          "quoted_evidence": "고객센터 이용안내 02-3459-8000 1:1 문의하기 고객센터 챗봇 이메일 문의 onlinemart@homeplus.co.kr",
-          "reason": "고객센터 채널(전화, 이메일, 챗봇)은 명시되어 있으나 모두 한국어 기반이며 영어 지원에 대한 언급이 전혀 없어 한국어 전용으로 판단됨."
+          "quoted_evidence": "고객센터02-3459-8000 Email :onlinemart@homeplus.co.kr",
+          "reason": "고객센터 채널(전화, 이메일, 챗봇 등)은 명시되어 있으나 모두 한국어 기반이며 영어 지원에 대한 언급이 전혀 없음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.204,
+          "latin_ratio": 0.2,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "last_attempt_at": "2026-11-03T00:28:30.015Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {
