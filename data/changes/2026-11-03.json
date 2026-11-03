@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T00:28:30.015Z",
+  "changes": [
+    {
+      "service_id": "interpark-ticket",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": true,
+        "android_listed": false,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-11-03T00:28:30.015Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "interpark-tour",
+      "signal": "app_availability",
+      "from": {
+        "ios_listed": true,
+        "android_listed": false,
+        "countries": null
+      },
+      "to": {
+        "ios_listed": false,
+        "android_listed": false,
+        "countries": null
+      },
+      "changed_at": "2026-11-03T00:28:30.015Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Iowa",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
