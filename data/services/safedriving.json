@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.safedriving.or.kr/",
             "redirected": false,
-            "elapsed_ms": 3503,
-            "body_sha256": "88083ea2a6073f158799af49a3f20c1231a7f07f343d274fc6d9b5ba605b7989",
+            "elapsed_ms": 3958,
+            "body_sha256": "294ff92552d4c268a1602d9b4b4480ece00f56004fbe7cf5e00cbd3055f4e0f2",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-10-28T22:09:31.770Z",
+            "at": "2026-11-06T22:41:59.230Z",
             "note": null
           },
           "us·Wyoming": {
@@ -88,14 +88,11 @@
     "i18n_ui": {
       "value": [
         "en",
-        "ko",
-        "mn",
-        "vi",
-        "zh"
+        "ko"
       ],
-      "measured_at": "2026-11-04T23:10:43.099Z",
-      "first_seen_at": "2026-10-29T22:25:03.848Z",
-      "last_changed_at": "2026-10-29T22:25:03.848Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
+      "first_seen_at": "2026-11-06T22:41:59.230Z",
+      "last_changed_at": "2026-11-06T22:41:59.230Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
@@ -114,7 +111,7 @@
             "ok": false
           }
         ],
-        "accept_language_responsive": false,
+        "accept_language_responsive": true,
         "latin_char_ratio": 0.091,
         "hangul_char_ratio": 0.591,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
@@ -140,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -162,7 +159,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -186,7 +183,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -196,7 +193,7 @@
           {
             "url": "https://www.safedriving.or.kr/main.do",
             "status": 200,
-            "chars": 2605
+            "chars": 2519
           },
           {
             "url": "https://www.safedriving.or.kr",
@@ -204,20 +201,19 @@
             "chars": 1082
           }
         ],
-        "content_sha256": "e7708a4e35b81bde57f1a6eea78af5f30f3281977900b4b4495ec2e16701b990",
+        "content_sha256": "5123991b1e2b39c980340ec5846e6a4c109f7d7a3fa2440ea2f398c43b92361d",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
           "quoted_evidence": "외국어 상담(채팅) 카카오톡 「한국도로교통공단 고객센터」채널",
-          "reason": "외국어 상담 채팅 채널이 명시되어 있어 영어 문의가 가능한 창구로 판단됨"
+          "reason": "외국어 상담 채팅 채널이 카카오톡으로 명시되어 있어 영어 문의가 가능한 지원 채널로 판단됨"
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
-          "latin_ratio": 0.066,
+          "latin_ratio": 0.067,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        }
       }
     },
     "foreign_card": {

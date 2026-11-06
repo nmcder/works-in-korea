@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://watcha.com/ko/browse/all",
             "redirected": true,
-            "elapsed_ms": 3624,
+            "elapsed_ms": 3374,
             "body_sha256": "309bd8190d6e4b7b3d82bf82c4473adda16d4aeac1fcb9fc45fb947a327c96a5",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-10-28T22:09:31.770Z",
+            "at": "2026-11-06T22:41:59.230Z",
             "note": null
           },
           "us·Wyoming": {
@@ -91,7 +91,7 @@
         "ja",
         "ko"
       ],
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -137,7 +137,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -159,7 +159,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-04T23:10:43.099Z",
+      "measured_at": "2026-11-06T22:41:59.230Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
