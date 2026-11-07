@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-06T22:41:59.230Z",
+      "measured_at": "2026-11-07T21:25:38.419Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://global.oliveyoung.com/",
             "redirected": false,
-            "elapsed_ms": 2650,
-            "body_sha256": "8d53f8e01d530ffce667f663ad89a600c61841fcae047c010886865d778287e7",
+            "elapsed_ms": 2685,
+            "body_sha256": "c35412648e7f043ee55e00628081a761698d17396e0d13a85a4c4be413d8b980",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-11-03T00:28:30.015Z",
+            "at": "2026-11-07T21:25:38.419Z",
             "note": null
           },
           "us·Texas": {
@@ -90,7 +90,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-06T22:41:59.230Z",
+      "measured_at": "2026-11-07T21:25:38.419Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -117,7 +117,7 @@
           }
         ],
         "accept_language_responsive": true,
-        "latin_char_ratio": 0.803,
+        "latin_char_ratio": 0.806,
         "hangul_char_ratio": 0,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
@@ -153,7 +153,7 @@
           }
         ],
         "detection_note": "DOM에서 본인인증 위젯 시그니처를 탐지한 결과다. 가입을 시도하지 않으므로 required/optional 구분은 \"대안 가입 경로가 함께 보이는가\"에 근거한 휴리스틱이며, 반증 제보로 정정 가능하다.",
-        "last_attempt_at": "2026-11-06T22:41:59.230Z",
+        "last_attempt_at": "2026-11-07T21:25:38.419Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -163,7 +163,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-06T22:41:59.230Z",
+      "measured_at": "2026-11-07T21:25:38.419Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -194,7 +194,7 @@
         ],
         "three_ds": null
       },
-      "measured_at": "2026-11-06T22:41:59.230Z",
+      "measured_at": "2026-11-07T21:25:38.419Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -225,7 +225,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-11-06T22:41:59.230Z",
+      "measured_at": "2026-11-07T21:25:38.419Z",
       "first_seen_at": "2026-08-15T23:32:04.858Z",
       "last_changed_at": "2026-08-15T23:32:04.858Z",
       "method": "auto:support_en",
@@ -243,22 +243,19 @@
             "chars": 8000
           }
         ],
-        "content_sha256": "a5cde51b8807293b6fd04c38914cb0b450d6ac1d95d24a9b785d1d1c21040480",
+        "content_sha256": "1bcbb4ddab70df25aec1a4a0c30a6b3be6129064549b9f2f3dc6185ad950213f",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "yes",
-          "quoted_evidence": "global-customerservice@oliveyoung.com ... English (United States)",
-          "reason": "고객센터 페이지에 영어 언어 옵션(English)과 글로벌 고객지원 이메일이 명시되어 있어 영어로 문의 가능한 채널이 존재함을 알 수 있습니다."
+          "quoted_evidence": "global-customerservice@oliveyoung.com 한국어 العربية Deutsch English (United States)",
+          "reason": "고객센터 페이지에 이메일 주소와 함께 English 등 다국어 지원이 명시되어 있어 영어로 문의 가능한 채널이 있음을 확인할 수 있습니다."
         },
         "heuristic": {
-          "value": "yes",
-          "strong_markers": [
-            "english support"
-          ],
-          "latin_ratio": 0.743,
-          "reason": "영문 지원을 명시하는 문구를 찾음"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+          "value": "unknown",
+          "strong_markers": [],
+          "latin_ratio": 0.751,
+          "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
+        }
       }
     },
     "foreign_card": {
