@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T21:39:39.217Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-11-08T21:39:39.217Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Texas",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "gmarket",
+      "signal": "signup_phone_auth",
+      "from": "not_required",
+      "to": "required",
+      "changed_at": "2026-11-08T21:39:39.217Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Texas",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-07T21:25:38.419Z",
+      "measured_at": "2026-11-08T21:39:39.217Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.wooribank.com/",
             "redirected": false,
-            "elapsed_ms": 3477,
+            "elapsed_ms": 3408,
             "body_sha256": "be6d17215f51aa7643d37e3e2c49a260779a56af6588224d3d699de269eade54",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Texas": {
             "value": "ok",
-            "at": "2026-11-04T23:10:43.099Z",
+            "at": "2026-11-08T21:39:39.217Z",
             "note": null
           },
           "us·Illinois": {
@@ -122,7 +122,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-07T21:25:38.419Z",
+      "measured_at": "2026-11-08T21:39:39.217Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -151,7 +151,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-07T21:25:38.419Z",
+      "measured_at": "2026-11-08T21:39:39.217Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
