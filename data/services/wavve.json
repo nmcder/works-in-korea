@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-12T00:00:44.056Z",
+      "measured_at": "2026-11-12T23:11:14.748Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.wavve.com/",
             "redirected": false,
-            "elapsed_ms": 2243,
-            "body_sha256": "9d02303fe4287037ab8e1147060f1fbbd1187509a0bd0b00465a3cb9dcfb5a68",
+            "elapsed_ms": 2145,
+            "body_sha256": "1be17f8f657f745d18d21082e49a4f46d60eda037ce82ae4a7d8e906818d6611",
             "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-11-03T22:52:55.458Z",
+            "at": "2026-11-12T23:11:14.748Z",
             "note": null
           },
           "us·California": {
@@ -126,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-12T00:00:44.056Z",
+      "measured_at": "2026-11-12T23:11:14.748Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -155,7 +155,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-12T00:00:44.056Z",
+      "measured_at": "2026-11-12T23:11:14.748Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
