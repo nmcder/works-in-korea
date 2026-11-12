@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kbanknow.com/web/web-home/home/main",
             "redirected": true,
-            "elapsed_ms": 4671,
+            "elapsed_ms": 4640,
             "body_sha256": "0d1a8e30262e1eeb6f3b0e3835955690e33666033d95e6d642363c3aedaebe4b",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -81,6 +81,11 @@
             "value": "ok",
             "at": "2026-11-08T21:39:39.217Z",
             "note": null
+          },
+          "us·Georgia": {
+            "value": "ok",
+            "at": "2026-11-12T00:00:44.056Z",
+            "note": null
           }
         }
       }
@@ -90,7 +95,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:i18n_ui",
@@ -139,7 +144,7 @@
           }
         ],
         "hint": "가입 화면으로 직접 들어가는 주소를 hints.signup_url 에 넣으면 측정된다",
-        "last_attempt_at": "2026-11-10T22:48:50.100Z",
+        "last_attempt_at": "2026-11-12T00:00:44.056Z",
         "last_attempt_failed": "가입 절차가 아니라 로그인 화면으로 보임 — 가입 단계의 본인인증 여부는 판정하지 않음"
       }
     },
@@ -149,7 +154,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -178,7 +183,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

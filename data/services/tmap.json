@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.tmapmobility.com/",
             "redirected": true,
-            "elapsed_ms": 4056,
+            "elapsed_ms": 3568,
             "body_sha256": "cb8bcf246b383b3abbcad320821be9597ee1ac6e03189926740ccff44cd94784",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -81,6 +81,11 @@
             "value": "ok",
             "at": "2026-11-08T21:39:39.217Z",
             "note": null
+          },
+          "us·Georgia": {
+            "value": "ok",
+            "at": "2026-11-12T00:00:44.056Z",
+            "note": null
           }
         }
       }
@@ -121,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -143,7 +148,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-10T22:48:50.100Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -167,7 +172,7 @@
     },
     "support_en": {
       "value": "no",
-      "measured_at": "2026-11-08T21:39:39.217Z",
+      "measured_at": "2026-11-12T00:00:44.056Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
@@ -182,7 +187,7 @@
           {
             "url": "https://www.tmap.co.kr",
             "status": 200,
-            "chars": 2243
+            "chars": 2235
           },
           {
             "url": "https://www.tmap.co.kr/tmap2/mobile/tmap.jsp?scheme=tmap&amp;host=cs?pageid=qna",
@@ -195,22 +200,19 @@
             "chars": 799
           }
         ],
-        "content_sha256": "e29fadafd7b39009f9f13257b24deb86b65d21b4455208aced15e4ea79148d70",
+        "content_sha256": "25e9866b99833b94bce008dab7a9db9313d8c64e520c15eebd3a5cd330c06f4c",
         "method_detail": "llm:claude-sonnet-5",
         "llm": {
           "value": "no",
           "quoted_evidence": "고객센터 : TMAP 실행 > 마이 > 고객센터 > 1:1문의 (새창)",
-          "reason": "고객센터는 앱 내 1:1문의로만 안내되어 있고 영어 지원 채널에 대한 언급이 없으며, 한국어 전용 서비스로 보임."
+          "reason": "고객지원 채널이 앱 내 1:1문의로 안내되어 있을 뿐 영어 지원 여부에 대한 언급이 없고, 한국어 기반 서비스임이 전반적으로 명확하여 영문 전용 창구는 확인되지 않음."
         },
         "heuristic": {
           "value": "unknown",
           "strong_markers": [],
           "latin_ratio": 0.172,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
-        },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
-        "last_attempt_at": "2026-11-10T22:48:50.100Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "foreign_card": {
