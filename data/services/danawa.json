@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-12T23:11:14.748Z",
+      "measured_at": "2026-11-13T23:13:32.974Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.danawa.com/",
             "redirected": false,
-            "elapsed_ms": 4206,
-            "body_sha256": "bc7c8f4fc2e0c1b57c97131f56a7f68e9c323e35a6b3a82f2cd9101650c6f139",
+            "elapsed_ms": 4277,
+            "body_sha256": "727f7382029eb95436aea0ca6a626fa6812b0b6d5ad5f72d143b2bc0b1d1e804",
             "content_type": "text/html; charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-11-10T22:48:50.100Z",
+            "at": "2026-11-13T23:13:32.974Z",
             "note": null
           },
           "us·Texas": {
@@ -126,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-12T23:11:14.748Z",
+      "measured_at": "2026-11-13T23:13:32.974Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -148,7 +148,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-12T23:11:14.748Z",
+      "measured_at": "2026-11-13T23:13:32.974Z",
       "first_seen_at": "2026-11-12T00:00:44.056Z",
       "last_changed_at": "2026-11-12T00:00:44.056Z",
       "method": "auto:payment_gate",
