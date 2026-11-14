@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T21:57:08.099Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-11-14T21:57:08.099Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "to": [
+        "ja",
+        "ko"
+      ],
+      "changed_at": "2026-11-14T21:57:08.099Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}
