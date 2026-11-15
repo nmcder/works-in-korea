@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T22:27:45.177Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "changed_at": "2026-11-15T22:27:45.177Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "California",
+        "ip_asn": "AS8075"
+      }
+    }
+  ]
+}

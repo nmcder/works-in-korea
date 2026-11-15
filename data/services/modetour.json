@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-13T23:13:32.974Z",
+      "measured_at": "2026-11-15T22:27:45.177Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 4197,
+            "elapsed_ms": 12366,
             "body_sha256": "e3738c6dc1b8488693eaeba62ee1e634dae4c9ae9b58507ec477b13c9c21ceaf",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-11-06T22:41:59.230Z",
+            "at": "2026-11-15T22:27:45.177Z",
             "note": null
           },
           "us·Wyoming": {
@@ -87,9 +87,7 @@
             "at": "2026-11-12T00:00:44.056Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-11-14T21:57:08.099Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -128,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-14T21:57:08.099Z",
+      "measured_at": "2026-11-15T22:27:45.177Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -150,7 +148,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-13T23:13:32.974Z",
+      "measured_at": "2026-11-15T22:27:45.177Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -169,9 +167,7 @@
           "text": []
         },
         "scope_note": "공개 페이지만 스캔한다. 결제 페이지가 로그인 뒤에 있으면 gateways가 비는 것이 정상이며, 이는 \"PG가 없다\"는 뜻이 아니라 \"공개 범위에서 탐지되지 않았다\"는 뜻이다.",
-        "payment_attempt": "never",
-        "last_attempt_at": "2026-11-14T21:57:08.099Z",
-        "last_attempt_failed": "정상 응답을 받은 페이지가 없어 스캔하지 못함"
+        "payment_attempt": "never"
       }
     },
     "support_en": {
