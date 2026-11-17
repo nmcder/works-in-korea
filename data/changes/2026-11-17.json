@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T01:32:42.422Z",
+  "changes": [
+    {
+      "service_id": "danawa",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "naverpay"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-11-17T01:32:42.422Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS14618"
+      }
+    },
+    {
+      "service_id": "goodchoice",
+      "signal": "payment_gate",
+      "from": {
+        "gateways": [],
+        "three_ds": null
+      },
+      "to": {
+        "gateways": [
+          "kakaopay",
+          "naverpay",
+          "payco"
+        ],
+        "three_ds": null
+      },
+      "changed_at": "2026-11-17T01:32:42.422Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS14618"
+      }
+    },
+    {
+      "service_id": "kyobo",
+      "signal": "i18n_ui",
+      "from": [
+        "ja",
+        "ko"
+      ],
+      "to": [
+        "en",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "changed_at": "2026-11-17T01:32:42.422Z",
+      "vantage_point": {
+        "country": "us",
+        "region": "Virginia",
+        "ip_asn": "AS14618"
+      }
+    }
+  ]
+}

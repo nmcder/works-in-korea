@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-10-24T20:11:18.673Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-10-24T20:11:18.673Z",
       "last_changed_at": "2026-10-24T20:11:18.673Z",
       "method": "auto:overseas_access",
@@ -31,11 +31,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "http://tkfile.yes24.com/images/notice/Notice_ticket.html?2026081602",
+            "final_url": "https://ticket.yes24.com/New/Main.aspx",
             "redirected": true,
-            "elapsed_ms": 4853,
-            "body_sha256": "d69dfef645131688c1c574c2451f1fbb858d5503d88affab6b10b30640084b77",
-            "content_type": "text/html",
+            "elapsed_ms": 4097,
+            "body_sha256": "1b41732ca9c285dfc424d27d0a8826d2084117ec38e241aee6c6cd1bce7f6515",
+            "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -49,12 +49,10 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-10-24T20:11:18.673Z",
+            "at": "2026-11-17T01:32:42.422Z",
             "note": null
           }
-        },
-        "last_attempt_at": "2026-11-15T22:27:45.177Z",
-        "last_attempt_failed": "unknown 으로 돌아옴"
+        }
       }
     },
     "i18n_ui": {
@@ -62,15 +60,20 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
       "confidence": "auto",
       "evidence": {
-        "declared_html_lang": null,
+        "declared_html_lang": "ko",
         "hreflang": [],
-        "language_switcher_links": {},
+        "language_switcher_links": {
+          "en": [
+            "https://ticket.yes24.com/English?Gcode=009_205",
+            "https://ticket.yes24.com/English"
+          ]
+        },
         "english_url_checks": [
           {
             "url": "http://ticket.yes24.com/en",
@@ -78,9 +81,9 @@
             "ok": true
           }
         ],
-        "accept_language_responsive": false,
-        "latin_char_ratio": 0.494,
-        "hangul_char_ratio": 0.305,
+        "accept_language_responsive": true,
+        "latin_char_ratio": 0.128,
+        "hangul_char_ratio": 0.45,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
     },
@@ -104,7 +107,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -126,7 +129,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

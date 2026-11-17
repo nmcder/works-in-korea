@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.ktmmobile.com/main.do",
             "redirected": true,
-            "elapsed_ms": 4527,
-            "body_sha256": "123e0bedac81faf22f565bf56788decd9a62358f64b73dc170f43787268de980",
+            "elapsed_ms": 5259,
+            "body_sha256": "5d1c0823a5f9cd49e0be88a1f2f64475feaa994565f34ad6295811be01c956c7",
             "content_type": "text/html;charset=UTF-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-11-14T21:57:08.099Z",
+            "at": "2026-11-17T01:32:42.422Z",
             "note": null
           },
           "us·California": {
@@ -108,7 +108,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:signup_phone_auth",
@@ -155,7 +155,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -184,7 +184,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-15T22:27:45.177Z",
+      "measured_at": "2026-11-17T01:32:42.422Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -249,7 +249,9 @@
           "latin_ratio": 0.128,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
-        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)"
+        "reused": "고객지원 페이지 내용이 지난 측정과 동일해 재분류하지 않음 (LLM 호출 생략)",
+        "last_attempt_at": "2026-11-17T01:32:42.422Z",
+        "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
     "foreign_card": {
