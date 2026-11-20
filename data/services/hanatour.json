@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-18T23:51:52.654Z",
+      "measured_at": "2026-11-20T00:17:05.966Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.hanatour.com/v2/home",
             "redirected": true,
-            "elapsed_ms": 5235,
-            "body_sha256": "e048eb0707a0d7e6368ad505ee2563ba1bb418ca1130735cf68f1a2774a2cf19",
+            "elapsed_ms": 5619,
+            "body_sha256": "24b9208edb1d72afcc6f653d4c2423780d76d4203b119099b3e10203d3d41185",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-11-13T23:13:32.974Z",
+            "at": "2026-11-20T00:17:05.966Z",
             "note": null
           },
           "us·Texas": {
@@ -126,7 +126,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-18T23:51:52.654Z",
+      "measured_at": "2026-11-20T00:17:05.966Z",
       "first_seen_at": "2026-08-16T18:23:49.790Z",
       "last_changed_at": "2026-08-16T18:23:49.790Z",
       "method": "auto:app_availability",
@@ -155,7 +155,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-18T23:51:52.654Z",
+      "measured_at": "2026-11-20T00:17:05.966Z",
       "first_seen_at": "2026-10-29T22:25:03.848Z",
       "last_changed_at": "2026-10-29T22:25:03.848Z",
       "method": "auto:payment_gate",
