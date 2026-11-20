@@ -1,18 +1,18 @@
 {
-  "started_at": "2026-11-20T00:17:05.966Z",
-  "finished_at": "2026-11-20T00:23:45.462Z",
-  "duration_ms": 399496,
+  "started_at": "2026-11-20T23:39:56.758Z",
+  "finished_at": "2026-11-20T23:45:49.790Z",
+  "duration_ms": 353032,
   "vantage_point": {
     "id": "github-actions",
     "country": "us",
-    "region": "Iowa",
-    "ip_asn": "AS8075"
+    "region": "Oregon",
+    "ip_asn": "AS16509"
   },
   "services_total": 106,
   "services_probed": 106,
-  "signals_measured": 298,
-  "signals_unknown": 106,
-  "changes": 1,
+  "signals_measured": 294,
+  "signals_unknown": 110,
+  "changes": 2,
   "errors": [],
   "llm": {
     "calls": 0,
@@ -21,6 +21,6 @@
     "output_tokens": 0,
     "model": "claude-sonnet-5",
     "failures": 12,
-    "last_error": "Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChDE536jcapBjzGAYz1Jz\"}"
+    "last_error": "Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011ChF4y22nMccvDBLKfVbjg\"}"
   }
 }

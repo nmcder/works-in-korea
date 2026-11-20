@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-20T00:17:05.966Z",
+      "measured_at": "2026-11-20T23:39:56.758Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tossbank.com/",
             "redirected": false,
-            "elapsed_ms": 3580,
-            "body_sha256": "9b5b8b8f7b4055dddcce8ff3e0db00b5da5c83bea8b050c25a52460438b6d9c4",
+            "elapsed_ms": 3570,
+            "body_sha256": "6fbfc56508262f6a8885c83981ab00329b9fc4e7f1e6a272e1ccbecd6e706cef",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -85,6 +85,11 @@
           "us·Georgia": {
             "value": "ok",
             "at": "2026-11-12T00:00:44.056Z",
+            "note": null
+          },
+          "us·Oregon": {
+            "value": "ok",
+            "at": "2026-11-20T23:39:56.758Z",
             "note": null
           }
         }
@@ -143,7 +148,7 @@
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-11-20T00:17:05.966Z",
+        "last_attempt_at": "2026-11-20T23:39:56.758Z",
         "last_attempt_failed": "가입 페이지를 찾지 못함"
       }
     },
@@ -153,7 +158,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-20T00:17:05.966Z",
+      "measured_at": "2026-11-20T23:39:56.758Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -182,7 +187,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-20T00:17:05.966Z",
+      "measured_at": "2026-11-20T23:39:56.758Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
