@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-20T23:39:56.758Z",
+      "measured_at": "2026-11-21T22:44:58.765Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://map.naver.com/p/",
             "redirected": true,
-            "elapsed_ms": 3472,
+            "elapsed_ms": 3806,
             "body_sha256": "db5cdcf95fda8522b745a6a72954a656d8242a0115ab3c6f733b275920f1e39b",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-11-20T00:17:05.966Z",
+            "at": "2026-11-21T22:44:58.765Z",
             "note": null
           },
           "us·Texas": {
@@ -134,7 +134,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-20T23:39:56.758Z",
+      "measured_at": "2026-11-21T22:44:58.765Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -156,7 +156,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-20T23:39:56.758Z",
+      "measured_at": "2026-11-21T22:44:58.765Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
