@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "blocked",
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-10-15T20:55:03.135Z",
       "last_changed_at": "2026-10-15T20:55:03.135Z",
       "method": "auto:overseas_access",
@@ -51,7 +51,7 @@
           },
           "us·Virginia": {
             "value": "blocked",
-            "at": "2026-11-18T23:51:52.654Z",
+            "at": "2026-11-22T23:12:02.776Z",
             "note": "본문이 지역(국가) 제한을 명시함"
           },
           "us·California": {
@@ -133,7 +133,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:app_availability",
@@ -155,7 +155,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

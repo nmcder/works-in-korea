@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://english.visitkorea.or.kr/svc/main/index.do",
             "redirected": true,
-            "elapsed_ms": 3788,
-            "body_sha256": "c472dc906fdc20ce62ac677ae86c36a270b76ec21caa83cb62e251083fdcb26c",
+            "elapsed_ms": 3682,
+            "body_sha256": "482412f30b4ef50ee756ae1c12a94e716f9ba3fdac494acee4ea56d19110aa5c",
             "content_type": "text/html;charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-11-18T23:51:52.654Z",
+            "at": "2026-11-22T23:12:02.776Z",
             "note": null
           },
           "us·California": {
@@ -107,7 +107,7 @@
         "th",
         "zh"
       ],
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-16T11:45:03.019Z",
       "last_changed_at": "2026-08-16T11:45:03.019Z",
       "method": "auto:i18n_ui",
@@ -186,7 +186,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -215,7 +215,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T02:47:26.950Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -239,7 +239,7 @@
     },
     "support_en": {
       "value": "yes",
-      "measured_at": "2026-11-21T22:44:58.765Z",
+      "measured_at": "2026-11-22T23:12:02.776Z",
       "first_seen_at": "2026-08-15T22:47:28.669Z",
       "last_changed_at": "2026-08-15T22:47:28.669Z",
       "method": "auto:support_en",
