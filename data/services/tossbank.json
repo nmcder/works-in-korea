@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-22T23:12:02.776Z",
+      "measured_at": "2026-11-24T03:46:50.333Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.tossbank.com/",
             "redirected": false,
-            "elapsed_ms": 3758,
-            "body_sha256": "6fbfc56508262f6a8885c83981ab00329b9fc4e7f1e6a272e1ccbecd6e706cef",
+            "elapsed_ms": 3563,
+            "body_sha256": "e47ced54f1e22bd0debbd6f1b68a386d6f8f5c8dbd23ed4bb018df55f99c04c1",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -74,7 +74,7 @@
           },
           "us·Iowa": {
             "value": "ok",
-            "at": "2026-11-21T22:44:58.765Z",
+            "at": "2026-11-24T03:46:50.333Z",
             "note": null
           },
           "us·Texas": {
@@ -148,7 +148,7 @@
           }
         ],
         "hint": "data/seeds/services.seed.json 의 hints.signup_url 을 채우면 측정 가능해진다",
-        "last_attempt_at": "2026-11-22T23:12:02.776Z",
+        "last_attempt_at": "2026-11-24T03:46:50.333Z",
         "last_attempt_failed": "가입 페이지를 찾지 못함"
       }
     },
@@ -158,7 +158,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-22T23:12:02.776Z",
+      "measured_at": "2026-11-24T03:46:50.333Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -187,7 +187,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-22T23:12:02.776Z",
+      "measured_at": "2026-11-24T03:46:50.333Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
