@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-25T01:53:56.021Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:overseas_access",
@@ -33,7 +33,7 @@
             "http_status": 200,
             "final_url": "https://www.kt.com/",
             "redirected": false,
-            "elapsed_ms": 3170,
+            "elapsed_ms": 2971,
             "body_sha256": "8dfa6df23048c6a43307719a6b770ff0b7d380893fa6982665a069ebfb8cb4c7",
             "content_type": "text/html",
             "geo_block_markers": [],
@@ -44,7 +44,7 @@
         "by_vantage": {
           "us·Arizona": {
             "value": "ok",
-            "at": "2026-10-25T20:21:50.936Z",
+            "at": "2026-11-25T01:53:56.021Z",
             "note": null
           },
           "us·Virginia": {
@@ -100,7 +100,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-25T01:53:56.021Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:i18n_ui",
@@ -126,7 +126,7 @@
     },
     "signup_phone_auth": {
       "value": "required",
-      "measured_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-25T01:53:56.021Z",
       "first_seen_at": "2026-08-15T04:15:30.926Z",
       "last_changed_at": "2026-08-15T04:15:30.926Z",
       "method": "auto:signup_phone_auth",
@@ -182,7 +182,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-25T01:53:56.021Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -204,7 +204,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-25T01:53:56.021Z",
       "first_seen_at": "2026-08-18T18:35:04.087Z",
       "last_changed_at": "2026-08-18T18:35:04.087Z",
       "method": "auto:payment_gate",
