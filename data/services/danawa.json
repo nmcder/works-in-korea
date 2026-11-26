@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-25T01:53:56.021Z",
+      "measured_at": "2026-11-26T01:31:34.536Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -31,11 +31,11 @@
             "id": "github-actions",
             "country": "us",
             "http_status": 200,
-            "final_url": "https://www.danawa.com/",
-            "redirected": false,
-            "elapsed_ms": 4195,
-            "body_sha256": "711e3f32145d6695d52ba91e1b2d30e6413fc94003c1d445706e1128fbbce367",
-            "content_type": "text/html; charset=UTF-8",
+            "final_url": "https://construction.danawa.com/",
+            "redirected": true,
+            "elapsed_ms": 4415,
+            "body_sha256": "22b90ad8fde02e788fd0a32db4389dd2ea15c87432846dd8971253d5bca79303",
+            "content_type": "text/html",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
           }
@@ -49,7 +49,7 @@
           },
           "us·Virginia": {
             "value": "ok",
-            "at": "2026-11-22T23:12:02.776Z",
+            "at": "2026-11-26T01:31:34.536Z",
             "note": null
           },
           "us·California": {
@@ -131,7 +131,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-25T01:53:56.021Z",
+      "measured_at": "2026-11-26T01:31:34.536Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -150,14 +150,12 @@
     },
     "payment_gate": {
       "value": {
-        "gateways": [
-          "naverpay"
-        ],
+        "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-25T01:53:56.021Z",
-      "first_seen_at": "2026-11-24T03:46:50.333Z",
-      "last_changed_at": "2026-11-24T03:46:50.333Z",
+      "measured_at": "2026-11-26T01:31:34.536Z",
+      "first_seen_at": "2026-11-26T01:31:34.536Z",
+      "last_changed_at": "2026-11-26T01:31:34.536Z",
       "method": "auto:payment_gate",
       "confidence": "auto",
       "evidence": {
@@ -168,14 +166,7 @@
             "scanned": true
           }
         ],
-        "detected": [
-          {
-            "id": "naverpay",
-            "name": "네이버페이",
-            "matched": "네이버페이",
-            "via": "text"
-          }
-        ],
+        "detected": [],
         "three_ds_matches": {
           "url": [],
           "text": []
