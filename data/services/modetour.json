@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.modetour.com/",
             "redirected": false,
-            "elapsed_ms": 3997,
-            "body_sha256": "ef5181573f25a8d0d5698a882091624c7cba5adf01ed33b8628a539f63dfb7aa",
+            "elapsed_ms": 5772,
+            "body_sha256": "ee239ffbacd2d3daffd5d3faf8d53ff8caea108f74f0065361a2692dd5149449",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-11-15T22:27:45.177Z",
+            "at": "2026-11-27T01:28:17.949Z",
             "note": null
           },
           "us·Wyoming": {
@@ -131,7 +131,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T18:24:37.122Z",
       "last_changed_at": "2026-08-15T18:24:37.122Z",
       "method": "auto:app_availability",
@@ -153,7 +153,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",

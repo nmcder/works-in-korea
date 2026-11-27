@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://www.kurly.com/main",
             "redirected": true,
-            "elapsed_ms": 3339,
-            "body_sha256": "bcdb94f383851b5636b58ab82101409acc632c2ea434c9596c747fb4183bf70c",
+            "elapsed_ms": 2909,
+            "body_sha256": "fd53b40baa718719b92de532a0ea0ab8755e71c4afd0593942b46e3355a14f42",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -54,7 +54,7 @@
           },
           "us·California": {
             "value": "ok",
-            "at": "2026-11-15T22:27:45.177Z",
+            "at": "2026-11-27T01:28:17.949Z",
             "note": null
           },
           "us·Wyoming": {
@@ -131,7 +131,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -160,7 +160,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-26T01:31:34.536Z",
+      "measured_at": "2026-11-27T01:28:17.949Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
