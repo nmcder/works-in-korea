@@ -20,7 +20,7 @@
   "signals": {
     "overseas_access": {
       "value": "ok",
-      "measured_at": "2026-11-27T01:28:17.949Z",
+      "measured_at": "2026-11-28T01:03:35.074Z",
       "first_seen_at": "2026-08-15T02:48:11.388Z",
       "last_changed_at": null,
       "method": "auto:overseas_access",
@@ -33,8 +33,8 @@
             "http_status": 200,
             "final_url": "https://ridibooks.com/comics/ebook",
             "redirected": true,
-            "elapsed_ms": 2727,
-            "body_sha256": "a5d03cec8e84af68aae1beb6e6d0a1dd32f3aedb561f58aac3bf284b89c2526e",
+            "elapsed_ms": 3214,
+            "body_sha256": "aa9a2cfbdd35c8560d7dc566a7a687831c5372bac0ca991a3bd41a3fde09a3ec",
             "content_type": "text/html; charset=utf-8",
             "geo_block_markers": [],
             "ambiguous_deny_markers": []
@@ -59,7 +59,7 @@
           },
           "us·Wyoming": {
             "value": "ok",
-            "at": "2026-11-10T01:09:43.239Z",
+            "at": "2026-11-28T01:03:35.074Z",
             "note": null
           },
           "us·Washington": {
@@ -100,7 +100,7 @@
         "en",
         "ko"
       ],
-      "measured_at": "2026-11-27T01:28:17.949Z",
+      "measured_at": "2026-11-28T01:03:35.074Z",
       "first_seen_at": "2026-10-05T23:42:42.193Z",
       "last_changed_at": "2026-10-05T23:42:42.193Z",
       "method": "auto:i18n_ui",
@@ -126,7 +126,7 @@
           }
         ],
         "accept_language_responsive": false,
-        "latin_char_ratio": 0.171,
+        "latin_char_ratio": 0.17,
         "hangul_char_ratio": 0.519,
         "note": "ko는 한국 서비스 기준선으로 항상 포함된다. ko 외 언어는 선언(hreflang/lang)·전환 링크·전용 경로 중 하나 이상에서 탐지된 것이며, 번역 품질이나 커버리지는 측정하지 않는다."
       }
@@ -151,7 +151,7 @@
         "android_listed": true,
         "countries": null
       },
-      "measured_at": "2026-11-27T01:28:17.949Z",
+      "measured_at": "2026-11-28T01:03:35.074Z",
       "first_seen_at": "2026-08-15T08:07:45.107Z",
       "last_changed_at": "2026-08-15T08:07:45.107Z",
       "method": "auto:app_availability",
@@ -180,7 +180,7 @@
         "gateways": [],
         "three_ds": null
       },
-      "measured_at": "2026-11-27T01:28:17.949Z",
+      "measured_at": "2026-11-28T01:03:35.074Z",
       "first_seen_at": "2026-08-15T02:51:04.464Z",
       "last_changed_at": null,
       "method": "auto:payment_gate",
@@ -245,7 +245,7 @@
           "latin_ratio": 0.169,
           "reason": "명시적 문구 없음 — 휴리스틱만으로는 판정하지 않는다"
         },
-        "last_attempt_at": "2026-11-27T01:28:17.949Z",
+        "last_attempt_at": "2026-11-28T01:03:35.074Z",
         "last_attempt_failed": "unknown 으로 돌아옴"
       }
     },
